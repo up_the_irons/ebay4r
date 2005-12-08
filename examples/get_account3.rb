@@ -9,7 +9,7 @@ require_gem 'ebay'
 
 load('myCredentials.rb')
 
-eBay = EBay::API.new($authToken, $devId, $appId, $certId)
+eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
 
 resp = eBay.GetAccount(:AccountHistorySelection => 'BetweenSpecifiedDates', :BeginDate => '2005-10-01', :EndDate => '2005-11-01')
 
