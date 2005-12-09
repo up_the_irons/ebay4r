@@ -1,7 +1,11 @@
 #!/usr/bin/env ruby
 
-require 'rubygems'
-require_gem 'ebay'
+begin
+  require 'rubygems'
+  require_gem 'ebay'
+rescue LoadError
+  require 'eBayAPI'
+end
 
 #
 # Example of GetAccount call requesting a specific monthly statement
