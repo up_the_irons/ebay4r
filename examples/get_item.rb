@@ -16,4 +16,7 @@ puts "ItemID: "   + resp.item.itemID
 puts "Descr: "    + resp.item.description
 puts "Location: " + resp.item.location
 
+puts "Ship To Locations:"
+resp.item.shipToLocations.each { |loc| puts loc }
+
 # Many more fields are present, see eBay's SOAP API Guide or GetItemResponseType class in "../lib/eBay.rb"
