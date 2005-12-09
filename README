@@ -99,6 +99,25 @@ with eBay4R:
 
   # Wasn't that easy?!
 
+=== Format of Requests
+
+If <tt>eBay</tt> is your caller object, then you can issue any eBay API call
+by doing:
+
+  eBay.<call_name>( ... hash of named-arguments ... )
+
+For example, to issue the GetItem call for Item ##4503432058 and return all
+information, you do:
+
+  eBay.GetItem(:DetailLevel => 'ReturnAll', :ItemID => '4503432058')
+
+or to see your last invoice using the GetAccount call, you do:
+
+  eBay.GetAccount(:AccountHistorySelection => 'LastInvoice')
+
+See the "eBay Web Services SOAP API Guide" for acceptable parameters and values
+for each API call.
+
 === Format of Responses
 
 There is a one-to-one correspondence between the XML returned by eBay and the
@@ -164,8 +183,8 @@ and you will see:
   US
   CA
 
-It's that easy! (Are any Java or C# developers reading this? Are you crying
-yet? ;)
+It's that easy! (Are any Java or C# developers reading this?  Don't be
+jealous... ;)
 
 === A Note about Case
 
