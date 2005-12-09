@@ -25,6 +25,7 @@ require 'RequesterCredentialsHandler.rb'
 
 module EBay
 
+# This is the main class of the eBay4R library.  Start by instantiating this class (see below)
 class API
   attr_writer :debug
 
