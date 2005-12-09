@@ -3,8 +3,9 @@
 eBay4R is a Ruby wrapper for eBay's Web Services SOAP API (v433). Emphasis is
 on ease of use and small footprint.
 
-<b>This code is currently alpha stage</b>. Please email bug reports to
-gdolley [at] ucla.edu
+<b>This code is currently alpha stage</b>.
+
+Please report bugs and other problems, see "Author" section at the bottom.
 
 Current releases and CVS snapshots can be downloaded from:
 
@@ -27,16 +28,40 @@ http://rubyforge.org/projects/ebay4r
 
 == Optionals
 
-* RubyGems, to run the stock examples without changing the 'require' lines
-  (see Getting Started)
+* RubyGems
+
+
+== Installation
+
+=== tar/gzip
+
+Just unzip the archive anywhere you like, and see "Getting Started" below 
+(you will need to add the ebay4r/lib path to your $RUBYLIB environment
+variable)
+
+=== RubyGems
+
+* To install a gem you already downloaded:
+  
+    gem install ebay-<version>.gem
+
+* For the latest release with no fuss (previous download not required):
+  
+    gem install -r ebay4r
+
+=== CVS
+
+You can download the latest and greatest code using anonymous CVS, just type:
+
+  cvs -d :pserver:anonymous@rubyforge.org:/var/cvs/ebay4r checkout ebay4r
 
 
 == Getting Started
 
 If you installed eBay4R from a tarball or CVS, you will want to add the
-ebay4r/lib directory to your Ruby include path.  Then put
+ebay4r/lib directory to your Ruby include path ($RUBYLIB).  Then put
 
-  require 'eBayAPI.rb'
+  require 'eBayAPI'
 
 at the top of your programs.
 
@@ -53,10 +78,6 @@ at the top of your programs.
 Look at the examples/ directory.  Edit the file myCredentials.rb and insert
 the appropriate values.  Then you can run any of the example programs.
 
-Please note the examples all use RubyGems.  If you don't have RubyGems 
-installed, change the 'require' lines on top as indicated above.
-
-
 ==== Hello, World!
 
 The simplest eBay API call is "GeteBayOfficialTime".  Here's how to call it
@@ -65,24 +86,113 @@ with eBay4R:
   require 'rubygems'
   require_gem 'ebay'
 
-  #
-  # Example of GeteBayOfficialTime call
-  #
-
   # Put your credentials in this file
   load('myCredentials.rb')
 
   # Create new eBay caller object.  Omit last argument to use live platform.
   eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
 
-  # Call "GetEbayOfficialTime"
   resp = eBay.GeteBayOfficialTime
 
-  # Report results
   puts "Hello, World!"
   puts "The eBay time is now: #{resp.timestamp}"
 
   # Wasn't that easy?!
+
+=== Format of Responses
+
+There is a one-to-one correspondence between the XML returned by eBay and the
+way you access the values contained therein using the response object returned
+by the call.  For example, let's say you issued a "GetItem" call:
+  
+  resp = eBay.GetItem(:DetailLevel => 'ReturnAll', :ItemID => '4503432058')
+
+and eBay returned the following XML (abbreviated where appropriate):
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+                    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soapenv:Body>
+    <GetItemResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+     <Timestamp>2005-12-09T09:40:41.602Z</Timestamp>
+     <Ack>Success</Ack>
+     <Version>437</Version>
+     <Build>e437_core_Bundled_2119808_R1</Build>
+     <Item>
+      ...
+
+      <AutoPay>false</AutoPay>
+      <BuyerProtection>ItemIneligible</BuyerProtection>
+      <BuyItNowPrice currencyID="USD">0.0</BuyItNowPrice>
+      <Country>US</Country>
+      <Currency>USD</Currency>
+      <Description>Fund. of Physics, 5th, by Halliday, Resnick, Walker</Description>
+      <Escrow>None</Escrow>
+      <GiftIcon>0</GiftIcon>
+      ...
+
+      <ShipToLocations>US</ShipToLocations>
+      <ShipToLocations>CA</ShipToLocations>
+     </Item>
+    </GetItemResponse>
+   </soapenv:Body>
+  </soapenv:Envelope>
+
+
+The "resp" object is of type
+  
+  SOAP::Mapping::Object
+
+and contains all the XML elements between <tt><GetItemResponse> ... </GetItemResponse></tt>.
+
+So, if you want to print the item description, just do:
+
+  puts resp.item.description
+
+and you will see:
+  
+  "Fund. of Physics, 5th, by Halliday, Resnick, Walker"
+
+Repeated XML elements automatically become arrays of the same name, so to see
+all the locations this item can ship to, just do:
+
+  resp.item.shipToLocations.each { |loc| puts loc }
+
+and you will see:
+
+  US
+  CA
+
+It's that easy! (Are any Java or C# developers reading this? Are you crying
+yet? ;)
+
+=== A Note about Case
+
+Astute readers (all of you, right?) will notice that the first letter of every
+element contained within the response object is lower-case, even though in the
+XML it is upper-case.  This is currently the way things are and you will have
+to remember to lower the first character in your code.  
+
+Ruby's convention is that only classes, modules, and constants begin with 
+upper-case letters.  The author of the SOAP4R library (which contains 
+wsdl2ruby.rb) respected this convention, and as a result, the eBay.rb 
+file I use (generated from eBay's WSDL) has this mapping.
+
+I haven't come up with any Ruby magic to dynamically allow upper-case first
+characters to work also, so if you happen to want to take a crack at it and
+get it working, please send me your patches (see "Author" section at the 
+bottom).
+
+Please note, the opposite does _not_ apply.  That is, you can *submit* a call
+using either case of the first character, and your arguments can also have
+either case letter first.  For example, this:
+
+  resp = eBay.GetItem(:DetailLevel => 'ReturnAll', :ItemID => '4503432058')
+
+is the same as:
+
+  resp = eBay.getItem(:detailLevel => 'ReturnAll', :itemID => '4503432058')
 
 
 == Debugging
@@ -133,6 +243,8 @@ test/
 Garry C. Dolley
 
 gdolley [at] ucla.edu
+
+AIM: garry97531
 
 
 == Copyright
