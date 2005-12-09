@@ -1,8 +1,14 @@
 == Welcome to eBay4R
 
-eBay4R is a Ruby wrapper for eBay's Web Services SOAP API. Emphasis is on ease
-of use and small footprint.
+eBay4R is a Ruby wrapper for eBay's Web Services SOAP API (v433). Emphasis is
+on ease of use and small footprint.
 
+<b>This code is currently alpha stage</b>. Please email bug reports to
+gdolley [at] ucla.edu
+
+Current releases and CVS snapshots can be downloaded from:
+
+http://rubyforge.org/projects/ebay4r
 
 
 == Requirements
@@ -19,21 +25,78 @@ of use and small footprint.
   http://dev.ctor.org/download/archive/soap4r-20051106.tar.gz
 
 
-== Getting started
+== Optionals
+
+* RubyGems, to run the stock examples without changing the 'require' lines
+  (see Getting Started)
 
 
-== Tips
+== Getting Started
 
-* If "eBay" is your eBay caller object, as in:
+If you installed eBay4R from a tarball or CVS, you will want to add the
+ebay4r/lib directory to your Ruby include path.  Then put
+
+  require 'eBayAPI.rb'
+
+at the top of your programs.
+
+If you installed eBay4R with RubyGems, you don't have to add anything to
+Ruby's include path, just put
+
+  require 'rubygems'
+  require_gem 'ebay'
+
+at the top of your programs.
+
+=== Examples
+
+Look at the examples/ directory.  Edit the file myCredentials.rb and insert
+the appropriate values.  Then you can run any of the example programs.
+
+Please note the examples all use RubyGems.  If you don't have RubyGems 
+installed, change the 'require' lines on top as indicated above.
+
+
+==== Hello, World!
+
+The simplest eBay API call is "GeteBayOfficialTime".  Here's how to call it
+with eBay4R:
+
+  require 'rubygems'
+  require_gem 'ebay'
+
+  #
+  # Example of GeteBayOfficialTime call
+  #
+
+  # Put your credentials in this file
+  load('myCredentials.rb')
+
+  # Create new eBay caller object.  Omit last argument to use live platform.
+  eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
+
+  # Call "GetEbayOfficialTime"
+  resp = eBay.GeteBayOfficialTime
+
+  # Report results
+  puts "Hello, World!"
+  puts "The eBay time is now: #{resp.timestamp}"
+
+  # Wasn't that easy?!
+
+
+== Debugging
+
+If "eBay" is your eBay caller object, as in:
 
   eBay = EBay::API.new( ... )
 
-  You can see XML wiredumps by doing:
+You can see XML wiredumps by doing:
 
   eBay.debug = true
 
-  before you issue an eBay API call.  This is useful to see the raw XML of
-  what eBay is sending back to you.
+before you issue any eBay API calls.  This is useful to see the raw XML of
+what eBay is sending back to you.
 
 
 == Files
@@ -56,6 +119,13 @@ lib/RequesterCredentialsHandler.rb
 
 test/
   Unit and functional tests
+
+
+== To Do
+
+* Exception handling
+* Add many more examples
+* Write unit and functional tests
 
 
 == Author
