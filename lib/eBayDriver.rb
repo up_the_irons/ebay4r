@@ -1,8 +1,6 @@
 require 'eBay.rb'
 require 'soap/rpc/driver'
 
-#:enddoc:
-
 class EBayAPIInterface < ::SOAP::RPC::Driver
   DefaultEndpointUrl = "https://api.ebay.com/wsapi"
   MappingRegistry = ::SOAP::Mapping::Registry.new
