@@ -99,7 +99,7 @@ class API
 
   private
   def requestURL
-    "#{@endpoint_url}?callname=#{@callName}&siteid=#{@site_id}&appid=#{@app_id}&version=#{@version}&routing=default"
+    "#{@endpoint_url}?callname=#{@callName}&siteid=#{@site_id}&appid=#{@app_id}&version=#{@ver}&routing=default"
   end
 
   def makeService
