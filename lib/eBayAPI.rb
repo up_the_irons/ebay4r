@@ -20,6 +20,8 @@
 #
 #++
 
+#:main: README
+
 require 'eBayDriver.rb'
 require 'RequesterCredentialsHandler.rb'
 
