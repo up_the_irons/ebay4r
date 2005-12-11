@@ -116,7 +116,8 @@ or to see your last invoice using the GetAccount call, you do:
   eBay.GetAccount(:AccountHistorySelection => 'LastInvoice')
 
 See the "eBay Web Services SOAP API Guide" for acceptable parameters and values
-for each API call.
+for each API call.  This guide can be downloaded at eBay's 
+{SOAP Development Center}[http://developer.ebay.com/soap/].
 
 === Format of Responses
 
