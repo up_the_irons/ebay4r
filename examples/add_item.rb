@@ -16,14 +16,17 @@ eBay.debug = true
 # I currently have more work to do in this department, b/c making an item object in the following way
 # is tedious and not what I would consider good for a Ruby library.
 item = ItemType.new
-##item.primaryCategory = CategoryType.new
-##item.primaryCategory.categoryID = '57882'
+item.primaryCategory = CategoryType.new
+item.primaryCategory.categoryID = '57882'
 item.title = 'Mouse Pad'
 item.description = 'A really cool mouse pad, you know you want it...',
 item.location = 'On Earth'
 #item.startPrice = AmountType.initialize
-##item.startPrice = '12.0'
+item.startPrice = 12.0
 item.quantity = 1
+item.listingDuration = "Days_7"
+item.country = "US"
+item.currency = "USD"
 
 #puts item.startPrice.class
 
