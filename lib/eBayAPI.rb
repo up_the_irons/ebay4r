@@ -86,7 +86,7 @@ class API
           key[0] = key[0,1].downcase # lower first character
 
           if request.respond_to? "#{key}="
-            s = "request.#{key} = \"#{val}\""
+            s = "request.#{key} = val"
             eval(s) 
           end
         end
