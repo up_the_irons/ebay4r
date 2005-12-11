@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require 'rubygems'
-require_gem 'ebay'
+$:.unshift File.join(File.dirname(__FILE__), "..", "lib")
+require 'eBayAPI'
 
 load('myCredentials.rb')
 

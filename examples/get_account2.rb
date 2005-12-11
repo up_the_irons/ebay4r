@@ -1,11 +1,7 @@
 #!/usr/bin/env ruby
 
-begin
-  require 'rubygems'
-  require_gem 'ebay'
-rescue LoadError
-  require 'eBayAPI'
-end
+$:.unshift File.join(File.dirname(__FILE__), "..", "lib")
+require 'eBayAPI'
 
 #
 # Example of GetAccount call requesting a specific monthly statement
