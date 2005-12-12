@@ -119,14 +119,22 @@ class API
 
 end
 
+#:enddoc:
+
 # These class module methods are for creating complex types (e.g. ItemType, CategoryType, etc...)
 # and also include some helper functions
-class <<self
+class <<self 
   def method_missing(m, *args)
-    call_name = fix_case_up(m.id2name)
-    
-    args_hash = args[0]
+    type_name = fix_case_up(m.id2name)
 
+    begin
+      type_obj = eval("#{type_name}Type.new")
+      EBay::assign_args(type_obj, args[0]) # args[0] is a hash of named parameters (like above)
+
+      return type_obj
+    rescue NameError
+      puts "Invalid Type" # Later on, we need more robust exception handling
+    end
   end
 
   def assign_args(obj, args_hash)
@@ -139,6 +147,9 @@ class <<self
         end
       end
     end
+  end
+
+  def valid_type?(type)
 
   end
 
