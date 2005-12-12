@@ -4,8 +4,11 @@ $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 require 'eBayAPI'
 
 #
-# Example of AddItem call
+# Example of VerifyAddItem call
 #
+
+# Note: This example is almost exactly the same as AddItem, with the exception that an item doesn't
+# really get added to eBay's database, but all other relevant values are returned.
 
 load('myCredentials.rb')
 
@@ -28,10 +31,9 @@ item.currency = "USD"
 item.paymentMethods[0] = "VisaMC"
 item.paymentMethods[1] = "PersonalCheck"
 
-resp = eBay.AddItem(:Item => item)
+resp = eBay.VerifyAddItem(:Item => item)
 
-puts "New Item #" + resp.itemID + " added."
-puts "You spent:\n"
+puts "You would spend, if you really called AddItem, the following:\n"
 
 # The fees part of the response looks like this:
 #
