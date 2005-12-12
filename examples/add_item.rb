@@ -11,24 +11,17 @@ load('myCredentials.rb')
 
 eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
 
-# I currently have more work to do in this department, b/c making an item object in the following way
-# is tedious and not what I would consider good for a Ruby library.
-item = ItemType.new
-item.primaryCategory = CategoryType.new
-item.primaryCategory.categoryID = '57882'
-item.title = 'Mouse Pad'
-item.description = 'A really cool mouse pad, you know you want it...'
-item.location = 'On Earth'
-#item.startPrice = AmountType.new(12.0)
-item.startPrice = 12.0
-item.quantity = 1
-item.listingDuration = "Days_7"
-item.country = "US"
-item.currency = "USD"
-item.paymentMethods[0] = "VisaMC"
-item.paymentMethods[1] = "PersonalCheck"
-
-resp = eBay.AddItem(:Item => item)
+# New method of generating complex types, needs some more testing...
+resp = eBay.AddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:CategoryID => 57882),
+                                       :Title => 'Mouse Pad',
+                                       :Description => 'A really cool mouse pad, you know you want it...',
+                                       :Location => 'On Earth',
+                                       :StartPrice => 12.0,
+                                       :Quantity => 1,
+                                       :ListingDuration => "Days_7",
+                                       :Country => "US",
+                                       :Currency => "USD",
+                                       :PaymentMethods => ["VisaMC", "PersonalCheck"]))
 
 puts "New Item #" + resp.itemID + " added."
 puts "You spent:\n"
