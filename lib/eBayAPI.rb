@@ -68,7 +68,7 @@ class API
   end
 
   def method_missing(m, *args) #:nodoc:
-    call_name = EBay::fix_case_up(m.id2name)
+    call_name = EBay::fix_case_up(m.id2name) # upper first character
 
     @callName = call_name
     args_hash = args[0]
@@ -81,7 +81,7 @@ class API
  
       if args_hash
         args_hash.each do |key, val|
-          key = EBay::fix_case_down(key.to_s)
+          key = EBay::fix_case_down(key.to_s) # lower first character
 
           if request.respond_to? "#{key}="
             s = "request.#{key} = val"
@@ -90,7 +90,7 @@ class API
         end
       end
       
-      lcall!(call_name)
+      EBay::fix_case_down(call_name)
       eval "service.#{call_name}(request)"
     end
   end
@@ -109,17 +109,12 @@ class API
   end
 
   def valid_call?(call)
-    call = String.new(call)
-    call[0] = call[0,1].downcase # lower first character
+    call = EBay::fix_case_down(String.new(call)) # lower first character
     EBayAPIInterface::Methods.each { |defs| return true if defs[1] == call }
 
     return false
   end
 
-  def lcall!(call)
-    call[0] = call[0,1].downcase
-    call
-  end
 end
 
 # These class module methods are for creating complex types (e.g. ItemType, CategoryType, etc...)
