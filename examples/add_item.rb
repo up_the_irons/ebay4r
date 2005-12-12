@@ -30,7 +30,7 @@ item.currency = "USD"
 item.paymentMethods[0] = "VisaMC"
 item.paymentMethods[1] = "PersonalCheck"
 
-resp = eBay.VerifyAddItem(:Item => item)
+resp = eBay.AddItem(:Item => item)
 
 puts "New Item #" + resp.itemID + " added."
 puts "You spent:\n"
