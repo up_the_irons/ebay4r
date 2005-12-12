@@ -79,16 +79,18 @@ class API
 
       request.version = @ver
  
-      if args_hash
-        args_hash.each do |key, val|
-          key = EBay::fix_case_down(key.to_s) # lower first character
+      EBay::assign_args(request, args_hash)
+      
+      #if args_hash
+      #  args_hash.each do |key, val|
+      #    key = EBay::fix_case_down(key.to_s) # lower first character
 
-          if request.respond_to? "#{key}="
-            s = "request.#{key} = val"
-            eval(s) 
-          end
-        end
-      end
+      #    if request.respond_to? "#{key}="
+      #      s = "request.#{key} = val"
+      #      eval(s) 
+      #    end
+      #  end
+      #end
       
       EBay::fix_case_down(call_name)
       eval "service.#{call_name}(request)"
@@ -118,10 +120,25 @@ class API
 end
 
 # These class module methods are for creating complex types (e.g. ItemType, CategoryType, etc...)
+# and also include some helper functions
 class <<self
   def method_missing(m, *args)
     call_name = fix_case_up(m.id2name)
     
+    args_hash = args[0]
+
+  end
+
+  def assign_args(obj, args_hash)
+    if args_hash
+      args_hash.each do |key, val|
+        key = fix_case_down(key.to_s) # lower first character
+
+        if obj.respond_to? "#{key}="
+          eval("obj.#{key} = val")
+        end
+      end
+    end
 
   end
 
