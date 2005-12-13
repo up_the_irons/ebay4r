@@ -149,10 +149,6 @@ class <<self
     end
   end
 
-  def valid_type?(type)
-
-  end
-
   def fix_case_up(name)
     name[0] = name[0,1].upcase # upper first character
     name
