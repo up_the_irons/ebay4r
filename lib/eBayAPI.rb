@@ -89,7 +89,7 @@ class API
 
       eval "service.#{call_name}(request)"
     else
-      raise(Error::UnknownAPICall, "Unknown API Call: #{call_name}")
+      raise(Error::UnknownAPICall, "Unknown API Call: #{call_name}", caller)
     end
   end
 
@@ -143,7 +143,7 @@ class <<self
 
       return type_obj
     rescue NameError
-      raise(Error::UnknownType, "Invalid Type: #{type}")
+      raise(Error::UnknownType, "Invalid Type: #{type}", caller)
     end
   end
 
