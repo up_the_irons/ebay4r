@@ -94,8 +94,19 @@ class API
       
       EBay::fix_case_down(call_name)
       eval "service.#{call_name}(request)"
+    else
+      raise(UnknownAPICall, "Unknown API Call: #{call_name}")
     end
   end
+
+  class Error < StandardError; #:nodoc:
+  end
+
+  # Raised if a call is made to a method that does not exist in the eBay SOAP API
+  class UnknownAPICall < Error; end
+
+  # Raised if an attempt is made to instantiate a type that does not exist in the eBay SOAP API
+  class UnknownType < Error; end
 
   private
   def requestURL
@@ -128,12 +139,13 @@ class <<self
     type_name = fix_case_up(m.id2name)
 
     begin
-      type_obj = eval("#{type_name}Type.new")
+      type = "#{type_name}Type"
+      type_obj = eval("#{type}.new")
       EBay::assign_args(type_obj, args[0]) # args[0] is a hash of named parameters (like above)
 
       return type_obj
     rescue NameError
-      puts "Invalid Type" # Later on, we need more robust exception handling
+      raise(API::UnknownType, "Invalid Type: #{type}")
     end
   end
 
