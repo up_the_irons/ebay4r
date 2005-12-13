@@ -26,7 +26,7 @@ resp = eBay.VerifyAddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:
                                              :Currency => "USD",
                                              :PaymentMethods => ["VisaMC", "PersonalCheck"]))
 
-puts "You would spend, if you really called AddItem, the following:\n"
+puts "You would spend, if you really called AddItem, the following fees:\n"
 
 # The fees part of the response looks like this:
 #
