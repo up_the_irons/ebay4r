@@ -87,10 +87,17 @@ class API
       EBay::assign_args(request, args_hash)
       EBay::fix_case_down(call_name)
 
-      eval "resp = service.#{call_name}(request)"
+      resp = eval("service.#{call_name}(request)")
 
       if resp.ack != "Success"
-        
+        err_string = ''
+
+        resp.errors.each do |err|
+          err_string += err.shortMessage.chomp(".") + ", "
+        end
+        err_string = err_string.chop.chop
+
+        raise(Error::ApplicationError.new(resp), err_string, caller)
       end
 
       return resp
@@ -134,7 +141,13 @@ class Error
   class UnknownType < Error; end
 
   # Raised if a call returns with <Ack>Failure</Ack>
-  class ApplicationError < Error; end
+  class ApplicationError < Error; 
+    attr_reader :resp
+
+    def initialize(response)
+      @resp = response
+    end
+  end
 end
 
 #:enddoc:
