@@ -75,7 +75,7 @@ class API
   def method_missing(m, *args) #:nodoc:
     call_name = EBay::fix_case_up(m.id2name) # upper first character
 
-    @callName = call_name
+    @callName = call_name.dup
     args_hash = args[0]
 
     if valid_call?(call_name)
@@ -89,15 +89,20 @@ class API
 
       resp = eval("service.#{call_name}(request)")
 
+      # Handle eBay Application-level error
       if resp.ack != "Success"
         err_string = ''
 
-        resp.errors.each do |err|
-          err_string += err.shortMessage.chomp(".") + ", "
+        if resp.errors.is_a?(Array) # Something tells me there is a better way to do this
+          resp.errors.each do |err|
+            err_string += err.shortMessage.chomp(".") + ", "
+          end
+          err_string = err_string.chop.chop
+        else
+          err_string = resp.errors.shortMessage
         end
-        err_string = err_string.chop.chop
 
-        raise(Error::ApplicationError.new(resp), err_string, caller)
+        raise(Error::ApplicationError.new(resp), "#{@callName} Call Failed: #{err_string}", caller)
       end
 
       return resp
