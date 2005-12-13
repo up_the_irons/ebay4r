@@ -80,33 +80,13 @@ class API
       request.version = @ver
  
       EBay::assign_args(request, args_hash)
-      
-      #if args_hash
-      #  args_hash.each do |key, val|
-      #    key = EBay::fix_case_down(key.to_s) # lower first character
-
-      #    if request.respond_to? "#{key}="
-      #      s = "request.#{key} = val"
-      #      eval(s) 
-      #    end
-      #  end
-      #end
-      
       EBay::fix_case_down(call_name)
+
       eval "service.#{call_name}(request)"
     else
-      raise(UnknownAPICall, "Unknown API Call: #{call_name}")
+      raise(Error::UnknownAPICall, "Unknown API Call: #{call_name}")
     end
   end
-
-  class Error < StandardError; #:nodoc:
-  end
-
-  # Raised if a call is made to a method that does not exist in the eBay SOAP API
-  class UnknownAPICall < Error; end
-
-  # Raised if an attempt is made to instantiate a type that does not exist in the eBay SOAP API
-  class UnknownType < Error; end
 
   private
   def requestURL
@@ -130,6 +110,19 @@ class API
 
 end
 
+# Exception container
+class Error
+  #:stopdoc:
+  class Error < StandardError; end
+  #:startdoc:
+
+  # Raised if a call is made to a method that does not exist in the eBay SOAP API
+  class UnknownAPICall < Error; end
+
+  # Raised if an attempt is made to instantiate a type that does not exist in the eBay SOAP API
+  class UnknownType < Error; end
+end
+
 #:enddoc:
 
 # These class module methods are for creating complex types (e.g. ItemType, CategoryType, etc...)
@@ -145,7 +138,7 @@ class <<self
 
       return type_obj
     rescue NameError
-      raise(API::UnknownType, "Invalid Type: #{type}")
+      raise(Error::UnknownType, "Invalid Type: #{type}")
     end
   end
 
