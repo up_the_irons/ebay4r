@@ -87,7 +87,13 @@ class API
       EBay::assign_args(request, args_hash)
       EBay::fix_case_down(call_name)
 
-      eval "service.#{call_name}(request)"
+      eval "resp = service.#{call_name}(request)"
+
+      if resp.ack != "Success"
+        
+      end
+
+      return resp
     else
       raise(Error::UnknownAPICall, "Unknown API Call: #{call_name}", caller)
     end
@@ -126,6 +132,9 @@ class Error
 
   # Raised if an attempt is made to instantiate a type that does not exist in the eBay SOAP API
   class UnknownType < Error; end
+
+  # Raised if a call returns with <Ack>Failure</Ack>
+  class ApplicationError < Error; end
 end
 
 #:enddoc:
