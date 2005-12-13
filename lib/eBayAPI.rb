@@ -37,8 +37,9 @@ class API
   # before you can use any other part of this library.
   #
   # :call-seq:
-  #   new(<em>auth_token, dev_id, app_id, cert_id</em>)
-  #   new(<em>auth_token, dev_id, app_id, cert_id, :sandbox => true</em>)
+  #   new(auth_token, dev_id, app_id, cert_id)
+  #   new(auth_token, dev_id, app_id, cert_id, <em>:sandbox => true</em>)
+  #   new(auth_token, dev_id, app_id, cert_id, <em>:sandbox => false, :site_id => 3</em>)
   #
   # The first four (4) arguments are required (all String's):
   #
@@ -47,14 +48,18 @@ class API
   #   app_id     = Your eBay Application ID
   #   cert_id    = Your eBay Certificate ID
   #
-  # The optional fifth argument is a single-element hash (named parameter, if you will) with the
-  # key "sandbox", for example:
+  # The optional fifth argument is a hash where you can pass additional info to refine the caller
+  # object.
+  # 
+  # The key "sandbox", for example:
   #
-  # eBay = EBay::API.new("my_auth_tok", "dev_id", "cert_id", "app_id", :sandbox => true)
+  #   eBay = EBay::API.new("my_auth_tok", "dev_id", "cert_id", "app_id", :sandbox => true)
   #
-  # creates a caller that works with the eBay "sandbox" environment.
+  # creates a caller that works with the eBay "sandbox" environment.  By default, the "live"
+  # environment is used.
   #
-  # Omit the fifth argument to work with the eBay "live" environment, or set the value to 'false'
+  # You may also pass the key "site_id" to specify calls to be routed to international or 
+  # special (e.g. "eBay Motors") sites.
   #
   def initialize(auth_token, dev_id, app_id, cert_id, opt = {})
     @ver = 443
@@ -62,7 +67,7 @@ class API
     @app_id = app_id
     @header_handler = RequesterCredentialsHandler.new(auth_token, dev_id, app_id, cert_id)
 
-    shost, @site_id = opt[:sandbox] ? ["sandbox.", '0'] : ["", '1']
+    shost, @site_id = opt[:sandbox] ? ["sandbox.", '0'] : ["", opt[:site_id] ? opt[:site_id] : '1']
 
     @endpoint_url = "https://api.#{shost}ebay.com/wsapi"
   end
