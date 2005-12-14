@@ -100,6 +100,32 @@ with eBay4R:
 
   # Wasn't that easy?!
 
+==== Adding an Item
+
+This is a more complex example that performs a real (useful) function:
+
+  require 'rubygems'
+  require_gem 'ebay'
+
+  load('myCredentials.rb')
+
+  eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
+
+  # New method of generating complex types, needs some more testing...
+  resp = eBay.AddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:CategoryID => 57882),
+                                         :Title => 'Mouse Pad',
+                                         :Description => 'A really cool mouse pad, you know you want it...',
+                                         :Location => 'On Earth',
+                                         :StartPrice => 12.0,
+                                         :Quantity => 1,
+                                         :ListingDuration => "Days_7",
+                                         :Country => "US",
+                                         :Currency => "USD",
+                                         :PaymentMethods => ["VisaMC", "PersonalCheck"]))
+
+  puts "New Item #" + resp.itemID + " added."
+
+
 === Format of Requests
 
 If <tt>eBay</tt> is your caller object, then you can issue any eBay API call
@@ -119,6 +145,34 @@ or to see your last invoice using the GetAccount call, you do:
 See the "eBay Web Services SOAP API Guide" for acceptable parameters and values
 for each API call.  This guide can be downloaded at eBay's 
 {SOAP Development Center}[http://developer.ebay.com/soap/].
+
+==== Passing Complex Data Types
+
+A number of elements in eBay's schema are XML Schema simple types.  For
+example, CategoryID, Title, and Description are all strings.  But many 
+elements, like Item and Seller, are of types "ItemType" and "SellerType", 
+respectively.  These are complex data types, meaning they are structures
+composed of collections of simple types.
+
+"How do I make a complex type object?", you ask.  Simple:
+
+  EBay.<element_name>( ... hash of named-arguments ... )
+
+creates a new <em><element_name></em> element of type <em><element_name></em>Type.  For
+example,
+
+  EBay.Item(:Title => 'Mouse Pad', :Description => '...')
+
+creates a new ItemType object.  Please note, these factory methods are class
+methods of module EBay, so the upper-case "E" in "EBay" is not a typo.  A
+more common way to see this is:
+
+  EBay::Item( ... )
+
+The only difference is if you do not pass any arguments to the factory method
+and do not explicitly put empty parentheses (), Ruby will assume it is a 
+constant, not a method.
+
 
 === Format of Responses
 
