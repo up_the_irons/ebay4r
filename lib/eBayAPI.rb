@@ -145,7 +145,7 @@ class Error
   # Raised if an attempt is made to instantiate a type that does not exist in the eBay SOAP API
   class UnknownType < Error; end
 
-  # Raised if a call returns with <Ack>Failure</Ack>
+  # Raised if a call returns with <Ack>Failure</Ack>.  The _resp_ attribute contains the full failed response.
   class ApplicationError < Error; 
     attr_reader :resp
 
