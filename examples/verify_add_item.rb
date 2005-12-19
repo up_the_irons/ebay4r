@@ -28,6 +28,7 @@ resp = eBay.VerifyAddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:
 
 puts "You would spend, if you really called AddItem, the following eBay fees:\n"
 
+
 # The fees part of the response looks like this:
 #
 # <Fees>

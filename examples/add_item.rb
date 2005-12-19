@@ -26,6 +26,7 @@ resp = eBay.AddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:Catego
 puts "New Item #" + resp.itemID + " added."
 puts "You spent:\n"
 
+
 # The fees part of the response looks like this:
 #
 # <Fees>
