@@ -54,6 +54,7 @@ variable)
 
 You can download the latest and greatest code using anonymous CVS, just type:
 
+  cvs -d :pserver:anonymous@rubyforge.org:/var/cvs/ebay4r login
   cvs -d :pserver:anonymous@rubyforge.org:/var/cvs/ebay4r checkout ebay4r
 
 

@@ -9,7 +9,7 @@ spec = Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.summary  = "eBay4R is a Ruby wrapper for eBay's Web Services SOAP API. Emphasis is on ease of use and small footprint."
 
-  candidates = Dir.glob("{examples,lib,tests}/**/*") + Dir.glob("./**/.document")
+  candidates = Dir.glob("{examples,lib,test}/**/*") + Dir.glob("./**/.document")
   s.files    = candidates.delete_if do |item|
                  item.include?("CVS") || item.include?("rdoc")
                end
