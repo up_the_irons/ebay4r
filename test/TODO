@@ -1,0 +1,16 @@
+TODO
+----
+
+There are many, many more tests that need to be performed.
+
+The eBay API now has over 100 possible calls, so if you use this library in
+your eBay application, please consider giving back to the project by writing
+a test case or two.
+
+Please email test cases to: gdolley@ucla.edu
+
+Include your full name so I can give you credit and copyright stamp.
+
+Thanks!
+
+-- Garry
