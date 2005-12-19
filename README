@@ -26,6 +26,11 @@ http://rubyforge.org/projects/ebay4r
 
   http://dev.ctor.org/download/archive/soap4r-20051106.tar.gz
 
+  Note: I _have_ seen one instance of SOAP4R v1.5.5 work out-of-the-box, and
+  that was on a Ruby v1.8.3 source install on NetBSD 2.1.  On my Debian 3.1
+  box, however, I had to install the newer snapshot.  Go figure, I don't 
+  know what the diff is...
+
 
 == Optionals
 
