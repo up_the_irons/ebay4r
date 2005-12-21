@@ -179,6 +179,17 @@ The only difference is if you do not pass any arguments to the factory method
 and do not explicitly put empty parentheses (), Ruby will assume it is a 
 constant, not a method.
 
+==== Setting XML Attributes
+
+The symbol you use to set an XML attribute on an element is:
+
+  :xmlattr_<attribute_name>
+
+For example, to create a <Label> element (corresponding to eBay's LabelType)
+with an attribute of "visible" equal to "true", you would do:
+
+  EBay.Label(:Name => "some string", :xmlattr_visible => true)
+
 
 === Format of Responses
 
