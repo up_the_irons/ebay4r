@@ -1,5 +1,7 @@
 #--
 #
+# $Id: RequesterCredentialsHandler.rb,v 1.3 2005/12/21 02:12:20 garrydolley Exp $
+#
 # Copyright (c) 2005 Garry C. Dolley
 #
 # This file is part of eBay4R.
