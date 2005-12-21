@@ -1,3 +1,5 @@
+# $Id: ebay4r.gemspec,v 1.4 2005/12/21 02:18:34 garrydolley Exp $
+
 require 'rubygems'
 
 spec = Gem::Specification.new do |s|
