@@ -1,4 +1,4 @@
-# $Id: ebay4r.gemspec,v 1.4 2005/12/21 02:18:34 garrydolley Exp $
+# $Id: ebay4r.gemspec,v 1.5 2005/12/21 02:21:53 garrydolley Exp $
 
 require 'rubygems'
 
@@ -7,7 +7,7 @@ spec = Gem::Specification.new do |s|
   s.version  = "0.5.1"
   s.author   = "Garry Dolley"
   s.email    = "gdolley@ucla.edu"
-  s.homepage = "ebay4r.rubyforge.org"
+  s.homepage = "http://ebay4r.rubyforge.org"
   s.platform = Gem::Platform::RUBY
   s.summary  = "eBay4R is a Ruby wrapper for eBay's Web Services SOAP API. Emphasis is on ease of use and small footprint."
 
