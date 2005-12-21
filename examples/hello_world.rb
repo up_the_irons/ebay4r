@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# $Id: hello_world.rb,v 1.4 2005/12/21 02:15:41 garrydolley Exp $
+
 $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 
 require 'eBayAPI'
