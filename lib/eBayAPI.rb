@@ -1,6 +1,6 @@
 #--
 #
-# $Id: eBayAPI.rb,v 1.20 2005/12/21 02:02:33 garrydolley Exp $
+# $Id: eBayAPI.rb,v 1.21 2005/12/27 00:42:03 garrydolley Exp $
 #
 # Copyright (c) 2005 Garry C. Dolley
 #
@@ -122,6 +122,9 @@ class API
     service = EBayAPIInterface.new(requestURL())
     service.headerhandler << @header_handler
     service.wiredump_dev = STDOUT if @debug
+
+    # I believe the line below will work after we get the kinks worked out w/ http-access2
+    # service.options['protocol.http.ssl_config.verify_mode'] = OpenSSL::SSL::VERIFY_NONE
     
     return service
   end
