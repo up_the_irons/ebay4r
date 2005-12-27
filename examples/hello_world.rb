@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# $Id: hello_world.rb,v 1.6 2005/12/27 01:13:46 garrydolley Exp $
 
 $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 
