@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# $Id: verify_add_item.rb,v 1.8 2005/12/27 01:17:01 garrydolley Exp $
 
 $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 require 'eBayAPI'
