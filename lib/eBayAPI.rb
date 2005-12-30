@@ -1,6 +1,6 @@
 #--
 #
-# $Id: eBayAPI.rb,v 1.21 2005/12/27 00:42:03 garrydolley Exp $
+# $Id: eBayAPI.rb,v 1.22 2005/12/30 09:04:45 garrydolley Exp $
 #
 # Copyright (c) 2005 Garry C. Dolley
 #
@@ -72,6 +72,8 @@ class API
     shost, @site_id = opt[:sandbox] ? ["sandbox.", '0'] : ["", opt[:site_id] ? opt[:site_id] : '1']
 
     @endpoint_url = "https://api.#{shost}ebay.com/wsapi"
+
+    XSD::Charset.encoding = 'UTF8' # Thanks to Ray Hildreth
   end
 
   def method_missing(m, *args) #:nodoc:
