@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# $Id: get_categories2.rb,v 1.1 2006/01/07 07:45:34 garrydolley Exp $
+# $Id: get_categories2.rb,v 1.2 2006/01/07 07:50:27 garrydolley Exp $
 
 $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 
@@ -22,7 +22,7 @@ resp = eBay.GetCategories(:DetailLevel => 'ReturnAll', # Return all available in
 
 # Report results
 
-puts "eBay Top Level Categories for US eBay Motors site (Cat. Version " + resp.categoryVersion + "):"
+puts "eBay Motors Top Level Categories (Cat. Version " + resp.categoryVersion + "):"
 puts ""
 
 resp.categoryArray.category.each do |cat|
