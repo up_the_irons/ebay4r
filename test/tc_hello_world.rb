@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 #--
+# $Id: tc_hello_world.rb,v 1.2 2006/01/07 07:57:15 garrydolley Exp $
 #
 # Copyright (c) 2005 Garry C. Dolley
 #
