@@ -1,6 +1,5 @@
 #--
-#
-# $Id: eBayAPI.rb,v 1.22 2005/12/30 09:04:45 garrydolley Exp $
+# $Id: eBayAPI.rb,v 1.23 2006/01/07 07:34:27 garrydolley Exp $
 #
 # Copyright (c) 2005 Garry C. Dolley
 #
@@ -69,7 +68,12 @@ class API
     @app_id = app_id
     @header_handler = RequesterCredentialsHandler.new(auth_token, dev_id, app_id, cert_id)
 
-    shost, @site_id = opt[:sandbox] ? ["sandbox.", '0'] : ["", opt[:site_id] ? opt[:site_id] : '1']
+    #shost, @site_id = opt[:sandbox] ? ["sandbox.", '0'] : ["", opt[:site_id] ? opt[:site_id] : '1']
+
+    # Default to 'US' (SiteID = 0) site
+    @site_id = opt[:site_id] ? opt[:site_id] : '0' 
+
+    shost = opt[:sandbox] ? "sandbox." : ""
 
     @endpoint_url = "https://api.#{shost}ebay.com/wsapi"
 
