@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# $Id: add_item.rb,v 1.10 2005/12/27 01:17:01 garrydolley Exp $
+# $Id: add_item.rb,v 1.11 2006/01/13 09:56:29 garrydolley Exp $
 
 $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 require 'eBayAPI'
@@ -12,17 +12,17 @@ load('myCredentials.rb')
 
 eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
 
-# New method of generating complex types, needs some more testing...
-resp = eBay.AddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:CategoryID => 57882),
-                                       :Title => 'Mouse Pad',
-                                       :Description => 'A really cool mouse pad, you know you want it...',
-                                       :Location => 'On Earth',
-                                       :StartPrice => 12.0,
-                                       :Quantity => 1,
-                                       :ListingDuration => "Days_7",
-                                       :Country => "US",
-                                       :Currency => "USD",
-                                       :PaymentMethods => ["VisaMC", "PersonalCheck"]))
+# Shorter way of passing complex types (implied by hashing) than when we did in v0.5.2 and prior
+resp = eBay.AddItem(:Item => { :PrimaryCategory => { :CategoryID => 57882 },
+                               :Title => 'Mouse Pad',
+                               :Description => 'A really cool mouse pad, you know you want it...',
+                               :Location => 'On Earth',
+                               :StartPrice => 12.0,
+                               :Quantity => 1,
+                               :ListingDuration => "Days_7",
+                               :Country => "US",
+                               :Currency => "USD",
+                               :PaymentMethods => ["VisaMC", "PersonalCheck"] })
 
 puts "New Item #" + resp.itemID + " added."
 puts "You spent:\n"
