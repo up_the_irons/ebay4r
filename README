@@ -117,7 +117,28 @@ This is a more complex example that performs a real (useful) function:
 
   eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
 
-  # New method of generating complex types, needs some more testing...
+  # Notice how we nest hashes to mimic the XML structure of an AddItem request
+  resp = eBay.AddItem(:Item => { :PrimaryCategory => { :CategoryID => 57882 },
+                                 :Title => 'Mouse Pad',
+                                 :Description => 'A really cool mouse pad, you know you want it...',
+                                 :Location => 'On Earth',
+                                 :StartPrice => 12.0,
+                                 :Quantity => 1,
+                                 :ListingDuration => "Days_7",
+                                 :Country => "US",
+                                 :Currency => "USD",
+                                 :PaymentMethods => ["VisaMC", "PersonalCheck"] })
+
+  puts "New Item #" + resp.itemID + " added."
+
+The way we nest hashes in the above AddItem() call may be confusing at first. 
+It is just a short-hand way of creating the complex types we need for the 
+call.
+
+You may instead explicitly create the complex types (see "Creating Complex 
+Data Types" below) needed for the call (it makes the code longer, but a bit
+more readable):
+
   resp = eBay.AddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:CategoryID => 57882),
                                          :Title => 'Mouse Pad',
                                          :Description => 'A really cool mouse pad, you know you want it...',
@@ -128,8 +149,6 @@ This is a more complex example that performs a real (useful) function:
                                          :Country => "US",
                                          :Currency => "USD",
                                          :PaymentMethods => ["VisaMC", "PersonalCheck"]))
-
-  puts "New Item #" + resp.itemID + " added."
 
 
 === Format of Requests
@@ -152,7 +171,7 @@ See the "eBay Web Services SOAP API Guide" for acceptable parameters and values
 for each API call.  This guide can be downloaded at eBay's 
 {SOAP Development Center}[http://developer.ebay.com/soap/].
 
-==== Passing Complex Data Types
+==== Creating Complex Data Types
 
 A number of elements in eBay's schema are XML Schema simple types.  For
 example, CategoryID, Title, and Description are all strings.  But many 
@@ -356,4 +375,4 @@ You should have received a copy of the GNU General Public License along with
 eBay4R; if not, write to the Free Software Foundation, Inc., 51 Franklin
 Street, Fifth Floor, Boston, MA  02110-1301, USA
 
-$Id: README,v 1.14 2005/12/21 02:17:10 garrydolley Exp $
+$Id: README,v 1.15 2006/01/13 10:12:19 garrydolley Exp $
