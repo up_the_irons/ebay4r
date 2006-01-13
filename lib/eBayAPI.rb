@@ -1,5 +1,5 @@
 #--
-# $Id: eBayAPI.rb,v 1.24 2006/01/07 07:53:41 garrydolley Exp $
+# $Id: eBayAPI.rb,v 1.25 2006/01/13 09:47:50 garrydolley Exp $
 #
 # Copyright (c) 2005 Garry C. Dolley
 #
@@ -96,7 +96,7 @@ class API
       resp = eval("service.#{call_name}(request)")
 
       # Handle eBay Application-level error
-      if resp.ack != "Success"
+      if resp.ack == "Failure"
         err_string = ''
 
         if resp.errors.is_a?(Array) # Something tells me there is a better way to do this
