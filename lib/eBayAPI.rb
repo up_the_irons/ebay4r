@@ -1,5 +1,5 @@
 #--
-# $Id: eBayAPI.rb,v 1.25 2006/01/13 09:47:50 garrydolley Exp $
+# $Id: eBayAPI.rb,v 1.26 2006/01/15 20:05:49 garrydolley Exp $
 #
 # Copyright (c) 2005 Garry C. Dolley
 #
@@ -63,7 +63,7 @@ class API
   # special (e.g. "eBay Motors") sites.
   #
   def initialize(auth_token, dev_id, app_id, cert_id, opt = {})
-    @ver = 443
+    @ver = 433
     @debug = false
     @app_id = app_id
     @header_handler = RequesterCredentialsHandler.new(auth_token, dev_id, app_id, cert_id)
