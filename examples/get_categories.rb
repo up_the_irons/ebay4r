@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# $Id: get_categories.rb,v 1.1 2005/12/27 01:13:46 garrydolley Exp $
+# $Id: get_categories.rb,v 1.2 2006/01/16 09:52:56 garrydolley Exp $
 
 $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 
@@ -17,7 +17,7 @@ eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
 
 # Call "GetCategories"
 resp = eBay.GetCategories(:DetailLevel => 'ReturnAll', # Return all available info
-                          :CategorySideID => 1,        # US site
+                          :CategorySideID => 0,        # US site
                           :LevelLimit => 1)            # Only 1 level deep
 
 # Report results
