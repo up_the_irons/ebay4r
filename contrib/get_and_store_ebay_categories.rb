@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# $Id: get_and_store_ebay_categories.rb,v 1.1 2006/01/18 09:30:17 garrydolley Exp $
+# $Id: get_and_store_ebay_categories.rb,v 1.2 2006/01/18 09:42:02 garrydolley Exp $
 #
 # == Copyright
 #
@@ -77,13 +77,19 @@
 #
 #    Example site IDs: 0 = eBay USA, 2 = eBay Canada, 100 = eBay Motors
 #
-#    Just like the examples/ directory, you need a file named "myCredentials.rb" in the current directory or Ruby load path.
+#    Just like the examples/ directory, you need a file named 
+#    "myCredentials.rb" in the current directory or Ruby load path.
 #
-#    The "-c concurrency" command line option says how many category nodes we retrieve at a time.  Default is 20.
+#    The "-c concurrency" command line option says how many category nodes we 
+#    retrieve at a time.  Default is 20.  All direct children are also 
+#    downloaded (grouped BFS).
+#
 #    If you are getting out of memory errors, reduce this number.
-#    If you have lots of memory, you can increase this number and the import will be faster.
+#    If you have lots of memory, you can increase this number and the import 
+#    will be faster.
 #
-#    Note: The eBay Category tree is very large.  This script can run for 20 minutes or longer.
+#    Note: The eBay Category tree is very large.  This script can run for 20
+#    minutes or longer.
 
 $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 
