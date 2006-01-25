@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# $Id: get_feedback.rb,v 1.2 2005/12/27 01:17:01 garrydolley Exp $
+# $Id: get_feedback.rb,v 1.3 2006/01/25 08:38:42 garrydolley Exp $
 
 $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 require 'eBayAPI'
@@ -45,3 +45,4 @@ puts "Total Feedback:"
 resp.feedbackSummary.totalFeedbackPeriodArray.feedbackPeriod.each do |fb|
   puts "  Last #{fb.periodInDays} Days: #{fb.count}"
 end
+
