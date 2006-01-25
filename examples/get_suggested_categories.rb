@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# $Id: get_suggested_categories.rb,v 1.1 2006/01/24 09:53:13 garrydolley Exp $
+# $Id: get_suggested_categories.rb,v 1.2 2006/01/25 08:39:28 garrydolley Exp $
 
 $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 
@@ -21,7 +21,7 @@ resp = eBay.GetSuggestedCategories(:Query => "stuff")
 # Report results
 
 if resp.categoryCount.to_i > 0
-  resp.suggestedCategoryArray.suggestedCategory.each do |cat|
+ [ resp.suggestedCategoryArray.suggestedCategory ].flatten.each do |cat|
     puts "  Category ID   : " + cat.category.categoryID
     puts "  Category Name : " + cat.category.categoryName + " (" + cat.percentItemFound + "%)"
     puts ""
