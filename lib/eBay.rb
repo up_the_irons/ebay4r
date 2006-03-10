@@ -10,12 +10,14 @@ class AddDisputeRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["disputeExplanation", ["DisputeExplanationCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeExplanation")]],
     ["disputeReason", ["DisputeReasonCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeReason")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
-    ["transactionID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionID")]]]
+    ["transactionID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -23,6 +25,7 @@ class AddDisputeRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :disputeExplanation
   attr_accessor :disputeReason
@@ -33,13 +36,14 @@ class AddDisputeRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, disputeExplanation = nil, disputeReason = nil, itemID = nil, transactionID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, disputeExplanation = nil, disputeReason = nil, itemID = nil, transactionID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @disputeExplanation = disputeExplanation
     @disputeReason = disputeReason
@@ -66,7 +70,8 @@ class AddDisputeResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["disputeID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeID")]]]
+    ["disputeID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeID")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -115,14 +120,16 @@ class AddDisputeResponseRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["disputeID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeID")]],
     ["messageText", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageText")]],
     ["disputeActivity", ["DisputeActivityCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeActivity")]],
     ["shippingCarrierUsed", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingCarrierUsed")]],
     ["shipmentTrackNumber", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShipmentTrackNumber")]],
-    ["shippingTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingTime")]]]
+    ["shippingTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingTime")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -130,6 +137,7 @@ class AddDisputeResponseRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :disputeID
   attr_accessor :messageText
@@ -142,13 +150,14 @@ class AddDisputeResponseRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, disputeID = nil, messageText = nil, disputeActivity = nil, shippingCarrierUsed = nil, shipmentTrackNumber = nil, shippingTime = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, disputeID = nil, messageText = nil, disputeActivity = nil, shippingCarrierUsed = nil, shipmentTrackNumber = nil, shippingTime = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @disputeID = disputeID
     @messageText = messageText
@@ -176,7 +185,8 @@ class AddDisputeResponseResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -223,10 +233,12 @@ class AddItemRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["item", ["ItemType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]],
-    ["externalProductID", ["ExternalProductIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExternalProductID")]]]
+    ["externalProductID", ["ExternalProductIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExternalProductID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -234,6 +246,7 @@ class AddItemRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :item
   attr_accessor :externalProductID
@@ -242,13 +255,14 @@ class AddItemRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, item = nil, externalProductID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, item = nil, externalProductID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @item = item
     @externalProductID = externalProductID
@@ -278,7 +292,8 @@ class AddItemResponseType
     ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTime")]],
     ["fees", ["FeesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Fees")]],
     ["categoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
-    ["category2ID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category2ID")]]]
+    ["category2ID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category2ID")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -337,9 +352,11 @@ class AddLiveAuctionItemRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["item", ["ItemType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]]]
+    ["item", ["ItemType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -347,6 +364,7 @@ class AddLiveAuctionItemRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :item
 
@@ -354,13 +372,14 @@ class AddLiveAuctionItemRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, item = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, item = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @item = item
   end
@@ -387,7 +406,8 @@ class AddLiveAuctionItemResponseType
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["fees", ["FeesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Fees")]],
     ["categoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
-    ["category2ID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category2ID")]]]
+    ["category2ID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category2ID")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -442,10 +462,12 @@ class AddMemberMessageRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
-    ["memberMessage", ["MemberMessageType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MemberMessage")]]]
+    ["memberMessage", ["MemberMessageType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MemberMessage")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -453,6 +475,7 @@ class AddMemberMessageRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :memberMessage
@@ -461,13 +484,14 @@ class AddMemberMessageRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, memberMessage = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, memberMessage = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @memberMessage = memberMessage
@@ -491,7 +515,8 @@ class AddMemberMessageResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -538,9 +563,11 @@ class AddOrderRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["order", ["OrderType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Order")]]]
+    ["order", ["OrderType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Order")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -548,6 +575,7 @@ class AddOrderRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :order
 
@@ -555,13 +583,14 @@ class AddOrderRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, order = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, order = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @order = order
   end
@@ -586,7 +615,8 @@ class AddOrderResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["orderID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "OrderID")]],
-    ["createdTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CreatedTime")]]]
+    ["createdTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CreatedTime")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -637,14 +667,16 @@ class AddSecondChanceItemRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["recipientBidderUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientBidderUserID")]],
     ["buyItNowPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BuyItNowPrice")]],
     ["copyEmailToSeller", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CopyEmailToSeller")]],
     ["duration", ["SecondChanceOfferDurationCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Duration")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
-    ["site", ["SiteCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Site")]]]
+    ["site", ["SiteCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Site")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -652,6 +684,7 @@ class AddSecondChanceItemRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :recipientBidderUserID
   attr_accessor :buyItNowPrice
@@ -664,13 +697,14 @@ class AddSecondChanceItemRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, recipientBidderUserID = nil, buyItNowPrice = nil, copyEmailToSeller = nil, duration = nil, itemID = nil, site = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, recipientBidderUserID = nil, buyItNowPrice = nil, copyEmailToSeller = nil, duration = nil, itemID = nil, site = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @recipientBidderUserID = recipientBidderUserID
     @buyItNowPrice = buyItNowPrice
@@ -702,7 +736,8 @@ class AddSecondChanceItemResponseType
     ["fees", ["FeesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Fees")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StartTime")]],
-    ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTime")]]]
+    ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTime")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -757,10 +792,12 @@ class AddToItemDescriptionRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
-    ["description", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Description")]]]
+    ["description", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Description")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -768,6 +805,7 @@ class AddToItemDescriptionRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :description
@@ -776,13 +814,14 @@ class AddToItemDescriptionRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, description = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, description = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @description = description
@@ -806,7 +845,8 @@ class AddToItemDescriptionResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -853,9 +893,11 @@ class AddToWatchListRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["itemID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]]]
+    ["itemID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -863,6 +905,7 @@ class AddToWatchListRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
 
@@ -870,13 +913,14 @@ class AddToWatchListRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
   end
@@ -901,7 +945,8 @@ class AddToWatchListResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["watchListCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WatchListCount")]],
-    ["watchListMaximum", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WatchListMaximum")]]]
+    ["watchListMaximum", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WatchListMaximum")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -942,6 +987,116 @@ class AddToWatchListResponseType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}ApproveLiveAuctionBiddersRequestType
+class ApproveLiveAuctionBiddersRequestType
+  @@schema_type = "ApproveLiveAuctionBiddersRequestType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailLevel")]],
+    ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorLanguage")]],
+    ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["userCatalogID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserCatalogID")]],
+    ["bidApproval", ["BidApprovalArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BidApproval")]],
+    ["approveAllPending", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ApproveAllPending")]],
+    ["allApprovedBiddingLimit", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AllApprovedBiddingLimit")]]
+  ]
+
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :warningLevel
+  attr_reader :__xmlele_any
+  attr_accessor :userCatalogID
+  attr_accessor :bidApproval
+  attr_accessor :approveAllPending
+  attr_accessor :allApprovedBiddingLimit
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, userCatalogID = nil, bidApproval = nil, approveAllPending = nil, allApprovedBiddingLimit = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @warningLevel = warningLevel
+    @__xmlele_any = nil
+    @userCatalogID = userCatalogID
+    @bidApproval = bidApproval
+    @approveAllPending = approveAllPending
+    @allApprovedBiddingLimit = allApprovedBiddingLimit
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ApproveLiveAuctionBiddersResponseType
+class ApproveLiveAuctionBiddersResponseType
+  @@schema_type = "ApproveLiveAuctionBiddersResponseType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]],
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["errors", ["ErrorType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Errors")]],
+    ["message", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["build", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Build")]],
+    ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
+    ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
+    ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["bidderUpdateStatus", ["LiveAuctionApprovalStatusArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BidderUpdateStatus")]]
+  ]
+
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_reader :__xmlele_any
+  attr_accessor :bidderUpdateStatus
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, bidderUpdateStatus = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @__xmlele_any = nil
+    @bidderUpdateStatus = bidderUpdateStatus
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}CompleteSaleRequestType
 class CompleteSaleRequestType
   @@schema_type = "CompleteSaleRequestType"
@@ -952,13 +1107,15 @@ class CompleteSaleRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["transactionID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionID")]],
     ["feedbackInfo", ["FeedbackInfoType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackInfo")]],
     ["shipped", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Shipped")]],
-    ["paid", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Paid")]]]
+    ["paid", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Paid")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -966,6 +1123,7 @@ class CompleteSaleRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :transactionID
@@ -977,13 +1135,14 @@ class CompleteSaleRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, transactionID = nil, feedbackInfo = nil, shipped = nil, paid = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, transactionID = nil, feedbackInfo = nil, shipped = nil, paid = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @transactionID = transactionID
@@ -1010,7 +1169,8 @@ class CompleteSaleResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -1057,10 +1217,12 @@ class DeleteMyMessagesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["alertIDs", ["MyMessagesAlertIDArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AlertIDs")]],
-    ["messageIDs", ["MyMessagesMessageIDArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageIDs")]]]
+    ["messageIDs", ["MyMessagesMessageIDArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageIDs")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -1068,6 +1230,7 @@ class DeleteMyMessagesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :alertIDs
   attr_accessor :messageIDs
@@ -1076,13 +1239,14 @@ class DeleteMyMessagesRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, alertIDs = nil, messageIDs = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, alertIDs = nil, messageIDs = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @alertIDs = alertIDs
     @messageIDs = messageIDs
@@ -1106,7 +1270,8 @@ class DeleteMyMessagesResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -1153,12 +1318,13 @@ class EndItemRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["endingReason", ["EndReasonCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndingReason")]],
-    ["bulkSIFEndItemFlow", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BulkSIFEndItemFlow")]],
-    ["sellerInventoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerInventoryID")]]]
+    ["sellerInventoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerInventoryID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -1166,27 +1332,27 @@ class EndItemRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :endingReason
-  attr_accessor :bulkSIFEndItemFlow
   attr_accessor :sellerInventoryID
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, endingReason = nil, bulkSIFEndItemFlow = nil, sellerInventoryID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, endingReason = nil, sellerInventoryID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @endingReason = endingReason
-    @bulkSIFEndItemFlow = bulkSIFEndItemFlow
     @sellerInventoryID = sellerInventoryID
   end
 end
@@ -1209,7 +1375,8 @@ class EndItemResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTime")]]]
+    ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTime")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -1258,9 +1425,11 @@ class FetchTokenRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["secretID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SecretID")]]]
+    ["secretID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SecretID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -1268,6 +1437,7 @@ class FetchTokenRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :secretID
 
@@ -1275,13 +1445,14 @@ class FetchTokenRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, secretID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, secretID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @secretID = secretID
   end
@@ -1306,7 +1477,8 @@ class FetchTokenResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["eBayAuthToken", "SOAP::SOAPString"],
-    ["hardExpirationTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationTime")]]]
+    ["hardExpirationTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationTime")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -1357,7 +1529,8 @@ class GetAccountRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["accountHistorySelection", ["AccountHistorySelectionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AccountHistorySelection")]],
     ["invoiceDate", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvoiceDate")]],
@@ -1367,7 +1540,8 @@ class GetAccountRequestType
     ["excludeBalance", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExcludeBalance")]],
     ["excludeSummary", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExcludeSummary")]],
     ["accountEntrySortType", ["AccountEntrySortTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AccountEntrySortType")]],
-    ["currency", ["CurrencyCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Currency")]]]
+    ["currency", ["CurrencyCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Currency")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -1375,6 +1549,7 @@ class GetAccountRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :accountHistorySelection
   attr_accessor :invoiceDate
@@ -1390,13 +1565,14 @@ class GetAccountRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, accountHistorySelection = nil, invoiceDate = nil, beginDate = nil, endDate = nil, pagination = nil, excludeBalance = nil, excludeSummary = nil, accountEntrySortType = nil, currency = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, accountHistorySelection = nil, invoiceDate = nil, beginDate = nil, endDate = nil, pagination = nil, excludeBalance = nil, excludeSummary = nil, accountEntrySortType = nil, currency = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @accountHistorySelection = accountHistorySelection
     @invoiceDate = invoiceDate
@@ -1435,7 +1611,8 @@ class GetAccountResponseType
     ["paginationResult", ["PaginationResultType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaginationResult")]],
     ["hasMoreEntries", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HasMoreEntries")]],
     ["entriesPerPage", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EntriesPerPage")]],
-    ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PageNumber")]]]
+    ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PageNumber")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -1498,9 +1675,11 @@ class GetAdFormatLeadsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]]]
+    ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -1508,6 +1687,7 @@ class GetAdFormatLeadsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
 
@@ -1515,13 +1695,14 @@ class GetAdFormatLeadsRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
   end
@@ -1546,7 +1727,8 @@ class GetAdFormatLeadsResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["adFormatLead", ["AdFormatLeadType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AdFormatLead")]],
-    ["adFormatLeadCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AdFormatLeadCount")]]]
+    ["adFormatLeadCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AdFormatLeadCount")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -1597,10 +1779,12 @@ class GetAllBiddersRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
-    ["callMode", ["GetAllBiddersModeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CallMode")]]]
+    ["callMode", ["GetAllBiddersModeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CallMode")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -1608,6 +1792,7 @@ class GetAllBiddersRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :callMode
@@ -1616,13 +1801,14 @@ class GetAllBiddersRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, callMode = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, callMode = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @callMode = callMode
@@ -1650,7 +1836,8 @@ class GetAllBiddersResponseType
     ["bidArray", ["OfferArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BidArray")]],
     ["highBidder", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HighBidder")]],
     ["highestBid", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HighestBid")]],
-    ["listingStatus", ["ListingStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingStatus")]]]
+    ["listingStatus", ["ListingStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingStatus")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -1705,8 +1892,10 @@ class GetApiAccessRulesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -1714,19 +1903,21 @@ class GetApiAccessRulesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
   end
 end
@@ -1749,7 +1940,8 @@ class GetApiAccessRulesResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["apiAccessRule", ["ApiAccessRuleType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ApiAccessRule")]]]
+    ["apiAccessRule", ["ApiAccessRuleType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ApiAccessRule")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -1798,11 +1990,14 @@ class GetAttributesCSRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSystemVersion")]],
     ["attributeSetID", ["SOAP::SOAPInt[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSetID")]],
-    ["includeCategoryMappingDetails", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeCategoryMappingDetails")]]]
+    ["includeCategoryMappingDetails", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeCategoryMappingDetails")]],
+    ["digitalDelivery", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DigitalDelivery")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -1810,26 +2005,30 @@ class GetAttributesCSRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :attributeSystemVersion
   attr_accessor :attributeSetID
   attr_accessor :includeCategoryMappingDetails
+  attr_accessor :digitalDelivery
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, attributeSystemVersion = nil, attributeSetID = [], includeCategoryMappingDetails = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, attributeSystemVersion = nil, attributeSetID = [], includeCategoryMappingDetails = nil, digitalDelivery = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @attributeSystemVersion = attributeSystemVersion
     @attributeSetID = attributeSetID
     @includeCategoryMappingDetails = includeCategoryMappingDetails
+    @digitalDelivery = digitalDelivery
   end
 end
 
@@ -1852,7 +2051,8 @@ class GetAttributesCSResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSystemVersion")]],
-    ["attributeData", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeData")]]]
+    ["attributeData", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeData")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -1903,10 +2103,12 @@ class GetAttributesXSLRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["fileName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FileName")]],
-    ["fileVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FileVersion")]]]
+    ["fileVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FileVersion")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -1914,6 +2116,7 @@ class GetAttributesXSLRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :fileName
   attr_accessor :fileVersion
@@ -1922,13 +2125,14 @@ class GetAttributesXSLRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, fileName = nil, fileVersion = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, fileName = nil, fileVersion = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @fileName = fileName
     @fileVersion = fileVersion
@@ -1953,7 +2157,8 @@ class GetAttributesXSLResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["xSLFile", ["XSLFileType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "XSLFile")]]]
+    ["xSLFile", ["XSLFileType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "XSLFile")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -2002,11 +2207,13 @@ class GetBestOffersRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["bestOfferID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferID")]],
-    ["bestOfferStatus", ["BestOfferStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferStatus")]]]
+    ["bestOfferStatus", ["BestOfferStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferStatus")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -2014,6 +2221,7 @@ class GetBestOffersRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :bestOfferID
@@ -2023,13 +2231,14 @@ class GetBestOffersRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, bestOfferID = nil, bestOfferStatus = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, bestOfferID = nil, bestOfferStatus = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @bestOfferID = bestOfferID
@@ -2056,7 +2265,8 @@ class GetBestOffersResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["bestOfferArray", ["BestOfferArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferArray")]],
-    ["item", ["ItemType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]]]
+    ["item", ["ItemType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -2107,12 +2317,15 @@ class GetBidderListRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["activeItemsOnly", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ActiveItemsOnly")]],
     ["endTimeFrom", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTimeFrom")]],
     ["endTimeTo", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTimeTo")]],
-    ["userID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserID")]]]
+    ["userID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserID")]],
+    ["granularityLevel", ["GranularityLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GranularityLevel")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -2120,28 +2333,32 @@ class GetBidderListRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :activeItemsOnly
   attr_accessor :endTimeFrom
   attr_accessor :endTimeTo
   attr_accessor :userID
+  attr_accessor :granularityLevel
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, activeItemsOnly = nil, endTimeFrom = nil, endTimeTo = nil, userID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, activeItemsOnly = nil, endTimeFrom = nil, endTimeTo = nil, userID = nil, granularityLevel = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @activeItemsOnly = activeItemsOnly
     @endTimeFrom = endTimeFrom
     @endTimeTo = endTimeTo
     @userID = userID
+    @granularityLevel = granularityLevel
   end
 end
 
@@ -2164,7 +2381,8 @@ class GetBidderListResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["bidder", ["UserType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Bidder")]],
-    ["bidItemArray", ["ItemArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BidItemArray")]]]
+    ["bidItemArray", ["ItemArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BidItemArray")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -2215,14 +2433,14 @@ class GetCategoriesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["categorySiteID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategorySiteID")]],
     ["categoryParent", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryParent")]],
     ["levelLimit", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LevelLimit")]],
-    ["viewAllNodes", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ViewAllNodes")]],
-    ["reservePriceInclusive", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReservePriceInclusive")]],
-    ["minimumReservePrice", ["SOAP::SOAPDouble", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinimumReservePrice")]]]
+    ["viewAllNodes", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ViewAllNodes")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -2230,32 +2448,30 @@ class GetCategoriesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :categorySiteID
   attr_accessor :categoryParent
   attr_accessor :levelLimit
   attr_accessor :viewAllNodes
-  attr_accessor :reservePriceInclusive
-  attr_accessor :minimumReservePrice
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, categorySiteID = nil, categoryParent = [], levelLimit = nil, viewAllNodes = nil, reservePriceInclusive = nil, minimumReservePrice = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, categorySiteID = nil, categoryParent = [], levelLimit = nil, viewAllNodes = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @categorySiteID = categorySiteID
     @categoryParent = categoryParent
     @levelLimit = levelLimit
     @viewAllNodes = viewAllNodes
-    @reservePriceInclusive = reservePriceInclusive
-    @minimumReservePrice = minimumReservePrice
   end
 end
 
@@ -2282,9 +2498,12 @@ class GetCategoriesResponseType
     ["updateTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UpdateTime")]],
     ["categoryVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryVersion")]],
     ["reservePriceInclusive", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReservePriceInclusive")]],
+    ["reservePriceAllowed", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReservePriceAllowed")]],
     ["minimumReservePrice", ["SOAP::SOAPDouble", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinimumReservePrice")]],
     ["currency", ["CurrencyCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Currency")]],
-    ["reduceReserveInclusive", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReduceReserveInclusive")]]]
+    ["reduceReserveInclusive", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReduceReserveInclusive")]],
+    ["reduceReserveAllowed", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReduceReserveAllowed")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -2304,15 +2523,17 @@ class GetCategoriesResponseType
   attr_accessor :updateTime
   attr_accessor :categoryVersion
   attr_accessor :reservePriceInclusive
+  attr_accessor :reservePriceAllowed
   attr_accessor :minimumReservePrice
   attr_accessor :currency
   attr_accessor :reduceReserveInclusive
+  attr_accessor :reduceReserveAllowed
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, categoryArray = nil, categoryCount = nil, updateTime = nil, categoryVersion = nil, reservePriceInclusive = nil, minimumReservePrice = nil, currency = nil, reduceReserveInclusive = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, categoryArray = nil, categoryCount = nil, updateTime = nil, categoryVersion = nil, reservePriceInclusive = nil, reservePriceAllowed = nil, minimumReservePrice = nil, currency = nil, reduceReserveInclusive = nil, reduceReserveAllowed = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -2331,9 +2552,11 @@ class GetCategoriesResponseType
     @updateTime = updateTime
     @categoryVersion = categoryVersion
     @reservePriceInclusive = reservePriceInclusive
+    @reservePriceAllowed = reservePriceAllowed
     @minimumReservePrice = minimumReservePrice
     @currency = currency
     @reduceReserveInclusive = reduceReserveInclusive
+    @reduceReserveAllowed = reduceReserveAllowed
   end
 end
 
@@ -2347,10 +2570,12 @@ class GetCategory2CSRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["categoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
-    ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSystemVersion")]]]
+    ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSystemVersion")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -2358,6 +2583,7 @@ class GetCategory2CSRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :categoryID
   attr_accessor :attributeSystemVersion
@@ -2366,13 +2592,14 @@ class GetCategory2CSRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, categoryID = nil, attributeSystemVersion = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, categoryID = nil, attributeSystemVersion = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @categoryID = categoryID
     @attributeSystemVersion = attributeSystemVersion
@@ -2400,7 +2627,8 @@ class GetCategory2CSResponseType
     ["mappedCategoryArray", ["CategoryArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MappedCategoryArray")]],
     ["unmappedCategoryArray", ["CategoryArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UnmappedCategoryArray")]],
     ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSystemVersion")]],
-    ["siteWideCharacteristicSets", ["SiteWideCharacteristicsType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SiteWideCharacteristicSets")]]]
+    ["siteWideCharacteristicSets", ["SiteWideCharacteristicsType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SiteWideCharacteristicSets")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -2455,10 +2683,12 @@ class GetCategory2FinanceOfferRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["categoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
-    ["lastModifiedDate", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LastModifiedDate")]]]
+    ["lastModifiedDate", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LastModifiedDate")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -2466,6 +2696,7 @@ class GetCategory2FinanceOfferRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :categoryID
   attr_accessor :lastModifiedDate
@@ -2474,13 +2705,14 @@ class GetCategory2FinanceOfferRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, categoryID = nil, lastModifiedDate = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, categoryID = nil, lastModifiedDate = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @categoryID = categoryID
     @lastModifiedDate = lastModifiedDate
@@ -2506,7 +2738,8 @@ class GetCategory2FinanceOfferResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["count", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Count")]],
-    ["categoryFinanceOfferArray", ["CategoryFinanceOfferArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryFinanceOfferArray")]]]
+    ["categoryFinanceOfferArray", ["CategoryFinanceOfferArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryFinanceOfferArray")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -2557,12 +2790,14 @@ class GetCategoryFeaturesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["categoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
     ["levelLimit", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LevelLimit")]],
     ["viewAllNodes", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ViewAllNodes")]],
-    ["featureID", ["FeatureIDCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeatureID")]]]
+    ["featureID", ["FeatureIDCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeatureID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -2570,6 +2805,7 @@ class GetCategoryFeaturesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :categoryID
   attr_accessor :levelLimit
@@ -2580,13 +2816,14 @@ class GetCategoryFeaturesRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, categoryID = nil, levelLimit = nil, viewAllNodes = nil, featureID = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, categoryID = nil, levelLimit = nil, viewAllNodes = nil, featureID = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @categoryID = categoryID
     @levelLimit = levelLimit
@@ -2617,7 +2854,8 @@ class GetCategoryFeaturesResponseType
     ["updateTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UpdateTime")]],
     ["category", ["CategoryFeatureType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category")]],
     ["siteDefaults", ["SiteDefaultsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SiteDefaults")]],
-    ["featureDefinitions", ["FeatureDefinitionsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeatureDefinitions")]]]
+    ["featureDefinitions", ["FeatureDefinitionsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeatureDefinitions")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -2674,20 +2912,24 @@ class GetCategoryListingsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["motorsGermanySearchable", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MotorsGermanySearchable")]],
     ["categoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
     ["currency", ["CurrencyCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Currency")]],
     ["itemTypeFilter", ["ItemTypeFilterCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemTypeFilter")]],
+    ["storesFixedPrice", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoresFixedPrice")]],
     ["searchType", ["CategoryListingsSearchCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SearchType")]],
     ["orderBy", ["CategoryListingsOrderCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "OrderBy")]],
     ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]],
     ["searchLocation", ["SearchLocationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SearchLocation")]],
     ["proximitySearch", ["ProximitySearchType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProximitySearch")]],
+    ["includeGetItFastItems", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeGetItFastItems")]],
     ["paymentMethod", ["PaymentMethodSearchCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentMethod")]],
     ["includeCondition", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeCondition")]],
-    ["includeFeedback", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeFeedback")]]]
+    ["includeFeedback", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeFeedback")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -2695,16 +2937,19 @@ class GetCategoryListingsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :motorsGermanySearchable
   attr_accessor :categoryID
   attr_accessor :currency
   attr_accessor :itemTypeFilter
+  attr_accessor :storesFixedPrice
   attr_accessor :searchType
   attr_accessor :orderBy
   attr_accessor :pagination
   attr_accessor :searchLocation
   attr_accessor :proximitySearch
+  attr_accessor :includeGetItFastItems
   attr_accessor :paymentMethod
   attr_accessor :includeCondition
   attr_accessor :includeFeedback
@@ -2713,23 +2958,26 @@ class GetCategoryListingsRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, motorsGermanySearchable = nil, categoryID = nil, currency = nil, itemTypeFilter = nil, searchType = nil, orderBy = nil, pagination = nil, searchLocation = nil, proximitySearch = nil, paymentMethod = nil, includeCondition = nil, includeFeedback = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, motorsGermanySearchable = nil, categoryID = nil, currency = nil, itemTypeFilter = nil, storesFixedPrice = nil, searchType = nil, orderBy = nil, pagination = nil, searchLocation = nil, proximitySearch = nil, includeGetItFastItems = nil, paymentMethod = nil, includeCondition = nil, includeFeedback = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @motorsGermanySearchable = motorsGermanySearchable
     @categoryID = categoryID
     @currency = currency
     @itemTypeFilter = itemTypeFilter
+    @storesFixedPrice = storesFixedPrice
     @searchType = searchType
     @orderBy = orderBy
     @pagination = pagination
     @searchLocation = searchLocation
     @proximitySearch = proximitySearch
+    @includeGetItFastItems = includeGetItFastItems
     @paymentMethod = paymentMethod
     @includeCondition = includeCondition
     @includeFeedback = includeFeedback
@@ -2761,7 +3009,8 @@ class GetCategoryListingsResponseType
     ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PageNumber")]],
     ["hasMoreItems", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HasMoreItems")]],
     ["paginationResult", ["PaginationResultType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaginationResult")]],
-    ["buyingGuideDetails", ["BuyingGuideDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BuyingGuideDetails")]]]
+    ["buyingGuideDetails", ["BuyingGuideDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BuyingGuideDetails")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -2824,9 +3073,11 @@ class GetCategoryMappingsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["categoryVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryVersion")]]]
+    ["categoryVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryVersion")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -2834,6 +3085,7 @@ class GetCategoryMappingsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :categoryVersion
 
@@ -2841,13 +3093,14 @@ class GetCategoryMappingsRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, categoryVersion = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, categoryVersion = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @categoryVersion = categoryVersion
   end
@@ -2872,7 +3125,8 @@ class GetCategoryMappingsResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["categoryMapping", ["CategoryMappingType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryMapping")]],
-    ["categoryVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryVersion")]]]
+    ["categoryVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryVersion")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -2923,14 +3177,17 @@ class GetCharitiesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["charityID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharityID")]],
     ["charityName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharityName")]],
     ["query", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Query")]],
     ["charityRegion", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharityRegion")]],
     ["charityDomain", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharityDomain")]],
-    ["includeDescription", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeDescription")]]]
+    ["includeDescription", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeDescription")]],
+    ["matchType", ["StringMatchCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MatchType")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -2938,6 +3195,7 @@ class GetCharitiesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :charityID
   attr_accessor :charityName
@@ -2945,18 +3203,20 @@ class GetCharitiesRequestType
   attr_accessor :charityRegion
   attr_accessor :charityDomain
   attr_accessor :includeDescription
+  attr_accessor :matchType
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, charityID = nil, charityName = nil, query = nil, charityRegion = nil, charityDomain = nil, includeDescription = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, charityID = nil, charityName = nil, query = nil, charityRegion = nil, charityDomain = nil, includeDescription = nil, matchType = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @charityID = charityID
     @charityName = charityName
@@ -2964,6 +3224,7 @@ class GetCharitiesRequestType
     @charityRegion = charityRegion
     @charityDomain = charityDomain
     @includeDescription = includeDescription
+    @matchType = matchType
   end
 end
 
@@ -2985,7 +3246,8 @@ class GetCharitiesResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["charity", ["CharityInfoType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Charity")]]]
+    ["charity", ["CharityInfoType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Charity")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -3034,11 +3296,13 @@ class GetCrossPromotionsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["promotionMethod", ["PromotionMethodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PromotionMethod")]],
-    ["promotionViewMode", ["TradingRoleCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PromotionViewMode")]]]
+    ["promotionViewMode", ["TradingRoleCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PromotionViewMode")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -3046,6 +3310,7 @@ class GetCrossPromotionsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :promotionMethod
@@ -3055,13 +3320,14 @@ class GetCrossPromotionsRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, promotionMethod = nil, promotionViewMode = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, promotionMethod = nil, promotionViewMode = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @promotionMethod = promotionMethod
@@ -3087,7 +3353,8 @@ class GetCrossPromotionsResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["crossPromotion", ["CrossPromotionsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CrossPromotion")]]]
+    ["crossPromotion", ["CrossPromotionsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CrossPromotion")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -3136,11 +3403,13 @@ class GetDescriptionTemplatesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["categoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
     ["lastModifiedTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LastModifiedTime")]],
-    ["motorVehicles", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MotorVehicles")]]]
+    ["motorVehicles", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MotorVehicles")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -3148,6 +3417,7 @@ class GetDescriptionTemplatesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :categoryID
   attr_accessor :lastModifiedTime
@@ -3157,13 +3427,14 @@ class GetDescriptionTemplatesRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, categoryID = nil, lastModifiedTime = nil, motorVehicles = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, categoryID = nil, lastModifiedTime = nil, motorVehicles = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @categoryID = categoryID
     @lastModifiedTime = lastModifiedTime
@@ -3194,7 +3465,8 @@ class GetDescriptionTemplatesResponseType
     ["obsoleteLayoutID", ["SOAP::SOAPInt[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ObsoleteLayoutID")]],
     ["obsoleteThemeID", ["SOAP::SOAPInt[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ObsoleteThemeID")]],
     ["themeGroup", ["ThemeGroupType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ThemeGroup")]],
-    ["themeTotal", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ThemeTotal")]]]
+    ["themeTotal", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ThemeTotal")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -3253,9 +3525,11 @@ class GetDisputeRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["disputeID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeID")]]]
+    ["disputeID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -3263,6 +3537,7 @@ class GetDisputeRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :disputeID
 
@@ -3270,13 +3545,14 @@ class GetDisputeRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, disputeID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, disputeID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @disputeID = disputeID
   end
@@ -3300,7 +3576,8 @@ class GetDisputeResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["dispute", ["DisputeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Dispute")]]]
+    ["dispute", ["DisputeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Dispute")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -3349,11 +3626,13 @@ class GetFeedbackRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]],
     ["userID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserID")]],
-    ["feedbackID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackID")]]]
+    ["feedbackID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -3361,6 +3640,7 @@ class GetFeedbackRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :pagination
   attr_accessor :userID
@@ -3370,13 +3650,14 @@ class GetFeedbackRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, pagination = nil, userID = nil, feedbackID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, pagination = nil, userID = nil, feedbackID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @pagination = pagination
     @userID = userID
@@ -3405,7 +3686,8 @@ class GetFeedbackResponseType
     ["feedbackDetailArray", ["FeedbackDetailArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackDetailArray")]],
     ["feedbackDetailItemTotal", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackDetailItemTotal")]],
     ["feedbackSummary", ["FeedbackSummaryType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackSummary")]],
-    ["feedbackScore", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackScore")]]]
+    ["feedbackScore", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackScore")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -3460,10 +3742,12 @@ class GetFinanceOffersRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["financeOfferID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FinanceOfferID")]],
-    ["lastModifiedDate", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LastModifiedDate")]]]
+    ["lastModifiedDate", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LastModifiedDate")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -3471,6 +3755,7 @@ class GetFinanceOffersRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :financeOfferID
   attr_accessor :lastModifiedDate
@@ -3479,13 +3764,14 @@ class GetFinanceOffersRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, financeOfferID = nil, lastModifiedDate = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, financeOfferID = nil, lastModifiedDate = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @financeOfferID = financeOfferID
     @lastModifiedDate = lastModifiedDate
@@ -3511,7 +3797,8 @@ class GetFinanceOffersResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["count", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Count")]],
-    ["financeOfferArray", ["FinanceOfferArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FinanceOfferArray")]]]
+    ["financeOfferArray", ["FinanceOfferArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FinanceOfferArray")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -3562,9 +3849,11 @@ class GetHighBiddersRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]]]
+    ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -3572,6 +3861,7 @@ class GetHighBiddersRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
 
@@ -3579,13 +3869,14 @@ class GetHighBiddersRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
   end
@@ -3609,9 +3900,9 @@ class GetHighBiddersResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    [
-      ["bidArray", ["OfferArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BidArray")]],
-      ["listingStatus", ["ListingStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingStatus")]]]]
+    ["bidArray", ["OfferArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BidArray")]],
+    ["listingStatus", ["ListingStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingStatus")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -3662,10 +3953,12 @@ class GetItemRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
-    ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeWatchCount")]]]
+    ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeWatchCount")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -3673,6 +3966,7 @@ class GetItemRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :includeWatchCount
@@ -3681,13 +3975,14 @@ class GetItemRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, includeWatchCount = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, includeWatchCount = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @includeWatchCount = includeWatchCount
@@ -3712,7 +4007,8 @@ class GetItemResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["item", ["ItemType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]]]
+    ["item", ["ItemType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -3761,9 +4057,11 @@ class GetItemRecommendationsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["getRecommendationsRequestContainer", ["GetRecommendationsRequestContainerType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GetRecommendationsRequestContainer")]]]
+    ["getRecommendationsRequestContainer", ["GetRecommendationsRequestContainerType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GetRecommendationsRequestContainer")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -3771,6 +4069,7 @@ class GetItemRecommendationsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :getRecommendationsRequestContainer
 
@@ -3778,13 +4077,14 @@ class GetItemRecommendationsRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, getRecommendationsRequestContainer = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, getRecommendationsRequestContainer = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @getRecommendationsRequestContainer = getRecommendationsRequestContainer
   end
@@ -3808,7 +4108,8 @@ class GetItemRecommendationsResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["getRecommendationsResponseContainer", ["GetRecommendationsResponseContainerType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GetRecommendationsResponseContainer")]]]
+    ["getRecommendationsResponseContainer", ["GetRecommendationsResponseContainerType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GetRecommendationsResponseContainer")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -3857,12 +4158,14 @@ class GetItemShippingRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["quantitySold", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "QuantitySold")]],
     ["destinationPostalCode", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DestinationPostalCode")]],
-    ["destinationCountryCode", ["CountryCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DestinationCountryCode")]]]
+    ["destinationCountryCode", ["CountryCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DestinationCountryCode")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -3870,6 +4173,7 @@ class GetItemShippingRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :quantitySold
@@ -3880,13 +4184,14 @@ class GetItemShippingRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, quantitySold = nil, destinationPostalCode = nil, destinationCountryCode = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, quantitySold = nil, destinationPostalCode = nil, destinationCountryCode = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @quantitySold = quantitySold
@@ -3913,7 +4218,8 @@ class GetItemShippingResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["shippingDetails", ["ShippingDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingDetails")]]]
+    ["shippingDetails", ["ShippingDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingDetails")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -3962,16 +4268,17 @@ class GetItemTransactionsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["modTimeFrom", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModTimeFrom")]],
     ["modTimeTo", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModTimeTo")]],
     ["transactionID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionID")]],
     ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]],
-    ["includeDutchAuctionBid", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeDutchAuctionBid")]],
     ["includeFinalValueFee", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeFinalValueFee")]],
-    ["includeContainingOrder", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeContainingOrder")]]]
+    ["includeContainingOrder", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeContainingOrder")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -3979,13 +4286,13 @@ class GetItemTransactionsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :modTimeFrom
   attr_accessor :modTimeTo
   attr_accessor :transactionID
   attr_accessor :pagination
-  attr_accessor :includeDutchAuctionBid
   attr_accessor :includeFinalValueFee
   attr_accessor :includeContainingOrder
 
@@ -3993,20 +4300,20 @@ class GetItemTransactionsRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, modTimeFrom = nil, modTimeTo = nil, transactionID = nil, pagination = nil, includeDutchAuctionBid = nil, includeFinalValueFee = nil, includeContainingOrder = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, modTimeFrom = nil, modTimeTo = nil, transactionID = nil, pagination = nil, includeFinalValueFee = nil, includeContainingOrder = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @modTimeFrom = modTimeFrom
     @modTimeTo = modTimeTo
     @transactionID = transactionID
     @pagination = pagination
-    @includeDutchAuctionBid = includeDutchAuctionBid
     @includeFinalValueFee = includeFinalValueFee
     @includeContainingOrder = includeContainingOrder
   end
@@ -4037,7 +4344,8 @@ class GetItemTransactionsResponseType
     ["returnedTransactionCountActual", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReturnedTransactionCountActual")]],
     ["item", ["ItemType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]],
     ["transactionArray", ["TransactionArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionArray")]],
-    ["payPalPreferred", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PayPalPreferred")]]]
+    ["payPalPreferred", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PayPalPreferred")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -4100,10 +4408,12 @@ class GetItemsAwaitingFeedbackRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["sort", ["ItemSortTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Sort")]],
-    ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]]]
+    ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -4111,6 +4421,7 @@ class GetItemsAwaitingFeedbackRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :sort
   attr_accessor :pagination
@@ -4119,13 +4430,14 @@ class GetItemsAwaitingFeedbackRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, sort = nil, pagination = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, sort = nil, pagination = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @sort = sort
     @pagination = pagination
@@ -4150,7 +4462,8 @@ class GetItemsAwaitingFeedbackResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["itemsAwaitingFeedback", ["PaginatedTransactionArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemsAwaitingFeedback")]]]
+    ["itemsAwaitingFeedback", ["PaginatedTransactionArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemsAwaitingFeedback")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -4189,6 +4502,128 @@ class GetItemsAwaitingFeedbackResponseType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}GetLiveAuctionBiddersRequestType
+class GetLiveAuctionBiddersRequestType
+  @@schema_type = "GetLiveAuctionBiddersRequestType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailLevel")]],
+    ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorLanguage")]],
+    ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["userCatalogID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserCatalogID")]],
+    ["bidderStatus", ["BidderStatusCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BidderStatus")]],
+    ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]]
+  ]
+
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :warningLevel
+  attr_reader :__xmlele_any
+  attr_accessor :userCatalogID
+  attr_accessor :bidderStatus
+  attr_accessor :pagination
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, userCatalogID = nil, bidderStatus = [], pagination = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @warningLevel = warningLevel
+    @__xmlele_any = nil
+    @userCatalogID = userCatalogID
+    @bidderStatus = bidderStatus
+    @pagination = pagination
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetLiveAuctionBiddersResponseType
+class GetLiveAuctionBiddersResponseType
+  @@schema_type = "GetLiveAuctionBiddersResponseType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]],
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["errors", ["ErrorType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Errors")]],
+    ["message", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["build", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Build")]],
+    ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
+    ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
+    ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["bidderDetails", ["BidderDetailArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BidderDetails")]],
+    ["totalPending", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalPending")]],
+    ["totalApproved", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalApproved")]],
+    ["totalDenied", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalDenied")]],
+    ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PageNumber")]],
+    ["paginationResult", ["PaginationResultType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaginationResult")]]
+  ]
+
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_reader :__xmlele_any
+  attr_accessor :bidderDetails
+  attr_accessor :totalPending
+  attr_accessor :totalApproved
+  attr_accessor :totalDenied
+  attr_accessor :pageNumber
+  attr_accessor :paginationResult
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, bidderDetails = nil, totalPending = nil, totalApproved = nil, totalDenied = nil, pageNumber = nil, paginationResult = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @__xmlele_any = nil
+    @bidderDetails = bidderDetails
+    @totalPending = totalPending
+    @totalApproved = totalApproved
+    @totalDenied = totalDenied
+    @pageNumber = pageNumber
+    @paginationResult = paginationResult
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}GetLiveAuctionCatalogDetailsRequestType
 class GetLiveAuctionCatalogDetailsRequestType
   @@schema_type = "GetLiveAuctionCatalogDetailsRequestType"
@@ -4199,8 +4634,10 @@ class GetLiveAuctionCatalogDetailsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -4208,19 +4645,21 @@ class GetLiveAuctionCatalogDetailsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
   end
 end
@@ -4243,7 +4682,8 @@ class GetLiveAuctionCatalogDetailsResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["liveAuctionCatalog", ["LiveAuctionCatalogType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LiveAuctionCatalog")]]]
+    ["liveAuctionCatalog", ["LiveAuctionCatalogType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LiveAuctionCatalog")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -4292,7 +4732,8 @@ class GetMemberMessagesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["mailMessageType", ["MessageTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MailMessageType")]],
@@ -4301,7 +4742,8 @@ class GetMemberMessagesRequestType
     ["startCreationTime", ["SOAP::SOAPDate", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StartCreationTime")]],
     ["endCreationTime", ["SOAP::SOAPDate", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndCreationTime")]],
     ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]],
-    ["memberMessageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MemberMessageID")]]]
+    ["memberMessageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MemberMessageID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -4309,6 +4751,7 @@ class GetMemberMessagesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :mailMessageType
@@ -4323,13 +4766,14 @@ class GetMemberMessagesRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, mailMessageType = nil, messageStatus = nil, displayToPublic = nil, startCreationTime = nil, endCreationTime = nil, pagination = nil, memberMessageID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, mailMessageType = nil, messageStatus = nil, displayToPublic = nil, startCreationTime = nil, endCreationTime = nil, pagination = nil, memberMessageID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @mailMessageType = mailMessageType
@@ -4362,7 +4806,8 @@ class GetMemberMessagesResponseType
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["memberMessage", ["MemberMessageExchangeArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MemberMessage")]],
     ["paginationResult", ["PaginationResultType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaginationResult")]],
-    ["hasMoreItems", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HasMoreItems")]]]
+    ["hasMoreItems", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HasMoreItems")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -4415,11 +4860,13 @@ class GetMyMessagesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["alertIDs", ["MyMessagesAlertIDArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AlertIDs")]],
     ["messageIDs", ["MyMessagesMessageIDArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageIDs")]],
-    ["folderID", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FolderID")]]]
+    ["folderID", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FolderID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -4427,6 +4874,7 @@ class GetMyMessagesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :alertIDs
   attr_accessor :messageIDs
@@ -4436,13 +4884,14 @@ class GetMyMessagesRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, alertIDs = nil, messageIDs = nil, folderID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, alertIDs = nil, messageIDs = nil, folderID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @alertIDs = alertIDs
     @messageIDs = messageIDs
@@ -4470,7 +4919,8 @@ class GetMyMessagesResponseType
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["summary", ["MyMessagesSummaryType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Summary")]],
     ["alerts", ["MyMessagesAlertArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Alerts")]],
-    ["messages", ["MyMessagesMessageArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Messages")]]]
+    ["messages", ["MyMessagesMessageArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Messages")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -4523,7 +4973,8 @@ class GetMyeBayRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["biddingSort", ["ItemSortTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BiddingSort")]],
     ["lostSort", ["ItemSortTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LostSort")]],
@@ -4533,7 +4984,8 @@ class GetMyeBayRequestType
     ["wonSort", ["ItemSortTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WonSort")]],
     ["favoriteSearches", ["MyeBaySelectionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FavoriteSearches")]],
     ["favoriteSellers", ["MyeBaySelectionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FavoriteSellers")]],
-    ["secondChanceOffers", ["MyeBaySelectionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SecondChanceOffers")]]]
+    ["secondChanceOffers", ["MyeBaySelectionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SecondChanceOffers")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -4541,6 +4993,7 @@ class GetMyeBayRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :biddingSort
   attr_accessor :lostSort
@@ -4556,13 +5009,14 @@ class GetMyeBayRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, biddingSort = nil, lostSort = nil, maxItemsPerList = nil, maxItemAgeInDays = nil, watchSort = nil, wonSort = nil, favoriteSearches = nil, favoriteSellers = nil, secondChanceOffers = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, biddingSort = nil, lostSort = nil, maxItemsPerList = nil, maxItemAgeInDays = nil, watchSort = nil, wonSort = nil, favoriteSearches = nil, favoriteSellers = nil, secondChanceOffers = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @biddingSort = biddingSort
     @lostSort = lostSort
@@ -4600,7 +5054,8 @@ class GetMyeBayResponseType
     ["wonItemArray", ["ItemArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WonItemArray")]],
     ["favoriteSearches", ["MyeBayFavoriteSearchListType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FavoriteSearches")]],
     ["favoriteSellers", ["MyeBayFavoriteSellerListType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FavoriteSellers")]],
-    ["secondChanceOffers", ["MyeBaySecondChanceOfferListType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SecondChanceOffers")]]]
+    ["secondChanceOffers", ["MyeBaySecondChanceOfferListType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SecondChanceOffers")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -4661,7 +5116,8 @@ class GetMyeBayBuyingRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["watchList", ["ItemListCustomizationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WatchList")]],
     ["bidList", ["ItemListCustomizationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BidList")]],
@@ -4670,7 +5126,8 @@ class GetMyeBayBuyingRequestType
     ["lostList", ["ItemListCustomizationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LostList")]],
     ["favoriteSearches", ["MyeBaySelectionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FavoriteSearches")]],
     ["favoriteSellers", ["MyeBaySelectionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FavoriteSellers")]],
-    ["secondChanceOffer", ["MyeBaySelectionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SecondChanceOffer")]]]
+    ["secondChanceOffer", ["MyeBaySelectionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SecondChanceOffer")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -4678,6 +5135,7 @@ class GetMyeBayBuyingRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :watchList
   attr_accessor :bidList
@@ -4692,13 +5150,14 @@ class GetMyeBayBuyingRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, watchList = nil, bidList = nil, bestOfferList = nil, wonList = nil, lostList = nil, favoriteSearches = nil, favoriteSellers = nil, secondChanceOffer = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, watchList = nil, bidList = nil, bestOfferList = nil, wonList = nil, lostList = nil, favoriteSearches = nil, favoriteSellers = nil, secondChanceOffer = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @watchList = watchList
     @bidList = bidList
@@ -4737,7 +5196,8 @@ class GetMyeBayBuyingResponseType
     ["lostList", ["PaginatedItemArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LostList")]],
     ["favoriteSearches", ["MyeBayFavoriteSearchListType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FavoriteSearches")]],
     ["favoriteSellers", ["MyeBayFavoriteSellerListType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FavoriteSellers")]],
-    ["secondChanceOffer", ["ItemType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SecondChanceOffer")]]]
+    ["secondChanceOffer", ["ItemType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SecondChanceOffer")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -4802,10 +5262,12 @@ class GetMyeBayRemindersRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["buyingReminders", ["ReminderCustomizationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BuyingReminders")]],
-    ["sellingReminders", ["ReminderCustomizationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellingReminders")]]]
+    ["sellingReminders", ["ReminderCustomizationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellingReminders")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -4813,6 +5275,7 @@ class GetMyeBayRemindersRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :buyingReminders
   attr_accessor :sellingReminders
@@ -4821,13 +5284,14 @@ class GetMyeBayRemindersRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, buyingReminders = nil, sellingReminders = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, buyingReminders = nil, sellingReminders = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @buyingReminders = buyingReminders
     @sellingReminders = sellingReminders
@@ -4853,7 +5317,8 @@ class GetMyeBayRemindersResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["buyingReminders", ["RemindersType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BuyingReminders")]],
-    ["sellingReminders", ["RemindersType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellingReminders")]]]
+    ["sellingReminders", ["RemindersType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellingReminders")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -4904,12 +5369,14 @@ class GetMyeBaySellingRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["scheduledList", ["ItemListCustomizationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ScheduledList")]],
     ["activeList", ["ItemListCustomizationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ActiveList")]],
     ["soldList", ["ItemListCustomizationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SoldList")]],
-    ["unsoldList", ["ItemListCustomizationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UnsoldList")]]]
+    ["unsoldList", ["ItemListCustomizationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UnsoldList")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -4917,6 +5384,7 @@ class GetMyeBaySellingRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :scheduledList
   attr_accessor :activeList
@@ -4927,13 +5395,14 @@ class GetMyeBaySellingRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, scheduledList = nil, activeList = nil, soldList = nil, unsoldList = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, scheduledList = nil, activeList = nil, soldList = nil, unsoldList = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @scheduledList = scheduledList
     @activeList = activeList
@@ -4964,7 +5433,8 @@ class GetMyeBaySellingResponseType
     ["scheduledList", ["PaginatedItemArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ScheduledList")]],
     ["activeList", ["PaginatedItemArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ActiveList")]],
     ["soldList", ["PaginatedOrderTransactionArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SoldList")]],
-    ["unsoldList", ["PaginatedItemArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UnsoldList")]]]
+    ["unsoldList", ["PaginatedItemArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UnsoldList")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -5021,9 +5491,11 @@ class GetNotificationPreferencesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["preferenceLevel", ["NotificationRoleCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PreferenceLevel")]]]
+    ["preferenceLevel", ["NotificationRoleCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PreferenceLevel")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -5031,6 +5503,7 @@ class GetNotificationPreferencesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :preferenceLevel
 
@@ -5038,13 +5511,14 @@ class GetNotificationPreferencesRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, preferenceLevel = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, preferenceLevel = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @preferenceLevel = preferenceLevel
   end
@@ -5069,7 +5543,10 @@ class GetNotificationPreferencesResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["applicationDeliveryPreferences", ["ApplicationDeliveryPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ApplicationDeliveryPreferences")]],
-    ["userDeliveryPreferenceArray", ["NotificationEnableArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserDeliveryPreferenceArray")]]]
+    ["userDeliveryPreferenceArray", ["NotificationEnableArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserDeliveryPreferenceArray")]],
+    ["userData", ["NotificationUserDataType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserData")]],
+    ["eventProperty", ["NotificationEventPropertyType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EventProperty")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -5086,12 +5563,14 @@ class GetNotificationPreferencesResponseType
   attr_reader :__xmlele_any
   attr_accessor :applicationDeliveryPreferences
   attr_accessor :userDeliveryPreferenceArray
+  attr_accessor :userData
+  attr_accessor :eventProperty
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, applicationDeliveryPreferences = nil, userDeliveryPreferenceArray = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, applicationDeliveryPreferences = nil, userDeliveryPreferenceArray = nil, userData = nil, eventProperty = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -5107,6 +5586,127 @@ class GetNotificationPreferencesResponseType
     @__xmlele_any = nil
     @applicationDeliveryPreferences = applicationDeliveryPreferences
     @userDeliveryPreferenceArray = userDeliveryPreferenceArray
+    @userData = userData
+    @eventProperty = eventProperty
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetNotificationsUsageRequestType
+class GetNotificationsUsageRequestType
+  @@schema_type = "GetNotificationsUsageRequestType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailLevel")]],
+    ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorLanguage")]],
+    ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StartTime")]],
+    ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTime")]],
+    ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]]
+  ]
+
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :warningLevel
+  attr_reader :__xmlele_any
+  attr_accessor :startTime
+  attr_accessor :endTime
+  attr_accessor :itemID
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, startTime = nil, endTime = nil, itemID = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @warningLevel = warningLevel
+    @__xmlele_any = nil
+    @startTime = startTime
+    @endTime = endTime
+    @itemID = itemID
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetNotificationsUsageResponseType
+class GetNotificationsUsageResponseType
+  @@schema_type = "GetNotificationsUsageResponseType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]],
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["errors", ["ErrorType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Errors")]],
+    ["message", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["build", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Build")]],
+    ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
+    ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
+    ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StartTime")]],
+    ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTime")]],
+    ["notificationDetailsArray", ["NotificationDetailsArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationDetailsArray")]],
+    ["markUpMarkDownHistory", ["MarkUpMarkDownHistoryType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MarkUpMarkDownHistory")]],
+    ["notificationStatistics", ["NotificationStatisticsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationStatistics")]]
+  ]
+
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_reader :__xmlele_any
+  attr_accessor :startTime
+  attr_accessor :endTime
+  attr_accessor :notificationDetailsArray
+  attr_accessor :markUpMarkDownHistory
+  attr_accessor :notificationStatistics
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, startTime = nil, endTime = nil, notificationDetailsArray = nil, markUpMarkDownHistory = nil, notificationStatistics = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @__xmlele_any = nil
+    @startTime = startTime
+    @endTime = endTime
+    @notificationDetailsArray = notificationDetailsArray
+    @markUpMarkDownHistory = markUpMarkDownHistory
+    @notificationStatistics = notificationStatistics
   end
 end
 
@@ -5120,7 +5720,8 @@ class GetOrdersRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["orderIDArray", ["OrderIDArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "OrderIDArray")]],
     ["createTimeFrom", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CreateTimeFrom")]],
@@ -5128,7 +5729,8 @@ class GetOrdersRequestType
     ["orderRole", ["TradingRoleCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "OrderRole")]],
     ["orderStatus", ["OrderStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "OrderStatus")]],
     ["listingType", ["ListingTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingType")]],
-    ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]]]
+    ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -5136,6 +5738,7 @@ class GetOrdersRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :orderIDArray
   attr_accessor :createTimeFrom
@@ -5149,13 +5752,14 @@ class GetOrdersRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, orderIDArray = nil, createTimeFrom = nil, createTimeTo = nil, orderRole = nil, orderStatus = nil, listingType = nil, pagination = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, orderIDArray = nil, createTimeFrom = nil, createTimeTo = nil, orderRole = nil, orderStatus = nil, listingType = nil, pagination = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @orderIDArray = orderIDArray
     @createTimeFrom = createTimeFrom
@@ -5190,7 +5794,8 @@ class GetOrdersResponseType
     ["orderArray", ["OrderArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "OrderArray")]],
     ["ordersPerPage", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "OrdersPerPage")]],
     ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PageNumber")]],
-    ["returnedOrderCountActual", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReturnedOrderCountActual")]]]
+    ["returnedOrderCountActual", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReturnedOrderCountActual")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -5249,11 +5854,13 @@ class GetPictureManagerDetailsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["folderID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FolderID")]],
     ["pictureURL", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PictureURL")]],
-    ["pictureManagerDetailLevel", ["PictureManagerDetailLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PictureManagerDetailLevel")]]]
+    ["pictureManagerDetailLevel", ["PictureManagerDetailLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PictureManagerDetailLevel")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -5261,6 +5868,7 @@ class GetPictureManagerDetailsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :folderID
   attr_accessor :pictureURL
@@ -5270,13 +5878,14 @@ class GetPictureManagerDetailsRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, folderID = nil, pictureURL = nil, pictureManagerDetailLevel = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, folderID = nil, pictureURL = nil, pictureManagerDetailLevel = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @folderID = folderID
     @pictureURL = pictureURL
@@ -5302,7 +5911,8 @@ class GetPictureManagerDetailsResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["pictureManagerDetails", ["PictureManagerDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PictureManagerDetails")]]]
+    ["pictureManagerDetails", ["PictureManagerDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PictureManagerDetails")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -5351,8 +5961,10 @@ class GetPictureManagerOptionsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -5360,19 +5972,21 @@ class GetPictureManagerOptionsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
   end
 end
@@ -5396,7 +6010,8 @@ class GetPictureManagerOptionsResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["subscription", ["PictureManagerSubscriptionType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Subscription")]],
-    ["pictureType", ["PictureManagerPictureDisplayType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PictureType")]]]
+    ["pictureType", ["PictureManagerPictureDisplayType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PictureType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -5447,12 +6062,14 @@ class GetPopularKeywordsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["categoryID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
     ["includeChildCategories", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeChildCategories")]],
     ["maxKeywordsRetrieved", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MaxKeywordsRetrieved")]],
-    ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]]]
+    ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -5460,6 +6077,7 @@ class GetPopularKeywordsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :categoryID
   attr_accessor :includeChildCategories
@@ -5470,13 +6088,14 @@ class GetPopularKeywordsRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, categoryID = [], includeChildCategories = nil, maxKeywordsRetrieved = nil, pagination = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, categoryID = [], includeChildCategories = nil, maxKeywordsRetrieved = nil, pagination = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @categoryID = categoryID
     @includeChildCategories = includeChildCategories
@@ -5505,7 +6124,8 @@ class GetPopularKeywordsResponseType
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["paginationResult", ["PaginationResultType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaginationResult")]],
     ["categoryArray", ["CategoryArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryArray")]],
-    ["hasMore", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HasMore")]]]
+    ["hasMore", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HasMore")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -5558,9 +6178,11 @@ class GetProductFamilyMembersRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["productSearch", ["ProductSearchType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductSearch")]]]
+    ["productSearch", ["ProductSearchType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductSearch")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -5568,6 +6190,7 @@ class GetProductFamilyMembersRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :productSearch
 
@@ -5575,13 +6198,14 @@ class GetProductFamilyMembersRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, productSearch = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, productSearch = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @productSearch = productSearch
   end
@@ -5606,7 +6230,8 @@ class GetProductFamilyMembersResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["dataElementSets", ["DataElementSetType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DataElementSets")]],
-    ["productSearchResult", ["ProductSearchResultType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductSearchResult")]]]
+    ["productSearchResult", ["ProductSearchResultType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductSearchResult")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -5657,10 +6282,12 @@ class GetProductFinderRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSystemVersion")]],
-    ["productFinderID", ["SOAP::SOAPInt[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductFinderID")]]]
+    ["productFinderID", ["SOAP::SOAPInt[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductFinderID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -5668,6 +6295,7 @@ class GetProductFinderRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :attributeSystemVersion
   attr_accessor :productFinderID
@@ -5676,13 +6304,14 @@ class GetProductFinderRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, attributeSystemVersion = nil, productFinderID = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, attributeSystemVersion = nil, productFinderID = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @attributeSystemVersion = attributeSystemVersion
     @productFinderID = productFinderID
@@ -5708,7 +6337,8 @@ class GetProductFinderResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSystemVersion")]],
-    ["productFinderData", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductFinderData")]]]
+    ["productFinderData", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductFinderData")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -5759,10 +6389,12 @@ class GetProductFinderXSLRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["fileName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FileName")]],
-    ["fileVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FileVersion")]]]
+    ["fileVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FileVersion")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -5770,6 +6402,7 @@ class GetProductFinderXSLRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :fileName
   attr_accessor :fileVersion
@@ -5778,13 +6411,14 @@ class GetProductFinderXSLRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, fileName = nil, fileVersion = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, fileName = nil, fileVersion = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @fileName = fileName
     @fileVersion = fileVersion
@@ -5809,7 +6443,8 @@ class GetProductFinderXSLResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["xSLFile", ["XSLFileType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "XSLFile")]]]
+    ["xSLFile", ["XSLFileType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "XSLFile")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -5858,10 +6493,12 @@ class GetProductSearchPageRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSystemVersion")]],
-    ["attributeSetID", ["SOAP::SOAPInt[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSetID")]]]
+    ["attributeSetID", ["SOAP::SOAPInt[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSetID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -5869,6 +6506,7 @@ class GetProductSearchPageRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :attributeSystemVersion
   attr_accessor :attributeSetID
@@ -5877,13 +6515,14 @@ class GetProductSearchPageRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, attributeSystemVersion = nil, attributeSetID = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, attributeSystemVersion = nil, attributeSetID = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @attributeSystemVersion = attributeSystemVersion
     @attributeSetID = attributeSetID
@@ -5909,7 +6548,8 @@ class GetProductSearchPageResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSystemVersion")]],
-    ["productSearchPage", ["ProductSearchPageType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductSearchPage")]]]
+    ["productSearchPage", ["ProductSearchPageType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductSearchPage")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -5960,9 +6600,11 @@ class GetProductSearchResultsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["productSearch", ["ProductSearchType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductSearch")]]]
+    ["productSearch", ["ProductSearchType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductSearch")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -5970,6 +6612,7 @@ class GetProductSearchResultsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :productSearch
 
@@ -5977,13 +6620,14 @@ class GetProductSearchResultsRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, productSearch = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, productSearch = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @productSearch = productSearch
   end
@@ -6008,7 +6652,8 @@ class GetProductSearchResultsResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["dataElementSets", ["DataElementSetType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DataElementSets")]],
-    ["productSearchResult", ["ProductSearchResultType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductSearchResult")]]]
+    ["productSearchResult", ["ProductSearchResultType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductSearchResult")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -6059,10 +6704,12 @@ class GetProductSellingPagesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["useCase", ["ProductUseCaseCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UseCase")]],
-    ["product", ["ProductType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Product")]]]
+    ["product", ["ProductType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Product")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -6070,6 +6717,7 @@ class GetProductSellingPagesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :useCase
   attr_accessor :product
@@ -6078,13 +6726,14 @@ class GetProductSellingPagesRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, useCase = nil, product = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, useCase = nil, product = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @useCase = useCase
     @product = product
@@ -6109,7 +6758,8 @@ class GetProductSellingPagesResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["productSellingPagesData", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductSellingPagesData")]]]
+    ["productSellingPagesData", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductSellingPagesData")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -6158,11 +6808,13 @@ class GetPromotionRulesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["storeCategoryID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoreCategoryID")]],
-    ["promotionMethod", ["PromotionMethodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PromotionMethod")]]]
+    ["promotionMethod", ["PromotionMethodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PromotionMethod")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -6170,6 +6822,7 @@ class GetPromotionRulesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :storeCategoryID
@@ -6179,13 +6832,14 @@ class GetPromotionRulesRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, storeCategoryID = nil, promotionMethod = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, storeCategoryID = nil, promotionMethod = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @storeCategoryID = storeCategoryID
@@ -6211,7 +6865,8 @@ class GetPromotionRulesResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["promotionRuleArray", ["PromotionRuleArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PromotionRuleArray")]]]
+    ["promotionRuleArray", ["PromotionRuleArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PromotionRuleArray")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -6260,14 +6915,16 @@ class GetRecommendationsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["listingFlow", ["ListingFlowCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingFlow")]],
     ["item", ["ItemType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]],
     ["externalProductID", ["ExternalProductIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExternalProductID")]],
     ["modifiedFields", ["ModifiedFieldType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModifiedFields")]],
     ["recommendationEngine", ["RecommendationEngineCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecommendationEngine")]],
-    ["query", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Query")]]]
+    ["query", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Query")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -6275,6 +6932,7 @@ class GetRecommendationsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :listingFlow
   attr_accessor :item
@@ -6287,13 +6945,14 @@ class GetRecommendationsRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, listingFlow = nil, item = nil, externalProductID = nil, modifiedFields = [], recommendationEngine = [], query = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, listingFlow = nil, item = nil, externalProductID = nil, modifiedFields = [], recommendationEngine = [], query = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @listingFlow = listingFlow
     @item = item
@@ -6326,7 +6985,8 @@ class GetRecommendationsResponseType
     ["sIFFTASRecommendations", ["SIFFTASRecommendationsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SIFFTASRecommendations")]],
     ["pricingRecommendations", ["PricingRecommendationsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PricingRecommendations")]],
     ["attributeRecommendations", ["AttributeRecommendationsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeRecommendations")]],
-    ["productRecommendations", ["ProductRecommendationsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductRecommendations")]]]
+    ["productRecommendations", ["ProductRecommendationsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductRecommendations")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -6383,8 +7043,10 @@ class GetReturnURLRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -6392,19 +7054,21 @@ class GetReturnURLRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
   end
 end
@@ -6428,7 +7092,8 @@ class GetReturnURLResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["applicationDisplayName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ApplicationDisplayName")]],
-    ["authenticationEntryArray", ["AuthenticationEntryArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AuthenticationEntryArray")]]]
+    ["authenticationEntryArray", ["AuthenticationEntryArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AuthenticationEntryArray")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -6479,9 +7144,11 @@ class GetRuNameRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["clientUseCase", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ClientUseCase")]]]
+    ["clientUseCase", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ClientUseCase")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -6489,6 +7156,7 @@ class GetRuNameRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :clientUseCase
 
@@ -6496,13 +7164,14 @@ class GetRuNameRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, clientUseCase = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, clientUseCase = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @clientUseCase = clientUseCase
   end
@@ -6526,7 +7195,8 @@ class GetRuNameResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["ruName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RuName")]]]
+    ["ruName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RuName")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -6575,7 +7245,8 @@ class GetSearchResultsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["motorsGermanySearchable", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MotorsGermanySearchable")]],
     ["query", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Query")]],
@@ -6599,15 +7270,20 @@ class GetSearchResultsRequestType
     ["endTimeTo", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTimeTo")]],
     ["modTimeFrom", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModTimeFrom")]],
     ["includeGetItFastItems", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeGetItFastItems")]],
+    ["storesFixedPrice", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoresFixedPrice")]],
     ["paymentMethod", ["PaymentMethodSearchCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentMethod")]],
     ["granularityLevel", ["GranularityLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GranularityLevel")]],
     ["expandSearch", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpandSearch")]],
     ["lot", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Lot")]],
+    ["adFormat", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AdFormat")]],
     ["quantity", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Quantity")]],
     ["quantityOperator", ["QuantityOperatorCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "QuantityOperator")]],
     ["sellerBusinessType", ["SellerBusinessCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerBusinessType")]],
+    ["digitalDelivery", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DigitalDelivery")]],
     ["includeCondition", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeCondition")]],
-    ["includeFeedback", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeFeedback")]]]
+    ["includeFeedback", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeFeedback")]],
+    ["charityID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharityID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -6615,6 +7291,7 @@ class GetSearchResultsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :motorsGermanySearchable
   attr_accessor :query
@@ -6638,27 +7315,32 @@ class GetSearchResultsRequestType
   attr_accessor :endTimeTo
   attr_accessor :modTimeFrom
   attr_accessor :includeGetItFastItems
+  attr_accessor :storesFixedPrice
   attr_accessor :paymentMethod
   attr_accessor :granularityLevel
   attr_accessor :expandSearch
   attr_accessor :lot
+  attr_accessor :adFormat
   attr_accessor :quantity
   attr_accessor :quantityOperator
   attr_accessor :sellerBusinessType
+  attr_accessor :digitalDelivery
   attr_accessor :includeCondition
   attr_accessor :includeFeedback
+  attr_accessor :charityID
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, motorsGermanySearchable = nil, query = nil, categoryID = nil, searchFlags = [], priceRangeFilter = nil, proximitySearch = nil, itemTypeFilter = nil, searchType = nil, userIdFilter = nil, searchLocationFilter = nil, storeSearchFilter = nil, order = nil, pagination = nil, searchRequest = nil, productID = nil, externalProductID = nil, categories = nil, totalOnly = nil, endTimeFrom = nil, endTimeTo = nil, modTimeFrom = nil, includeGetItFastItems = nil, paymentMethod = nil, granularityLevel = nil, expandSearch = nil, lot = nil, quantity = nil, quantityOperator = nil, sellerBusinessType = nil, includeCondition = nil, includeFeedback = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, motorsGermanySearchable = nil, query = nil, categoryID = nil, searchFlags = [], priceRangeFilter = nil, proximitySearch = nil, itemTypeFilter = nil, searchType = nil, userIdFilter = nil, searchLocationFilter = nil, storeSearchFilter = nil, order = nil, pagination = nil, searchRequest = nil, productID = nil, externalProductID = nil, categories = nil, totalOnly = nil, endTimeFrom = nil, endTimeTo = nil, modTimeFrom = nil, includeGetItFastItems = nil, storesFixedPrice = nil, paymentMethod = nil, granularityLevel = nil, expandSearch = nil, lot = nil, adFormat = nil, quantity = nil, quantityOperator = nil, sellerBusinessType = nil, digitalDelivery = nil, includeCondition = nil, includeFeedback = nil, charityID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @motorsGermanySearchable = motorsGermanySearchable
     @query = query
@@ -6682,15 +7364,19 @@ class GetSearchResultsRequestType
     @endTimeTo = endTimeTo
     @modTimeFrom = modTimeFrom
     @includeGetItFastItems = includeGetItFastItems
+    @storesFixedPrice = storesFixedPrice
     @paymentMethod = paymentMethod
     @granularityLevel = granularityLevel
     @expandSearch = expandSearch
     @lot = lot
+    @adFormat = adFormat
     @quantity = quantity
     @quantityOperator = quantityOperator
     @sellerBusinessType = sellerBusinessType
+    @digitalDelivery = digitalDelivery
     @includeCondition = includeCondition
     @includeFeedback = includeFeedback
+    @charityID = charityID
   end
 end
 
@@ -6723,7 +7409,8 @@ class GetSearchResultsResponseType
     ["internationalExpansionArray", ["ExpansionArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InternationalExpansionArray")]],
     ["filterRemovedExpansionArray", ["ExpansionArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FilterRemovedExpansionArray")]],
     ["allCategoriesExpansionArray", ["ExpansionArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AllCategoriesExpansionArray")]],
-    ["spellingSuggestion", ["SpellingSuggestionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SpellingSuggestion")]]]
+    ["spellingSuggestion", ["SpellingSuggestionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SpellingSuggestion")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -6794,7 +7481,8 @@ class GetSellerEventsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["userID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserID")]],
     ["startTimeFrom", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StartTimeFrom")]],
@@ -6804,7 +7492,8 @@ class GetSellerEventsRequestType
     ["modTimeFrom", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModTimeFrom")]],
     ["modTimeTo", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModTimeTo")]],
     ["newItemFilter", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NewItemFilter")]],
-    ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeWatchCount")]]]
+    ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeWatchCount")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -6812,6 +7501,7 @@ class GetSellerEventsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :userID
   attr_accessor :startTimeFrom
@@ -6827,13 +7517,14 @@ class GetSellerEventsRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, userID = nil, startTimeFrom = nil, startTimeTo = nil, endTimeFrom = nil, endTimeTo = nil, modTimeFrom = nil, modTimeTo = nil, newItemFilter = nil, includeWatchCount = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, userID = nil, startTimeFrom = nil, startTimeTo = nil, endTimeFrom = nil, endTimeTo = nil, modTimeFrom = nil, modTimeTo = nil, newItemFilter = nil, includeWatchCount = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @userID = userID
     @startTimeFrom = startTimeFrom
@@ -6866,7 +7557,8 @@ class GetSellerEventsResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["timeTo", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TimeTo")]],
-    ["itemArray", ["ItemArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemArray")]]]
+    ["itemArray", ["ItemArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemArray")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -6917,7 +7609,8 @@ class GetSellerListRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["userID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserID")]],
     ["endTimeFrom", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTimeFrom")]],
@@ -6927,7 +7620,9 @@ class GetSellerListRequestType
     ["startTimeTo", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StartTimeTo")]],
     ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]],
     ["granularityLevel", ["GranularityLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GranularityLevel")]],
-    ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeWatchCount")]]]
+    ["sKUArray", ["SKUArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SKUArray")]],
+    ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeWatchCount")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -6935,6 +7630,7 @@ class GetSellerListRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :userID
   attr_accessor :endTimeFrom
@@ -6944,19 +7640,21 @@ class GetSellerListRequestType
   attr_accessor :startTimeTo
   attr_accessor :pagination
   attr_accessor :granularityLevel
+  attr_accessor :sKUArray
   attr_accessor :includeWatchCount
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, userID = nil, endTimeFrom = nil, endTimeTo = nil, sort = nil, startTimeFrom = nil, startTimeTo = nil, pagination = nil, granularityLevel = nil, includeWatchCount = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, userID = nil, endTimeFrom = nil, endTimeTo = nil, sort = nil, startTimeFrom = nil, startTimeTo = nil, pagination = nil, granularityLevel = nil, sKUArray = nil, includeWatchCount = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @userID = userID
     @endTimeFrom = endTimeFrom
@@ -6966,6 +7664,7 @@ class GetSellerListRequestType
     @startTimeTo = startTimeTo
     @pagination = pagination
     @granularityLevel = granularityLevel
+    @sKUArray = sKUArray
     @includeWatchCount = includeWatchCount
   end
 end
@@ -6994,7 +7693,8 @@ class GetSellerListResponseType
     ["itemsPerPage", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemsPerPage")]],
     ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PageNumber")]],
     ["returnedItemCountActual", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReturnedItemCountActual")]],
-    ["seller", ["UserType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Seller")]]]
+    ["seller", ["UserType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Seller")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -7055,12 +7755,14 @@ class GetSellerPaymentsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["paymentStatus", ["RCSPaymentStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentStatus")]],
     ["paymentTimeFrom", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentTimeFrom")]],
     ["paymentTimeTo", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentTimeTo")]],
-    ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]]]
+    ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -7068,6 +7770,7 @@ class GetSellerPaymentsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :paymentStatus
   attr_accessor :paymentTimeFrom
@@ -7078,13 +7781,14 @@ class GetSellerPaymentsRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, paymentStatus = nil, paymentTimeFrom = nil, paymentTimeTo = nil, pagination = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, paymentStatus = nil, paymentTimeFrom = nil, paymentTimeTo = nil, pagination = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @paymentStatus = paymentStatus
     @paymentTimeFrom = paymentTimeFrom
@@ -7116,7 +7820,8 @@ class GetSellerPaymentsResponseType
     ["sellerPayment", ["SellerPaymentType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerPayment")]],
     ["paymentsPerPage", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentsPerPage")]],
     ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PageNumber")]],
-    ["returnedPaymentCountActual", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReturnedPaymentCountActual")]]]
+    ["returnedPaymentCountActual", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReturnedPaymentCountActual")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -7175,13 +7880,16 @@ class GetSellerTransactionsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["modTimeFrom", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModTimeFrom")]],
     ["modTimeTo", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModTimeTo")]],
     ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]],
     ["includeFinalValueFee", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeFinalValueFee")]],
-    ["includeContainingOrder", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeContainingOrder")]]]
+    ["includeContainingOrder", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeContainingOrder")]],
+    ["sKUArray", ["SKUArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SKUArray")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -7189,30 +7897,34 @@ class GetSellerTransactionsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :modTimeFrom
   attr_accessor :modTimeTo
   attr_accessor :pagination
   attr_accessor :includeFinalValueFee
   attr_accessor :includeContainingOrder
+  attr_accessor :sKUArray
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, modTimeFrom = nil, modTimeTo = nil, pagination = nil, includeFinalValueFee = nil, includeContainingOrder = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, modTimeFrom = nil, modTimeTo = nil, pagination = nil, includeFinalValueFee = nil, includeContainingOrder = nil, sKUArray = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @modTimeFrom = modTimeFrom
     @modTimeTo = modTimeTo
     @pagination = pagination
     @includeFinalValueFee = includeFinalValueFee
     @includeContainingOrder = includeContainingOrder
+    @sKUArray = sKUArray
   end
 end
 
@@ -7241,7 +7953,8 @@ class GetSellerTransactionsResponseType
     ["returnedTransactionCountActual", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReturnedTransactionCountActual")]],
     ["seller", ["UserType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Seller")]],
     ["transactionArray", ["TransactionArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionArray")]],
-    ["payPalPreferred", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PayPalPreferred")]]]
+    ["payPalPreferred", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PayPalPreferred")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -7304,8 +8017,13 @@ class GetStoreRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["categoryStructureOnly", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryStructureOnly")]],
+    ["rootCategoryID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RootCategoryID")]],
+    ["levelLimit", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LevelLimit")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -7313,20 +8031,28 @@ class GetStoreRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
+  attr_accessor :categoryStructureOnly
+  attr_accessor :rootCategoryID
+  attr_accessor :levelLimit
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, categoryStructureOnly = nil, rootCategoryID = nil, levelLimit = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
+    @categoryStructureOnly = categoryStructureOnly
+    @rootCategoryID = rootCategoryID
+    @levelLimit = levelLimit
   end
 end
 
@@ -7348,7 +8074,8 @@ class GetStoreResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["store", ["StoreType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Store")]]]
+    ["store", ["StoreType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Store")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -7387,6 +8114,107 @@ class GetStoreResponseType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}GetStoreCategoryUpdateStatusRequestType
+class GetStoreCategoryUpdateStatusRequestType
+  @@schema_type = "GetStoreCategoryUpdateStatusRequestType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailLevel")]],
+    ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorLanguage")]],
+    ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["taskID", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TaskID")]]
+  ]
+
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :warningLevel
+  attr_reader :__xmlele_any
+  attr_accessor :taskID
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, taskID = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @warningLevel = warningLevel
+    @__xmlele_any = nil
+    @taskID = taskID
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetStoreCategoryUpdateStatusResponseType
+class GetStoreCategoryUpdateStatusResponseType
+  @@schema_type = "GetStoreCategoryUpdateStatusResponseType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]],
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["errors", ["ErrorType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Errors")]],
+    ["message", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["build", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Build")]],
+    ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
+    ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
+    ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["status", ["TaskStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Status")]]
+  ]
+
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_reader :__xmlele_any
+  attr_accessor :status
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, status = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @__xmlele_any = nil
+    @status = status
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}GetStoreCustomPageRequestType
 class GetStoreCustomPageRequestType
   @@schema_type = "GetStoreCustomPageRequestType"
@@ -7397,9 +8225,11 @@ class GetStoreCustomPageRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["pageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PageID")]]]
+    ["pageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PageID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -7407,6 +8237,7 @@ class GetStoreCustomPageRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :pageID
 
@@ -7414,13 +8245,14 @@ class GetStoreCustomPageRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, pageID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, pageID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @pageID = pageID
   end
@@ -7444,7 +8276,8 @@ class GetStoreCustomPageResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["customPageArray", ["StoreCustomPageArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CustomPageArray")]]]
+    ["customPageArray", ["StoreCustomPageArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CustomPageArray")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -7493,8 +8326,10 @@ class GetStoreOptionsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -7502,19 +8337,21 @@ class GetStoreOptionsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
   end
 end
@@ -7540,7 +8377,10 @@ class GetStoreOptionsResponseType
     ["basicThemeArray", ["StoreThemeArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BasicThemeArray")]],
     ["advancedThemeArray", ["StoreThemeArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AdvancedThemeArray")]],
     ["logoArray", ["StoreLogoArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LogoArray")]],
-    ["subscriptionArray", ["StoreSubscriptionArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SubscriptionArray")]]]
+    ["subscriptionArray", ["StoreSubscriptionArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SubscriptionArray")]],
+    ["maxCategories", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MaxCategories")]],
+    ["maxCategoryLevels", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MaxCategoryLevels")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -7559,12 +8399,14 @@ class GetStoreOptionsResponseType
   attr_accessor :advancedThemeArray
   attr_accessor :logoArray
   attr_accessor :subscriptionArray
+  attr_accessor :maxCategories
+  attr_accessor :maxCategoryLevels
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, basicThemeArray = nil, advancedThemeArray = nil, logoArray = nil, subscriptionArray = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, basicThemeArray = nil, advancedThemeArray = nil, logoArray = nil, subscriptionArray = nil, maxCategories = nil, maxCategoryLevels = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7582,6 +8424,8 @@ class GetStoreOptionsResponseType
     @advancedThemeArray = advancedThemeArray
     @logoArray = logoArray
     @subscriptionArray = subscriptionArray
+    @maxCategories = maxCategories
+    @maxCategoryLevels = maxCategoryLevels
   end
 end
 
@@ -7595,8 +8439,10 @@ class GetStorePreferencesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -7604,19 +8450,21 @@ class GetStorePreferencesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
   end
 end
@@ -7639,7 +8487,8 @@ class GetStorePreferencesResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["storePreferences", ["StorePreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StorePreferences")]]]
+    ["storePreferences", ["StorePreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StorePreferences")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -7688,9 +8537,11 @@ class GetSuggestedCategoriesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["query", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Query")]]]
+    ["query", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Query")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -7698,6 +8549,7 @@ class GetSuggestedCategoriesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :query
 
@@ -7705,13 +8557,14 @@ class GetSuggestedCategoriesRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, query = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, query = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @query = query
   end
@@ -7736,7 +8589,8 @@ class GetSuggestedCategoriesResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["suggestedCategoryArray", ["SuggestedCategoryArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SuggestedCategoryArray")]],
-    ["categoryCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryCount")]]]
+    ["categoryCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryCount")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -7787,8 +8641,10 @@ class GetTaxTableRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -7796,19 +8652,21 @@ class GetTaxTableRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
   end
 end
@@ -7832,7 +8690,8 @@ class GetTaxTableResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["lastUpdateTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LastUpdateTime")]],
-    ["taxTable", ["TaxTableType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TaxTable")]]]
+    ["taxTable", ["TaxTableType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TaxTable")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -7883,10 +8742,12 @@ class GetUserRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
-    ["userID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserID")]]]
+    ["userID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -7894,6 +8755,7 @@ class GetUserRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :userID
@@ -7902,13 +8764,14 @@ class GetUserRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, userID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, userID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @userID = userID
@@ -7933,7 +8796,8 @@ class GetUserResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["user", ["UserType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "User")]]]
+    ["user", ["UserType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "User")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -7982,13 +8846,15 @@ class GetUserDisputesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["disputeFilterType", ["DisputeFilterTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeFilterType")]],
     ["disputeSortType", ["DisputeSortTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeSortType")]],
     ["modTimeFrom", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModTimeFrom")]],
     ["modTimeTo", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModTimeTo")]],
-    ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]]]
+    ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -7996,6 +8862,7 @@ class GetUserDisputesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :disputeFilterType
   attr_accessor :disputeSortType
@@ -8007,13 +8874,14 @@ class GetUserDisputesRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, disputeFilterType = nil, disputeSortType = nil, modTimeFrom = nil, modTimeTo = nil, pagination = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, disputeFilterType = nil, disputeSortType = nil, modTimeFrom = nil, modTimeTo = nil, pagination = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @disputeFilterType = disputeFilterType
     @disputeSortType = disputeSortType
@@ -8047,7 +8915,8 @@ class GetUserDisputesResponseType
     ["itemsPerPage", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemsPerPage")]],
     ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PageNumber")]],
     ["disputeFilterCount", ["DisputeFilterCountType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeFilterCount")]],
-    ["paginationResult", ["PaginationResultType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaginationResult")]]]
+    ["paginationResult", ["PaginationResultType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaginationResult")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -8108,14 +8977,16 @@ class GetUserPreferencesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["showBidderNoticePreferences", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShowBidderNoticePreferences")]],
     ["showCombinedPaymentPreferences", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShowCombinedPaymentPreferences")]],
     ["showCrossPromotionPreferences", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShowCrossPromotionPreferences")]],
     ["showSellerPaymentPreferences", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShowSellerPaymentPreferences")]],
     ["showEndOfAuctionEmailPreferences", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShowEndOfAuctionEmailPreferences")]],
-    ["showSellerFavoriteItemPreferences", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShowSellerFavoriteItemPreferences")]]]
+    ["showSellerFavoriteItemPreferences", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShowSellerFavoriteItemPreferences")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -8123,6 +8994,7 @@ class GetUserPreferencesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :showBidderNoticePreferences
   attr_accessor :showCombinedPaymentPreferences
@@ -8135,13 +9007,14 @@ class GetUserPreferencesRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, showBidderNoticePreferences = nil, showCombinedPaymentPreferences = nil, showCrossPromotionPreferences = nil, showSellerPaymentPreferences = nil, showEndOfAuctionEmailPreferences = nil, showSellerFavoriteItemPreferences = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, showBidderNoticePreferences = nil, showCombinedPaymentPreferences = nil, showCrossPromotionPreferences = nil, showSellerPaymentPreferences = nil, showEndOfAuctionEmailPreferences = nil, showSellerFavoriteItemPreferences = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @showBidderNoticePreferences = showBidderNoticePreferences
     @showCombinedPaymentPreferences = showCombinedPaymentPreferences
@@ -8175,7 +9048,8 @@ class GetUserPreferencesResponseType
     ["crossPromotionPreferences", ["CrossPromotionPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CrossPromotionPreferences")]],
     ["sellerPaymentPreferences", ["SellerPaymentPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerPaymentPreferences")]],
     ["sellerFavoriteItemPreferences", ["SellerFavoriteItemPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerFavoriteItemPreferences")]],
-    ["endOfAuctionEmailPreferences", ["EndOfAuctionEmailPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndOfAuctionEmailPreferences")]]]
+    ["endOfAuctionEmailPreferences", ["EndOfAuctionEmailPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndOfAuctionEmailPreferences")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -8234,9 +9108,11 @@ class GetWantItNowPostRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["postID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PostID")]]]
+    ["postID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PostID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -8244,6 +9120,7 @@ class GetWantItNowPostRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :postID
 
@@ -8251,13 +9128,14 @@ class GetWantItNowPostRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, postID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, postID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @postID = postID
   end
@@ -8281,7 +9159,8 @@ class GetWantItNowPostResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["wantItNowPost", ["WantItNowPostType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WantItNowPost")]]]
+    ["wantItNowPost", ["WantItNowPostType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WantItNowPost")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -8330,13 +9209,15 @@ class GetWantItNowSearchResultsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["categoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
     ["query", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Query")]],
     ["searchInDescription", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SearchInDescription")]],
     ["searchWorldwide", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SearchWorldwide")]],
-    ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]]]
+    ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -8344,6 +9225,7 @@ class GetWantItNowSearchResultsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :categoryID
   attr_accessor :query
@@ -8355,13 +9237,14 @@ class GetWantItNowSearchResultsRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, categoryID = nil, query = nil, searchInDescription = nil, searchWorldwide = nil, pagination = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, categoryID = nil, query = nil, searchInDescription = nil, searchWorldwide = nil, pagination = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @categoryID = categoryID
     @query = query
@@ -8393,7 +9276,8 @@ class GetWantItNowSearchResultsResponseType
     ["hasMoreItems", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HasMoreItems")]],
     ["itemsPerPage", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemsPerPage")]],
     ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PageNumber")]],
-    ["paginationResult", ["PaginationResultType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaginationResult")]]]
+    ["paginationResult", ["PaginationResultType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaginationResult")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -8450,9 +9334,11 @@ class GeteBayDetailsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["detailName", ["DetailNameCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailName")]]]
+    ["detailName", ["DetailNameCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailName")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -8460,6 +9346,7 @@ class GeteBayDetailsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :detailName
 
@@ -8467,13 +9354,14 @@ class GeteBayDetailsRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, detailName = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, detailName = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @detailName = detailName
   end
@@ -8499,13 +9387,15 @@ class GeteBayDetailsResponseType
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["countryDetails", ["CountryDetailsType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CountryDetails")]],
     ["currencyDetails", ["CurrencyDetailsType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CurrencyDetails")]],
+    ["dispatchTimeMaxDetails", ["DispatchTimeMaxDetailsType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DispatchTimeMaxDetails")]],
     ["paymentOptionDetails", ["PaymentOptionDetailsType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentOptionDetails")]],
     ["regionDetails", ["RegionDetailsType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RegionDetails")]],
     ["shippingLocationDetails", ["ShippingLocationDetailsType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingLocationDetails")]],
     ["shippingServiceDetails", ["ShippingServiceDetailsType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingServiceDetails")]],
     ["siteDetails", ["SiteDetailsType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SiteDetails")]],
     ["taxJurisdiction", ["TaxJurisdictionType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TaxJurisdiction")]],
-    ["uRLDetails", ["URLDetailsType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "URLDetails")]]]
+    ["uRLDetails", ["URLDetailsType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "URLDetails")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -8522,6 +9412,7 @@ class GeteBayDetailsResponseType
   attr_reader :__xmlele_any
   attr_accessor :countryDetails
   attr_accessor :currencyDetails
+  attr_accessor :dispatchTimeMaxDetails
   attr_accessor :paymentOptionDetails
   attr_accessor :regionDetails
   attr_accessor :shippingLocationDetails
@@ -8534,7 +9425,7 @@ class GeteBayDetailsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, countryDetails = [], currencyDetails = [], paymentOptionDetails = [], regionDetails = [], shippingLocationDetails = [], shippingServiceDetails = [], siteDetails = [], taxJurisdiction = [], uRLDetails = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, countryDetails = [], currencyDetails = [], dispatchTimeMaxDetails = [], paymentOptionDetails = [], regionDetails = [], shippingLocationDetails = [], shippingServiceDetails = [], siteDetails = [], taxJurisdiction = [], uRLDetails = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8550,6 +9441,7 @@ class GeteBayDetailsResponseType
     @__xmlele_any = nil
     @countryDetails = countryDetails
     @currencyDetails = currencyDetails
+    @dispatchTimeMaxDetails = dispatchTimeMaxDetails
     @paymentOptionDetails = paymentOptionDetails
     @regionDetails = regionDetails
     @shippingLocationDetails = shippingLocationDetails
@@ -8570,8 +9462,10 @@ class GeteBayOfficialTimeRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -8579,19 +9473,21 @@ class GeteBayOfficialTimeRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
   end
 end
@@ -8613,7 +9509,8 @@ class GeteBayOfficialTimeResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -8660,14 +9557,16 @@ class IssueRefundRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["transactionID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionID")]],
     ["refundReason", ["RefundReasonCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RefundReason")]],
     ["refundType", ["RefundTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RefundType")]],
     ["refundAmount", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RefundAmount")]],
-    ["refundMessage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RefundMessage")]]]
+    ["refundMessage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RefundMessage")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -8675,6 +9574,7 @@ class IssueRefundRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :transactionID
@@ -8687,13 +9587,14 @@ class IssueRefundRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, transactionID = nil, refundReason = nil, refundType = nil, refundAmount = nil, refundMessage = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, transactionID = nil, refundReason = nil, refundType = nil, refundAmount = nil, refundMessage = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @transactionID = transactionID
@@ -8723,7 +9624,8 @@ class IssueRefundResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["refundFromSeller", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RefundFromSeller")]],
-    ["totalRefundToBuyer", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalRefundToBuyer")]]]
+    ["totalRefundToBuyer", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalRefundToBuyer")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -8774,13 +9676,15 @@ class LeaveFeedbackRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["commentText", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CommentText")]],
     ["commentType", ["CommentTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CommentType")]],
     ["transactionID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionID")]],
-    ["targetUser", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TargetUser")]]]
+    ["targetUser", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TargetUser")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -8788,6 +9692,7 @@ class LeaveFeedbackRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :commentText
@@ -8799,13 +9704,14 @@ class LeaveFeedbackRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, commentText = nil, commentType = nil, transactionID = nil, targetUser = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, commentText = nil, commentType = nil, transactionID = nil, targetUser = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @commentText = commentText
@@ -8833,7 +9739,8 @@ class LeaveFeedbackResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["feedbackID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackID")]]]
+    ["feedbackID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackID")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -8872,6 +9779,113 @@ class LeaveFeedbackResponseType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}PlaceOfferRequestType
+class PlaceOfferRequestType
+  @@schema_type = "PlaceOfferRequestType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailLevel")]],
+    ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorLanguage")]],
+    ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["offer", ["OfferType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Offer")]],
+    ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
+    ["blockOnWarning", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BlockOnWarning")]]
+  ]
+
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :warningLevel
+  attr_reader :__xmlele_any
+  attr_accessor :offer
+  attr_accessor :itemID
+  attr_accessor :blockOnWarning
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, offer = nil, itemID = nil, blockOnWarning = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @warningLevel = warningLevel
+    @__xmlele_any = nil
+    @offer = offer
+    @itemID = itemID
+    @blockOnWarning = blockOnWarning
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}PlaceOfferResponseType
+class PlaceOfferResponseType
+  @@schema_type = "PlaceOfferResponseType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]],
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["errors", ["ErrorType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Errors")]],
+    ["message", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["build", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Build")]],
+    ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
+    ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
+    ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["sellingStatus", ["SellingStatusType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellingStatus")]]
+  ]
+
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_reader :__xmlele_any
+  attr_accessor :sellingStatus
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, sellingStatus = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @__xmlele_any = nil
+    @sellingStatus = sellingStatus
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}RelistItemRequestType
 class RelistItemRequestType
   @@schema_type = "RelistItemRequestType"
@@ -8882,11 +9896,13 @@ class RelistItemRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["item", ["ItemType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]],
     ["modifiedFields", ["ModifiedFieldType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModifiedFields")]],
-    ["bulkRelistAsSIFFlow", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BulkRelistAsSIFFlow")]]]
+    ["deletedField", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DeletedField")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -8894,26 +9910,28 @@ class RelistItemRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :item
   attr_accessor :modifiedFields
-  attr_accessor :bulkRelistAsSIFFlow
+  attr_accessor :deletedField
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, item = nil, modifiedFields = [], bulkRelistAsSIFFlow = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, item = nil, modifiedFields = [], deletedField = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @item = item
     @modifiedFields = modifiedFields
-    @bulkRelistAsSIFFlow = bulkRelistAsSIFFlow
+    @deletedField = deletedField
   end
 end
 
@@ -8940,7 +9958,8 @@ class RelistItemResponseType
     ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StartTime")]],
     ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTime")]],
     ["categoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
-    ["category2ID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category2ID")]]]
+    ["category2ID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category2ID")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -8999,10 +10018,12 @@ class RemoveFromWatchListRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
-    ["removeAllItems", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RemoveAllItems")]]]
+    ["removeAllItems", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RemoveAllItems")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -9010,6 +10031,7 @@ class RemoveFromWatchListRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :removeAllItems
@@ -9018,13 +10040,14 @@ class RemoveFromWatchListRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = [], removeAllItems = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = [], removeAllItems = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @removeAllItems = removeAllItems
@@ -9050,7 +10073,8 @@ class RemoveFromWatchListResponseType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["watchListCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WatchListCount")]],
-    ["watchListMaximum", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WatchListMaximum")]]]
+    ["watchListMaximum", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WatchListMaximum")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -9101,12 +10125,16 @@ class RespondToBestOfferRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["bestOfferID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferID")]],
     ["action", ["BestOfferActionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Action")]],
-    ["sellerResponse", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerResponse")]]]
+    ["sellerResponse", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerResponse")]],
+    ["counterOfferPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CounterOfferPrice")]],
+    ["counterOfferQuantity", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CounterOfferQuantity")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -9114,28 +10142,34 @@ class RespondToBestOfferRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :bestOfferID
   attr_accessor :action
   attr_accessor :sellerResponse
+  attr_accessor :counterOfferPrice
+  attr_accessor :counterOfferQuantity
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, bestOfferID = [], action = nil, sellerResponse = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, bestOfferID = [], action = nil, sellerResponse = nil, counterOfferPrice = nil, counterOfferQuantity = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @bestOfferID = bestOfferID
     @action = action
     @sellerResponse = sellerResponse
+    @counterOfferPrice = counterOfferPrice
+    @counterOfferQuantity = counterOfferQuantity
   end
 end
 
@@ -9157,7 +10191,8 @@ class RespondToBestOfferResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["respondToBestOffer", ["BestOfferArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RespondToBestOffer")]]]
+    ["respondToBestOffer", ["BestOfferArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RespondToBestOffer")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -9206,14 +10241,16 @@ class RespondToFeedbackRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["feedbackID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackID")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["transactionID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionID")]],
     ["targetUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TargetUserID")]],
     ["responseType", ["FeedbackResponseCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ResponseType")]],
-    ["responseText", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ResponseText")]]]
+    ["responseText", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ResponseText")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -9221,6 +10258,7 @@ class RespondToFeedbackRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :feedbackID
   attr_accessor :itemID
@@ -9233,13 +10271,14 @@ class RespondToFeedbackRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, feedbackID = nil, itemID = nil, transactionID = nil, targetUserID = nil, responseType = nil, responseText = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, feedbackID = nil, itemID = nil, transactionID = nil, targetUserID = nil, responseType = nil, responseText = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @feedbackID = feedbackID
     @itemID = itemID
@@ -9267,7 +10306,8 @@ class RespondToFeedbackResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -9314,10 +10354,12 @@ class RespondToWantItNowPostRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
-    ["postID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PostID")]]]
+    ["postID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PostID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -9325,6 +10367,7 @@ class RespondToWantItNowPostRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :postID
@@ -9333,13 +10376,14 @@ class RespondToWantItNowPostRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, postID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, postID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @postID = postID
@@ -9363,7 +10407,8 @@ class RespondToWantItNowPostResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -9410,7 +10455,8 @@ class ReviseCheckoutStatusRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["transactionID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionID")]],
@@ -9431,7 +10477,8 @@ class ReviseCheckoutStatusRequestType
     ["shippingCost", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingCost")]],
     ["encryptedID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EncryptedID")]],
     ["externalTransaction", ["ExternalTransactionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExternalTransaction")]],
-    ["multipleSellerPaymentID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MultipleSellerPaymentID")]]]
+    ["multipleSellerPaymentID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MultipleSellerPaymentID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -9439,6 +10486,7 @@ class ReviseCheckoutStatusRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :transactionID
@@ -9465,13 +10513,14 @@ class ReviseCheckoutStatusRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, transactionID = nil, orderID = nil, amountPaid = nil, paymentMethodUsed = nil, checkoutStatus = nil, shippingService = nil, shippingIncludedInTax = nil, checkoutMethod = nil, insuranceType = nil, paymentStatus = nil, adjustmentAmount = nil, shippingAddress = nil, buyerID = nil, shippingInsuranceCost = nil, salesTax = nil, shippingCost = nil, encryptedID = nil, externalTransaction = nil, multipleSellerPaymentID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, transactionID = nil, orderID = nil, amountPaid = nil, paymentMethodUsed = nil, checkoutStatus = nil, shippingService = nil, shippingIncludedInTax = nil, checkoutMethod = nil, insuranceType = nil, paymentStatus = nil, adjustmentAmount = nil, shippingAddress = nil, buyerID = nil, shippingInsuranceCost = nil, salesTax = nil, shippingCost = nil, encryptedID = nil, externalTransaction = nil, multipleSellerPaymentID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @transactionID = transactionID
@@ -9513,7 +10562,8 @@ class ReviseCheckoutStatusResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -9560,10 +10610,13 @@ class ReviseItemRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["item", ["ItemType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]],
-    ["modifiedFields", ["ModifiedFieldType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModifiedFields")]]]
+    ["modifiedFields", ["ModifiedFieldType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModifiedFields")]],
+    ["deletedField", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DeletedField")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -9571,24 +10624,28 @@ class ReviseItemRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :item
   attr_accessor :modifiedFields
+  attr_accessor :deletedField
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, item = nil, modifiedFields = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, item = nil, modifiedFields = [], deletedField = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @item = item
     @modifiedFields = modifiedFields
+    @deletedField = deletedField
   end
 end
 
@@ -9613,7 +10670,121 @@ class ReviseItemResponseType
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["fees", ["FeesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Fees")]],
     ["categoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
-    ["category2ID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category2ID")]]]
+    ["category2ID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category2ID")]]
+  ]
+
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_reader :__xmlele_any
+  attr_accessor :itemID
+  attr_accessor :fees
+  attr_accessor :categoryID
+  attr_accessor :category2ID
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, itemID = nil, fees = nil, categoryID = nil, category2ID = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @__xmlele_any = nil
+    @itemID = itemID
+    @fees = fees
+    @categoryID = categoryID
+    @category2ID = category2ID
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ReviseLiveAuctionItemRequestType
+class ReviseLiveAuctionItemRequestType
+  @@schema_type = "ReviseLiveAuctionItemRequestType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailLevel")]],
+    ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorLanguage")]],
+    ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["item", ["ItemType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]],
+    ["modifiedFields", ["ModifiedFieldType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModifiedFields")]]
+  ]
+
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :warningLevel
+  attr_reader :__xmlele_any
+  attr_accessor :item
+  attr_accessor :modifiedFields
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, item = nil, modifiedFields = [])
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @warningLevel = warningLevel
+    @__xmlele_any = nil
+    @item = item
+    @modifiedFields = modifiedFields
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ReviseLiveAuctionItemResponseType
+class ReviseLiveAuctionItemResponseType
+  @@schema_type = "ReviseLiveAuctionItemResponseType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]],
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["errors", ["ErrorType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Errors")]],
+    ["message", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["build", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Build")]],
+    ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
+    ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
+    ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
+    ["fees", ["FeesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Fees")]],
+    ["categoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
+    ["category2ID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category2ID")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -9668,13 +10839,15 @@ class ReviseMyMessagesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["messageIDs", ["MyMessagesMessageIDArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageIDs")]],
     ["alertIDs", ["MyMessagesAlertIDArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AlertIDs")]],
     ["read", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Read")]],
     ["flagged", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Flagged")]],
-    ["folderID", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FolderID")]]]
+    ["folderID", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FolderID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -9682,6 +10855,7 @@ class ReviseMyMessagesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :messageIDs
   attr_accessor :alertIDs
@@ -9693,13 +10867,14 @@ class ReviseMyMessagesRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, messageIDs = nil, alertIDs = nil, read = nil, flagged = nil, folderID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, messageIDs = nil, alertIDs = nil, read = nil, flagged = nil, folderID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @messageIDs = messageIDs
     @alertIDs = alertIDs
@@ -9726,7 +10901,8 @@ class ReviseMyMessagesResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -9773,11 +10949,13 @@ class ReviseMyMessagesFoldersRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["operation", ["MyMessagesFolderOperationCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Operation")]],
     ["folderID", ["SOAP::SOAPLong[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FolderID")]],
-    ["folderName", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FolderName")]]]
+    ["folderName", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FolderName")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -9785,6 +10963,7 @@ class ReviseMyMessagesFoldersRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :operation
   attr_accessor :folderID
@@ -9794,13 +10973,14 @@ class ReviseMyMessagesFoldersRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, operation = nil, folderID = [], folderName = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, operation = nil, folderID = [], folderName = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @operation = operation
     @folderID = folderID
@@ -9825,7 +11005,8 @@ class ReviseMyMessagesFoldersResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -9872,10 +11053,12 @@ class SellerReverseDisputeRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["disputeID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeID")]],
-    ["disputeResolutionReason", ["DisputeResolutionReasonCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeResolutionReason")]]]
+    ["disputeResolutionReason", ["DisputeResolutionReasonCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeResolutionReason")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -9883,6 +11066,7 @@ class SellerReverseDisputeRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :disputeID
   attr_accessor :disputeResolutionReason
@@ -9891,13 +11075,14 @@ class SellerReverseDisputeRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, disputeID = nil, disputeResolutionReason = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, disputeID = nil, disputeResolutionReason = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @disputeID = disputeID
     @disputeResolutionReason = disputeResolutionReason
@@ -9921,7 +11106,8 @@ class SellerReverseDisputeResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -9968,7 +11154,8 @@ class SendInvoiceRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["transactionID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionID")]],
@@ -9981,7 +11168,8 @@ class SendInvoiceRequestType
     ["paymentMethods", ["BuyerPaymentMethodCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentMethods")]],
     ["payPalEmailAddress", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PayPalEmailAddress")]],
     ["checkoutInstructions", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CheckoutInstructions")]],
-    ["emailCopyToSeller", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EmailCopyToSeller")]]]
+    ["emailCopyToSeller", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EmailCopyToSeller")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -9989,6 +11177,7 @@ class SendInvoiceRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :transactionID
@@ -10007,13 +11196,14 @@ class SendInvoiceRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, transactionID = nil, orderID = nil, internationalShippingServiceOptions = [], shippingServiceOptions = [], salesTax = nil, insuranceOption = nil, insuranceFee = nil, paymentMethods = [], payPalEmailAddress = nil, checkoutInstructions = nil, emailCopyToSeller = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, transactionID = nil, orderID = nil, internationalShippingServiceOptions = [], shippingServiceOptions = [], salesTax = nil, insuranceOption = nil, insuranceFee = nil, paymentMethods = [], payPalEmailAddress = nil, checkoutInstructions = nil, emailCopyToSeller = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @transactionID = transactionID
@@ -10047,7 +11237,8 @@ class SendInvoiceResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -10094,10 +11285,14 @@ class SetNotificationPreferencesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["applicationDeliveryPreferences", ["ApplicationDeliveryPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ApplicationDeliveryPreferences")]],
-    ["userDeliveryPreferenceArray", ["NotificationEnableArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserDeliveryPreferenceArray")]]]
+    ["userDeliveryPreferenceArray", ["NotificationEnableArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserDeliveryPreferenceArray")]],
+    ["userData", ["NotificationUserDataType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserData")]],
+    ["eventProperty", ["NotificationEventPropertyType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EventProperty")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -10105,24 +11300,30 @@ class SetNotificationPreferencesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :applicationDeliveryPreferences
   attr_accessor :userDeliveryPreferenceArray
+  attr_accessor :userData
+  attr_accessor :eventProperty
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, applicationDeliveryPreferences = nil, userDeliveryPreferenceArray = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, applicationDeliveryPreferences = nil, userDeliveryPreferenceArray = nil, userData = nil, eventProperty = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @applicationDeliveryPreferences = applicationDeliveryPreferences
     @userDeliveryPreferenceArray = userDeliveryPreferenceArray
+    @userData = userData
+    @eventProperty = eventProperty
   end
 end
 
@@ -10143,7 +11344,8 @@ class SetNotificationPreferencesResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -10190,10 +11392,12 @@ class SetPictureManagerDetailsRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["pictureManagerDetails", ["PictureManagerDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PictureManagerDetails")]],
-    ["action", ["PictureManagerActionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Action")]]]
+    ["action", ["PictureManagerActionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Action")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -10201,6 +11405,7 @@ class SetPictureManagerDetailsRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :pictureManagerDetails
   attr_accessor :action
@@ -10209,13 +11414,14 @@ class SetPictureManagerDetailsRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, pictureManagerDetails = nil, action = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, pictureManagerDetails = nil, action = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @pictureManagerDetails = pictureManagerDetails
     @action = action
@@ -10239,7 +11445,8 @@ class SetPictureManagerDetailsResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -10286,10 +11493,12 @@ class SetPromotionRulesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["operationType", ["OperationTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "OperationType")]],
-    ["promotionRuleArray", ["PromotionRuleArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PromotionRuleArray")]]]
+    ["promotionRuleArray", ["PromotionRuleArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PromotionRuleArray")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -10297,6 +11506,7 @@ class SetPromotionRulesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :operationType
   attr_accessor :promotionRuleArray
@@ -10305,13 +11515,14 @@ class SetPromotionRulesRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, operationType = nil, promotionRuleArray = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, operationType = nil, promotionRuleArray = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @operationType = operationType
     @promotionRuleArray = promotionRuleArray
@@ -10335,7 +11546,8 @@ class SetPromotionRulesResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -10382,11 +11594,13 @@ class SetReturnURLRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["authenticationEntry", ["AuthenticationEntryType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AuthenticationEntry")]],
     ["applicationDisplayName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ApplicationDisplayName")]],
-    ["action", ["ModifyActionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Action")]]]
+    ["action", ["ModifyActionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Action")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -10394,6 +11608,7 @@ class SetReturnURLRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :authenticationEntry
   attr_accessor :applicationDisplayName
@@ -10403,13 +11618,14 @@ class SetReturnURLRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, authenticationEntry = nil, applicationDisplayName = nil, action = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, authenticationEntry = nil, applicationDisplayName = nil, action = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @authenticationEntry = authenticationEntry
     @applicationDisplayName = applicationDisplayName
@@ -10434,7 +11650,8 @@ class SetReturnURLResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -10481,9 +11698,11 @@ class SetStoreRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["store", ["StoreType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Store")]]]
+    ["store", ["StoreType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Store")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -10491,6 +11710,7 @@ class SetStoreRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :store
 
@@ -10498,13 +11718,14 @@ class SetStoreRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, store = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, store = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @store = store
   end
@@ -10527,7 +11748,8 @@ class SetStoreResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -10564,6 +11786,119 @@ class SetStoreResponseType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}SetStoreCategoriesRequestType
+class SetStoreCategoriesRequestType
+  @@schema_type = "SetStoreCategoriesRequestType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailLevel")]],
+    ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorLanguage")]],
+    ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["action", ["StoreCategoryUpdateActionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Action")]],
+    ["itemDestinationCategoryID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemDestinationCategoryID")]],
+    ["destinationParentCategoryID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DestinationParentCategoryID")]],
+    ["storeCategories", ["StoreCustomCategoryArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoreCategories")]]
+  ]
+
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :warningLevel
+  attr_reader :__xmlele_any
+  attr_accessor :action
+  attr_accessor :itemDestinationCategoryID
+  attr_accessor :destinationParentCategoryID
+  attr_accessor :storeCategories
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, action = nil, itemDestinationCategoryID = nil, destinationParentCategoryID = nil, storeCategories = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @warningLevel = warningLevel
+    @__xmlele_any = nil
+    @action = action
+    @itemDestinationCategoryID = itemDestinationCategoryID
+    @destinationParentCategoryID = destinationParentCategoryID
+    @storeCategories = storeCategories
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}SetStoreCategoriesResponseType
+class SetStoreCategoriesResponseType
+  @@schema_type = "SetStoreCategoriesResponseType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]],
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["errors", ["ErrorType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Errors")]],
+    ["message", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["build", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Build")]],
+    ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
+    ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
+    ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["taskID", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TaskID")]],
+    ["status", ["TaskStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Status")]]
+  ]
+
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_reader :__xmlele_any
+  attr_accessor :taskID
+  attr_accessor :status
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, taskID = nil, status = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @__xmlele_any = nil
+    @taskID = taskID
+    @status = status
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}SetStoreCustomPageRequestType
 class SetStoreCustomPageRequestType
   @@schema_type = "SetStoreCustomPageRequestType"
@@ -10574,9 +11909,11 @@ class SetStoreCustomPageRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["customPage", ["StoreCustomPageType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CustomPage")]]]
+    ["customPage", ["StoreCustomPageType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CustomPage")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -10584,6 +11921,7 @@ class SetStoreCustomPageRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :customPage
 
@@ -10591,13 +11929,14 @@ class SetStoreCustomPageRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, customPage = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, customPage = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @customPage = customPage
   end
@@ -10621,7 +11960,8 @@ class SetStoreCustomPageResponseType
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["customPage", ["StoreCustomPageType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CustomPage")]]]
+    ["customPage", ["StoreCustomPageType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CustomPage")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -10670,9 +12010,11 @@ class SetStorePreferencesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["storePreferences", ["StorePreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StorePreferences")]]]
+    ["storePreferences", ["StorePreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StorePreferences")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -10680,6 +12022,7 @@ class SetStorePreferencesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :storePreferences
 
@@ -10687,13 +12030,14 @@ class SetStorePreferencesRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, storePreferences = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, storePreferences = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @storePreferences = storePreferences
   end
@@ -10716,7 +12060,8 @@ class SetStorePreferencesResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -10763,9 +12108,11 @@ class SetTaxTableRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
-    ["taxTable", ["TaxTableType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TaxTable")]]]
+    ["taxTable", ["TaxTableType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TaxTable")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -10773,6 +12120,7 @@ class SetTaxTableRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :taxTable
 
@@ -10780,13 +12128,14 @@ class SetTaxTableRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, taxTable = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, taxTable = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @taxTable = taxTable
   end
@@ -10809,7 +12158,8 @@ class SetTaxTableResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -10856,11 +12206,13 @@ class SetUserNotesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["action", ["SetUserNotesActionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Action")]],
-    ["noteText", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NoteText")]]]
+    ["noteText", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NoteText")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -10868,6 +12220,7 @@ class SetUserNotesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :action
@@ -10877,13 +12230,14 @@ class SetUserNotesRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, itemID = nil, action = nil, noteText = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, action = nil, noteText = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
     @action = action
@@ -10908,7 +12262,8 @@ class SetUserNotesResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -10955,14 +12310,16 @@ class SetUserPreferencesRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["bidderNoticePreferences", ["BidderNoticePreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BidderNoticePreferences")]],
     ["combinedPaymentPreferences", ["CombinedPaymentPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CombinedPaymentPreferences")]],
     ["crossPromotionPreferences", ["CrossPromotionPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CrossPromotionPreferences")]],
     ["sellerPaymentPreferences", ["SellerPaymentPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerPaymentPreferences")]],
     ["sellerFavoriteItemPreferences", ["SellerFavoriteItemPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerFavoriteItemPreferences")]],
-    ["endOfAuctionEmailPreferences", ["EndOfAuctionEmailPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndOfAuctionEmailPreferences")]]]
+    ["endOfAuctionEmailPreferences", ["EndOfAuctionEmailPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndOfAuctionEmailPreferences")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -10970,6 +12327,7 @@ class SetUserPreferencesRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :bidderNoticePreferences
   attr_accessor :combinedPaymentPreferences
@@ -10982,13 +12340,14 @@ class SetUserPreferencesRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, bidderNoticePreferences = nil, combinedPaymentPreferences = nil, crossPromotionPreferences = nil, sellerPaymentPreferences = nil, sellerFavoriteItemPreferences = nil, endOfAuctionEmailPreferences = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, bidderNoticePreferences = nil, combinedPaymentPreferences = nil, crossPromotionPreferences = nil, sellerPaymentPreferences = nil, sellerFavoriteItemPreferences = nil, endOfAuctionEmailPreferences = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @bidderNoticePreferences = bidderNoticePreferences
     @combinedPaymentPreferences = combinedPaymentPreferences
@@ -11016,7 +12375,8 @@ class SetUserPreferencesResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -11063,14 +12423,16 @@ class ValidateTestUserRegistrationRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["feedbackScore", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackScore")]],
     ["registrationDate", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RegistrationDate")]],
     ["subscribeSA", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SubscribeSA")]],
     ["subscribeSAPro", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SubscribeSAPro")]],
     ["subscribeSM", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SubscribeSM")]],
-    ["subscribeSMPro", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SubscribeSMPro")]]]
+    ["subscribeSMPro", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SubscribeSMPro")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -11078,6 +12440,7 @@ class ValidateTestUserRegistrationRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :feedbackScore
   attr_accessor :registrationDate
@@ -11090,13 +12453,14 @@ class ValidateTestUserRegistrationRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, feedbackScore = nil, registrationDate = nil, subscribeSA = nil, subscribeSAPro = nil, subscribeSM = nil, subscribeSMPro = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, feedbackScore = nil, registrationDate = nil, subscribeSA = nil, subscribeSAPro = nil, subscribeSM = nil, subscribeSMPro = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @feedbackScore = feedbackScore
     @registrationDate = registrationDate
@@ -11124,7 +12488,8 @@ class ValidateTestUserRegistrationResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -11171,10 +12536,12 @@ class VerifyAddItemRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["item", ["ItemType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]],
-    ["externalProductID", ["ExternalProductIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExternalProductID")]]]
+    ["externalProductID", ["ExternalProductIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExternalProductID")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -11182,6 +12549,7 @@ class VerifyAddItemRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :item
   attr_accessor :externalProductID
@@ -11190,13 +12558,14 @@ class VerifyAddItemRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, item = nil, externalProductID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, item = nil, externalProductID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @item = item
     @externalProductID = externalProductID
@@ -11224,7 +12593,8 @@ class VerifyAddItemResponseType
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["fees", ["FeesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Fees")]],
     ["categoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
-    ["category2ID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category2ID")]]]
+    ["category2ID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category2ID")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -11279,14 +12649,16 @@ class VerifyAddSecondChanceItemRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["recipientBidderUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientBidderUserID")]],
     ["buyItNowPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BuyItNowPrice")]],
     ["copyEmailToSeller", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CopyEmailToSeller")]],
     ["duration", ["SecondChanceOfferDurationCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Duration")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
-    ["site", ["SiteCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Site")]]]
+    ["site", ["SiteCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Site")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -11294,6 +12666,7 @@ class VerifyAddSecondChanceItemRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :recipientBidderUserID
   attr_accessor :buyItNowPrice
@@ -11306,13 +12679,14 @@ class VerifyAddSecondChanceItemRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, recipientBidderUserID = nil, buyItNowPrice = nil, copyEmailToSeller = nil, duration = nil, itemID = nil, site = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, recipientBidderUserID = nil, buyItNowPrice = nil, copyEmailToSeller = nil, duration = nil, itemID = nil, site = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
     @recipientBidderUserID = recipientBidderUserID
     @buyItNowPrice = buyItNowPrice
@@ -11343,7 +12717,8 @@ class VerifyAddSecondChanceItemResponseType
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["fees", ["FeesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Fees")]],
     ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StartTime")]],
-    ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTime")]]]
+    ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTime")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -11396,8 +12771,10 @@ class AbstractRequestType
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
     ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
-    ["invocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -11405,19 +12782,21 @@ class AbstractRequestType
   attr_accessor :version
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :warningLevel
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
     @version = version
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @warningLevel = warningLevel
     @__xmlele_any = nil
   end
 end
@@ -11439,7 +12818,8 @@ class AbstractResponseType
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :timestamp
   attr_accessor :ack
@@ -11485,7 +12865,8 @@ class CustomSecurityHeaderType
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["credentials", ["UserIdPasswordType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Credentials")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :eBayAuthToken
   attr_accessor :hardExpirationWarning
@@ -11511,10 +12892,11 @@ class DuplicateInvocationDetailsType
   @@schema_type = "DuplicateInvocationDetailsType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
-    ["duplicateInvocationID", ["UUIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationID")]],
+    ["duplicateInvocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationID")]],
     ["status", ["InvocationStatusType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Status")]],
     ["invocationTrackingID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationTrackingID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :duplicateInvocationID
   attr_accessor :status
@@ -11537,10 +12919,13 @@ end
 class ErrorParameterType
   @@schema_type = "ErrorParameterType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_attribute = {XSD::QName.new(nil, "ParamID") => "SOAP::SOAPString"}
+  @@schema_attribute = {
+    XSD::QName.new(nil, "ParamID") => "SOAP::SOAPString"
+  }
   @@schema_element = [
     ["value", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Value")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :value
   attr_reader :__xmlele_any
@@ -11576,7 +12961,8 @@ class ErrorType
     ["severityCode", ["SeverityCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SeverityCode")]],
     ["errorParameters", ["ErrorParameterType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorParameters")]],
     ["errorClassification", ["ErrorClassificationCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorClassification")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :shortMessage
   attr_accessor :longMessage
@@ -11611,7 +12997,8 @@ class FaultDetailsType
     ["errorCode", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorCode")]],
     ["severity", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Severity")]],
     ["detailedMessage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailedMessage")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :errorCode
   attr_accessor :severity
@@ -11631,8 +13018,11 @@ class FaultDetailsType
 end
 
 # {urn:ebay:apis:eBLBaseComponents}MeasureType
-class MeasureType < String
-  @@schema_attribute = {XSD::QName.new(nil, "unit") => nil}
+#   contains SOAP::SOAPDecimal
+class MeasureType < ::String
+  @@schema_attribute = {
+    XSD::QName.new(nil, "unit") => nil
+  }
 
   def xmlattr_unit
     (@__xmlattr ||= {})[XSD::QName.new(nil, "unit")]
@@ -11649,8 +13039,11 @@ class MeasureType < String
 end
 
 # {urn:ebay:apis:eBLBaseComponents}QuantityType
-class QuantityType < String
-  @@schema_attribute = {XSD::QName.new(nil, "unit") => nil}
+#   contains SOAP::SOAPDecimal
+class QuantityType < ::String
+  @@schema_attribute = {
+    XSD::QName.new(nil, "unit") => nil
+  }
 
   def xmlattr_unit
     (@__xmlattr ||= {})[XSD::QName.new(nil, "unit")]
@@ -11676,7 +13069,8 @@ class UserIdPasswordType
     ["authCert", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AuthCert")]],
     ["username", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Username")]],
     ["password", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Password")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :appId
   attr_accessor :devId
@@ -11707,7 +13101,8 @@ class XMLRequesterCredentialsType
     ["username", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Username")]],
     ["password", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Password")]],
     ["eBayAuthToken", "SOAP::SOAPString"],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :username
   attr_accessor :password
@@ -11732,7 +13127,8 @@ class AccountEntriesType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["accountEntry", ["AccountEntryType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AccountEntry")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :accountEntry
   attr_reader :__xmlele_any
@@ -11765,7 +13161,8 @@ class AccountEntryType
     ["refNumber", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RefNumber")]],
     ["vATPercent", ["SOAP::SOAPDecimal", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "VATPercent")]],
     ["title", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Title")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :accountDetailsEntryType
   attr_accessor :description
@@ -11829,7 +13226,8 @@ class AccountSummaryType
     ["lastPaymentDate", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LastPaymentDate")]],
     ["pastDue", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PastDue")]],
     ["paymentMethod", ["SellerPaymentMethodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentMethod")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :accountState
   attr_accessor :invoicePayment
@@ -11882,6 +13280,25 @@ class AccountSummaryType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}AdFormatEnabledDefinitionType
+class AdFormatEnabledDefinitionType
+  @@schema_type = "AdFormatEnabledDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}AdFormatLeadType
 class AdFormatLeadType
   @@schema_type = "AdFormatLeadType"
@@ -11895,7 +13312,8 @@ class AdFormatLeadType
     ["lastName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LastName")]],
     ["phone", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Phone")]],
     ["submittedTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SubmittedTime")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :additionalInformation
   attr_accessor :address
@@ -11932,7 +13350,8 @@ class AdditionalAccountType
     ["balance", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Balance")]],
     ["currency", ["CurrencyCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Currency")]],
     ["accountCode", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AccountCode")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :balance
   attr_accessor :currency
@@ -11975,7 +13394,8 @@ class AddressType
     ["internationalStreet", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InternationalStreet")]],
     ["companyName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CompanyName")]],
     ["addressRecordType", ["AddressRecordTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AddressRecordType")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :name
   attr_accessor :street
@@ -12027,8 +13447,11 @@ class AddressType
 end
 
 # {urn:ebay:apis:eBLBaseComponents}AmountType
-class AmountType < Float
-  @@schema_attribute = {XSD::QName.new(nil, "currencyID") => nil}
+#   contains SOAP::SOAPDouble
+class AmountType < ::String
+  @@schema_attribute = {
+    XSD::QName.new(nil, "currencyID") => nil
+  }
 
   def xmlattr_currencyID
     (@__xmlattr ||= {})[XSD::QName.new(nil, "currencyID")]
@@ -12065,7 +13488,8 @@ class ApiAccessRuleType
     ["modTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModTime")]],
     ["ruleCurrentStatus", ["AccessRuleCurrentStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RuleCurrentStatus")]],
     ["ruleStatus", ["AccessRuleStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RuleStatus")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :callName
   attr_accessor :countsTowardAggregate
@@ -12117,31 +13541,41 @@ class ApplicationDeliveryPreferencesType
   @@schema_element = [
     ["applicationURL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ApplicationURL")]],
     ["applicationEnable", ["EnableCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ApplicationEnable")]],
+    ["alertEmail", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AlertEmail")]],
+    ["alertEnable", ["EnableCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AlertEnable")]],
     ["notificationPayloadType", ["NotificationPayloadTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationPayloadType")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["deviceType", ["DeviceTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DeviceType")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :applicationURL
   attr_accessor :applicationEnable
+  attr_accessor :alertEmail
+  attr_accessor :alertEnable
   attr_accessor :notificationPayloadType
+  attr_accessor :deviceType
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(applicationURL = nil, applicationEnable = nil, notificationPayloadType = nil)
+  def initialize(applicationURL = nil, applicationEnable = nil, alertEmail = nil, alertEnable = nil, notificationPayloadType = nil, deviceType = nil)
     @applicationURL = applicationURL
     @applicationEnable = applicationEnable
+    @alertEmail = alertEmail
+    @alertEnable = alertEnable
     @notificationPayloadType = notificationPayloadType
+    @deviceType = deviceType
     @__xmlele_any = nil
   end
 end
 
 # {urn:ebay:apis:eBLBaseComponents}AttributeArrayType
 class AttributeArrayType < ::Array
-  @@schema_type = "AttributeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["Attribute", ["AttributeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Attribute")]]]
+  @@schema_element = [
+    ["Attribute", ["AttributeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Attribute")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}AttributeRecommendationsType
@@ -12150,7 +13584,8 @@ class AttributeRecommendationsType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["attributeSetArray", ["AttributeSetArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSetArray")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :attributeSetArray
   attr_reader :__xmlele_any
@@ -12167,19 +13602,23 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}AttributeSetArrayType
 class AttributeSetArrayType < ::Array
-  @@schema_type = "AttributeSetType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["AttributeSet", ["AttributeSetType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSet")]]]
+  @@schema_element = [
+    ["AttributeSet", ["AttributeSetType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSet")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}AttributeSetType
 class AttributeSetType
   @@schema_type = "AttributeSetType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_attribute = {XSD::QName.new(nil, "attributeSetID") => "SOAP::SOAPInt", XSD::QName.new(nil, "attributeSetVersion") => "SOAP::SOAPString"}
+  @@schema_attribute = {
+    XSD::QName.new(nil, "attributeSetID") => "SOAP::SOAPInt",
+    XSD::QName.new(nil, "attributeSetVersion") => "SOAP::SOAPString"
+  }
   @@schema_element = [
     ["attribute", ["AttributeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Attribute")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :attribute
   attr_reader :__xmlele_any
@@ -12215,10 +13654,14 @@ end
 class AttributeType
   @@schema_type = "AttributeType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_attribute = {XSD::QName.new(nil, "attributeID") => "SOAP::SOAPInt", XSD::QName.new(nil, "attributeLabel") => "SOAP::SOAPString"}
+  @@schema_attribute = {
+    XSD::QName.new(nil, "attributeID") => "SOAP::SOAPInt",
+    XSD::QName.new(nil, "attributeLabel") => "SOAP::SOAPString"
+  }
   @@schema_element = [
     ["value", ["ValType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Value")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :value
   attr_reader :__xmlele_any
@@ -12252,9 +13695,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}AuthenticationEntryArrayType
 class AuthenticationEntryArrayType < ::Array
-  @@schema_type = "AuthenticationEntryType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["AuthenticationEntry", ["AuthenticationEntryType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AuthenticationEntry")]]]
+  @@schema_element = [
+    ["AuthenticationEntry", ["AuthenticationEntryType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AuthenticationEntry")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}AuthenticationEntryType
@@ -12267,7 +13710,8 @@ class AuthenticationEntryType
     ["rejectURL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RejectURL")]],
     ["ruName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RuName")]],
     ["tokenReturnMethod", ["TokenReturnMethodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TokenReturnMethod")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :acceptURL
   attr_accessor :privacyPolicyURL
@@ -12291,8 +13735,11 @@ class AuthenticationEntryType
 end
 
 # {urn:ebay:apis:eBLBaseComponents}BasicAmountType
-class BasicAmountType < String
-  @@schema_attribute = {XSD::QName.new(nil, "currencyID") => nil}
+#   contains SOAP::SOAPString
+class BasicAmountType < ::String
+  @@schema_attribute = {
+    XSD::QName.new(nil, "currencyID") => nil
+  }
 
   def xmlattr_currencyID
     (@__xmlattr ||= {})[XSD::QName.new(nil, "currencyID")]
@@ -12308,11 +13755,68 @@ class BasicAmountType < String
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}BasicUpgradePackEnabledDefinitionType
+class BasicUpgradePackEnabledDefinitionType
+  @@schema_type = "BasicUpgradePackEnabledDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}BestOfferArrayType
 class BestOfferArrayType < ::Array
-  @@schema_type = "BestOfferType"
+  @@schema_element = [
+    ["BestOffer", ["BestOfferType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOffer")]]
+  ]
+end
+
+# {urn:ebay:apis:eBLBaseComponents}BestOfferAutoDeclineEnabledDefinitionType
+class BestOfferAutoDeclineEnabledDefinitionType
+  @@schema_type = "BestOfferAutoDeclineEnabledDefinitionType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["BestOffer", ["BestOfferType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOffer")]]]
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}BestOfferCounterEnabledDefinitionType
+class BestOfferCounterEnabledDefinitionType
+  @@schema_type = "BestOfferCounterEnabledDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
 end
 
 # {urn:ebay:apis:eBLBaseComponents}BestOfferDetailsType
@@ -12324,23 +13828,27 @@ class BestOfferDetailsType
     ["bestOfferEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferEnabled")]],
     ["bestOffer", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOffer")]],
     ["bestOfferStatus", ["BestOfferStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferStatus")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["bestOfferType", ["BestOfferTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferType")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :bestOfferCount
   attr_accessor :bestOfferEnabled
   attr_accessor :bestOffer
   attr_accessor :bestOfferStatus
+  attr_accessor :bestOfferType
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(bestOfferCount = nil, bestOfferEnabled = nil, bestOffer = nil, bestOfferStatus = nil)
+  def initialize(bestOfferCount = nil, bestOfferEnabled = nil, bestOffer = nil, bestOfferStatus = nil, bestOfferType = nil)
     @bestOfferCount = bestOfferCount
     @bestOfferEnabled = bestOfferEnabled
     @bestOffer = bestOffer
     @bestOfferStatus = bestOfferStatus
+    @bestOfferType = bestOfferType
     @__xmlele_any = nil
   end
 end
@@ -12350,7 +13858,8 @@ class BestOfferEnabledDefinitionType
   @@schema_type = "BestOfferEnabledDefinitionType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_reader :__xmlele_any
 
@@ -12376,8 +13885,10 @@ class BestOfferType
     ["quantity", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Quantity")]],
     ["buyerMessage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BuyerMessage")]],
     ["sellerMessage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerMessage")]],
+    ["bestOfferCodeType", ["BestOfferTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferCodeType")]],
     ["callStatus", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CallStatus")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :bestOfferID
   attr_accessor :expirationTime
@@ -12387,6 +13898,7 @@ class BestOfferType
   attr_accessor :quantity
   attr_accessor :buyerMessage
   attr_accessor :sellerMessage
+  attr_accessor :bestOfferCodeType
   attr_accessor :callStatus
   attr_reader :__xmlele_any
 
@@ -12394,7 +13906,7 @@ class BestOfferType
     @__xmlele_any = elements
   end
 
-  def initialize(bestOfferID = nil, expirationTime = nil, buyer = nil, price = nil, status = nil, quantity = nil, buyerMessage = nil, sellerMessage = nil, callStatus = nil)
+  def initialize(bestOfferID = nil, expirationTime = nil, buyer = nil, price = nil, status = nil, quantity = nil, buyerMessage = nil, sellerMessage = nil, bestOfferCodeType = nil, callStatus = nil)
     @bestOfferID = bestOfferID
     @expirationTime = expirationTime
     @buyer = buyer
@@ -12403,7 +13915,105 @@ class BestOfferType
     @quantity = quantity
     @buyerMessage = buyerMessage
     @sellerMessage = sellerMessage
+    @bestOfferCodeType = bestOfferCodeType
     @callStatus = callStatus
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}BidApprovalArrayType
+class BidApprovalArrayType
+  @@schema_type = "BidApprovalArrayType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["liveAuctionBid", ["BidApprovalType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LiveAuctionBid")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :liveAuctionBid
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(liveAuctionBid = [])
+    @liveAuctionBid = liveAuctionBid
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}BidApprovalType
+class BidApprovalType
+  @@schema_type = "BidApprovalType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["userID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserID")]],
+    ["approvedBiddingLimit", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ApprovedBiddingLimit")]],
+    ["declinedComment", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DeclinedComment")]],
+    ["status", ["BidderStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Status")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :userID
+  attr_accessor :approvedBiddingLimit
+  attr_accessor :declinedComment
+  attr_accessor :status
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(userID = nil, approvedBiddingLimit = nil, declinedComment = nil, status = nil)
+    @userID = userID
+    @approvedBiddingLimit = approvedBiddingLimit
+    @declinedComment = declinedComment
+    @status = status
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}BidderDetailArrayType
+class BidderDetailArrayType < ::Array
+  @@schema_element = [
+    ["BidderDetail", ["BidderDetailType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BidderDetail")]]
+  ]
+end
+
+# {urn:ebay:apis:eBLBaseComponents}BidderDetailType
+class BidderDetailType
+  @@schema_type = "BidderDetailType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["userID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserID")]],
+    ["email", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Email")]],
+    ["feedbackScore", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackScore")]],
+    ["uniqueNegativeFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UniqueNegativeFeedbackCount")]],
+    ["uniquePositiveFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UniquePositiveFeedbackCount")]],
+    ["liveAuctionBidResult", ["LiveAuctionBidType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LiveAuctionBidResult")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :userID
+  attr_accessor :email
+  attr_accessor :feedbackScore
+  attr_accessor :uniqueNegativeFeedbackCount
+  attr_accessor :uniquePositiveFeedbackCount
+  attr_accessor :liveAuctionBidResult
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(userID = nil, email = nil, feedbackScore = nil, uniqueNegativeFeedbackCount = nil, uniquePositiveFeedbackCount = nil, liveAuctionBidResult = nil)
+    @userID = userID
+    @email = email
+    @feedbackScore = feedbackScore
+    @uniqueNegativeFeedbackCount = uniqueNegativeFeedbackCount
+    @uniquePositiveFeedbackCount = uniquePositiveFeedbackCount
+    @liveAuctionBidResult = liveAuctionBidResult
     @__xmlele_any = nil
   end
 end
@@ -12414,7 +14024,8 @@ class BidderNoticePreferencesType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["unsuccessfulBidderNoticeIncludeMyItems", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UnsuccessfulBidderNoticeIncludeMyItems")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :unsuccessfulBidderNoticeIncludeMyItems
   attr_reader :__xmlele_any
@@ -12439,7 +14050,8 @@ class BiddingDetailsType
     ["quantityBid", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "QuantityBid")]],
     ["quantityWon", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "QuantityWon")]],
     ["winning", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Winning")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :convertedMaxBid
   attr_accessor :maxBid
@@ -12467,7 +14079,8 @@ class BuyerRequirementsType
   @@schema_type = "BuyerRequirementsType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
-    ["linkedPayPalAccount", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LinkedPayPalAccount")]]]
+    ["linkedPayPalAccount", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LinkedPayPalAccount")]]
+  ]
 
   attr_accessor :linkedPayPalAccount
 
@@ -12482,7 +14095,8 @@ class BuyerType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["shippingAddress", ["AddressType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingAddress")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :shippingAddress
   attr_reader :__xmlele_any
@@ -12504,7 +14118,8 @@ class BuyingGuideDetailsType
   @@schema_element = [
     ["buyingGuide", ["BuyingGuideType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BuyingGuide")]],
     ["buyingGuideHub", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BuyingGuideHub")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :buyingGuide
   attr_accessor :buyingGuideHub
@@ -12530,7 +14145,8 @@ class BuyingGuideType
     ["uRL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "URL")]],
     ["categoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
     ["productFinderID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductFinderID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :name
   attr_accessor :uRL
@@ -12562,7 +14178,8 @@ class BuyingSummaryType
     ["wonCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WonCount")]],
     ["totalWonCost", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalWonCost")]],
     ["wonDurationInDays", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WonDurationInDays")]],
-    ["bestOfferCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferCount")]]]
+    ["bestOfferCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferCount")]]
+  ]
 
   attr_accessor :biddingCount
   attr_accessor :winningCount
@@ -12592,7 +14209,8 @@ class CalculatedShippingPreferencesType
     ["calculatedShippingChargeOption", ["CalculatedShippingChargeOptionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CalculatedShippingChargeOption")]],
     ["calculatedShippingRateOption", ["CalculatedShippingRateOptionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CalculatedShippingRateOption")]],
     ["insuranceOption", ["InsuranceOptionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InsuranceOption")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :calculatedShippingAmountForEntireOrder
   attr_accessor :calculatedShippingChargeOption
@@ -12627,7 +14245,8 @@ class CalculatedShippingRateType
     ["shippingPackage", ["ShippingPackageCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingPackage")]],
     ["weightMajor", ["MeasureType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WeightMajor")]],
     ["weightMinor", ["MeasureType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WeightMinor")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :originatingPostalCode
   attr_accessor :packageDepth
@@ -12664,7 +14283,8 @@ class CancelOfferArrayType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["cancelOffer", ["CancelOfferType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CancelOffer")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :cancelOffer
   attr_reader :__xmlele_any
@@ -12686,7 +14306,8 @@ class CancelOfferType
   @@schema_element = [
     ["offer", ["OfferType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Offer")]],
     ["explanation", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Explanation")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :offer
   attr_accessor :explanation
@@ -12705,9 +14326,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}CategoryArrayType
 class CategoryArrayType < ::Array
-  @@schema_type = "CategoryType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["Category", ["CategoryType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category")]]]
+  @@schema_element = [
+    ["Category", ["CategoryType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CategoryFeatureType
@@ -12719,32 +14340,66 @@ class CategoryFeatureType
     ["listingDuration", ["ListingDurationReferenceType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingDuration")]],
     ["shippingTermsRequired", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingTermsRequired")]],
     ["bestOfferEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferEnabled")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["dutchBINEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DutchBINEnabled")]],
+    ["userConsentRequired", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserConsentRequired")]],
+    ["homePageFeaturedEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HomePageFeaturedEnabled")]],
+    ["proPackEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProPackEnabled")]],
+    ["basicUpgradePackEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BasicUpgradePackEnabled")]],
+    ["valuePackEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ValuePackEnabled")]],
+    ["proPackPlusEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProPackPlusEnabled")]],
+    ["adFormatEnabled", ["AdFormatEnabledCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AdFormatEnabled")]],
+    ["digitalDeliveryEnabled", ["DigitalDeliveryEnabledCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DigitalDeliveryEnabled")]],
+    ["bestOfferCounterEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferCounterEnabled")]],
+    ["bestOfferAutoDeclineEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferAutoDeclineEnabled")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :categoryID
   attr_accessor :listingDuration
   attr_accessor :shippingTermsRequired
   attr_accessor :bestOfferEnabled
+  attr_accessor :dutchBINEnabled
+  attr_accessor :userConsentRequired
+  attr_accessor :homePageFeaturedEnabled
+  attr_accessor :proPackEnabled
+  attr_accessor :basicUpgradePackEnabled
+  attr_accessor :valuePackEnabled
+  attr_accessor :proPackPlusEnabled
+  attr_accessor :adFormatEnabled
+  attr_accessor :digitalDeliveryEnabled
+  attr_accessor :bestOfferCounterEnabled
+  attr_accessor :bestOfferAutoDeclineEnabled
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(categoryID = nil, listingDuration = [], shippingTermsRequired = nil, bestOfferEnabled = nil)
+  def initialize(categoryID = nil, listingDuration = [], shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil)
     @categoryID = categoryID
     @listingDuration = listingDuration
     @shippingTermsRequired = shippingTermsRequired
     @bestOfferEnabled = bestOfferEnabled
+    @dutchBINEnabled = dutchBINEnabled
+    @userConsentRequired = userConsentRequired
+    @homePageFeaturedEnabled = homePageFeaturedEnabled
+    @proPackEnabled = proPackEnabled
+    @basicUpgradePackEnabled = basicUpgradePackEnabled
+    @valuePackEnabled = valuePackEnabled
+    @proPackPlusEnabled = proPackPlusEnabled
+    @adFormatEnabled = adFormatEnabled
+    @digitalDeliveryEnabled = digitalDeliveryEnabled
+    @bestOfferCounterEnabled = bestOfferCounterEnabled
+    @bestOfferAutoDeclineEnabled = bestOfferAutoDeclineEnabled
     @__xmlele_any = nil
   end
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CategoryFinanceOfferArrayType
 class CategoryFinanceOfferArrayType < ::Array
-  @@schema_type = "CategoryFinanceOfferType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["CategoryFinanceOffer", ["CategoryFinanceOfferType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryFinanceOffer")]]]
+  @@schema_element = [
+    ["CategoryFinanceOffer", ["CategoryFinanceOfferType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryFinanceOffer")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CategoryFinanceOfferType
@@ -12754,7 +14409,8 @@ class CategoryFinanceOfferType
   @@schema_element = [
     ["financeOfferID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FinanceOfferID")]],
     ["categoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :financeOfferID
   attr_accessor :categoryID
@@ -12775,9 +14431,13 @@ end
 class CategoryMappingType
   @@schema_type = "CategoryMappingType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_attribute = {XSD::QName.new(nil, "oldID") => "SOAP::SOAPString", XSD::QName.new(nil, "id") => "SOAP::SOAPString"}
+  @@schema_attribute = {
+    XSD::QName.new(nil, "oldID") => "SOAP::SOAPString",
+    XSD::QName.new(nil, "id") => "SOAP::SOAPString"
+  }
   @@schema_element = [
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_reader :__xmlele_any
 
@@ -12836,7 +14496,8 @@ class CategoryType
     ["oRRA", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ORRA")]],
     ["lSD", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LSD")]],
     ["keywords", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Keywords")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :bestOfferEnabled
   attr_accessor :autoPayEnabled
@@ -12899,9 +14560,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}CharacteristicSetIDsType
 class CharacteristicSetIDsType < ::Array
-  @@schema_type = "string"
-  @@schema_ns = "http://www.w3.org/2001/XMLSchema"
-  @@schema_element = [["ID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ID")]]]
+  @@schema_element = [
+    ["ID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ID")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CharacteristicType
@@ -12916,7 +14577,8 @@ class CharacteristicType
     ["label", ["LabelType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Label")]],
     ["sortOrder", ["SortOrderCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SortOrder")]],
     ["valueList", ["ValType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ValueList")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :attributeID
   attr_accessor :dateFormat
@@ -12952,7 +14614,8 @@ class CharacteristicsSetType
     ["attributeSetID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSetID")]],
     ["attributeSetVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSetVersion")]],
     ["characteristics", ["CharacteristicType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Characteristics")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :name
   attr_accessor :attributeSetID
@@ -12977,9 +14640,13 @@ end
 class CharityAffiliationType
   @@schema_type = "CharityAffiliationType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_attribute = {XSD::QName.new(nil, "id") => "SOAP::SOAPString", XSD::QName.new(nil, "type") => nil}
+  @@schema_attribute = {
+    XSD::QName.new(nil, "id") => "SOAP::SOAPString",
+    XSD::QName.new(nil, "type") => nil
+  }
   @@schema_element = [
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_reader :__xmlele_any
 
@@ -13010,17 +14677,55 @@ class CharityAffiliationType
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CharityAffiliationsType
-class CharityAffiliationsType < ::Array
-  @@schema_type = "int"
-  @@schema_ns = "http://www.w3.org/2001/XMLSchema"
-  @@schema_element = [["CharityID", ["SOAP::SOAPInt[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharityID")]]]
+class CharityAffiliationsType
+  @@schema_type = "CharityAffiliationsType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["charityID", ["CharityIDType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharityID")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :charityID
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(charityID = [])
+    @charityID = charityID
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}CharityIDType
+#   contains SOAP::SOAPString
+class CharityIDType < ::String
+  @@schema_attribute = {
+    XSD::QName.new(nil, "type") => nil
+  }
+
+  def xmlattr_type
+    (@__xmlattr ||= {})[XSD::QName.new(nil, "type")]
+  end
+
+  def xmlattr_type=(value)
+    (@__xmlattr ||= {})[XSD::QName.new(nil, "type")] = value
+  end
+
+  def initialize(*arg)
+    super
+    @__xmlattr = {}
+  end
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CharityInfoType
 class CharityInfoType
   @@schema_type = "CharityInfoType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_attribute = {XSD::QName.new(nil, "id") => "SOAP::SOAPString"}
+  @@schema_attribute = {
+    XSD::QName.new(nil, "id") => "SOAP::SOAPString"
+  }
   @@schema_element = [
     ["name", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Name")]],
     ["mission", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Mission")]],
@@ -13030,7 +14735,8 @@ class CharityInfoType
     ["charityRegion", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharityRegion")]],
     ["charityDomain", ["SOAP::SOAPInt[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharityDomain")]],
     ["charityID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharityID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :name
   attr_accessor :mission
@@ -13075,7 +14781,8 @@ class CharitySellerType
   @@schema_element = [
     ["charitySellerStatus", ["CharitySellerStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharitySellerStatus")]],
     ["charityAffiliation", ["CharityAffiliationType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharityAffiliation")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :charitySellerStatus
   attr_accessor :charityAffiliation
@@ -13105,7 +14812,8 @@ class CharityType
     ["logoURL", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LogoURL")]],
     ["status", ["CharityStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Status")]],
     ["charityListing", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharityListing")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :charityName
   attr_accessor :charityNumber
@@ -13143,7 +14851,8 @@ class CheckoutStatusType
     ["lastModifiedTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LastModifiedTime")]],
     ["paymentMethod", ["BuyerPaymentMethodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentMethod")]],
     ["status", ["CompleteStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Status")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :eBayPaymentStatus
   attr_accessor :lastModifiedTime
@@ -13173,7 +14882,8 @@ class CombinedPaymentPreferencesType
     ["combinedPaymentOption", ["CombinedPaymentOptionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CombinedPaymentOption")]],
     ["combinedPaymentPeriod", ["CombinedPaymentPeriodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CombinedPaymentPeriod")]],
     ["flatShippingPreferences", ["FlatShippingPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FlatShippingPreferences")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :calculatedShippingPreferences
   attr_accessor :combinedPaymentOption
@@ -13201,7 +14911,8 @@ class CountryDetailsType
   @@schema_element = [
     ["country", ["CountryCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Country")]],
     ["description", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Description")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :country
   attr_accessor :description
@@ -13230,7 +14941,8 @@ class CrossPromotionPreferencesType
     ["upSellItemFormatSortFilter", ["ItemFormatSortFilterCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UpSellItemFormatSortFilter")]],
     ["upSellGallerySortFilter", ["GallerySortFilterCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UpSellGallerySortFilter")]],
     ["upSellItemSortFilter", ["ItemSortFilterCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UpSellItemSortFilter")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :crossPromotionEnabled
   attr_accessor :crossSellItemFormatSortFilter
@@ -13270,7 +14982,8 @@ class CrossPromotionsType
     ["sellerKey", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerKey")]],
     ["storeName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoreName")]],
     ["promotedItem", ["PromotedItemType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PromotedItem")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :itemID
   attr_accessor :primaryScheme
@@ -13306,7 +15019,8 @@ class CurrencyDetailsType
   @@schema_element = [
     ["currency", ["CurrencyCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Currency")]],
     ["description", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Description")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :currency
   attr_accessor :description
@@ -13327,12 +15041,17 @@ end
 class DataElementSetType
   @@schema_type = "DataElementSetType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_attribute = {XSD::QName.new(nil, "attributeSetID") => "SOAP::SOAPInt"}
+  @@schema_attribute = {
+    XSD::QName.new(nil, "attributeSetID") => "SOAP::SOAPInt"
+  }
   @@schema_element = [
     ["dataElement", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DataElement")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["dataElementID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DataElementID")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :dataElement
+  attr_accessor :dataElementID
   attr_reader :__xmlele_any
 
   def set_any(elements)
@@ -13347,8 +15066,9 @@ class DataElementSetType
     (@__xmlattr ||= {})[XSD::QName.new(nil, "attributeSetID")] = value
   end
 
-  def initialize(dataElement = nil)
+  def initialize(dataElement = nil, dataElementID = nil)
     @dataElement = dataElement
+    @dataElementID = dataElementID
     @__xmlele_any = nil
     @__xmlattr = {}
   end
@@ -13365,7 +15085,8 @@ class DescriptionTemplateType
     ["name", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Name")]],
     ["templateXML", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TemplateXML")]],
     ["type", ["DescriptionTemplateCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Type")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :groupID
   attr_accessor :iD
@@ -13390,11 +15111,86 @@ class DescriptionTemplateType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}DigitalDeliveryDetailsType
+class DigitalDeliveryDetailsType
+  @@schema_type = "DigitalDeliveryDetailsType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["requirements", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Requirements")]],
+    ["method", ["DigitalDeliveryMethodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Method")]],
+    ["uRL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "URL")]],
+    ["instructions", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Instructions")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :requirements
+  attr_accessor :method
+  attr_accessor :uRL
+  attr_accessor :instructions
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(requirements = nil, method = nil, uRL = nil, instructions = nil)
+    @requirements = requirements
+    @method = method
+    @uRL = uRL
+    @instructions = instructions
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DigitalDeliveryEnabledDefinitionType
+class DigitalDeliveryEnabledDefinitionType
+  @@schema_type = "DigitalDeliveryEnabledDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DispatchTimeMaxDetailsType
+class DispatchTimeMaxDetailsType
+  @@schema_type = "DispatchTimeMaxDetailsType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["dispatchTimeMax", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DispatchTimeMax")]],
+    ["description", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Description")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :dispatchTimeMax
+  attr_accessor :description
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(dispatchTimeMax = nil, description = nil)
+    @dispatchTimeMax = dispatchTimeMax
+    @description = description
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}DisputeArrayType
 class DisputeArrayType < ::Array
-  @@schema_type = "DisputeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["Dispute", ["DisputeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Dispute")]]]
+  @@schema_element = [
+    ["Dispute", ["DisputeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Dispute")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DisputeFilterCountType
@@ -13404,7 +15200,8 @@ class DisputeFilterCountType
   @@schema_element = [
     ["disputeFilterType", ["DisputeFilterTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeFilterType")]],
     ["totalAvailable", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalAvailable")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :disputeFilterType
   attr_accessor :totalAvailable
@@ -13430,7 +15227,8 @@ class DisputeMessageType
     ["messageSource", ["DisputeMessageSourceCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageSource")]],
     ["messageCreationTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageCreationTime")]],
     ["messageText", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageText")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :messageID
   attr_accessor :messageSource
@@ -13459,7 +15257,8 @@ class DisputeResolutionType
     ["disputeResolutionRecordType", ["DisputeResolutionRecordTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeResolutionRecordType")]],
     ["disputeResolutionReason", ["DisputeResolutionReasonCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeResolutionReason")]],
     ["resolutionTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ResolutionTime")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :disputeResolutionRecordType
   attr_accessor :disputeResolutionReason
@@ -13503,7 +15302,8 @@ class DisputeType
     ["disputeMessage", ["DisputeMessageType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeMessage")]],
     ["escalation", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Escalation")]],
     ["purchaseProtection", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PurchaseProtection")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :disputeID
   attr_accessor :disputeRecordType
@@ -13563,7 +15363,8 @@ class DistanceType
   @@schema_element = [
     ["distanceMeasurement", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DistanceMeasurement")]],
     ["distanceUnit", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DistanceUnit")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :distanceMeasurement
   attr_accessor :distanceUnit
@@ -13580,6 +15381,25 @@ class DistanceType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}DutchBINEnabledDefinitionType
+class DutchBINEnabledDefinitionType
+  @@schema_type = "DutchBINEnabledDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}EndOfAuctionEmailPreferencesType
 class EndOfAuctionEmailPreferencesType
   @@schema_type = "EndOfAuctionEmailPreferencesType"
@@ -13592,7 +15412,8 @@ class EndOfAuctionEmailPreferencesType
     ["textCustomized", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TextCustomized")]],
     ["logoCustomized", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LogoCustomized")]],
     ["copyEmail", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CopyEmail")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :templateText
   attr_accessor :logoURL
@@ -13625,7 +15446,8 @@ class ExpansionArrayType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["expansionItem", ["SearchResultItemType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpansionItem")]],
-    ["totalAvailable", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalAvailable")]]]
+    ["totalAvailable", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalAvailable")]]
+  ]
 
   attr_accessor :expansionItem
   attr_accessor :totalAvailable
@@ -13642,7 +15464,8 @@ class ExtendedProductFinderIDType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["productFinderID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductFinderID")]],
-    ["productFinderBuySide", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductFinderBuySide")]]]
+    ["productFinderBuySide", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductFinderBuySide")]]
+  ]
 
   attr_accessor :productFinderID
   attr_accessor :productFinderBuySide
@@ -13655,9 +15478,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}ExternalAlertIDArrayType
 class ExternalAlertIDArrayType < ::Array
-  @@schema_type = "string"
-  @@schema_ns = "http://www.w3.org/2001/XMLSchema"
-  @@schema_element = [["ExternalAlertID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExternalAlertID")]]]
+  @@schema_element = [
+    ["ExternalAlertID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExternalAlertID")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ExternalProductIDType
@@ -13668,7 +15491,8 @@ class ExternalProductIDType
     ["value", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Value")]],
     ["returnSearchResultOnDuplicates", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReturnSearchResultOnDuplicates")]],
     ["type", ["ExternalProductCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Type")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :value
   attr_accessor :returnSearchResultOnDuplicates
@@ -13696,7 +15520,8 @@ class ExternalTransactionType
     ["externalTransactionTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExternalTransactionTime")]],
     ["feeOrCreditAmount", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeeOrCreditAmount")]],
     ["paymentOrRefundAmount", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentOrRefundAmount")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :externalTransactionID
   attr_accessor :externalTransactionTime
@@ -13725,24 +15550,55 @@ class FeatureDefinitionsType
     ["listingDurations", ["ListingDurationDefinitionsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingDurations")]],
     ["shippingTermsRequired", ["ShippingTermRequiredDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingTermsRequired")]],
     ["bestOfferEnabled", ["BestOfferEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferEnabled")]],
+    ["dutchBINEnabled", ["DutchBINEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DutchBINEnabled")]],
+    ["userConsentRequired", ["UserConsentRequiredDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserConsentRequired")]],
     ["homePageFeaturedEnabled", ["HomePageFeaturedEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HomePageFeaturedEnabled")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["proPackEnabled", ["ProPackEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProPackEnabled")]],
+    ["basicUpgradePackEnabled", ["BasicUpgradePackEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BasicUpgradePackEnabled")]],
+    ["valuePackEnabled", ["ValuePackEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ValuePackEnabled")]],
+    ["proPackPlusEnabled", ["ProPackPlusEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProPackPlusEnabled")]],
+    ["adFormatEnabled", ["AdFormatEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AdFormatEnabled")]],
+    ["digitalDeliveryEnabled", ["DigitalDeliveryEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DigitalDeliveryEnabled")]],
+    ["bestOfferCounterEnabled", ["BestOfferCounterEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferCounterEnabled")]],
+    ["bestOfferAutoDeclineEnabled", ["BestOfferAutoDeclineEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferAutoDeclineEnabled")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :listingDurations
   attr_accessor :shippingTermsRequired
   attr_accessor :bestOfferEnabled
+  attr_accessor :dutchBINEnabled
+  attr_accessor :userConsentRequired
   attr_accessor :homePageFeaturedEnabled
+  attr_accessor :proPackEnabled
+  attr_accessor :basicUpgradePackEnabled
+  attr_accessor :valuePackEnabled
+  attr_accessor :proPackPlusEnabled
+  attr_accessor :adFormatEnabled
+  attr_accessor :digitalDeliveryEnabled
+  attr_accessor :bestOfferCounterEnabled
+  attr_accessor :bestOfferAutoDeclineEnabled
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(listingDurations = nil, shippingTermsRequired = nil, bestOfferEnabled = nil, homePageFeaturedEnabled = nil)
+  def initialize(listingDurations = nil, shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil)
     @listingDurations = listingDurations
     @shippingTermsRequired = shippingTermsRequired
     @bestOfferEnabled = bestOfferEnabled
+    @dutchBINEnabled = dutchBINEnabled
+    @userConsentRequired = userConsentRequired
     @homePageFeaturedEnabled = homePageFeaturedEnabled
+    @proPackEnabled = proPackEnabled
+    @basicUpgradePackEnabled = basicUpgradePackEnabled
+    @valuePackEnabled = valuePackEnabled
+    @proPackPlusEnabled = proPackPlusEnabled
+    @adFormatEnabled = adFormatEnabled
+    @digitalDeliveryEnabled = digitalDeliveryEnabled
+    @bestOfferCounterEnabled = bestOfferCounterEnabled
+    @bestOfferAutoDeclineEnabled = bestOfferAutoDeclineEnabled
     @__xmlele_any = nil
   end
 end
@@ -13754,7 +15610,8 @@ class FeeType
   @@schema_element = [
     ["name", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Name")]],
     ["fee", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Fee")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :name
   attr_accessor :fee
@@ -13773,9 +15630,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}FeedbackDetailArrayType
 class FeedbackDetailArrayType < ::Array
-  @@schema_type = "FeedbackDetailType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["FeedbackDetail", ["FeedbackDetailType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackDetail")]]]
+  @@schema_element = [
+    ["FeedbackDetail", ["FeedbackDetailType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackDetail")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}FeedbackDetailType
@@ -13799,7 +15656,8 @@ class FeedbackDetailType
     ["commentReplaced", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CommentReplaced")]],
     ["responseReplaced", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ResponseReplaced")]],
     ["followUpReplaced", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FollowUpReplaced")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :commentingUser
   attr_accessor :commentingUserScore
@@ -13852,7 +15710,8 @@ class FeedbackInfoType
     ["commentText", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CommentText")]],
     ["commentType", ["CommentTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CommentType")]],
     ["targetUser", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TargetUser")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :commentText
   attr_accessor :commentType
@@ -13873,9 +15732,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}FeedbackPeriodArrayType
 class FeedbackPeriodArrayType < ::Array
-  @@schema_type = "FeedbackPeriodType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["FeedbackPeriod", ["FeedbackPeriodType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackPeriod")]]]
+  @@schema_element = [
+    ["FeedbackPeriod", ["FeedbackPeriodType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackPeriod")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}FeedbackPeriodType
@@ -13885,7 +15744,8 @@ class FeedbackPeriodType
   @@schema_element = [
     ["periodInDays", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PeriodInDays")]],
     ["count", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Count")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :periodInDays
   attr_accessor :count
@@ -13915,7 +15775,8 @@ class FeedbackSummaryType
     ["neutralCommentCountFromSuspendedUsers", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NeutralCommentCountFromSuspendedUsers")]],
     ["uniqueNegativeFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UniqueNegativeFeedbackCount")]],
     ["uniquePositiveFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UniquePositiveFeedbackCount")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :bidRetractionFeedbackPeriodArray
   attr_accessor :negativeFeedbackPeriodArray
@@ -13946,16 +15807,16 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}FeesType
 class FeesType < ::Array
-  @@schema_type = "FeeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["Fee", ["FeeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Fee")]]]
+  @@schema_element = [
+    ["Fee", ["FeeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Fee")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}FinanceOfferArrayType
 class FinanceOfferArrayType < ::Array
-  @@schema_type = "FinanceOfferType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["FinanceOffer", ["FinanceOfferType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FinanceOffer")]]]
+  @@schema_element = [
+    ["FinanceOffer", ["FinanceOfferType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FinanceOffer")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}FinanceOfferType
@@ -13971,7 +15832,8 @@ class FinanceOfferType
     ["minimumAmount", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinimumAmount")]],
     ["rateFactor", ["SOAP::SOAPDouble", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RateFactor")]],
     ["priority", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Priority")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :financeOfferID
   attr_accessor :buyerTerms
@@ -14007,7 +15869,8 @@ class FlatRateInsuranceRangeCostType
   @@schema_element = [
     ["flatRateInsuranceRange", ["FlatRateInsuranceRangeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FlatRateInsuranceRange")]],
     ["insuranceCost", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InsuranceCost")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :flatRateInsuranceRange
   attr_accessor :insuranceCost
@@ -14034,7 +15897,8 @@ class FlatShippingPreferencesType
     ["flatRateInsuranceRangeCost", ["FlatRateInsuranceRangeCostType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FlatRateInsuranceRangeCost")]],
     ["flatShippingRateOption", ["FlatShippingRateOptionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FlatShippingRateOption")]],
     ["insuranceOption", ["InsuranceOptionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InsuranceOption")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :amountPerAdditionalItem
   attr_accessor :deductionAmountPerAdditionalItem
@@ -14069,7 +15933,9 @@ class GetRecommendationsRequestContainerType
     ["recommendationEngine", ["RecommendationEngineCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecommendationEngine")]],
     ["query", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Query")]],
     ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["deletedField", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DeletedField")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :listingFlow
   attr_accessor :item
@@ -14078,13 +15944,14 @@ class GetRecommendationsRequestContainerType
   attr_accessor :recommendationEngine
   attr_accessor :query
   attr_accessor :correlationID
+  attr_accessor :deletedField
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(listingFlow = nil, item = nil, externalProductID = nil, modifiedFields = [], recommendationEngine = [], query = nil, correlationID = nil)
+  def initialize(listingFlow = nil, item = nil, externalProductID = nil, modifiedFields = [], recommendationEngine = [], query = nil, correlationID = nil, deletedField = [])
     @listingFlow = listingFlow
     @item = item
     @externalProductID = externalProductID
@@ -14092,6 +15959,7 @@ class GetRecommendationsRequestContainerType
     @recommendationEngine = recommendationEngine
     @query = query
     @correlationID = correlationID
+    @deletedField = deletedField
     @__xmlele_any = nil
   end
 end
@@ -14107,7 +15975,8 @@ class GetRecommendationsResponseContainerType
     ["attributeRecommendations", ["AttributeRecommendationsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeRecommendations")]],
     ["productRecommendations", ["ProductRecommendationsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductRecommendations")]],
     ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :listingAnalyzerRecommendations
   attr_accessor :sIFFTASRecommendations
@@ -14137,7 +16006,8 @@ class HomePageFeaturedEnabledDefinitionType
   @@schema_type = "HomePageFeaturedEnabledDefinitionType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_reader :__xmlele_any
 
@@ -14160,7 +16030,8 @@ class InternationalShippingServiceOptionsType
     ["shippingServiceAdditionalCost", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingServiceAdditionalCost")]],
     ["shippingServicePriority", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingServicePriority")]],
     ["shipToLocation", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShipToLocation")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :shippingService
   attr_accessor :shippingServiceCost
@@ -14185,9 +16056,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}ItemArrayType
 class ItemArrayType < ::Array
-  @@schema_type = "ItemType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["Item", ["ItemType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]]]
+  @@schema_element = [
+    ["Item", ["ItemType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ItemListCustomizationType
@@ -14201,7 +16072,8 @@ class ItemListCustomizationType
     ["durationInDays", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DurationInDays")]],
     ["includeNotes", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeNotes")]],
     ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :include
   attr_accessor :listingType
@@ -14228,9 +16100,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}ItemTransactionIDArrayType
 class ItemTransactionIDArrayType < ::Array
-  @@schema_type = "ItemTransactionIDType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["ItemTransactionID", ["ItemTransactionIDType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemTransactionID")]]]
+  @@schema_element = [
+    ["ItemTransactionID", ["ItemTransactionIDType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemTransactionID")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ItemTransactionIDType
@@ -14240,7 +16112,8 @@ class ItemTransactionIDType
   @@schema_element = [
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["transactionID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :itemID
   attr_accessor :transactionID
@@ -14280,7 +16153,6 @@ class ItemType
     ["currency", ["CurrencyCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Currency")]],
     ["description", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Description")]],
     ["distance", ["DistanceType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Distance")]],
-    ["escrow", ["EscrowCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Escrow")]],
     ["financeOfferID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FinanceOfferID")]],
     ["giftIcon", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GiftIcon")]],
     ["giftServices", ["GiftServicesCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GiftServices")]],
@@ -14330,6 +16202,7 @@ class ItemType
     ["vendorHostedPicture", ["VendorHostedPictureType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "VendorHostedPicture")]],
     ["sellerVacationNote", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerVacationNote")]],
     ["watchCount", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WatchCount")]],
+    ["hitCount", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HitCount")]],
     ["buyerRequirements", ["BuyerRequirementsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BuyerRequirements")]],
     ["bestOfferDetails", ["BestOfferDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferDetails")]],
     ["anythingPoints", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AnythingPoints")]],
@@ -14344,12 +16217,18 @@ class ItemType
     ["questionCount", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "QuestionCount")]],
     ["relisted", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Relisted")]],
     ["quantityAvailable", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "QuantityAvailable")]],
+    ["sKU", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SKU")]],
     ["categoryBasedAttributesPrefill", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryBasedAttributesPrefill")]],
     ["searchDetails", ["SearchDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SearchDetails")]],
     ["postalCode", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PostalCode")]],
     ["shippingTermsInDescription", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingTermsInDescription")]],
+    ["externalProductID", ["ExternalProductIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExternalProductID")]],
     ["sellerInventoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerInventoryID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["pictureDetails", ["PictureDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PictureDetails")]],
+    ["digitalDeliveryDetails", ["DigitalDeliveryDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DigitalDeliveryDetails")]],
+    ["dispatchTimeMax", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DispatchTimeMax")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :applicationData
   attr_accessor :attributeSetArray
@@ -14369,7 +16248,6 @@ class ItemType
   attr_accessor :currency
   attr_accessor :description
   attr_accessor :distance
-  attr_accessor :escrow
   attr_accessor :financeOfferID
   attr_accessor :giftIcon
   attr_accessor :giftServices
@@ -14419,6 +16297,7 @@ class ItemType
   attr_accessor :vendorHostedPicture
   attr_accessor :sellerVacationNote
   attr_accessor :watchCount
+  attr_accessor :hitCount
   attr_accessor :buyerRequirements
   attr_accessor :bestOfferDetails
   attr_accessor :anythingPoints
@@ -14433,18 +16312,23 @@ class ItemType
   attr_accessor :questionCount
   attr_accessor :relisted
   attr_accessor :quantityAvailable
+  attr_accessor :sKU
   attr_accessor :categoryBasedAttributesPrefill
   attr_accessor :searchDetails
   attr_accessor :postalCode
   attr_accessor :shippingTermsInDescription
+  attr_accessor :externalProductID
   attr_accessor :sellerInventoryID
+  attr_accessor :pictureDetails
+  attr_accessor :digitalDeliveryDetails
+  attr_accessor :dispatchTimeMax
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(applicationData = nil, attributeSetArray = nil, attributeArray = nil, lookupAttributeArray = nil, applyShippingDiscount = nil, autoPay = nil, paymentDetails = nil, biddingDetails = nil, motorsGermanySearchable = nil, buyerProtection = nil, buyItNowPrice = nil, categoryMappingAllowed = nil, charity = nil, country = nil, crossPromotion = nil, currency = nil, description = nil, distance = nil, escrow = nil, financeOfferID = nil, giftIcon = nil, giftServices = [], hitCounter = nil, itemID = nil, listingDetails = nil, listingDesigner = nil, listingDuration = nil, listingEnhancement = [], listingType = nil, location = nil, lotSize = nil, nowAndNew = nil, partnerCode = nil, partnerName = nil, paymentMethods = [], payPalEmailAddress = nil, primaryCategory = nil, privateListing = nil, productListingDetails = nil, proximitySearchDetails = nil, quantity = nil, privateNotes = nil, regionID = nil, relistLink = nil, reservePrice = nil, reviseStatus = nil, scheduleTime = nil, secondaryCategory = nil, freeAddedCategory = nil, siteHostedPicture = nil, seller = nil, sellingStatus = nil, shippingOption = nil, shippingDetails = nil, shippingRegions = [], shippingTerms = nil, shipToLocations = [], site = nil, startPrice = nil, storefront = nil, subTitle = nil, timeLeft = nil, title = nil, uUID = nil, vATDetails = nil, vendorHostedPicture = nil, sellerVacationNote = nil, watchCount = nil, buyerRequirements = nil, bestOfferDetails = nil, anythingPoints = nil, liveAuctionDetails = nil, locationDefaulted = nil, thirdPartyCheckout = nil, useTaxTable = nil, getItFast = nil, buyerResponsibleForShipping = nil, limitedWarrantyEligible = nil, eBayNotes = nil, questionCount = nil, relisted = nil, quantityAvailable = nil, categoryBasedAttributesPrefill = nil, searchDetails = nil, postalCode = nil, shippingTermsInDescription = nil, sellerInventoryID = nil)
+  def initialize(applicationData = nil, attributeSetArray = nil, attributeArray = nil, lookupAttributeArray = nil, applyShippingDiscount = nil, autoPay = nil, paymentDetails = nil, biddingDetails = nil, motorsGermanySearchable = nil, buyerProtection = nil, buyItNowPrice = nil, categoryMappingAllowed = nil, charity = nil, country = nil, crossPromotion = nil, currency = nil, description = nil, distance = nil, financeOfferID = nil, giftIcon = nil, giftServices = [], hitCounter = nil, itemID = nil, listingDetails = nil, listingDesigner = nil, listingDuration = nil, listingEnhancement = [], listingType = nil, location = nil, lotSize = nil, nowAndNew = nil, partnerCode = nil, partnerName = nil, paymentMethods = [], payPalEmailAddress = nil, primaryCategory = nil, privateListing = nil, productListingDetails = nil, proximitySearchDetails = nil, quantity = nil, privateNotes = nil, regionID = nil, relistLink = nil, reservePrice = nil, reviseStatus = nil, scheduleTime = nil, secondaryCategory = nil, freeAddedCategory = nil, siteHostedPicture = nil, seller = nil, sellingStatus = nil, shippingOption = nil, shippingDetails = nil, shippingRegions = [], shippingTerms = nil, shipToLocations = [], site = nil, startPrice = nil, storefront = nil, subTitle = nil, timeLeft = nil, title = nil, uUID = nil, vATDetails = nil, vendorHostedPicture = nil, sellerVacationNote = nil, watchCount = nil, hitCount = nil, buyerRequirements = nil, bestOfferDetails = nil, anythingPoints = nil, liveAuctionDetails = nil, locationDefaulted = nil, thirdPartyCheckout = nil, useTaxTable = nil, getItFast = nil, buyerResponsibleForShipping = nil, limitedWarrantyEligible = nil, eBayNotes = nil, questionCount = nil, relisted = nil, quantityAvailable = nil, sKU = nil, categoryBasedAttributesPrefill = nil, searchDetails = nil, postalCode = nil, shippingTermsInDescription = nil, externalProductID = nil, sellerInventoryID = nil, pictureDetails = nil, digitalDeliveryDetails = nil, dispatchTimeMax = nil)
     @applicationData = applicationData
     @attributeSetArray = attributeSetArray
     @attributeArray = attributeArray
@@ -14463,7 +16347,6 @@ class ItemType
     @currency = currency
     @description = description
     @distance = distance
-    @escrow = escrow
     @financeOfferID = financeOfferID
     @giftIcon = giftIcon
     @giftServices = giftServices
@@ -14513,6 +16396,7 @@ class ItemType
     @vendorHostedPicture = vendorHostedPicture
     @sellerVacationNote = sellerVacationNote
     @watchCount = watchCount
+    @hitCount = hitCount
     @buyerRequirements = buyerRequirements
     @bestOfferDetails = bestOfferDetails
     @anythingPoints = anythingPoints
@@ -14527,11 +16411,16 @@ class ItemType
     @questionCount = questionCount
     @relisted = relisted
     @quantityAvailable = quantityAvailable
+    @sKU = sKU
     @categoryBasedAttributesPrefill = categoryBasedAttributesPrefill
     @searchDetails = searchDetails
     @postalCode = postalCode
     @shippingTermsInDescription = shippingTermsInDescription
+    @externalProductID = externalProductID
     @sellerInventoryID = sellerInventoryID
+    @pictureDetails = pictureDetails
+    @digitalDeliveryDetails = digitalDeliveryDetails
+    @dispatchTimeMax = dispatchTimeMax
     @__xmlele_any = nil
   end
 end
@@ -14540,10 +16429,13 @@ end
 class LabelType
   @@schema_type = "LabelType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_attribute = {XSD::QName.new(nil, "visible") => "SOAP::SOAPBoolean"}
+  @@schema_attribute = {
+    XSD::QName.new(nil, "visible") => "SOAP::SOAPBoolean"
+  }
   @@schema_element = [
     ["name", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Name")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :name
   attr_reader :__xmlele_any
@@ -14573,7 +16465,8 @@ class ListingAnalyzerRecommendationsType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["listingTipArray", ["ListingTipArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingTipArray")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :listingTipArray
   attr_reader :__xmlele_any
@@ -14596,7 +16489,8 @@ class ListingDesignerType
     ["layoutID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LayoutID")]],
     ["optimalPictureSize", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "OptimalPictureSize")]],
     ["themeID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ThemeID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :layoutID
   attr_accessor :optimalPictureSize
@@ -14637,7 +16531,10 @@ class ListingDetailsType
     ["hasPublicMessages", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HasPublicMessages")]],
     ["buyItNowAvailable", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BuyItNowAvailable")]],
     ["sellerBusinessType", ["SellerBusinessCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerBusinessType")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["minimumBestOfferPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinimumBestOfferPrice")]],
+    ["minimumBestOfferMessage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinimumBestOfferMessage")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :adult
   attr_accessor :bindingAuction
@@ -14656,13 +16553,15 @@ class ListingDetailsType
   attr_accessor :hasPublicMessages
   attr_accessor :buyItNowAvailable
   attr_accessor :sellerBusinessType
+  attr_accessor :minimumBestOfferPrice
+  attr_accessor :minimumBestOfferMessage
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(adult = nil, bindingAuction = nil, checkoutEnabled = nil, convertedBuyItNowPrice = nil, convertedStartPrice = nil, convertedReservePrice = nil, hasReservePrice = nil, regionName = nil, relistedItemID = nil, secondChanceOriginalItemID = nil, startTime = nil, endTime = nil, viewItemURL = nil, hasUnansweredQuestions = nil, hasPublicMessages = nil, buyItNowAvailable = nil, sellerBusinessType = nil)
+  def initialize(adult = nil, bindingAuction = nil, checkoutEnabled = nil, convertedBuyItNowPrice = nil, convertedStartPrice = nil, convertedReservePrice = nil, hasReservePrice = nil, regionName = nil, relistedItemID = nil, secondChanceOriginalItemID = nil, startTime = nil, endTime = nil, viewItemURL = nil, hasUnansweredQuestions = nil, hasPublicMessages = nil, buyItNowAvailable = nil, sellerBusinessType = nil, minimumBestOfferPrice = nil, minimumBestOfferMessage = nil)
     @adult = adult
     @bindingAuction = bindingAuction
     @checkoutEnabled = checkoutEnabled
@@ -14680,6 +16579,8 @@ class ListingDetailsType
     @hasPublicMessages = hasPublicMessages
     @buyItNowAvailable = buyItNowAvailable
     @sellerBusinessType = sellerBusinessType
+    @minimumBestOfferPrice = minimumBestOfferPrice
+    @minimumBestOfferMessage = minimumBestOfferMessage
     @__xmlele_any = nil
   end
 end
@@ -14688,10 +16589,13 @@ end
 class ListingDurationDefinitionType
   @@schema_type = "ListingDurationDefinitionType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_attribute = {XSD::QName.new(nil, "durationSetID") => "SOAP::SOAPInt"}
+  @@schema_attribute = {
+    XSD::QName.new(nil, "durationSetID") => "SOAP::SOAPInt"
+  }
   @@schema_element = [
     ["duration", ["ListingDurationCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Duration")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :duration
   attr_reader :__xmlele_any
@@ -14719,9 +16623,12 @@ end
 class ListingDurationDefinitionsType
   @@schema_type = "ListingDurationDefinitionsType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_attribute = {XSD::QName.new(nil, "Version") => "SOAP::SOAPInt"}
+  @@schema_attribute = {
+    XSD::QName.new(nil, "Version") => "SOAP::SOAPInt"
+  }
   @@schema_element = [
-    ["listingDuration", ["ListingDurationDefinitionType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingDuration")]]]
+    ["listingDuration", ["ListingDurationDefinitionType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingDuration")]]
+  ]
 
   attr_accessor :listingDuration
 
@@ -14740,8 +16647,11 @@ class ListingDurationDefinitionsType
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ListingDurationReferenceType
-class ListingDurationReferenceType < Integer
-  @@schema_attribute = {XSD::QName.new(nil, "type") => nil}
+#   contains SOAP::SOAPInt
+class ListingDurationReferenceType < ::String
+  @@schema_attribute = {
+    XSD::QName.new(nil, "type") => nil
+  }
 
   def xmlattr_type
     (@__xmlattr ||= {})[XSD::QName.new(nil, "type")]
@@ -14759,9 +16669,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}ListingTipArrayType
 class ListingTipArrayType < ::Array
-  @@schema_type = "ListingTipType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["ListingTip", ["ListingTipType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingTip")]]]
+  @@schema_element = [
+    ["ListingTip", ["ListingTipType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingTip")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ListingTipFieldType
@@ -14773,7 +16683,8 @@ class ListingTipFieldType
     ["fieldTip", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FieldTip")]],
     ["currentFieldText", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CurrentFieldText")]],
     ["currentFieldValue", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CurrentFieldValue")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :listingTipFieldID
   attr_accessor :fieldTip
@@ -14803,7 +16714,8 @@ class ListingTipMessageType
     ["shortMessage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShortMessage")]],
     ["longMessage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LongMessage")]],
     ["helpURLPath", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HelpURLPath")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :listingTipMessageID
   attr_accessor :shortMessage
@@ -14833,7 +16745,8 @@ class ListingTipType
     ["priority", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Priority")]],
     ["message", ["ListingTipMessageType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
     ["field", ["ListingTipFieldType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Field")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :listingTipID
   attr_accessor :priority
@@ -14854,6 +16767,69 @@ class ListingTipType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}LiveAuctionApprovalStatusArrayType
+class LiveAuctionApprovalStatusArrayType < ::Array
+  @@schema_element = [
+    ["LiveAuctionStatus", ["LiveAuctionApprovalStatusType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LiveAuctionStatus")]]
+  ]
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LiveAuctionApprovalStatusType
+class LiveAuctionApprovalStatusType
+  @@schema_type = "LiveAuctionApprovalStatusType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["userID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserID")]],
+    ["status", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Status")]]
+  ]
+
+  attr_accessor :userID
+  attr_accessor :status
+
+  def initialize(userID = nil, status = nil)
+    @userID = userID
+    @status = status
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LiveAuctionBidArrayType
+class LiveAuctionBidArrayType < ::Array
+  @@schema_element = [
+    ["LiveAuctionBid", ["LiveAuctionBidType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LiveAuctionBid")]]
+  ]
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LiveAuctionBidType
+class LiveAuctionBidType
+  @@schema_type = "LiveAuctionBidType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["requestedBiddingLimit", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RequestedBiddingLimit")]],
+    ["bidderStatus", ["BidderStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BidderStatus")]],
+    ["approvedBiddingLimit", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ApprovedBiddingLimit")]],
+    ["declinedComment", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DeclinedComment")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :requestedBiddingLimit
+  attr_accessor :bidderStatus
+  attr_accessor :approvedBiddingLimit
+  attr_accessor :declinedComment
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(requestedBiddingLimit = nil, bidderStatus = nil, approvedBiddingLimit = nil, declinedComment = nil)
+    @requestedBiddingLimit = requestedBiddingLimit
+    @bidderStatus = bidderStatus
+    @approvedBiddingLimit = approvedBiddingLimit
+    @declinedComment = declinedComment
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}LiveAuctionCatalogType
 class LiveAuctionCatalogType
   @@schema_type = "LiveAuctionCatalogType"
@@ -14862,7 +16838,8 @@ class LiveAuctionCatalogType
     ["userCatalogID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserCatalogID")]],
     ["catalogName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CatalogName")]],
     ["schedule", ["ScheduleType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Schedule")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :userCatalogID
   attr_accessor :catalogName
@@ -14891,7 +16868,8 @@ class LiveAuctionDetailsType
     ["lotNumber", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LotNumber")]],
     ["highEstimate", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HighEstimate")]],
     ["lowEstimate", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LowEstimate")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :userCatalogID
   attr_accessor :scheduleID
@@ -14916,9 +16894,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}LookupAttributeArrayType
 class LookupAttributeArrayType < ::Array
-  @@schema_type = "LookupAttributeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["LookupAttribute", ["LookupAttributeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LookupAttribute")]]]
+  @@schema_element = [
+    ["LookupAttribute", ["LookupAttributeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LookupAttribute")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}LookupAttributeType
@@ -14928,7 +16906,8 @@ class LookupAttributeType
   @@schema_element = [
     ["name", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Name")]],
     ["value", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Value")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :name
   attr_accessor :value
@@ -14945,11 +16924,46 @@ class LookupAttributeType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}MarkUpMarkDownEventType
+class MarkUpMarkDownEventType
+  @@schema_type = "MarkUpMarkDownEventType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["type", ["MarkUpMarkDownEventTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Type")]],
+    ["time", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Time")]],
+    ["reason", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Reason")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :type
+  attr_accessor :time
+  attr_accessor :reason
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(type = nil, time = nil, reason = nil)
+    @type = type
+    @time = time
+    @reason = reason
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}MarkUpMarkDownHistoryType
+class MarkUpMarkDownHistoryType < ::Array
+  @@schema_element = [
+    ["MarkUpMarkDownEvent", ["MarkUpMarkDownEventType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MarkUpMarkDownEvent")]]
+  ]
+end
+
 # {urn:ebay:apis:eBLBaseComponents}MemberMessageExchangeArrayType
 class MemberMessageExchangeArrayType < ::Array
-  @@schema_type = "MemberMessageExchangeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["MemberMessageExchange", ["MemberMessageExchangeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MemberMessageExchange")]]]
+  @@schema_element = [
+    ["MemberMessageExchange", ["MemberMessageExchangeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MemberMessageExchange")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}MemberMessageExchangeType
@@ -14963,7 +16977,8 @@ class MemberMessageExchangeType
     ["messageStatus", ["MessageStatusTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageStatus")]],
     ["creationDate", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CreationDate")]],
     ["lastModifiedDate", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LastModifiedDate")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :item
   attr_accessor :question
@@ -15005,7 +17020,8 @@ class MemberMessageType
     ["body", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Body")]],
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["parentMessageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ParentMessageID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :messageType
   attr_accessor :questionType
@@ -15049,7 +17065,8 @@ class ModifiedFieldType
   @@schema_element = [
     ["field", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Field")]],
     ["modifyType", ["ModifyCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModifyType")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :field
   attr_accessor :modifyType
@@ -15068,16 +17085,16 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}MyMessagesAlertArrayType
 class MyMessagesAlertArrayType < ::Array
-  @@schema_type = "MyMessagesAlertType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["Alert", ["MyMessagesAlertType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Alert")]]]
+  @@schema_element = [
+    ["Alert", ["MyMessagesAlertType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Alert")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}MyMessagesAlertIDArrayType
 class MyMessagesAlertIDArrayType < ::Array
-  @@schema_type = "MyMessagesAlertIDType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["AlertID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AlertID")]]]
+  @@schema_element = [
+    ["AlertID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AlertID")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}MyMessagesAlertType
@@ -15106,7 +17123,8 @@ class MyMessagesAlertType
     ["responseDetails", ["MyMessagesResponseDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ResponseDetails")]],
     ["forwardDetails", ["MyMessagesForwardDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ForwardDetails")]],
     ["folder", ["MyMessagesFolderType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Folder")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :sender
   attr_accessor :recipientUserID
@@ -15172,7 +17190,8 @@ class MyMessagesFolderSummaryType
     ["newMessageCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NewMessageCount")]],
     ["totalAlertCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalAlertCount")]],
     ["totalMessageCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalMessageCount")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :folderID
   attr_accessor :folderName
@@ -15204,7 +17223,8 @@ class MyMessagesFolderType
   @@schema_element = [
     ["folderID", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FolderID")]],
     ["folderName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FolderName")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :folderID
   attr_accessor :folderName
@@ -15228,7 +17248,8 @@ class MyMessagesForwardDetailsType
   @@schema_element = [
     ["userForwardDate", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserForwardDate")]],
     ["forwardMessageEncoding", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ForwardMessageEncoding")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :userForwardDate
   attr_accessor :forwardMessageEncoding
@@ -15247,16 +17268,16 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}MyMessagesMessageArrayType
 class MyMessagesMessageArrayType < ::Array
-  @@schema_type = "MyMessagesMessageType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["Message", ["MyMessagesMessageType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]]]
+  @@schema_element = [
+    ["Message", ["MyMessagesMessageType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}MyMessagesMessageIDArrayType
 class MyMessagesMessageIDArrayType < ::Array
-  @@schema_type = "MyMessagesMessageIDType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["MessageID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]]]
+  @@schema_element = [
+    ["MessageID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}MyMessagesMessageType
@@ -15266,6 +17287,7 @@ class MyMessagesMessageType
   @@schema_element = [
     ["sender", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Sender")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["sendToName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SendToName")]],
     ["subject", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Subject")]],
     ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
     ["externalMessageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExternalMessageID")]],
@@ -15280,10 +17302,12 @@ class MyMessagesMessageType
     ["responseDetails", ["MyMessagesResponseDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ResponseDetails")]],
     ["forwardDetails", ["MyMessagesForwardDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ForwardDetails")]],
     ["folder", ["MyMessagesFolderType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Folder")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :sender
   attr_accessor :recipientUserID
+  attr_accessor :sendToName
   attr_accessor :subject
   attr_accessor :messageID
   attr_accessor :externalMessageID
@@ -15304,9 +17328,10 @@ class MyMessagesMessageType
     @__xmlele_any = elements
   end
 
-  def initialize(sender = nil, recipientUserID = nil, subject = nil, messageID = nil, externalMessageID = nil, contentType = nil, text = nil, flagged = nil, read = nil, creationDate = nil, receiveDate = nil, expirationDate = nil, itemID = nil, responseDetails = nil, forwardDetails = nil, folder = nil)
+  def initialize(sender = nil, recipientUserID = nil, sendToName = nil, subject = nil, messageID = nil, externalMessageID = nil, contentType = nil, text = nil, flagged = nil, read = nil, creationDate = nil, receiveDate = nil, expirationDate = nil, itemID = nil, responseDetails = nil, forwardDetails = nil, folder = nil)
     @sender = sender
     @recipientUserID = recipientUserID
+    @sendToName = sendToName
     @subject = subject
     @messageID = messageID
     @externalMessageID = externalMessageID
@@ -15330,10 +17355,13 @@ class MyMessagesResponseDetailsType
   @@schema_type = "MyMessagesResponseDetailsType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
+    ["responseEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ResponseEnabled")]],
     ["responseURL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ResponseURL")]],
     ["userResponseDate", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserResponseDate")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
+  attr_accessor :responseEnabled
   attr_accessor :responseURL
   attr_accessor :userResponseDate
   attr_reader :__xmlele_any
@@ -15342,7 +17370,8 @@ class MyMessagesResponseDetailsType
     @__xmlele_any = elements
   end
 
-  def initialize(responseURL = nil, userResponseDate = nil)
+  def initialize(responseEnabled = nil, responseURL = nil, userResponseDate = nil)
+    @responseEnabled = responseEnabled
     @responseURL = responseURL
     @userResponseDate = userResponseDate
     @__xmlele_any = nil
@@ -15360,7 +17389,8 @@ class MyMessagesSummaryType
     ["unresolvedAlertCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UnresolvedAlertCount")]],
     ["flaggedMessageCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FlaggedMessageCount")]],
     ["totalAlertCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalAlertCount")]],
-    ["totalMessageCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalMessageCount")]]]
+    ["totalMessageCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalMessageCount")]]
+  ]
 
   attr_accessor :folderSummary
   attr_accessor :newAlertCount
@@ -15388,7 +17418,8 @@ class MyeBayFavoriteSearchListType
   @@schema_element = [
     ["totalAvailable", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalAvailable")]],
     ["favoriteSearch", ["MyeBayFavoriteSearchType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FavoriteSearch")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :totalAvailable
   attr_accessor :favoriteSearch
@@ -15412,7 +17443,8 @@ class MyeBayFavoriteSearchType
   @@schema_element = [
     ["searchName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SearchName")]],
     ["searchQuery", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SearchQuery")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :searchName
   attr_accessor :searchQuery
@@ -15436,7 +17468,8 @@ class MyeBayFavoriteSellerListType
   @@schema_element = [
     ["totalAvailable", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalAvailable")]],
     ["favoriteSeller", ["MyeBayFavoriteSellerType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FavoriteSeller")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :totalAvailable
   attr_accessor :favoriteSeller
@@ -15460,7 +17493,8 @@ class MyeBayFavoriteSellerType
   @@schema_element = [
     ["userID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserID")]],
     ["storeName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoreName")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :userID
   attr_accessor :storeName
@@ -15484,7 +17518,8 @@ class MyeBaySecondChanceOfferListType
   @@schema_element = [
     ["totalAvailable", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalAvailable")]],
     ["secondChanceOffer", ["ItemType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SecondChanceOffer")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :totalAvailable
   attr_accessor :secondChanceOffer
@@ -15509,7 +17544,8 @@ class MyeBaySelectionType
     ["include", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Include")]],
     ["sort", ["SortOrderCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Sort")]],
     ["maxResults", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MaxResults")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :include
   attr_accessor :sort
@@ -15530,9 +17566,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}NameValueListArrayType
 class NameValueListArrayType < ::Array
-  @@schema_type = "NameValueListType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["NameValueList", ["NameValueListType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NameValueList")]]]
+  @@schema_element = [
+    ["NameValueList", ["NameValueListType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NameValueList")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}NameValueListType
@@ -15542,7 +17578,8 @@ class NameValueListType
   @@schema_element = [
     ["name", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Name")]],
     ["value", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Value")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :name
   attr_accessor :value
@@ -15559,11 +17596,64 @@ class NameValueListType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}NotificationDetailsArrayType
+class NotificationDetailsArrayType < ::Array
+  @@schema_element = [
+    ["NotificationDetails", ["NotificationDetailsType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationDetails")]]
+  ]
+end
+
+# {urn:ebay:apis:eBLBaseComponents}NotificationDetailsType
+class NotificationDetailsType
+  @@schema_type = "NotificationDetailsType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["deliveryURL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DeliveryURL")]],
+    ["referenceID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReferenceID")]],
+    ["expirationTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpirationTime")]],
+    ["type", ["NotificationEventTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Type")]],
+    ["retries", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Retries")]],
+    ["deliveryStatus", ["NotificationEventStateCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DeliveryStatus")]],
+    ["nextRetryTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NextRetryTime")]],
+    ["deliveryTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DeliveryTime")]],
+    ["errorMessage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorMessage")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :deliveryURL
+  attr_accessor :referenceID
+  attr_accessor :expirationTime
+  attr_accessor :type
+  attr_accessor :retries
+  attr_accessor :deliveryStatus
+  attr_accessor :nextRetryTime
+  attr_accessor :deliveryTime
+  attr_accessor :errorMessage
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(deliveryURL = nil, referenceID = nil, expirationTime = nil, type = nil, retries = nil, deliveryStatus = nil, nextRetryTime = nil, deliveryTime = nil, errorMessage = nil)
+    @deliveryURL = deliveryURL
+    @referenceID = referenceID
+    @expirationTime = expirationTime
+    @type = type
+    @retries = retries
+    @deliveryStatus = deliveryStatus
+    @nextRetryTime = nextRetryTime
+    @deliveryTime = deliveryTime
+    @errorMessage = errorMessage
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}NotificationEnableArrayType
 class NotificationEnableArrayType < ::Array
-  @@schema_type = "NotificationEnableType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["NotificationEnable", ["NotificationEnableType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEnable")]]]
+  @@schema_element = [
+    ["NotificationEnable", ["NotificationEnableType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEnable")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}NotificationEnableType
@@ -15573,7 +17663,8 @@ class NotificationEnableType
   @@schema_element = [
     ["eventType", ["NotificationEventTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EventType")]],
     ["eventEnable", ["EnableCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EventEnable")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :eventType
   attr_accessor :eventEnable
@@ -15590,11 +17681,156 @@ class NotificationEnableType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}NotificationEventPropertyType
+class NotificationEventPropertyType
+  @@schema_type = "NotificationEventPropertyType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["eventType", ["NotificationEventTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EventType")]],
+    ["name", ["NotificationEventPropertyNameCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Name")]],
+    ["value", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Value")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :eventType
+  attr_accessor :name
+  attr_accessor :value
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(eventType = nil, name = nil, value = nil)
+    @eventType = eventType
+    @name = name
+    @value = value
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}NotificationMessageResponseType
+class NotificationMessageResponseType
+  @@schema_type = "NotificationMessageResponseType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]],
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["errors", ["ErrorType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Errors")]],
+    ["message", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["build", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Build")]],
+    ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
+    ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
+    ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["messageBody", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageBody")]],
+    ["eIAS", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIAS")]]
+  ]
+
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_reader :__xmlele_any
+  attr_accessor :messageBody
+  attr_accessor :eIAS
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, messageBody = nil, eIAS = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @__xmlele_any = nil
+    @messageBody = messageBody
+    @eIAS = eIAS
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}NotificationStatisticsType
+class NotificationStatisticsType
+  @@schema_type = "NotificationStatisticsType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["deliveredCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DeliveredCount")]],
+    ["queuedNewCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "QueuedNewCount")]],
+    ["queuedPendingCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "QueuedPendingCount")]],
+    ["expiredCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpiredCount")]],
+    ["errorCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorCount")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :deliveredCount
+  attr_accessor :queuedNewCount
+  attr_accessor :queuedPendingCount
+  attr_accessor :expiredCount
+  attr_accessor :errorCount
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(deliveredCount = nil, queuedNewCount = nil, queuedPendingCount = nil, expiredCount = nil, errorCount = nil)
+    @deliveredCount = deliveredCount
+    @queuedNewCount = queuedNewCount
+    @queuedPendingCount = queuedPendingCount
+    @expiredCount = expiredCount
+    @errorCount = errorCount
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}NotificationUserDataType
+class NotificationUserDataType
+  @@schema_type = "NotificationUserDataType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["sMSPhone", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SMSPhone")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :sMSPhone
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(sMSPhone = nil)
+    @sMSPhone = sMSPhone
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}OfferArrayType
 class OfferArrayType < ::Array
-  @@schema_type = "OfferType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["Offer", ["OfferType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Offer")]]]
+  @@schema_element = [
+    ["Offer", ["OfferType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Offer")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}OfferType
@@ -15615,7 +17851,8 @@ class OfferType
     ["transactionID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionID")]],
     ["user", ["UserType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "User")]],
     ["userConsent", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserConsent")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :action
   attr_accessor :currency
@@ -15656,23 +17893,23 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}OrderArrayType
 class OrderArrayType < ::Array
-  @@schema_type = "OrderType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["Order", ["OrderType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Order")]]]
+  @@schema_element = [
+    ["Order", ["OrderType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Order")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}OrderIDArrayType
 class OrderIDArrayType < ::Array
-  @@schema_type = "OrderIDType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["OrderID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "OrderID")]]]
+  @@schema_element = [
+    ["OrderID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "OrderID")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}OrderTransactionArrayType
 class OrderTransactionArrayType < ::Array
-  @@schema_type = "OrderTransactionType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["OrderTransaction", ["OrderTransactionType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "OrderTransaction")]]]
+  @@schema_element = [
+    ["OrderTransaction", ["OrderTransactionType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "OrderTransaction")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}OrderTransactionType
@@ -15682,7 +17919,8 @@ class OrderTransactionType
   @@schema_element = [
     ["order", ["OrderType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Order")]],
     ["transaction", ["TransactionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Transaction")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :order
   attr_accessor :transaction
@@ -15722,7 +17960,8 @@ class OrderType
     ["total", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Total")]],
     ["externalTransaction", ["ExternalTransactionType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExternalTransaction")]],
     ["transactionArray", ["TransactionArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionArray")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :orderID
   attr_accessor :orderStatus
@@ -15777,7 +18016,8 @@ class PaginatedItemArrayType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["itemArray", ["ItemArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemArray")]],
-    ["paginationResult", ["PaginationResultType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaginationResult")]]]
+    ["paginationResult", ["PaginationResultType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaginationResult")]]
+  ]
 
   attr_accessor :itemArray
   attr_accessor :paginationResult
@@ -15794,7 +18034,8 @@ class PaginatedOrderTransactionArrayType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["orderTransactionArray", ["OrderTransactionArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "OrderTransactionArray")]],
-    ["paginationResult", ["PaginationResultType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaginationResult")]]]
+    ["paginationResult", ["PaginationResultType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaginationResult")]]
+  ]
 
   attr_accessor :orderTransactionArray
   attr_accessor :paginationResult
@@ -15811,7 +18052,8 @@ class PaginatedTransactionArrayType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["transactionArray", ["TransactionArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionArray")]],
-    ["paginationResult", ["PaginationResultType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaginationResult")]]]
+    ["paginationResult", ["PaginationResultType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaginationResult")]]
+  ]
 
   attr_accessor :transactionArray
   attr_accessor :paginationResult
@@ -15829,7 +18071,8 @@ class PaginationResultType
   @@schema_element = [
     ["totalNumberOfPages", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalNumberOfPages")]],
     ["totalNumberOfEntries", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalNumberOfEntries")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :totalNumberOfPages
   attr_accessor :totalNumberOfEntries
@@ -15853,7 +18096,8 @@ class PaginationType
   @@schema_element = [
     ["entriesPerPage", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EntriesPerPage")]],
     ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PageNumber")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :entriesPerPage
   attr_accessor :pageNumber
@@ -15877,7 +18121,8 @@ class PaymentDetailsType
   @@schema_element = [
     ["hoursToDeposit", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HoursToDeposit")]],
     ["daysToFullPayment", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DaysToFullPayment")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :hoursToDeposit
   attr_accessor :daysToFullPayment
@@ -15900,7 +18145,8 @@ class PaymentMeansType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["typeCodeID", ["SellerPaymentMethodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TypeCodeID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :typeCodeID
   attr_reader :__xmlele_any
@@ -15922,7 +18168,8 @@ class PaymentOptionDetailsType
   @@schema_element = [
     ["paymentOption", ["BuyerPaymentMethodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentOption")]],
     ["description", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Description")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :paymentOption
   attr_accessor :description
@@ -15945,7 +18192,8 @@ class PaymentType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["paymentMeans", ["PaymentMeansType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentMeans")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :paymentMeans
   attr_reader :__xmlele_any
@@ -15956,6 +18204,37 @@ class PaymentType
 
   def initialize(paymentMeans = nil)
     @paymentMeans = paymentMeans
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}PictureDetailsType
+class PictureDetailsType
+  @@schema_type = "PictureDetailsType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["galleryType", ["GalleryTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GalleryType")]],
+    ["galleryURL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GalleryURL")]],
+    ["photoDisplay", ["PhotoDisplayCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PhotoDisplay")]],
+    ["pictureURL", ["SOAP::SOAPAnyURI[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PictureURL")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :galleryType
+  attr_accessor :galleryURL
+  attr_accessor :photoDisplay
+  attr_accessor :pictureURL
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(galleryType = nil, galleryURL = nil, photoDisplay = nil, pictureURL = [])
+    @galleryType = galleryType
+    @galleryURL = galleryURL
+    @photoDisplay = photoDisplay
+    @pictureURL = pictureURL
     @__xmlele_any = nil
   end
 end
@@ -15972,7 +18251,8 @@ class PictureManagerDetailsType
     ["watermarkEPS", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WatermarkEPS")]],
     ["watermarkUserID", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WatermarkUserID")]],
     ["folder", ["PictureManagerFolderType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Folder")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :subscriptionLevel
   attr_accessor :storageUsed
@@ -16007,7 +18287,8 @@ class PictureManagerFolderType
     ["folderID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FolderID")]],
     ["name", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Name")]],
     ["picture", ["PictureManagerPictureType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Picture")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :folderID
   attr_accessor :name
@@ -16036,7 +18317,8 @@ class PictureManagerPictureDisplayType
     ["size", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Size")]],
     ["height", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Height")]],
     ["width", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Width")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :displayType
   attr_accessor :uRL
@@ -16068,7 +18350,8 @@ class PictureManagerPictureType
     ["name", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Name")]],
     ["date", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Date")]],
     ["displayFormat", ["PictureManagerPictureDisplayType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisplayFormat")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :pictureURL
   attr_accessor :name
@@ -16097,7 +18380,8 @@ class PictureManagerSubscriptionType
     ["subscriptionLevel", ["PictureManagerSubscriptionLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SubscriptionLevel")]],
     ["fee", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Fee")]],
     ["storageSize", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StorageSize")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :subscriptionLevel
   attr_accessor :fee
@@ -16123,7 +18407,8 @@ class PriceRangeFilterType
   @@schema_element = [
     ["maxPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MaxPrice")]],
     ["minPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinPrice")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :maxPrice
   attr_accessor :minPrice
@@ -16145,7 +18430,8 @@ class PricingRecommendationsType
   @@schema_type = "PricingRecommendationsType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
-    ["productInfo", ["ProductInfoType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductInfo")]]]
+    ["productInfo", ["ProductInfoType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductInfo")]]
+  ]
 
   attr_accessor :productInfo
 
@@ -16154,15 +18440,56 @@ class PricingRecommendationsType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}ProPackEnabledDefinitionType
+class ProPackEnabledDefinitionType
+  @@schema_type = "ProPackEnabledDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ProPackPlusEnabledDefinitionType
+class ProPackPlusEnabledDefinitionType
+  @@schema_type = "ProPackPlusEnabledDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}ProductFamilyType
 class ProductFamilyType
   @@schema_type = "ProductFamilyType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_attribute = {XSD::QName.new(nil, "hasMoreChildren") => "SOAP::SOAPBoolean"}
+  @@schema_attribute = {
+    XSD::QName.new(nil, "hasMoreChildren") => "SOAP::SOAPBoolean"
+  }
   @@schema_element = [
     ["parentProduct", ["ProductType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ParentProduct")]],
     ["familyMembers", ["ProductType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FamilyMembers")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :parentProduct
   attr_accessor :familyMembers
@@ -16195,7 +18522,8 @@ class ProductFinderConstraintType
   @@schema_element = [
     ["displayName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisplayName")]],
     ["displayValue", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisplayValue")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :displayName
   attr_accessor :displayValue
@@ -16216,11 +18544,14 @@ end
 class ProductInfoType
   @@schema_type = "ProductInfoType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_attribute = {XSD::QName.new(nil, "productInfoID") => "SOAP::SOAPString"}
+  @@schema_attribute = {
+    XSD::QName.new(nil, "productInfoID") => "SOAP::SOAPString"
+  }
   @@schema_element = [
     ["averageStartPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AverageStartPrice")]],
     ["averageSoldPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AverageSoldPrice")]],
-    ["title", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Title")]]]
+    ["title", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Title")]]
+  ]
 
   attr_accessor :averageStartPrice
   attr_accessor :averageSoldPrice
@@ -16253,7 +18584,8 @@ class ProductListingDetailsType
     ["useStockPhotoURLAsGallery", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UseStockPhotoURLAsGallery")]],
     ["stockPhotoURL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StockPhotoURL")]],
     ["copyright", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Copyright")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :productID
   attr_accessor :includeStockPhotoURL
@@ -16280,9 +18612,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}ProductRecommendationsType
 class ProductRecommendationsType < ::Array
-  @@schema_type = "ProductInfoType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["Product", ["ProductInfoType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Product")]]]
+  @@schema_element = [
+    ["Product", ["ProductInfoType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Product")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ProductSearchPageType
@@ -16294,23 +18626,27 @@ class ProductSearchPageType
     ["searchCharacteristicsSet", ["CharacteristicsSetType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SearchCharacteristicsSet")]],
     ["searchType", ["CharacteristicsSearchCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SearchType")]],
     ["sortCharacteristics", ["CharacteristicType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SortCharacteristics")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["dataElementSet", ["DataElementSetType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DataElementSet")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :dataElements
   attr_accessor :searchCharacteristicsSet
   attr_accessor :searchType
   attr_accessor :sortCharacteristics
+  attr_accessor :dataElementSet
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(dataElements = [], searchCharacteristicsSet = nil, searchType = nil, sortCharacteristics = [])
+  def initialize(dataElements = [], searchCharacteristicsSet = nil, searchType = nil, sortCharacteristics = [], dataElementSet = [])
     @dataElements = dataElements
     @searchCharacteristicsSet = searchCharacteristicsSet
     @searchType = searchType
     @sortCharacteristics = sortCharacteristics
+    @dataElementSet = dataElementSet
     @__xmlele_any = nil
   end
 end
@@ -16331,7 +18667,8 @@ class ProductSearchResultType
     ["numProducts", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NumProducts")]],
     ["attributeSet", ["ResponseAttributeSetType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSet")]],
     ["displayStockPhotos", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisplayStockPhotos")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :approximatePages
   attr_accessor :attributeSetID
@@ -16382,7 +18719,8 @@ class ProductSearchType
     ["availableItemsOnly", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AvailableItemsOnly")]],
     ["queryKeywords", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "QueryKeywords")]],
     ["characteristicSetIDs", ["CharacteristicSetIDsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharacteristicSetIDs")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :productSearchID
   attr_accessor :attributeSetID
@@ -16421,14 +18759,19 @@ end
 class ProductType
   @@schema_type = "ProductType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_attribute = {XSD::QName.new(nil, "productID") => "SOAP::SOAPString", XSD::QName.new(nil, "stockPhotoURL") => "SOAP::SOAPAnyURI", XSD::QName.new(nil, "title") => "SOAP::SOAPString"}
+  @@schema_attribute = {
+    XSD::QName.new(nil, "productID") => "SOAP::SOAPString",
+    XSD::QName.new(nil, "stockPhotoURL") => "SOAP::SOAPAnyURI",
+    XSD::QName.new(nil, "title") => "SOAP::SOAPString"
+  }
   @@schema_element = [
     ["characteristicsSet", ["CharacteristicsSetType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharacteristicsSet")]],
     ["detailsURL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailsURL")]],
     ["numItems", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NumItems")]],
     ["minPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinPrice")]],
     ["maxPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MaxPrice")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :characteristicsSet
   attr_accessor :detailsURL
@@ -16484,13 +18827,14 @@ class PromotedItemType
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["pictureURL", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PictureURL")]],
     ["selfHostedURL", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SelfHostedURL")]],
-    ["position", "SOAP::SOAPInt"],
+    ["position", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Position")]],
     ["promotionPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PromotionPrice")]],
     ["promotionPriceType", ["PromotionItemPriceTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PromotionPriceType")]],
     ["selectionType", ["PromotionItemSelectionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SelectionType")]],
     ["title", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Title")]],
     ["listingType", ["ListingTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingType")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :itemID
   attr_accessor :pictureURL
@@ -16523,9 +18867,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}PromotionRuleArrayType
 class PromotionRuleArrayType < ::Array
-  @@schema_type = "PromotionRuleType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["PromotionRule", ["PromotionRuleType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PromotionRule")]]]
+  @@schema_element = [
+    ["PromotionRule", ["PromotionRuleType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PromotionRule")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}PromotionRuleType
@@ -16544,7 +18888,8 @@ class PromotionRuleType
     ["referringKeywords", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReferringKeywords")]],
     ["promotionScheme", ["PromotionSchemeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PromotionScheme")]],
     ["promotionMethod", ["PromotionMethodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PromotionMethod")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :promotedItem
   attr_accessor :siteID
@@ -16584,11 +18929,10 @@ class ProximitySearchDetailsType
   @@schema_type = "ProximitySearchDetailsType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
-    ["includeInProximitySearch", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeInProximitySearch")]],
     ["postalCode", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PostalCode")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
-  attr_accessor :includeInProximitySearch
   attr_accessor :postalCode
   attr_reader :__xmlele_any
 
@@ -16596,8 +18940,7 @@ class ProximitySearchDetailsType
     @__xmlele_any = elements
   end
 
-  def initialize(includeInProximitySearch = nil, postalCode = nil)
-    @includeInProximitySearch = includeInProximitySearch
+  def initialize(postalCode = nil)
     @postalCode = postalCode
     @__xmlele_any = nil
   end
@@ -16610,7 +18953,8 @@ class ProximitySearchType
   @@schema_element = [
     ["maxDistance", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MaxDistance")]],
     ["postalCode", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PostalCode")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :maxDistance
   attr_accessor :postalCode
@@ -16634,7 +18978,8 @@ class RegionDetailsType
   @@schema_element = [
     ["regionID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RegionID")]],
     ["description", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Description")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :regionID
   attr_accessor :description
@@ -16657,7 +19002,8 @@ class ReminderCustomizationType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["durationInDays", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DurationInDays")]],
-    ["include", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Include")]]]
+    ["include", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Include")]]
+  ]
 
   attr_accessor :durationInDays
   attr_accessor :include
@@ -16680,7 +19026,8 @@ class RemindersType
     ["paymentToReceiveCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentToReceiveCount")]],
     ["secondChanceOfferCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SecondChanceOfferCount")]],
     ["shippingNeededCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingNeededCount")]],
-    ["relistingNeededCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RelistingNeededCount")]]]
+    ["relistingNeededCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RelistingNeededCount")]]
+  ]
 
   attr_accessor :paymentToSendCount
   attr_accessor :feedbackToReceiveCount
@@ -16711,7 +19058,8 @@ class RequestCategoriesType
     ["categoriesOnly", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoriesOnly")]],
     ["maxCategories", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MaxCategories")]],
     ["maxSubcategories", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MaxSubcategories")]],
-    ["levels", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Levels")]]]
+    ["levels", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Levels")]]
+  ]
 
   attr_accessor :categoriesOnly
   attr_accessor :maxCategories
@@ -16738,7 +19086,8 @@ class ResponseAttributeSetType
     ["productFinderConstraints", ["ProductFinderConstraintType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductFinderConstraints")]],
     ["tooManyMatchesFound", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TooManyMatchesFound")]],
     ["totalProducts", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalProducts")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :approximatePages
   attr_accessor :attributeSetID
@@ -16775,7 +19124,8 @@ class ReviseStatusType
     ["buyItNowLowered", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BuyItNowLowered")]],
     ["reserveLowered", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReserveLowered")]],
     ["reserveRemoved", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ReserveRemoved")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :itemRevised
   attr_accessor :buyItNowAdded
@@ -16804,7 +19154,8 @@ class SIFFTASRecommendationsType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["attributeSetArray", ["AttributeSetArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSetArray")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :attributeSetArray
   attr_reader :__xmlele_any
@@ -16819,6 +19170,13 @@ class SIFFTASRecommendationsType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}SKUArrayType
+class SKUArrayType < ::Array
+  @@schema_element = [
+    ["SKU", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SKU")]]
+  ]
+end
+
 # {urn:ebay:apis:eBLBaseComponents}SalesTaxType
 class SalesTaxType
   @@schema_type = "SalesTaxType"
@@ -16828,7 +19186,8 @@ class SalesTaxType
     ["salesTaxState", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SalesTaxState")]],
     ["shippingIncludedInTax", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingIncludedInTax")]],
     ["salesTaxAmount", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SalesTaxAmount")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :salesTaxPercent
   attr_accessor :salesTaxState
@@ -16856,7 +19215,8 @@ class ScheduleType
   @@schema_element = [
     ["scheduleID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ScheduleID")]],
     ["scheduleTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ScheduleTime")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :scheduleID
   attr_accessor :scheduleTime
@@ -16881,7 +19241,8 @@ class SchedulingInfoType
     ["maxScheduledMinutes", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MaxScheduledMinutes")]],
     ["minScheduledMinutes", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinScheduledMinutes")]],
     ["maxScheduledItems", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MaxScheduledItems")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :maxScheduledMinutes
   attr_accessor :minScheduledMinutes
@@ -16909,7 +19270,8 @@ class SearchAttributesType
     ["dateSpecifier", ["DateSpecifierCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DateSpecifier")]],
     ["rangeSpecifier", ["RangeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RangeSpecifier")]],
     ["valueList", ["ValType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ValueList")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :attributeID
   attr_accessor :dateSpecifier
@@ -16938,7 +19300,8 @@ class SearchDetailsType
     ["buyItNowEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BuyItNowEnabled")]],
     ["picture", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Picture")]],
     ["recentListing", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecentListing")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :buyItNowEnabled
   attr_accessor :picture
@@ -16966,7 +19329,8 @@ class SearchLocationFilterType
     ["itemLocation", ["ItemLocationCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemLocation")]],
     ["searchLocation", ["SearchLocationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SearchLocation")]],
     ["currency", ["CurrencyCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Currency")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :countryCode
   attr_accessor :itemLocation
@@ -16994,7 +19358,8 @@ class SearchLocationType
   @@schema_element = [
     ["regionID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RegionID")]],
     ["siteLocation", ["SiteLocationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SiteLocation")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :regionID
   attr_accessor :siteLocation
@@ -17019,7 +19384,8 @@ class SearchRequestType
     ["attributeSetID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AttributeSetID")]],
     ["productFinderID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductFinderID")]],
     ["searchAttributes", ["SearchAttributesType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SearchAttributes")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :attributeSetID
   attr_accessor :productFinderID
@@ -17040,9 +19406,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}SearchResultItemArrayType
 class SearchResultItemArrayType < ::Array
-  @@schema_type = "SearchResultItemType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["SearchResultItem", ["SearchResultItemType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SearchResultItem")]]]
+  @@schema_element = [
+    ["SearchResultItem", ["SearchResultItemType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SearchResultItem")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SearchResultItemType
@@ -17053,7 +19419,8 @@ class SearchResultItemType
     ["item", ["ItemType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]],
     ["itemSpecific", ["NameValueListArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemSpecific")]],
     ["searchResultValues", ["SearchResultValuesCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SearchResultValues")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :item
   attr_accessor :itemSpecific
@@ -17079,7 +19446,8 @@ class SearchStoreFilterType
   @@schema_element = [
     ["storeName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoreName")]],
     ["storeSearch", ["StoreSearchCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoreSearch")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :storeName
   attr_accessor :storeSearch
@@ -17108,7 +19476,8 @@ class SellerFavoriteItemPreferencesType
     ["minPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinPrice")]],
     ["maxPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MaxPrice")]],
     ["favoriteItemID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FavoriteItemID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :searchKeywords
   attr_accessor :storeCategoryID
@@ -17147,7 +19516,8 @@ class SellerPaymentPreferencesType
     ["payPalAlwaysOn", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PayPalAlwaysOn")]],
     ["sellerPaymentAddress", ["AddressType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerPaymentAddress")]],
     ["uPSRateOption", ["UPSRateOptionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UPSRateOption")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :alwaysUseThisPaymentAddress
   attr_accessor :displayPayNowButton
@@ -17192,7 +19562,8 @@ class SellerPaymentType
     ["commission", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Commission")]],
     ["amountPaid", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AmountPaid")]],
     ["paidTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaidTime")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :itemID
   attr_accessor :transactionID
@@ -17252,7 +19623,8 @@ class SellerType
     ["storeOwner", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoreOwner")]],
     ["storeURL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoreURL")]],
     ["sellerBusinessType", ["SellerBusinessCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerBusinessType")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :paisaPayStatus
   attr_accessor :allowPaymentEdit
@@ -17305,7 +19677,8 @@ class SellingManagerProductDetailsType
     ["productName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductName")]],
     ["partNumber", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PartNumber")]],
     ["productPartNumber", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductPartNumber")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :productName
   attr_accessor :partNumber
@@ -17342,7 +19715,8 @@ class SellingStatusType
     ["bidderCount", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BidderCount")]],
     ["listingStatus", ["ListingStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingStatus")]],
     ["finalValueFee", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FinalValueFee")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :bidCount
   attr_accessor :bidIncrement
@@ -17392,7 +19766,8 @@ class SellingSummaryType
     ["totalAuctionSellingValue", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalAuctionSellingValue")]],
     ["totalSoldCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalSoldCount")]],
     ["totalSoldValue", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalSoldValue")]],
-    ["soldDurationInDays", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SoldDurationInDays")]]]
+    ["soldDurationInDays", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SoldDurationInDays")]]
+  ]
 
   attr_accessor :activeAuctionCount
   attr_accessor :auctionSellingCount
@@ -17442,7 +19817,8 @@ class ShipmentType
     ["refundGrantedTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RefundGrantedTime")]],
     ["refundRequestedTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RefundRequestedTime")]],
     ["status", ["ShipmentStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Status")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :estimatedDeliveryDate
   attr_accessor :insuredValue
@@ -17511,11 +19887,9 @@ class ShippingDetailsType
     ["allowPaymentEdit", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AllowPaymentEdit")]],
     ["applyShippingDiscount", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ApplyShippingDiscount")]],
     ["calculatedShippingRate", ["CalculatedShippingRateType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CalculatedShippingRate")]],
-    ["carrierShippingFee", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CarrierShippingFee")]],
     ["changePaymentInstructions", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ChangePaymentInstructions")]],
     ["insuranceFee", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InsuranceFee")]],
     ["insuranceOption", ["InsuranceOptionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InsuranceOption")]],
-    ["insuranceTotal", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InsuranceTotal")]],
     ["insuranceWanted", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InsuranceWanted")]],
     ["paymentEdited", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentEdited")]],
     ["paymentInstructions", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentInstructions")]],
@@ -17533,16 +19907,15 @@ class ShippingDetailsType
     ["shipmentTrackingNumber", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShipmentTrackingNumber")]],
     ["shippingServiceUsed", ["ShippingServiceCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingServiceUsed")]],
     ["defaultShippingCost", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DefaultShippingCost")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :allowPaymentEdit
   attr_accessor :applyShippingDiscount
   attr_accessor :calculatedShippingRate
-  attr_accessor :carrierShippingFee
   attr_accessor :changePaymentInstructions
   attr_accessor :insuranceFee
   attr_accessor :insuranceOption
-  attr_accessor :insuranceTotal
   attr_accessor :insuranceWanted
   attr_accessor :paymentEdited
   attr_accessor :paymentInstructions
@@ -17566,15 +19939,13 @@ class ShippingDetailsType
     @__xmlele_any = elements
   end
 
-  def initialize(allowPaymentEdit = nil, applyShippingDiscount = nil, calculatedShippingRate = nil, carrierShippingFee = nil, changePaymentInstructions = nil, insuranceFee = nil, insuranceOption = nil, insuranceTotal = nil, insuranceWanted = nil, paymentEdited = nil, paymentInstructions = nil, salesTax = nil, sellerPostalCode = nil, shippingRateErrorMessage = nil, shippingRateType = nil, shippingServiceOptions = [], internationalShippingServiceOption = [], shippingType = nil, sellingManagerSalesRecordNumber = nil, thirdPartyCheckout = nil, taxTable = nil, getItFast = nil, shipmentTrackingNumber = nil, shippingServiceUsed = nil, defaultShippingCost = nil)
+  def initialize(allowPaymentEdit = nil, applyShippingDiscount = nil, calculatedShippingRate = nil, changePaymentInstructions = nil, insuranceFee = nil, insuranceOption = nil, insuranceWanted = nil, paymentEdited = nil, paymentInstructions = nil, salesTax = nil, sellerPostalCode = nil, shippingRateErrorMessage = nil, shippingRateType = nil, shippingServiceOptions = [], internationalShippingServiceOption = [], shippingType = nil, sellingManagerSalesRecordNumber = nil, thirdPartyCheckout = nil, taxTable = nil, getItFast = nil, shipmentTrackingNumber = nil, shippingServiceUsed = nil, defaultShippingCost = nil)
     @allowPaymentEdit = allowPaymentEdit
     @applyShippingDiscount = applyShippingDiscount
     @calculatedShippingRate = calculatedShippingRate
-    @carrierShippingFee = carrierShippingFee
     @changePaymentInstructions = changePaymentInstructions
     @insuranceFee = insuranceFee
     @insuranceOption = insuranceOption
-    @insuranceTotal = insuranceTotal
     @insuranceWanted = insuranceWanted
     @paymentEdited = paymentEdited
     @paymentInstructions = paymentInstructions
@@ -17603,7 +19974,8 @@ class ShippingLocationDetailsType
   @@schema_element = [
     ["shippingLocation", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingLocation")]],
     ["description", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Description")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :shippingLocation
   attr_accessor :description
@@ -17632,7 +20004,8 @@ class ShippingServiceDetailsType
     ["shippingServiceID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingServiceID")]],
     ["shippingTimeMax", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingTimeMax")]],
     ["shippingTimeMin", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingTimeMin")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :description
   attr_accessor :expeditedService
@@ -17672,7 +20045,8 @@ class ShippingServiceOptionsType
     ["expeditedService", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpeditedService")]],
     ["shippingTimeMin", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingTimeMin")]],
     ["shippingTimeMax", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingTimeMax")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :shippingInsuranceCost
   attr_accessor :shippingService
@@ -17706,7 +20080,8 @@ class ShippingTermRequiredDefinitionType
   @@schema_type = "ShippingTermRequiredDefinitionType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_reader :__xmlele_any
 
@@ -17727,24 +20102,55 @@ class SiteDefaultsType
     ["listingDuration", ["ListingDurationReferenceType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingDuration")]],
     ["shippingTermsRequired", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingTermsRequired")]],
     ["bestOfferEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferEnabled")]],
+    ["dutchBINEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DutchBINEnabled")]],
+    ["userConsentRequired", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserConsentRequired")]],
     ["homePageFeaturedEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HomePageFeaturedEnabled")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["proPackEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProPackEnabled")]],
+    ["basicUpgradePackEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BasicUpgradePackEnabled")]],
+    ["valuePackEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ValuePackEnabled")]],
+    ["proPackPlusEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProPackPlusEnabled")]],
+    ["adFormatEnabled", ["AdFormatEnabledCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AdFormatEnabled")]],
+    ["digitalDeliveryEnabled", ["DigitalDeliveryEnabledCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DigitalDeliveryEnabled")]],
+    ["bestOfferCounterEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferCounterEnabled")]],
+    ["bestOfferAutoDeclineEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferAutoDeclineEnabled")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :listingDuration
   attr_accessor :shippingTermsRequired
   attr_accessor :bestOfferEnabled
+  attr_accessor :dutchBINEnabled
+  attr_accessor :userConsentRequired
   attr_accessor :homePageFeaturedEnabled
+  attr_accessor :proPackEnabled
+  attr_accessor :basicUpgradePackEnabled
+  attr_accessor :valuePackEnabled
+  attr_accessor :proPackPlusEnabled
+  attr_accessor :adFormatEnabled
+  attr_accessor :digitalDeliveryEnabled
+  attr_accessor :bestOfferCounterEnabled
+  attr_accessor :bestOfferAutoDeclineEnabled
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(listingDuration = [], shippingTermsRequired = nil, bestOfferEnabled = nil, homePageFeaturedEnabled = nil)
+  def initialize(listingDuration = [], shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil)
     @listingDuration = listingDuration
     @shippingTermsRequired = shippingTermsRequired
     @bestOfferEnabled = bestOfferEnabled
+    @dutchBINEnabled = dutchBINEnabled
+    @userConsentRequired = userConsentRequired
     @homePageFeaturedEnabled = homePageFeaturedEnabled
+    @proPackEnabled = proPackEnabled
+    @basicUpgradePackEnabled = basicUpgradePackEnabled
+    @valuePackEnabled = valuePackEnabled
+    @proPackPlusEnabled = proPackPlusEnabled
+    @adFormatEnabled = adFormatEnabled
+    @digitalDeliveryEnabled = digitalDeliveryEnabled
+    @bestOfferCounterEnabled = bestOfferCounterEnabled
+    @bestOfferAutoDeclineEnabled = bestOfferAutoDeclineEnabled
     @__xmlele_any = nil
   end
 end
@@ -17756,7 +20162,8 @@ class SiteDetailsType
   @@schema_element = [
     ["site", ["SiteCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Site")]],
     ["siteID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SiteID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :site
   attr_accessor :siteID
@@ -17781,7 +20188,8 @@ class SiteHostedPictureType
     ["pictureURL", ["SOAP::SOAPAnyURI[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PictureURL")]],
     ["photoDisplay", ["PhotoDisplayCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PhotoDisplay")]],
     ["galleryType", ["GalleryTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GalleryType")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :pictureURL
   attr_accessor :photoDisplay
@@ -17806,7 +20214,8 @@ class SiteLocationType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["siteID", ["SiteIDFilterCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SiteID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :siteID
   attr_reader :__xmlele_any
@@ -17828,7 +20237,8 @@ class SiteWideCharacteristicsType
   @@schema_element = [
     ["characteristicsSet", ["CharacteristicsSetType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharacteristicsSet")]],
     ["excludeCategoryID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExcludeCategoryID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :characteristicsSet
   attr_accessor :excludeCategoryID
@@ -17852,7 +20262,8 @@ class SpellingSuggestionType
   @@schema_element = [
     ["matchingItemCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MatchingItemCount")]],
     ["text", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Text")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :matchingItemCount
   attr_accessor :text
@@ -17871,9 +20282,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreColorSchemeArrayType
 class StoreColorSchemeArrayType < ::Array
-  @@schema_type = "StoreColorSchemeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["ColorScheme", ["StoreColorSchemeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ColorScheme")]]]
+  @@schema_element = [
+    ["ColorScheme", ["StoreColorSchemeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ColorScheme")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreColorSchemeType
@@ -17885,7 +20296,8 @@ class StoreColorSchemeType
     ["name", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Name")]],
     ["color", ["StoreColorType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Color")]],
     ["font", ["StoreFontType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Font")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :colorSchemeID
   attr_accessor :name
@@ -17914,7 +20326,8 @@ class StoreColorType
     ["primary", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Primary")]],
     ["secondary", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Secondary")]],
     ["accent", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Accent")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :primary
   attr_accessor :secondary
@@ -17935,9 +20348,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreCustomCategoryArrayType
 class StoreCustomCategoryArrayType < ::Array
-  @@schema_type = "StoreCustomCategoryType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["CustomCategory", ["StoreCustomCategoryType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CustomCategory")]]]
+  @@schema_element = [
+    ["CustomCategory", ["StoreCustomCategoryType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CustomCategory")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreCustomCategoryType
@@ -17949,23 +20362,27 @@ class StoreCustomCategoryType
     ["name", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Name")]],
     ["order", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Order")]],
     ["childrenCategories", ["StoreCustomCategoryType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ChildrenCategories")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["childCategory", ["StoreCustomCategoryType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ChildCategory")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :categoryID
   attr_accessor :name
   attr_accessor :order
   attr_accessor :childrenCategories
+  attr_accessor :childCategory
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(categoryID = nil, name = nil, order = nil, childrenCategories = nil)
+  def initialize(categoryID = nil, name = nil, order = nil, childrenCategories = nil, childCategory = [])
     @categoryID = categoryID
     @name = name
     @order = order
     @childrenCategories = childrenCategories
+    @childCategory = childCategory
     @__xmlele_any = nil
   end
 end
@@ -17978,7 +20395,8 @@ class StoreCustomListingHeaderLinkType
     ["linkID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LinkID")]],
     ["order", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Order")]],
     ["linkType", ["StoreCustomListingHeaderLinkCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LinkType")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :linkID
   attr_accessor :order
@@ -18003,35 +20421,45 @@ class StoreCustomListingHeaderType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["displayType", ["StoreCustomListingHeaderDisplayCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisplayType")]],
-    ["hasLogo", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HasLogo")]],
-    ["hasSearchBox", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HasSearchBox")]],
+    ["logo", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Logo")]],
+    ["searchBox", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SearchBox")]],
     ["linkToInclude", ["StoreCustomListingHeaderLinkType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LinkToInclude")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["addToFavoriteStores", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AddToFavoriteStores")]],
+    ["signUpForStoreNewsletter", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SignUpForStoreNewsletter")]],
+    ["breadCrumb", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BreadCrumb")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :displayType
-  attr_accessor :hasLogo
-  attr_accessor :hasSearchBox
+  attr_accessor :logo
+  attr_accessor :searchBox
   attr_accessor :linkToInclude
+  attr_accessor :addToFavoriteStores
+  attr_accessor :signUpForStoreNewsletter
+  attr_accessor :breadCrumb
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(displayType = nil, hasLogo = nil, hasSearchBox = nil, linkToInclude = [])
+  def initialize(displayType = nil, logo = nil, searchBox = nil, linkToInclude = [], addToFavoriteStores = nil, signUpForStoreNewsletter = nil, breadCrumb = nil)
     @displayType = displayType
-    @hasLogo = hasLogo
-    @hasSearchBox = hasSearchBox
+    @logo = logo
+    @searchBox = searchBox
     @linkToInclude = linkToInclude
+    @addToFavoriteStores = addToFavoriteStores
+    @signUpForStoreNewsletter = signUpForStoreNewsletter
+    @breadCrumb = breadCrumb
     @__xmlele_any = nil
   end
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreCustomPageArrayType
 class StoreCustomPageArrayType < ::Array
-  @@schema_type = "StoreCustomPageType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["CustomPage", ["StoreCustomPageType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CustomPage")]]]
+  @@schema_element = [
+    ["CustomPage", ["StoreCustomPageType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CustomPage")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreCustomPageType
@@ -18048,7 +20476,8 @@ class StoreCustomPageType
     ["leftNav", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LeftNav")]],
     ["previewEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PreviewEnabled")]],
     ["order", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Order")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :name
   attr_accessor :pageID
@@ -18093,7 +20522,8 @@ class StoreFontType
     ["descFace", ["StoreFontFaceCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DescFace")]],
     ["descSize", ["StoreFontSizeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DescSize")]],
     ["descColor", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DescColor")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :nameFace
   attr_accessor :nameSize
@@ -18126,9 +20556,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreLogoArrayType
 class StoreLogoArrayType < ::Array
-  @@schema_type = "StoreLogoType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["Logo", ["StoreLogoType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Logo")]]]
+  @@schema_element = [
+    ["Logo", ["StoreLogoType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Logo")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreLogoType
@@ -18139,7 +20569,8 @@ class StoreLogoType
     ["logoID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LogoID")]],
     ["name", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Name")]],
     ["uRL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "URL")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :logoID
   attr_accessor :name
@@ -18163,7 +20594,8 @@ class StorePreferencesType
   @@schema_type = "StorePreferencesType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
-    ["vacationPreferences", ["StoreVacationPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "VacationPreferences")]]]
+    ["vacationPreferences", ["StoreVacationPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "VacationPreferences")]]
+  ]
 
   attr_accessor :vacationPreferences
 
@@ -18174,9 +20606,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreSubscriptionArrayType
 class StoreSubscriptionArrayType < ::Array
-  @@schema_type = "StoreSubscriptionType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["Subscription", ["StoreSubscriptionType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Subscription")]]]
+  @@schema_element = [
+    ["Subscription", ["StoreSubscriptionType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Subscription")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreSubscriptionType
@@ -18186,7 +20618,8 @@ class StoreSubscriptionType
   @@schema_element = [
     ["level", ["StoreSubscriptionLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Level")]],
     ["fee", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Fee")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :level
   attr_accessor :fee
@@ -18210,7 +20643,8 @@ class StoreThemeArrayType
   @@schema_element = [
     ["theme", ["StoreThemeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Theme")]],
     ["genericColorSchemeArray", ["StoreColorSchemeArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GenericColorSchemeArray")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :theme
   attr_accessor :genericColorSchemeArray
@@ -18235,7 +20669,8 @@ class StoreThemeType
     ["themeID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ThemeID")]],
     ["name", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Name")]],
     ["colorScheme", ["StoreColorSchemeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ColorScheme")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :themeID
   attr_accessor :name
@@ -18276,7 +20711,9 @@ class StoreType
     ["customCategories", ["StoreCustomCategoryArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CustomCategories")]],
     ["customListingHeader", ["StoreCustomListingHeaderType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CustomListingHeader")]],
     ["merchDisplay", ["MerchDisplayCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MerchDisplay")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["lastOpenedTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LastOpenedTime")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :name
   attr_accessor :uRLPath
@@ -18295,13 +20732,14 @@ class StoreType
   attr_accessor :customCategories
   attr_accessor :customListingHeader
   attr_accessor :merchDisplay
+  attr_accessor :lastOpenedTime
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(name = nil, uRLPath = nil, uRL = nil, subscriptionLevel = nil, description = nil, logo = nil, theme = nil, headerStyle = nil, homePage = nil, itemListLayout = nil, itemListSortOrder = nil, customHeaderLayout = nil, customHeader = nil, exportListings = nil, customCategories = nil, customListingHeader = nil, merchDisplay = nil)
+  def initialize(name = nil, uRLPath = nil, uRL = nil, subscriptionLevel = nil, description = nil, logo = nil, theme = nil, headerStyle = nil, homePage = nil, itemListLayout = nil, itemListSortOrder = nil, customHeaderLayout = nil, customHeader = nil, exportListings = nil, customCategories = nil, customListingHeader = nil, merchDisplay = nil, lastOpenedTime = nil)
     @name = name
     @uRLPath = uRLPath
     @uRL = uRL
@@ -18319,6 +20757,7 @@ class StoreType
     @customCategories = customCategories
     @customListingHeader = customListingHeader
     @merchDisplay = merchDisplay
+    @lastOpenedTime = lastOpenedTime
     @__xmlele_any = nil
   end
 end
@@ -18334,7 +20773,8 @@ class StoreVacationPreferencesType
     ["messageItem", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageItem")]],
     ["messageStore", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageStore")]],
     ["displayMessageStoreCustomText", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisplayMessageStoreCustomText")]],
-    ["messageStoreCustomText", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageStoreCustomText")]]]
+    ["messageStoreCustomText", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageStoreCustomText")]]
+  ]
 
   attr_accessor :onVacation
   attr_accessor :returnDate
@@ -18364,7 +20804,8 @@ class StorefrontType
     ["storeCategory2ID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoreCategory2ID")]],
     ["storeURL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoreURL")]],
     ["storeName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoreName")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :storeCategoryID
   attr_accessor :storeCategory2ID
@@ -18393,7 +20834,8 @@ class SubscriptionType
     ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["siteID", ["SiteCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SiteID")]],
     ["active", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Active")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :eIASToken
   attr_accessor :siteID
@@ -18418,7 +20860,8 @@ class SuggestedCategoryArrayType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["suggestedCategory", ["SuggestedCategoryType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SuggestedCategory")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :suggestedCategory
   attr_reader :__xmlele_any
@@ -18440,7 +20883,8 @@ class SuggestedCategoryType
   @@schema_element = [
     ["category", ["CategoryType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category")]],
     ["percentItemFound", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PercentItemFound")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :category
   attr_accessor :percentItemFound
@@ -18466,7 +20910,8 @@ class TaxJurisdictionType
     ["salesTaxPercent", ["SOAP::SOAPFloat", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SalesTaxPercent")]],
     ["shippingIncludedInTax", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingIncludedInTax")]],
     ["jurisdictionName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "JurisdictionName")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :jurisdictionID
   attr_accessor :salesTaxPercent
@@ -18489,9 +20934,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}TaxTableType
 class TaxTableType < ::Array
-  @@schema_type = "TaxJurisdictionType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["TaxJurisdiction", ["TaxJurisdictionType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TaxJurisdiction")]]]
+  @@schema_element = [
+    ["TaxJurisdiction", ["TaxJurisdictionType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TaxJurisdiction")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ThemeGroupType
@@ -18503,7 +20948,8 @@ class ThemeGroupType
     ["groupName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GroupName")]],
     ["themeID", ["SOAP::SOAPInt[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ThemeID")]],
     ["themeTotal", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ThemeTotal")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :groupID
   attr_accessor :groupName
@@ -18526,9 +20972,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}TransactionArrayType
 class TransactionArrayType < ::Array
-  @@schema_type = "TransactionType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["Transaction", ["TransactionType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Transaction")]]]
+  @@schema_element = [
+    ["Transaction", ["TransactionType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Transaction")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}TransactionStatusType
@@ -18542,7 +20988,8 @@ class TransactionStatusType
     ["paymentMethodUsed", ["BuyerPaymentMethodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentMethodUsed")]],
     ["completeStatus", ["CompleteStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CompleteStatus")]],
     ["buyerSelectedShipping", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BuyerSelectedShipping")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :eBayPaymentStatus
   attr_accessor :checkoutStatus
@@ -18602,7 +21049,8 @@ class TransactionType
     ["feedbackReceived", ["FeedbackInfoType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackReceived")]],
     ["containingOrder", ["OrderType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ContainingOrder")]],
     ["finalValueFee", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FinalValueFee")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :amountPaid
   attr_accessor :adjustmentAmount
@@ -18682,7 +21130,8 @@ class URLDetailsType
   @@schema_element = [
     ["uRLType", ["URLTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "URLType")]],
     ["uRL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "URL")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :uRLType
   attr_accessor :uRL
@@ -18699,6 +21148,25 @@ class URLDetailsType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}UserConsentRequiredDefinitionType
+class UserConsentRequiredDefinitionType
+  @@schema_type = "UserConsentRequiredDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}UserIdFilterType
 class UserIdFilterType
   @@schema_type = "UserIdFilterType"
@@ -18706,7 +21174,8 @@ class UserIdFilterType
   @@schema_element = [
     ["excludeSellers", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExcludeSellers")]],
     ["includeSellers", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeSellers")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :excludeSellers
   attr_accessor :includeSellers
@@ -18730,6 +21199,7 @@ class UserType
   @@schema_element = [
     ["aboutMePage", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AboutMePage")]],
     ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
+    ["rESTToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RESTToken")]],
     ["email", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Email")]],
     ["feedbackScore", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackScore")]],
     ["uniqueNegativeFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UniqueNegativeFeedbackCount")]],
@@ -18752,11 +21222,16 @@ class UserType
     ["sellerInfo", ["SellerType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerInfo")]],
     ["charityAffiliations", ["CharityAffiliationsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharityAffiliations")]],
     ["charitySeller", ["CharitySellerType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharitySeller")]],
+    ["payPalAccountLevel", ["PayPalAccountLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PayPalAccountLevel")]],
+    ["payPalAccountType", ["PayPalAccountTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PayPalAccountType")]],
+    ["payPalAccountStatus", ["PayPalAccountStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PayPalAccountStatus")]],
     ["siteVerified", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SiteVerified")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :aboutMePage
   attr_accessor :eIASToken
+  attr_accessor :rESTToken
   attr_accessor :email
   attr_accessor :feedbackScore
   attr_accessor :uniqueNegativeFeedbackCount
@@ -18779,6 +21254,9 @@ class UserType
   attr_accessor :sellerInfo
   attr_accessor :charityAffiliations
   attr_accessor :charitySeller
+  attr_accessor :payPalAccountLevel
+  attr_accessor :payPalAccountType
+  attr_accessor :payPalAccountStatus
   attr_accessor :siteVerified
   attr_reader :__xmlele_any
 
@@ -18786,9 +21264,10 @@ class UserType
     @__xmlele_any = elements
   end
 
-  def initialize(aboutMePage = nil, eIASToken = nil, email = nil, feedbackScore = nil, uniqueNegativeFeedbackCount = nil, uniquePositiveFeedbackCount = nil, positiveFeedbackPercent = nil, feedbackPrivate = nil, feedbackRatingStar = nil, iDVerified = nil, eBayGoodStanding = nil, newUser = nil, registrationAddress = nil, registrationDate = nil, site = nil, status = nil, userID = nil, userIDChanged = nil, userIDLastChanged = nil, vATStatus = nil, buyerInfo = nil, sellerInfo = nil, charityAffiliations = nil, charitySeller = nil, siteVerified = nil)
+  def initialize(aboutMePage = nil, eIASToken = nil, rESTToken = nil, email = nil, feedbackScore = nil, uniqueNegativeFeedbackCount = nil, uniquePositiveFeedbackCount = nil, positiveFeedbackPercent = nil, feedbackPrivate = nil, feedbackRatingStar = nil, iDVerified = nil, eBayGoodStanding = nil, newUser = nil, registrationAddress = nil, registrationDate = nil, site = nil, status = nil, userID = nil, userIDChanged = nil, userIDLastChanged = nil, vATStatus = nil, buyerInfo = nil, sellerInfo = nil, charityAffiliations = nil, charitySeller = nil, payPalAccountLevel = nil, payPalAccountType = nil, payPalAccountStatus = nil, siteVerified = nil)
     @aboutMePage = aboutMePage
     @eIASToken = eIASToken
+    @rESTToken = rESTToken
     @email = email
     @feedbackScore = feedbackScore
     @uniqueNegativeFeedbackCount = uniqueNegativeFeedbackCount
@@ -18811,6 +21290,9 @@ class UserType
     @sellerInfo = sellerInfo
     @charityAffiliations = charityAffiliations
     @charitySeller = charitySeller
+    @payPalAccountLevel = payPalAccountLevel
+    @payPalAccountType = payPalAccountType
+    @payPalAccountStatus = payPalAccountStatus
     @siteVerified = siteVerified
     @__xmlele_any = nil
   end
@@ -18824,7 +21306,8 @@ class VATDetailsType
     ["businessSeller", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BusinessSeller")]],
     ["restrictedToBusiness", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RestrictedToBusiness")]],
     ["vATPercent", ["SOAP::SOAPFloat", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "VATPercent")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :businessSeller
   attr_accessor :restrictedToBusiness
@@ -18851,7 +21334,8 @@ class ValType
     ["valueLiteral", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ValueLiteral")]],
     ["suggestedValueLiteral", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SuggestedValueLiteral")]],
     ["valueID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ValueID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :valueLiteral
   attr_accessor :suggestedValueLiteral
@@ -18870,6 +21354,25 @@ class ValType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}ValuePackEnabledDefinitionType
+class ValuePackEnabledDefinitionType
+  @@schema_type = "ValuePackEnabledDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}VendorHostedPictureType
 class VendorHostedPictureType
   @@schema_type = "VendorHostedPictureType"
@@ -18880,7 +21383,8 @@ class VendorHostedPictureType
     ["photoDisplay", ["PhotoDisplayCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PhotoDisplay")]],
     ["galleryURL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GalleryURL")]],
     ["galleryType", ["GalleryTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GalleryType")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :pictureURL
   attr_accessor :selfHostedURL
@@ -18905,9 +21409,9 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}WantItNowPostArrayType
 class WantItNowPostArrayType < ::Array
-  @@schema_type = "WantItNowPostType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [["WantItNowPost", ["WantItNowPostType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WantItNowPost")]]]
+  @@schema_element = [
+    ["WantItNowPost", ["WantItNowPostType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WantItNowPost")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}WantItNowPostType
@@ -18921,7 +21425,8 @@ class WantItNowPostType
     ["site", ["SiteCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Site")]],
     ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StartTime")]],
     ["responseCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ResponseCount")]],
-    ["title", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Title")]]]
+    ["title", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Title")]]
+  ]
 
   attr_accessor :categoryID
   attr_accessor :description
@@ -18950,7 +21455,8 @@ class XSLFileType
     ["fileName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FileName")]],
     ["fileVersion", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FileVersion")]],
     ["fileContent", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FileContent")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]]
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
 
   attr_accessor :fileName
   attr_accessor :fileVersion
@@ -18970,2633 +21476,3402 @@ class XSLFileType
 end
 
 # {urn:ebay:apis:eBLBaseComponents}AckCodeType
-module AckCodeType
-  CustomCode = "CustomCode"
-  Failure = "Failure"
-  PartialFailure = "PartialFailure"
-  Success = "Success"
-  Warning = "Warning"
+class AckCodeType < ::String
+  @@schema_type = "AckCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = AckCodeType.new("CustomCode")
+  Failure = AckCodeType.new("Failure")
+  PartialFailure = AckCodeType.new("PartialFailure")
+  Success = AckCodeType.new("Success")
+  Warning = AckCodeType.new("Warning")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DetailLevelCodeType
-module DetailLevelCodeType
-  ItemReturnAttributes = "ItemReturnAttributes"
-  ItemReturnDescription = "ItemReturnDescription"
-  ReturnAll = "ReturnAll"
-  ReturnHeaders = "ReturnHeaders"
-  ReturnMessages = "ReturnMessages"
-  ReturnSummary = "ReturnSummary"
+class DetailLevelCodeType < ::String
+  @@schema_type = "DetailLevelCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  ItemReturnAttributes = DetailLevelCodeType.new("ItemReturnAttributes")
+  ItemReturnCategories = DetailLevelCodeType.new("ItemReturnCategories")
+  ItemReturnDescription = DetailLevelCodeType.new("ItemReturnDescription")
+  ReturnAll = DetailLevelCodeType.new("ReturnAll")
+  ReturnHeaders = DetailLevelCodeType.new("ReturnHeaders")
+  ReturnMessages = DetailLevelCodeType.new("ReturnMessages")
+  ReturnSummary = DetailLevelCodeType.new("ReturnSummary")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ErrorClassificationCodeType
-module ErrorClassificationCodeType
-  CustomCode = "CustomCode"
-  RequestError = "RequestError"
-  SystemError = "SystemError"
+class ErrorClassificationCodeType < ::String
+  @@schema_type = "ErrorClassificationCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = ErrorClassificationCodeType.new("CustomCode")
+  RequestError = ErrorClassificationCodeType.new("RequestError")
+  SystemError = ErrorClassificationCodeType.new("SystemError")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ErrorHandlingCodeType
-module ErrorHandlingCodeType
-  AllOrNothing = "AllOrNothing"
-  BestEffort = "BestEffort"
-  FailOnError = "FailOnError"
-  Legacy = "Legacy"
+class ErrorHandlingCodeType < ::String
+  @@schema_type = "ErrorHandlingCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AllOrNothing = ErrorHandlingCodeType.new("AllOrNothing")
+  BestEffort = ErrorHandlingCodeType.new("BestEffort")
+  FailOnError = ErrorHandlingCodeType.new("FailOnError")
+  Legacy = ErrorHandlingCodeType.new("Legacy")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}InvocationStatusType
-module InvocationStatusType
-  CustomCode = "CustomCode"
-  Failure = "Failure"
-  InProgress = "InProgress"
-  Success = "Success"
+class InvocationStatusType < ::String
+  @@schema_type = "InvocationStatusType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = InvocationStatusType.new("CustomCode")
+  Failure = InvocationStatusType.new("Failure")
+  InProgress = InvocationStatusType.new("InProgress")
+  Success = InvocationStatusType.new("Success")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SeverityCodeType
-module SeverityCodeType
-  CustomCode = "CustomCode"
-  Error = "Error"
-  Warning = "Warning"
+class SeverityCodeType < ::String
+  @@schema_type = "SeverityCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = SeverityCodeType.new("CustomCode")
+  Error = SeverityCodeType.new("Error")
+  Warning = SeverityCodeType.new("Warning")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}WarningLevelCodeType
+class WarningLevelCodeType < ::String
+  @@schema_type = "WarningLevelCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  High = WarningLevelCodeType.new("High")
+  Low = WarningLevelCodeType.new("Low")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}AccessRuleCurrentStatusCodeType
-module AccessRuleCurrentStatusCodeType
-  CustomCode = "CustomCode"
-  DailyLimitExceeded = "DailyLimitExceeded"
-  DailySoftLimitExceeded = "DailySoftLimitExceeded"
-  HourlyLimitExceeded = "HourlyLimitExceeded"
-  HourlySoftLimitExceeded = "HourlySoftLimitExceeded"
-  NotSet = "NotSet"
-  PeriodicLimitExceeded = "PeriodicLimitExceeded"
-  PeriodicSoftLimitExceeded = "PeriodicSoftLimitExceeded"
+class AccessRuleCurrentStatusCodeType < ::String
+  @@schema_type = "AccessRuleCurrentStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = AccessRuleCurrentStatusCodeType.new("CustomCode")
+  DailyLimitExceeded = AccessRuleCurrentStatusCodeType.new("DailyLimitExceeded")
+  DailySoftLimitExceeded = AccessRuleCurrentStatusCodeType.new("DailySoftLimitExceeded")
+  HourlyLimitExceeded = AccessRuleCurrentStatusCodeType.new("HourlyLimitExceeded")
+  HourlySoftLimitExceeded = AccessRuleCurrentStatusCodeType.new("HourlySoftLimitExceeded")
+  NotSet = AccessRuleCurrentStatusCodeType.new("NotSet")
+  PeriodicLimitExceeded = AccessRuleCurrentStatusCodeType.new("PeriodicLimitExceeded")
+  PeriodicSoftLimitExceeded = AccessRuleCurrentStatusCodeType.new("PeriodicSoftLimitExceeded")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}AccessRuleStatusCodeType
-module AccessRuleStatusCodeType
-  ApplicationBlocked = "ApplicationBlocked"
-  CustomCode = "CustomCode"
-  RuleOff = "RuleOff"
-  RuleOn = "RuleOn"
+class AccessRuleStatusCodeType < ::String
+  @@schema_type = "AccessRuleStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  ApplicationBlocked = AccessRuleStatusCodeType.new("ApplicationBlocked")
+  CustomCode = AccessRuleStatusCodeType.new("CustomCode")
+  RuleOff = AccessRuleStatusCodeType.new("RuleOff")
+  RuleOn = AccessRuleStatusCodeType.new("RuleOn")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}AccountDetailEntryCodeType
-module AccountDetailEntryCodeType
-  AWCredit = "AWCredit"
-  AWDebit = "AWDebit"
-  AWMemo = "AWMemo"
-  AccountStateSwitch = "AccountStateSwitch"
-  AllFeesCredit = "AllFeesCredit"
-  AutoPmntReqExempt = "AutoPmntReqExempt"
-  AutoPmntReqRein = "AutoPmntReqRein"
-  AutoTraderOff = "AutoTraderOff"
-  AutoTraderOn = "AutoTraderOn"
-  BBAdminCredit = "BBAdminCredit"
-  BBAdminDebit = "BBAdminDebit"
-  BonusPointsAddition = "BonusPointsAddition"
-  BonusPointsCashPayout = "BonusPointsCashPayout"
-  BonusPointsPaymentAutomatic = "BonusPointsPaymentAutomatic"
-  BonusPointsPaymentManual = "BonusPointsPaymentManual"
-  BonusPointsPaymentReversal = "BonusPointsPaymentReversal"
-  BonusPointsReduction = "BonusPointsReduction"
-  BorderFee = "BorderFee"
-  BorderFeeCredit = "BorderFeeCredit"
-  BulkUserSuspension = "BulkUserSuspension"
-  BuyItNowCredit = "BuyItNowCredit"
-  BuyItNowFee = "BuyItNowFee"
-  CCNotOnFilePerCustReq = "CCNotOnFilePerCustReq"
-  CCPaymentRejected = "CCPaymentRejected"
-  ChargeBack = "ChargeBack"
-  ChargeBackReversal = "ChargeBackReversal"
-  Chargeoff = "Chargeoff"
-  ChargeoffBankruptcy = "ChargeoffBankruptcy"
-  ChargeoffDeceased = "ChargeoffDeceased"
-  ChargeoffOther = "ChargeoffOther"
-  ChargeoffRecovery = "ChargeoffRecovery"
-  ChargeoffSuspended = "ChargeoffSuspended"
-  ChargeoffWacko = "ChargeoffWacko"
-  CreditAABasic = "CreditAABasic"
-  CreditAAPro = "CreditAAPro"
-  CreditBold = "CreditBold"
-  CreditCardNotOnFile = "CreditCardNotOnFile"
-  CreditCardOnFile = "CreditCardOnFile"
-  CreditCategoryFeatured = "CreditCategoryFeatured"
-  CreditCourtesy = "CreditCourtesy"
-  CreditDuplicateListing = "CreditDuplicateListing"
-  CreditEquifaxRealtimeFee = "CreditEquifaxRealtimeFee"
-  CreditFeatured = "CreditFeatured"
-  CreditFeaturedGallery = "CreditFeaturedGallery"
-  CreditFinalValue = "CreditFinalValue"
-  CreditFinalValueFixedPrice = "CreditFinalValueFixedPrice"
-  CreditGallery = "CreditGallery"
-  CreditGiftIcon = "CreditGiftIcon"
-  CreditHighlight = "CreditHighlight"
-  CreditIPIXPhoto = "CreditIPIXPhoto"
-  CreditIPIXSlideShow = "CreditIPIXSlideShow"
-  CreditInsertion = "CreditInsertion"
-  CreditInsertionFee = "CreditInsertionFee"
-  CreditInsertionFixedPrice = "CreditInsertionFixedPrice"
-  CreditLargePicture = "CreditLargePicture"
-  CreditNoSale = "CreditNoSale"
-  CreditPCGS = "CreditPCGS"
-  CreditPSA = "CreditPSA"
-  CreditPartialSale = "CreditPartialSale"
-  CreditPicturePackFull = "CreditPicturePackFull"
-  CreditPicturePackPartial = "CreditPicturePackPartial"
-  CreditPictureShow = "CreditPictureShow"
-  CreditRealEstate30DaysListing = "CreditRealEstate30DaysListing"
-  CreditReserve = "CreditReserve"
-  CreditSMBasic = "CreditSMBasic"
-  CreditSMBasicPro = "CreditSMBasicPro"
-  CreditSchedule = "CreditSchedule"
-  CreditSearchableMobileDE = "CreditSearchableMobileDE"
-  CreditSoftOutage = "CreditSoftOutage"
-  CreditTenDayAuction = "CreditTenDayAuction"
-  CreditTransferFrom = "CreditTransferFrom"
-  CrediteBayStores = "CrediteBayStores"
-  CustomCode = "CustomCode"
-  DebitTransferTo = "DebitTransferTo"
-  DirectDebitNotOnFile = "DirectDebitNotOnFile"
-  DirectDebitOnFile = "DirectDebitOnFile"
-  DirectDebitReturnedItem = "DirectDebitReturnedItem"
-  DirectDebitReversal = "DirectDebitReversal"
-  EBayCredit = "eBayCredit"
-  EBayDebit = "eBayDebit"
-  EBayStoreInventorySubscriptionCredit = "eBayStoreInventorySubscriptionCredit"
-  EBayVISACredit = "eBayVISACredit"
-  EOMRestriction = "EOMRestriction"
-  ElectronicInvoiceOff = "ElectronicInvoiceOff"
-  ElectronicInvoiceOn = "ElectronicInvoiceOn"
-  EmailMarketingCredit = "EmailMarketingCredit"
-  EmailMarketingFee = "EmailMarketingFee"
-  EquifaxRealtimeFee = "EquifaxRealtimeFee"
-  ExtendedAcutionCredit = "ExtendedAcutionCredit"
-  ExtendedAuctionFee = "ExtendedAuctionFee"
-  FVFCreditReversal = "FVFCreditReversal"
-  FVFCreditReversalAutomatic = "FVFCreditReversalAutomatic"
-  FeeBold = "FeeBold"
-  FeeCategoryFeatured = "FeeCategoryFeatured"
-  FeeFeatured = "FeeFeatured"
-  FeeFeaturedGallery = "FeeFeaturedGallery"
-  FeeFinalValue = "FeeFinalValue"
-  FeeFinalValueFixedPrice = "FeeFinalValueFixedPrice"
-  FeeGallery = "FeeGallery"
-  FeeGiftIcon = "FeeGiftIcon"
-  FeeHighlight = "FeeHighlight"
-  FeeIPIXPhoto = "FeeIPIXPhoto"
-  FeeIPIXSlideShow = "FeeIPIXSlideShow"
-  FeeInsertion = "FeeInsertion"
-  FeeInsertionFixedPrice = "FeeInsertionFixedPrice"
-  FeeLargePicture = "FeeLargePicture"
-  FeeNSFCheck = "FeeNSFCheck"
-  FeePartialSale = "FeePartialSale"
-  FeePicturePack = "FeePicturePack"
-  FeePictureShow = "FeePictureShow"
-  FeeRealEstate30DaysListing = "FeeRealEstate30DaysListing"
-  FeeRedepositCheck = "FeeRedepositCheck"
-  FeeReserve = "FeeReserve"
-  FeeReturnCheckClose = "FeeReturnCheckClose"
-  FeeReturnedCheck = "FeeReturnedCheck"
-  FeeSchedule = "FeeSchedule"
-  FeeSearchableMobileDE = "FeeSearchableMobileDE"
-  FeeTenDayAuction = "FeeTenDayAuction"
-  FinalEntry = "FinalEntry"
-  FinanceCharge = "FinanceCharge"
-  FinanceChargeReversal = "FinanceChargeReversal"
-  FixedPriceDurationCredit = "FixedPriceDurationCredit"
-  FixedPriceDurationFee = "FixedPriceDurationFee"
-  FlagDDDDPending = "FlagDDDDPending"
-  FlagDDPaymentConfirmed = "FlagDDPaymentConfirmed"
-  ForeignFundsCheckReversal = "ForeignFundsCheckReversal"
-  ForeignFundsConvert = "ForeignFundsConvert"
-  InvoiceCreditBalance = "InvoiceCreditBalance"
-  Invoiced = "Invoiced"
-  InvoicedCreditCard = "InvoicedCreditCard"
-  ItemMoveFee = "ItemMoveFee"
-  LAAudioVideoFee = "LAAudioVideoFee"
-  LAAudioVideoFeeRefund = "LAAudioVideoFeeRefund"
-  LABuyerPremiumPercentageFee = "LABuyerPremiumPercentageFee"
-  LABuyerPremiumPercentageFeeRefund = "LABuyerPremiumPercentageFeeRefund"
-  LACatalogFee = "LACatalogFee"
-  LACatalogInsertionRefund = "LACatalogInsertionRefund"
-  LACatalogItemFeeRefund = "LACatalogItemFeeRefund"
-  LAExtraItem = "LAExtraItem"
-  LAFinalValueFee = "LAFinalValueFee"
-  LAFinalValueFeeRefund = "LAFinalValueFeeRefund"
-  ListingDesignerCredit = "ListingDesignerCredit"
-  ListingDesignerFee = "ListingDesignerFee"
-  Memo = "Memo"
-  Merged = "Merged"
-  OutageCredit = "OutageCredit"
-  PaperInvoiceOff = "PaperInvoiceOff"
-  PaperInvoiceOn = "PaperInvoiceOn"
-  PayPalChargeBack = "PayPalChargeBack"
-  PayPalFailed = "PayPalFailed"
-  PayPalOTPPend = "PayPalOTPPend"
-  PayPalOTPSucc = "PayPalOTPSucc"
-  PayPalRefund = "PayPalRefund"
-  PaymentAdjustmentCredit = "PaymentAdjustmentCredit"
-  PaymentAdjustmentDebit = "PaymentAdjustmentDebit"
-  PaymentCC = "PaymentCC"
-  PaymentCCOnce = "PaymentCCOnce"
-  PaymentCash = "PaymentCash"
-  PaymentCheck = "PaymentCheck"
-  PaymentDirectDebit = "PaymentDirectDebit"
-  PaymentElectronicTransfer = "PaymentElectronicTransfer"
-  PaymentElectronicTransferReversal = "PaymentElectronicTransferReversal"
-  PaymentEquifaxCredit = "PaymentEquifaxCredit"
-  PaymentEquifaxDebit = "PaymentEquifaxDebit"
-  PaymentGiftCertificate = "PaymentGiftCertificate"
-  PaymentHomeBanking = "PaymentHomeBanking"
-  PaymentMoneyOrder = "PaymentMoneyOrder"
-  PaymentWireTransfer = "PaymentWireTransfer"
-  PaypalOffFile = "PaypalOffFile"
-  PaypalOnFile = "PaypalOnFile"
-  PaypalOnFileByCSR = "PaypalOnFileByCSR"
-  PictureManagerSubscriptionFee = "PictureManagerSubscriptionFee"
-  PictureManagerSubscriptionFeeCredit = "PictureManagerSubscriptionFeeCredit"
-  ProPackBundleFee = "ProPackBundleFee"
-  ProPackBundleFeeCredit = "ProPackBundleFeeCredit"
-  PromotionalCredit = "PromotionalCredit"
-  ReferrerCredit = "ReferrerCredit"
-  ReferrerDebit = "ReferrerDebit"
-  RefundCC = "RefundCC"
-  RefundCheck = "RefundCheck"
-  RevertUserState = "RevertUserState"
-  SMProListingDesignerCredit = "SMProListingDesignerCredit"
-  SMProListingDesignerFee = "SMProListingDesignerFee"
-  SalesReportsPlusCredit = "SalesReportsPlusCredit"
-  SalesReportsPlusFee = "SalesReportsPlusFee"
-  SellerReportsBasicCredit = "SellerReportsBasicCredit"
-  SellerReportsBasicFee = "SellerReportsBasicFee"
-  SellerReportsPlusCredit = "SellerReportsPlusCredit"
-  SellerReportsPlusFee = "SellerReportsPlusFee"
-  SetOnHold = "SetOnHold"
-  StoresGTCCredit = "StoresGTCCredit"
-  StoresGTCFee = "StoresGTCFee"
-  StoresReferralCredit = "StoresReferralCredit"
-  StoresReferralFee = "StoresReferralFee"
-  StoresSuccessfulListingFee = "StoresSuccessfulListingFee"
-  StoresSuccessfulListingFeeCredit = "StoresSuccessfulListingFeeCredit"
-  SubscriptionAABasic = "SubscriptionAABasic"
-  SubscriptionAAPro = "SubscriptionAAPro"
-  SubscriptionSMBasic = "SubscriptionSMBasic"
-  SubscriptionSMBasicPro = "SubscriptionSMBasicPro"
-  SubscriptioneBayStores = "SubscriptioneBayStores"
-  SubtitleFee = "SubtitleFee"
-  SubtitleFeeCredit = "SubtitleFeeCredit"
-  SwitchCurrency = "SwitchCurrency"
-  TemporaryCredit = "TemporaryCredit"
-  TemporaryCreditReversal = "TemporaryCreditReversal"
-  TradingLimitOverrideOff = "TradingLimitOverrideOff"
-  TradingLimitOverrideOn = "TradingLimitOverrideOn"
-  Unknown = "Unknown"
-  VATCredit = "VATCredit"
-  VATDebit = "VATDebit"
-  VATStatusChangeApproved = "VATStatusChangeApproved"
-  VATStatusChangePending = "VATStatusChangePending"
-  VATStatusChange_Denied = "VATStatusChange_Denied"
-  VATStatusDeletedByCSR = "VATStatusDeletedByCSR"
-  VATStatusDeletedByUser = "VATStatusDeletedByUser"
+class AccountDetailEntryCodeType < ::String
+  @@schema_type = "AccountDetailEntryCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AWCredit = AccountDetailEntryCodeType.new("AWCredit")
+  AWDebit = AccountDetailEntryCodeType.new("AWDebit")
+  AWMemo = AccountDetailEntryCodeType.new("AWMemo")
+  AccountStateSwitch = AccountDetailEntryCodeType.new("AccountStateSwitch")
+  AllFeesCredit = AccountDetailEntryCodeType.new("AllFeesCredit")
+  AutoPmntReqExempt = AccountDetailEntryCodeType.new("AutoPmntReqExempt")
+  AutoPmntReqRein = AccountDetailEntryCodeType.new("AutoPmntReqRein")
+  AutoTraderOff = AccountDetailEntryCodeType.new("AutoTraderOff")
+  AutoTraderOn = AccountDetailEntryCodeType.new("AutoTraderOn")
+  BBAdminCredit = AccountDetailEntryCodeType.new("BBAdminCredit")
+  BBAdminDebit = AccountDetailEntryCodeType.new("BBAdminDebit")
+  BasicUpgradePackBundleFee = AccountDetailEntryCodeType.new("BasicUpgradePackBundleFee")
+  BasicUpgradePackBundleFeeCredit = AccountDetailEntryCodeType.new("BasicUpgradePackBundleFeeCredit")
+  BonusPointsAddition = AccountDetailEntryCodeType.new("BonusPointsAddition")
+  BonusPointsCashPayout = AccountDetailEntryCodeType.new("BonusPointsCashPayout")
+  BonusPointsPaymentAutomatic = AccountDetailEntryCodeType.new("BonusPointsPaymentAutomatic")
+  BonusPointsPaymentManual = AccountDetailEntryCodeType.new("BonusPointsPaymentManual")
+  BonusPointsPaymentReversal = AccountDetailEntryCodeType.new("BonusPointsPaymentReversal")
+  BonusPointsReduction = AccountDetailEntryCodeType.new("BonusPointsReduction")
+  BorderFee = AccountDetailEntryCodeType.new("BorderFee")
+  BorderFeeCredit = AccountDetailEntryCodeType.new("BorderFeeCredit")
+  BulkUserSuspension = AccountDetailEntryCodeType.new("BulkUserSuspension")
+  BuyItNowCredit = AccountDetailEntryCodeType.new("BuyItNowCredit")
+  BuyItNowFee = AccountDetailEntryCodeType.new("BuyItNowFee")
+  CCNotOnFilePerCustReq = AccountDetailEntryCodeType.new("CCNotOnFilePerCustReq")
+  CCPaymentRejected = AccountDetailEntryCodeType.new("CCPaymentRejected")
+  ChargeBack = AccountDetailEntryCodeType.new("ChargeBack")
+  ChargeBackReversal = AccountDetailEntryCodeType.new("ChargeBackReversal")
+  Chargeoff = AccountDetailEntryCodeType.new("Chargeoff")
+  ChargeoffBankruptcy = AccountDetailEntryCodeType.new("ChargeoffBankruptcy")
+  ChargeoffDeceased = AccountDetailEntryCodeType.new("ChargeoffDeceased")
+  ChargeoffOther = AccountDetailEntryCodeType.new("ChargeoffOther")
+  ChargeoffRecovery = AccountDetailEntryCodeType.new("ChargeoffRecovery")
+  ChargeoffSuspended = AccountDetailEntryCodeType.new("ChargeoffSuspended")
+  ChargeoffWacko = AccountDetailEntryCodeType.new("ChargeoffWacko")
+  CreditAABasic = AccountDetailEntryCodeType.new("CreditAABasic")
+  CreditAAPro = AccountDetailEntryCodeType.new("CreditAAPro")
+  CreditBold = AccountDetailEntryCodeType.new("CreditBold")
+  CreditCardNotOnFile = AccountDetailEntryCodeType.new("CreditCardNotOnFile")
+  CreditCardOnFile = AccountDetailEntryCodeType.new("CreditCardOnFile")
+  CreditCategoryFeatured = AccountDetailEntryCodeType.new("CreditCategoryFeatured")
+  CreditCourtesy = AccountDetailEntryCodeType.new("CreditCourtesy")
+  CreditDuplicateListing = AccountDetailEntryCodeType.new("CreditDuplicateListing")
+  CreditEquifaxRealtimeFee = AccountDetailEntryCodeType.new("CreditEquifaxRealtimeFee")
+  CreditFeatured = AccountDetailEntryCodeType.new("CreditFeatured")
+  CreditFeaturedGallery = AccountDetailEntryCodeType.new("CreditFeaturedGallery")
+  CreditFinalValue = AccountDetailEntryCodeType.new("CreditFinalValue")
+  CreditFinalValueFixedPrice = AccountDetailEntryCodeType.new("CreditFinalValueFixedPrice")
+  CreditGallery = AccountDetailEntryCodeType.new("CreditGallery")
+  CreditGiftIcon = AccountDetailEntryCodeType.new("CreditGiftIcon")
+  CreditHighlight = AccountDetailEntryCodeType.new("CreditHighlight")
+  CreditIPIXPhoto = AccountDetailEntryCodeType.new("CreditIPIXPhoto")
+  CreditIPIXSlideShow = AccountDetailEntryCodeType.new("CreditIPIXSlideShow")
+  CreditInsertion = AccountDetailEntryCodeType.new("CreditInsertion")
+  CreditInsertionFee = AccountDetailEntryCodeType.new("CreditInsertionFee")
+  CreditInsertionFixedPrice = AccountDetailEntryCodeType.new("CreditInsertionFixedPrice")
+  CreditLargePicture = AccountDetailEntryCodeType.new("CreditLargePicture")
+  CreditNoSale = AccountDetailEntryCodeType.new("CreditNoSale")
+  CreditPCGS = AccountDetailEntryCodeType.new("CreditPCGS")
+  CreditPSA = AccountDetailEntryCodeType.new("CreditPSA")
+  CreditPartialSale = AccountDetailEntryCodeType.new("CreditPartialSale")
+  CreditPicturePackFull = AccountDetailEntryCodeType.new("CreditPicturePackFull")
+  CreditPicturePackPartial = AccountDetailEntryCodeType.new("CreditPicturePackPartial")
+  CreditPictureShow = AccountDetailEntryCodeType.new("CreditPictureShow")
+  CreditRealEstate30DaysListing = AccountDetailEntryCodeType.new("CreditRealEstate30DaysListing")
+  CreditReserve = AccountDetailEntryCodeType.new("CreditReserve")
+  CreditSMBasic = AccountDetailEntryCodeType.new("CreditSMBasic")
+  CreditSMBasicPro = AccountDetailEntryCodeType.new("CreditSMBasicPro")
+  CreditSchedule = AccountDetailEntryCodeType.new("CreditSchedule")
+  CreditSearchableMobileDE = AccountDetailEntryCodeType.new("CreditSearchableMobileDE")
+  CreditSoftOutage = AccountDetailEntryCodeType.new("CreditSoftOutage")
+  CreditTenDayAuction = AccountDetailEntryCodeType.new("CreditTenDayAuction")
+  CreditTransferFrom = AccountDetailEntryCodeType.new("CreditTransferFrom")
+  CrediteBayStores = AccountDetailEntryCodeType.new("CrediteBayStores")
+  CustomCode = AccountDetailEntryCodeType.new("CustomCode")
+  DebitTransferTo = AccountDetailEntryCodeType.new("DebitTransferTo")
+  DirectDebitNotOnFile = AccountDetailEntryCodeType.new("DirectDebitNotOnFile")
+  DirectDebitOnFile = AccountDetailEntryCodeType.new("DirectDebitOnFile")
+  DirectDebitReturnedItem = AccountDetailEntryCodeType.new("DirectDebitReturnedItem")
+  DirectDebitReversal = AccountDetailEntryCodeType.new("DirectDebitReversal")
+  EBayCredit = AccountDetailEntryCodeType.new("eBayCredit")
+  EBayDebit = AccountDetailEntryCodeType.new("eBayDebit")
+  EBayStoreInventorySubscriptionCredit = AccountDetailEntryCodeType.new("eBayStoreInventorySubscriptionCredit")
+  EBayVISACredit = AccountDetailEntryCodeType.new("eBayVISACredit")
+  EOMRestriction = AccountDetailEntryCodeType.new("EOMRestriction")
+  ElectronicInvoiceOff = AccountDetailEntryCodeType.new("ElectronicInvoiceOff")
+  ElectronicInvoiceOn = AccountDetailEntryCodeType.new("ElectronicInvoiceOn")
+  EmailMarketingCredit = AccountDetailEntryCodeType.new("EmailMarketingCredit")
+  EmailMarketingFee = AccountDetailEntryCodeType.new("EmailMarketingFee")
+  EquifaxRealtimeFee = AccountDetailEntryCodeType.new("EquifaxRealtimeFee")
+  ExtendedAcutionCredit = AccountDetailEntryCodeType.new("ExtendedAcutionCredit")
+  ExtendedAuctionFee = AccountDetailEntryCodeType.new("ExtendedAuctionFee")
+  ExtendedDurationFee = AccountDetailEntryCodeType.new("ExtendedDurationFee")
+  ExtendedDurationFeeCredit = AccountDetailEntryCodeType.new("ExtendedDurationFeeCredit")
+  FVFCreditReversal = AccountDetailEntryCodeType.new("FVFCreditReversal")
+  FVFCreditReversalAutomatic = AccountDetailEntryCodeType.new("FVFCreditReversalAutomatic")
+  FeeBold = AccountDetailEntryCodeType.new("FeeBold")
+  FeeCategoryFeatured = AccountDetailEntryCodeType.new("FeeCategoryFeatured")
+  FeeFeatured = AccountDetailEntryCodeType.new("FeeFeatured")
+  FeeFeaturedGallery = AccountDetailEntryCodeType.new("FeeFeaturedGallery")
+  FeeFinalValue = AccountDetailEntryCodeType.new("FeeFinalValue")
+  FeeFinalValueFixedPrice = AccountDetailEntryCodeType.new("FeeFinalValueFixedPrice")
+  FeeGallery = AccountDetailEntryCodeType.new("FeeGallery")
+  FeeGiftIcon = AccountDetailEntryCodeType.new("FeeGiftIcon")
+  FeeHighlight = AccountDetailEntryCodeType.new("FeeHighlight")
+  FeeIPIXPhoto = AccountDetailEntryCodeType.new("FeeIPIXPhoto")
+  FeeIPIXSlideShow = AccountDetailEntryCodeType.new("FeeIPIXSlideShow")
+  FeeInsertion = AccountDetailEntryCodeType.new("FeeInsertion")
+  FeeInsertionFixedPrice = AccountDetailEntryCodeType.new("FeeInsertionFixedPrice")
+  FeeLargePicture = AccountDetailEntryCodeType.new("FeeLargePicture")
+  FeeNSFCheck = AccountDetailEntryCodeType.new("FeeNSFCheck")
+  FeePartialSale = AccountDetailEntryCodeType.new("FeePartialSale")
+  FeePicturePack = AccountDetailEntryCodeType.new("FeePicturePack")
+  FeePictureShow = AccountDetailEntryCodeType.new("FeePictureShow")
+  FeeRealEstate30DaysListing = AccountDetailEntryCodeType.new("FeeRealEstate30DaysListing")
+  FeeRedepositCheck = AccountDetailEntryCodeType.new("FeeRedepositCheck")
+  FeeReserve = AccountDetailEntryCodeType.new("FeeReserve")
+  FeeReturnCheckClose = AccountDetailEntryCodeType.new("FeeReturnCheckClose")
+  FeeReturnedCheck = AccountDetailEntryCodeType.new("FeeReturnedCheck")
+  FeeSchedule = AccountDetailEntryCodeType.new("FeeSchedule")
+  FeeSearchableMobileDE = AccountDetailEntryCodeType.new("FeeSearchableMobileDE")
+  FeeTenDayAuction = AccountDetailEntryCodeType.new("FeeTenDayAuction")
+  FinalEntry = AccountDetailEntryCodeType.new("FinalEntry")
+  FinanceCharge = AccountDetailEntryCodeType.new("FinanceCharge")
+  FinanceChargeReversal = AccountDetailEntryCodeType.new("FinanceChargeReversal")
+  FixedPriceDurationCredit = AccountDetailEntryCodeType.new("FixedPriceDurationCredit")
+  FixedPriceDurationFee = AccountDetailEntryCodeType.new("FixedPriceDurationFee")
+  FlagDDDDPending = AccountDetailEntryCodeType.new("FlagDDDDPending")
+  FlagDDPaymentConfirmed = AccountDetailEntryCodeType.new("FlagDDPaymentConfirmed")
+  ForeignFundsCheckReversal = AccountDetailEntryCodeType.new("ForeignFundsCheckReversal")
+  ForeignFundsConvert = AccountDetailEntryCodeType.new("ForeignFundsConvert")
+  InvoiceCreditBalance = AccountDetailEntryCodeType.new("InvoiceCreditBalance")
+  Invoiced = AccountDetailEntryCodeType.new("Invoiced")
+  InvoicedCreditCard = AccountDetailEntryCodeType.new("InvoicedCreditCard")
+  ItemMoveFee = AccountDetailEntryCodeType.new("ItemMoveFee")
+  LAAudioVideoFee = AccountDetailEntryCodeType.new("LAAudioVideoFee")
+  LAAudioVideoFeeRefund = AccountDetailEntryCodeType.new("LAAudioVideoFeeRefund")
+  LABuyerPremiumPercentageFee = AccountDetailEntryCodeType.new("LABuyerPremiumPercentageFee")
+  LABuyerPremiumPercentageFeeRefund = AccountDetailEntryCodeType.new("LABuyerPremiumPercentageFeeRefund")
+  LACatalogFee = AccountDetailEntryCodeType.new("LACatalogFee")
+  LACatalogInsertionRefund = AccountDetailEntryCodeType.new("LACatalogInsertionRefund")
+  LACatalogItemFeeRefund = AccountDetailEntryCodeType.new("LACatalogItemFeeRefund")
+  LAExtraItem = AccountDetailEntryCodeType.new("LAExtraItem")
+  LAFinalValueFee = AccountDetailEntryCodeType.new("LAFinalValueFee")
+  LAFinalValueFeeRefund = AccountDetailEntryCodeType.new("LAFinalValueFeeRefund")
+  ListingDesignerCredit = AccountDetailEntryCodeType.new("ListingDesignerCredit")
+  ListingDesignerFee = AccountDetailEntryCodeType.new("ListingDesignerFee")
+  Memo = AccountDetailEntryCodeType.new("Memo")
+  Merged = AccountDetailEntryCodeType.new("Merged")
+  OutageCredit = AccountDetailEntryCodeType.new("OutageCredit")
+  PaperInvoiceOff = AccountDetailEntryCodeType.new("PaperInvoiceOff")
+  PaperInvoiceOn = AccountDetailEntryCodeType.new("PaperInvoiceOn")
+  PayPalChargeBack = AccountDetailEntryCodeType.new("PayPalChargeBack")
+  PayPalFailed = AccountDetailEntryCodeType.new("PayPalFailed")
+  PayPalOTPPend = AccountDetailEntryCodeType.new("PayPalOTPPend")
+  PayPalOTPSucc = AccountDetailEntryCodeType.new("PayPalOTPSucc")
+  PayPalRefund = AccountDetailEntryCodeType.new("PayPalRefund")
+  PaymentAdjustmentCredit = AccountDetailEntryCodeType.new("PaymentAdjustmentCredit")
+  PaymentAdjustmentDebit = AccountDetailEntryCodeType.new("PaymentAdjustmentDebit")
+  PaymentCC = AccountDetailEntryCodeType.new("PaymentCC")
+  PaymentCCOnce = AccountDetailEntryCodeType.new("PaymentCCOnce")
+  PaymentCash = AccountDetailEntryCodeType.new("PaymentCash")
+  PaymentCheck = AccountDetailEntryCodeType.new("PaymentCheck")
+  PaymentDirectDebit = AccountDetailEntryCodeType.new("PaymentDirectDebit")
+  PaymentElectronicTransfer = AccountDetailEntryCodeType.new("PaymentElectronicTransfer")
+  PaymentElectronicTransferReversal = AccountDetailEntryCodeType.new("PaymentElectronicTransferReversal")
+  PaymentEquifaxCredit = AccountDetailEntryCodeType.new("PaymentEquifaxCredit")
+  PaymentEquifaxDebit = AccountDetailEntryCodeType.new("PaymentEquifaxDebit")
+  PaymentGiftCertificate = AccountDetailEntryCodeType.new("PaymentGiftCertificate")
+  PaymentHomeBanking = AccountDetailEntryCodeType.new("PaymentHomeBanking")
+  PaymentMoneyOrder = AccountDetailEntryCodeType.new("PaymentMoneyOrder")
+  PaymentWireTransfer = AccountDetailEntryCodeType.new("PaymentWireTransfer")
+  PaypalOffFile = AccountDetailEntryCodeType.new("PaypalOffFile")
+  PaypalOnFile = AccountDetailEntryCodeType.new("PaypalOnFile")
+  PaypalOnFileByCSR = AccountDetailEntryCodeType.new("PaypalOnFileByCSR")
+  PictureManagerSubscriptionFee = AccountDetailEntryCodeType.new("PictureManagerSubscriptionFee")
+  PictureManagerSubscriptionFeeCredit = AccountDetailEntryCodeType.new("PictureManagerSubscriptionFeeCredit")
+  ProPackBundleFee = AccountDetailEntryCodeType.new("ProPackBundleFee")
+  ProPackBundleFeeCredit = AccountDetailEntryCodeType.new("ProPackBundleFeeCredit")
+  ProPackPlusBundleFee = AccountDetailEntryCodeType.new("ProPackPlusBundleFee")
+  ProPackPlusBundleFeeCredit = AccountDetailEntryCodeType.new("ProPackPlusBundleFeeCredit")
+  PromotionalCredit = AccountDetailEntryCodeType.new("PromotionalCredit")
+  ReferrerCredit = AccountDetailEntryCodeType.new("ReferrerCredit")
+  ReferrerDebit = AccountDetailEntryCodeType.new("ReferrerDebit")
+  RefundCC = AccountDetailEntryCodeType.new("RefundCC")
+  RefundCheck = AccountDetailEntryCodeType.new("RefundCheck")
+  RevertUserState = AccountDetailEntryCodeType.new("RevertUserState")
+  SMProListingDesignerCredit = AccountDetailEntryCodeType.new("SMProListingDesignerCredit")
+  SMProListingDesignerFee = AccountDetailEntryCodeType.new("SMProListingDesignerFee")
+  SalesReportsPlusCredit = AccountDetailEntryCodeType.new("SalesReportsPlusCredit")
+  SalesReportsPlusFee = AccountDetailEntryCodeType.new("SalesReportsPlusFee")
+  SellerReportsBasicCredit = AccountDetailEntryCodeType.new("SellerReportsBasicCredit")
+  SellerReportsBasicFee = AccountDetailEntryCodeType.new("SellerReportsBasicFee")
+  SellerReportsPlusCredit = AccountDetailEntryCodeType.new("SellerReportsPlusCredit")
+  SellerReportsPlusFee = AccountDetailEntryCodeType.new("SellerReportsPlusFee")
+  SetOnHold = AccountDetailEntryCodeType.new("SetOnHold")
+  StoresGTCCredit = AccountDetailEntryCodeType.new("StoresGTCCredit")
+  StoresGTCFee = AccountDetailEntryCodeType.new("StoresGTCFee")
+  StoresReferralCredit = AccountDetailEntryCodeType.new("StoresReferralCredit")
+  StoresReferralFee = AccountDetailEntryCodeType.new("StoresReferralFee")
+  StoresSuccessfulListingFee = AccountDetailEntryCodeType.new("StoresSuccessfulListingFee")
+  StoresSuccessfulListingFeeCredit = AccountDetailEntryCodeType.new("StoresSuccessfulListingFeeCredit")
+  SubscriptionAABasic = AccountDetailEntryCodeType.new("SubscriptionAABasic")
+  SubscriptionAAPro = AccountDetailEntryCodeType.new("SubscriptionAAPro")
+  SubscriptionSMBasic = AccountDetailEntryCodeType.new("SubscriptionSMBasic")
+  SubscriptionSMBasicPro = AccountDetailEntryCodeType.new("SubscriptionSMBasicPro")
+  SubscriptioneBayStores = AccountDetailEntryCodeType.new("SubscriptioneBayStores")
+  SubtitleFee = AccountDetailEntryCodeType.new("SubtitleFee")
+  SubtitleFeeCredit = AccountDetailEntryCodeType.new("SubtitleFeeCredit")
+  SwitchCurrency = AccountDetailEntryCodeType.new("SwitchCurrency")
+  TemporaryCredit = AccountDetailEntryCodeType.new("TemporaryCredit")
+  TemporaryCreditReversal = AccountDetailEntryCodeType.new("TemporaryCreditReversal")
+  TradingLimitOverrideOff = AccountDetailEntryCodeType.new("TradingLimitOverrideOff")
+  TradingLimitOverrideOn = AccountDetailEntryCodeType.new("TradingLimitOverrideOn")
+  Unknown = AccountDetailEntryCodeType.new("Unknown")
+  VATCredit = AccountDetailEntryCodeType.new("VATCredit")
+  VATDebit = AccountDetailEntryCodeType.new("VATDebit")
+  VATStatusChangeApproved = AccountDetailEntryCodeType.new("VATStatusChangeApproved")
+  VATStatusChangePending = AccountDetailEntryCodeType.new("VATStatusChangePending")
+  VATStatusChange_Denied = AccountDetailEntryCodeType.new("VATStatusChange_Denied")
+  VATStatusDeletedByCSR = AccountDetailEntryCodeType.new("VATStatusDeletedByCSR")
+  VATStatusDeletedByUser = AccountDetailEntryCodeType.new("VATStatusDeletedByUser")
+  ValuePackBundleFee = AccountDetailEntryCodeType.new("ValuePackBundleFee")
+  ValuePackBundleFeeCredit = AccountDetailEntryCodeType.new("ValuePackBundleFeeCredit")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}AccountEntrySortTypeCodeType
-module AccountEntrySortTypeCodeType
-  AccountEntryCreatedTimeAscending = "AccountEntryCreatedTimeAscending"
-  AccountEntryCreatedTimeDescending = "AccountEntryCreatedTimeDescending"
-  AccountEntryFeeTypeAscending = "AccountEntryFeeTypeAscending"
-  AccountEntryFeeTypeDescending = "AccountEntryFeeTypeDescending"
-  AccountEntryItemNumberAscending = "AccountEntryItemNumberAscending"
-  AccountEntryItemNumberDescending = "AccountEntryItemNumberDescending"
-  CustomCode = "CustomCode"
-  None = "None"
+class AccountEntrySortTypeCodeType < ::String
+  @@schema_type = "AccountEntrySortTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AccountEntryCreatedTimeAscending = AccountEntrySortTypeCodeType.new("AccountEntryCreatedTimeAscending")
+  AccountEntryCreatedTimeDescending = AccountEntrySortTypeCodeType.new("AccountEntryCreatedTimeDescending")
+  AccountEntryFeeTypeAscending = AccountEntrySortTypeCodeType.new("AccountEntryFeeTypeAscending")
+  AccountEntryFeeTypeDescending = AccountEntrySortTypeCodeType.new("AccountEntryFeeTypeDescending")
+  AccountEntryItemNumberAscending = AccountEntrySortTypeCodeType.new("AccountEntryItemNumberAscending")
+  AccountEntryItemNumberDescending = AccountEntrySortTypeCodeType.new("AccountEntryItemNumberDescending")
+  CustomCode = AccountEntrySortTypeCodeType.new("CustomCode")
+  None = AccountEntrySortTypeCodeType.new("None")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}AccountHistorySelectionCodeType
-module AccountHistorySelectionCodeType
-  BetweenSpecifiedDates = "BetweenSpecifiedDates"
-  CustomCode = "CustomCode"
-  LastInvoice = "LastInvoice"
-  SpecifiedInvoice = "SpecifiedInvoice"
+class AccountHistorySelectionCodeType < ::String
+  @@schema_type = "AccountHistorySelectionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BetweenSpecifiedDates = AccountHistorySelectionCodeType.new("BetweenSpecifiedDates")
+  CustomCode = AccountHistorySelectionCodeType.new("CustomCode")
+  LastInvoice = AccountHistorySelectionCodeType.new("LastInvoice")
+  SpecifiedInvoice = AccountHistorySelectionCodeType.new("SpecifiedInvoice")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}AccountStateCodeType
-module AccountStateCodeType
-  Active = "Active"
-  CustomCode = "CustomCode"
-  Inactive = "Inactive"
-  Pending = "Pending"
+class AccountStateCodeType < ::String
+  @@schema_type = "AccountStateCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Active = AccountStateCodeType.new("Active")
+  CustomCode = AccountStateCodeType.new("CustomCode")
+  Inactive = AccountStateCodeType.new("Inactive")
+  Pending = AccountStateCodeType.new("Pending")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}AdFormatEnabledCodeType
+class AdFormatEnabledCodeType < ::String
+  @@schema_type = "AdFormatEnabledCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Disabled = AdFormatEnabledCodeType.new("Disabled")
+  Enabled = AdFormatEnabledCodeType.new("Enabled")
+  Only = AdFormatEnabledCodeType.new("Only")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}AddressOwnerCodeType
-module AddressOwnerCodeType
-  CustomCode = "CustomCode"
-  EBay = "eBay"
-  PayPal = "PayPal"
+class AddressOwnerCodeType < ::String
+  @@schema_type = "AddressOwnerCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = AddressOwnerCodeType.new("CustomCode")
+  EBay = AddressOwnerCodeType.new("eBay")
+  PayPal = AddressOwnerCodeType.new("PayPal")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}AddressRecordTypeCodeType
-module AddressRecordTypeCodeType
-  Business = "Business"
-  CustomCode = "CustomCode"
-  Residential = "Residential"
+class AddressRecordTypeCodeType < ::String
+  @@schema_type = "AddressRecordTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Business = AddressRecordTypeCodeType.new("Business")
+  CustomCode = AddressRecordTypeCodeType.new("CustomCode")
+  Residential = AddressRecordTypeCodeType.new("Residential")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}AddressStatusCodeType
-module AddressStatusCodeType
-  Confirmed = "Confirmed"
-  CustomCode = "CustomCode"
-  None = "None"
-  Unconfirmed = "Unconfirmed"
-end
+class AddressStatusCodeType < ::String
+  @@schema_type = "AddressStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
 
-# {urn:ebay:apis:eBLBaseComponents}AuctionTypeCodeType
-module AuctionTypeCodeType
-  AdType = "Ad type"
-  Chinese = "Chinese"
-  CustomCode = "CustomCode"
-  Dutch = "Dutch"
-  FixedPriceItem = "Fixed Price Item"
-  Live = "Live"
-  PersonalOffer = "Personal Offer"
-  StoresFixedPrice = "Stores Fixed-price"
-  Unknown = "Unknown"
+  Confirmed = AddressStatusCodeType.new("Confirmed")
+  CustomCode = AddressStatusCodeType.new("CustomCode")
+  None = AddressStatusCodeType.new("None")
+  Unconfirmed = AddressStatusCodeType.new("Unconfirmed")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}BalanceCodeType
-module BalanceCodeType
-  CustomCode = "CustomCode"
-  Other = "Other"
+class BalanceCodeType < ::String
+  @@schema_type = "BalanceCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = BalanceCodeType.new("CustomCode")
+  Other = BalanceCodeType.new("Other")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}BestOfferActionCodeType
-module BestOfferActionCodeType
-  Accept = "Accept"
-  CustomCode = "CustomCode"
-  Decline = "Decline"
+class BestOfferActionCodeType < ::String
+  @@schema_type = "BestOfferActionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Accept = BestOfferActionCodeType.new("Accept")
+  Counter = BestOfferActionCodeType.new("Counter")
+  CustomCode = BestOfferActionCodeType.new("CustomCode")
+  Decline = BestOfferActionCodeType.new("Decline")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}BestOfferStatusCodeType
-module BestOfferStatusCodeType
-  Accepted = "Accepted"
-  Active = "Active"
-  AdminEnded = "AdminEnded"
-  All = "All"
-  CustomCode = "CustomCode"
-  Declined = "Declined"
-  Expired = "Expired"
-  Pending = "Pending"
-  Retracted = "Retracted"
+class BestOfferStatusCodeType < ::String
+  @@schema_type = "BestOfferStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Accepted = BestOfferStatusCodeType.new("Accepted")
+  Active = BestOfferStatusCodeType.new("Active")
+  AdminEnded = BestOfferStatusCodeType.new("AdminEnded")
+  All = BestOfferStatusCodeType.new("All")
+  Countered = BestOfferStatusCodeType.new("Countered")
+  CustomCode = BestOfferStatusCodeType.new("CustomCode")
+  Declined = BestOfferStatusCodeType.new("Declined")
+  Expired = BestOfferStatusCodeType.new("Expired")
+  Pending = BestOfferStatusCodeType.new("Pending")
+  Retracted = BestOfferStatusCodeType.new("Retracted")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}BestOfferTypeCodeType
+class BestOfferTypeCodeType < ::String
+  @@schema_type = "BestOfferTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BuyerBestOffer = BestOfferTypeCodeType.new("BuyerBestOffer")
+  BuyerCounterOffer = BestOfferTypeCodeType.new("BuyerCounterOffer")
+  CustomCode = BestOfferTypeCodeType.new("CustomCode")
+  SellerCounterOffer = BestOfferTypeCodeType.new("SellerCounterOffer")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}BidActionCodeType
-module BidActionCodeType
-  Absentee = "Absentee"
-  AutoCancel = "AutoCancel"
-  AutoRetraction = "AutoRetraction"
-  Bid = "Bid"
-  BuyItNow = "BuyItNow"
-  Cancelled = "Cancelled"
-  CustomCode = "CustomCode"
-  NotUsed = "NotUsed"
-  Purchase = "Purchase"
-  Retraction = "Retraction"
-  Unknown = "Unknown"
+class BidActionCodeType < ::String
+  @@schema_type = "BidActionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Absentee = BidActionCodeType.new("Absentee")
+  AutoCancel = BidActionCodeType.new("AutoCancel")
+  AutoRetraction = BidActionCodeType.new("AutoRetraction")
+  Bid = BidActionCodeType.new("Bid")
+  BuyItNow = BidActionCodeType.new("BuyItNow")
+  Cancelled = BidActionCodeType.new("Cancelled")
+  CustomCode = BidActionCodeType.new("CustomCode")
+  NotUsed = BidActionCodeType.new("NotUsed")
+  Purchase = BidActionCodeType.new("Purchase")
+  Retraction = BidActionCodeType.new("Retraction")
+  Unknown = BidActionCodeType.new("Unknown")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}BidderStatusCodeType
+class BidderStatusCodeType < ::String
+  @@schema_type = "BidderStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Approved = BidderStatusCodeType.new("Approved")
+  CustomCode = BidderStatusCodeType.new("CustomCode")
+  Denied = BidderStatusCodeType.new("Denied")
+  Pending = BidderStatusCodeType.new("Pending")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}BidderTypeCodeType
-module BidderTypeCodeType
-  AllBidder = "AllBidder"
-  CustomCode = "CustomCode"
-  HighBidder = "HighBidder"
+class BidderTypeCodeType < ::String
+  @@schema_type = "BidderTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AllBidder = BidderTypeCodeType.new("AllBidder")
+  CustomCode = BidderTypeCodeType.new("CustomCode")
+  HighBidder = BidderTypeCodeType.new("HighBidder")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}BulkCatalogListerStatusCodeType
-module BulkCatalogListerStatusCodeType
-  Active = "Active"
-  CustomCode = "CustomCode"
-  OnHold = "OnHold"
-  OnWatch = "OnWatch"
-  Preapproved = "Preapproved"
-  Suspended = "Suspended"
-  WatchWarn = "WatchWarn"
+class BulkCatalogListerStatusCodeType < ::String
+  @@schema_type = "BulkCatalogListerStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Active = BulkCatalogListerStatusCodeType.new("Active")
+  CustomCode = BulkCatalogListerStatusCodeType.new("CustomCode")
+  OnHold = BulkCatalogListerStatusCodeType.new("OnHold")
+  OnWatch = BulkCatalogListerStatusCodeType.new("OnWatch")
+  Preapproved = BulkCatalogListerStatusCodeType.new("Preapproved")
+  Suspended = BulkCatalogListerStatusCodeType.new("Suspended")
+  WatchWarn = BulkCatalogListerStatusCodeType.new("WatchWarn")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}BuyerPaymentMethodCodeType
-module BuyerPaymentMethodCodeType
-  AmEx = "AmEx"
-  CCAccepted = "CCAccepted"
-  COD = "COD"
-  CODPrePayDelivery = "CODPrePayDelivery"
-  CashInPerson = "CashInPerson"
-  CashOnPickup = "CashOnPickup"
-  CustomCode = "CustomCode"
-  Discover = "Discover"
-  Escrow = "Escrow"
-  LoanCheck = "LoanCheck"
-  MOCC = "MOCC"
-  MoneyXferAccepted = "MoneyXferAccepted"
-  MoneyXferAcceptedInCheckout = "MoneyXferAcceptedInCheckout"
-  None = "None"
-  Other = "Other"
-  OtherOnlinePayments = "OtherOnlinePayments"
-  PaisaPayAccepted = "PaisaPayAccepted"
-  PayPal = "PayPal"
-  PaymentSeeDescription = "PaymentSeeDescription"
-  PersonalCheck = "PersonalCheck"
-  PostalTransfer = "PostalTransfer"
-  PrePayDelivery = "PrePayDelivery"
-  VisaMC = "VisaMC"
+class BuyerPaymentMethodCodeType < ::String
+  @@schema_type = "BuyerPaymentMethodCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AmEx = BuyerPaymentMethodCodeType.new("AmEx")
+  CCAccepted = BuyerPaymentMethodCodeType.new("CCAccepted")
+  COD = BuyerPaymentMethodCodeType.new("COD")
+  CODPrePayDelivery = BuyerPaymentMethodCodeType.new("CODPrePayDelivery")
+  CashInPerson = BuyerPaymentMethodCodeType.new("CashInPerson")
+  CashOnPickup = BuyerPaymentMethodCodeType.new("CashOnPickup")
+  CustomCode = BuyerPaymentMethodCodeType.new("CustomCode")
+  Discover = BuyerPaymentMethodCodeType.new("Discover")
+  Escrow = BuyerPaymentMethodCodeType.new("Escrow")
+  LoanCheck = BuyerPaymentMethodCodeType.new("LoanCheck")
+  MOCC = BuyerPaymentMethodCodeType.new("MOCC")
+  MoneyXferAccepted = BuyerPaymentMethodCodeType.new("MoneyXferAccepted")
+  MoneyXferAcceptedInCheckout = BuyerPaymentMethodCodeType.new("MoneyXferAcceptedInCheckout")
+  None = BuyerPaymentMethodCodeType.new("None")
+  Other = BuyerPaymentMethodCodeType.new("Other")
+  OtherOnlinePayments = BuyerPaymentMethodCodeType.new("OtherOnlinePayments")
+  PaisaPayAccepted = BuyerPaymentMethodCodeType.new("PaisaPayAccepted")
+  PayPal = BuyerPaymentMethodCodeType.new("PayPal")
+  PaymentSeeDescription = BuyerPaymentMethodCodeType.new("PaymentSeeDescription")
+  PersonalCheck = BuyerPaymentMethodCodeType.new("PersonalCheck")
+  PostalTransfer = BuyerPaymentMethodCodeType.new("PostalTransfer")
+  PrePayDelivery = BuyerPaymentMethodCodeType.new("PrePayDelivery")
+  VisaMC = BuyerPaymentMethodCodeType.new("VisaMC")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}BuyerProtectionCodeType
-module BuyerProtectionCodeType
-  CustomCode = "CustomCode"
-  ItemEligible = "ItemEligible"
-  ItemIneligible = "ItemIneligible"
-  ItemMarkedEligible = "ItemMarkedEligible"
-  ItemMarkedIneligible = "ItemMarkedIneligible"
+class BuyerProtectionCodeType < ::String
+  @@schema_type = "BuyerProtectionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = BuyerProtectionCodeType.new("CustomCode")
+  ItemEligible = BuyerProtectionCodeType.new("ItemEligible")
+  ItemIneligible = BuyerProtectionCodeType.new("ItemIneligible")
+  ItemMarkedEligible = BuyerProtectionCodeType.new("ItemMarkedEligible")
+  ItemMarkedIneligible = BuyerProtectionCodeType.new("ItemMarkedIneligible")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CalculatedShippingChargeOptionCodeType
-module CalculatedShippingChargeOptionCodeType
-  ChargeEachItem = "ChargeEachItem"
-  ChargeEntireOrder = "ChargeEntireOrder"
-  CustomCode = "CustomCode"
+class CalculatedShippingChargeOptionCodeType < ::String
+  @@schema_type = "CalculatedShippingChargeOptionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  ChargeEachItem = CalculatedShippingChargeOptionCodeType.new("ChargeEachItem")
+  ChargeEntireOrder = CalculatedShippingChargeOptionCodeType.new("ChargeEntireOrder")
+  CustomCode = CalculatedShippingChargeOptionCodeType.new("CustomCode")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CalculatedShippingRateOptionCodeType
-module CalculatedShippingRateOptionCodeType
-  CombinedItemWeight = "CombinedItemWeight"
-  CustomCode = "CustomCode"
-  IndividualItemWeight = "IndividualItemWeight"
+class CalculatedShippingRateOptionCodeType < ::String
+  @@schema_type = "CalculatedShippingRateOptionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CombinedItemWeight = CalculatedShippingRateOptionCodeType.new("CombinedItemWeight")
+  CustomCode = CalculatedShippingRateOptionCodeType.new("CustomCode")
+  IndividualItemWeight = CalculatedShippingRateOptionCodeType.new("IndividualItemWeight")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CategoryFeatureDetailLevelCodeType
-module CategoryFeatureDetailLevelCodeType
-  CustomCode = "CustomCode"
-  ReturnAll = "ReturnAll"
-  ReturnFeatureDefinitions = "ReturnFeatureDefinitions"
+class CategoryFeatureDetailLevelCodeType < ::String
+  @@schema_type = "CategoryFeatureDetailLevelCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = CategoryFeatureDetailLevelCodeType.new("CustomCode")
+  ReturnAll = CategoryFeatureDetailLevelCodeType.new("ReturnAll")
+  ReturnFeatureDefinitions = CategoryFeatureDetailLevelCodeType.new("ReturnFeatureDefinitions")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CategoryListingsOrderCodeType
-module CategoryListingsOrderCodeType
-  CustomCode = "CustomCode"
-  DistanceSort = "DistanceSort"
-  ItemsBy24Hr = "ItemsBy24Hr"
-  ItemsEndIn5Hr = "ItemsEndIn5Hr"
-  ItemsEndToday = "ItemsEndToday"
-  NoFilter = "NoFilter"
-  SortByPriceAsc = "SortByPriceAsc"
-  SortByPriceDesc = "SortByPriceDesc"
+class CategoryListingsOrderCodeType < ::String
+  @@schema_type = "CategoryListingsOrderCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = CategoryListingsOrderCodeType.new("CustomCode")
+  DistanceSort = CategoryListingsOrderCodeType.new("DistanceSort")
+  ItemsBy24Hr = CategoryListingsOrderCodeType.new("ItemsBy24Hr")
+  ItemsEndIn5Hr = CategoryListingsOrderCodeType.new("ItemsEndIn5Hr")
+  ItemsEndToday = CategoryListingsOrderCodeType.new("ItemsEndToday")
+  NoFilter = CategoryListingsOrderCodeType.new("NoFilter")
+  SortByPriceAsc = CategoryListingsOrderCodeType.new("SortByPriceAsc")
+  SortByPriceDesc = CategoryListingsOrderCodeType.new("SortByPriceDesc")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CategoryListingsSearchCodeType
-module CategoryListingsSearchCodeType
-  CustomCode = "CustomCode"
-  Featured = "Featured"
-  SuperFeatured = "SuperFeatured"
+class CategoryListingsSearchCodeType < ::String
+  @@schema_type = "CategoryListingsSearchCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = CategoryListingsSearchCodeType.new("CustomCode")
+  Featured = CategoryListingsSearchCodeType.new("Featured")
+  SuperFeatured = CategoryListingsSearchCodeType.new("SuperFeatured")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CharacteristicsSearchCodeType
-module CharacteristicsSearchCodeType
-  CustomCode = "CustomCode"
-  Multi = "Multi"
-  Single = "Single"
+class CharacteristicsSearchCodeType < ::String
+  @@schema_type = "CharacteristicsSearchCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = CharacteristicsSearchCodeType.new("CustomCode")
+  Multi = CharacteristicsSearchCodeType.new("Multi")
+  Single = CharacteristicsSearchCodeType.new("Single")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CharityAffiliationTypeCodeType
-module CharityAffiliationTypeCodeType
-  Community = "Community"
-  CustomCode = "CustomCode"
-  Direct = "Direct"
-  Remove = "Remove"
+class CharityAffiliationTypeCodeType < ::String
+  @@schema_type = "CharityAffiliationTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Community = CharityAffiliationTypeCodeType.new("Community")
+  CustomCode = CharityAffiliationTypeCodeType.new("CustomCode")
+  Direct = CharityAffiliationTypeCodeType.new("Direct")
+  Remove = CharityAffiliationTypeCodeType.new("Remove")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CharitySellerStatusCodeType
-module CharitySellerStatusCodeType
-  Closed = "Closed"
-  CreditCardAboutToExpire = "CreditCardAboutToExpire"
-  CreditCardExpired = "CreditCardExpired"
-  CustomCode = "CustomCode"
-  DirectDebitRejected = "DirectDebitRejected"
-  NotRegisteredLostDirectSellerStatus = "NotRegisteredLostDirectSellerStatus"
-  Registered = "Registered"
-  RegisteredNoCreditCard = "RegisteredNoCreditCard"
-  Suspended = "Suspended"
-  TokenExpired = "TokenExpired"
+class CharitySellerStatusCodeType < ::String
+  @@schema_type = "CharitySellerStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Closed = CharitySellerStatusCodeType.new("Closed")
+  CreditCardAboutToExpire = CharitySellerStatusCodeType.new("CreditCardAboutToExpire")
+  CreditCardExpired = CharitySellerStatusCodeType.new("CreditCardExpired")
+  CustomCode = CharitySellerStatusCodeType.new("CustomCode")
+  DirectDebitRejected = CharitySellerStatusCodeType.new("DirectDebitRejected")
+  NotRegisteredLostDirectSellerStatus = CharitySellerStatusCodeType.new("NotRegisteredLostDirectSellerStatus")
+  Registered = CharitySellerStatusCodeType.new("Registered")
+  RegisteredNoCreditCard = CharitySellerStatusCodeType.new("RegisteredNoCreditCard")
+  Suspended = CharitySellerStatusCodeType.new("Suspended")
+  TokenExpired = CharitySellerStatusCodeType.new("TokenExpired")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CharityStatusCodeType
-module CharityStatusCodeType
-  CustomCode = "CustomCode"
-  NoLongerValid = "NoLongerValid"
-  Valid = "Valid"
+class CharityStatusCodeType < ::String
+  @@schema_type = "CharityStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = CharityStatusCodeType.new("CustomCode")
+  NoLongerValid = CharityStatusCodeType.new("NoLongerValid")
+  Valid = CharityStatusCodeType.new("Valid")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CheckoutMethodCodeType
-module CheckoutMethodCodeType
-  CustomCode = "CustomCode"
-  LogosIneBayListing = "LogosIneBayListing"
-  Other = "Other"
-  ThirdPartyCheckout = "ThirdPartyCheckout"
+class CheckoutMethodCodeType < ::String
+  @@schema_type = "CheckoutMethodCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = CheckoutMethodCodeType.new("CustomCode")
+  LogosIneBayListing = CheckoutMethodCodeType.new("LogosIneBayListing")
+  Other = CheckoutMethodCodeType.new("Other")
+  ThirdPartyCheckout = CheckoutMethodCodeType.new("ThirdPartyCheckout")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CheckoutStatusCodeType
-module CheckoutStatusCodeType
-  BuyerRequestsTotal = "BuyerRequestsTotal"
-  CheckoutComplete = "CheckoutComplete"
-  CheckoutIncomplete = "CheckoutIncomplete"
-  CustomCode = "CustomCode"
-  SellerResponded = "SellerResponded"
+class CheckoutStatusCodeType < ::String
+  @@schema_type = "CheckoutStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BuyerRequestsTotal = CheckoutStatusCodeType.new("BuyerRequestsTotal")
+  CheckoutComplete = CheckoutStatusCodeType.new("CheckoutComplete")
+  CheckoutIncomplete = CheckoutStatusCodeType.new("CheckoutIncomplete")
+  CustomCode = CheckoutStatusCodeType.new("CustomCode")
+  SellerResponded = CheckoutStatusCodeType.new("SellerResponded")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CombinedPaymentOptionCodeType
-module CombinedPaymentOptionCodeType
-  CustomCode = "CustomCode"
-  DiscountSpecified = "DiscountSpecified"
-  NoCombinedPayment = "NoCombinedPayment"
-  SpecifyDiscountLater = "SpecifyDiscountLater"
+class CombinedPaymentOptionCodeType < ::String
+  @@schema_type = "CombinedPaymentOptionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = CombinedPaymentOptionCodeType.new("CustomCode")
+  DiscountSpecified = CombinedPaymentOptionCodeType.new("DiscountSpecified")
+  NoCombinedPayment = CombinedPaymentOptionCodeType.new("NoCombinedPayment")
+  SpecifyDiscountLater = CombinedPaymentOptionCodeType.new("SpecifyDiscountLater")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CombinedPaymentPeriodCodeType
-module CombinedPaymentPeriodCodeType
-  CustomCode = "CustomCode"
-  Days_14 = "Days_14"
-  Days_3 = "Days_3"
-  Days_30 = "Days_30"
-  Days_5 = "Days_5"
-  Days_7 = "Days_7"
+class CombinedPaymentPeriodCodeType < ::String
+  @@schema_type = "CombinedPaymentPeriodCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = CombinedPaymentPeriodCodeType.new("CustomCode")
+  Days_14 = CombinedPaymentPeriodCodeType.new("Days_14")
+  Days_3 = CombinedPaymentPeriodCodeType.new("Days_3")
+  Days_30 = CombinedPaymentPeriodCodeType.new("Days_30")
+  Days_5 = CombinedPaymentPeriodCodeType.new("Days_5")
+  Days_7 = CombinedPaymentPeriodCodeType.new("Days_7")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CommentTypeCodeType
-module CommentTypeCodeType
-  CustomCode = "CustomCode"
-  Negative = "Negative"
-  Neutral = "Neutral"
-  Positive = "Positive"
-  Withdrawn = "Withdrawn"
+class CommentTypeCodeType < ::String
+  @@schema_type = "CommentTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = CommentTypeCodeType.new("CustomCode")
+  Negative = CommentTypeCodeType.new("Negative")
+  Neutral = CommentTypeCodeType.new("Neutral")
+  Positive = CommentTypeCodeType.new("Positive")
+  Withdrawn = CommentTypeCodeType.new("Withdrawn")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CompleteStatusCodeType
-module CompleteStatusCodeType
-  Complete = "Complete"
-  CustomCode = "CustomCode"
-  Incomplete = "Incomplete"
+class CompleteStatusCodeType < ::String
+  @@schema_type = "CompleteStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Complete = CompleteStatusCodeType.new("Complete")
+  CustomCode = CompleteStatusCodeType.new("CustomCode")
+  Incomplete = CompleteStatusCodeType.new("Incomplete")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CountryCodeType
-module CountryCodeType
-  AA = "AA"
-  AD = "AD"
-  AE = "AE"
-  AF = "AF"
-  AG = "AG"
-  AI = "AI"
-  AL = "AL"
-  AM = "AM"
-  AN = "AN"
-  AO = "AO"
-  AQ = "AQ"
-  AR = "AR"
-  AS = "AS"
-  AT = "AT"
-  AU = "AU"
-  AW = "AW"
-  AZ = "AZ"
-  BA = "BA"
-  BB = "BB"
-  BD = "BD"
-  BE = "BE"
-  BF = "BF"
-  BG = "BG"
-  BH = "BH"
-  BI = "BI"
-  BJ = "BJ"
-  BM = "BM"
-  BN = "BN"
-  BO = "BO"
-  BR = "BR"
-  BS = "BS"
-  BT = "BT"
-  BV = "BV"
-  BW = "BW"
-  BY = "BY"
-  BZ = "BZ"
-  CA = "CA"
-  CC = "CC"
-  CD = "CD"
-  CF = "CF"
-  CG = "CG"
-  CH = "CH"
-  CI = "CI"
-  CK = "CK"
-  CL = "CL"
-  CM = "CM"
-  CN = "CN"
-  CO = "CO"
-  CR = "CR"
-  CU = "CU"
-  CV = "CV"
-  CX = "CX"
-  CY = "CY"
-  CZ = "CZ"
-  CustomCode = "CustomCode"
-  DE = "DE"
-  DJ = "DJ"
-  DK = "DK"
-  DM = "DM"
-  DO = "DO"
-  DZ = "DZ"
-  EC = "EC"
-  EE = "EE"
-  EG = "EG"
-  EH = "EH"
-  ER = "ER"
-  ES = "ES"
-  ET = "ET"
-  FI = "FI"
-  FJ = "FJ"
-  FK = "FK"
-  FM = "FM"
-  FO = "FO"
-  FR = "FR"
-  GA = "GA"
-  GB = "GB"
-  GD = "GD"
-  GE = "GE"
-  GF = "GF"
-  GH = "GH"
-  GI = "GI"
-  GL = "GL"
-  GM = "GM"
-  GN = "GN"
-  GP = "GP"
-  GQ = "GQ"
-  GR = "GR"
-  GS = "GS"
-  GT = "GT"
-  GU = "GU"
-  GW = "GW"
-  GY = "GY"
-  HK = "HK"
-  HM = "HM"
-  HN = "HN"
-  HR = "HR"
-  HT = "HT"
-  HU = "HU"
-  ID = "ID"
-  IE = "IE"
-  IL = "IL"
-  IN = "IN"
-  IO = "IO"
-  IQ = "IQ"
-  IR = "IR"
-  IS = "IS"
-  IT = "IT"
-  JM = "JM"
-  JO = "JO"
-  JP = "JP"
-  KE = "KE"
-  KG = "KG"
-  KH = "KH"
-  KI = "KI"
-  KM = "KM"
-  KN = "KN"
-  KP = "KP"
-  KR = "KR"
-  KW = "KW"
-  KY = "KY"
-  KZ = "KZ"
-  LA = "LA"
-  LB = "LB"
-  LC = "LC"
-  LI = "LI"
-  LK = "LK"
-  LR = "LR"
-  LS = "LS"
-  LT = "LT"
-  LU = "LU"
-  LV = "LV"
-  LY = "LY"
-  MA = "MA"
-  MC = "MC"
-  MD = "MD"
-  MG = "MG"
-  MH = "MH"
-  MK = "MK"
-  ML = "ML"
-  MM = "MM"
-  MN = "MN"
-  MO = "MO"
-  MP = "MP"
-  MQ = "MQ"
-  MR = "MR"
-  MS = "MS"
-  MT = "MT"
-  MU = "MU"
-  MV = "MV"
-  MW = "MW"
-  MX = "MX"
-  MY = "MY"
-  MZ = "MZ"
-  NA = "NA"
-  NC = "NC"
-  NE = "NE"
-  NF = "NF"
-  NG = "NG"
-  NI = "NI"
-  NL = "NL"
-  NO = "NO"
-  NP = "NP"
-  NR = "NR"
-  NU = "NU"
-  NZ = "NZ"
-  OM = "OM"
-  PA = "PA"
-  PE = "PE"
-  PF = "PF"
-  PG = "PG"
-  PH = "PH"
-  PK = "PK"
-  PL = "PL"
-  PM = "PM"
-  PN = "PN"
-  PR = "PR"
-  PS = "PS"
-  PT = "PT"
-  PW = "PW"
-  PY = "PY"
-  QA = "QA"
-  QM = "QM"
-  QN = "QN"
-  QO = "QO"
-  QP = "QP"
-  RE = "RE"
-  RO = "RO"
-  RU = "RU"
-  RW = "RW"
-  SA = "SA"
-  SB = "SB"
-  SC = "SC"
-  SD = "SD"
-  SE = "SE"
-  SG = "SG"
-  SH = "SH"
-  SI = "SI"
-  SJ = "SJ"
-  SK = "SK"
-  SL = "SL"
-  SM = "SM"
-  SN = "SN"
-  SO = "SO"
-  SR = "SR"
-  ST = "ST"
-  SV = "SV"
-  SY = "SY"
-  SZ = "SZ"
-  TC = "TC"
-  TD = "TD"
-  TF = "TF"
-  TG = "TG"
-  TH = "TH"
-  TJ = "TJ"
-  TK = "TK"
-  TM = "TM"
-  TN = "TN"
-  TO = "TO"
-  TP = "TP"
-  TR = "TR"
-  TT = "TT"
-  TV = "TV"
-  TW = "TW"
-  TZ = "TZ"
-  UA = "UA"
-  UG = "UG"
-  UM = "UM"
-  US = "US"
-  UY = "UY"
-  UZ = "UZ"
-  VA = "VA"
-  VC = "VC"
-  VE = "VE"
-  VG = "VG"
-  VI = "VI"
-  VN = "VN"
-  VU = "VU"
-  WF = "WF"
-  WS = "WS"
-  YE = "YE"
-  YT = "YT"
-  YU = "YU"
-  ZA = "ZA"
-  ZM = "ZM"
-  ZW = "ZW"
+class CountryCodeType < ::String
+  @@schema_type = "CountryCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AA = CountryCodeType.new("AA")
+  AD = CountryCodeType.new("AD")
+  AE = CountryCodeType.new("AE")
+  AF = CountryCodeType.new("AF")
+  AG = CountryCodeType.new("AG")
+  AI = CountryCodeType.new("AI")
+  AL = CountryCodeType.new("AL")
+  AM = CountryCodeType.new("AM")
+  AN = CountryCodeType.new("AN")
+  AO = CountryCodeType.new("AO")
+  AQ = CountryCodeType.new("AQ")
+  AR = CountryCodeType.new("AR")
+  AS = CountryCodeType.new("AS")
+  AT = CountryCodeType.new("AT")
+  AU = CountryCodeType.new("AU")
+  AW = CountryCodeType.new("AW")
+  AZ = CountryCodeType.new("AZ")
+  BA = CountryCodeType.new("BA")
+  BB = CountryCodeType.new("BB")
+  BD = CountryCodeType.new("BD")
+  BE = CountryCodeType.new("BE")
+  BF = CountryCodeType.new("BF")
+  BG = CountryCodeType.new("BG")
+  BH = CountryCodeType.new("BH")
+  BI = CountryCodeType.new("BI")
+  BJ = CountryCodeType.new("BJ")
+  BM = CountryCodeType.new("BM")
+  BN = CountryCodeType.new("BN")
+  BO = CountryCodeType.new("BO")
+  BR = CountryCodeType.new("BR")
+  BS = CountryCodeType.new("BS")
+  BT = CountryCodeType.new("BT")
+  BV = CountryCodeType.new("BV")
+  BW = CountryCodeType.new("BW")
+  BY = CountryCodeType.new("BY")
+  BZ = CountryCodeType.new("BZ")
+  CA = CountryCodeType.new("CA")
+  CC = CountryCodeType.new("CC")
+  CD = CountryCodeType.new("CD")
+  CF = CountryCodeType.new("CF")
+  CG = CountryCodeType.new("CG")
+  CH = CountryCodeType.new("CH")
+  CI = CountryCodeType.new("CI")
+  CK = CountryCodeType.new("CK")
+  CL = CountryCodeType.new("CL")
+  CM = CountryCodeType.new("CM")
+  CN = CountryCodeType.new("CN")
+  CO = CountryCodeType.new("CO")
+  CR = CountryCodeType.new("CR")
+  CU = CountryCodeType.new("CU")
+  CV = CountryCodeType.new("CV")
+  CX = CountryCodeType.new("CX")
+  CY = CountryCodeType.new("CY")
+  CZ = CountryCodeType.new("CZ")
+  CustomCode = CountryCodeType.new("CustomCode")
+  DE = CountryCodeType.new("DE")
+  DJ = CountryCodeType.new("DJ")
+  DK = CountryCodeType.new("DK")
+  DM = CountryCodeType.new("DM")
+  DO = CountryCodeType.new("DO")
+  DZ = CountryCodeType.new("DZ")
+  EC = CountryCodeType.new("EC")
+  EE = CountryCodeType.new("EE")
+  EG = CountryCodeType.new("EG")
+  EH = CountryCodeType.new("EH")
+  ER = CountryCodeType.new("ER")
+  ES = CountryCodeType.new("ES")
+  ET = CountryCodeType.new("ET")
+  FI = CountryCodeType.new("FI")
+  FJ = CountryCodeType.new("FJ")
+  FK = CountryCodeType.new("FK")
+  FM = CountryCodeType.new("FM")
+  FO = CountryCodeType.new("FO")
+  FR = CountryCodeType.new("FR")
+  GA = CountryCodeType.new("GA")
+  GB = CountryCodeType.new("GB")
+  GD = CountryCodeType.new("GD")
+  GE = CountryCodeType.new("GE")
+  GF = CountryCodeType.new("GF")
+  GH = CountryCodeType.new("GH")
+  GI = CountryCodeType.new("GI")
+  GL = CountryCodeType.new("GL")
+  GM = CountryCodeType.new("GM")
+  GN = CountryCodeType.new("GN")
+  GP = CountryCodeType.new("GP")
+  GQ = CountryCodeType.new("GQ")
+  GR = CountryCodeType.new("GR")
+  GS = CountryCodeType.new("GS")
+  GT = CountryCodeType.new("GT")
+  GU = CountryCodeType.new("GU")
+  GW = CountryCodeType.new("GW")
+  GY = CountryCodeType.new("GY")
+  HK = CountryCodeType.new("HK")
+  HM = CountryCodeType.new("HM")
+  HN = CountryCodeType.new("HN")
+  HR = CountryCodeType.new("HR")
+  HT = CountryCodeType.new("HT")
+  HU = CountryCodeType.new("HU")
+  ID = CountryCodeType.new("ID")
+  IE = CountryCodeType.new("IE")
+  IL = CountryCodeType.new("IL")
+  IN = CountryCodeType.new("IN")
+  IO = CountryCodeType.new("IO")
+  IQ = CountryCodeType.new("IQ")
+  IR = CountryCodeType.new("IR")
+  IS = CountryCodeType.new("IS")
+  IT = CountryCodeType.new("IT")
+  JM = CountryCodeType.new("JM")
+  JO = CountryCodeType.new("JO")
+  JP = CountryCodeType.new("JP")
+  KE = CountryCodeType.new("KE")
+  KG = CountryCodeType.new("KG")
+  KH = CountryCodeType.new("KH")
+  KI = CountryCodeType.new("KI")
+  KM = CountryCodeType.new("KM")
+  KN = CountryCodeType.new("KN")
+  KP = CountryCodeType.new("KP")
+  KR = CountryCodeType.new("KR")
+  KW = CountryCodeType.new("KW")
+  KY = CountryCodeType.new("KY")
+  KZ = CountryCodeType.new("KZ")
+  LA = CountryCodeType.new("LA")
+  LB = CountryCodeType.new("LB")
+  LC = CountryCodeType.new("LC")
+  LI = CountryCodeType.new("LI")
+  LK = CountryCodeType.new("LK")
+  LR = CountryCodeType.new("LR")
+  LS = CountryCodeType.new("LS")
+  LT = CountryCodeType.new("LT")
+  LU = CountryCodeType.new("LU")
+  LV = CountryCodeType.new("LV")
+  LY = CountryCodeType.new("LY")
+  MA = CountryCodeType.new("MA")
+  MC = CountryCodeType.new("MC")
+  MD = CountryCodeType.new("MD")
+  MG = CountryCodeType.new("MG")
+  MH = CountryCodeType.new("MH")
+  MK = CountryCodeType.new("MK")
+  ML = CountryCodeType.new("ML")
+  MM = CountryCodeType.new("MM")
+  MN = CountryCodeType.new("MN")
+  MO = CountryCodeType.new("MO")
+  MP = CountryCodeType.new("MP")
+  MQ = CountryCodeType.new("MQ")
+  MR = CountryCodeType.new("MR")
+  MS = CountryCodeType.new("MS")
+  MT = CountryCodeType.new("MT")
+  MU = CountryCodeType.new("MU")
+  MV = CountryCodeType.new("MV")
+  MW = CountryCodeType.new("MW")
+  MX = CountryCodeType.new("MX")
+  MY = CountryCodeType.new("MY")
+  MZ = CountryCodeType.new("MZ")
+  NA = CountryCodeType.new("NA")
+  NC = CountryCodeType.new("NC")
+  NE = CountryCodeType.new("NE")
+  NF = CountryCodeType.new("NF")
+  NG = CountryCodeType.new("NG")
+  NI = CountryCodeType.new("NI")
+  NL = CountryCodeType.new("NL")
+  NO = CountryCodeType.new("NO")
+  NP = CountryCodeType.new("NP")
+  NR = CountryCodeType.new("NR")
+  NU = CountryCodeType.new("NU")
+  NZ = CountryCodeType.new("NZ")
+  OM = CountryCodeType.new("OM")
+  PA = CountryCodeType.new("PA")
+  PE = CountryCodeType.new("PE")
+  PF = CountryCodeType.new("PF")
+  PG = CountryCodeType.new("PG")
+  PH = CountryCodeType.new("PH")
+  PK = CountryCodeType.new("PK")
+  PL = CountryCodeType.new("PL")
+  PM = CountryCodeType.new("PM")
+  PN = CountryCodeType.new("PN")
+  PR = CountryCodeType.new("PR")
+  PS = CountryCodeType.new("PS")
+  PT = CountryCodeType.new("PT")
+  PW = CountryCodeType.new("PW")
+  PY = CountryCodeType.new("PY")
+  QA = CountryCodeType.new("QA")
+  QM = CountryCodeType.new("QM")
+  QN = CountryCodeType.new("QN")
+  QO = CountryCodeType.new("QO")
+  QP = CountryCodeType.new("QP")
+  RE = CountryCodeType.new("RE")
+  RO = CountryCodeType.new("RO")
+  RU = CountryCodeType.new("RU")
+  RW = CountryCodeType.new("RW")
+  SA = CountryCodeType.new("SA")
+  SB = CountryCodeType.new("SB")
+  SC = CountryCodeType.new("SC")
+  SD = CountryCodeType.new("SD")
+  SE = CountryCodeType.new("SE")
+  SG = CountryCodeType.new("SG")
+  SH = CountryCodeType.new("SH")
+  SI = CountryCodeType.new("SI")
+  SJ = CountryCodeType.new("SJ")
+  SK = CountryCodeType.new("SK")
+  SL = CountryCodeType.new("SL")
+  SM = CountryCodeType.new("SM")
+  SN = CountryCodeType.new("SN")
+  SO = CountryCodeType.new("SO")
+  SR = CountryCodeType.new("SR")
+  ST = CountryCodeType.new("ST")
+  SV = CountryCodeType.new("SV")
+  SY = CountryCodeType.new("SY")
+  SZ = CountryCodeType.new("SZ")
+  TC = CountryCodeType.new("TC")
+  TD = CountryCodeType.new("TD")
+  TF = CountryCodeType.new("TF")
+  TG = CountryCodeType.new("TG")
+  TH = CountryCodeType.new("TH")
+  TJ = CountryCodeType.new("TJ")
+  TK = CountryCodeType.new("TK")
+  TM = CountryCodeType.new("TM")
+  TN = CountryCodeType.new("TN")
+  TO = CountryCodeType.new("TO")
+  TP = CountryCodeType.new("TP")
+  TR = CountryCodeType.new("TR")
+  TT = CountryCodeType.new("TT")
+  TV = CountryCodeType.new("TV")
+  TW = CountryCodeType.new("TW")
+  TZ = CountryCodeType.new("TZ")
+  UA = CountryCodeType.new("UA")
+  UG = CountryCodeType.new("UG")
+  UM = CountryCodeType.new("UM")
+  US = CountryCodeType.new("US")
+  UY = CountryCodeType.new("UY")
+  UZ = CountryCodeType.new("UZ")
+  VA = CountryCodeType.new("VA")
+  VC = CountryCodeType.new("VC")
+  VE = CountryCodeType.new("VE")
+  VG = CountryCodeType.new("VG")
+  VI = CountryCodeType.new("VI")
+  VN = CountryCodeType.new("VN")
+  VU = CountryCodeType.new("VU")
+  WF = CountryCodeType.new("WF")
+  WS = CountryCodeType.new("WS")
+  YE = CountryCodeType.new("YE")
+  YT = CountryCodeType.new("YT")
+  YU = CountryCodeType.new("YU")
+  ZA = CountryCodeType.new("ZA")
+  ZM = CountryCodeType.new("ZM")
+  ZW = CountryCodeType.new("ZW")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CurrencyCodeType
-module CurrencyCodeType
-  ADP = "ADP"
-  AED = "AED"
-  AFA = "AFA"
-  ALL = "ALL"
-  AMD = "AMD"
-  ANG = "ANG"
-  AOA = "AOA"
-  ARS = "ARS"
-  AUD = "AUD"
-  AWG = "AWG"
-  AZM = "AZM"
-  BAM = "BAM"
-  BBD = "BBD"
-  BDT = "BDT"
-  BGL = "BGL"
-  BGN = "BGN"
-  BHD = "BHD"
-  BIF = "BIF"
-  BMD = "BMD"
-  BND = "BND"
-  BOB = "BOB"
-  BOV = "BOV"
-  BRL = "BRL"
-  BSD = "BSD"
-  BTN = "BTN"
-  BWP = "BWP"
-  BYR = "BYR"
-  BZD = "BZD"
-  CAD = "CAD"
-  CDF = "CDF"
-  CHF = "CHF"
-  CLF = "CLF"
-  CLP = "CLP"
-  CNY = "CNY"
-  COP = "COP"
-  CRC = "CRC"
-  CUP = "CUP"
-  CVE = "CVE"
-  CYP = "CYP"
-  CZK = "CZK"
-  CustomCode = "CustomCode"
-  DJF = "DJF"
-  DKK = "DKK"
-  DOP = "DOP"
-  DZD = "DZD"
-  ECS = "ECS"
-  ECV = "ECV"
-  EEK = "EEK"
-  EGP = "EGP"
-  ERN = "ERN"
-  ETB = "ETB"
-  EUR = "EUR"
-  FJD = "FJD"
-  FKP = "FKP"
-  GBP = "GBP"
-  GEL = "GEL"
-  GHC = "GHC"
-  GIP = "GIP"
-  GMD = "GMD"
-  GNF = "GNF"
-  GTQ = "GTQ"
-  GWP = "GWP"
-  GYD = "GYD"
-  HKD = "HKD"
-  HNL = "HNL"
-  HRK = "HRK"
-  HTG = "HTG"
-  HUF = "HUF"
-  IDR = "IDR"
-  ILS = "ILS"
-  INR = "INR"
-  IQD = "IQD"
-  IRR = "IRR"
-  ISK = "ISK"
-  JMD = "JMD"
-  JOD = "JOD"
-  JPY = "JPY"
-  KES = "KES"
-  KGS = "KGS"
-  KHR = "KHR"
-  KMF = "KMF"
-  KPW = "KPW"
-  KRW = "KRW"
-  KWD = "KWD"
-  KYD = "KYD"
-  KZT = "KZT"
-  LAK = "LAK"
-  LBP = "LBP"
-  LKR = "LKR"
-  LRD = "LRD"
-  LSL = "LSL"
-  LTL = "LTL"
-  LVL = "LVL"
-  LYD = "LYD"
-  MAD = "MAD"
-  MDL = "MDL"
-  MGF = "MGF"
-  MKD = "MKD"
-  MMK = "MMK"
-  MNT = "MNT"
-  MOP = "MOP"
-  MRO = "MRO"
-  MTL = "MTL"
-  MUR = "MUR"
-  MVR = "MVR"
-  MWK = "MWK"
-  MXN = "MXN"
-  MXV = "MXV"
-  MYR = "MYR"
-  MZM = "MZM"
-  NAD = "NAD"
-  NGN = "NGN"
-  NIO = "NIO"
-  NOK = "NOK"
-  NPR = "NPR"
-  NZD = "NZD"
-  OMR = "OMR"
-  PAB = "PAB"
-  PEN = "PEN"
-  PGK = "PGK"
-  PHP = "PHP"
-  PKR = "PKR"
-  PLN = "PLN"
-  PYG = "PYG"
-  QAR = "QAR"
-  ROL = "ROL"
-  RUB = "RUB"
-  RUR = "RUR"
-  RWF = "RWF"
-  SAR = "SAR"
-  SBD = "SBD"
-  SCR = "SCR"
-  SDD = "SDD"
-  SEK = "SEK"
-  SGD = "SGD"
-  SHP = "SHP"
-  SIT = "SIT"
-  SKK = "SKK"
-  SLL = "SLL"
-  SOS = "SOS"
-  SRG = "SRG"
-  STD = "STD"
-  SVC = "SVC"
-  SYP = "SYP"
-  SZL = "SZL"
-  THB = "THB"
-  TJS = "TJS"
-  TMM = "TMM"
-  TND = "TND"
-  TOP = "TOP"
-  TPE = "TPE"
-  TRL = "TRL"
-  TTD = "TTD"
-  TWD = "TWD"
-  TZS = "TZS"
-  UAH = "UAH"
-  UGX = "UGX"
-  USD = "USD"
-  USN = "USN"
-  USS = "USS"
-  UYU = "UYU"
-  UZS = "UZS"
-  VEB = "VEB"
-  VND = "VND"
-  VUV = "VUV"
-  WST = "WST"
-  XAF = "XAF"
-  XCD = "XCD"
-  XOF = "XOF"
-  XPF = "XPF"
-  YER = "YER"
-  YUM = "YUM"
-  ZAR = "ZAR"
-  ZMK = "ZMK"
-  ZWD = "ZWD"
+class CurrencyCodeType < ::String
+  @@schema_type = "CurrencyCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  ADP = CurrencyCodeType.new("ADP")
+  AED = CurrencyCodeType.new("AED")
+  AFA = CurrencyCodeType.new("AFA")
+  ALL = CurrencyCodeType.new("ALL")
+  AMD = CurrencyCodeType.new("AMD")
+  ANG = CurrencyCodeType.new("ANG")
+  AOA = CurrencyCodeType.new("AOA")
+  ARS = CurrencyCodeType.new("ARS")
+  AUD = CurrencyCodeType.new("AUD")
+  AWG = CurrencyCodeType.new("AWG")
+  AZM = CurrencyCodeType.new("AZM")
+  BAM = CurrencyCodeType.new("BAM")
+  BBD = CurrencyCodeType.new("BBD")
+  BDT = CurrencyCodeType.new("BDT")
+  BGL = CurrencyCodeType.new("BGL")
+  BGN = CurrencyCodeType.new("BGN")
+  BHD = CurrencyCodeType.new("BHD")
+  BIF = CurrencyCodeType.new("BIF")
+  BMD = CurrencyCodeType.new("BMD")
+  BND = CurrencyCodeType.new("BND")
+  BOB = CurrencyCodeType.new("BOB")
+  BOV = CurrencyCodeType.new("BOV")
+  BRL = CurrencyCodeType.new("BRL")
+  BSD = CurrencyCodeType.new("BSD")
+  BTN = CurrencyCodeType.new("BTN")
+  BWP = CurrencyCodeType.new("BWP")
+  BYR = CurrencyCodeType.new("BYR")
+  BZD = CurrencyCodeType.new("BZD")
+  CAD = CurrencyCodeType.new("CAD")
+  CDF = CurrencyCodeType.new("CDF")
+  CHF = CurrencyCodeType.new("CHF")
+  CLF = CurrencyCodeType.new("CLF")
+  CLP = CurrencyCodeType.new("CLP")
+  CNY = CurrencyCodeType.new("CNY")
+  COP = CurrencyCodeType.new("COP")
+  CRC = CurrencyCodeType.new("CRC")
+  CUP = CurrencyCodeType.new("CUP")
+  CVE = CurrencyCodeType.new("CVE")
+  CYP = CurrencyCodeType.new("CYP")
+  CZK = CurrencyCodeType.new("CZK")
+  CustomCode = CurrencyCodeType.new("CustomCode")
+  DJF = CurrencyCodeType.new("DJF")
+  DKK = CurrencyCodeType.new("DKK")
+  DOP = CurrencyCodeType.new("DOP")
+  DZD = CurrencyCodeType.new("DZD")
+  ECS = CurrencyCodeType.new("ECS")
+  ECV = CurrencyCodeType.new("ECV")
+  EEK = CurrencyCodeType.new("EEK")
+  EGP = CurrencyCodeType.new("EGP")
+  ERN = CurrencyCodeType.new("ERN")
+  ETB = CurrencyCodeType.new("ETB")
+  EUR = CurrencyCodeType.new("EUR")
+  FJD = CurrencyCodeType.new("FJD")
+  FKP = CurrencyCodeType.new("FKP")
+  GBP = CurrencyCodeType.new("GBP")
+  GEL = CurrencyCodeType.new("GEL")
+  GHC = CurrencyCodeType.new("GHC")
+  GIP = CurrencyCodeType.new("GIP")
+  GMD = CurrencyCodeType.new("GMD")
+  GNF = CurrencyCodeType.new("GNF")
+  GTQ = CurrencyCodeType.new("GTQ")
+  GWP = CurrencyCodeType.new("GWP")
+  GYD = CurrencyCodeType.new("GYD")
+  HKD = CurrencyCodeType.new("HKD")
+  HNL = CurrencyCodeType.new("HNL")
+  HRK = CurrencyCodeType.new("HRK")
+  HTG = CurrencyCodeType.new("HTG")
+  HUF = CurrencyCodeType.new("HUF")
+  IDR = CurrencyCodeType.new("IDR")
+  ILS = CurrencyCodeType.new("ILS")
+  INR = CurrencyCodeType.new("INR")
+  IQD = CurrencyCodeType.new("IQD")
+  IRR = CurrencyCodeType.new("IRR")
+  ISK = CurrencyCodeType.new("ISK")
+  JMD = CurrencyCodeType.new("JMD")
+  JOD = CurrencyCodeType.new("JOD")
+  JPY = CurrencyCodeType.new("JPY")
+  KES = CurrencyCodeType.new("KES")
+  KGS = CurrencyCodeType.new("KGS")
+  KHR = CurrencyCodeType.new("KHR")
+  KMF = CurrencyCodeType.new("KMF")
+  KPW = CurrencyCodeType.new("KPW")
+  KRW = CurrencyCodeType.new("KRW")
+  KWD = CurrencyCodeType.new("KWD")
+  KYD = CurrencyCodeType.new("KYD")
+  KZT = CurrencyCodeType.new("KZT")
+  LAK = CurrencyCodeType.new("LAK")
+  LBP = CurrencyCodeType.new("LBP")
+  LKR = CurrencyCodeType.new("LKR")
+  LRD = CurrencyCodeType.new("LRD")
+  LSL = CurrencyCodeType.new("LSL")
+  LTL = CurrencyCodeType.new("LTL")
+  LVL = CurrencyCodeType.new("LVL")
+  LYD = CurrencyCodeType.new("LYD")
+  MAD = CurrencyCodeType.new("MAD")
+  MDL = CurrencyCodeType.new("MDL")
+  MGF = CurrencyCodeType.new("MGF")
+  MKD = CurrencyCodeType.new("MKD")
+  MMK = CurrencyCodeType.new("MMK")
+  MNT = CurrencyCodeType.new("MNT")
+  MOP = CurrencyCodeType.new("MOP")
+  MRO = CurrencyCodeType.new("MRO")
+  MTL = CurrencyCodeType.new("MTL")
+  MUR = CurrencyCodeType.new("MUR")
+  MVR = CurrencyCodeType.new("MVR")
+  MWK = CurrencyCodeType.new("MWK")
+  MXN = CurrencyCodeType.new("MXN")
+  MXV = CurrencyCodeType.new("MXV")
+  MYR = CurrencyCodeType.new("MYR")
+  MZM = CurrencyCodeType.new("MZM")
+  NAD = CurrencyCodeType.new("NAD")
+  NGN = CurrencyCodeType.new("NGN")
+  NIO = CurrencyCodeType.new("NIO")
+  NOK = CurrencyCodeType.new("NOK")
+  NPR = CurrencyCodeType.new("NPR")
+  NZD = CurrencyCodeType.new("NZD")
+  OMR = CurrencyCodeType.new("OMR")
+  PAB = CurrencyCodeType.new("PAB")
+  PEN = CurrencyCodeType.new("PEN")
+  PGK = CurrencyCodeType.new("PGK")
+  PHP = CurrencyCodeType.new("PHP")
+  PKR = CurrencyCodeType.new("PKR")
+  PLN = CurrencyCodeType.new("PLN")
+  PYG = CurrencyCodeType.new("PYG")
+  QAR = CurrencyCodeType.new("QAR")
+  ROL = CurrencyCodeType.new("ROL")
+  RUB = CurrencyCodeType.new("RUB")
+  RUR = CurrencyCodeType.new("RUR")
+  RWF = CurrencyCodeType.new("RWF")
+  SAR = CurrencyCodeType.new("SAR")
+  SBD = CurrencyCodeType.new("SBD")
+  SCR = CurrencyCodeType.new("SCR")
+  SDD = CurrencyCodeType.new("SDD")
+  SEK = CurrencyCodeType.new("SEK")
+  SGD = CurrencyCodeType.new("SGD")
+  SHP = CurrencyCodeType.new("SHP")
+  SIT = CurrencyCodeType.new("SIT")
+  SKK = CurrencyCodeType.new("SKK")
+  SLL = CurrencyCodeType.new("SLL")
+  SOS = CurrencyCodeType.new("SOS")
+  SRG = CurrencyCodeType.new("SRG")
+  STD = CurrencyCodeType.new("STD")
+  SVC = CurrencyCodeType.new("SVC")
+  SYP = CurrencyCodeType.new("SYP")
+  SZL = CurrencyCodeType.new("SZL")
+  THB = CurrencyCodeType.new("THB")
+  TJS = CurrencyCodeType.new("TJS")
+  TMM = CurrencyCodeType.new("TMM")
+  TND = CurrencyCodeType.new("TND")
+  TOP = CurrencyCodeType.new("TOP")
+  TPE = CurrencyCodeType.new("TPE")
+  TRL = CurrencyCodeType.new("TRL")
+  TTD = CurrencyCodeType.new("TTD")
+  TWD = CurrencyCodeType.new("TWD")
+  TZS = CurrencyCodeType.new("TZS")
+  UAH = CurrencyCodeType.new("UAH")
+  UGX = CurrencyCodeType.new("UGX")
+  USD = CurrencyCodeType.new("USD")
+  USN = CurrencyCodeType.new("USN")
+  USS = CurrencyCodeType.new("USS")
+  UYU = CurrencyCodeType.new("UYU")
+  UZS = CurrencyCodeType.new("UZS")
+  VEB = CurrencyCodeType.new("VEB")
+  VND = CurrencyCodeType.new("VND")
+  VUV = CurrencyCodeType.new("VUV")
+  WST = CurrencyCodeType.new("WST")
+  XAF = CurrencyCodeType.new("XAF")
+  XCD = CurrencyCodeType.new("XCD")
+  XOF = CurrencyCodeType.new("XOF")
+  XPF = CurrencyCodeType.new("XPF")
+  YER = CurrencyCodeType.new("YER")
+  YUM = CurrencyCodeType.new("YUM")
+  ZAR = CurrencyCodeType.new("ZAR")
+  ZMK = CurrencyCodeType.new("ZMK")
+  ZWD = CurrencyCodeType.new("ZWD")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DateSpecifierCodeType
-module DateSpecifierCodeType
-  CustomCode = "CustomCode"
-  D = "D"
-  M = "M"
-  Y = "Y"
+class DateSpecifierCodeType < ::String
+  @@schema_type = "DateSpecifierCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = DateSpecifierCodeType.new("CustomCode")
+  D = DateSpecifierCodeType.new("D")
+  M = DateSpecifierCodeType.new("M")
+  Y = DateSpecifierCodeType.new("Y")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DepositTypeCodeType
-module DepositTypeCodeType
-  CustomCode = "CustomCode"
-  FastDeposit = "FastDeposit"
-  None = "None"
-  OtherMethod = "OtherMethod"
+class DepositTypeCodeType < ::String
+  @@schema_type = "DepositTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = DepositTypeCodeType.new("CustomCode")
+  FastDeposit = DepositTypeCodeType.new("FastDeposit")
+  None = DepositTypeCodeType.new("None")
+  OtherMethod = DepositTypeCodeType.new("OtherMethod")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DescriptionTemplateCodeType
-module DescriptionTemplateCodeType
-  CustomCode = "CustomCode"
-  Layout = "Layout"
-  Theme = "Theme"
+class DescriptionTemplateCodeType < ::String
+  @@schema_type = "DescriptionTemplateCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = DescriptionTemplateCodeType.new("CustomCode")
+  Layout = DescriptionTemplateCodeType.new("Layout")
+  Theme = DescriptionTemplateCodeType.new("Theme")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DetailNameCodeType
-module DetailNameCodeType
-  CountryDetails = "CountryDetails"
-  CurrencyDetails = "CurrencyDetails"
-  CustomCode = "CustomCode"
-  PaymentOptionDetails = "PaymentOptionDetails"
-  RegionDetails = "RegionDetails"
-  ShippingLocationDetails = "ShippingLocationDetails"
-  ShippingServiceDetails = "ShippingServiceDetails"
-  SiteDetails = "SiteDetails"
-  TaxJurisdiction = "TaxJurisdiction"
-  URLDetails = "URLDetails"
+class DetailNameCodeType < ::String
+  @@schema_type = "DetailNameCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CountryDetails = DetailNameCodeType.new("CountryDetails")
+  CurrencyDetails = DetailNameCodeType.new("CurrencyDetails")
+  CustomCode = DetailNameCodeType.new("CustomCode")
+  DispatchTimeMaxDetails = DetailNameCodeType.new("DispatchTimeMaxDetails")
+  PaymentOptionDetails = DetailNameCodeType.new("PaymentOptionDetails")
+  RegionDetails = DetailNameCodeType.new("RegionDetails")
+  ShippingLocationDetails = DetailNameCodeType.new("ShippingLocationDetails")
+  ShippingServiceDetails = DetailNameCodeType.new("ShippingServiceDetails")
+  SiteDetails = DetailNameCodeType.new("SiteDetails")
+  TaxJurisdiction = DetailNameCodeType.new("TaxJurisdiction")
+  URLDetails = DetailNameCodeType.new("URLDetails")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DeviceTypeCodeType
+class DeviceTypeCodeType < ::String
+  @@schema_type = "DeviceTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = DeviceTypeCodeType.new("CustomCode")
+  Platform = DeviceTypeCodeType.new("Platform")
+  SMS = DeviceTypeCodeType.new("SMS")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DigitalDeliveryEnabledCodeType
+class DigitalDeliveryEnabledCodeType < ::String
+  @@schema_type = "DigitalDeliveryEnabledCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = DigitalDeliveryEnabledCodeType.new("CustomCode")
+  Disabled = DigitalDeliveryEnabledCodeType.new("Disabled")
+  Enabled = DigitalDeliveryEnabledCodeType.new("Enabled")
+  Promoted = DigitalDeliveryEnabledCodeType.new("Promoted")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DigitalDeliveryMethodCodeType
+class DigitalDeliveryMethodCodeType < ::String
+  @@schema_type = "DigitalDeliveryMethodCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AlternateDeliveryInstructions = DigitalDeliveryMethodCodeType.new("AlternateDeliveryInstructions")
+  CustomCode = DigitalDeliveryMethodCodeType.new("CustomCode")
+  DownloadURL = DigitalDeliveryMethodCodeType.new("DownloadURL")
+  None = DigitalDeliveryMethodCodeType.new("None")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DisplayPayNowButtonCodeType
-module DisplayPayNowButtonCodeType
-  CustomCode = "CustomCode"
-  ShowPayNowButtonForAllPaymentMethods = "ShowPayNowButtonForAllPaymentMethods"
-  ShowPayNowButtonForPayPalOnly = "ShowPayNowButtonForPayPalOnly"
+class DisplayPayNowButtonCodeType < ::String
+  @@schema_type = "DisplayPayNowButtonCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = DisplayPayNowButtonCodeType.new("CustomCode")
+  ShowPayNowButtonForAllPaymentMethods = DisplayPayNowButtonCodeType.new("ShowPayNowButtonForAllPaymentMethods")
+  ShowPayNowButtonForPayPalOnly = DisplayPayNowButtonCodeType.new("ShowPayNowButtonForPayPalOnly")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DisputeActivityCodeType
-module DisputeActivityCodeType
-  CameToAgreementNeedFVFCredit = "CameToAgreementNeedFVFCredit"
-  CustomCode = "CustomCode"
-  MutualAgreementOrNoBuyerResponse = "MutualAgreementOrNoBuyerResponse"
-  SellerAddInformation = "SellerAddInformation"
-  SellerComment = "SellerComment"
-  SellerCompletedTransaction = "SellerCompletedTransaction"
-  SellerEndCommunication = "SellerEndCommunication"
-  SellerOffersRefund = "SellerOffersRefund"
-  SellerPaymentNotReceived = "SellerPaymentNotReceived"
-  SellerShippedItem = "SellerShippedItem"
+class DisputeActivityCodeType < ::String
+  @@schema_type = "DisputeActivityCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CameToAgreementNeedFVFCredit = DisputeActivityCodeType.new("CameToAgreementNeedFVFCredit")
+  CustomCode = DisputeActivityCodeType.new("CustomCode")
+  MutualAgreementOrNoBuyerResponse = DisputeActivityCodeType.new("MutualAgreementOrNoBuyerResponse")
+  SellerAddInformation = DisputeActivityCodeType.new("SellerAddInformation")
+  SellerComment = DisputeActivityCodeType.new("SellerComment")
+  SellerCompletedTransaction = DisputeActivityCodeType.new("SellerCompletedTransaction")
+  SellerEndCommunication = DisputeActivityCodeType.new("SellerEndCommunication")
+  SellerOffersRefund = DisputeActivityCodeType.new("SellerOffersRefund")
+  SellerPaymentNotReceived = DisputeActivityCodeType.new("SellerPaymentNotReceived")
+  SellerShippedItem = DisputeActivityCodeType.new("SellerShippedItem")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DisputeCreditEligibilityCodeType
-module DisputeCreditEligibilityCodeType
-  CustomCode = "CustomCode"
-  Eligible = "Eligible"
-  InEligible = "InEligible"
+class DisputeCreditEligibilityCodeType < ::String
+  @@schema_type = "DisputeCreditEligibilityCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = DisputeCreditEligibilityCodeType.new("CustomCode")
+  Eligible = DisputeCreditEligibilityCodeType.new("Eligible")
+  InEligible = DisputeCreditEligibilityCodeType.new("InEligible")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DisputeExplanationCodeType
-module DisputeExplanationCodeType
-  BuyerHasNotResponded = "BuyerHasNotResponded"
-  BuyerNoLongerRegistered = "BuyerNoLongerRegistered"
-  BuyerPurchasingMistake = "BuyerPurchasingMistake"
-  BuyerRefusedToPay = "BuyerRefusedToPay"
-  BuyerReturnedItemForRefund = "BuyerReturnedItemForRefund"
-  CustomCode = "CustomCode"
-  OtherExplanation = "OtherExplanation"
-  PaymentMethodNotSupported = "PaymentMethodNotSupported"
-  ShipCountryNotSupported = "ShipCountryNotSupported"
-  ShippingAddressNotConfirmed = "ShippingAddressNotConfirmed"
-  UnableToResolveTerms = "UnableToResolveTerms"
-  Unspecified = "Unspecified"
+class DisputeExplanationCodeType < ::String
+  @@schema_type = "DisputeExplanationCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BuyerHasNotResponded = DisputeExplanationCodeType.new("BuyerHasNotResponded")
+  BuyerNoLongerRegistered = DisputeExplanationCodeType.new("BuyerNoLongerRegistered")
+  BuyerNoLongerWantsItem = DisputeExplanationCodeType.new("BuyerNoLongerWantsItem")
+  BuyerNotClearedToPay = DisputeExplanationCodeType.new("BuyerNotClearedToPay")
+  BuyerPurchasingMistake = DisputeExplanationCodeType.new("BuyerPurchasingMistake")
+  BuyerRefusedToPay = DisputeExplanationCodeType.new("BuyerRefusedToPay")
+  BuyerReturnedItemForRefund = DisputeExplanationCodeType.new("BuyerReturnedItemForRefund")
+  CustomCode = DisputeExplanationCodeType.new("CustomCode")
+  OtherExplanation = DisputeExplanationCodeType.new("OtherExplanation")
+  PaymentMethodNotSupported = DisputeExplanationCodeType.new("PaymentMethodNotSupported")
+  ShipCountryNotSupported = DisputeExplanationCodeType.new("ShipCountryNotSupported")
+  ShippingAddressNotConfirmed = DisputeExplanationCodeType.new("ShippingAddressNotConfirmed")
+  UnableToResolveTerms = DisputeExplanationCodeType.new("UnableToResolveTerms")
+  Unspecified = DisputeExplanationCodeType.new("Unspecified")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DisputeFilterTypeCodeType
-module DisputeFilterTypeCodeType
-  AllInvolvedClosedDisputes = "AllInvolvedClosedDisputes"
-  AllInvolvedDisputes = "AllInvolvedDisputes"
-  CustomCode = "CustomCode"
-  DisputesAwaitingMyResponse = "DisputesAwaitingMyResponse"
-  DisputesAwaitingOtherPartyResponse = "DisputesAwaitingOtherPartyResponse"
-  EligibleForCredit = "EligibleForCredit"
-  ItemNotReceivedDisputes = "ItemNotReceivedDisputes"
-  UnpaidItemDisputes = "UnpaidItemDisputes"
+class DisputeFilterTypeCodeType < ::String
+  @@schema_type = "DisputeFilterTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AllInvolvedClosedDisputes = DisputeFilterTypeCodeType.new("AllInvolvedClosedDisputes")
+  AllInvolvedDisputes = DisputeFilterTypeCodeType.new("AllInvolvedDisputes")
+  CustomCode = DisputeFilterTypeCodeType.new("CustomCode")
+  DisputesAwaitingMyResponse = DisputeFilterTypeCodeType.new("DisputesAwaitingMyResponse")
+  DisputesAwaitingOtherPartyResponse = DisputeFilterTypeCodeType.new("DisputesAwaitingOtherPartyResponse")
+  EligibleForCredit = DisputeFilterTypeCodeType.new("EligibleForCredit")
+  ItemNotReceivedDisputes = DisputeFilterTypeCodeType.new("ItemNotReceivedDisputes")
+  UnpaidItemDisputes = DisputeFilterTypeCodeType.new("UnpaidItemDisputes")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DisputeMessageSourceCodeType
-module DisputeMessageSourceCodeType
-  Buyer = "Buyer"
-  CustomCode = "CustomCode"
-  EBay = "eBay"
-  Seller = "Seller"
+class DisputeMessageSourceCodeType < ::String
+  @@schema_type = "DisputeMessageSourceCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Buyer = DisputeMessageSourceCodeType.new("Buyer")
+  CustomCode = DisputeMessageSourceCodeType.new("CustomCode")
+  EBay = DisputeMessageSourceCodeType.new("eBay")
+  Seller = DisputeMessageSourceCodeType.new("Seller")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DisputeReasonCodeType
-module DisputeReasonCodeType
-  BuyerHasNotPaid = "BuyerHasNotPaid"
-  CustomCode = "CustomCode"
-  ItemNotReceived = "ItemNotReceived"
-  SignificantlyNotAsDescribed = "SignificantlyNotAsDescribed"
-  TransactionMutuallyCanceled = "TransactionMutuallyCanceled"
+class DisputeReasonCodeType < ::String
+  @@schema_type = "DisputeReasonCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BuyerHasNotPaid = DisputeReasonCodeType.new("BuyerHasNotPaid")
+  CustomCode = DisputeReasonCodeType.new("CustomCode")
+  ItemNotReceived = DisputeReasonCodeType.new("ItemNotReceived")
+  SignificantlyNotAsDescribed = DisputeReasonCodeType.new("SignificantlyNotAsDescribed")
+  TransactionMutuallyCanceled = DisputeReasonCodeType.new("TransactionMutuallyCanceled")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DisputeRecordTypeCodeType
-module DisputeRecordTypeCodeType
-  CustomCode = "CustomCode"
-  ItemNotReceived = "ItemNotReceived"
-  UnpaidItem = "UnpaidItem"
+class DisputeRecordTypeCodeType < ::String
+  @@schema_type = "DisputeRecordTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = DisputeRecordTypeCodeType.new("CustomCode")
+  ItemNotReceived = DisputeRecordTypeCodeType.new("ItemNotReceived")
+  UnpaidItem = DisputeRecordTypeCodeType.new("UnpaidItem")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DisputeResolutionReasonCodeType
-module DisputeResolutionReasonCodeType
-  BuyerPaidAuctionFees = "BuyerPaidAuctionFees"
-  CameToAgreement = "CameToAgreement"
-  ComputerTechnicalProblem = "ComputerTechnicalProblem"
-  CustomCode = "CustomCode"
-  FamilyEmergency = "FamilyEmergency"
-  FirstInfraction = "FirstInfraction"
-  ItemReturned = "ItemReturned"
-  NoContact = "NoContact"
-  OtherResolution = "OtherResolution"
-  ProofGivenInFeedback = "ProofGivenInFeedback"
-  ProofOfPayment = "ProofOfPayment"
-  SellerReceivedPayment = "SellerReceivedPayment"
-  Unresolved = "Unresolved"
+class DisputeResolutionReasonCodeType < ::String
+  @@schema_type = "DisputeResolutionReasonCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BuyerPaidAuctionFees = DisputeResolutionReasonCodeType.new("BuyerPaidAuctionFees")
+  CameToAgreement = DisputeResolutionReasonCodeType.new("CameToAgreement")
+  ComputerTechnicalProblem = DisputeResolutionReasonCodeType.new("ComputerTechnicalProblem")
+  CustomCode = DisputeResolutionReasonCodeType.new("CustomCode")
+  FamilyEmergency = DisputeResolutionReasonCodeType.new("FamilyEmergency")
+  FirstInfraction = DisputeResolutionReasonCodeType.new("FirstInfraction")
+  ItemReturned = DisputeResolutionReasonCodeType.new("ItemReturned")
+  NoContact = DisputeResolutionReasonCodeType.new("NoContact")
+  OtherResolution = DisputeResolutionReasonCodeType.new("OtherResolution")
+  ProofGivenInFeedback = DisputeResolutionReasonCodeType.new("ProofGivenInFeedback")
+  ProofOfPayment = DisputeResolutionReasonCodeType.new("ProofOfPayment")
+  SellerReceivedPayment = DisputeResolutionReasonCodeType.new("SellerReceivedPayment")
+  Unresolved = DisputeResolutionReasonCodeType.new("Unresolved")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DisputeResolutionRecordTypeCodeType
-module DisputeResolutionRecordTypeCodeType
-  AppealBuyerStrike = "AppealBuyerStrike"
-  CustomCode = "CustomCode"
-  FVFCredit = "FVFCredit"
-  FVFCreditNotGranted = "FVFCreditNotGranted"
-  GenerateCSTicketForSuspend = "GenerateCSTicketForSuspend"
-  InsertionFeeCredit = "InsertionFeeCredit"
-  ReverseFVFCredit = "ReverseFVFCredit"
-  ReverseInsertionFeeCredit = "ReverseInsertionFeeCredit"
-  StrikeBuyer = "StrikeBuyer"
-  SuspendBuyer = "SuspendBuyer"
-  UnsuspendBuyer = "UnsuspendBuyer"
+class DisputeResolutionRecordTypeCodeType < ::String
+  @@schema_type = "DisputeResolutionRecordTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AppealBuyerStrike = DisputeResolutionRecordTypeCodeType.new("AppealBuyerStrike")
+  CustomCode = DisputeResolutionRecordTypeCodeType.new("CustomCode")
+  FVFCredit = DisputeResolutionRecordTypeCodeType.new("FVFCredit")
+  FVFCreditNotGranted = DisputeResolutionRecordTypeCodeType.new("FVFCreditNotGranted")
+  GenerateCSTicketForSuspend = DisputeResolutionRecordTypeCodeType.new("GenerateCSTicketForSuspend")
+  InsertionFeeCredit = DisputeResolutionRecordTypeCodeType.new("InsertionFeeCredit")
+  ReverseFVFCredit = DisputeResolutionRecordTypeCodeType.new("ReverseFVFCredit")
+  ReverseInsertionFeeCredit = DisputeResolutionRecordTypeCodeType.new("ReverseInsertionFeeCredit")
+  StrikeBuyer = DisputeResolutionRecordTypeCodeType.new("StrikeBuyer")
+  SuspendBuyer = DisputeResolutionRecordTypeCodeType.new("SuspendBuyer")
+  UnsuspendBuyer = DisputeResolutionRecordTypeCodeType.new("UnsuspendBuyer")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DisputeSortTypeCodeType
-module DisputeSortTypeCodeType
-  CustomCode = "CustomCode"
-  DisputeCreatedTimeAscending = "DisputeCreatedTimeAscending"
-  DisputeCreatedTimeDescending = "DisputeCreatedTimeDescending"
-  DisputeCreditEligibilityAscending = "DisputeCreditEligibilityAscending"
-  DisputeCreditEligibilityDescending = "DisputeCreditEligibilityDescending"
-  DisputeStatusAscending = "DisputeStatusAscending"
-  DisputeStatusDescending = "DisputeStatusDescending"
-  None = "None"
+class DisputeSortTypeCodeType < ::String
+  @@schema_type = "DisputeSortTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = DisputeSortTypeCodeType.new("CustomCode")
+  DisputeCreatedTimeAscending = DisputeSortTypeCodeType.new("DisputeCreatedTimeAscending")
+  DisputeCreatedTimeDescending = DisputeSortTypeCodeType.new("DisputeCreatedTimeDescending")
+  DisputeCreditEligibilityAscending = DisputeSortTypeCodeType.new("DisputeCreditEligibilityAscending")
+  DisputeCreditEligibilityDescending = DisputeSortTypeCodeType.new("DisputeCreditEligibilityDescending")
+  DisputeStatusAscending = DisputeSortTypeCodeType.new("DisputeStatusAscending")
+  DisputeStatusDescending = DisputeSortTypeCodeType.new("DisputeStatusDescending")
+  None = DisputeSortTypeCodeType.new("None")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DisputeStateCodeType
-module DisputeStateCodeType
-  BuyerFirstResponseNoPayOption = "BuyerFirstResponseNoPayOption"
-  BuyerFirstResponseNoPayOptionLateResponse = "BuyerFirstResponseNoPayOptionLateResponse"
-  BuyerFirstResponsePayOption = "BuyerFirstResponsePayOption"
-  BuyerFirstResponsePayOptionLateResponse = "BuyerFirstResponsePayOptionLateResponse"
-  Closed = "Closed"
-  CustomCode = "CustomCode"
-  Locked = "Locked"
-  MutualAgreementOrBuyerReturningItem = "MutualAgreementOrBuyerReturningItem"
-  MutualCommunicationNoPayOption = "MutualCommunicationNoPayOption"
-  MutualCommunicationPayOption = "MutualCommunicationPayOption"
-  MutualWithdrawalAgreement = "MutualWithdrawalAgreement"
-  MutualWithdrawalAgreementLate = "MutualWithdrawalAgreementLate"
-  NotAsDescribedMutualCommunication = "NotAsDescribedMutualCommunication"
-  NotAsDescribedNoSellerResponse = "NotAsDescribedNoSellerResponse"
-  NotReceivedMutualCommunication = "NotReceivedMutualCommunication"
-  NotReceivedNoSellerResponse = "NotReceivedNoSellerResponse"
-  PendingResolve = "PendingResolve"
+class DisputeStateCodeType < ::String
+  @@schema_type = "DisputeStateCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BuyerFirstResponseNoPayOption = DisputeStateCodeType.new("BuyerFirstResponseNoPayOption")
+  BuyerFirstResponseNoPayOptionLateResponse = DisputeStateCodeType.new("BuyerFirstResponseNoPayOptionLateResponse")
+  BuyerFirstResponsePayOption = DisputeStateCodeType.new("BuyerFirstResponsePayOption")
+  BuyerFirstResponsePayOptionLateResponse = DisputeStateCodeType.new("BuyerFirstResponsePayOptionLateResponse")
+  Closed = DisputeStateCodeType.new("Closed")
+  CustomCode = DisputeStateCodeType.new("CustomCode")
+  Locked = DisputeStateCodeType.new("Locked")
+  MutualAgreementOrBuyerReturningItem = DisputeStateCodeType.new("MutualAgreementOrBuyerReturningItem")
+  MutualCommunicationNoPayOption = DisputeStateCodeType.new("MutualCommunicationNoPayOption")
+  MutualCommunicationPayOption = DisputeStateCodeType.new("MutualCommunicationPayOption")
+  MutualWithdrawalAgreement = DisputeStateCodeType.new("MutualWithdrawalAgreement")
+  MutualWithdrawalAgreementLate = DisputeStateCodeType.new("MutualWithdrawalAgreementLate")
+  NotAsDescribedMutualCommunication = DisputeStateCodeType.new("NotAsDescribedMutualCommunication")
+  NotAsDescribedNoSellerResponse = DisputeStateCodeType.new("NotAsDescribedNoSellerResponse")
+  NotReceivedMutualCommunication = DisputeStateCodeType.new("NotReceivedMutualCommunication")
+  NotReceivedNoSellerResponse = DisputeStateCodeType.new("NotReceivedNoSellerResponse")
+  PendingResolve = DisputeStateCodeType.new("PendingResolve")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DisputeStatusCodeType
-module DisputeStatusCodeType
-  Closed = "Closed"
-  ClosedFVFCreditNoStrike = "ClosedFVFCreditNoStrike"
-  ClosedFVFCreditStrike = "ClosedFVFCreditStrike"
-  ClosedNoFVFCreditNoStrike = "ClosedNoFVFCreditNoStrike"
-  ClosedNoFVFCreditStrike = "ClosedNoFVFCreditStrike"
-  CustomCode = "CustomCode"
-  FVFCreditReversedAfterClosing = "FVFCreditReversedAfterClosing"
-  StrikeAppealedAfterClosing = "StrikeAppealedAfterClosing"
-  StrikeAppealedAndFVFCreditReversed = "StrikeAppealedAndFVFCreditReversed"
-  WaitingForBuyerResponse = "WaitingForBuyerResponse"
-  WaitingForSellerResponse = "WaitingForSellerResponse"
+class DisputeStatusCodeType < ::String
+  @@schema_type = "DisputeStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Closed = DisputeStatusCodeType.new("Closed")
+  ClosedFVFCreditNoStrike = DisputeStatusCodeType.new("ClosedFVFCreditNoStrike")
+  ClosedFVFCreditStrike = DisputeStatusCodeType.new("ClosedFVFCreditStrike")
+  ClosedNoFVFCreditNoStrike = DisputeStatusCodeType.new("ClosedNoFVFCreditNoStrike")
+  ClosedNoFVFCreditStrike = DisputeStatusCodeType.new("ClosedNoFVFCreditStrike")
+  CustomCode = DisputeStatusCodeType.new("CustomCode")
+  FVFCreditReversedAfterClosing = DisputeStatusCodeType.new("FVFCreditReversedAfterClosing")
+  StrikeAppealedAfterClosing = DisputeStatusCodeType.new("StrikeAppealedAfterClosing")
+  StrikeAppealedAndFVFCreditReversed = DisputeStatusCodeType.new("StrikeAppealedAndFVFCreditReversed")
+  WaitingForBuyerResponse = DisputeStatusCodeType.new("WaitingForBuyerResponse")
+  WaitingForSellerResponse = DisputeStatusCodeType.new("WaitingForSellerResponse")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}EnableCodeType
-module EnableCodeType
-  CustomCode = "CustomCode"
-  Disable = "Disable"
-  Enable = "Enable"
+class EnableCodeType < ::String
+  @@schema_type = "EnableCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = EnableCodeType.new("CustomCode")
+  Disable = EnableCodeType.new("Disable")
+  Enable = EnableCodeType.new("Enable")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}EndOfAuctionLogoTypeCodeType
-module EndOfAuctionLogoTypeCodeType
-  CustomCode = "CustomCode"
-  Customized = "Customized"
-  None = "None"
-  Store = "Store"
-  WinningBidderNotice = "WinningBidderNotice"
+class EndOfAuctionLogoTypeCodeType < ::String
+  @@schema_type = "EndOfAuctionLogoTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = EndOfAuctionLogoTypeCodeType.new("CustomCode")
+  Customized = EndOfAuctionLogoTypeCodeType.new("Customized")
+  None = EndOfAuctionLogoTypeCodeType.new("None")
+  Store = EndOfAuctionLogoTypeCodeType.new("Store")
+  WinningBidderNotice = EndOfAuctionLogoTypeCodeType.new("WinningBidderNotice")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}EndReasonCodeType
-module EndReasonCodeType
-  CustomCode = "CustomCode"
-  Incorrect = "Incorrect"
-  LostOrBroken = "LostOrBroken"
-  NotAvailable = "NotAvailable"
-  OtherListingError = "OtherListingError"
+class EndReasonCodeType < ::String
+  @@schema_type = "EndReasonCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = EndReasonCodeType.new("CustomCode")
+  Incorrect = EndReasonCodeType.new("Incorrect")
+  LostOrBroken = EndReasonCodeType.new("LostOrBroken")
+  NotAvailable = EndReasonCodeType.new("NotAvailable")
+  OtherListingError = EndReasonCodeType.new("OtherListingError")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}EscrowCodeType
-module EscrowCodeType
-  ByBuyer = "ByBuyer"
-  BySeller = "BySeller"
-  CustomCode = "CustomCode"
-  None = "None"
+class EscrowCodeType < ::String
+  @@schema_type = "EscrowCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  ByBuyer = EscrowCodeType.new("ByBuyer")
+  BySeller = EscrowCodeType.new("BySeller")
+  CustomCode = EscrowCodeType.new("CustomCode")
+  None = EscrowCodeType.new("None")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ExternalProductCodeType
-module ExternalProductCodeType
-  CustomCode = "CustomCode"
-  EAN = "EAN"
-  ISBN = "ISBN"
-  ProductID = "ProductID"
-  UPC = "UPC"
+class ExternalProductCodeType < ::String
+  @@schema_type = "ExternalProductCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = ExternalProductCodeType.new("CustomCode")
+  EAN = ExternalProductCodeType.new("EAN")
+  ISBN = ExternalProductCodeType.new("ISBN")
+  Keywords = ExternalProductCodeType.new("Keywords")
+  ProductID = ExternalProductCodeType.new("ProductID")
+  UPC = ExternalProductCodeType.new("UPC")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}FeatureIDCodeType
-module FeatureIDCodeType
-  BestOfferEnabled = "BestOfferEnabled"
-  CustomCode = "CustomCode"
-  DutchBINEnabled = "DutchBINEnabled"
-  HomePageFeaturedEnabled = "HomePageFeaturedEnabled"
-  ListingDurations = "ListingDurations"
-  ShippingTermsRequired = "ShippingTermsRequired"
+class FeatureIDCodeType < ::String
+  @@schema_type = "FeatureIDCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AdFormatEnabled = FeatureIDCodeType.new("AdFormatEnabled")
+  BasicUpgradePack = FeatureIDCodeType.new("BasicUpgradePack")
+  BestOfferAutoDeclineEnabled = FeatureIDCodeType.new("BestOfferAutoDeclineEnabled")
+  BestOfferCounterEnabled = FeatureIDCodeType.new("BestOfferCounterEnabled")
+  BestOfferEnabled = FeatureIDCodeType.new("BestOfferEnabled")
+  CustomCode = FeatureIDCodeType.new("CustomCode")
+  DigitalDeliveryEnabled = FeatureIDCodeType.new("DigitalDeliveryEnabled")
+  DutchBINEnabled = FeatureIDCodeType.new("DutchBINEnabled")
+  HomePageFeaturedEnabled = FeatureIDCodeType.new("HomePageFeaturedEnabled")
+  ListingDurations = FeatureIDCodeType.new("ListingDurations")
+  ProPack = FeatureIDCodeType.new("ProPack")
+  ProPackPlus = FeatureIDCodeType.new("ProPackPlus")
+  ShippingTermsRequired = FeatureIDCodeType.new("ShippingTermsRequired")
+  UserConsentRequired = FeatureIDCodeType.new("UserConsentRequired")
+  ValuePack = FeatureIDCodeType.new("ValuePack")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}FeedbackRatingStarCodeType
-module FeedbackRatingStarCodeType
-  Blue = "Blue"
-  CustomCode = "CustomCode"
-  Green = "Green"
-  None = "None"
-  Purple = "Purple"
-  PurpleShooting = "PurpleShooting"
-  Red = "Red"
-  RedShooting = "RedShooting"
-  Turquoise = "Turquoise"
-  TurquoiseShooting = "TurquoiseShooting"
-  Yellow = "Yellow"
-  YellowShooting = "YellowShooting"
+class FeedbackRatingStarCodeType < ::String
+  @@schema_type = "FeedbackRatingStarCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Blue = FeedbackRatingStarCodeType.new("Blue")
+  CustomCode = FeedbackRatingStarCodeType.new("CustomCode")
+  Green = FeedbackRatingStarCodeType.new("Green")
+  None = FeedbackRatingStarCodeType.new("None")
+  Purple = FeedbackRatingStarCodeType.new("Purple")
+  PurpleShooting = FeedbackRatingStarCodeType.new("PurpleShooting")
+  Red = FeedbackRatingStarCodeType.new("Red")
+  RedShooting = FeedbackRatingStarCodeType.new("RedShooting")
+  Turquoise = FeedbackRatingStarCodeType.new("Turquoise")
+  TurquoiseShooting = FeedbackRatingStarCodeType.new("TurquoiseShooting")
+  Yellow = FeedbackRatingStarCodeType.new("Yellow")
+  YellowShooting = FeedbackRatingStarCodeType.new("YellowShooting")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}FeedbackResponseCodeType
-module FeedbackResponseCodeType
-  FollowUp = "FollowUp"
-  Reply = "Reply"
+class FeedbackResponseCodeType < ::String
+  @@schema_type = "FeedbackResponseCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  FollowUp = FeedbackResponseCodeType.new("FollowUp")
+  Reply = FeedbackResponseCodeType.new("Reply")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}FlatRateInsuranceRangeCodeType
-module FlatRateInsuranceRangeCodeType
-  CustomCode = "CustomCode"
-  FlatRateInsuranceRange1 = "FlatRateInsuranceRange1"
-  FlatRateInsuranceRange2 = "FlatRateInsuranceRange2"
-  FlatRateInsuranceRange3 = "FlatRateInsuranceRange3"
-  FlatRateInsuranceRange4 = "FlatRateInsuranceRange4"
-  FlatRateInsuranceRange5 = "FlatRateInsuranceRange5"
-  FlatRateInsuranceRange6 = "FlatRateInsuranceRange6"
+class FlatRateInsuranceRangeCodeType < ::String
+  @@schema_type = "FlatRateInsuranceRangeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = FlatRateInsuranceRangeCodeType.new("CustomCode")
+  FlatRateInsuranceRange1 = FlatRateInsuranceRangeCodeType.new("FlatRateInsuranceRange1")
+  FlatRateInsuranceRange2 = FlatRateInsuranceRangeCodeType.new("FlatRateInsuranceRange2")
+  FlatRateInsuranceRange3 = FlatRateInsuranceRangeCodeType.new("FlatRateInsuranceRange3")
+  FlatRateInsuranceRange4 = FlatRateInsuranceRangeCodeType.new("FlatRateInsuranceRange4")
+  FlatRateInsuranceRange5 = FlatRateInsuranceRangeCodeType.new("FlatRateInsuranceRange5")
+  FlatRateInsuranceRange6 = FlatRateInsuranceRangeCodeType.new("FlatRateInsuranceRange6")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}FlatShippingRateOptionCodeType
-module FlatShippingRateOptionCodeType
-  ChargeAmountForEachAdditionalItem = "ChargeAmountForEachAdditionalItem"
-  CustomCode = "CustomCode"
-  DeductAmountFromEachAdditionalItem = "DeductAmountFromEachAdditionalItem"
-  ShipAdditionalItemsFree = "ShipAdditionalItemsFree"
+class FlatShippingRateOptionCodeType < ::String
+  @@schema_type = "FlatShippingRateOptionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  ChargeAmountForEachAdditionalItem = FlatShippingRateOptionCodeType.new("ChargeAmountForEachAdditionalItem")
+  CustomCode = FlatShippingRateOptionCodeType.new("CustomCode")
+  DeductAmountFromEachAdditionalItem = FlatShippingRateOptionCodeType.new("DeductAmountFromEachAdditionalItem")
+  ShipAdditionalItemsFree = FlatShippingRateOptionCodeType.new("ShipAdditionalItemsFree")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}GallerySortFilterCodeType
-module GallerySortFilterCodeType
-  CustomCode = "CustomCode"
-  ShowAnyItems = "ShowAnyItems"
-  ShowItemsWithGalleryImagesFirst = "ShowItemsWithGalleryImagesFirst"
-  ShowOnlyItemsWithGalleryImages = "ShowOnlyItemsWithGalleryImages"
+class GallerySortFilterCodeType < ::String
+  @@schema_type = "GallerySortFilterCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = GallerySortFilterCodeType.new("CustomCode")
+  ShowAnyItems = GallerySortFilterCodeType.new("ShowAnyItems")
+  ShowItemsWithGalleryImagesFirst = GallerySortFilterCodeType.new("ShowItemsWithGalleryImagesFirst")
+  ShowOnlyItemsWithGalleryImages = GallerySortFilterCodeType.new("ShowOnlyItemsWithGalleryImages")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}GalleryTypeCodeType
-module GalleryTypeCodeType
-  CustomCode = "CustomCode"
-  Featured = "Featured"
-  Gallery = "Gallery"
-  None = "None"
+class GalleryTypeCodeType < ::String
+  @@schema_type = "GalleryTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = GalleryTypeCodeType.new("CustomCode")
+  Featured = GalleryTypeCodeType.new("Featured")
+  Gallery = GalleryTypeCodeType.new("Gallery")
+  None = GalleryTypeCodeType.new("None")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}GeneralPaymentMethodCodeType
-module GeneralPaymentMethodCodeType
-  ACH = "ACH"
-  Creditcard = "Creditcard"
-  CustomCode = "CustomCode"
-  Echeck = "Echeck"
-  Other = "Other"
-  PayPalBalance = "PayPalBalance"
+class GeneralPaymentMethodCodeType < ::String
+  @@schema_type = "GeneralPaymentMethodCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  ACH = GeneralPaymentMethodCodeType.new("ACH")
+  Creditcard = GeneralPaymentMethodCodeType.new("Creditcard")
+  CustomCode = GeneralPaymentMethodCodeType.new("CustomCode")
+  Echeck = GeneralPaymentMethodCodeType.new("Echeck")
+  Other = GeneralPaymentMethodCodeType.new("Other")
+  PayPalBalance = GeneralPaymentMethodCodeType.new("PayPalBalance")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}GetAllBiddersModeCodeType
-module GetAllBiddersModeCodeType
-  CustomCode = "CustomCode"
-  EndedListing = "EndedListing"
-  SecondChanceEligibleEndedListing = "SecondChanceEligibleEndedListing"
-  ViewAll = "ViewAll"
+class GetAllBiddersModeCodeType < ::String
+  @@schema_type = "GetAllBiddersModeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = GetAllBiddersModeCodeType.new("CustomCode")
+  EndedListing = GetAllBiddersModeCodeType.new("EndedListing")
+  SecondChanceEligibleEndedListing = GetAllBiddersModeCodeType.new("SecondChanceEligibleEndedListing")
+  ViewAll = GetAllBiddersModeCodeType.new("ViewAll")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}GiftServicesCodeType
-module GiftServicesCodeType
-  CustomCode = "CustomCode"
-  GiftExpressShipping = "GiftExpressShipping"
-  GiftShipToRecipient = "GiftShipToRecipient"
-  GiftWrap = "GiftWrap"
+class GiftServicesCodeType < ::String
+  @@schema_type = "GiftServicesCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = GiftServicesCodeType.new("CustomCode")
+  GiftExpressShipping = GiftServicesCodeType.new("GiftExpressShipping")
+  GiftShipToRecipient = GiftServicesCodeType.new("GiftShipToRecipient")
+  GiftWrap = GiftServicesCodeType.new("GiftWrap")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}GranularityLevelCodeType
-module GranularityLevelCodeType
-  Coarse = "Coarse"
-  Fine = "Fine"
-  Medium = "Medium"
+class GranularityLevelCodeType < ::String
+  @@schema_type = "GranularityLevelCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Coarse = GranularityLevelCodeType.new("Coarse")
+  Fine = GranularityLevelCodeType.new("Fine")
+  Medium = GranularityLevelCodeType.new("Medium")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}HitCounterCodeType
-module HitCounterCodeType
-  CustomCode = "CustomCode"
-  GreenLED = "GreenLED"
-  Hidden = "Hidden"
-  HonestyStyle = "HonestyStyle"
-  NoHitCounter = "NoHitCounter"
+class HitCounterCodeType < ::String
+  @@schema_type = "HitCounterCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BasicStyle = HitCounterCodeType.new("BasicStyle")
+  CustomCode = HitCounterCodeType.new("CustomCode")
+  GreenLED = HitCounterCodeType.new("GreenLED")
+  Hidden = HitCounterCodeType.new("Hidden")
+  HiddenStyle = HitCounterCodeType.new("HiddenStyle")
+  HonestyStyle = HitCounterCodeType.new("HonestyStyle")
+  NoHitCounter = HitCounterCodeType.new("NoHitCounter")
+  RetroStyle = HitCounterCodeType.new("RetroStyle")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}InsuranceOptionCodeType
-module InsuranceOptionCodeType
-  CustomCode = "CustomCode"
-  IncludedInShippingHandling = "IncludedInShippingHandling"
-  NotOffered = "NotOffered"
-  NotOfferedOnSite = "NotOfferedOnSite"
-  Optional = "Optional"
-  Required = "Required"
+class InsuranceOptionCodeType < ::String
+  @@schema_type = "InsuranceOptionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = InsuranceOptionCodeType.new("CustomCode")
+  IncludedInShippingHandling = InsuranceOptionCodeType.new("IncludedInShippingHandling")
+  NotOffered = InsuranceOptionCodeType.new("NotOffered")
+  NotOfferedOnSite = InsuranceOptionCodeType.new("NotOfferedOnSite")
+  Optional = InsuranceOptionCodeType.new("Optional")
+  Required = InsuranceOptionCodeType.new("Required")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}InsuranceSelectedCodeType
-module InsuranceSelectedCodeType
-  CustomCode = "CustomCode"
-  IncludedInShippingHandling = "IncludedInShippingHandling"
-  NotOffered = "NotOffered"
-  OfferedNotSelected = "OfferedNotSelected"
-  OfferedSelected = "OfferedSelected"
-  Required = "Required"
+class InsuranceSelectedCodeType < ::String
+  @@schema_type = "InsuranceSelectedCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = InsuranceSelectedCodeType.new("CustomCode")
+  IncludedInShippingHandling = InsuranceSelectedCodeType.new("IncludedInShippingHandling")
+  NotOffered = InsuranceSelectedCodeType.new("NotOffered")
+  OfferedNotSelected = InsuranceSelectedCodeType.new("OfferedNotSelected")
+  OfferedSelected = InsuranceSelectedCodeType.new("OfferedSelected")
+  Required = InsuranceSelectedCodeType.new("Required")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ItemFormatSortFilterCodeType
-module ItemFormatSortFilterCodeType
-  CustomCode = "CustomCode"
-  ShowAnyItems = "ShowAnyItems"
-  ShowItemsWithBINFirst = "ShowItemsWithBINFirst"
-  ShowOnlyItemsWithBIN = "ShowOnlyItemsWithBIN"
-  ShowOnlyStoreItems = "ShowOnlyStoreItems"
+class ItemFormatSortFilterCodeType < ::String
+  @@schema_type = "ItemFormatSortFilterCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = ItemFormatSortFilterCodeType.new("CustomCode")
+  ShowAnyItems = ItemFormatSortFilterCodeType.new("ShowAnyItems")
+  ShowItemsWithBINFirst = ItemFormatSortFilterCodeType.new("ShowItemsWithBINFirst")
+  ShowOnlyItemsWithBIN = ItemFormatSortFilterCodeType.new("ShowOnlyItemsWithBIN")
+  ShowOnlyStoreItems = ItemFormatSortFilterCodeType.new("ShowOnlyStoreItems")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ItemLocationCodeType
-module ItemLocationCodeType
-  CustomCode = "CustomCode"
-  ItemAvailableIn = "ItemAvailableIn"
-  ItemLocatedIn = "ItemLocatedIn"
+class ItemLocationCodeType < ::String
+  @@schema_type = "ItemLocationCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = ItemLocationCodeType.new("CustomCode")
+  ItemAvailableIn = ItemLocationCodeType.new("ItemAvailableIn")
+  ItemLocatedIn = ItemLocationCodeType.new("ItemLocatedIn")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ItemSortFilterCodeType
-module ItemSortFilterCodeType
-  CustomCode = "CustomCode"
-  EndingLast = "EndingLast"
-  EndingSoonest = "EndingSoonest"
-  HighestPrice = "HighestPrice"
-  LowestPrice = "LowestPrice"
-  NewlyListed = "NewlyListed"
-  RandomlySelected = "RandomlySelected"
+class ItemSortFilterCodeType < ::String
+  @@schema_type = "ItemSortFilterCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = ItemSortFilterCodeType.new("CustomCode")
+  EndingLast = ItemSortFilterCodeType.new("EndingLast")
+  EndingSoonest = ItemSortFilterCodeType.new("EndingSoonest")
+  HighestPrice = ItemSortFilterCodeType.new("HighestPrice")
+  LowestPrice = ItemSortFilterCodeType.new("LowestPrice")
+  NewlyListed = ItemSortFilterCodeType.new("NewlyListed")
+  RandomlySelected = ItemSortFilterCodeType.new("RandomlySelected")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ItemSortTypeCodeType
-module ItemSortTypeCodeType
-  BestOffer = "BestOffer"
-  BestOfferCount = "BestOfferCount"
-  BestOfferCountDescending = "BestOfferCountDescending"
-  BestOfferDescending = "BestOfferDescending"
-  BidCount = "BidCount"
-  BidCountDescending = "BidCountDescending"
-  BidderCount = "BidderCount"
-  BidderCountDescending = "BidderCountDescending"
-  BuyerEmail = "BuyerEmail"
-  BuyerEmailDescending = "BuyerEmailDescending"
-  BuyerPostalCode = "BuyerPostalCode"
-  BuyerPostalCodeDescending = "BuyerPostalCodeDescending"
-  BuyerUserID = "BuyerUserID"
-  BuyerUserIDDescending = "BuyerUserIDDescending"
-  CurrentPrice = "CurrentPrice"
-  CurrentPriceDescending = "CurrentPriceDescending"
-  CustomCode = "CustomCode"
-  EndTime = "EndTime"
-  EndTimeDescending = "EndTimeDescending"
-  FeedbackLeft = "FeedbackLeft"
-  FeedbackLeftDescending = "FeedbackLeftDescending"
-  FeedbackReceived = "FeedbackReceived"
-  FeedbackReceivedDescending = "FeedbackReceivedDescending"
-  HighBidderUserID = "HighBidderUserID"
-  HighBidderUserIDDescending = "HighBidderUserIDDescending"
-  ItemID = "ItemID"
-  ItemIDDescending = "ItemIDDescending"
-  ListingDuration = "ListingDuration"
-  ListingDurationDescending = "ListingDurationDescending"
-  ListingType = "ListingType"
-  ListingTypeDescending = "ListingTypeDescending"
-  MaxBid = "MaxBid"
-  MaxBidDescending = "MaxBidDescending"
-  Price = "Price"
-  PriceDescending = "PriceDescending"
-  Quantity = "Quantity"
-  QuantityAvailable = "QuantityAvailable"
-  QuantityAvailableDescending = "QuantityAvailableDescending"
-  QuantityDescending = "QuantityDescending"
-  QuantityPurchased = "QuantityPurchased"
-  QuantityPurchasedDescending = "QuantityPurchasedDescending"
-  QuantitySold = "QuantitySold"
-  QuantitySoldDescending = "QuantitySoldDescending"
-  QuestionCount = "QuestionCount"
-  QuestionCountDescending = "QuestionCountDescending"
-  ReservePrice = "ReservePrice"
-  ReservePriceDescending = "ReservePriceDescending"
-  SellerEmail = "SellerEmail"
-  SellerEmailDescending = "SellerEmailDescending"
-  SellerUserID = "SellerUserID"
-  SellerUserIDDescending = "SellerUserIDDescending"
-  ShippingServiceCost = "ShippingServiceCost"
-  ShippingServiceCostDescending = "ShippingServiceCostDescending"
-  StartPrice = "StartPrice"
-  StartPriceDescending = "StartPriceDescending"
-  StartTime = "StartTime"
-  StartTimeDescending = "StartTimeDescending"
-  TimeLeft = "TimeLeft"
-  TimeLeftDescending = "TimeLeftDescending"
-  Title = "Title"
-  TitleDescending = "TitleDescending"
-  TotalPrice = "TotalPrice"
-  TotalPriceDescending = "TotalPriceDescending"
-  UserID = "UserID"
-  UserIDDescending = "UserIDDescending"
-  WatchCount = "WatchCount"
-  WatchCountDescending = "WatchCountDescending"
+class ItemSortTypeCodeType < ::String
+  @@schema_type = "ItemSortTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BestOffer = ItemSortTypeCodeType.new("BestOffer")
+  BestOfferCount = ItemSortTypeCodeType.new("BestOfferCount")
+  BestOfferCountDescending = ItemSortTypeCodeType.new("BestOfferCountDescending")
+  BestOfferDescending = ItemSortTypeCodeType.new("BestOfferDescending")
+  BidCount = ItemSortTypeCodeType.new("BidCount")
+  BidCountDescending = ItemSortTypeCodeType.new("BidCountDescending")
+  BidderCount = ItemSortTypeCodeType.new("BidderCount")
+  BidderCountDescending = ItemSortTypeCodeType.new("BidderCountDescending")
+  BuyerEmail = ItemSortTypeCodeType.new("BuyerEmail")
+  BuyerEmailDescending = ItemSortTypeCodeType.new("BuyerEmailDescending")
+  BuyerPostalCode = ItemSortTypeCodeType.new("BuyerPostalCode")
+  BuyerPostalCodeDescending = ItemSortTypeCodeType.new("BuyerPostalCodeDescending")
+  BuyerUserID = ItemSortTypeCodeType.new("BuyerUserID")
+  BuyerUserIDDescending = ItemSortTypeCodeType.new("BuyerUserIDDescending")
+  CurrentPrice = ItemSortTypeCodeType.new("CurrentPrice")
+  CurrentPriceDescending = ItemSortTypeCodeType.new("CurrentPriceDescending")
+  CustomCode = ItemSortTypeCodeType.new("CustomCode")
+  EndTime = ItemSortTypeCodeType.new("EndTime")
+  EndTimeDescending = ItemSortTypeCodeType.new("EndTimeDescending")
+  FeedbackLeft = ItemSortTypeCodeType.new("FeedbackLeft")
+  FeedbackLeftDescending = ItemSortTypeCodeType.new("FeedbackLeftDescending")
+  FeedbackReceived = ItemSortTypeCodeType.new("FeedbackReceived")
+  FeedbackReceivedDescending = ItemSortTypeCodeType.new("FeedbackReceivedDescending")
+  HighBidderUserID = ItemSortTypeCodeType.new("HighBidderUserID")
+  HighBidderUserIDDescending = ItemSortTypeCodeType.new("HighBidderUserIDDescending")
+  ItemID = ItemSortTypeCodeType.new("ItemID")
+  ItemIDDescending = ItemSortTypeCodeType.new("ItemIDDescending")
+  ListingDuration = ItemSortTypeCodeType.new("ListingDuration")
+  ListingDurationDescending = ItemSortTypeCodeType.new("ListingDurationDescending")
+  ListingType = ItemSortTypeCodeType.new("ListingType")
+  ListingTypeDescending = ItemSortTypeCodeType.new("ListingTypeDescending")
+  MaxBid = ItemSortTypeCodeType.new("MaxBid")
+  MaxBidDescending = ItemSortTypeCodeType.new("MaxBidDescending")
+  Price = ItemSortTypeCodeType.new("Price")
+  PriceDescending = ItemSortTypeCodeType.new("PriceDescending")
+  Quantity = ItemSortTypeCodeType.new("Quantity")
+  QuantityAvailable = ItemSortTypeCodeType.new("QuantityAvailable")
+  QuantityAvailableDescending = ItemSortTypeCodeType.new("QuantityAvailableDescending")
+  QuantityDescending = ItemSortTypeCodeType.new("QuantityDescending")
+  QuantityPurchased = ItemSortTypeCodeType.new("QuantityPurchased")
+  QuantityPurchasedDescending = ItemSortTypeCodeType.new("QuantityPurchasedDescending")
+  QuantitySold = ItemSortTypeCodeType.new("QuantitySold")
+  QuantitySoldDescending = ItemSortTypeCodeType.new("QuantitySoldDescending")
+  QuestionCount = ItemSortTypeCodeType.new("QuestionCount")
+  QuestionCountDescending = ItemSortTypeCodeType.new("QuestionCountDescending")
+  ReservePrice = ItemSortTypeCodeType.new("ReservePrice")
+  ReservePriceDescending = ItemSortTypeCodeType.new("ReservePriceDescending")
+  SellerEmail = ItemSortTypeCodeType.new("SellerEmail")
+  SellerEmailDescending = ItemSortTypeCodeType.new("SellerEmailDescending")
+  SellerUserID = ItemSortTypeCodeType.new("SellerUserID")
+  SellerUserIDDescending = ItemSortTypeCodeType.new("SellerUserIDDescending")
+  ShippingServiceCost = ItemSortTypeCodeType.new("ShippingServiceCost")
+  ShippingServiceCostDescending = ItemSortTypeCodeType.new("ShippingServiceCostDescending")
+  StartPrice = ItemSortTypeCodeType.new("StartPrice")
+  StartPriceDescending = ItemSortTypeCodeType.new("StartPriceDescending")
+  StartTime = ItemSortTypeCodeType.new("StartTime")
+  StartTimeDescending = ItemSortTypeCodeType.new("StartTimeDescending")
+  TimeLeft = ItemSortTypeCodeType.new("TimeLeft")
+  TimeLeftDescending = ItemSortTypeCodeType.new("TimeLeftDescending")
+  Title = ItemSortTypeCodeType.new("Title")
+  TitleDescending = ItemSortTypeCodeType.new("TitleDescending")
+  TotalPrice = ItemSortTypeCodeType.new("TotalPrice")
+  TotalPriceDescending = ItemSortTypeCodeType.new("TotalPriceDescending")
+  UserID = ItemSortTypeCodeType.new("UserID")
+  UserIDDescending = ItemSortTypeCodeType.new("UserIDDescending")
+  WatchCount = ItemSortTypeCodeType.new("WatchCount")
+  WatchCountDescending = ItemSortTypeCodeType.new("WatchCountDescending")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ItemTypeFilterCodeType
-module ItemTypeFilterCodeType
-  AllItems = "AllItems"
-  AuctionItemsOnly = "AuctionItemsOnly"
-  CustomCode = "CustomCode"
-  FixedPricedItem = "FixedPricedItem"
+class ItemTypeFilterCodeType < ::String
+  @@schema_type = "ItemTypeFilterCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AllItems = ItemTypeFilterCodeType.new("AllItems")
+  AuctionItemsOnly = ItemTypeFilterCodeType.new("AuctionItemsOnly")
+  CustomCode = ItemTypeFilterCodeType.new("CustomCode")
+  FixedPricedItem = ItemTypeFilterCodeType.new("FixedPricedItem")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ListingDurationCodeType
-module ListingDurationCodeType
-  CustomCode = "CustomCode"
-  Days_1 = "Days_1"
-  Days_10 = "Days_10"
-  Days_120 = "Days_120"
-  Days_21 = "Days_21"
-  Days_3 = "Days_3"
-  Days_30 = "Days_30"
-  Days_5 = "Days_5"
-  Days_60 = "Days_60"
-  Days_7 = "Days_7"
-  Days_90 = "Days_90"
-  GTC = "GTC"
+class ListingDurationCodeType < ::String
+  @@schema_type = "ListingDurationCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = ListingDurationCodeType.new("CustomCode")
+  Days_1 = ListingDurationCodeType.new("Days_1")
+  Days_10 = ListingDurationCodeType.new("Days_10")
+  Days_120 = ListingDurationCodeType.new("Days_120")
+  Days_14 = ListingDurationCodeType.new("Days_14")
+  Days_21 = ListingDurationCodeType.new("Days_21")
+  Days_3 = ListingDurationCodeType.new("Days_3")
+  Days_30 = ListingDurationCodeType.new("Days_30")
+  Days_5 = ListingDurationCodeType.new("Days_5")
+  Days_60 = ListingDurationCodeType.new("Days_60")
+  Days_7 = ListingDurationCodeType.new("Days_7")
+  Days_90 = ListingDurationCodeType.new("Days_90")
+  GTC = ListingDurationCodeType.new("GTC")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ListingEnhancementsCodeType
-module ListingEnhancementsCodeType
-  BoldTitle = "BoldTitle"
-  Border = "Border"
-  CustomCode = "CustomCode"
-  Featured = "Featured"
-  Highlight = "Highlight"
-  HomePageFeatured = "HomePageFeatured"
-  ProPackBundle = "ProPackBundle"
+class ListingEnhancementsCodeType < ::String
+  @@schema_type = "ListingEnhancementsCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BasicUpgradePackBundle = ListingEnhancementsCodeType.new("BasicUpgradePackBundle")
+  BoldTitle = ListingEnhancementsCodeType.new("BoldTitle")
+  Border = ListingEnhancementsCodeType.new("Border")
+  CustomCode = ListingEnhancementsCodeType.new("CustomCode")
+  Featured = ListingEnhancementsCodeType.new("Featured")
+  Highlight = ListingEnhancementsCodeType.new("Highlight")
+  HomePageFeatured = ListingEnhancementsCodeType.new("HomePageFeatured")
+  ProPackBundle = ListingEnhancementsCodeType.new("ProPackBundle")
+  ProPackPlusBundle = ListingEnhancementsCodeType.new("ProPackPlusBundle")
+  ValuePackBundle = ListingEnhancementsCodeType.new("ValuePackBundle")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ListingFlowCodeType
-module ListingFlowCodeType
-  AddItem = "AddItem"
-  CustomCode = "CustomCode"
-  RelistItem = "RelistItem"
-  ReviseItem = "ReviseItem"
+class ListingFlowCodeType < ::String
+  @@schema_type = "ListingFlowCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AddItem = ListingFlowCodeType.new("AddItem")
+  CustomCode = ListingFlowCodeType.new("CustomCode")
+  RelistItem = ListingFlowCodeType.new("RelistItem")
+  ReviseItem = ListingFlowCodeType.new("ReviseItem")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ListingStatusCodeType
-module ListingStatusCodeType
-  Active = "Active"
-  Completed = "Completed"
-  Custom = "Custom"
-  CustomCode = "CustomCode"
-  Ended = "Ended"
+class ListingStatusCodeType < ::String
+  @@schema_type = "ListingStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Active = ListingStatusCodeType.new("Active")
+  Completed = ListingStatusCodeType.new("Completed")
+  Custom = ListingStatusCodeType.new("Custom")
+  CustomCode = ListingStatusCodeType.new("CustomCode")
+  Ended = ListingStatusCodeType.new("Ended")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ListingTypeCodeType
-module ListingTypeCodeType
-  AdType = "AdType"
-  Auction = "Auction"
-  Chinese = "Chinese"
-  CustomCode = "CustomCode"
-  Dutch = "Dutch"
-  FixedPriceItem = "FixedPriceItem"
-  Half = "Half"
-  Live = "Live"
-  PersonalOffer = "PersonalOffer"
-  StoresFixedPrice = "StoresFixedPrice"
-  Unknown = "Unknown"
+class ListingTypeCodeType < ::String
+  @@schema_type = "ListingTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AdType = ListingTypeCodeType.new("AdType")
+  Auction = ListingTypeCodeType.new("Auction")
+  Chinese = ListingTypeCodeType.new("Chinese")
+  CustomCode = ListingTypeCodeType.new("CustomCode")
+  Dutch = ListingTypeCodeType.new("Dutch")
+  FixedPriceItem = ListingTypeCodeType.new("FixedPriceItem")
+  Half = ListingTypeCodeType.new("Half")
+  Live = ListingTypeCodeType.new("Live")
+  PersonalOffer = ListingTypeCodeType.new("PersonalOffer")
+  StoresFixedPrice = ListingTypeCodeType.new("StoresFixedPrice")
+  Unknown = ListingTypeCodeType.new("Unknown")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}LogoTypeCodeType
-module LogoTypeCodeType
-  Custom = "Custom"
-  CustomCode = "CustomCode"
-  Store = "Store"
-  WinningBidderNotice = "WinningBidderNotice"
+class LogoTypeCodeType < ::String
+  @@schema_type = "LogoTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Custom = LogoTypeCodeType.new("Custom")
+  CustomCode = LogoTypeCodeType.new("CustomCode")
+  Store = LogoTypeCodeType.new("Store")
+  WinningBidderNotice = LogoTypeCodeType.new("WinningBidderNotice")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}MailOptionsTypeCodeType
-module MailOptionsTypeCodeType
-  CustomCode = "CustomCode"
-  DoNotSendEmail = "DoNotSendEmail"
-  EmailCopyToSender = "EmailCopyToSender"
-  HideSenderEmailAddress = "HideSenderEmailAddress"
+class MailOptionsTypeCodeType < ::String
+  @@schema_type = "MailOptionsTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = MailOptionsTypeCodeType.new("CustomCode")
+  DoNotSendEmail = MailOptionsTypeCodeType.new("DoNotSendEmail")
+  EmailCopyToSender = MailOptionsTypeCodeType.new("EmailCopyToSender")
+  HideSenderEmailAddress = MailOptionsTypeCodeType.new("HideSenderEmailAddress")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}MarkUpMarkDownEventTypeCodeType
+class MarkUpMarkDownEventTypeCodeType < ::String
+  @@schema_type = "MarkUpMarkDownEventTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = MarkUpMarkDownEventTypeCodeType.new("CustomCode")
+  MarkDown = MarkUpMarkDownEventTypeCodeType.new("MarkDown")
+  MarkUp = MarkUpMarkDownEventTypeCodeType.new("MarkUp")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}MerchDisplayCodeType
-module MerchDisplayCodeType
-  CustomCode = "CustomCode"
-  DefaultTheme = "DefaultTheme"
-  StoreTheme = "StoreTheme"
+class MerchDisplayCodeType < ::String
+  @@schema_type = "MerchDisplayCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = MerchDisplayCodeType.new("CustomCode")
+  DefaultTheme = MerchDisplayCodeType.new("DefaultTheme")
+  StoreTheme = MerchDisplayCodeType.new("StoreTheme")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}MerchandizingPrefCodeType
-module MerchandizingPrefCodeType
-  CustomCode = "CustomCode"
-  OptIn = "OptIn"
-  OptOut = "OptOut"
+class MerchandizingPrefCodeType < ::String
+  @@schema_type = "MerchandizingPrefCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = MerchandizingPrefCodeType.new("CustomCode")
+  OptIn = MerchandizingPrefCodeType.new("OptIn")
+  OptOut = MerchandizingPrefCodeType.new("OptOut")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}MessageStatusTypeCodeType
-module MessageStatusTypeCodeType
-  Answered = "Answered"
-  CustomCode = "CustomCode"
-  Unanswered = "Unanswered"
+class MessageStatusTypeCodeType < ::String
+  @@schema_type = "MessageStatusTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Answered = MessageStatusTypeCodeType.new("Answered")
+  CustomCode = MessageStatusTypeCodeType.new("CustomCode")
+  Unanswered = MessageStatusTypeCodeType.new("Unanswered")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}MessageTypeCodeType
-module MessageTypeCodeType
-  AskSellerQuestion = "AskSellerQuestion"
-  ContactEbayMember = "ContactEbayMember"
-  CustomCode = "CustomCode"
-  ResponseToASQQuestion = "ResponseToASQQuestion"
+class MessageTypeCodeType < ::String
+  @@schema_type = "MessageTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AskSellerQuestion = MessageTypeCodeType.new("AskSellerQuestion")
+  ContactEbayMember = MessageTypeCodeType.new("ContactEbayMember")
+  CustomCode = MessageTypeCodeType.new("CustomCode")
+  ResponseToASQQuestion = MessageTypeCodeType.new("ResponseToASQQuestion")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ModifyActionCodeType
-module ModifyActionCodeType
-  Add = "Add"
-  CustomCode = "CustomCode"
-  Delete = "Delete"
-  Update = "Update"
+class ModifyActionCodeType < ::String
+  @@schema_type = "ModifyActionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Add = ModifyActionCodeType.new("Add")
+  CustomCode = ModifyActionCodeType.new("CustomCode")
+  Delete = ModifyActionCodeType.new("Delete")
+  Update = ModifyActionCodeType.new("Update")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ModifyCodeType
-module ModifyCodeType
-  CustomCode = "CustomCode"
-  Dropped = "Dropped"
-  Modify = "Modify"
+class ModifyCodeType < ::String
+  @@schema_type = "ModifyCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = ModifyCodeType.new("CustomCode")
+  Dropped = ModifyCodeType.new("Dropped")
+  Modify = ModifyCodeType.new("Modify")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}MyMessagesAlertResolutionStatusCode
-module MyMessagesAlertResolutionStatusCode
-  ResolvedByAutoResolution = "ResolvedByAutoResolution"
-  ResolvedByUser = "ResolvedByUser"
-  Unresolved = "Unresolved"
+class MyMessagesAlertResolutionStatusCode < ::String
+  @@schema_type = "MyMessagesAlertResolutionStatusCode"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  ResolvedByAutoResolution = MyMessagesAlertResolutionStatusCode.new("ResolvedByAutoResolution")
+  ResolvedByUser = MyMessagesAlertResolutionStatusCode.new("ResolvedByUser")
+  Unresolved = MyMessagesAlertResolutionStatusCode.new("Unresolved")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}MyMessagesFolderOperationCodeType
-module MyMessagesFolderOperationCodeType
-  CustomCode = "CustomCode"
-  Display = "Display"
-  Remove = "Remove"
-  Rename = "Rename"
+class MyMessagesFolderOperationCodeType < ::String
+  @@schema_type = "MyMessagesFolderOperationCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = MyMessagesFolderOperationCodeType.new("CustomCode")
+  Display = MyMessagesFolderOperationCodeType.new("Display")
+  Remove = MyMessagesFolderOperationCodeType.new("Remove")
+  Rename = MyMessagesFolderOperationCodeType.new("Rename")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}NotificationDeliveryStatusCodeType
+class NotificationDeliveryStatusCodeType < ::String
+  @@schema_type = "NotificationDeliveryStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = NotificationDeliveryStatusCodeType.new("CustomCode")
+  Delivered = NotificationDeliveryStatusCodeType.new("Delivered")
+  Failed = NotificationDeliveryStatusCodeType.new("Failed")
+  MarkedDown = NotificationDeliveryStatusCodeType.new("MarkedDown")
+  Rejected = NotificationDeliveryStatusCodeType.new("Rejected")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}NotificationEventPropertyNameCodeType
+class NotificationEventPropertyNameCodeType < ::String
+  @@schema_type = "NotificationEventPropertyNameCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = NotificationEventPropertyNameCodeType.new("CustomCode")
+  TimeLeft = NotificationEventPropertyNameCodeType.new("TimeLeft")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}NotificationEventStateCodeType
+class NotificationEventStateCodeType < ::String
+  @@schema_type = "NotificationEventStateCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Canceled = NotificationEventStateCodeType.new("Canceled")
+  CustomCode = NotificationEventStateCodeType.new("CustomCode")
+  Delivered = NotificationEventStateCodeType.new("Delivered")
+  Failed = NotificationEventStateCodeType.new("Failed")
+  FailedPending = NotificationEventStateCodeType.new("FailedPending")
+  MarkedDown = NotificationEventStateCodeType.new("MarkedDown")
+  MarkedDownPending = NotificationEventStateCodeType.new("MarkedDownPending")
+  New = NotificationEventStateCodeType.new("New")
+  Pending = NotificationEventStateCodeType.new("Pending")
+  Rejected = NotificationEventStateCodeType.new("Rejected")
+  Undeliverable = NotificationEventStateCodeType.new("Undeliverable")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}NotificationEventTypeCodeType
-module NotificationEventTypeCodeType
-  AskSellerQuestion = "AskSellerQuestion"
-  AuctionCheckoutComplete = "AuctionCheckoutComplete"
-  BestOffer = "BestOffer"
-  BuyerResponseDispute = "BuyerResponseDispute"
-  CheckoutBuyerRequestsTotal = "CheckoutBuyerRequestsTotal"
-  CustomCode = "CustomCode"
-  EndOfAuction = "EndOfAuction"
-  Feedback = "Feedback"
-  FeedbackForSeller = "FeedbackForSeller"
-  FixedPriceEndOfTransaction = "FixedPriceEndOfTransaction"
-  FixedPriceTransaction = "FixedPriceTransaction"
-  INRBuyerClosedDispute = "INRBuyerClosedDispute"
-  INRBuyerOpenedDispute = "INRBuyerOpenedDispute"
-  INRBuyerRespondedToDispute = "INRBuyerRespondedToDispute"
-  INRSellerRespondedToDispute = "INRSellerRespondedToDispute"
-  ItemListed = "ItemListed"
-  ItemRevised = "ItemRevised"
-  MyMessagesAlert = "MyMessagesAlert"
-  MyMessagesAlertHeader = "MyMessagesAlertHeader"
-  MyMessagesM2MMessage = "MyMessagesM2MMessage"
-  MyMessagesM2MMessageHeader = "MyMessagesM2MMessageHeader"
-  MyMessageseBayMessage = "MyMessageseBayMessage"
-  MyMessageseBayMessageHeader = "MyMessageseBayMessageHeader"
-  None = "None"
-  OutBid = "OutBid"
-  SecondChanceOffer = "SecondChanceOffer"
-  SellerClosedDispute = "SellerClosedDispute"
-  SellerOpenedDispute = "SellerOpenedDispute"
-  SellerRespondedToDispute = "SellerRespondedToDispute"
+class NotificationEventTypeCodeType < ::String
+  @@schema_type = "NotificationEventTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AskSellerQuestion = NotificationEventTypeCodeType.new("AskSellerQuestion")
+  AuctionCheckoutComplete = NotificationEventTypeCodeType.new("AuctionCheckoutComplete")
+  BestOffer = NotificationEventTypeCodeType.new("BestOffer")
+  BuyerResponseDispute = NotificationEventTypeCodeType.new("BuyerResponseDispute")
+  CheckoutBuyerRequestsTotal = NotificationEventTypeCodeType.new("CheckoutBuyerRequestsTotal")
+  CustomCode = NotificationEventTypeCodeType.new("CustomCode")
+  EndOfAuction = NotificationEventTypeCodeType.new("EndOfAuction")
+  Feedback = NotificationEventTypeCodeType.new("Feedback")
+  FeedbackForSeller = NotificationEventTypeCodeType.new("FeedbackForSeller")
+  FixedPriceEndOfTransaction = NotificationEventTypeCodeType.new("FixedPriceEndOfTransaction")
+  FixedPriceTransaction = NotificationEventTypeCodeType.new("FixedPriceTransaction")
+  INRBuyerClosedDispute = NotificationEventTypeCodeType.new("INRBuyerClosedDispute")
+  INRBuyerOpenedDispute = NotificationEventTypeCodeType.new("INRBuyerOpenedDispute")
+  INRBuyerRespondedToDispute = NotificationEventTypeCodeType.new("INRBuyerRespondedToDispute")
+  INRSellerRespondedToDispute = NotificationEventTypeCodeType.new("INRSellerRespondedToDispute")
+  ItemListed = NotificationEventTypeCodeType.new("ItemListed")
+  ItemRevised = NotificationEventTypeCodeType.new("ItemRevised")
+  MyMessagesAlert = NotificationEventTypeCodeType.new("MyMessagesAlert")
+  MyMessagesAlertHeader = NotificationEventTypeCodeType.new("MyMessagesAlertHeader")
+  MyMessagesM2MMessage = NotificationEventTypeCodeType.new("MyMessagesM2MMessage")
+  MyMessagesM2MMessageHeader = NotificationEventTypeCodeType.new("MyMessagesM2MMessageHeader")
+  MyMessageseBayMessage = NotificationEventTypeCodeType.new("MyMessageseBayMessage")
+  MyMessageseBayMessageHeader = NotificationEventTypeCodeType.new("MyMessageseBayMessageHeader")
+  None = NotificationEventTypeCodeType.new("None")
+  OutBid = NotificationEventTypeCodeType.new("OutBid")
+  SecondChanceOffer = NotificationEventTypeCodeType.new("SecondChanceOffer")
+  SellerClosedDispute = NotificationEventTypeCodeType.new("SellerClosedDispute")
+  SellerOpenedDispute = NotificationEventTypeCodeType.new("SellerOpenedDispute")
+  SellerRespondedToDispute = NotificationEventTypeCodeType.new("SellerRespondedToDispute")
+  WatchedItemEndingSoon = NotificationEventTypeCodeType.new("WatchedItemEndingSoon")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}NotificationPayloadTypeCodeType
-module NotificationPayloadTypeCodeType
-  CustomCode = "CustomCode"
-  EBLSchemaSOAP = "eBLSchemaSOAP"
-  NonSchemaSOAP = "NonSchemaSOAP"
+class NotificationPayloadTypeCodeType < ::String
+  @@schema_type = "NotificationPayloadTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = NotificationPayloadTypeCodeType.new("CustomCode")
+  EBLSchemaSOAP = NotificationPayloadTypeCodeType.new("eBLSchemaSOAP")
+  NonSchemaSOAP = NotificationPayloadTypeCodeType.new("NonSchemaSOAP")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}NotificationRoleCodeType
-module NotificationRoleCodeType
-  Application = "Application"
-  CustomCode = "CustomCode"
-  User = "User"
+class NotificationRoleCodeType < ::String
+  @@schema_type = "NotificationRoleCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Application = NotificationRoleCodeType.new("Application")
+  CustomCode = NotificationRoleCodeType.new("CustomCode")
+  Event = NotificationRoleCodeType.new("Event")
+  User = NotificationRoleCodeType.new("User")
+  UserData = NotificationRoleCodeType.new("UserData")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}OperationTypeCodeType
-module OperationTypeCodeType
-  CustomCode = "CustomCode"
-  ItemRules = "ItemRules"
-  ReplaceAllDefaultRules = "ReplaceAllDefaultRules"
+class OperationTypeCodeType < ::String
+  @@schema_type = "OperationTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = OperationTypeCodeType.new("CustomCode")
+  ItemRules = OperationTypeCodeType.new("ItemRules")
+  ReplaceAllDefaultRules = OperationTypeCodeType.new("ReplaceAllDefaultRules")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}OrderRoleCodeType
-module OrderRoleCodeType
-  Buyer = "Buyer"
-  CustomCode = "CustomCode"
-  Seller = "Seller"
+class OrderRoleCodeType < ::String
+  @@schema_type = "OrderRoleCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Buyer = OrderRoleCodeType.new("Buyer")
+  CustomCode = OrderRoleCodeType.new("CustomCode")
+  Seller = OrderRoleCodeType.new("Seller")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}OrderStatusCodeType
-module OrderStatusCodeType
-  Active = "Active"
-  Cancelled = "Cancelled"
-  Completed = "Completed"
-  CustomCode = "CustomCode"
-  Inactive = "Inactive"
+class OrderStatusCodeType < ::String
+  @@schema_type = "OrderStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Active = OrderStatusCodeType.new("Active")
+  Cancelled = OrderStatusCodeType.new("Cancelled")
+  Completed = OrderStatusCodeType.new("Completed")
+  CustomCode = OrderStatusCodeType.new("CustomCode")
+  Inactive = OrderStatusCodeType.new("Inactive")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}PaidStatusCodeType
-module PaidStatusCodeType
-  BuyerHasNotCompletedCheckout = "BuyerHasNotCompletedCheckout"
-  CustomCode = "CustomCode"
-  EscrowPaymentCancelled = "EscrowPaymentCancelled"
-  MarkedAsPaid = "MarkedAsPaid"
-  NotPaid = "NotPaid"
-  PaidWithEscrow = "PaidWithEscrow"
-  PaidWithPaisaPay = "PaidWithPaisaPay"
-  PaidWithPayPal = "PaidWithPayPal"
-  PaymentPending = "PaymentPending"
-  PaymentPendingWithEscrow = "PaymentPendingWithEscrow"
-  PaymentPendingWithPaisaPay = "PaymentPendingWithPaisaPay"
-  PaymentPendingWithPayPal = "PaymentPendingWithPayPal"
+class PaidStatusCodeType < ::String
+  @@schema_type = "PaidStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BuyerHasNotCompletedCheckout = PaidStatusCodeType.new("BuyerHasNotCompletedCheckout")
+  CustomCode = PaidStatusCodeType.new("CustomCode")
+  EscrowPaymentCancelled = PaidStatusCodeType.new("EscrowPaymentCancelled")
+  MarkedAsPaid = PaidStatusCodeType.new("MarkedAsPaid")
+  NotPaid = PaidStatusCodeType.new("NotPaid")
+  PaidWithEscrow = PaidStatusCodeType.new("PaidWithEscrow")
+  PaidWithPaisaPay = PaidStatusCodeType.new("PaidWithPaisaPay")
+  PaidWithPayPal = PaidStatusCodeType.new("PaidWithPayPal")
+  PaymentPending = PaidStatusCodeType.new("PaymentPending")
+  PaymentPendingWithEscrow = PaidStatusCodeType.new("PaymentPendingWithEscrow")
+  PaymentPendingWithPaisaPay = PaidStatusCodeType.new("PaymentPendingWithPaisaPay")
+  PaymentPendingWithPayPal = PaidStatusCodeType.new("PaymentPendingWithPayPal")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}PayPalAccountLevelCodeType
+class PayPalAccountLevelCodeType < ::String
+  @@schema_type = "PayPalAccountLevelCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = PayPalAccountLevelCodeType.new("CustomCode")
+  InternationalUnverified = PayPalAccountLevelCodeType.new("InternationalUnverified")
+  InternationalVerified = PayPalAccountLevelCodeType.new("InternationalVerified")
+  Invalid = PayPalAccountLevelCodeType.new("Invalid")
+  Trusted = PayPalAccountLevelCodeType.new("Trusted")
+  Unknown = PayPalAccountLevelCodeType.new("Unknown")
+  Unverified = PayPalAccountLevelCodeType.new("Unverified")
+  Verified = PayPalAccountLevelCodeType.new("Verified")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}PayPalAccountStatusCodeType
+class PayPalAccountStatusCodeType < ::String
+  @@schema_type = "PayPalAccountStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Active = PayPalAccountStatusCodeType.new("Active")
+  Closed = PayPalAccountStatusCodeType.new("Closed")
+  CustomCode = PayPalAccountStatusCodeType.new("CustomCode")
+  HighRestricted = PayPalAccountStatusCodeType.new("HighRestricted")
+  Invalid = PayPalAccountStatusCodeType.new("Invalid")
+  Locked = PayPalAccountStatusCodeType.new("Locked")
+  LowRestricted = PayPalAccountStatusCodeType.new("LowRestricted")
+  Unknown = PayPalAccountStatusCodeType.new("Unknown")
+  WireOff = PayPalAccountStatusCodeType.new("WireOff")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}PayPalAccountTypeCodeType
+class PayPalAccountTypeCodeType < ::String
+  @@schema_type = "PayPalAccountTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Business = PayPalAccountTypeCodeType.new("Business")
+  CustomCode = PayPalAccountTypeCodeType.new("CustomCode")
+  Invalid = PayPalAccountTypeCodeType.new("Invalid")
+  Personal = PayPalAccountTypeCodeType.new("Personal")
+  Premier = PayPalAccountTypeCodeType.new("Premier")
+  Unknown = PayPalAccountTypeCodeType.new("Unknown")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}PaymentMethodSearchCodeType
-module PaymentMethodSearchCodeType
-  PaisaPay = "PaisaPay"
-  PayPal = "PayPal"
-  PayPalOrPaisaPay = "PayPalOrPaisaPay"
+class PaymentMethodSearchCodeType < ::String
+  @@schema_type = "PaymentMethodSearchCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  PaisaPay = PaymentMethodSearchCodeType.new("PaisaPay")
+  PayPal = PaymentMethodSearchCodeType.new("PayPal")
+  PayPalOrPaisaPay = PaymentMethodSearchCodeType.new("PayPalOrPaisaPay")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}PaymentStatusCodeType
-module PaymentStatusCodeType
-  BuyerCreditCardFailed = "BuyerCreditCardFailed"
-  BuyerECheckBounced = "BuyerECheckBounced"
-  BuyerFailedPaymentReportedBySeller = "BuyerFailedPaymentReportedBySeller"
-  CustomCode = "CustomCode"
-  NoPaymentFailure = "NoPaymentFailure"
-  PayPalPaymentInProcess = "PayPalPaymentInProcess"
+class PaymentStatusCodeType < ::String
+  @@schema_type = "PaymentStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BuyerCreditCardFailed = PaymentStatusCodeType.new("BuyerCreditCardFailed")
+  BuyerECheckBounced = PaymentStatusCodeType.new("BuyerECheckBounced")
+  BuyerFailedPaymentReportedBySeller = PaymentStatusCodeType.new("BuyerFailedPaymentReportedBySeller")
+  CustomCode = PaymentStatusCodeType.new("CustomCode")
+  NoPaymentFailure = PaymentStatusCodeType.new("NoPaymentFailure")
+  PayPalPaymentInProcess = PaymentStatusCodeType.new("PayPalPaymentInProcess")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}PaymentTypeCodeType
-module PaymentTypeCodeType
-  CustomCode = "CustomCode"
-  Refund = "Refund"
-  Sale = "Sale"
+class PaymentTypeCodeType < ::String
+  @@schema_type = "PaymentTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = PaymentTypeCodeType.new("CustomCode")
+  Refund = PaymentTypeCodeType.new("Refund")
+  Sale = PaymentTypeCodeType.new("Sale")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}PhotoDisplayCodeType
-module PhotoDisplayCodeType
-  CustomCode = "CustomCode"
-  None = "None"
-  PicturePack = "PicturePack"
-  SiteHostedPictureShow = "SiteHostedPictureShow"
-  SlideShow = "SlideShow"
-  SuperSize = "SuperSize"
-  SuperSizePictureShow = "SuperSizePictureShow"
-  VendorHostedPictureShow = "VendorHostedPictureShow"
+class PhotoDisplayCodeType < ::String
+  @@schema_type = "PhotoDisplayCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = PhotoDisplayCodeType.new("CustomCode")
+  None = PhotoDisplayCodeType.new("None")
+  PicturePack = PhotoDisplayCodeType.new("PicturePack")
+  SiteHostedPictureShow = PhotoDisplayCodeType.new("SiteHostedPictureShow")
+  SlideShow = PhotoDisplayCodeType.new("SlideShow")
+  SuperSize = PhotoDisplayCodeType.new("SuperSize")
+  SuperSizePictureShow = PhotoDisplayCodeType.new("SuperSizePictureShow")
+  VendorHostedPictureShow = PhotoDisplayCodeType.new("VendorHostedPictureShow")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}PictureManagerActionCodeType
-module PictureManagerActionCodeType
-  Add = "Add"
-  Change = "Change"
-  CustomCode = "CustomCode"
-  Delete = "Delete"
-  Move = "Move"
-  Rename = "Rename"
+class PictureManagerActionCodeType < ::String
+  @@schema_type = "PictureManagerActionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Add = PictureManagerActionCodeType.new("Add")
+  Change = PictureManagerActionCodeType.new("Change")
+  CustomCode = PictureManagerActionCodeType.new("CustomCode")
+  Delete = PictureManagerActionCodeType.new("Delete")
+  Move = PictureManagerActionCodeType.new("Move")
+  Rename = PictureManagerActionCodeType.new("Rename")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}PictureManagerDetailLevelCodeType
-module PictureManagerDetailLevelCodeType
-  CustomCode = "CustomCode"
-  ReturnAll = "ReturnAll"
-  ReturnPicture = "ReturnPicture"
-  ReturnSubscription = "ReturnSubscription"
+class PictureManagerDetailLevelCodeType < ::String
+  @@schema_type = "PictureManagerDetailLevelCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = PictureManagerDetailLevelCodeType.new("CustomCode")
+  ReturnAll = PictureManagerDetailLevelCodeType.new("ReturnAll")
+  ReturnPicture = PictureManagerDetailLevelCodeType.new("ReturnPicture")
+  ReturnSubscription = PictureManagerDetailLevelCodeType.new("ReturnSubscription")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}PictureManagerPictureDisplayTypeCodeType
-module PictureManagerPictureDisplayTypeCodeType
-  BIBO = "BIBO"
-  CustomCode = "CustomCode"
-  Large = "Large"
-  Original = "Original"
-  Standard = "Standard"
-  Supersize = "Supersize"
-  Thumbnail = "Thumbnail"
+class PictureManagerPictureDisplayTypeCodeType < ::String
+  @@schema_type = "PictureManagerPictureDisplayTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BIBO = PictureManagerPictureDisplayTypeCodeType.new("BIBO")
+  CustomCode = PictureManagerPictureDisplayTypeCodeType.new("CustomCode")
+  Large = PictureManagerPictureDisplayTypeCodeType.new("Large")
+  Original = PictureManagerPictureDisplayTypeCodeType.new("Original")
+  Standard = PictureManagerPictureDisplayTypeCodeType.new("Standard")
+  Supersize = PictureManagerPictureDisplayTypeCodeType.new("Supersize")
+  Thumbnail = PictureManagerPictureDisplayTypeCodeType.new("Thumbnail")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}PictureManagerSubscriptionLevelCodeType
-module PictureManagerSubscriptionLevelCodeType
-  CustomCode = "CustomCode"
-  Free = "Free"
-  Level1 = "Level1"
-  Level2 = "Level2"
-  Level3 = "Level3"
-  Level4 = "Level4"
+class PictureManagerSubscriptionLevelCodeType < ::String
+  @@schema_type = "PictureManagerSubscriptionLevelCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = PictureManagerSubscriptionLevelCodeType.new("CustomCode")
+  Free = PictureManagerSubscriptionLevelCodeType.new("Free")
+  Level1 = PictureManagerSubscriptionLevelCodeType.new("Level1")
+  Level2 = PictureManagerSubscriptionLevelCodeType.new("Level2")
+  Level3 = PictureManagerSubscriptionLevelCodeType.new("Level3")
+  Level4 = PictureManagerSubscriptionLevelCodeType.new("Level4")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ProductUseCaseCodeType
-module ProductUseCaseCodeType
-  AddItem = "AddItem"
-  CustomCode = "CustomCode"
-  RelistItem = "RelistItem"
-  ReviseItem = "ReviseItem"
+class ProductUseCaseCodeType < ::String
+  @@schema_type = "ProductUseCaseCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AddItem = ProductUseCaseCodeType.new("AddItem")
+  CustomCode = ProductUseCaseCodeType.new("CustomCode")
+  RelistItem = ProductUseCaseCodeType.new("RelistItem")
+  ReviseItem = ProductUseCaseCodeType.new("ReviseItem")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}PromotionItemPriceTypeCodeType
-module PromotionItemPriceTypeCodeType
-  AuctionPrice = "AuctionPrice"
-  BuyItNowPrice = "BuyItNowPrice"
-  CustomCode = "CustomCode"
+class PromotionItemPriceTypeCodeType < ::String
+  @@schema_type = "PromotionItemPriceTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AuctionPrice = PromotionItemPriceTypeCodeType.new("AuctionPrice")
+  BuyItNowPrice = PromotionItemPriceTypeCodeType.new("BuyItNowPrice")
+  CustomCode = PromotionItemPriceTypeCodeType.new("CustomCode")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}PromotionItemSelectionCodeType
-module PromotionItemSelectionCodeType
-  Automatic = "Automatic"
-  CustomCode = "CustomCode"
-  Manual = "Manual"
+class PromotionItemSelectionCodeType < ::String
+  @@schema_type = "PromotionItemSelectionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Automatic = PromotionItemSelectionCodeType.new("Automatic")
+  CustomCode = PromotionItemSelectionCodeType.new("CustomCode")
+  Manual = PromotionItemSelectionCodeType.new("Manual")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}PromotionMethodCodeType
-module PromotionMethodCodeType
-  CrossSell = "CrossSell"
-  CustomCode = "CustomCode"
-  UpSell = "UpSell"
+class PromotionMethodCodeType < ::String
+  @@schema_type = "PromotionMethodCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CrossSell = PromotionMethodCodeType.new("CrossSell")
+  CustomCode = PromotionMethodCodeType.new("CustomCode")
+  UpSell = PromotionMethodCodeType.new("UpSell")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}PromotionSchemeCodeType
-module PromotionSchemeCodeType
-  CategoryProximity = "CategoryProximity"
-  CustomCode = "CustomCode"
-  DefaultRule = "DefaultRule"
-  ItemToDefaultRule = "ItemToDefaultRule"
-  ItemToItem = "ItemToItem"
-  ItemToStoreCat = "ItemToStoreCat"
-  StoreToStoreCat = "StoreToStoreCat"
+class PromotionSchemeCodeType < ::String
+  @@schema_type = "PromotionSchemeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CategoryProximity = PromotionSchemeCodeType.new("CategoryProximity")
+  CustomCode = PromotionSchemeCodeType.new("CustomCode")
+  DefaultRule = PromotionSchemeCodeType.new("DefaultRule")
+  ItemToDefaultRule = PromotionSchemeCodeType.new("ItemToDefaultRule")
+  ItemToItem = PromotionSchemeCodeType.new("ItemToItem")
+  ItemToStoreCat = PromotionSchemeCodeType.new("ItemToStoreCat")
+  StoreToStoreCat = PromotionSchemeCodeType.new("StoreToStoreCat")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}PurchasePurposeTypeCodeType
-module PurchasePurposeTypeCodeType
-  AuctionItem = "AuctionItem"
-  BuyNowItem = "BuyNowItem"
-  CustomCode = "CustomCode"
-  Donation = "Donation"
-  EBayBilling = "eBayBilling"
-  GiftCertificates = "GiftCertificates"
-  Other = "Other"
-  ShoppingCart = "ShoppingCart"
-  Subscription = "Subscription"
+class PurchasePurposeTypeCodeType < ::String
+  @@schema_type = "PurchasePurposeTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AuctionItem = PurchasePurposeTypeCodeType.new("AuctionItem")
+  BuyNowItem = PurchasePurposeTypeCodeType.new("BuyNowItem")
+  CustomCode = PurchasePurposeTypeCodeType.new("CustomCode")
+  Donation = PurchasePurposeTypeCodeType.new("Donation")
+  EBayBilling = PurchasePurposeTypeCodeType.new("eBayBilling")
+  GiftCertificates = PurchasePurposeTypeCodeType.new("GiftCertificates")
+  Other = PurchasePurposeTypeCodeType.new("Other")
+  ShoppingCart = PurchasePurposeTypeCodeType.new("ShoppingCart")
+  Subscription = PurchasePurposeTypeCodeType.new("Subscription")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}QuantityOperatorCodeType
-module QuantityOperatorCodeType
-  CustomCode = "CustomCode"
-  Equal = "Equal"
-  GreaterThan = "GreaterThan"
-  GreaterThanOrEqual = "GreaterThanOrEqual"
-  LessThan = "LessThan"
-  LessThanOrEqual = "LessThanOrEqual"
+class QuantityOperatorCodeType < ::String
+  @@schema_type = "QuantityOperatorCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = QuantityOperatorCodeType.new("CustomCode")
+  Equal = QuantityOperatorCodeType.new("Equal")
+  GreaterThan = QuantityOperatorCodeType.new("GreaterThan")
+  GreaterThanOrEqual = QuantityOperatorCodeType.new("GreaterThanOrEqual")
+  LessThan = QuantityOperatorCodeType.new("LessThan")
+  LessThanOrEqual = QuantityOperatorCodeType.new("LessThanOrEqual")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}QuestionTypeCodeType
-module QuestionTypeCodeType
-  CustomCode = "CustomCode"
-  General = "General"
-  MultipleItemShipping = "MultipleItemShipping"
-  Payment = "Payment"
-  Shipping = "Shipping"
+class QuestionTypeCodeType < ::String
+  @@schema_type = "QuestionTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = QuestionTypeCodeType.new("CustomCode")
+  General = QuestionTypeCodeType.new("General")
+  MultipleItemShipping = QuestionTypeCodeType.new("MultipleItemShipping")
+  Payment = QuestionTypeCodeType.new("Payment")
+  Shipping = QuestionTypeCodeType.new("Shipping")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}RCSPaymentStatusCodeType
-module RCSPaymentStatusCodeType
-  Canceled = "Canceled"
-  CustomCode = "CustomCode"
-  Paid = "Paid"
-  Pending = "Pending"
+class RCSPaymentStatusCodeType < ::String
+  @@schema_type = "RCSPaymentStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Canceled = RCSPaymentStatusCodeType.new("Canceled")
+  CustomCode = RCSPaymentStatusCodeType.new("CustomCode")
+  Paid = RCSPaymentStatusCodeType.new("Paid")
+  Pending = RCSPaymentStatusCodeType.new("Pending")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}RangeCodeType
-module RangeCodeType
-  CustomCode = "CustomCode"
-  High = "High"
-  Low = "Low"
+class RangeCodeType < ::String
+  @@schema_type = "RangeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = RangeCodeType.new("CustomCode")
+  High = RangeCodeType.new("High")
+  Low = RangeCodeType.new("Low")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}RecommendationEngineCodeType
-module RecommendationEngineCodeType
-  CustomCode = "CustomCode"
-  ListingAnalyzer = "ListingAnalyzer"
-  ProductPricing = "ProductPricing"
-  SIFFTAS = "SIFFTAS"
-  SuggestedAttributes = "SuggestedAttributes"
+class RecommendationEngineCodeType < ::String
+  @@schema_type = "RecommendationEngineCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = RecommendationEngineCodeType.new("CustomCode")
+  ListingAnalyzer = RecommendationEngineCodeType.new("ListingAnalyzer")
+  ProductPricing = RecommendationEngineCodeType.new("ProductPricing")
+  SIFFTAS = RecommendationEngineCodeType.new("SIFFTAS")
+  SuggestedAttributes = RecommendationEngineCodeType.new("SuggestedAttributes")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}RefundReasonCodeType
-module RefundReasonCodeType
-  BuyerRemorse = "BuyerRemorse"
-  CannotShipProduct = "CannotShipProduct"
-  CustomCode = "CustomCode"
-  ItemBadQuality = "ItemBadQuality"
-  ItemDamaged = "ItemDamaged"
-  Other = "Other"
-  WrongItemShipped = "WrongItemShipped"
+class RefundReasonCodeType < ::String
+  @@schema_type = "RefundReasonCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BuyerRemorse = RefundReasonCodeType.new("BuyerRemorse")
+  CannotShipProduct = RefundReasonCodeType.new("CannotShipProduct")
+  CustomCode = RefundReasonCodeType.new("CustomCode")
+  ItemBadQuality = RefundReasonCodeType.new("ItemBadQuality")
+  ItemDamaged = RefundReasonCodeType.new("ItemDamaged")
+  Other = RefundReasonCodeType.new("Other")
+  WrongItemShipped = RefundReasonCodeType.new("WrongItemShipped")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}RefundTypeCodeType
-module RefundTypeCodeType
-  CustomCode = "CustomCode"
-  CustomOrPartial = "CustomOrPartial"
-  Full = "Full"
-  FullPlusShipping = "FullPlusShipping"
+class RefundTypeCodeType < ::String
+  @@schema_type = "RefundTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = RefundTypeCodeType.new("CustomCode")
+  CustomOrPartial = RefundTypeCodeType.new("CustomOrPartial")
+  Full = RefundTypeCodeType.new("Full")
+  FullPlusShipping = RefundTypeCodeType.new("FullPlusShipping")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SearchFlagsCodeType
-module SearchFlagsCodeType
-  Charity = "Charity"
-  CustomCode = "CustomCode"
-  NowAndNew = "NowAndNew"
-  PayPalBuyerPaymentOption = "PayPalBuyerPaymentOption"
-  SearchInDescription = "SearchInDescription"
+class SearchFlagsCodeType < ::String
+  @@schema_type = "SearchFlagsCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Charity = SearchFlagsCodeType.new("Charity")
+  CustomCode = SearchFlagsCodeType.new("CustomCode")
+  NowAndNew = SearchFlagsCodeType.new("NowAndNew")
+  PayPalBuyerPaymentOption = SearchFlagsCodeType.new("PayPalBuyerPaymentOption")
+  SearchInDescription = SearchFlagsCodeType.new("SearchInDescription")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SearchResultValuesCodeType
-module SearchResultValuesCodeType
-  CharityListing = "CharityListing"
-  CustomCode = "CustomCode"
-  Escrow = "Escrow"
-  Gift = "Gift"
-  New = "New"
-  Picture = "Picture"
+class SearchResultValuesCodeType < ::String
+  @@schema_type = "SearchResultValuesCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CharityListing = SearchResultValuesCodeType.new("CharityListing")
+  CustomCode = SearchResultValuesCodeType.new("CustomCode")
+  Escrow = SearchResultValuesCodeType.new("Escrow")
+  Gift = SearchResultValuesCodeType.new("Gift")
+  New = SearchResultValuesCodeType.new("New")
+  Picture = SearchResultValuesCodeType.new("Picture")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SearchSortOrderCodeType
-module SearchSortOrderCodeType
-  CustomCode = "CustomCode"
-  SortByCountryAsc = "SortByCountryAsc"
-  SortByCountryDesc = "SortByCountryDesc"
-  SortByCurrentBid = "SortByCurrentBid"
-  SortByCurrentBidAsc = "SortByCurrentBidAsc"
-  SortByCurrentBidDesc = "SortByCurrentBidDesc"
-  SortByDistanceAsc = "SortByDistanceAsc"
-  SortByEndDate = "SortByEndDate"
-  SortByEscrowAsc = "SortByEscrowAsc"
-  SortByEscrowDesc = "SortByEscrowDesc"
-  SortByListingDate = "SortByListingDate"
-  SortByPayPalAsc = "SortByPayPalAsc"
-  SortByPayPalDesc = "SortByPayPalDesc"
-  SortByStartDate = "SortByStartDate"
+class SearchSortOrderCodeType < ::String
+  @@schema_type = "SearchSortOrderCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = SearchSortOrderCodeType.new("CustomCode")
+  SortByBidCountAsc = SearchSortOrderCodeType.new("SortByBidCountAsc")
+  SortByBidCountDesc = SearchSortOrderCodeType.new("SortByBidCountDesc")
+  SortByCountryAsc = SearchSortOrderCodeType.new("SortByCountryAsc")
+  SortByCountryDesc = SearchSortOrderCodeType.new("SortByCountryDesc")
+  SortByCurrentBid = SearchSortOrderCodeType.new("SortByCurrentBid")
+  SortByCurrentBidAsc = SearchSortOrderCodeType.new("SortByCurrentBidAsc")
+  SortByCurrentBidDesc = SearchSortOrderCodeType.new("SortByCurrentBidDesc")
+  SortByDistanceAsc = SearchSortOrderCodeType.new("SortByDistanceAsc")
+  SortByEndDate = SearchSortOrderCodeType.new("SortByEndDate")
+  SortByEscrowAsc = SearchSortOrderCodeType.new("SortByEscrowAsc")
+  SortByEscrowDesc = SearchSortOrderCodeType.new("SortByEscrowDesc")
+  SortByListingDate = SearchSortOrderCodeType.new("SortByListingDate")
+  SortByPayPalAsc = SearchSortOrderCodeType.new("SortByPayPalAsc")
+  SortByPayPalDesc = SearchSortOrderCodeType.new("SortByPayPalDesc")
+  SortByStartDate = SearchSortOrderCodeType.new("SortByStartDate")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SearchTypeCodeType
-module SearchTypeCodeType
-  All = "All"
-  CustomCode = "CustomCode"
-  Gallery = "Gallery"
+class SearchTypeCodeType < ::String
+  @@schema_type = "SearchTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  All = SearchTypeCodeType.new("All")
+  CustomCode = SearchTypeCodeType.new("CustomCode")
+  Gallery = SearchTypeCodeType.new("Gallery")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SecondChanceOfferDurationCodeType
-module SecondChanceOfferDurationCodeType
-  CustomCode = "CustomCode"
-  Days_1 = "Days_1"
-  Days_3 = "Days_3"
-  Days_5 = "Days_5"
-  Days_7 = "Days_7"
+class SecondChanceOfferDurationCodeType < ::String
+  @@schema_type = "SecondChanceOfferDurationCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = SecondChanceOfferDurationCodeType.new("CustomCode")
+  Days_1 = SecondChanceOfferDurationCodeType.new("Days_1")
+  Days_3 = SecondChanceOfferDurationCodeType.new("Days_3")
+  Days_5 = SecondChanceOfferDurationCodeType.new("Days_5")
+  Days_7 = SecondChanceOfferDurationCodeType.new("Days_7")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SelectionModeCodeType
-module SelectionModeCodeType
-  Automatic = "Automatic"
-  CustomCode = "CustomCode"
-  Manual = "Manual"
+class SelectionModeCodeType < ::String
+  @@schema_type = "SelectionModeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Automatic = SelectionModeCodeType.new("Automatic")
+  CustomCode = SelectionModeCodeType.new("CustomCode")
+  Manual = SelectionModeCodeType.new("Manual")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SellerBusinessCodeType
-module SellerBusinessCodeType
-  Commercial = "Commercial"
-  Private = "Private"
-  Undefined = "Undefined"
+class SellerBusinessCodeType < ::String
+  @@schema_type = "SellerBusinessCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Commercial = SellerBusinessCodeType.new("Commercial")
+  Private = SellerBusinessCodeType.new("Private")
+  Undefined = SellerBusinessCodeType.new("Undefined")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SellerGuaranteeLevelCodeType
-module SellerGuaranteeLevelCodeType
-  CustomCode = "CustomCode"
-  NotEligible = "NotEligible"
-  Premium = "Premium"
-  Regular = "Regular"
-  Ultra = "Ultra"
+class SellerGuaranteeLevelCodeType < ::String
+  @@schema_type = "SellerGuaranteeLevelCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = SellerGuaranteeLevelCodeType.new("CustomCode")
+  NotEligible = SellerGuaranteeLevelCodeType.new("NotEligible")
+  Premium = SellerGuaranteeLevelCodeType.new("Premium")
+  Regular = SellerGuaranteeLevelCodeType.new("Regular")
+  Ultra = SellerGuaranteeLevelCodeType.new("Ultra")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SellerLevelCodeType
-module SellerLevelCodeType
-  Bronze = "Bronze"
-  CustomCode = "CustomCode"
-  Gold = "Gold"
-  None = "None"
-  Platinum = "Platinum"
-  Silver = "Silver"
-  Titanium = "Titanium"
+class SellerLevelCodeType < ::String
+  @@schema_type = "SellerLevelCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Bronze = SellerLevelCodeType.new("Bronze")
+  CustomCode = SellerLevelCodeType.new("CustomCode")
+  Gold = SellerLevelCodeType.new("Gold")
+  None = SellerLevelCodeType.new("None")
+  Platinum = SellerLevelCodeType.new("Platinum")
+  Silver = SellerLevelCodeType.new("Silver")
+  Titanium = SellerLevelCodeType.new("Titanium")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SellerPaymentMethodCodeType
-module SellerPaymentMethodCodeType
-  CreditCard = "CreditCard"
-  CustomCode = "CustomCode"
-  DirectDebit = "DirectDebit"
-  DirectDebitPendingSignatureMandate = "DirectDebitPendingSignatureMandate"
-  EBayDirectPay = "eBayDirectPay"
-  NothingOnFile = "NothingOnFile"
+class SellerPaymentMethodCodeType < ::String
+  @@schema_type = "SellerPaymentMethodCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CreditCard = SellerPaymentMethodCodeType.new("CreditCard")
+  CustomCode = SellerPaymentMethodCodeType.new("CustomCode")
+  DirectDebit = SellerPaymentMethodCodeType.new("DirectDebit")
+  DirectDebitPendingSignatureMandate = SellerPaymentMethodCodeType.new("DirectDebitPendingSignatureMandate")
+  EBayDirectPay = SellerPaymentMethodCodeType.new("eBayDirectPay")
+  NothingOnFile = SellerPaymentMethodCodeType.new("NothingOnFile")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SetUserNotesActionCodeType
-module SetUserNotesActionCodeType
-  AddOrUpdate = "AddOrUpdate"
-  Delete = "Delete"
+class SetUserNotesActionCodeType < ::String
+  @@schema_type = "SetUserNotesActionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AddOrUpdate = SetUserNotesActionCodeType.new("AddOrUpdate")
+  Delete = SetUserNotesActionCodeType.new("Delete")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ShipmentDeliveryStatusCodeType
-module ShipmentDeliveryStatusCodeType
-  Canceled = "Canceled"
-  Created = "Created"
-  CustomCode = "CustomCode"
-  Delivered = "Delivered"
-  DroppedOff = "DroppedOff"
-  InTransit = "InTransit"
-  LabelPrinted = "LabelPrinted"
-  Returned = "Returned"
+class ShipmentDeliveryStatusCodeType < ::String
+  @@schema_type = "ShipmentDeliveryStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Canceled = ShipmentDeliveryStatusCodeType.new("Canceled")
+  Created = ShipmentDeliveryStatusCodeType.new("Created")
+  CustomCode = ShipmentDeliveryStatusCodeType.new("CustomCode")
+  Delivered = ShipmentDeliveryStatusCodeType.new("Delivered")
+  DroppedOff = ShipmentDeliveryStatusCodeType.new("DroppedOff")
+  InTransit = ShipmentDeliveryStatusCodeType.new("InTransit")
+  LabelPrinted = ShipmentDeliveryStatusCodeType.new("LabelPrinted")
+  Returned = ShipmentDeliveryStatusCodeType.new("Returned")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ShipmentStatusCodeType
-module ShipmentStatusCodeType
-  Active = "Active"
-  Canceled = "Canceled"
-  CustomCode = "CustomCode"
+class ShipmentStatusCodeType < ::String
+  @@schema_type = "ShipmentStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Active = ShipmentStatusCodeType.new("Active")
+  Canceled = ShipmentStatusCodeType.new("Canceled")
+  CustomCode = ShipmentStatusCodeType.new("CustomCode")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ShippingCarrierCodeType
-module ShippingCarrierCodeType
-  CustomCode = "CustomCode"
-  DHL = "DHL"
-  DeutschePost = "DeutschePost"
-  Hermes = "Hermes"
-  ILoxx = "iLoxx"
-  Other = "Other"
-  UPS = "UPS"
-  USPS = "USPS"
+class ShippingCarrierCodeType < ::String
+  @@schema_type = "ShippingCarrierCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = ShippingCarrierCodeType.new("CustomCode")
+  DHL = ShippingCarrierCodeType.new("DHL")
+  DeutschePost = ShippingCarrierCodeType.new("DeutschePost")
+  Hermes = ShippingCarrierCodeType.new("Hermes")
+  ILoxx = ShippingCarrierCodeType.new("iLoxx")
+  Other = ShippingCarrierCodeType.new("Other")
+  UPS = ShippingCarrierCodeType.new("UPS")
+  USPS = ShippingCarrierCodeType.new("USPS")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ShippingFeatureCodeType
-module ShippingFeatureCodeType
-  CustomCode = "CustomCode"
-  DeliveryConfirmation = "DeliveryConfirmation"
-  NotDefined = "NotDefined"
-  Other = "Other"
-  SaturdayDelivery = "SaturdayDelivery"
-  SignatureConfirmation = "SignatureConfirmation"
-  StealthPostage = "StealthPostage"
+class ShippingFeatureCodeType < ::String
+  @@schema_type = "ShippingFeatureCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = ShippingFeatureCodeType.new("CustomCode")
+  DeliveryConfirmation = ShippingFeatureCodeType.new("DeliveryConfirmation")
+  NotDefined = ShippingFeatureCodeType.new("NotDefined")
+  Other = ShippingFeatureCodeType.new("Other")
+  SaturdayDelivery = ShippingFeatureCodeType.new("SaturdayDelivery")
+  SignatureConfirmation = ShippingFeatureCodeType.new("SignatureConfirmation")
+  StealthPostage = ShippingFeatureCodeType.new("StealthPostage")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ShippingOptionCodeType
-module ShippingOptionCodeType
-  CustomCode = "CustomCode"
-  SiteOnly = "SiteOnly"
-  SitePlusRegions = "SitePlusRegions"
-  WillNotShip = "WillNotShip"
-  WorldWide = "WorldWide"
+class ShippingOptionCodeType < ::String
+  @@schema_type = "ShippingOptionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = ShippingOptionCodeType.new("CustomCode")
+  SiteOnly = ShippingOptionCodeType.new("SiteOnly")
+  SitePlusRegions = ShippingOptionCodeType.new("SitePlusRegions")
+  WillNotShip = ShippingOptionCodeType.new("WillNotShip")
+  WorldWide = ShippingOptionCodeType.new("WorldWide")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ShippingPackageCodeType
-module ShippingPackageCodeType
-  BulkyGoods = "BulkyGoods"
-  Caravan = "Caravan"
-  Cars = "Cars"
-  CustomCode = "CustomCode"
-  Europallet = "Europallet"
-  ExtraLargePack = "ExtraLargePack"
-  Furniture = "Furniture"
-  IndustryVehicles = "IndustryVehicles"
-  LargeEnvelope = "LargeEnvelope"
-  Letter = "Letter"
-  Motorbikes = "Motorbikes"
-  None = "None"
-  OneWayPallet = "OneWayPallet"
-  PackageThickEnvelope = "PackageThickEnvelope"
-  Roll = "Roll"
-  UPSLetter = "UPSLetter"
-  USPSFlatRateEnvelope = "USPSFlatRateEnvelope"
-  USPSLargePack = "USPSLargePack"
-  VeryLargePack = "VeryLargePack"
+class ShippingPackageCodeType < ::String
+  @@schema_type = "ShippingPackageCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BulkyGoods = ShippingPackageCodeType.new("BulkyGoods")
+  Caravan = ShippingPackageCodeType.new("Caravan")
+  Cars = ShippingPackageCodeType.new("Cars")
+  CustomCode = ShippingPackageCodeType.new("CustomCode")
+  Europallet = ShippingPackageCodeType.new("Europallet")
+  ExtraLargePack = ShippingPackageCodeType.new("ExtraLargePack")
+  Furniture = ShippingPackageCodeType.new("Furniture")
+  IndustryVehicles = ShippingPackageCodeType.new("IndustryVehicles")
+  LargeEnvelope = ShippingPackageCodeType.new("LargeEnvelope")
+  Letter = ShippingPackageCodeType.new("Letter")
+  Motorbikes = ShippingPackageCodeType.new("Motorbikes")
+  None = ShippingPackageCodeType.new("None")
+  OneWayPallet = ShippingPackageCodeType.new("OneWayPallet")
+  PackageThickEnvelope = ShippingPackageCodeType.new("PackageThickEnvelope")
+  Roll = ShippingPackageCodeType.new("Roll")
+  UPSLetter = ShippingPackageCodeType.new("UPSLetter")
+  USPSFlatRateEnvelope = ShippingPackageCodeType.new("USPSFlatRateEnvelope")
+  USPSLargePack = ShippingPackageCodeType.new("USPSLargePack")
+  VeryLargePack = ShippingPackageCodeType.new("VeryLargePack")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ShippingRateTypeCodeType
-module ShippingRateTypeCodeType
-  CustomCode = "CustomCode"
-  DailyPickup = "DailyPickup"
-  OnDemand = "OnDemand"
+class ShippingRateTypeCodeType < ::String
+  @@schema_type = "ShippingRateTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = ShippingRateTypeCodeType.new("CustomCode")
+  DailyPickup = ShippingRateTypeCodeType.new("DailyPickup")
+  OnDemand = ShippingRateTypeCodeType.new("OnDemand")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ShippingRegionCodeType
-module ShippingRegionCodeType
-  Africa = "Africa"
-  Asia = "Asia"
-  Caribbean = "Caribbean"
-  CustomCode = "CustomCode"
-  Europe = "Europe"
-  EuropeanUnion = "EuropeanUnion"
-  LatinAmerica = "LatinAmerica"
-  MiddleEast = "MiddleEast"
-  NorthAmerica = "NorthAmerica"
-  Oceania = "Oceania"
-  SouthAmerica = "SouthAmerica"
-  WillNotShip = "WillNotShip"
-  Worldwide = "Worldwide"
+class ShippingRegionCodeType < ::String
+  @@schema_type = "ShippingRegionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Africa = ShippingRegionCodeType.new("Africa")
+  Asia = ShippingRegionCodeType.new("Asia")
+  Caribbean = ShippingRegionCodeType.new("Caribbean")
+  CustomCode = ShippingRegionCodeType.new("CustomCode")
+  Europe = ShippingRegionCodeType.new("Europe")
+  EuropeanUnion = ShippingRegionCodeType.new("EuropeanUnion")
+  LatinAmerica = ShippingRegionCodeType.new("LatinAmerica")
+  MiddleEast = ShippingRegionCodeType.new("MiddleEast")
+  NorthAmerica = ShippingRegionCodeType.new("NorthAmerica")
+  Oceania = ShippingRegionCodeType.new("Oceania")
+  SouthAmerica = ShippingRegionCodeType.new("SouthAmerica")
+  WillNotShip = ShippingRegionCodeType.new("WillNotShip")
+  Worldwide = ShippingRegionCodeType.new("Worldwide")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ShippingServiceCodeType
-module ShippingServiceCodeType
-  AT_COD = "AT_COD"
-  AT_ExpressOrCourier = "AT_ExpressOrCourier"
-  AT_InsuredDispatch = "AT_InsuredDispatch"
-  AT_InsuredExpressOrCourier = "AT_InsuredExpressOrCourier"
-  AT_InsuredSpecialDispatch = "AT_InsuredSpecialDispatch"
-  AT_Sonstige = "AT_Sonstige"
-  AT_SonstigerVersandInternational = "AT_SonstigerVersandInternational"
-  AT_SpecialDispatch = "AT_SpecialDispatch"
-  AT_StandardDispatch = "AT_StandardDispatch"
-  AT_UnversicherterExpressVersandInternational = "AT_UnversicherterExpressVersandInternational"
-  AT_UnversicherterVersandInternational = "AT_UnversicherterVersandInternational"
-  AT_VersicherterExpressVersandInternational = "AT_VersicherterExpressVersandInternational"
-  AT_VersicherterVersandInternational = "AT_VersicherterVersandInternational"
-  AT_Writing = "AT_Writing"
-  AU_AirMailInternational = "AU_AirMailInternational"
-  AU_Courier = "AU_Courier"
-  AU_EMSInternationalCourierDocuments = "AU_EMSInternationalCourierDocuments"
-  AU_EMSInternationalCourierParcels = "AU_EMSInternationalCourierParcels"
-  AU_EconomyAirInternational = "AU_EconomyAirInternational"
-  AU_ExpeditedInternational = "AU_ExpeditedInternational"
-  AU_Express = "AU_Express"
-  AU_ExpressPostInternationalDocuments = "AU_ExpressPostInternationalDocuments"
-  AU_Other = "AU_Other"
-  AU_OtherInternational = "AU_OtherInternational"
-  AU_Registered = "AU_Registered"
-  AU_Regular = "AU_Regular"
-  AU_SeaMailInternational = "AU_SeaMailInternational"
-  AU_StandardInternational = "AU_StandardInternational"
-  BEFR_DHLInternational = "BEFR_DHLInternational"
-  BEFR_DePostInternational = "BEFR_DePostInternational"
-  BEFR_ExpeditedInternational = "BEFR_ExpeditedInternational"
-  BEFR_FedExInternational = "BEFR_FedExInternational"
-  BEFR_LaPosteInternational = "BEFR_LaPosteInternational"
-  BEFR_Other = "BEFR_Other"
-  BEFR_OtherInternational = "BEFR_OtherInternational"
-  BEFR_ParcelPost = "BEFR_ParcelPost"
-  BEFR_PriorityDelivery = "BEFR_PriorityDelivery"
-  BEFR_RegisteredMail = "BEFR_RegisteredMail"
-  BEFR_StandardDelivery = "BEFR_StandardDelivery"
-  BEFR_StandardInternational = "BEFR_StandardInternational"
-  BEFR_TPGPostTNTInternational = "BEFR_TPGPostTNTInternational"
-  BEFR_UPSInternational = "BEFR_UPSInternational"
-  BENL_DHLInternational = "BENL_DHLInternational"
-  BENL_DePostInternational = "BENL_DePostInternational"
-  BENL_ExpeditedInternational = "BENL_ExpeditedInternational"
-  BENL_FedExInternational = "BENL_FedExInternational"
-  BENL_LaPosteInternational = "BENL_LaPosteInternational"
-  BENL_Other = "BENL_Other"
-  BENL_OtherInternational = "BENL_OtherInternational"
-  BENL_ParcelPost = "BENL_ParcelPost"
-  BENL_PriorityDelivery = "BENL_PriorityDelivery"
-  BENL_RegisteredMail = "BENL_RegisteredMail"
-  BENL_StandardDelivery = "BENL_StandardDelivery"
-  BENL_StandardInternational = "BENL_StandardInternational"
-  BENL_TPGPostTNTInternational = "BENL_TPGPostTNTInternational"
-  BENL_UPSInternational = "BENL_UPSInternational"
-  CA_ExpeditedDelivery = "CA_ExpeditedDelivery"
-  CA_ExpeditedInternational = "CA_ExpeditedInternational"
-  CA_OtherInternational = "CA_OtherInternational"
-  CA_PostExpeditedParcel = "CA_PostExpeditedParcel"
-  CA_PostExpeditedParcelUSA = "CA_PostExpeditedParcelUSA"
-  CA_PostInternationalParcelAir = "CA_PostInternationalParcelAir"
-  CA_PostInternationalParcelSurface = "CA_PostInternationalParcelSurface"
-  CA_PostLettermail = "CA_PostLettermail"
-  CA_PostPriorityCourier = "CA_PostPriorityCourier"
-  CA_PostRegularParcel = "CA_PostRegularParcel"
-  CA_PostSmallPacketsUSA = "CA_PostSmallPacketsUSA"
-  CA_PostXpresspost = "CA_PostXpresspost"
-  CA_PostXpresspostInternational = "CA_PostXpresspostInternational"
-  CA_PostXpresspostUSA = "CA_PostXpresspostUSA"
-  CA_PurolatorInternational = "CA_PurolatorInternational"
-  CA_SmallPacketsInternational = "CA_SmallPacketsInternational"
-  CA_StandardDelivery = "CA_StandardDelivery"
-  CA_StandardInternational = "CA_StandardInternational"
-  CH_COD = "CH_COD"
-  CH_EconomySendungenInternational = "CH_EconomySendungenInternational"
-  CH_ExpressOrCourier = "CH_ExpressOrCourier"
-  CH_InsuredDispatch = "CH_InsuredDispatch"
-  CH_InsuredExpressOrCourier = "CH_InsuredExpressOrCourier"
-  CH_InsuredSpecialDispatch = "CH_InsuredSpecialDispatch"
-  CH_PrioritySendungenInternational = "CH_PrioritySendungenInternational"
-  CH_Sonstige = "CH_Sonstige"
-  CH_SonstigerVersandInternational = "CH_SonstigerVersandInternational"
-  CH_SpecialDispatch = "CH_SpecialDispatch"
-  CH_StandardDispatchAPost = "CH_StandardDispatchAPost"
-  CH_StandardDispatchBPost = "CH_StandardDispatchBPost"
-  CH_UrgentSendungenInternational = "CH_UrgentSendungenInternational"
-  CH_Writing = "CH_Writing"
-  CN_CODInternational = "CN_CODInternational"
-  CN_DeliveryCompanyExpress = "CN_DeliveryCompanyExpress"
-  CN_EMSInternational = "CN_EMSInternational"
-  CN_ExpeditedInternational = "CN_ExpeditedInternational"
-  CN_ExpressDeliveryOtherCities = "CN_ExpressDeliveryOtherCities"
-  CN_ExpressDeliverySameCity = "CN_ExpressDeliverySameCity"
-  CN_FastPostOffice = "CN_FastPostOffice"
-  CN_OtherInternational = "CN_OtherInternational"
-  CN_Others = "CN_Others"
-  CN_OthersInternational = "CN_OthersInternational"
-  CN_PersonalDelivery = "CN_PersonalDelivery"
-  CN_PostOfficeExpress = "CN_PostOfficeExpress"
-  CN_RegularLogisticsInternational = "CN_RegularLogisticsInternational"
-  CN_RegularPackage = "CN_RegularPackage"
-  CN_StandardInternational = "CN_StandardInternational"
-  CN_StandardMailingInternational = "CN_StandardMailingInternational"
-  CustomCode = "CustomCode"
-  DE_COD = "DE_COD"
-  DE_DHLPackchen = "DE_DHLPackchen"
-  DE_DHLPackchenInternational = "DE_DHLPackchenInternational"
-  DE_DHLPostpaket = "DE_DHLPostpaket"
-  DE_DHLPostpaketInternational = "DE_DHLPostpaketInternational"
-  DE_DeutschePostBrief = "DE_DeutschePostBrief"
-  DE_DeutschePostBriefLandInternational = "DE_DeutschePostBriefLandInternational"
-  DE_DeutschePostBriefLuftInternational = "DE_DeutschePostBriefLuftInternational"
-  DE_DeutschePostBuchersendung = "DE_DeutschePostBuchersendung"
-  DE_DeutschePostWarensendung = "DE_DeutschePostWarensendung"
-  DE_ExpressOrCourier = "DE_ExpressOrCourier"
-  DE_HermesPaketUnversichert = "DE_HermesPaketUnversichert"
-  DE_HermesPaketVersichert = "DE_HermesPaketVersichert"
-  DE_IloxxEuropaInternational = "DE_IloxxEuropaInternational"
-  DE_IloxxStandard = "DE_IloxxStandard"
-  DE_IloxxTransportXXL = "DE_IloxxTransportXXL"
-  DE_IloxxUbernachtExpress = "DE_IloxxUbernachtExpress"
-  DE_IloxxWorldWideInternational = "DE_IloxxWorldWideInternational"
-  DE_InsuredDispatch = "DE_InsuredDispatch"
-  DE_InsuredExpressOrCourier = "DE_InsuredExpressOrCourier"
-  DE_InsuredSpecialDispatch = "DE_InsuredSpecialDispatch"
-  DE_Sonstige = "DE_Sonstige"
-  DE_SonstigerVersandInternational = "DE_SonstigerVersandInternational"
-  DE_SpecialDispatch = "DE_SpecialDispatch"
-  DE_StandardDispatch = "DE_StandardDispatch"
-  DE_UnversicherterExpressVersandInternational = "DE_UnversicherterExpressVersandInternational"
-  DE_UnversicherterVersand = "DE_UnversicherterVersand"
-  DE_UnversicherterVersandInternational = "DE_UnversicherterVersandInternational"
-  DE_VersicherterExpressVersandInternational = "DE_VersicherterExpressVersandInternational"
-  DE_VersicherterVersandInternational = "DE_VersicherterVersandInternational"
-  DE_Writing = "DE_Writing"
-  ES_CartasInternacionalesDeMas20 = "ES_CartasInternacionalesDeMas20"
-  ES_CartasInternacionalesHasta20 = "ES_CartasInternacionalesHasta20"
-  ES_CartasNacionalesDeMas20 = "ES_CartasNacionalesDeMas20"
-  ES_CartasNacionalesHasta20 = "ES_CartasNacionalesHasta20"
-  ES_CartasPostalInternational = "ES_CartasPostalInternational"
-  ES_EconomyPacketInternational = "ES_EconomyPacketInternational"
-  ES_EmsPostalExpressInternational = "ES_EmsPostalExpressInternational"
-  ES_ExpeditedInternational = "ES_ExpeditedInternational"
-  ES_OtherInternational = "ES_OtherInternational"
-  ES_Otros = "ES_Otros"
-  ES_PaqueteAzulDeMas2kg = "ES_PaqueteAzulDeMas2kg"
-  ES_PaqueteAzulHasta2kg = "ES_PaqueteAzulHasta2kg"
-  ES_PaqueteInternacionalEconomico = "ES_PaqueteInternacionalEconomico"
-  ES_StandardInternational = "ES_StandardInternational"
-  ES_Urgente = "ES_Urgente"
-  ExpeditedInternational = "ExpeditedInternational"
-  FR_AuteModeDenvoiDeColis = "FR_AuteModeDenvoiDeColis"
-  FR_Autre = "FR_Autre"
-  FR_ChronopostClassicInternational = "FR_ChronopostClassicInternational"
-  FR_ChronopostPremiumInternational = "FR_ChronopostPremiumInternational"
-  FR_ChronoposteInternationalClassic = "FR_ChronoposteInternationalClassic"
-  FR_Colieco = "FR_Colieco"
-  FR_ColiposteColissimo = "FR_ColiposteColissimo"
-  FR_ColiposteColissimoDirect = "FR_ColiposteColissimoDirect"
-  FR_ColiposteColissimoRecommended = "FR_ColiposteColissimoRecommended"
-  FR_DHLExpressEuropack = "FR_DHLExpressEuropack"
-  FR_DHLInternational = "FR_DHLInternational"
-  FR_Ecopli = "FR_Ecopli"
-  FR_EmballageColissimoInternational = "FR_EmballageColissimoInternational"
-  FR_ExpeditedInternational = "FR_ExpeditedInternational"
-  FR_LaPosteColisPostalEconomyInternational = "FR_LaPosteColisPostalEconomyInternational"
-  FR_LaPosteColisPostalPriorityInternational = "FR_LaPosteColisPostalPriorityInternational"
-  FR_LaPosteInternationalEconomyCourier = "FR_LaPosteInternationalEconomyCourier"
-  FR_LaPosteInternationalPriorityCourier = "FR_LaPosteInternationalPriorityCourier"
-  FR_OtherInternational = "FR_OtherInternational"
-  FR_PostOfficeLetter = "FR_PostOfficeLetter"
-  FR_PostOfficeLetterFollowed = "FR_PostOfficeLetterFollowed"
-  FR_PostOfficeLetterRecommended = "FR_PostOfficeLetterRecommended"
-  FR_RemiseEnMainPropre = "FR_RemiseEnMainPropre"
-  FR_StandardInternational = "FR_StandardInternational"
-  FR_UPSExpressInternational = "FR_UPSExpressInternational"
-  FR_UPSStandard = "FR_UPSStandard"
-  FR_UPSStandardAgainstRefund = "FR_UPSStandardAgainstRefund"
-  FR_UPSStandardInternational = "FR_UPSStandardInternational"
-  FreightShipping = "FreightShipping"
-  FreightShippingInternational = "FreightShippingInternational"
-  IE_CollectionInPerson = "IE_CollectionInPerson"
-  IE_CollectionInPersonInternational = "IE_CollectionInPersonInternational"
-  IE_EMSSDSCourier = "IE_EMSSDSCourier"
-  IE_EMSSDSCourierInternational = "IE_EMSSDSCourierInternational"
-  IE_EconomySDSCourier = "IE_EconomySDSCourier"
-  IE_EconomySDSCourierInternational = "IE_EconomySDSCourierInternational"
-  IE_FirstClassLetterService = "IE_FirstClassLetterService"
-  IE_InternationalEconomyService = "IE_InternationalEconomyService"
-  IE_InternationalPriorityService = "IE_InternationalPriorityService"
-  IE_OtherCourier = "IE_OtherCourier"
-  IE_OtherCourierInternational = "IE_OtherCourierInternational"
-  IE_RegisteredPost = "IE_RegisteredPost"
-  IE_SellersStandardRate = "IE_SellersStandardRate"
-  IE_SellersStandardRateInternational = "IE_SellersStandardRateInternational"
-  IE_SwiftPostExpressInternational = "IE_SwiftPostExpressInternational"
-  IE_SwiftPostInternational = "IE_SwiftPostInternational"
-  IE_SwiftPostNational = "IE_SwiftPostNational"
-  IN_BuyerPicksUpAndPays = "IN_BuyerPicksUpAndPays"
-  IN_Courier = "IN_Courier"
-  IN_ExpeditedInternational = "IN_ExpeditedInternational"
-  IN_Express = "IN_Express"
-  IN_FlatRateCOD = "IN_FlatRateCOD"
-  IN_LocalCOD = "IN_LocalCOD"
-  IN_NationalCOD = "IN_NationalCOD"
-  IN_OtherInternational = "IN_OtherInternational"
-  IN_Regular = "IN_Regular"
-  IN_StandardInternational = "IN_StandardInternational"
-  IT_ExpeditedInternational = "IT_ExpeditedInternational"
-  IT_ExpressCourier = "IT_ExpressCourier"
-  IT_InsuredMail = "IT_InsuredMail"
-  IT_MailRegisteredLetter = "IT_MailRegisteredLetter"
-  IT_MailRegisteredLetterWithMark = "IT_MailRegisteredLetterWithMark"
-  IT_OtherInternational = "IT_OtherInternational"
-  IT_PriorityMail = "IT_PriorityMail"
-  IT_QuickMail = "IT_QuickMail"
-  IT_QuickPackage1 = "IT_QuickPackage1"
-  IT_QuickPackage3 = "IT_QuickPackage3"
-  IT_RegularMail = "IT_RegularMail"
-  IT_RegularPackage = "IT_RegularPackage"
-  IT_StandardInternational = "IT_StandardInternational"
-  InternationalNotSelected = "InternationalNotSelected"
-  LocalDelivery = "LocalDelivery"
-  NL_DHLInternational = "NL_DHLInternational"
-  NL_DPDGBRInternational = "NL_DPDGBRInternational"
-  NL_ExpeditedInternational = "NL_ExpeditedInternational"
-  NL_FedExInternational = "NL_FedExInternational"
-  NL_GLSBusinessInternational = "NL_GLSBusinessInternational"
-  NL_Other = "NL_Other"
-  NL_OtherInternational = "NL_OtherInternational"
-  NL_ParcelPost = "NL_ParcelPost"
-  NL_RegisteredMail = "NL_RegisteredMail"
-  NL_StandardDelivery = "NL_StandardDelivery"
-  NL_StandardInternational = "NL_StandardInternational"
-  NL_TPGPostTNTInternational = "NL_TPGPostTNTInternational"
-  NL_UPSInternational = "NL_UPSInternational"
-  NotSelected = "NotSelected"
-  Other = "Other"
-  OtherInternational = "OtherInternational"
-  ShippingMethodExpress = "ShippingMethodExpress"
-  ShippingMethodStandard = "ShippingMethodStandard"
-  StandardInternational = "StandardInternational"
-  TW_COD = "TW_COD"
-  TW_CPInternationalEMS = "TW_CPInternationalEMS"
-  TW_CPInternationalLetterPost = "TW_CPInternationalLetterPost"
-  TW_CPInternationalOceanShippingParcel = "TW_CPInternationalOceanShippingParcel"
-  TW_CPInternationalParcelPost = "TW_CPInternationalParcelPost"
-  TW_CPInternationalRegisteredLetterPost = "TW_CPInternationalRegisteredLetterPost"
-  TW_CPInternationalRegisteredParcelPost = "TW_CPInternationalRegisteredParcelPost"
-  TW_DwellingMatchCOD = "TW_DwellingMatchCOD"
-  TW_DwellingMatchPost = "TW_DwellingMatchPost"
-  TW_ExpressMail = "TW_ExpressMail"
-  TW_FedExInternationalEconomy = "TW_FedExInternationalEconomy"
-  TW_FedExInternationalPriority = "TW_FedExInternationalPriority"
-  TW_Other = "TW_Other"
-  TW_OtherInternational = "TW_OtherInternational"
-  TW_ParcelPost = "TW_ParcelPost"
-  TW_RegisteredMail = "TW_RegisteredMail"
-  TW_SelfPickup = "TW_SelfPickup"
-  TW_UPSWorldwideExpedited = "TW_UPSWorldwideExpedited"
-  TW_UPSWorldwideExpress = "TW_UPSWorldwideExpress"
-  TW_UPSWorldwideExpressPlus = "TW_UPSWorldwideExpressPlus"
-  TW_UnregisteredMail = "TW_UnregisteredMail"
-  UK_CollectInPerson = "UK_CollectInPerson"
-  UK_CollectInPersonInternational = "UK_CollectInPersonInternational"
-  UK_OtherCourier = "UK_OtherCourier"
-  UK_OtherCourierOrDeliveryInternational = "UK_OtherCourierOrDeliveryInternational"
-  UK_ParcelForceEuro48International = "UK_ParcelForceEuro48International"
-  UK_ParcelForceInternationalDatapost = "UK_ParcelForceInternationalDatapost"
-  UK_ParcelForceInternationalScheduled = "UK_ParcelForceInternationalScheduled"
-  UK_ParcelForceIreland24International = "UK_ParcelForceIreland24International"
-  UK_Parcelforce24 = "UK_Parcelforce24"
-  UK_Parcelforce48 = "UK_Parcelforce48"
-  UK_RoyalMailAirmailInternational = "UK_RoyalMailAirmailInternational"
-  UK_RoyalMailAirsureInternational = "UK_RoyalMailAirsureInternational"
-  UK_RoyalMailFirstClassRecorded = "UK_RoyalMailFirstClassRecorded"
-  UK_RoyalMailFirstClassStandard = "UK_RoyalMailFirstClassStandard"
-  UK_RoyalMailHMForcesMailInternational = "UK_RoyalMailHMForcesMailInternational"
-  UK_RoyalMailInternationalSignedFor = "UK_RoyalMailInternationalSignedFor"
-  UK_RoyalMailSecondClassRecorded = "UK_RoyalMailSecondClassRecorded"
-  UK_RoyalMailSecondClassStandard = "UK_RoyalMailSecondClassStandard"
-  UK_RoyalMailSpecialDelivery = "UK_RoyalMailSpecialDelivery"
-  UK_RoyalMailStandardParcel = "UK_RoyalMailStandardParcel"
-  UK_RoyalMailSurfaceMailInternational = "UK_RoyalMailSurfaceMailInternational"
-  UK_SellersStandardInternationalRate = "UK_SellersStandardInternationalRate"
-  UK_SellersStandardRate = "UK_SellersStandardRate"
-  UPS2DayAirAM = "UPS2DayAirAM"
-  UPS2ndDay = "UPS2ndDay"
-  UPS3rdDay = "UPS3rdDay"
-  UPSGround = "UPSGround"
-  UPSNextDay = "UPSNextDay"
-  UPSNextDayAir = "UPSNextDayAir"
-  UPSStandardToCanada = "UPSStandardToCanada"
-  UPSWorldWideExpedited = "UPSWorldWideExpedited"
-  UPSWorldWideExpress = "UPSWorldWideExpress"
-  UPSWorldWideExpressPlus = "UPSWorldWideExpressPlus"
-  USPSAirmailLetter = "USPSAirmailLetter"
-  USPSAirmailParcel = "USPSAirmailParcel"
-  USPSEconomyLetter = "USPSEconomyLetter"
-  USPSEconomyParcel = "USPSEconomyParcel"
-  USPSExpressMail = "USPSExpressMail"
-  USPSFirstClass = "USPSFirstClass"
-  USPSGlobalExpress = "USPSGlobalExpress"
-  USPSGlobalPriority = "USPSGlobalPriority"
-  USPSGround = "USPSGround"
-  USPSMedia = "USPSMedia"
-  USPSParcel = "USPSParcel"
-  USPSPriority = "USPSPriority"
+class ShippingServiceCodeType < ::String
+  @@schema_type = "ShippingServiceCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AT_COD = ShippingServiceCodeType.new("AT_COD")
+  AT_ExpressOrCourier = ShippingServiceCodeType.new("AT_ExpressOrCourier")
+  AT_InsuredDispatch = ShippingServiceCodeType.new("AT_InsuredDispatch")
+  AT_InsuredExpressOrCourier = ShippingServiceCodeType.new("AT_InsuredExpressOrCourier")
+  AT_InsuredSpecialDispatch = ShippingServiceCodeType.new("AT_InsuredSpecialDispatch")
+  AT_Sonstige = ShippingServiceCodeType.new("AT_Sonstige")
+  AT_SonstigerVersandInternational = ShippingServiceCodeType.new("AT_SonstigerVersandInternational")
+  AT_SpecialDispatch = ShippingServiceCodeType.new("AT_SpecialDispatch")
+  AT_StandardDispatch = ShippingServiceCodeType.new("AT_StandardDispatch")
+  AT_UnversicherterExpressVersandInternational = ShippingServiceCodeType.new("AT_UnversicherterExpressVersandInternational")
+  AT_UnversicherterVersandInternational = ShippingServiceCodeType.new("AT_UnversicherterVersandInternational")
+  AT_VersicherterExpressVersandInternational = ShippingServiceCodeType.new("AT_VersicherterExpressVersandInternational")
+  AT_VersicherterVersandInternational = ShippingServiceCodeType.new("AT_VersicherterVersandInternational")
+  AT_Writing = ShippingServiceCodeType.new("AT_Writing")
+  AU_AirMailInternational = ShippingServiceCodeType.new("AU_AirMailInternational")
+  AU_Courier = ShippingServiceCodeType.new("AU_Courier")
+  AU_EMSInternationalCourierDocuments = ShippingServiceCodeType.new("AU_EMSInternationalCourierDocuments")
+  AU_EMSInternationalCourierParcels = ShippingServiceCodeType.new("AU_EMSInternationalCourierParcels")
+  AU_EconomyAirInternational = ShippingServiceCodeType.new("AU_EconomyAirInternational")
+  AU_ExpeditedInternational = ShippingServiceCodeType.new("AU_ExpeditedInternational")
+  AU_Express = ShippingServiceCodeType.new("AU_Express")
+  AU_ExpressPostInternationalDocuments = ShippingServiceCodeType.new("AU_ExpressPostInternationalDocuments")
+  AU_Other = ShippingServiceCodeType.new("AU_Other")
+  AU_OtherInternational = ShippingServiceCodeType.new("AU_OtherInternational")
+  AU_Registered = ShippingServiceCodeType.new("AU_Registered")
+  AU_Regular = ShippingServiceCodeType.new("AU_Regular")
+  AU_SeaMailInternational = ShippingServiceCodeType.new("AU_SeaMailInternational")
+  AU_StandardInternational = ShippingServiceCodeType.new("AU_StandardInternational")
+  BEFR_DHLInternational = ShippingServiceCodeType.new("BEFR_DHLInternational")
+  BEFR_DePostInternational = ShippingServiceCodeType.new("BEFR_DePostInternational")
+  BEFR_ExpeditedInternational = ShippingServiceCodeType.new("BEFR_ExpeditedInternational")
+  BEFR_FedExInternational = ShippingServiceCodeType.new("BEFR_FedExInternational")
+  BEFR_LaPosteInternational = ShippingServiceCodeType.new("BEFR_LaPosteInternational")
+  BEFR_Other = ShippingServiceCodeType.new("BEFR_Other")
+  BEFR_OtherInternational = ShippingServiceCodeType.new("BEFR_OtherInternational")
+  BEFR_ParcelPost = ShippingServiceCodeType.new("BEFR_ParcelPost")
+  BEFR_PriorityDelivery = ShippingServiceCodeType.new("BEFR_PriorityDelivery")
+  BEFR_RegisteredMail = ShippingServiceCodeType.new("BEFR_RegisteredMail")
+  BEFR_StandardDelivery = ShippingServiceCodeType.new("BEFR_StandardDelivery")
+  BEFR_StandardInternational = ShippingServiceCodeType.new("BEFR_StandardInternational")
+  BEFR_TPGPostTNTInternational = ShippingServiceCodeType.new("BEFR_TPGPostTNTInternational")
+  BEFR_UPSInternational = ShippingServiceCodeType.new("BEFR_UPSInternational")
+  BENL_DHLInternational = ShippingServiceCodeType.new("BENL_DHLInternational")
+  BENL_DePostInternational = ShippingServiceCodeType.new("BENL_DePostInternational")
+  BENL_ExpeditedInternational = ShippingServiceCodeType.new("BENL_ExpeditedInternational")
+  BENL_FedExInternational = ShippingServiceCodeType.new("BENL_FedExInternational")
+  BENL_LaPosteInternational = ShippingServiceCodeType.new("BENL_LaPosteInternational")
+  BENL_Other = ShippingServiceCodeType.new("BENL_Other")
+  BENL_OtherInternational = ShippingServiceCodeType.new("BENL_OtherInternational")
+  BENL_ParcelPost = ShippingServiceCodeType.new("BENL_ParcelPost")
+  BENL_PriorityDelivery = ShippingServiceCodeType.new("BENL_PriorityDelivery")
+  BENL_RegisteredMail = ShippingServiceCodeType.new("BENL_RegisteredMail")
+  BENL_StandardDelivery = ShippingServiceCodeType.new("BENL_StandardDelivery")
+  BENL_StandardInternational = ShippingServiceCodeType.new("BENL_StandardInternational")
+  BENL_TPGPostTNTInternational = ShippingServiceCodeType.new("BENL_TPGPostTNTInternational")
+  BENL_UPSInternational = ShippingServiceCodeType.new("BENL_UPSInternational")
+  CA_ExpeditedDelivery = ShippingServiceCodeType.new("CA_ExpeditedDelivery")
+  CA_ExpeditedInternational = ShippingServiceCodeType.new("CA_ExpeditedInternational")
+  CA_OtherInternational = ShippingServiceCodeType.new("CA_OtherInternational")
+  CA_PostExpeditedParcel = ShippingServiceCodeType.new("CA_PostExpeditedParcel")
+  CA_PostExpeditedParcelUSA = ShippingServiceCodeType.new("CA_PostExpeditedParcelUSA")
+  CA_PostInternationalLetterPost = ShippingServiceCodeType.new("CA_PostInternationalLetterPost")
+  CA_PostInternationalParcelAir = ShippingServiceCodeType.new("CA_PostInternationalParcelAir")
+  CA_PostInternationalParcelSurface = ShippingServiceCodeType.new("CA_PostInternationalParcelSurface")
+  CA_PostLettermail = ShippingServiceCodeType.new("CA_PostLettermail")
+  CA_PostPriorityCourier = ShippingServiceCodeType.new("CA_PostPriorityCourier")
+  CA_PostRegularParcel = ShippingServiceCodeType.new("CA_PostRegularParcel")
+  CA_PostSmallPacketsUSA = ShippingServiceCodeType.new("CA_PostSmallPacketsUSA")
+  CA_PostSmallPacketsUSAAir = ShippingServiceCodeType.new("CA_PostSmallPacketsUSAAir")
+  CA_PostSmallPacketsUSAGround = ShippingServiceCodeType.new("CA_PostSmallPacketsUSAGround")
+  CA_PostUSALetterPost = ShippingServiceCodeType.new("CA_PostUSALetterPost")
+  CA_PostXpresspost = ShippingServiceCodeType.new("CA_PostXpresspost")
+  CA_PostXpresspostInternational = ShippingServiceCodeType.new("CA_PostXpresspostInternational")
+  CA_PostXpresspostUSA = ShippingServiceCodeType.new("CA_PostXpresspostUSA")
+  CA_PurolatorInternational = ShippingServiceCodeType.new("CA_PurolatorInternational")
+  CA_SmallPacketsInternational = ShippingServiceCodeType.new("CA_SmallPacketsInternational")
+  CA_SmallPacketsInternationalAir = ShippingServiceCodeType.new("CA_SmallPacketsInternationalAir")
+  CA_SmallPacketsInternationalGround = ShippingServiceCodeType.new("CA_SmallPacketsInternationalGround")
+  CA_StandardDelivery = ShippingServiceCodeType.new("CA_StandardDelivery")
+  CA_StandardInternational = ShippingServiceCodeType.new("CA_StandardInternational")
+  CA_UPS3DaySelectUnitedStates = ShippingServiceCodeType.new("CA_UPS3DaySelectUnitedStates")
+  CA_UPSExpeditedCanada = ShippingServiceCodeType.new("CA_UPSExpeditedCanada")
+  CA_UPSExpeditedUnitedStates = ShippingServiceCodeType.new("CA_UPSExpeditedUnitedStates")
+  CA_UPSExpressCanada = ShippingServiceCodeType.new("CA_UPSExpressCanada")
+  CA_UPSExpressSaverCanada = ShippingServiceCodeType.new("CA_UPSExpressSaverCanada")
+  CA_UPSExpressUnitedStates = ShippingServiceCodeType.new("CA_UPSExpressUnitedStates")
+  CA_UPSStandardCanada = ShippingServiceCodeType.new("CA_UPSStandardCanada")
+  CA_UPSStandardUnitedStates = ShippingServiceCodeType.new("CA_UPSStandardUnitedStates")
+  CA_UPSWorldWideExpedited = ShippingServiceCodeType.new("CA_UPSWorldWideExpedited")
+  CA_UPSWorldWideExpress = ShippingServiceCodeType.new("CA_UPSWorldWideExpress")
+  CH_COD = ShippingServiceCodeType.new("CH_COD")
+  CH_EconomySendungenInternational = ShippingServiceCodeType.new("CH_EconomySendungenInternational")
+  CH_ExpressOrCourier = ShippingServiceCodeType.new("CH_ExpressOrCourier")
+  CH_InsuredDispatch = ShippingServiceCodeType.new("CH_InsuredDispatch")
+  CH_InsuredExpressOrCourier = ShippingServiceCodeType.new("CH_InsuredExpressOrCourier")
+  CH_InsuredSpecialDispatch = ShippingServiceCodeType.new("CH_InsuredSpecialDispatch")
+  CH_PrioritySendungenInternational = ShippingServiceCodeType.new("CH_PrioritySendungenInternational")
+  CH_Sonstige = ShippingServiceCodeType.new("CH_Sonstige")
+  CH_SonstigerVersandInternational = ShippingServiceCodeType.new("CH_SonstigerVersandInternational")
+  CH_SpecialDispatch = ShippingServiceCodeType.new("CH_SpecialDispatch")
+  CH_StandardDispatchAPost = ShippingServiceCodeType.new("CH_StandardDispatchAPost")
+  CH_StandardDispatchBPost = ShippingServiceCodeType.new("CH_StandardDispatchBPost")
+  CH_UrgentSendungenInternational = ShippingServiceCodeType.new("CH_UrgentSendungenInternational")
+  CH_Writing = ShippingServiceCodeType.new("CH_Writing")
+  CN_CODInternational = ShippingServiceCodeType.new("CN_CODInternational")
+  CN_DeliveryCompanyExpress = ShippingServiceCodeType.new("CN_DeliveryCompanyExpress")
+  CN_EMSInternational = ShippingServiceCodeType.new("CN_EMSInternational")
+  CN_ExpeditedInternational = ShippingServiceCodeType.new("CN_ExpeditedInternational")
+  CN_ExpressDeliveryOtherCities = ShippingServiceCodeType.new("CN_ExpressDeliveryOtherCities")
+  CN_ExpressDeliverySameCity = ShippingServiceCodeType.new("CN_ExpressDeliverySameCity")
+  CN_FastPostOffice = ShippingServiceCodeType.new("CN_FastPostOffice")
+  CN_OtherInternational = ShippingServiceCodeType.new("CN_OtherInternational")
+  CN_Others = ShippingServiceCodeType.new("CN_Others")
+  CN_OthersInternational = ShippingServiceCodeType.new("CN_OthersInternational")
+  CN_PersonalDelivery = ShippingServiceCodeType.new("CN_PersonalDelivery")
+  CN_PostOfficeExpress = ShippingServiceCodeType.new("CN_PostOfficeExpress")
+  CN_RegularLogisticsInternational = ShippingServiceCodeType.new("CN_RegularLogisticsInternational")
+  CN_RegularPackage = ShippingServiceCodeType.new("CN_RegularPackage")
+  CN_StandardInternational = ShippingServiceCodeType.new("CN_StandardInternational")
+  CN_StandardMailingInternational = ShippingServiceCodeType.new("CN_StandardMailingInternational")
+  CustomCode = ShippingServiceCodeType.new("CustomCode")
+  DE_COD = ShippingServiceCodeType.new("DE_COD")
+  DE_DHLPackchen = ShippingServiceCodeType.new("DE_DHLPackchen")
+  DE_DHLPackchenInternational = ShippingServiceCodeType.new("DE_DHLPackchenInternational")
+  DE_DHLPostpaket = ShippingServiceCodeType.new("DE_DHLPostpaket")
+  DE_DHLPostpaketInternational = ShippingServiceCodeType.new("DE_DHLPostpaketInternational")
+  DE_DeutschePostBrief = ShippingServiceCodeType.new("DE_DeutschePostBrief")
+  DE_DeutschePostBriefLandInternational = ShippingServiceCodeType.new("DE_DeutschePostBriefLandInternational")
+  DE_DeutschePostBriefLuftInternational = ShippingServiceCodeType.new("DE_DeutschePostBriefLuftInternational")
+  DE_DeutschePostBuchersendung = ShippingServiceCodeType.new("DE_DeutschePostBuchersendung")
+  DE_DeutschePostWarensendung = ShippingServiceCodeType.new("DE_DeutschePostWarensendung")
+  DE_ExpressOrCourier = ShippingServiceCodeType.new("DE_ExpressOrCourier")
+  DE_HermesPaketUnversichert = ShippingServiceCodeType.new("DE_HermesPaketUnversichert")
+  DE_HermesPaketVersichert = ShippingServiceCodeType.new("DE_HermesPaketVersichert")
+  DE_IloxxEuropaInternational = ShippingServiceCodeType.new("DE_IloxxEuropaInternational")
+  DE_IloxxStandard = ShippingServiceCodeType.new("DE_IloxxStandard")
+  DE_IloxxTransportXXL = ShippingServiceCodeType.new("DE_IloxxTransportXXL")
+  DE_IloxxUbernachtExpress = ShippingServiceCodeType.new("DE_IloxxUbernachtExpress")
+  DE_IloxxWorldWideInternational = ShippingServiceCodeType.new("DE_IloxxWorldWideInternational")
+  DE_InsuredDispatch = ShippingServiceCodeType.new("DE_InsuredDispatch")
+  DE_InsuredExpressOrCourier = ShippingServiceCodeType.new("DE_InsuredExpressOrCourier")
+  DE_InsuredSpecialDispatch = ShippingServiceCodeType.new("DE_InsuredSpecialDispatch")
+  DE_Sonstige = ShippingServiceCodeType.new("DE_Sonstige")
+  DE_SonstigerVersandInternational = ShippingServiceCodeType.new("DE_SonstigerVersandInternational")
+  DE_SpecialDispatch = ShippingServiceCodeType.new("DE_SpecialDispatch")
+  DE_StandardDispatch = ShippingServiceCodeType.new("DE_StandardDispatch")
+  DE_UnversicherterExpressVersandInternational = ShippingServiceCodeType.new("DE_UnversicherterExpressVersandInternational")
+  DE_UnversicherterVersand = ShippingServiceCodeType.new("DE_UnversicherterVersand")
+  DE_UnversicherterVersandInternational = ShippingServiceCodeType.new("DE_UnversicherterVersandInternational")
+  DE_VersicherterExpressVersandInternational = ShippingServiceCodeType.new("DE_VersicherterExpressVersandInternational")
+  DE_VersicherterVersandInternational = ShippingServiceCodeType.new("DE_VersicherterVersandInternational")
+  DE_Writing = ShippingServiceCodeType.new("DE_Writing")
+  ES_CartasInternacionalesDeMas20 = ShippingServiceCodeType.new("ES_CartasInternacionalesDeMas20")
+  ES_CartasInternacionalesHasta20 = ShippingServiceCodeType.new("ES_CartasInternacionalesHasta20")
+  ES_CartasNacionalesDeMas20 = ShippingServiceCodeType.new("ES_CartasNacionalesDeMas20")
+  ES_CartasNacionalesHasta20 = ShippingServiceCodeType.new("ES_CartasNacionalesHasta20")
+  ES_CartasPostalInternational = ShippingServiceCodeType.new("ES_CartasPostalInternational")
+  ES_EconomyPacketInternational = ShippingServiceCodeType.new("ES_EconomyPacketInternational")
+  ES_EmsPostalExpressInternational = ShippingServiceCodeType.new("ES_EmsPostalExpressInternational")
+  ES_ExpeditedInternational = ShippingServiceCodeType.new("ES_ExpeditedInternational")
+  ES_OtherInternational = ShippingServiceCodeType.new("ES_OtherInternational")
+  ES_Otros = ShippingServiceCodeType.new("ES_Otros")
+  ES_PaqueteAzulDeMas2kg = ShippingServiceCodeType.new("ES_PaqueteAzulDeMas2kg")
+  ES_PaqueteAzulHasta2kg = ShippingServiceCodeType.new("ES_PaqueteAzulHasta2kg")
+  ES_PaqueteInternacionalEconomico = ShippingServiceCodeType.new("ES_PaqueteInternacionalEconomico")
+  ES_StandardInternational = ShippingServiceCodeType.new("ES_StandardInternational")
+  ES_Urgente = ShippingServiceCodeType.new("ES_Urgente")
+  ExpeditedInternational = ShippingServiceCodeType.new("ExpeditedInternational")
+  FR_AuteModeDenvoiDeColis = ShippingServiceCodeType.new("FR_AuteModeDenvoiDeColis")
+  FR_Autre = ShippingServiceCodeType.new("FR_Autre")
+  FR_ChronopostClassicInternational = ShippingServiceCodeType.new("FR_ChronopostClassicInternational")
+  FR_ChronopostPremiumInternational = ShippingServiceCodeType.new("FR_ChronopostPremiumInternational")
+  FR_ChronoposteInternationalClassic = ShippingServiceCodeType.new("FR_ChronoposteInternationalClassic")
+  FR_Colieco = ShippingServiceCodeType.new("FR_Colieco")
+  FR_ColiposteColissimo = ShippingServiceCodeType.new("FR_ColiposteColissimo")
+  FR_ColiposteColissimoDirect = ShippingServiceCodeType.new("FR_ColiposteColissimoDirect")
+  FR_ColiposteColissimoRecommended = ShippingServiceCodeType.new("FR_ColiposteColissimoRecommended")
+  FR_DHLExpressEuropack = ShippingServiceCodeType.new("FR_DHLExpressEuropack")
+  FR_DHLInternational = ShippingServiceCodeType.new("FR_DHLInternational")
+  FR_Ecopli = ShippingServiceCodeType.new("FR_Ecopli")
+  FR_EmballageColissimoInternational = ShippingServiceCodeType.new("FR_EmballageColissimoInternational")
+  FR_ExpeditedInternational = ShippingServiceCodeType.new("FR_ExpeditedInternational")
+  FR_LaPosteColisPostalEconomyInternational = ShippingServiceCodeType.new("FR_LaPosteColisPostalEconomyInternational")
+  FR_LaPosteColisPostalPriorityInternational = ShippingServiceCodeType.new("FR_LaPosteColisPostalPriorityInternational")
+  FR_LaPosteInternationalEconomyCourier = ShippingServiceCodeType.new("FR_LaPosteInternationalEconomyCourier")
+  FR_LaPosteInternationalPriorityCourier = ShippingServiceCodeType.new("FR_LaPosteInternationalPriorityCourier")
+  FR_OtherInternational = ShippingServiceCodeType.new("FR_OtherInternational")
+  FR_PostOfficeLetter = ShippingServiceCodeType.new("FR_PostOfficeLetter")
+  FR_PostOfficeLetterFollowed = ShippingServiceCodeType.new("FR_PostOfficeLetterFollowed")
+  FR_PostOfficeLetterRecommended = ShippingServiceCodeType.new("FR_PostOfficeLetterRecommended")
+  FR_RemiseEnMainPropre = ShippingServiceCodeType.new("FR_RemiseEnMainPropre")
+  FR_StandardInternational = ShippingServiceCodeType.new("FR_StandardInternational")
+  FR_UPSExpressInternational = ShippingServiceCodeType.new("FR_UPSExpressInternational")
+  FR_UPSStandard = ShippingServiceCodeType.new("FR_UPSStandard")
+  FR_UPSStandardAgainstRefund = ShippingServiceCodeType.new("FR_UPSStandardAgainstRefund")
+  FR_UPSStandardInternational = ShippingServiceCodeType.new("FR_UPSStandardInternational")
+  FreightShipping = ShippingServiceCodeType.new("FreightShipping")
+  FreightShippingInternational = ShippingServiceCodeType.new("FreightShippingInternational")
+  HK_DomesticRegularShipping = ShippingServiceCodeType.new("HK_DomesticRegularShipping")
+  HK_DomesticSpecialShipping = ShippingServiceCodeType.new("HK_DomesticSpecialShipping")
+  HK_InternationalRegularShipping = ShippingServiceCodeType.new("HK_InternationalRegularShipping")
+  HK_InternationalSpecialShipping = ShippingServiceCodeType.new("HK_InternationalSpecialShipping")
+  HK_LocalCourier = ShippingServiceCodeType.new("HK_LocalCourier")
+  HK_LocalPickUpOnly = ShippingServiceCodeType.new("HK_LocalPickUpOnly")
+  IE_CollectionInPerson = ShippingServiceCodeType.new("IE_CollectionInPerson")
+  IE_CollectionInPersonInternational = ShippingServiceCodeType.new("IE_CollectionInPersonInternational")
+  IE_EMSSDSCourier = ShippingServiceCodeType.new("IE_EMSSDSCourier")
+  IE_EMSSDSCourierInternational = ShippingServiceCodeType.new("IE_EMSSDSCourierInternational")
+  IE_EconomySDSCourier = ShippingServiceCodeType.new("IE_EconomySDSCourier")
+  IE_EconomySDSCourierInternational = ShippingServiceCodeType.new("IE_EconomySDSCourierInternational")
+  IE_FirstClassLetterService = ShippingServiceCodeType.new("IE_FirstClassLetterService")
+  IE_InternationalEconomyService = ShippingServiceCodeType.new("IE_InternationalEconomyService")
+  IE_InternationalPriorityService = ShippingServiceCodeType.new("IE_InternationalPriorityService")
+  IE_OtherCourier = ShippingServiceCodeType.new("IE_OtherCourier")
+  IE_OtherCourierInternational = ShippingServiceCodeType.new("IE_OtherCourierInternational")
+  IE_RegisteredPost = ShippingServiceCodeType.new("IE_RegisteredPost")
+  IE_SellersStandardRate = ShippingServiceCodeType.new("IE_SellersStandardRate")
+  IE_SellersStandardRateInternational = ShippingServiceCodeType.new("IE_SellersStandardRateInternational")
+  IE_SwiftPostExpressInternational = ShippingServiceCodeType.new("IE_SwiftPostExpressInternational")
+  IE_SwiftPostInternational = ShippingServiceCodeType.new("IE_SwiftPostInternational")
+  IE_SwiftPostNational = ShippingServiceCodeType.new("IE_SwiftPostNational")
+  IN_BuyerPicksUpAndPays = ShippingServiceCodeType.new("IN_BuyerPicksUpAndPays")
+  IN_Courier = ShippingServiceCodeType.new("IN_Courier")
+  IN_ExpeditedInternational = ShippingServiceCodeType.new("IN_ExpeditedInternational")
+  IN_Express = ShippingServiceCodeType.new("IN_Express")
+  IN_FlatRateCOD = ShippingServiceCodeType.new("IN_FlatRateCOD")
+  IN_LocalCOD = ShippingServiceCodeType.new("IN_LocalCOD")
+  IN_NationalCOD = ShippingServiceCodeType.new("IN_NationalCOD")
+  IN_OtherInternational = ShippingServiceCodeType.new("IN_OtherInternational")
+  IN_Regular = ShippingServiceCodeType.new("IN_Regular")
+  IN_StandardInternational = ShippingServiceCodeType.new("IN_StandardInternational")
+  IT_ExpeditedInternational = ShippingServiceCodeType.new("IT_ExpeditedInternational")
+  IT_ExpressCourier = ShippingServiceCodeType.new("IT_ExpressCourier")
+  IT_InsuredMail = ShippingServiceCodeType.new("IT_InsuredMail")
+  IT_MailRegisteredLetter = ShippingServiceCodeType.new("IT_MailRegisteredLetter")
+  IT_MailRegisteredLetterWithMark = ShippingServiceCodeType.new("IT_MailRegisteredLetterWithMark")
+  IT_OtherInternational = ShippingServiceCodeType.new("IT_OtherInternational")
+  IT_PriorityMail = ShippingServiceCodeType.new("IT_PriorityMail")
+  IT_QuickMail = ShippingServiceCodeType.new("IT_QuickMail")
+  IT_QuickPackage1 = ShippingServiceCodeType.new("IT_QuickPackage1")
+  IT_QuickPackage3 = ShippingServiceCodeType.new("IT_QuickPackage3")
+  IT_RegularMail = ShippingServiceCodeType.new("IT_RegularMail")
+  IT_RegularPackage = ShippingServiceCodeType.new("IT_RegularPackage")
+  IT_StandardInternational = ShippingServiceCodeType.new("IT_StandardInternational")
+  InternationalNotSelected = ShippingServiceCodeType.new("InternationalNotSelected")
+  LocalDelivery = ShippingServiceCodeType.new("LocalDelivery")
+  NL_DHLInternational = ShippingServiceCodeType.new("NL_DHLInternational")
+  NL_DPDGBRInternational = ShippingServiceCodeType.new("NL_DPDGBRInternational")
+  NL_ExpeditedInternational = ShippingServiceCodeType.new("NL_ExpeditedInternational")
+  NL_FedExInternational = ShippingServiceCodeType.new("NL_FedExInternational")
+  NL_GLSBusinessInternational = ShippingServiceCodeType.new("NL_GLSBusinessInternational")
+  NL_Other = ShippingServiceCodeType.new("NL_Other")
+  NL_OtherInternational = ShippingServiceCodeType.new("NL_OtherInternational")
+  NL_ParcelPost = ShippingServiceCodeType.new("NL_ParcelPost")
+  NL_RegisteredMail = ShippingServiceCodeType.new("NL_RegisteredMail")
+  NL_StandardDelivery = ShippingServiceCodeType.new("NL_StandardDelivery")
+  NL_StandardInternational = ShippingServiceCodeType.new("NL_StandardInternational")
+  NL_TPGPostTNTInternational = ShippingServiceCodeType.new("NL_TPGPostTNTInternational")
+  NL_UPSInternational = ShippingServiceCodeType.new("NL_UPSInternational")
+  NotSelected = ShippingServiceCodeType.new("NotSelected")
+  Other = ShippingServiceCodeType.new("Other")
+  OtherInternational = ShippingServiceCodeType.new("OtherInternational")
+  PL_DomesticRegular = ShippingServiceCodeType.new("PL_DomesticRegular")
+  PL_DomesticSpecial = ShippingServiceCodeType.new("PL_DomesticSpecial")
+  SG_DomesticNonStandardMail = ShippingServiceCodeType.new("SG_DomesticNonStandardMail")
+  SG_DomesticSpeedpostIslandwide = ShippingServiceCodeType.new("SG_DomesticSpeedpostIslandwide")
+  SG_DomesticStandardMail = ShippingServiceCodeType.new("SG_DomesticStandardMail")
+  SG_InternationalCourier = ShippingServiceCodeType.new("SG_InternationalCourier")
+  SG_InternationalExpressMailService = ShippingServiceCodeType.new("SG_InternationalExpressMailService")
+  SG_InternationalStandardMail = ShippingServiceCodeType.new("SG_InternationalStandardMail")
+  SG_LocalCourier = ShippingServiceCodeType.new("SG_LocalCourier")
+  SG_LocalPickUpOnly = ShippingServiceCodeType.new("SG_LocalPickUpOnly")
+  ShippingMethodExpress = ShippingServiceCodeType.new("ShippingMethodExpress")
+  ShippingMethodOvernight = ShippingServiceCodeType.new("ShippingMethodOvernight")
+  ShippingMethodStandard = ShippingServiceCodeType.new("ShippingMethodStandard")
+  StandardInternational = ShippingServiceCodeType.new("StandardInternational")
+  TW_COD = ShippingServiceCodeType.new("TW_COD")
+  TW_CPInternationalEMS = ShippingServiceCodeType.new("TW_CPInternationalEMS")
+  TW_CPInternationalLetterPost = ShippingServiceCodeType.new("TW_CPInternationalLetterPost")
+  TW_CPInternationalOceanShippingParcel = ShippingServiceCodeType.new("TW_CPInternationalOceanShippingParcel")
+  TW_CPInternationalParcelPost = ShippingServiceCodeType.new("TW_CPInternationalParcelPost")
+  TW_CPInternationalRegisteredLetterPost = ShippingServiceCodeType.new("TW_CPInternationalRegisteredLetterPost")
+  TW_CPInternationalRegisteredParcelPost = ShippingServiceCodeType.new("TW_CPInternationalRegisteredParcelPost")
+  TW_DwellingMatchCOD = ShippingServiceCodeType.new("TW_DwellingMatchCOD")
+  TW_DwellingMatchPost = ShippingServiceCodeType.new("TW_DwellingMatchPost")
+  TW_ExpressMail = ShippingServiceCodeType.new("TW_ExpressMail")
+  TW_FedExInternationalEconomy = ShippingServiceCodeType.new("TW_FedExInternationalEconomy")
+  TW_FedExInternationalPriority = ShippingServiceCodeType.new("TW_FedExInternationalPriority")
+  TW_Other = ShippingServiceCodeType.new("TW_Other")
+  TW_OtherInternational = ShippingServiceCodeType.new("TW_OtherInternational")
+  TW_ParcelPost = ShippingServiceCodeType.new("TW_ParcelPost")
+  TW_RegisteredMail = ShippingServiceCodeType.new("TW_RegisteredMail")
+  TW_SelfPickup = ShippingServiceCodeType.new("TW_SelfPickup")
+  TW_UPSWorldwideExpedited = ShippingServiceCodeType.new("TW_UPSWorldwideExpedited")
+  TW_UPSWorldwideExpress = ShippingServiceCodeType.new("TW_UPSWorldwideExpress")
+  TW_UPSWorldwideExpressPlus = ShippingServiceCodeType.new("TW_UPSWorldwideExpressPlus")
+  TW_UnregisteredMail = ShippingServiceCodeType.new("TW_UnregisteredMail")
+  UK_CollectInPerson = ShippingServiceCodeType.new("UK_CollectInPerson")
+  UK_CollectInPersonInternational = ShippingServiceCodeType.new("UK_CollectInPersonInternational")
+  UK_OtherCourier = ShippingServiceCodeType.new("UK_OtherCourier")
+  UK_OtherCourierOrDeliveryInternational = ShippingServiceCodeType.new("UK_OtherCourierOrDeliveryInternational")
+  UK_ParcelForceEuro48International = ShippingServiceCodeType.new("UK_ParcelForceEuro48International")
+  UK_ParcelForceInternationalDatapost = ShippingServiceCodeType.new("UK_ParcelForceInternationalDatapost")
+  UK_ParcelForceInternationalScheduled = ShippingServiceCodeType.new("UK_ParcelForceInternationalScheduled")
+  UK_ParcelForceIreland24International = ShippingServiceCodeType.new("UK_ParcelForceIreland24International")
+  UK_Parcelforce24 = ShippingServiceCodeType.new("UK_Parcelforce24")
+  UK_Parcelforce48 = ShippingServiceCodeType.new("UK_Parcelforce48")
+  UK_RoyalMailAirmailInternational = ShippingServiceCodeType.new("UK_RoyalMailAirmailInternational")
+  UK_RoyalMailAirsureInternational = ShippingServiceCodeType.new("UK_RoyalMailAirsureInternational")
+  UK_RoyalMailFirstClassRecorded = ShippingServiceCodeType.new("UK_RoyalMailFirstClassRecorded")
+  UK_RoyalMailFirstClassStandard = ShippingServiceCodeType.new("UK_RoyalMailFirstClassStandard")
+  UK_RoyalMailHMForcesMailInternational = ShippingServiceCodeType.new("UK_RoyalMailHMForcesMailInternational")
+  UK_RoyalMailInternationalSignedFor = ShippingServiceCodeType.new("UK_RoyalMailInternationalSignedFor")
+  UK_RoyalMailSecondClassRecorded = ShippingServiceCodeType.new("UK_RoyalMailSecondClassRecorded")
+  UK_RoyalMailSecondClassStandard = ShippingServiceCodeType.new("UK_RoyalMailSecondClassStandard")
+  UK_RoyalMailSpecialDelivery = ShippingServiceCodeType.new("UK_RoyalMailSpecialDelivery")
+  UK_RoyalMailStandardParcel = ShippingServiceCodeType.new("UK_RoyalMailStandardParcel")
+  UK_RoyalMailSurfaceMailInternational = ShippingServiceCodeType.new("UK_RoyalMailSurfaceMailInternational")
+  UK_SellersStandardInternationalRate = ShippingServiceCodeType.new("UK_SellersStandardInternationalRate")
+  UK_SellersStandardRate = ShippingServiceCodeType.new("UK_SellersStandardRate")
+  UPS2DayAirAM = ShippingServiceCodeType.new("UPS2DayAirAM")
+  UPS2ndDay = ShippingServiceCodeType.new("UPS2ndDay")
+  UPS3rdDay = ShippingServiceCodeType.new("UPS3rdDay")
+  UPSGround = ShippingServiceCodeType.new("UPSGround")
+  UPSNextDay = ShippingServiceCodeType.new("UPSNextDay")
+  UPSNextDayAir = ShippingServiceCodeType.new("UPSNextDayAir")
+  UPSStandardToCanada = ShippingServiceCodeType.new("UPSStandardToCanada")
+  UPSWorldWideExpedited = ShippingServiceCodeType.new("UPSWorldWideExpedited")
+  UPSWorldWideExpress = ShippingServiceCodeType.new("UPSWorldWideExpress")
+  UPSWorldWideExpressBox10kg = ShippingServiceCodeType.new("UPSWorldWideExpressBox10kg")
+  UPSWorldWideExpressBox25kg = ShippingServiceCodeType.new("UPSWorldWideExpressBox25kg")
+  UPSWorldWideExpressPlus = ShippingServiceCodeType.new("UPSWorldWideExpressPlus")
+  UPSWorldWideExpressPlusBox10kg = ShippingServiceCodeType.new("UPSWorldWideExpressPlusBox10kg")
+  UPSWorldWideExpressPlusBox25kg = ShippingServiceCodeType.new("UPSWorldWideExpressPlusBox25kg")
+  USPSAirmailLetter = ShippingServiceCodeType.new("USPSAirmailLetter")
+  USPSAirmailParcel = ShippingServiceCodeType.new("USPSAirmailParcel")
+  USPSEconomyLetter = ShippingServiceCodeType.new("USPSEconomyLetter")
+  USPSEconomyParcel = ShippingServiceCodeType.new("USPSEconomyParcel")
+  USPSExpressFlatRateEnvelope = ShippingServiceCodeType.new("USPSExpressFlatRateEnvelope")
+  USPSExpressMail = ShippingServiceCodeType.new("USPSExpressMail")
+  USPSFirstClass = ShippingServiceCodeType.new("USPSFirstClass")
+  USPSGlobalExpress = ShippingServiceCodeType.new("USPSGlobalExpress")
+  USPSGlobalPriority = ShippingServiceCodeType.new("USPSGlobalPriority")
+  USPSGlobalPriorityLargeEnvelope = ShippingServiceCodeType.new("USPSGlobalPriorityLargeEnvelope")
+  USPSGlobalPrioritySmallEnvelope = ShippingServiceCodeType.new("USPSGlobalPrioritySmallEnvelope")
+  USPSGround = ShippingServiceCodeType.new("USPSGround")
+  USPSMedia = ShippingServiceCodeType.new("USPSMedia")
+  USPSParcel = ShippingServiceCodeType.new("USPSParcel")
+  USPSPriority = ShippingServiceCodeType.new("USPSPriority")
+  USPSPriorityFlatRateBox = ShippingServiceCodeType.new("USPSPriorityFlatRateBox")
+  USPSPriorityFlatRateEnvelope = ShippingServiceCodeType.new("USPSPriorityFlatRateEnvelope")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ShippingTermsCodeType
-module ShippingTermsCodeType
-  BuyerPays = "BuyerPays"
-  CustomCode = "CustomCode"
-  SellerPays = "SellerPays"
+class ShippingTermsCodeType < ::String
+  @@schema_type = "ShippingTermsCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BuyerPays = ShippingTermsCodeType.new("BuyerPays")
+  CustomCode = ShippingTermsCodeType.new("CustomCode")
+  SellerPays = ShippingTermsCodeType.new("SellerPays")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ShippingTypeCodeType
-module ShippingTypeCodeType
-  Calculated = "Calculated"
-  CustomCode = "CustomCode"
-  Flat = "Flat"
-  Free = "Free"
-  Freight = "Freight"
-  NotSpecified = "NotSpecified"
+class ShippingTypeCodeType < ::String
+  @@schema_type = "ShippingTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Calculated = ShippingTypeCodeType.new("Calculated")
+  CustomCode = ShippingTypeCodeType.new("CustomCode")
+  Flat = ShippingTypeCodeType.new("Flat")
+  Free = ShippingTypeCodeType.new("Free")
+  Freight = ShippingTypeCodeType.new("Freight")
+  NotSpecified = ShippingTypeCodeType.new("NotSpecified")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SiteCodeType
-module SiteCodeType
-  Australia = "Australia"
-  Austria = "Austria"
-  Belgium_Dutch = "Belgium_Dutch"
-  Belgium_French = "Belgium_French"
-  Canada = "Canada"
-  China = "China"
-  CustomCode = "CustomCode"
-  EBayMotors = "eBayMotors"
-  France = "France"
-  Germany = "Germany"
-  HongKong = "HongKong"
-  India = "India"
-  Ireland = "Ireland"
-  Italy = "Italy"
-  Malaysia = "Malaysia"
-  Netherlands = "Netherlands"
-  Philippines = "Philippines"
-  Singapore = "Singapore"
-  Spain = "Spain"
-  Switzerland = "Switzerland"
-  Taiwan = "Taiwan"
-  UK = "UK"
-  US = "US"
+class SiteCodeType < ::String
+  @@schema_type = "SiteCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Australia = SiteCodeType.new("Australia")
+  Austria = SiteCodeType.new("Austria")
+  Belgium_Dutch = SiteCodeType.new("Belgium_Dutch")
+  Belgium_French = SiteCodeType.new("Belgium_French")
+  Canada = SiteCodeType.new("Canada")
+  China = SiteCodeType.new("China")
+  CustomCode = SiteCodeType.new("CustomCode")
+  EBayMotors = SiteCodeType.new("eBayMotors")
+  France = SiteCodeType.new("France")
+  Germany = SiteCodeType.new("Germany")
+  HongKong = SiteCodeType.new("HongKong")
+  India = SiteCodeType.new("India")
+  Ireland = SiteCodeType.new("Ireland")
+  Italy = SiteCodeType.new("Italy")
+  Malaysia = SiteCodeType.new("Malaysia")
+  Netherlands = SiteCodeType.new("Netherlands")
+  Philippines = SiteCodeType.new("Philippines")
+  Poland = SiteCodeType.new("Poland")
+  Singapore = SiteCodeType.new("Singapore")
+  Spain = SiteCodeType.new("Spain")
+  Sweden = SiteCodeType.new("Sweden")
+  Switzerland = SiteCodeType.new("Switzerland")
+  Taiwan = SiteCodeType.new("Taiwan")
+  UK = SiteCodeType.new("UK")
+  US = SiteCodeType.new("US")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SiteIDFilterCodeType
-module SiteIDFilterCodeType
-  AvailableInCountryImplied = "AvailableInCountryImplied"
-  BelgiumListing = "BelgiumListing"
-  CustomCode = "CustomCode"
-  ListedInCurrencyImplied = "ListedInCurrencyImplied"
-  LocatedInCountryImplied = "LocatedInCountryImplied"
-  SiteImplied = "SiteImplied"
+class SiteIDFilterCodeType < ::String
+  @@schema_type = "SiteIDFilterCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AvailableInCountryImplied = SiteIDFilterCodeType.new("AvailableInCountryImplied")
+  BelgiumListing = SiteIDFilterCodeType.new("BelgiumListing")
+  CustomCode = SiteIDFilterCodeType.new("CustomCode")
+  ListedInCurrencyImplied = SiteIDFilterCodeType.new("ListedInCurrencyImplied")
+  LocatedInCountryImplied = SiteIDFilterCodeType.new("LocatedInCountryImplied")
+  SiteImplied = SiteIDFilterCodeType.new("SiteImplied")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SortOrderCodeType
-module SortOrderCodeType
-  Ascending = "Ascending"
-  CustomCode = "CustomCode"
-  Descending = "Descending"
+class SortOrderCodeType < ::String
+  @@schema_type = "SortOrderCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Ascending = SortOrderCodeType.new("Ascending")
+  CustomCode = SortOrderCodeType.new("CustomCode")
+  Descending = SortOrderCodeType.new("Descending")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}StoreCategoryUpdateActionCodeType
+class StoreCategoryUpdateActionCodeType < ::String
+  @@schema_type = "StoreCategoryUpdateActionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Add = StoreCategoryUpdateActionCodeType.new("Add")
+  CustomCode = StoreCategoryUpdateActionCodeType.new("CustomCode")
+  Delete = StoreCategoryUpdateActionCodeType.new("Delete")
+  Move = StoreCategoryUpdateActionCodeType.new("Move")
+  Rename = StoreCategoryUpdateActionCodeType.new("Rename")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreCustomHeaderLayoutCodeType
-module StoreCustomHeaderLayoutCodeType
-  CustomCode = "CustomCode"
-  CustomHeaderShown = "CustomHeaderShown"
-  NoHeader = "NoHeader"
+class StoreCustomHeaderLayoutCodeType < ::String
+  @@schema_type = "StoreCustomHeaderLayoutCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = StoreCustomHeaderLayoutCodeType.new("CustomCode")
+  CustomHeaderShown = StoreCustomHeaderLayoutCodeType.new("CustomHeaderShown")
+  NoHeader = StoreCustomHeaderLayoutCodeType.new("NoHeader")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreCustomListingHeaderDisplayCodeType
-module StoreCustomListingHeaderDisplayCodeType
-  CustomCode = "CustomCode"
-  Full = "Full"
-  None = "None"
+class StoreCustomListingHeaderDisplayCodeType < ::String
+  @@schema_type = "StoreCustomListingHeaderDisplayCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = StoreCustomListingHeaderDisplayCodeType.new("CustomCode")
+  Full = StoreCustomListingHeaderDisplayCodeType.new("Full")
+  FullAndLeftNavigationBar = StoreCustomListingHeaderDisplayCodeType.new("FullAndLeftNavigationBar")
+  None = StoreCustomListingHeaderDisplayCodeType.new("None")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreCustomListingHeaderLinkCodeType
-module StoreCustomListingHeaderLinkCodeType
-  AboutMePage = "AboutMePage"
-  CustomCategory = "CustomCategory"
-  CustomCode = "CustomCode"
-  CustomPage = "CustomPage"
-  None = "None"
+class StoreCustomListingHeaderLinkCodeType < ::String
+  @@schema_type = "StoreCustomListingHeaderLinkCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AboutMePage = StoreCustomListingHeaderLinkCodeType.new("AboutMePage")
+  CustomCategory = StoreCustomListingHeaderLinkCodeType.new("CustomCategory")
+  CustomCode = StoreCustomListingHeaderLinkCodeType.new("CustomCode")
+  CustomPage = StoreCustomListingHeaderLinkCodeType.new("CustomPage")
+  None = StoreCustomListingHeaderLinkCodeType.new("None")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreCustomPageStatusCodeType
-module StoreCustomPageStatusCodeType
-  Active = "Active"
-  CustomCode = "CustomCode"
-  Delete = "Delete"
-  Inactive = "Inactive"
+class StoreCustomPageStatusCodeType < ::String
+  @@schema_type = "StoreCustomPageStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Active = StoreCustomPageStatusCodeType.new("Active")
+  CustomCode = StoreCustomPageStatusCodeType.new("CustomCode")
+  Delete = StoreCustomPageStatusCodeType.new("Delete")
+  Inactive = StoreCustomPageStatusCodeType.new("Inactive")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreFontFaceCodeType
-module StoreFontFaceCodeType
-  Arial = "Arial"
-  Courier = "Courier"
-  CustomCode = "CustomCode"
-  Times = "Times"
-  Verdana = "Verdana"
+class StoreFontFaceCodeType < ::String
+  @@schema_type = "StoreFontFaceCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Arial = StoreFontFaceCodeType.new("Arial")
+  Courier = StoreFontFaceCodeType.new("Courier")
+  CustomCode = StoreFontFaceCodeType.new("CustomCode")
+  Times = StoreFontFaceCodeType.new("Times")
+  Verdana = StoreFontFaceCodeType.new("Verdana")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreFontSizeCodeType
-module StoreFontSizeCodeType
-  CustomCode = "CustomCode"
-  L = "L"
-  M = "M"
-  S = "S"
-  XL = "XL"
-  XS = "XS"
-  XXL = "XXL"
-  XXS = "XXS"
+class StoreFontSizeCodeType < ::String
+  @@schema_type = "StoreFontSizeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = StoreFontSizeCodeType.new("CustomCode")
+  L = StoreFontSizeCodeType.new("L")
+  M = StoreFontSizeCodeType.new("M")
+  S = StoreFontSizeCodeType.new("S")
+  XL = StoreFontSizeCodeType.new("XL")
+  XS = StoreFontSizeCodeType.new("XS")
+  XXL = StoreFontSizeCodeType.new("XXL")
+  XXS = StoreFontSizeCodeType.new("XXS")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreHeaderStyleCodeType
-module StoreHeaderStyleCodeType
-  CustomCode = "CustomCode"
-  Full = "Full"
-  Minimized = "Minimized"
+class StoreHeaderStyleCodeType < ::String
+  @@schema_type = "StoreHeaderStyleCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = StoreHeaderStyleCodeType.new("CustomCode")
+  Full = StoreHeaderStyleCodeType.new("Full")
+  Minimized = StoreHeaderStyleCodeType.new("Minimized")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreItemListLayoutCodeType
-module StoreItemListLayoutCodeType
-  CustomCode = "CustomCode"
-  GalleryView = "GalleryView"
-  ListView = "ListView"
+class StoreItemListLayoutCodeType < ::String
+  @@schema_type = "StoreItemListLayoutCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = StoreItemListLayoutCodeType.new("CustomCode")
+  GalleryView = StoreItemListLayoutCodeType.new("GalleryView")
+  ListView = StoreItemListLayoutCodeType.new("ListView")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreItemListSortOrderCodeType
-module StoreItemListSortOrderCodeType
-  CustomCode = "CustomCode"
-  EndingFirst = "EndingFirst"
-  HighestPriced = "HighestPriced"
-  LowestPriced = "LowestPriced"
-  NewlyListed = "NewlyListed"
+class StoreItemListSortOrderCodeType < ::String
+  @@schema_type = "StoreItemListSortOrderCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = StoreItemListSortOrderCodeType.new("CustomCode")
+  EndingFirst = StoreItemListSortOrderCodeType.new("EndingFirst")
+  HighestPriced = StoreItemListSortOrderCodeType.new("HighestPriced")
+  LowestPriced = StoreItemListSortOrderCodeType.new("LowestPriced")
+  NewlyListed = StoreItemListSortOrderCodeType.new("NewlyListed")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreSearchCodeType
-module StoreSearchCodeType
-  AllItemsInTheStore = "AllItemsInTheStore"
-  AuctionItemsInTheStore = "AuctionItemsInTheStore"
-  BuyItNowItemsInAllStores = "BuyItNowItemsInAllStores"
-  BuyItNowItemsInTheStore = "BuyItNowItemsInTheStore"
-  CustomCode = "CustomCode"
+class StoreSearchCodeType < ::String
+  @@schema_type = "StoreSearchCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AllItemsInTheStore = StoreSearchCodeType.new("AllItemsInTheStore")
+  AuctionItemsInTheStore = StoreSearchCodeType.new("AuctionItemsInTheStore")
+  BuyItNowItemsInAllStores = StoreSearchCodeType.new("BuyItNowItemsInAllStores")
+  BuyItNowItemsInTheStore = StoreSearchCodeType.new("BuyItNowItemsInTheStore")
+  CustomCode = StoreSearchCodeType.new("CustomCode")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreSubscriptionLevelCodeType
-module StoreSubscriptionLevelCodeType
-  Anchor = "Anchor"
-  Basic = "Basic"
-  Close = "Close"
-  CustomCode = "CustomCode"
-  Featured = "Featured"
+class StoreSubscriptionLevelCodeType < ::String
+  @@schema_type = "StoreSubscriptionLevelCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Anchor = StoreSubscriptionLevelCodeType.new("Anchor")
+  Basic = StoreSubscriptionLevelCodeType.new("Basic")
+  Close = StoreSubscriptionLevelCodeType.new("Close")
+  CustomCode = StoreSubscriptionLevelCodeType.new("CustomCode")
+  Featured = StoreSubscriptionLevelCodeType.new("Featured")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}StringMatchCodeType
+class StringMatchCodeType < ::String
+  @@schema_type = "StringMatchCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Contains = StringMatchCodeType.new("Contains")
+  CustomCode = StringMatchCodeType.new("CustomCode")
+  StartsWith = StringMatchCodeType.new("StartsWith")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}TaskStatusCodeType
+class TaskStatusCodeType < ::String
+  @@schema_type = "TaskStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Complete = TaskStatusCodeType.new("Complete")
+  CustomCode = TaskStatusCodeType.new("CustomCode")
+  Failed = TaskStatusCodeType.new("Failed")
+  InProgress = TaskStatusCodeType.new("InProgress")
+  Pending = TaskStatusCodeType.new("Pending")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}TokenReturnMethodCodeType
-module TokenReturnMethodCodeType
-  CustomCode = "CustomCode"
-  FetchToken = "FetchToken"
-  Redirect = "Redirect"
+class TokenReturnMethodCodeType < ::String
+  @@schema_type = "TokenReturnMethodCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = TokenReturnMethodCodeType.new("CustomCode")
+  FetchToken = TokenReturnMethodCodeType.new("FetchToken")
+  Redirect = TokenReturnMethodCodeType.new("Redirect")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}TradingRoleCodeType
-module TradingRoleCodeType
-  Buyer = "Buyer"
-  CustomCode = "CustomCode"
-  Seller = "Seller"
+class TradingRoleCodeType < ::String
+  @@schema_type = "TradingRoleCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Buyer = TradingRoleCodeType.new("Buyer")
+  CustomCode = TradingRoleCodeType.new("CustomCode")
+  Seller = TradingRoleCodeType.new("Seller")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}UPSRateOptionCodeType
-module UPSRateOptionCodeType
-  CustomCode = "CustomCode"
-  UPSDailyRates = "UPSDailyRates"
-  UPSOnDemandRates = "UPSOnDemandRates"
+class UPSRateOptionCodeType < ::String
+  @@schema_type = "UPSRateOptionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = UPSRateOptionCodeType.new("CustomCode")
+  UPSDailyRates = UPSRateOptionCodeType.new("UPSDailyRates")
+  UPSOnDemandRates = UPSRateOptionCodeType.new("UPSOnDemandRates")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}URLTypeCodeType
-module URLTypeCodeType
-  CustomCode = "CustomCode"
-  EBayStoreURL = "eBayStoreURL"
-  LargeLogoURL = "LargeLogoURL"
-  MediumLogoURL = "MediumLogoURL"
-  MyeBayBiddingURL = "MyeBayBiddingURL"
-  MyeBayNotWonURL = "MyeBayNotWonURL"
-  MyeBayURL = "MyeBayURL"
-  MyeBayWatchingURL = "MyeBayWatchingURL"
-  MyeBayWonURL = "MyeBayWonURL"
-  SmallLogoURL = "SmallLogoURL"
-  ViewItemURL = "ViewItemURL"
-  ViewUserURL = "ViewUserURL"
+class URLTypeCodeType < ::String
+  @@schema_type = "URLTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = URLTypeCodeType.new("CustomCode")
+  EBayStoreURL = URLTypeCodeType.new("eBayStoreURL")
+  LargeLogoURL = URLTypeCodeType.new("LargeLogoURL")
+  MediumLogoURL = URLTypeCodeType.new("MediumLogoURL")
+  MyeBayBiddingURL = URLTypeCodeType.new("MyeBayBiddingURL")
+  MyeBayNotWonURL = URLTypeCodeType.new("MyeBayNotWonURL")
+  MyeBayURL = URLTypeCodeType.new("MyeBayURL")
+  MyeBayWatchingURL = URLTypeCodeType.new("MyeBayWatchingURL")
+  MyeBayWonURL = URLTypeCodeType.new("MyeBayWonURL")
+  SmallLogoURL = URLTypeCodeType.new("SmallLogoURL")
+  ViewItemURL = URLTypeCodeType.new("ViewItemURL")
+  ViewUserURL = URLTypeCodeType.new("ViewUserURL")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}UnitCodeType
-module UnitCodeType
-  Cm = "cm"
-  CustomCode = "CustomCode"
-  Ft = "ft"
-  Inches = "inches"
-  Kg = "kg"
-  Lbs = "lbs"
-  Oz = "oz"
+class UnitCodeType < ::String
+  @@schema_type = "UnitCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Cm = UnitCodeType.new("cm")
+  CustomCode = UnitCodeType.new("CustomCode")
+  Ft = UnitCodeType.new("ft")
+  Inches = UnitCodeType.new("inches")
+  Kg = UnitCodeType.new("kg")
+  Lbs = UnitCodeType.new("lbs")
+  Oz = UnitCodeType.new("oz")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}UserStatusCodeType
-module UserStatusCodeType
-  AccountOnHold = "AccountOnHold"
-  Confirmed = "Confirmed"
-  CreditCardVerify = "CreditCardVerify"
-  CreditCardVerifyHalfOptIn = "CreditCardVerifyHalfOptIn"
-  CreditCardVerifyPassport = "CreditCardVerifyPassport"
-  CustomCode = "CustomCode"
-  Deleted = "Deleted"
-  Ghost = "Ghost"
-  InMaintenance = "InMaintenance"
-  Merged = "Merged"
-  RegistrationCodeMailOut = "RegistrationCodeMailOut"
-  Suspended = "Suspended"
-  TermPending = "TermPending"
-  Unconfirmed = "Unconfirmed"
-  UnconfirmedExpress = "UnconfirmedExpress"
-  UnconfirmedHalfOptIn = "UnconfirmedHalfOptIn"
-  UnconfirmedPassport = "UnconfirmedPassport"
-  Unknown = "Unknown"
+class UserStatusCodeType < ::String
+  @@schema_type = "UserStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AccountOnHold = UserStatusCodeType.new("AccountOnHold")
+  Confirmed = UserStatusCodeType.new("Confirmed")
+  CreditCardVerify = UserStatusCodeType.new("CreditCardVerify")
+  CreditCardVerifyHalfOptIn = UserStatusCodeType.new("CreditCardVerifyHalfOptIn")
+  CreditCardVerifyPassport = UserStatusCodeType.new("CreditCardVerifyPassport")
+  CustomCode = UserStatusCodeType.new("CustomCode")
+  Deleted = UserStatusCodeType.new("Deleted")
+  Ghost = UserStatusCodeType.new("Ghost")
+  InMaintenance = UserStatusCodeType.new("InMaintenance")
+  Merged = UserStatusCodeType.new("Merged")
+  RegistrationCodeMailOut = UserStatusCodeType.new("RegistrationCodeMailOut")
+  Suspended = UserStatusCodeType.new("Suspended")
+  TermPending = UserStatusCodeType.new("TermPending")
+  Unconfirmed = UserStatusCodeType.new("Unconfirmed")
+  UnconfirmedExpress = UserStatusCodeType.new("UnconfirmedExpress")
+  UnconfirmedHalfOptIn = UserStatusCodeType.new("UnconfirmedHalfOptIn")
+  UnconfirmedPassport = UserStatusCodeType.new("UnconfirmedPassport")
+  Unknown = UserStatusCodeType.new("Unknown")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}VATStatusCodeType
-module VATStatusCodeType
-  CustomCode = "CustomCode"
-  NoVATTax = "NoVATTax"
-  VATExempt = "VATExempt"
-  VATTax = "VATTax"
+class VATStatusCodeType < ::String
+  @@schema_type = "VATStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = VATStatusCodeType.new("CustomCode")
+  NoVATTax = VATStatusCodeType.new("NoVATTax")
+  VATExempt = VATStatusCodeType.new("VATExempt")
+  VATTax = VATStatusCodeType.new("VATTax")
 end

@@ -70,6 +70,13 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
         :response_style => :document, :response_use => :literal }
     ],
     [ "",
+      "approveLiveAuctionBidders",
+      [ ["in", "ApproveLiveAuctionBiddersRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "ApproveLiveAuctionBiddersRequest"], true],
+        ["out", "ApproveLiveAuctionBiddersResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "ApproveLiveAuctionBiddersResponse"], true] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal }
+    ],
+    [ "",
       "completeSale",
       [ ["in", "CompleteSaleRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "CompleteSaleRequest"], true],
         ["out", "CompleteSaleResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "CompleteSaleResponse"], true] ],
@@ -280,6 +287,13 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
         :response_style => :document, :response_use => :literal }
     ],
     [ "",
+      "getLiveAuctionBidders",
+      [ ["in", "GetLiveAuctionBiddersRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetLiveAuctionBiddersRequest"], true],
+        ["out", "GetLiveAuctionBiddersResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetLiveAuctionBiddersResponse"], true] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal }
+    ],
+    [ "",
       "getLiveAuctionCatalogDetails",
       [ ["in", "GetLiveAuctionCatalogDetailsRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetLiveAuctionCatalogDetailsRequest"], true],
         ["out", "GetLiveAuctionCatalogDetailsResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetLiveAuctionCatalogDetailsResponse"], true] ],
@@ -332,6 +346,13 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
       "getNotificationPreferences",
       [ ["in", "GetNotificationPreferencesRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetNotificationPreferencesRequest"], true],
         ["out", "GetNotificationPreferencesResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetNotificationPreferencesResponse"], true] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal }
+    ],
+    [ "",
+      "getNotificationsUsage",
+      [ ["in", "GetNotificationsUsageRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetNotificationsUsageRequest"], true],
+        ["out", "GetNotificationsUsageResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetNotificationsUsageResponse"], true] ],
       { :request_style =>  :document, :request_use =>  :literal,
         :response_style => :document, :response_use => :literal }
     ],
@@ -476,6 +497,13 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
         :response_style => :document, :response_use => :literal }
     ],
     [ "",
+      "getStoreCategoryUpdateStatus",
+      [ ["in", "GetStoreCategoryUpdateStatusRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetStoreCategoryUpdateStatusRequest"], true],
+        ["out", "GetStoreCategoryUpdateStatusResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetStoreCategoryUpdateStatusResponse"], true] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal }
+    ],
+    [ "",
       "getStoreCustomPage",
       [ ["in", "GetStoreCustomPageRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetStoreCustomPageRequest"], true],
         ["out", "GetStoreCustomPageResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetStoreCustomPageResponse"], true] ],
@@ -574,6 +602,13 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
         :response_style => :document, :response_use => :literal }
     ],
     [ "",
+      "placeOffer",
+      [ ["in", "PlaceOfferRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "PlaceOfferRequest"], true],
+        ["out", "PlaceOfferResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "PlaceOfferResponse"], true] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal }
+    ],
+    [ "",
       "relistItem",
       [ ["in", "RelistItemRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "RelistItemRequest"], true],
         ["out", "RelistItemResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "RelistItemResponse"], true] ],
@@ -619,6 +654,13 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
       "reviseItem",
       [ ["in", "ReviseItemRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "ReviseItemRequest"], true],
         ["out", "ReviseItemResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "ReviseItemResponse"], true] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal }
+    ],
+    [ "",
+      "reviseLiveAuctionItem",
+      [ ["in", "ReviseLiveAuctionItemRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "ReviseLiveAuctionItemRequest"], true],
+        ["out", "ReviseLiveAuctionItemResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "ReviseLiveAuctionItemResponse"], true] ],
       { :request_style =>  :document, :request_use =>  :literal,
         :response_style => :document, :response_use => :literal }
     ],
@@ -682,6 +724,13 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
       "setStore",
       [ ["in", "SetStoreRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "SetStoreRequest"], true],
         ["out", "SetStoreResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "SetStoreResponse"], true] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal }
+    ],
+    [ "",
+      "setStoreCategories",
+      [ ["in", "SetStoreCategoriesRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "SetStoreCategoriesRequest"], true],
+        ["out", "SetStoreCategoriesResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "SetStoreCategoriesResponse"], true] ],
       { :request_style =>  :document, :request_use =>  :literal,
         :response_style => :document, :response_use => :literal }
     ],
