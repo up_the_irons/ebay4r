@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
-# $Id: get_notifications_usage.rb,v 1.2 2006/03/11 09:42:29 garrydolley Exp $
+# $Id: get_notifications_usage.rb,v 1.3 2006/03/12 23:05:44 garrydolley Exp $
 
 $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 require 'eBayAPI'
 
 #
-# Example of GetNotificationsUsage call
+# Example of GetNotificationsUsage call 
 #
 
 # Put your credentials in this file
