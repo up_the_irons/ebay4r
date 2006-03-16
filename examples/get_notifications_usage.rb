@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# $Id: get_notifications_usage.rb,v 1.3 2006/03/12 23:05:44 garrydolley Exp $
+# $Id: get_notifications_usage.rb,v 1.4 2006/03/16 09:37:51 garrydolley Exp $
 
 $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 require 'eBayAPI'
@@ -30,7 +30,7 @@ if !item_no.empty?
     puts "Next Retry Time: " + notif.nextRetryTime
     puts "Retries: " + notif.retries if notif.respond_to? 'retries'
     # puts "Type: " + notif.type  # Mmmm... "type" is already a method of Object
-  end
+  end if resp.notificationDetailsArray.respond_to? 'notificationDetails'
 end
 
 resp = eBay.GetNotificationsUsage
