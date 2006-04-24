@@ -1,17 +1,17 @@
-# $Id: ebay4r.gemspec,v 1.6 2006/01/13 10:12:19 garrydolley Exp $
+# $Id: ebay4r.gemspec,v 1.7 2006/04/24 05:51:18 garrydolley Exp $
 
 require 'rubygems'
 
 spec = Gem::Specification.new do |s|
   s.name     = "ebay"
-  s.version  = "0.5.2"
+  s.version  = "0.6.0"
   s.author   = "Garry Dolley"
   s.email    = "gdolley@ucla.edu"
   s.homepage = "http://ebay4r.rubyforge.org"
   s.platform = Gem::Platform::RUBY
   s.summary  = "eBay4R is a Ruby wrapper for eBay's Web Services SOAP API. Emphasis is on ease of use and small footprint."
 
-  candidates = Dir.glob("{examples,lib,test}/**/*") + Dir.glob("./**/.document")
+  candidates = Dir.glob("{examples,lib,test,contrib}/**/*") + Dir.glob("./**/.document")
   s.files    = candidates.delete_if do |item|
                  item.include?("CVS") || item.include?("rdoc")
                end
