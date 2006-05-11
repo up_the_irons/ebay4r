@@ -53,7 +53,7 @@ variable)
 
 * For the latest release with no fuss (previous download not required):
   
-    gem install -r ebay4r
+    gem install -r ebay
 
 === CVS
 
@@ -375,4 +375,4 @@ You should have received a copy of the GNU General Public License along with
 eBay4R; if not, write to the Free Software Foundation, Inc., 51 Franklin
 Street, Fifth Floor, Boston, MA  02110-1301, USA
 
-$Id: README,v 1.16 2006/04/24 05:51:18 garrydolley Exp $
+$Id: README,v 1.17 2006/05/11 02:34:44 garrydolley Exp $
