@@ -1,5 +1,5 @@
 #--
-# $Id: eBayAPI.rb,v 1.29 2006/05/21 16:49:51 garrydolley Exp $
+# $Id: eBayAPI.rb,v 1.30 2006/05/21 16:54:09 garrydolley Exp $
 #
 # Copyright (c) 2005,2006 Garry C. Dolley
 #
@@ -98,7 +98,7 @@ class API
 
       resp = eval("service.#{call_name}(request)")
 
-      $VERBOSE = verbose_obj_save
+      $VERBOSE = verbose_obj_save # Restore verbosity to previous state
 
       # Handle eBay Application-level error
       if resp.ack == "Failure"
