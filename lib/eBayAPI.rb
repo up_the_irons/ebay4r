@@ -1,5 +1,5 @@
 #--
-# $Id: eBayAPI.rb,v 1.28 2006/03/10 02:35:18 garrydolley Exp $
+# $Id: eBayAPI.rb,v 1.29 2006/05/21 16:49:51 garrydolley Exp $
 #
 # Copyright (c) 2005,2006 Garry C. Dolley
 #
@@ -93,7 +93,12 @@ class API
       EBay::assign_args(request, args_hash)
       EBay::fix_case_down(call_name)
 
+      verbose_obj_save = $VERBOSE
+      $VERBOSE = nil # Suppress "warning: peer certificate won't be verified in this SSL session" 
+
       resp = eval("service.#{call_name}(request)")
+
+      $VERBOSE = verbose_obj_save
 
       # Handle eBay Application-level error
       if resp.ack == "Failure"
