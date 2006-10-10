@@ -320,6 +320,9 @@ what eBay is sending back to you.
 
 == Files
 
+contrib/
+  Extras contributed by the community (myself included)
+
 examples/
   Examples of eBay API calls using this library. You will want to check out
   these examples before making your own calls.
@@ -350,7 +353,7 @@ test/
 
 Garry C. Dolley
 
-gdolley [at] ucla.edu
+gdolley [at] NOSPAM- ucla.edu
 
 AIM: garry97531
 
@@ -373,4 +376,4 @@ You should have received a copy of the GNU General Public License along with
 eBay4R; if not, write to the Free Software Foundation, Inc., 51 Franklin
 Street, Fifth Floor, Boston, MA  02110-1301, USA
 
-$Id: README,v 1.18 2006/10/10 08:04:48 garrydolley Exp $
+$Id: README,v 1.19 2006/10/10 08:39:11 garrydolley Exp $
