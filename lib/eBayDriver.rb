@@ -1,4 +1,5 @@
 require 'eBay.rb'
+
 require 'soap/rpc/driver'
 
 class EBayAPIInterface < ::SOAP::RPC::Driver
@@ -35,9 +36,23 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
         :response_style => :document, :response_use => :literal }
     ],
     [ "",
-      "addMemberMessage",
-      [ ["in", "AddMemberMessageRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "AddMemberMessageRequest"], true],
-        ["out", "AddMemberMessageResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "AddMemberMessageResponse"], true] ],
+      "addMemberMessageAAQToPartner",
+      [ ["in", "AddMemberMessageAAQToPartnerRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "AddMemberMessageAAQToPartnerRequest"], true],
+        ["out", "AddMemberMessageAAQToPartnerResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "AddMemberMessageAAQToPartnerResponse"], true] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal }
+    ],
+    [ "",
+      "addMemberMessageRTQ",
+      [ ["in", "AddMemberMessageRTQRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "AddMemberMessageRTQRequest"], true],
+        ["out", "AddMemberMessageRTQResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "AddMemberMessageRTQResponse"], true] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal }
+    ],
+    [ "",
+      "addMemberMessagesAAQToBidder",
+      [ ["in", "AddMemberMessagesAAQToBidderRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "AddMemberMessagesAAQToBidderRequest"], true],
+        ["out", "AddMemberMessagesAAQToBidderResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "AddMemberMessagesAAQToBidderResponse"], true] ],
       { :request_style =>  :document, :request_use =>  :literal,
         :response_style => :document, :response_use => :literal }
     ],
@@ -66,6 +81,13 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
       "addToWatchList",
       [ ["in", "AddToWatchListRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "AddToWatchListRequest"], true],
         ["out", "AddToWatchListResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "AddToWatchListResponse"], true] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal }
+    ],
+    [ "",
+      "addTransactionConfirmationItem",
+      [ ["in", "AddTransactionConfirmationItemRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "AddTransactionConfirmationItemRequest"], true],
+        ["out", "AddTransactionConfirmationItemResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "AddTransactionConfirmationItemResponse"], true] ],
       { :request_style =>  :document, :request_use =>  :literal,
         :response_style => :document, :response_use => :literal }
     ],
@@ -203,9 +225,23 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
         :response_style => :document, :response_use => :literal }
     ],
     [ "",
+      "getChallengeToken",
+      [ ["in", "GetChallengeTokenRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetChallengeTokenRequest"], true],
+        ["out", "GetChallengeTokenResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetChallengeTokenResponse"], true] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal }
+    ],
+    [ "",
       "getCharities",
       [ ["in", "GetCharitiesRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetCharitiesRequest"], true],
         ["out", "GetCharitiesResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetCharitiesResponse"], true] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal }
+    ],
+    [ "",
+      "getContextualKeywords",
+      [ ["in", "GetContextualKeywordsRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetContextualKeywordsRequest"], true],
+        ["out", "GetContextualKeywordsResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetContextualKeywordsResponse"], true] ],
       { :request_style =>  :document, :request_use =>  :literal,
         :response_style => :document, :response_use => :literal }
     ],
@@ -357,6 +393,13 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
         :response_style => :document, :response_use => :literal }
     ],
     [ "",
+      "getOrderTransactions",
+      [ ["in", "GetOrderTransactionsRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetOrderTransactionsRequest"], true],
+        ["out", "GetOrderTransactionsResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetOrderTransactionsResponse"], true] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal }
+    ],
+    [ "",
       "getOrders",
       [ ["in", "GetOrdersRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetOrdersRequest"], true],
         ["out", "GetOrdersResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetOrdersResponse"], true] ],
@@ -462,6 +505,13 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
         :response_style => :document, :response_use => :literal }
     ],
     [ "",
+      "getSearchResultsExpress",
+      [ ["in", "GetSearchResultsExpressRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetSearchResultsExpressRequest"], true],
+        ["out", "GetSearchResultsExpressResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetSearchResultsExpressResponse"], true] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal }
+    ],
+    [ "",
       "getSellerEvents",
       [ ["in", "GetSellerEventsRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetSellerEventsRequest"], true],
         ["out", "GetSellerEventsResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetSellerEventsResponse"], true] ],
@@ -542,6 +592,13 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
       "getUser",
       [ ["in", "GetUserRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetUserRequest"], true],
         ["out", "GetUserResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetUserResponse"], true] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal }
+    ],
+    [ "",
+      "getUserContactDetails",
+      [ ["in", "GetUserContactDetailsRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetUserContactDetailsRequest"], true],
+        ["out", "GetUserContactDetailsResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetUserContactDetailsResponse"], true] ],
       { :request_style =>  :document, :request_use =>  :literal,
         :response_style => :document, :response_use => :literal }
     ],
@@ -766,6 +823,13 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
       "setUserPreferences",
       [ ["in", "SetUserPreferencesRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "SetUserPreferencesRequest"], true],
         ["out", "SetUserPreferencesResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "SetUserPreferencesResponse"], true] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal }
+    ],
+    [ "",
+      "validateChallengeInput",
+      [ ["in", "ValidateChallengeInputRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "ValidateChallengeInputRequest"], true],
+        ["out", "ValidateChallengeInputResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "ValidateChallengeInputResponse"], true] ],
       { :request_style =>  :document, :request_use =>  :literal,
         :response_style => :document, :response_use => :literal }
     ],

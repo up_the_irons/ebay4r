@@ -67,6 +67,7 @@ class AddDisputeResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -83,6 +84,7 @@ class AddDisputeResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -92,7 +94,7 @@ class AddDisputeResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, disputeID = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, disputeID = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -103,6 +105,7 @@ class AddDisputeResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -183,6 +186,7 @@ class AddDisputeResponseResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -198,6 +202,7 @@ class AddDisputeResponseResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -206,7 +211,7 @@ class AddDisputeResponseResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -217,6 +222,7 @@ class AddDisputeResponseResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -284,6 +290,7 @@ class AddItemResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -305,6 +312,7 @@ class AddItemResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -319,7 +327,7 @@ class AddItemResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, itemID = nil, startTime = nil, endTime = nil, fees = nil, categoryID = nil, category2ID = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, itemID = nil, startTime = nil, endTime = nil, fees = nil, categoryID = nil, category2ID = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -330,6 +338,7 @@ class AddItemResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -400,6 +409,7 @@ class AddLiveAuctionItemResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -419,6 +429,7 @@ class AddLiveAuctionItemResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -431,7 +442,7 @@ class AddLiveAuctionItemResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, itemID = nil, fees = nil, categoryID = nil, category2ID = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, itemID = nil, fees = nil, categoryID = nil, category2ID = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -442,6 +453,7 @@ class AddLiveAuctionItemResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -452,9 +464,9 @@ class AddLiveAuctionItemResponseType
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}AddMemberMessageRequestType
-class AddMemberMessageRequestType
-  @@schema_type = "AddMemberMessageRequestType"
+# {urn:ebay:apis:eBLBaseComponents}AddMemberMessageAAQToPartnerRequestType
+class AddMemberMessageAAQToPartnerRequestType
+  @@schema_type = "AddMemberMessageAAQToPartnerRequestType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailLevel")]],
@@ -498,9 +510,9 @@ class AddMemberMessageRequestType
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}AddMemberMessageResponseType
-class AddMemberMessageResponseType
-  @@schema_type = "AddMemberMessageResponseType"
+# {urn:ebay:apis:eBLBaseComponents}AddMemberMessageAAQToPartnerResponseType
+class AddMemberMessageAAQToPartnerResponseType
+  @@schema_type = "AddMemberMessageAAQToPartnerResponseType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
@@ -513,6 +525,7 @@ class AddMemberMessageResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -528,6 +541,7 @@ class AddMemberMessageResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -536,7 +550,7 @@ class AddMemberMessageResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -547,9 +561,218 @@ class AddMemberMessageResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}AddMemberMessageRTQRequestType
+class AddMemberMessageRTQRequestType
+  @@schema_type = "AddMemberMessageRTQRequestType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailLevel")]],
+    ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorLanguage")]],
+    ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
+    ["memberMessage", ["MemberMessageType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MemberMessage")]]
+  ]
+
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :warningLevel
+  attr_reader :__xmlele_any
+  attr_accessor :itemID
+  attr_accessor :memberMessage
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, memberMessage = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @warningLevel = warningLevel
+    @__xmlele_any = nil
+    @itemID = itemID
+    @memberMessage = memberMessage
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}AddMemberMessageRTQResponseType
+class AddMemberMessageRTQResponseType
+  @@schema_type = "AddMemberMessageRTQResponseType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]],
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["errors", ["ErrorType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Errors")]],
+    ["message", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["build", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Build")]],
+    ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
+    ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
+    ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
+    ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :eIASToken
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}AddMemberMessagesAAQToBidderRequestType
+class AddMemberMessagesAAQToBidderRequestType
+  @@schema_type = "AddMemberMessagesAAQToBidderRequestType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailLevel")]],
+    ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorLanguage")]],
+    ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["addMemberMessagesAAQToBidderRequestContainer", ["AddMemberMessagesAAQToBidderRequestContainerType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AddMemberMessagesAAQToBidderRequestContainer")]]
+  ]
+
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :warningLevel
+  attr_reader :__xmlele_any
+  attr_accessor :addMemberMessagesAAQToBidderRequestContainer
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, addMemberMessagesAAQToBidderRequestContainer = [])
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @warningLevel = warningLevel
+    @__xmlele_any = nil
+    @addMemberMessagesAAQToBidderRequestContainer = addMemberMessagesAAQToBidderRequestContainer
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}AddMemberMessagesAAQToBidderResponseType
+class AddMemberMessagesAAQToBidderResponseType
+  @@schema_type = "AddMemberMessagesAAQToBidderResponseType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]],
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["errors", ["ErrorType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Errors")]],
+    ["message", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["build", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Build")]],
+    ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
+    ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
+    ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
+    ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["addMemberMessagesAAQToBidderResponseContainer", ["AddMemberMessagesAAQToBidderResponseContainerType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AddMemberMessagesAAQToBidderResponseContainer")]]
+  ]
+
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :eIASToken
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_reader :__xmlele_any
+  attr_accessor :addMemberMessagesAAQToBidderResponseContainer
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, addMemberMessagesAAQToBidderResponseContainer = [])
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @__xmlele_any = nil
+    @addMemberMessagesAAQToBidderResponseContainer = addMemberMessagesAAQToBidderResponseContainer
   end
 end
 
@@ -611,6 +834,7 @@ class AddOrderResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -628,6 +852,7 @@ class AddOrderResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -638,7 +863,7 @@ class AddOrderResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, orderID = nil, createdTime = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, orderID = nil, createdTime = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -649,6 +874,7 @@ class AddOrderResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -675,7 +901,8 @@ class AddSecondChanceItemRequestType
     ["copyEmailToSeller", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CopyEmailToSeller")]],
     ["duration", ["SecondChanceOfferDurationCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Duration")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
-    ["site", ["SiteCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Site")]]
+    ["site", ["SiteCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Site")]],
+    ["sellerMessage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerMessage")]]
   ]
 
   attr_accessor :detailLevel
@@ -692,12 +919,13 @@ class AddSecondChanceItemRequestType
   attr_accessor :duration
   attr_accessor :itemID
   attr_accessor :site
+  attr_accessor :sellerMessage
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, recipientBidderUserID = nil, buyItNowPrice = nil, copyEmailToSeller = nil, duration = nil, itemID = nil, site = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, recipientBidderUserID = nil, buyItNowPrice = nil, copyEmailToSeller = nil, duration = nil, itemID = nil, site = nil, sellerMessage = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -712,6 +940,7 @@ class AddSecondChanceItemRequestType
     @duration = duration
     @itemID = itemID
     @site = site
+    @sellerMessage = sellerMessage
   end
 end
 
@@ -730,6 +959,7 @@ class AddSecondChanceItemResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -749,6 +979,7 @@ class AddSecondChanceItemResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -761,7 +992,7 @@ class AddSecondChanceItemResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, fees = nil, itemID = nil, startTime = nil, endTime = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, fees = nil, itemID = nil, startTime = nil, endTime = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -772,6 +1003,7 @@ class AddSecondChanceItemResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -843,6 +1075,7 @@ class AddToItemDescriptionResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -858,6 +1091,7 @@ class AddToItemDescriptionResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -866,7 +1100,7 @@ class AddToItemDescriptionResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -877,6 +1111,7 @@ class AddToItemDescriptionResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -941,6 +1176,7 @@ class AddToWatchListResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -958,6 +1194,7 @@ class AddToWatchListResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -968,7 +1205,7 @@ class AddToWatchListResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, watchListCount = nil, watchListMaximum = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, watchListCount = nil, watchListMaximum = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -979,11 +1216,143 @@ class AddToWatchListResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
     @watchListCount = watchListCount
     @watchListMaximum = watchListMaximum
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}AddTransactionConfirmationItemRequestType
+class AddTransactionConfirmationItemRequestType
+  @@schema_type = "AddTransactionConfirmationItemRequestType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailLevel")]],
+    ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorLanguage")]],
+    ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["verifyEligibilityOnly", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "VerifyEligibilityOnly")]],
+    ["recipientPostalCode", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientPostalCode")]],
+    ["recipientRelationType", ["RecipientRelationCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientRelationType")]],
+    ["negotiatedPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NegotiatedPrice")]],
+    ["listingDuration", ["SecondChanceOfferDurationCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingDuration")]],
+    ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
+    ["comments", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Comments")]]
+  ]
+
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :warningLevel
+  attr_reader :__xmlele_any
+  attr_accessor :recipientUserID
+  attr_accessor :verifyEligibilityOnly
+  attr_accessor :recipientPostalCode
+  attr_accessor :recipientRelationType
+  attr_accessor :negotiatedPrice
+  attr_accessor :listingDuration
+  attr_accessor :itemID
+  attr_accessor :comments
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, recipientUserID = nil, verifyEligibilityOnly = nil, recipientPostalCode = nil, recipientRelationType = nil, negotiatedPrice = nil, listingDuration = nil, itemID = nil, comments = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @warningLevel = warningLevel
+    @__xmlele_any = nil
+    @recipientUserID = recipientUserID
+    @verifyEligibilityOnly = verifyEligibilityOnly
+    @recipientPostalCode = recipientPostalCode
+    @recipientRelationType = recipientRelationType
+    @negotiatedPrice = negotiatedPrice
+    @listingDuration = listingDuration
+    @itemID = itemID
+    @comments = comments
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}AddTransactionConfirmationItemResponseType
+class AddTransactionConfirmationItemResponseType
+  @@schema_type = "AddTransactionConfirmationItemResponseType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]],
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["errors", ["ErrorType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Errors")]],
+    ["message", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["build", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Build")]],
+    ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
+    ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
+    ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
+    ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
+    ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StartTime")]],
+    ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTime")]]
+  ]
+
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :eIASToken
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_reader :__xmlele_any
+  attr_accessor :itemID
+  attr_accessor :startTime
+  attr_accessor :endTime
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, itemID = nil, startTime = nil, endTime = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @__xmlele_any = nil
+    @itemID = itemID
+    @startTime = startTime
+    @endTime = endTime
   end
 end
 
@@ -1054,6 +1423,7 @@ class ApproveLiveAuctionBiddersResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -1070,6 +1440,7 @@ class ApproveLiveAuctionBiddersResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -1079,7 +1450,7 @@ class ApproveLiveAuctionBiddersResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, bidderUpdateStatus = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, bidderUpdateStatus = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -1090,6 +1461,7 @@ class ApproveLiveAuctionBiddersResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -1167,6 +1539,7 @@ class CompleteSaleResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -1182,6 +1555,7 @@ class CompleteSaleResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -1190,7 +1564,7 @@ class CompleteSaleResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -1201,6 +1575,7 @@ class CompleteSaleResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -1268,6 +1643,7 @@ class DeleteMyMessagesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -1283,6 +1659,7 @@ class DeleteMyMessagesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -1291,7 +1668,7 @@ class DeleteMyMessagesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -1302,6 +1679,7 @@ class DeleteMyMessagesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -1372,6 +1750,7 @@ class EndItemResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -1388,6 +1767,7 @@ class EndItemResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -1397,7 +1777,7 @@ class EndItemResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, endTime = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, endTime = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -1408,6 +1788,7 @@ class EndItemResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -1473,6 +1854,7 @@ class FetchTokenResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -1490,6 +1872,7 @@ class FetchTokenResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -1500,7 +1883,7 @@ class FetchTokenResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, eBayAuthToken = nil, hardExpirationTime = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, eBayAuthToken = nil, hardExpirationTime = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -1511,6 +1894,7 @@ class FetchTokenResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -1601,6 +1985,7 @@ class GetAccountResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -1624,6 +2009,7 @@ class GetAccountResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -1640,7 +2026,7 @@ class GetAccountResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, accountID = nil, accountSummary = nil, currency = nil, accountEntries = nil, paginationResult = nil, hasMoreEntries = nil, entriesPerPage = nil, pageNumber = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, accountID = nil, accountSummary = nil, currency = nil, accountEntries = nil, paginationResult = nil, hasMoreEntries = nil, entriesPerPage = nil, pageNumber = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -1651,6 +2037,7 @@ class GetAccountResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -1723,6 +2110,7 @@ class GetAdFormatLeadsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -1740,6 +2128,7 @@ class GetAdFormatLeadsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -1750,7 +2139,7 @@ class GetAdFormatLeadsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, adFormatLead = [], adFormatLeadCount = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, adFormatLead = [], adFormatLeadCount = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -1761,6 +2150,7 @@ class GetAdFormatLeadsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -1830,6 +2220,7 @@ class GetAllBiddersResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -1849,6 +2240,7 @@ class GetAllBiddersResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -1861,7 +2253,7 @@ class GetAllBiddersResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, bidArray = nil, highBidder = nil, highestBid = nil, listingStatus = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, bidArray = nil, highBidder = nil, highestBid = nil, listingStatus = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -1872,6 +2264,7 @@ class GetAllBiddersResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -1937,6 +2330,7 @@ class GetApiAccessRulesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -1953,6 +2347,7 @@ class GetApiAccessRulesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -1962,7 +2357,7 @@ class GetApiAccessRulesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, apiAccessRule = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, apiAccessRule = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -1973,6 +2368,7 @@ class GetApiAccessRulesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -2047,6 +2443,7 @@ class GetAttributesCSResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -2064,6 +2461,7 @@ class GetAttributesCSResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -2074,7 +2472,7 @@ class GetAttributesCSResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, attributeSystemVersion = nil, attributeData = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, attributeSystemVersion = nil, attributeData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -2085,6 +2483,7 @@ class GetAttributesCSResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -2154,6 +2553,7 @@ class GetAttributesXSLResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -2170,6 +2570,7 @@ class GetAttributesXSLResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -2179,7 +2580,7 @@ class GetAttributesXSLResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, xSLFile = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, xSLFile = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -2190,6 +2591,7 @@ class GetAttributesXSLResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -2261,6 +2663,7 @@ class GetBestOffersResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -2278,6 +2681,7 @@ class GetBestOffersResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -2288,7 +2692,7 @@ class GetBestOffersResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, bestOfferArray = nil, item = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, bestOfferArray = nil, item = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -2299,6 +2703,7 @@ class GetBestOffersResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -2377,6 +2782,7 @@ class GetBidderListResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -2394,6 +2800,7 @@ class GetBidderListResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -2404,7 +2811,7 @@ class GetBidderListResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, bidder = nil, bidItemArray = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, bidder = nil, bidItemArray = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -2415,6 +2822,7 @@ class GetBidderListResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -2490,6 +2898,7 @@ class GetCategoriesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -2515,6 +2924,7 @@ class GetCategoriesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -2533,7 +2943,7 @@ class GetCategoriesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, categoryArray = nil, categoryCount = nil, updateTime = nil, categoryVersion = nil, reservePriceInclusive = nil, reservePriceAllowed = nil, minimumReservePrice = nil, currency = nil, reduceReserveInclusive = nil, reduceReserveAllowed = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, categoryArray = nil, categoryCount = nil, updateTime = nil, categoryVersion = nil, reservePriceInclusive = nil, reservePriceAllowed = nil, minimumReservePrice = nil, currency = nil, reduceReserveInclusive = nil, reduceReserveAllowed = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -2544,6 +2954,7 @@ class GetCategoriesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -2621,6 +3032,7 @@ class GetCategory2CSResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -2640,6 +3052,7 @@ class GetCategory2CSResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -2652,7 +3065,7 @@ class GetCategory2CSResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, mappedCategoryArray = nil, unmappedCategoryArray = nil, attributeSystemVersion = nil, siteWideCharacteristicSets = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, mappedCategoryArray = nil, unmappedCategoryArray = nil, attributeSystemVersion = nil, siteWideCharacteristicSets = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -2663,6 +3076,7 @@ class GetCategory2CSResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -2734,6 +3148,7 @@ class GetCategory2FinanceOfferResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -2751,6 +3166,7 @@ class GetCategory2FinanceOfferResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -2761,7 +3177,7 @@ class GetCategory2FinanceOfferResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, count = nil, categoryFinanceOfferArray = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, count = nil, categoryFinanceOfferArray = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -2772,6 +3188,7 @@ class GetCategory2FinanceOfferResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -2847,6 +3264,7 @@ class GetCategoryFeaturesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -2867,6 +3285,7 @@ class GetCategoryFeaturesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -2880,7 +3299,7 @@ class GetCategoryFeaturesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, categoryVersion = nil, updateTime = nil, category = [], siteDefaults = nil, featureDefinitions = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, categoryVersion = nil, updateTime = nil, category = [], siteDefaults = nil, featureDefinitions = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -2891,6 +3310,7 @@ class GetCategoryFeaturesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -2917,6 +3337,7 @@ class GetCategoryListingsRequestType
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["motorsGermanySearchable", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MotorsGermanySearchable")]],
     ["categoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
+    ["adFormat", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AdFormat")]],
     ["currency", ["CurrencyCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Currency")]],
     ["itemTypeFilter", ["ItemTypeFilterCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemTypeFilter")]],
     ["storesFixedPrice", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoresFixedPrice")]],
@@ -2928,7 +3349,8 @@ class GetCategoryListingsRequestType
     ["includeGetItFastItems", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeGetItFastItems")]],
     ["paymentMethod", ["PaymentMethodSearchCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentMethod")]],
     ["includeCondition", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeCondition")]],
-    ["includeFeedback", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeFeedback")]]
+    ["includeFeedback", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeFeedback")]],
+    ["localSearchPostalCode", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalSearchPostalCode")]]
   ]
 
   attr_accessor :detailLevel
@@ -2941,6 +3363,7 @@ class GetCategoryListingsRequestType
   attr_reader :__xmlele_any
   attr_accessor :motorsGermanySearchable
   attr_accessor :categoryID
+  attr_accessor :adFormat
   attr_accessor :currency
   attr_accessor :itemTypeFilter
   attr_accessor :storesFixedPrice
@@ -2953,12 +3376,13 @@ class GetCategoryListingsRequestType
   attr_accessor :paymentMethod
   attr_accessor :includeCondition
   attr_accessor :includeFeedback
+  attr_accessor :localSearchPostalCode
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, motorsGermanySearchable = nil, categoryID = nil, currency = nil, itemTypeFilter = nil, storesFixedPrice = nil, searchType = nil, orderBy = nil, pagination = nil, searchLocation = nil, proximitySearch = nil, includeGetItFastItems = nil, paymentMethod = nil, includeCondition = nil, includeFeedback = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, motorsGermanySearchable = nil, categoryID = nil, adFormat = nil, currency = nil, itemTypeFilter = nil, storesFixedPrice = nil, searchType = nil, orderBy = nil, pagination = nil, searchLocation = nil, proximitySearch = nil, includeGetItFastItems = nil, paymentMethod = nil, includeCondition = nil, includeFeedback = nil, localSearchPostalCode = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2969,6 +3393,7 @@ class GetCategoryListingsRequestType
     @__xmlele_any = nil
     @motorsGermanySearchable = motorsGermanySearchable
     @categoryID = categoryID
+    @adFormat = adFormat
     @currency = currency
     @itemTypeFilter = itemTypeFilter
     @storesFixedPrice = storesFixedPrice
@@ -2981,6 +3406,7 @@ class GetCategoryListingsRequestType
     @paymentMethod = paymentMethod
     @includeCondition = includeCondition
     @includeFeedback = includeFeedback
+    @localSearchPostalCode = localSearchPostalCode
   end
 end
 
@@ -2999,6 +3425,7 @@ class GetCategoryListingsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -3022,6 +3449,7 @@ class GetCategoryListingsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -3038,7 +3466,7 @@ class GetCategoryListingsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, itemArray = nil, category = nil, subCategories = nil, itemsPerPage = nil, pageNumber = nil, hasMoreItems = nil, paginationResult = nil, buyingGuideDetails = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, itemArray = nil, category = nil, subCategories = nil, itemsPerPage = nil, pageNumber = nil, hasMoreItems = nil, paginationResult = nil, buyingGuideDetails = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -3049,6 +3477,7 @@ class GetCategoryListingsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -3121,6 +3550,7 @@ class GetCategoryMappingsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -3138,6 +3568,7 @@ class GetCategoryMappingsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -3148,7 +3579,7 @@ class GetCategoryMappingsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, categoryMapping = [], categoryVersion = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, categoryMapping = [], categoryVersion = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -3159,11 +3590,119 @@ class GetCategoryMappingsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
     @categoryMapping = categoryMapping
     @categoryVersion = categoryVersion
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetChallengeTokenRequestType
+class GetChallengeTokenRequestType
+  @@schema_type = "GetChallengeTokenRequestType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailLevel")]],
+    ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorLanguage")]],
+    ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :warningLevel
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @warningLevel = warningLevel
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetChallengeTokenResponseType
+class GetChallengeTokenResponseType
+  @@schema_type = "GetChallengeTokenResponseType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]],
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["errors", ["ErrorType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Errors")]],
+    ["message", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["build", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Build")]],
+    ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
+    ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
+    ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
+    ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["challengeToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ChallengeToken")]],
+    ["imageChallengeURL", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ImageChallengeURL")]],
+    ["audioChallengeURL", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AudioChallengeURL")]]
+  ]
+
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :eIASToken
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_reader :__xmlele_any
+  attr_accessor :challengeToken
+  attr_accessor :imageChallengeURL
+  attr_accessor :audioChallengeURL
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, challengeToken = nil, imageChallengeURL = nil, audioChallengeURL = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @__xmlele_any = nil
+    @challengeToken = challengeToken
+    @imageChallengeURL = imageChallengeURL
+    @audioChallengeURL = audioChallengeURL
   end
 end
 
@@ -3243,6 +3782,7 @@ class GetCharitiesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -3259,6 +3799,7 @@ class GetCharitiesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -3268,7 +3809,7 @@ class GetCharitiesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, charity = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, charity = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -3279,10 +3820,121 @@ class GetCharitiesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
     @charity = charity
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetContextualKeywordsRequestType
+class GetContextualKeywordsRequestType
+  @@schema_type = "GetContextualKeywordsRequestType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailLevel")]],
+    ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorLanguage")]],
+    ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["uRL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "URL")]],
+    ["encoding", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Encoding")]],
+    ["categoryID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]]
+  ]
+
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :warningLevel
+  attr_reader :__xmlele_any
+  attr_accessor :uRL
+  attr_accessor :encoding
+  attr_accessor :categoryID
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, uRL = nil, encoding = nil, categoryID = [])
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @warningLevel = warningLevel
+    @__xmlele_any = nil
+    @uRL = uRL
+    @encoding = encoding
+    @categoryID = categoryID
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetContextualKeywordsResponseType
+class GetContextualKeywordsResponseType
+  @@schema_type = "GetContextualKeywordsResponseType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]],
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["errors", ["ErrorType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Errors")]],
+    ["message", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["build", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Build")]],
+    ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
+    ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
+    ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
+    ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["contextSearchAsset", ["ContextSearchAssetType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ContextSearchAsset")]]
+  ]
+
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :eIASToken
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_reader :__xmlele_any
+  attr_accessor :contextSearchAsset
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, contextSearchAsset = [])
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @__xmlele_any = nil
+    @contextSearchAsset = contextSearchAsset
   end
 end
 
@@ -3350,6 +4002,7 @@ class GetCrossPromotionsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -3366,6 +4019,7 @@ class GetCrossPromotionsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -3375,7 +4029,7 @@ class GetCrossPromotionsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, crossPromotion = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, crossPromotion = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -3386,6 +4040,7 @@ class GetCrossPromotionsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -3457,6 +4112,7 @@ class GetDescriptionTemplatesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -3478,6 +4134,7 @@ class GetDescriptionTemplatesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -3492,7 +4149,7 @@ class GetDescriptionTemplatesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, descriptionTemplate = [], layoutTotal = nil, obsoleteLayoutID = [], obsoleteThemeID = [], themeGroup = [], themeTotal = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, descriptionTemplate = [], layoutTotal = nil, obsoleteLayoutID = [], obsoleteThemeID = [], themeGroup = [], themeTotal = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -3503,6 +4160,7 @@ class GetDescriptionTemplatesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -3573,6 +4231,7 @@ class GetDisputeResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -3589,6 +4248,7 @@ class GetDisputeResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -3598,7 +4258,7 @@ class GetDisputeResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, dispute = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, dispute = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -3609,6 +4269,7 @@ class GetDisputeResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -3680,6 +4341,7 @@ class GetFeedbackResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -3699,6 +4361,7 @@ class GetFeedbackResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -3711,7 +4374,7 @@ class GetFeedbackResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, feedbackDetailArray = nil, feedbackDetailItemTotal = nil, feedbackSummary = nil, feedbackScore = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, feedbackDetailArray = nil, feedbackDetailItemTotal = nil, feedbackSummary = nil, feedbackScore = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -3722,6 +4385,7 @@ class GetFeedbackResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -3793,6 +4457,7 @@ class GetFinanceOffersResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -3810,6 +4475,7 @@ class GetFinanceOffersResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -3820,7 +4486,7 @@ class GetFinanceOffersResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, count = nil, financeOfferArray = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, count = nil, financeOfferArray = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -3831,6 +4497,7 @@ class GetFinanceOffersResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -3897,6 +4564,7 @@ class GetHighBiddersResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -3914,6 +4582,7 @@ class GetHighBiddersResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -3924,7 +4593,7 @@ class GetHighBiddersResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, bidArray = nil, listingStatus = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, bidArray = nil, listingStatus = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -3935,6 +4604,7 @@ class GetHighBiddersResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -3957,7 +4627,9 @@ class GetItemRequestType
     ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
-    ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeWatchCount")]]
+    ["includeExpressRequirements", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeExpressRequirements")]],
+    ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeWatchCount")]],
+    ["includeCrossPromotion", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeCrossPromotion")]]
   ]
 
   attr_accessor :detailLevel
@@ -3969,13 +4641,15 @@ class GetItemRequestType
   attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :itemID
+  attr_accessor :includeExpressRequirements
   attr_accessor :includeWatchCount
+  attr_accessor :includeCrossPromotion
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, includeWatchCount = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, includeExpressRequirements = nil, includeWatchCount = nil, includeCrossPromotion = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3985,7 +4659,9 @@ class GetItemRequestType
     @warningLevel = warningLevel
     @__xmlele_any = nil
     @itemID = itemID
+    @includeExpressRequirements = includeExpressRequirements
     @includeWatchCount = includeWatchCount
+    @includeCrossPromotion = includeCrossPromotion
   end
 end
 
@@ -4004,6 +4680,7 @@ class GetItemResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -4020,6 +4697,7 @@ class GetItemResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -4029,7 +4707,7 @@ class GetItemResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, item = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, item = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -4040,6 +4718,7 @@ class GetItemResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -4105,6 +4784,7 @@ class GetItemRecommendationsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -4121,6 +4801,7 @@ class GetItemRecommendationsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -4130,7 +4811,7 @@ class GetItemRecommendationsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, getRecommendationsResponseContainer = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, getRecommendationsResponseContainer = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -4141,6 +4822,7 @@ class GetItemRecommendationsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -4215,6 +4897,7 @@ class GetItemShippingResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -4231,6 +4914,7 @@ class GetItemShippingResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -4240,7 +4924,7 @@ class GetItemShippingResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, shippingDetails = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, shippingDetails = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -4251,6 +4935,7 @@ class GetItemShippingResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -4334,6 +5019,7 @@ class GetItemTransactionsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -4357,6 +5043,7 @@ class GetItemTransactionsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -4373,7 +5060,7 @@ class GetItemTransactionsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, paginationResult = nil, hasMoreTransactions = nil, transactionsPerPage = nil, pageNumber = nil, returnedTransactionCountActual = nil, item = nil, transactionArray = nil, payPalPreferred = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, paginationResult = nil, hasMoreTransactions = nil, transactionsPerPage = nil, pageNumber = nil, returnedTransactionCountActual = nil, item = nil, transactionArray = nil, payPalPreferred = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -4384,6 +5071,7 @@ class GetItemTransactionsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -4459,6 +5147,7 @@ class GetItemsAwaitingFeedbackResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -4475,6 +5164,7 @@ class GetItemsAwaitingFeedbackResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -4484,7 +5174,7 @@ class GetItemsAwaitingFeedbackResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, itemsAwaitingFeedback = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, itemsAwaitingFeedback = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -4495,6 +5185,7 @@ class GetItemsAwaitingFeedbackResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -4566,6 +5257,7 @@ class GetLiveAuctionBiddersResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -4587,6 +5279,7 @@ class GetLiveAuctionBiddersResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -4601,7 +5294,7 @@ class GetLiveAuctionBiddersResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, bidderDetails = nil, totalPending = nil, totalApproved = nil, totalDenied = nil, pageNumber = nil, paginationResult = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, bidderDetails = nil, totalPending = nil, totalApproved = nil, totalDenied = nil, pageNumber = nil, paginationResult = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -4612,6 +5305,7 @@ class GetLiveAuctionBiddersResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -4679,6 +5373,7 @@ class GetLiveAuctionCatalogDetailsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -4695,6 +5390,7 @@ class GetLiveAuctionCatalogDetailsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -4704,7 +5400,7 @@ class GetLiveAuctionCatalogDetailsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, liveAuctionCatalog = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, liveAuctionCatalog = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -4715,6 +5411,7 @@ class GetLiveAuctionCatalogDetailsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -4739,8 +5436,8 @@ class GetMemberMessagesRequestType
     ["mailMessageType", ["MessageTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MailMessageType")]],
     ["messageStatus", ["MessageStatusTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageStatus")]],
     ["displayToPublic", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisplayToPublic")]],
-    ["startCreationTime", ["SOAP::SOAPDate", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StartCreationTime")]],
-    ["endCreationTime", ["SOAP::SOAPDate", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndCreationTime")]],
+    ["startCreationTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StartCreationTime")]],
+    ["endCreationTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndCreationTime")]],
     ["pagination", ["PaginationType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Pagination")]],
     ["memberMessageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MemberMessageID")]]
   ]
@@ -4801,6 +5498,7 @@ class GetMemberMessagesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -4819,6 +5517,7 @@ class GetMemberMessagesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -4830,7 +5529,7 @@ class GetMemberMessagesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, memberMessage = nil, paginationResult = nil, hasMoreItems = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, memberMessage = nil, paginationResult = nil, hasMoreItems = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -4841,6 +5540,7 @@ class GetMemberMessagesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -4914,6 +5614,7 @@ class GetMyMessagesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -4932,6 +5633,7 @@ class GetMyMessagesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -4943,7 +5645,7 @@ class GetMyMessagesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, summary = nil, alerts = nil, messages = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, summary = nil, alerts = nil, messages = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -4954,6 +5656,7 @@ class GetMyMessagesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -5045,6 +5748,7 @@ class GetMyeBayResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -5067,6 +5771,7 @@ class GetMyeBayResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -5082,7 +5787,7 @@ class GetMyeBayResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, biddingItemArray = nil, lostItemArray = nil, watchItemArray = nil, wonItemArray = nil, favoriteSearches = nil, favoriteSellers = nil, secondChanceOffers = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, biddingItemArray = nil, lostItemArray = nil, watchItemArray = nil, wonItemArray = nil, favoriteSearches = nil, favoriteSellers = nil, secondChanceOffers = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -5093,6 +5798,7 @@ class GetMyeBayResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -5185,6 +5891,7 @@ class GetMyeBayBuyingResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -5209,6 +5916,7 @@ class GetMyeBayBuyingResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -5226,7 +5934,7 @@ class GetMyeBayBuyingResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, buyingSummary = nil, watchList = nil, bidList = nil, bestOfferList = nil, wonList = nil, lostList = nil, favoriteSearches = nil, favoriteSellers = nil, secondChanceOffer = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, buyingSummary = nil, watchList = nil, bidList = nil, bestOfferList = nil, wonList = nil, lostList = nil, favoriteSearches = nil, favoriteSellers = nil, secondChanceOffer = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -5237,6 +5945,7 @@ class GetMyeBayBuyingResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -5313,6 +6022,7 @@ class GetMyeBayRemindersResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -5330,6 +6040,7 @@ class GetMyeBayRemindersResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -5340,7 +6051,7 @@ class GetMyeBayRemindersResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, buyingReminders = nil, sellingReminders = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, buyingReminders = nil, sellingReminders = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -5351,6 +6062,7 @@ class GetMyeBayRemindersResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -5426,6 +6138,7 @@ class GetMyeBaySellingResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -5446,6 +6159,7 @@ class GetMyeBaySellingResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -5459,7 +6173,7 @@ class GetMyeBaySellingResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, sellingSummary = nil, scheduledList = nil, activeList = nil, soldList = nil, unsoldList = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, sellingSummary = nil, scheduledList = nil, activeList = nil, soldList = nil, unsoldList = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -5470,6 +6184,7 @@ class GetMyeBaySellingResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -5539,6 +6254,7 @@ class GetNotificationPreferencesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -5558,6 +6274,7 @@ class GetNotificationPreferencesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -5570,7 +6287,7 @@ class GetNotificationPreferencesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, applicationDeliveryPreferences = nil, userDeliveryPreferenceArray = nil, userData = nil, eventProperty = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, applicationDeliveryPreferences = nil, userDeliveryPreferenceArray = nil, userData = nil, eventProperty = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -5581,6 +6298,7 @@ class GetNotificationPreferencesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -5655,6 +6373,7 @@ class GetNotificationsUsageResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -5675,6 +6394,7 @@ class GetNotificationsUsageResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -5688,7 +6408,7 @@ class GetNotificationsUsageResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, startTime = nil, endTime = nil, notificationDetailsArray = nil, markUpMarkDownHistory = nil, notificationStatistics = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, startTime = nil, endTime = nil, notificationDetailsArray = nil, markUpMarkDownHistory = nil, notificationStatistics = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -5699,6 +6419,7 @@ class GetNotificationsUsageResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -5707,6 +6428,113 @@ class GetNotificationsUsageResponseType
     @notificationDetailsArray = notificationDetailsArray
     @markUpMarkDownHistory = markUpMarkDownHistory
     @notificationStatistics = notificationStatistics
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetOrderTransactionsRequestType
+class GetOrderTransactionsRequestType
+  @@schema_type = "GetOrderTransactionsRequestType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailLevel")]],
+    ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorLanguage")]],
+    ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["itemTransactionIDArray", ["ItemTransactionIDArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemTransactionIDArray")]],
+    ["orderIDArray", ["OrderIDArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "OrderIDArray")]]
+  ]
+
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :warningLevel
+  attr_reader :__xmlele_any
+  attr_accessor :itemTransactionIDArray
+  attr_accessor :orderIDArray
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemTransactionIDArray = nil, orderIDArray = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @warningLevel = warningLevel
+    @__xmlele_any = nil
+    @itemTransactionIDArray = itemTransactionIDArray
+    @orderIDArray = orderIDArray
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetOrderTransactionsResponseType
+class GetOrderTransactionsResponseType
+  @@schema_type = "GetOrderTransactionsResponseType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]],
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["errors", ["ErrorType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Errors")]],
+    ["message", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["build", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Build")]],
+    ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
+    ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
+    ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
+    ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["orderArray", ["OrderArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "OrderArray")]]
+  ]
+
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :eIASToken
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_reader :__xmlele_any
+  attr_accessor :orderArray
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, orderArray = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @__xmlele_any = nil
+    @orderArray = orderArray
   end
 end
 
@@ -5786,6 +6614,7 @@ class GetOrdersResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -5807,6 +6636,7 @@ class GetOrdersResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -5821,7 +6651,7 @@ class GetOrdersResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, paginationResult = nil, hasMoreOrders = nil, orderArray = nil, ordersPerPage = nil, pageNumber = nil, returnedOrderCountActual = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, paginationResult = nil, hasMoreOrders = nil, orderArray = nil, ordersPerPage = nil, pageNumber = nil, returnedOrderCountActual = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -5832,6 +6662,7 @@ class GetOrdersResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -5908,6 +6739,7 @@ class GetPictureManagerDetailsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -5924,6 +6756,7 @@ class GetPictureManagerDetailsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -5933,7 +6766,7 @@ class GetPictureManagerDetailsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, pictureManagerDetails = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, pictureManagerDetails = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -5944,6 +6777,7 @@ class GetPictureManagerDetailsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -6006,6 +6840,7 @@ class GetPictureManagerOptionsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -6023,6 +6858,7 @@ class GetPictureManagerOptionsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -6033,7 +6869,7 @@ class GetPictureManagerOptionsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, subscription = [], pictureType = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, subscription = [], pictureType = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -6044,6 +6880,7 @@ class GetPictureManagerOptionsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -6119,6 +6956,7 @@ class GetPopularKeywordsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -6137,6 +6975,7 @@ class GetPopularKeywordsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -6148,7 +6987,7 @@ class GetPopularKeywordsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, paginationResult = nil, categoryArray = nil, hasMore = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, paginationResult = nil, categoryArray = nil, hasMore = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -6159,6 +6998,7 @@ class GetPopularKeywordsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -6226,6 +7066,7 @@ class GetProductFamilyMembersResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -6243,6 +7084,7 @@ class GetProductFamilyMembersResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -6253,7 +7095,7 @@ class GetProductFamilyMembersResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, dataElementSets = [], productSearchResult = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, dataElementSets = [], productSearchResult = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -6264,6 +7106,7 @@ class GetProductFamilyMembersResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -6333,6 +7176,7 @@ class GetProductFinderResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -6350,6 +7194,7 @@ class GetProductFinderResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -6360,7 +7205,7 @@ class GetProductFinderResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, attributeSystemVersion = nil, productFinderData = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, attributeSystemVersion = nil, productFinderData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -6371,6 +7216,7 @@ class GetProductFinderResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -6440,6 +7286,7 @@ class GetProductFinderXSLResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -6456,6 +7303,7 @@ class GetProductFinderXSLResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -6465,7 +7313,7 @@ class GetProductFinderXSLResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, xSLFile = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, xSLFile = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -6476,6 +7324,7 @@ class GetProductFinderXSLResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -6544,6 +7393,7 @@ class GetProductSearchPageResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -6561,6 +7411,7 @@ class GetProductSearchPageResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -6571,7 +7422,7 @@ class GetProductSearchPageResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, attributeSystemVersion = nil, productSearchPage = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, attributeSystemVersion = nil, productSearchPage = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -6582,6 +7433,7 @@ class GetProductSearchPageResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -6648,6 +7500,7 @@ class GetProductSearchResultsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -6665,6 +7518,7 @@ class GetProductSearchResultsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -6675,7 +7529,7 @@ class GetProductSearchResultsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, dataElementSets = [], productSearchResult = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, dataElementSets = [], productSearchResult = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -6686,6 +7540,7 @@ class GetProductSearchResultsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -6755,6 +7610,7 @@ class GetProductSellingPagesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -6771,6 +7627,7 @@ class GetProductSellingPagesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -6780,7 +7637,7 @@ class GetProductSellingPagesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, productSellingPagesData = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, productSellingPagesData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -6791,6 +7648,7 @@ class GetProductSellingPagesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -6862,6 +7720,7 @@ class GetPromotionRulesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -6878,6 +7737,7 @@ class GetPromotionRulesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -6887,7 +7747,7 @@ class GetPromotionRulesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, promotionRuleArray = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, promotionRuleArray = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -6898,6 +7758,7 @@ class GetPromotionRulesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -6978,6 +7839,7 @@ class GetRecommendationsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -6998,6 +7860,7 @@ class GetRecommendationsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -7011,7 +7874,7 @@ class GetRecommendationsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, listingAnalyzerRecommendations = nil, sIFFTASRecommendations = nil, pricingRecommendations = nil, attributeRecommendations = nil, productRecommendations = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, listingAnalyzerRecommendations = nil, sIFFTASRecommendations = nil, pricingRecommendations = nil, attributeRecommendations = nil, productRecommendations = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7022,6 +7885,7 @@ class GetRecommendationsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -7088,6 +7952,7 @@ class GetReturnURLResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -7105,6 +7970,7 @@ class GetReturnURLResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -7115,7 +7981,7 @@ class GetReturnURLResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, applicationDisplayName = nil, authenticationEntryArray = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, applicationDisplayName = nil, authenticationEntryArray = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7126,6 +7992,7 @@ class GetReturnURLResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -7192,6 +8059,7 @@ class GetRuNameResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -7208,6 +8076,7 @@ class GetRuNameResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -7217,7 +8086,7 @@ class GetRuNameResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, ruName = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, ruName = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7228,6 +8097,7 @@ class GetRuNameResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -7282,7 +8152,8 @@ class GetSearchResultsRequestType
     ["digitalDelivery", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DigitalDelivery")]],
     ["includeCondition", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeCondition")]],
     ["includeFeedback", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeFeedback")]],
-    ["charityID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharityID")]]
+    ["charityID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharityID")]],
+    ["localSearchPostalCode", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalSearchPostalCode")]]
   ]
 
   attr_accessor :detailLevel
@@ -7328,12 +8199,13 @@ class GetSearchResultsRequestType
   attr_accessor :includeCondition
   attr_accessor :includeFeedback
   attr_accessor :charityID
+  attr_accessor :localSearchPostalCode
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, motorsGermanySearchable = nil, query = nil, categoryID = nil, searchFlags = [], priceRangeFilter = nil, proximitySearch = nil, itemTypeFilter = nil, searchType = nil, userIdFilter = nil, searchLocationFilter = nil, storeSearchFilter = nil, order = nil, pagination = nil, searchRequest = nil, productID = nil, externalProductID = nil, categories = nil, totalOnly = nil, endTimeFrom = nil, endTimeTo = nil, modTimeFrom = nil, includeGetItFastItems = nil, storesFixedPrice = nil, paymentMethod = nil, granularityLevel = nil, expandSearch = nil, lot = nil, adFormat = nil, quantity = nil, quantityOperator = nil, sellerBusinessType = nil, digitalDelivery = nil, includeCondition = nil, includeFeedback = nil, charityID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, motorsGermanySearchable = nil, query = nil, categoryID = nil, searchFlags = [], priceRangeFilter = nil, proximitySearch = nil, itemTypeFilter = nil, searchType = nil, userIdFilter = nil, searchLocationFilter = nil, storeSearchFilter = nil, order = nil, pagination = nil, searchRequest = nil, productID = nil, externalProductID = nil, categories = nil, totalOnly = nil, endTimeFrom = nil, endTimeTo = nil, modTimeFrom = nil, includeGetItFastItems = nil, storesFixedPrice = nil, paymentMethod = nil, granularityLevel = nil, expandSearch = nil, lot = nil, adFormat = nil, quantity = nil, quantityOperator = nil, sellerBusinessType = nil, digitalDelivery = nil, includeCondition = nil, includeFeedback = nil, charityID = nil, localSearchPostalCode = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -7377,6 +8249,7 @@ class GetSearchResultsRequestType
     @includeCondition = includeCondition
     @includeFeedback = includeFeedback
     @charityID = charityID
+    @localSearchPostalCode = localSearchPostalCode
   end
 end
 
@@ -7395,6 +8268,7 @@ class GetSearchResultsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -7422,6 +8296,7 @@ class GetSearchResultsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -7442,7 +8317,7 @@ class GetSearchResultsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, searchResultItemArray = nil, itemsPerPage = nil, pageNumber = nil, hasMoreItems = nil, paginationResult = nil, categoryArray = nil, buyingGuideDetails = nil, storeExpansionArray = nil, internationalExpansionArray = nil, filterRemovedExpansionArray = nil, allCategoriesExpansionArray = nil, spellingSuggestion = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, searchResultItemArray = nil, itemsPerPage = nil, pageNumber = nil, hasMoreItems = nil, paginationResult = nil, categoryArray = nil, buyingGuideDetails = nil, storeExpansionArray = nil, internationalExpansionArray = nil, filterRemovedExpansionArray = nil, allCategoriesExpansionArray = nil, spellingSuggestion = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7453,6 +8328,7 @@ class GetSearchResultsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -7468,6 +8344,182 @@ class GetSearchResultsResponseType
     @filterRemovedExpansionArray = filterRemovedExpansionArray
     @allCategoriesExpansionArray = allCategoriesExpansionArray
     @spellingSuggestion = spellingSuggestion
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetSearchResultsExpressRequestType
+class GetSearchResultsExpressRequestType
+  @@schema_type = "GetSearchResultsExpressRequestType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailLevel")]],
+    ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorLanguage")]],
+    ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["query", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Query")]],
+    ["externalProductIDType", ["ExternalProductCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExternalProductIDType")]],
+    ["externalProductIDValue", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExternalProductIDValue")]],
+    ["productReferenceID", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductReferenceID")]],
+    ["departmentName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DepartmentName")]],
+    ["aisleName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AisleName")]],
+    ["productTypeName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductTypeName")]],
+    ["histogramSort", ["ExpressHistogramSortCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HistogramSort")]],
+    ["itemSort", ["ExpressItemSortCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemSort")]],
+    ["productSort", ["ExpressProductSortCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductSort")]],
+    ["highestPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HighestPrice")]],
+    ["lowestPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LowestPrice")]],
+    ["condition", ["ConditionSelectionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Condition")]],
+    ["sellerID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerID")]],
+    ["postalCode", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PostalCode")]],
+    ["histogramDetails", ["ExpressDetailLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HistogramDetails")]],
+    ["productDetails", ["ExpressDetailLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductDetails")]],
+    ["itemDetails", ["ExpressDetailLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemDetails")]],
+    ["entriesPerPage", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EntriesPerPage")]],
+    ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PageNumber")]]
+  ]
+
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :warningLevel
+  attr_reader :__xmlele_any
+  attr_accessor :query
+  attr_accessor :externalProductIDType
+  attr_accessor :externalProductIDValue
+  attr_accessor :productReferenceID
+  attr_accessor :departmentName
+  attr_accessor :aisleName
+  attr_accessor :productTypeName
+  attr_accessor :histogramSort
+  attr_accessor :itemSort
+  attr_accessor :productSort
+  attr_accessor :highestPrice
+  attr_accessor :lowestPrice
+  attr_accessor :condition
+  attr_accessor :sellerID
+  attr_accessor :postalCode
+  attr_accessor :histogramDetails
+  attr_accessor :productDetails
+  attr_accessor :itemDetails
+  attr_accessor :entriesPerPage
+  attr_accessor :pageNumber
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, query = nil, externalProductIDType = nil, externalProductIDValue = nil, productReferenceID = nil, departmentName = nil, aisleName = nil, productTypeName = nil, histogramSort = nil, itemSort = nil, productSort = nil, highestPrice = nil, lowestPrice = nil, condition = nil, sellerID = nil, postalCode = nil, histogramDetails = nil, productDetails = nil, itemDetails = nil, entriesPerPage = nil, pageNumber = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @warningLevel = warningLevel
+    @__xmlele_any = nil
+    @query = query
+    @externalProductIDType = externalProductIDType
+    @externalProductIDValue = externalProductIDValue
+    @productReferenceID = productReferenceID
+    @departmentName = departmentName
+    @aisleName = aisleName
+    @productTypeName = productTypeName
+    @histogramSort = histogramSort
+    @itemSort = itemSort
+    @productSort = productSort
+    @highestPrice = highestPrice
+    @lowestPrice = lowestPrice
+    @condition = condition
+    @sellerID = sellerID
+    @postalCode = postalCode
+    @histogramDetails = histogramDetails
+    @productDetails = productDetails
+    @itemDetails = itemDetails
+    @entriesPerPage = entriesPerPage
+    @pageNumber = pageNumber
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetSearchResultsExpressResponseType
+class GetSearchResultsExpressResponseType
+  @@schema_type = "GetSearchResultsExpressResponseType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]],
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["errors", ["ErrorType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Errors")]],
+    ["message", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["build", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Build")]],
+    ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
+    ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
+    ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
+    ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["histogram", ["DomainHistogramType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Histogram")]],
+    ["itemArray", ["ItemArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemArray")]],
+    ["productArray", ["ProductArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductArray")]],
+    ["entriesPerPage", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EntriesPerPage")]],
+    ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PageNumber")]],
+    ["hasMoreEntries", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HasMoreEntries")]]
+  ]
+
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :eIASToken
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_reader :__xmlele_any
+  attr_accessor :histogram
+  attr_accessor :itemArray
+  attr_accessor :productArray
+  attr_accessor :entriesPerPage
+  attr_accessor :pageNumber
+  attr_accessor :hasMoreEntries
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, histogram = nil, itemArray = nil, productArray = nil, entriesPerPage = nil, pageNumber = nil, hasMoreEntries = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @__xmlele_any = nil
+    @histogram = histogram
+    @itemArray = itemArray
+    @productArray = productArray
+    @entriesPerPage = entriesPerPage
+    @pageNumber = pageNumber
+    @hasMoreEntries = hasMoreEntries
   end
 end
 
@@ -7553,6 +8605,7 @@ class GetSellerEventsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -7570,6 +8623,7 @@ class GetSellerEventsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -7580,7 +8634,7 @@ class GetSellerEventsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, timeTo = nil, itemArray = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, timeTo = nil, itemArray = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7591,6 +8645,7 @@ class GetSellerEventsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -7613,6 +8668,7 @@ class GetSellerListRequestType
     ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["userID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserID")]],
+    ["motorsDealerUsers", ["UserIDArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MotorsDealerUsers")]],
     ["endTimeFrom", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTimeFrom")]],
     ["endTimeTo", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTimeTo")]],
     ["sort", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Sort")]],
@@ -7633,6 +8689,7 @@ class GetSellerListRequestType
   attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :userID
+  attr_accessor :motorsDealerUsers
   attr_accessor :endTimeFrom
   attr_accessor :endTimeTo
   attr_accessor :sort
@@ -7647,7 +8704,7 @@ class GetSellerListRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, userID = nil, endTimeFrom = nil, endTimeTo = nil, sort = nil, startTimeFrom = nil, startTimeTo = nil, pagination = nil, granularityLevel = nil, sKUArray = nil, includeWatchCount = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, userID = nil, motorsDealerUsers = nil, endTimeFrom = nil, endTimeTo = nil, sort = nil, startTimeFrom = nil, startTimeTo = nil, pagination = nil, granularityLevel = nil, sKUArray = nil, includeWatchCount = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -7657,6 +8714,7 @@ class GetSellerListRequestType
     @warningLevel = warningLevel
     @__xmlele_any = nil
     @userID = userID
+    @motorsDealerUsers = motorsDealerUsers
     @endTimeFrom = endTimeFrom
     @endTimeTo = endTimeTo
     @sort = sort
@@ -7684,6 +8742,7 @@ class GetSellerListResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -7706,6 +8765,7 @@ class GetSellerListResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -7721,7 +8781,7 @@ class GetSellerListResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, paginationResult = nil, hasMoreItems = nil, itemArray = nil, itemsPerPage = nil, pageNumber = nil, returnedItemCountActual = nil, seller = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, paginationResult = nil, hasMoreItems = nil, itemArray = nil, itemsPerPage = nil, pageNumber = nil, returnedItemCountActual = nil, seller = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7732,6 +8792,7 @@ class GetSellerListResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -7812,6 +8873,7 @@ class GetSellerPaymentsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -7833,6 +8895,7 @@ class GetSellerPaymentsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -7847,7 +8910,7 @@ class GetSellerPaymentsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, paginationResult = nil, hasMorePayments = nil, sellerPayment = [], paymentsPerPage = nil, pageNumber = nil, returnedPaymentCountActual = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, paginationResult = nil, hasMorePayments = nil, sellerPayment = [], paymentsPerPage = nil, pageNumber = nil, returnedPaymentCountActual = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7858,6 +8921,7 @@ class GetSellerPaymentsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -7943,6 +9007,7 @@ class GetSellerTransactionsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -7966,6 +9031,7 @@ class GetSellerTransactionsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -7982,7 +9048,7 @@ class GetSellerTransactionsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, paginationResult = nil, hasMoreTransactions = nil, transactionsPerPage = nil, pageNumber = nil, returnedTransactionCountActual = nil, seller = nil, transactionArray = nil, payPalPreferred = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, paginationResult = nil, hasMoreTransactions = nil, transactionsPerPage = nil, pageNumber = nil, returnedTransactionCountActual = nil, seller = nil, transactionArray = nil, payPalPreferred = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7993,6 +9059,7 @@ class GetSellerTransactionsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -8071,6 +9138,7 @@ class GetStoreResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -8087,6 +9155,7 @@ class GetStoreResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -8096,7 +9165,7 @@ class GetStoreResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, store = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, store = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8107,6 +9176,7 @@ class GetStoreResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -8172,6 +9242,7 @@ class GetStoreCategoryUpdateStatusResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -8188,6 +9259,7 @@ class GetStoreCategoryUpdateStatusResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -8197,7 +9269,7 @@ class GetStoreCategoryUpdateStatusResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, status = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, status = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8208,6 +9280,7 @@ class GetStoreCategoryUpdateStatusResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -8273,6 +9346,7 @@ class GetStoreCustomPageResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -8289,6 +9363,7 @@ class GetStoreCustomPageResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -8298,7 +9373,7 @@ class GetStoreCustomPageResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, customPageArray = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, customPageArray = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8309,6 +9384,7 @@ class GetStoreCustomPageResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -8371,6 +9447,7 @@ class GetStoreOptionsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -8392,6 +9469,7 @@ class GetStoreOptionsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -8406,7 +9484,7 @@ class GetStoreOptionsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, basicThemeArray = nil, advancedThemeArray = nil, logoArray = nil, subscriptionArray = nil, maxCategories = nil, maxCategoryLevels = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, basicThemeArray = nil, advancedThemeArray = nil, logoArray = nil, subscriptionArray = nil, maxCategories = nil, maxCategoryLevels = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8417,6 +9495,7 @@ class GetStoreOptionsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -8484,6 +9563,7 @@ class GetStorePreferencesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -8500,6 +9580,7 @@ class GetStorePreferencesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -8509,7 +9590,7 @@ class GetStorePreferencesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, storePreferences = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, storePreferences = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8520,6 +9601,7 @@ class GetStorePreferencesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -8585,6 +9667,7 @@ class GetSuggestedCategoriesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -8602,6 +9685,7 @@ class GetSuggestedCategoriesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -8612,7 +9696,7 @@ class GetSuggestedCategoriesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, suggestedCategoryArray = nil, categoryCount = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, suggestedCategoryArray = nil, categoryCount = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8623,6 +9707,7 @@ class GetSuggestedCategoriesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -8686,6 +9771,7 @@ class GetTaxTableResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -8703,6 +9789,7 @@ class GetTaxTableResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -8713,7 +9800,7 @@ class GetTaxTableResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, lastUpdateTime = nil, taxTable = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, lastUpdateTime = nil, taxTable = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8724,6 +9811,7 @@ class GetTaxTableResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -8746,7 +9834,8 @@ class GetUserRequestType
     ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
-    ["userID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserID")]]
+    ["userID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserID")]],
+    ["includeExpressRequirements", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeExpressRequirements")]]
   ]
 
   attr_accessor :detailLevel
@@ -8759,12 +9848,13 @@ class GetUserRequestType
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :userID
+  attr_accessor :includeExpressRequirements
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, userID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, userID = nil, includeExpressRequirements = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -8775,6 +9865,7 @@ class GetUserRequestType
     @__xmlele_any = nil
     @itemID = itemID
     @userID = userID
+    @includeExpressRequirements = includeExpressRequirements
   end
 end
 
@@ -8793,6 +9884,7 @@ class GetUserResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -8809,6 +9901,7 @@ class GetUserResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -8818,7 +9911,7 @@ class GetUserResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, user = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, user = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8829,10 +9922,127 @@ class GetUserResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
     @user = user
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetUserContactDetailsRequestType
+class GetUserContactDetailsRequestType
+  @@schema_type = "GetUserContactDetailsRequestType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailLevel")]],
+    ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorLanguage")]],
+    ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
+    ["contactID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ContactID")]],
+    ["requesterID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RequesterID")]]
+  ]
+
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :warningLevel
+  attr_reader :__xmlele_any
+  attr_accessor :itemID
+  attr_accessor :contactID
+  attr_accessor :requesterID
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, itemID = nil, contactID = nil, requesterID = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @warningLevel = warningLevel
+    @__xmlele_any = nil
+    @itemID = itemID
+    @contactID = contactID
+    @requesterID = requesterID
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetUserContactDetailsResponseType
+class GetUserContactDetailsResponseType
+  @@schema_type = "GetUserContactDetailsResponseType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]],
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["errors", ["ErrorType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Errors")]],
+    ["message", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["build", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Build")]],
+    ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
+    ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
+    ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
+    ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["userID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserID")]],
+    ["contactAddress", ["AddressType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ContactAddress")]],
+    ["registrationDate", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RegistrationDate")]]
+  ]
+
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :eIASToken
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_reader :__xmlele_any
+  attr_accessor :userID
+  attr_accessor :contactAddress
+  attr_accessor :registrationDate
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, userID = nil, contactAddress = nil, registrationDate = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @__xmlele_any = nil
+    @userID = userID
+    @contactAddress = contactAddress
+    @registrationDate = registrationDate
   end
 end
 
@@ -8906,6 +10116,7 @@ class GetUserDisputesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -8928,6 +10139,7 @@ class GetUserDisputesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -8943,7 +10155,7 @@ class GetUserDisputesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, startingDisputeID = nil, endingDisputeID = nil, disputeArray = nil, itemsPerPage = nil, pageNumber = nil, disputeFilterCount = [], paginationResult = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, startingDisputeID = nil, endingDisputeID = nil, disputeArray = nil, itemsPerPage = nil, pageNumber = nil, disputeFilterCount = [], paginationResult = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8954,6 +10166,7 @@ class GetUserDisputesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -8985,7 +10198,9 @@ class GetUserPreferencesRequestType
     ["showCrossPromotionPreferences", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShowCrossPromotionPreferences")]],
     ["showSellerPaymentPreferences", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShowSellerPaymentPreferences")]],
     ["showEndOfAuctionEmailPreferences", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShowEndOfAuctionEmailPreferences")]],
-    ["showSellerFavoriteItemPreferences", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShowSellerFavoriteItemPreferences")]]
+    ["showSellerFavoriteItemPreferences", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShowSellerFavoriteItemPreferences")]],
+    ["showeBxOptInPreference", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShoweBxOptInPreference")]],
+    ["showProStoresPreferences", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShowProStoresPreferences")]]
   ]
 
   attr_accessor :detailLevel
@@ -9002,12 +10217,14 @@ class GetUserPreferencesRequestType
   attr_accessor :showSellerPaymentPreferences
   attr_accessor :showEndOfAuctionEmailPreferences
   attr_accessor :showSellerFavoriteItemPreferences
+  attr_accessor :showeBxOptInPreference
+  attr_accessor :showProStoresPreferences
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, showBidderNoticePreferences = nil, showCombinedPaymentPreferences = nil, showCrossPromotionPreferences = nil, showSellerPaymentPreferences = nil, showEndOfAuctionEmailPreferences = nil, showSellerFavoriteItemPreferences = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, showBidderNoticePreferences = nil, showCombinedPaymentPreferences = nil, showCrossPromotionPreferences = nil, showSellerPaymentPreferences = nil, showEndOfAuctionEmailPreferences = nil, showSellerFavoriteItemPreferences = nil, showeBxOptInPreference = nil, showProStoresPreferences = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -9022,6 +10239,8 @@ class GetUserPreferencesRequestType
     @showSellerPaymentPreferences = showSellerPaymentPreferences
     @showEndOfAuctionEmailPreferences = showEndOfAuctionEmailPreferences
     @showSellerFavoriteItemPreferences = showSellerFavoriteItemPreferences
+    @showeBxOptInPreference = showeBxOptInPreference
+    @showProStoresPreferences = showProStoresPreferences
   end
 end
 
@@ -9040,6 +10259,7 @@ class GetUserPreferencesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -9048,7 +10268,10 @@ class GetUserPreferencesResponseType
     ["crossPromotionPreferences", ["CrossPromotionPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CrossPromotionPreferences")]],
     ["sellerPaymentPreferences", ["SellerPaymentPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerPaymentPreferences")]],
     ["sellerFavoriteItemPreferences", ["SellerFavoriteItemPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerFavoriteItemPreferences")]],
-    ["endOfAuctionEmailPreferences", ["EndOfAuctionEmailPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndOfAuctionEmailPreferences")]]
+    ["endOfAuctionEmailPreferences", ["EndOfAuctionEmailPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndOfAuctionEmailPreferences")]],
+    ["eBxOptInPreference", "EBxOptInPreferenceType"],
+    ["expressPreferences", ["ExpressPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressPreferences")]],
+    ["proStoresPreference", ["ProStoresCheckoutPreferenceType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProStoresPreference")]]
   ]
 
   attr_accessor :timestamp
@@ -9061,6 +10284,7 @@ class GetUserPreferencesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -9070,12 +10294,15 @@ class GetUserPreferencesResponseType
   attr_accessor :sellerPaymentPreferences
   attr_accessor :sellerFavoriteItemPreferences
   attr_accessor :endOfAuctionEmailPreferences
+  attr_accessor :eBxOptInPreference
+  attr_accessor :expressPreferences
+  attr_accessor :proStoresPreference
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, bidderNoticePreferences = nil, combinedPaymentPreferences = nil, crossPromotionPreferences = nil, sellerPaymentPreferences = nil, sellerFavoriteItemPreferences = nil, endOfAuctionEmailPreferences = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, bidderNoticePreferences = nil, combinedPaymentPreferences = nil, crossPromotionPreferences = nil, sellerPaymentPreferences = nil, sellerFavoriteItemPreferences = nil, endOfAuctionEmailPreferences = nil, eBxOptInPreference = nil, expressPreferences = nil, proStoresPreference = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9086,6 +10313,7 @@ class GetUserPreferencesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -9095,6 +10323,9 @@ class GetUserPreferencesResponseType
     @sellerPaymentPreferences = sellerPaymentPreferences
     @sellerFavoriteItemPreferences = sellerFavoriteItemPreferences
     @endOfAuctionEmailPreferences = endOfAuctionEmailPreferences
+    @eBxOptInPreference = eBxOptInPreference
+    @expressPreferences = expressPreferences
+    @proStoresPreference = proStoresPreference
   end
 end
 
@@ -9156,6 +10387,7 @@ class GetWantItNowPostResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -9172,6 +10404,7 @@ class GetWantItNowPostResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -9181,7 +10414,7 @@ class GetWantItNowPostResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, wantItNowPost = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, wantItNowPost = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9192,6 +10425,7 @@ class GetWantItNowPostResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -9269,6 +10503,7 @@ class GetWantItNowSearchResultsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -9289,6 +10524,7 @@ class GetWantItNowSearchResultsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -9302,7 +10538,7 @@ class GetWantItNowSearchResultsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, wantItNowPostArray = nil, hasMoreItems = nil, itemsPerPage = nil, pageNumber = nil, paginationResult = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, wantItNowPostArray = nil, hasMoreItems = nil, itemsPerPage = nil, pageNumber = nil, paginationResult = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9313,6 +10549,7 @@ class GetWantItNowSearchResultsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -9382,6 +10619,7 @@ class GeteBayDetailsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -9407,6 +10645,7 @@ class GeteBayDetailsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -9425,7 +10664,7 @@ class GeteBayDetailsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, countryDetails = [], currencyDetails = [], dispatchTimeMaxDetails = [], paymentOptionDetails = [], regionDetails = [], shippingLocationDetails = [], shippingServiceDetails = [], siteDetails = [], taxJurisdiction = [], uRLDetails = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, countryDetails = [], currencyDetails = [], dispatchTimeMaxDetails = [], paymentOptionDetails = [], regionDetails = [], shippingLocationDetails = [], shippingServiceDetails = [], siteDetails = [], taxJurisdiction = [], uRLDetails = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9436,6 +10675,7 @@ class GeteBayDetailsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -9507,6 +10747,7 @@ class GeteBayOfficialTimeResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -9522,6 +10763,7 @@ class GeteBayOfficialTimeResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -9530,7 +10772,7 @@ class GeteBayOfficialTimeResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9541,6 +10783,7 @@ class GeteBayOfficialTimeResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -9620,6 +10863,7 @@ class IssueRefundResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -9637,6 +10881,7 @@ class IssueRefundResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -9647,7 +10892,7 @@ class IssueRefundResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, refundFromSeller = nil, totalRefundToBuyer = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, refundFromSeller = nil, totalRefundToBuyer = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9658,6 +10903,7 @@ class IssueRefundResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -9736,6 +10982,7 @@ class LeaveFeedbackResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -9752,6 +10999,7 @@ class LeaveFeedbackResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -9761,7 +11009,7 @@ class LeaveFeedbackResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, feedbackID = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, feedbackID = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9772,6 +11020,7 @@ class LeaveFeedbackResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -9843,6 +11092,7 @@ class PlaceOfferResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -9859,6 +11109,7 @@ class PlaceOfferResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -9868,7 +11119,7 @@ class PlaceOfferResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, sellingStatus = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, sellingStatus = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9879,6 +11130,7 @@ class PlaceOfferResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -9950,6 +11202,7 @@ class RelistItemResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -9971,6 +11224,7 @@ class RelistItemResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -9985,7 +11239,7 @@ class RelistItemResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, itemID = nil, fees = nil, startTime = nil, endTime = nil, categoryID = nil, category2ID = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, itemID = nil, fees = nil, startTime = nil, endTime = nil, categoryID = nil, category2ID = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9996,6 +11250,7 @@ class RelistItemResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -10069,6 +11324,7 @@ class RemoveFromWatchListResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -10086,6 +11342,7 @@ class RemoveFromWatchListResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -10096,7 +11353,7 @@ class RemoveFromWatchListResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, watchListCount = nil, watchListMaximum = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, watchListCount = nil, watchListMaximum = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10107,6 +11364,7 @@ class RemoveFromWatchListResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -10188,6 +11446,7 @@ class RespondToBestOfferResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -10204,6 +11463,7 @@ class RespondToBestOfferResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -10213,7 +11473,7 @@ class RespondToBestOfferResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, respondToBestOffer = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, respondToBestOffer = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10224,6 +11484,7 @@ class RespondToBestOfferResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -10304,6 +11565,7 @@ class RespondToFeedbackResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -10319,6 +11581,7 @@ class RespondToFeedbackResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -10327,7 +11590,7 @@ class RespondToFeedbackResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10338,6 +11601,7 @@ class RespondToFeedbackResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -10405,6 +11669,7 @@ class RespondToWantItNowPostResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -10420,6 +11685,7 @@ class RespondToWantItNowPostResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -10428,7 +11694,7 @@ class RespondToWantItNowPostResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10439,6 +11705,7 @@ class RespondToWantItNowPostResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -10464,7 +11731,7 @@ class ReviseCheckoutStatusRequestType
     ["amountPaid", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AmountPaid")]],
     ["paymentMethodUsed", ["BuyerPaymentMethodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentMethodUsed")]],
     ["checkoutStatus", ["CompleteStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CheckoutStatus")]],
-    ["shippingService", ["ShippingServiceCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingService")]],
+    ["shippingService", ["Token", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingService")]],
     ["shippingIncludedInTax", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingIncludedInTax")]],
     ["checkoutMethod", ["CheckoutMethodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CheckoutMethod")]],
     ["insuranceType", ["InsuranceSelectedCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InsuranceType")]],
@@ -10560,6 +11827,7 @@ class ReviseCheckoutStatusResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -10575,6 +11843,7 @@ class ReviseCheckoutStatusResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -10583,7 +11852,7 @@ class ReviseCheckoutStatusResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10594,6 +11863,7 @@ class ReviseCheckoutStatusResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -10664,10 +11934,13 @@ class ReviseItemResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
+    ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StartTime")]],
+    ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndTime")]],
     ["fees", ["FeesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Fees")]],
     ["categoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
     ["category2ID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category2ID")]]
@@ -10683,10 +11956,13 @@ class ReviseItemResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
   attr_accessor :itemID
+  attr_accessor :startTime
+  attr_accessor :endTime
   attr_accessor :fees
   attr_accessor :categoryID
   attr_accessor :category2ID
@@ -10695,7 +11971,7 @@ class ReviseItemResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, itemID = nil, fees = nil, categoryID = nil, category2ID = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, itemID = nil, startTime = nil, endTime = nil, fees = nil, categoryID = nil, category2ID = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10706,10 +11982,13 @@ class ReviseItemResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
     @itemID = itemID
+    @startTime = startTime
+    @endTime = endTime
     @fees = fees
     @categoryID = categoryID
     @category2ID = category2ID
@@ -10730,7 +12009,8 @@ class ReviseLiveAuctionItemRequestType
     ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["item", ["ItemType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]],
-    ["modifiedFields", ["ModifiedFieldType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModifiedFields")]]
+    ["modifiedFields", ["ModifiedFieldType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ModifiedFields")]],
+    ["deletedField", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DeletedField")]]
   ]
 
   attr_accessor :detailLevel
@@ -10743,12 +12023,13 @@ class ReviseLiveAuctionItemRequestType
   attr_reader :__xmlele_any
   attr_accessor :item
   attr_accessor :modifiedFields
+  attr_accessor :deletedField
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, item = nil, modifiedFields = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, item = nil, modifiedFields = [], deletedField = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -10759,6 +12040,7 @@ class ReviseLiveAuctionItemRequestType
     @__xmlele_any = nil
     @item = item
     @modifiedFields = modifiedFields
+    @deletedField = deletedField
   end
 end
 
@@ -10777,6 +12059,7 @@ class ReviseLiveAuctionItemResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -10796,6 +12079,7 @@ class ReviseLiveAuctionItemResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -10808,7 +12092,7 @@ class ReviseLiveAuctionItemResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, itemID = nil, fees = nil, categoryID = nil, category2ID = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, itemID = nil, fees = nil, categoryID = nil, category2ID = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10819,6 +12103,7 @@ class ReviseLiveAuctionItemResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -10899,6 +12184,7 @@ class ReviseMyMessagesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -10914,6 +12200,7 @@ class ReviseMyMessagesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -10922,7 +12209,7 @@ class ReviseMyMessagesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10933,6 +12220,7 @@ class ReviseMyMessagesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -11003,6 +12291,7 @@ class ReviseMyMessagesFoldersResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -11018,6 +12307,7 @@ class ReviseMyMessagesFoldersResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -11026,7 +12316,7 @@ class ReviseMyMessagesFoldersResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11037,6 +12327,7 @@ class ReviseMyMessagesFoldersResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -11104,6 +12395,7 @@ class SellerReverseDisputeResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -11119,6 +12411,7 @@ class SellerReverseDisputeResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -11127,7 +12420,7 @@ class SellerReverseDisputeResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11138,6 +12431,7 @@ class SellerReverseDisputeResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -11235,6 +12529,7 @@ class SendInvoiceResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -11250,6 +12545,7 @@ class SendInvoiceResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -11258,7 +12554,7 @@ class SendInvoiceResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11269,6 +12565,7 @@ class SendInvoiceResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -11342,6 +12639,7 @@ class SetNotificationPreferencesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -11357,6 +12655,7 @@ class SetNotificationPreferencesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -11365,7 +12664,7 @@ class SetNotificationPreferencesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11376,6 +12675,7 @@ class SetNotificationPreferencesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -11443,6 +12743,7 @@ class SetPictureManagerDetailsResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -11458,6 +12759,7 @@ class SetPictureManagerDetailsResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -11466,7 +12768,7 @@ class SetPictureManagerDetailsResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11477,6 +12779,7 @@ class SetPictureManagerDetailsResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -11544,6 +12847,7 @@ class SetPromotionRulesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -11559,6 +12863,7 @@ class SetPromotionRulesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -11567,7 +12872,7 @@ class SetPromotionRulesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11578,6 +12883,7 @@ class SetPromotionRulesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -11648,6 +12954,7 @@ class SetReturnURLResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -11663,6 +12970,7 @@ class SetReturnURLResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -11671,7 +12979,7 @@ class SetReturnURLResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11682,6 +12990,7 @@ class SetReturnURLResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -11746,6 +13055,7 @@ class SetStoreResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -11761,6 +13071,7 @@ class SetStoreResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -11769,7 +13080,7 @@ class SetStoreResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11780,6 +13091,7 @@ class SetStoreResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -11853,6 +13165,7 @@ class SetStoreCategoriesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -11870,6 +13183,7 @@ class SetStoreCategoriesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -11880,7 +13194,7 @@ class SetStoreCategoriesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, taskID = nil, status = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, taskID = nil, status = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11891,6 +13205,7 @@ class SetStoreCategoriesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -11957,6 +13272,7 @@ class SetStoreCustomPageResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -11973,6 +13289,7 @@ class SetStoreCustomPageResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -11982,7 +13299,7 @@ class SetStoreCustomPageResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, customPage = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, customPage = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11993,6 +13310,7 @@ class SetStoreCustomPageResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -12058,6 +13376,7 @@ class SetStorePreferencesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -12073,6 +13392,7 @@ class SetStorePreferencesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -12081,7 +13401,7 @@ class SetStorePreferencesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12092,6 +13412,7 @@ class SetStorePreferencesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -12156,6 +13477,7 @@ class SetTaxTableResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -12171,6 +13493,7 @@ class SetTaxTableResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -12179,7 +13502,7 @@ class SetTaxTableResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12190,6 +13513,7 @@ class SetTaxTableResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -12260,6 +13584,7 @@ class SetUserNotesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -12275,6 +13600,7 @@ class SetUserNotesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -12283,7 +13609,7 @@ class SetUserNotesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12294,6 +13620,7 @@ class SetUserNotesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -12318,7 +13645,9 @@ class SetUserPreferencesRequestType
     ["crossPromotionPreferences", ["CrossPromotionPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CrossPromotionPreferences")]],
     ["sellerPaymentPreferences", ["SellerPaymentPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerPaymentPreferences")]],
     ["sellerFavoriteItemPreferences", ["SellerFavoriteItemPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerFavoriteItemPreferences")]],
-    ["endOfAuctionEmailPreferences", ["EndOfAuctionEmailPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndOfAuctionEmailPreferences")]]
+    ["endOfAuctionEmailPreferences", ["EndOfAuctionEmailPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EndOfAuctionEmailPreferences")]],
+    ["eBxOptInPreference", "EBxOptInPreferenceType"],
+    ["expressPreferences", ["ExpressPreferencesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressPreferences")]]
   ]
 
   attr_accessor :detailLevel
@@ -12335,12 +13664,14 @@ class SetUserPreferencesRequestType
   attr_accessor :sellerPaymentPreferences
   attr_accessor :sellerFavoriteItemPreferences
   attr_accessor :endOfAuctionEmailPreferences
+  attr_accessor :eBxOptInPreference
+  attr_accessor :expressPreferences
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, bidderNoticePreferences = nil, combinedPaymentPreferences = nil, crossPromotionPreferences = nil, sellerPaymentPreferences = nil, sellerFavoriteItemPreferences = nil, endOfAuctionEmailPreferences = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, bidderNoticePreferences = nil, combinedPaymentPreferences = nil, crossPromotionPreferences = nil, sellerPaymentPreferences = nil, sellerFavoriteItemPreferences = nil, endOfAuctionEmailPreferences = nil, eBxOptInPreference = nil, expressPreferences = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -12355,6 +13686,8 @@ class SetUserPreferencesRequestType
     @sellerPaymentPreferences = sellerPaymentPreferences
     @sellerFavoriteItemPreferences = sellerFavoriteItemPreferences
     @endOfAuctionEmailPreferences = endOfAuctionEmailPreferences
+    @eBxOptInPreference = eBxOptInPreference
+    @expressPreferences = expressPreferences
   end
 end
 
@@ -12373,6 +13706,7 @@ class SetUserPreferencesResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -12388,6 +13722,7 @@ class SetUserPreferencesResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -12396,7 +13731,7 @@ class SetUserPreferencesResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12407,9 +13742,120 @@ class SetUserPreferencesResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ValidateChallengeInputRequestType
+class ValidateChallengeInputRequestType
+  @@schema_type = "ValidateChallengeInputRequestType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DetailLevel")]],
+    ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorLanguage")]],
+    ["messageID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorHandling")]],
+    ["invocationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InvocationID")]],
+    ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["challengeToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ChallengeToken")]],
+    ["userInput", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserInput")]],
+    ["keepTokenValid", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "KeepTokenValid")]]
+  ]
+
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :warningLevel
+  attr_reader :__xmlele_any
+  attr_accessor :challengeToken
+  attr_accessor :userInput
+  attr_accessor :keepTokenValid
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, challengeToken = nil, userInput = nil, keepTokenValid = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @warningLevel = warningLevel
+    @__xmlele_any = nil
+    @challengeToken = challengeToken
+    @userInput = userInput
+    @keepTokenValid = keepTokenValid
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ValidateChallengeInputResponseType
+class ValidateChallengeInputResponseType
+  @@schema_type = "ValidateChallengeInputResponseType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]],
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["errors", ["ErrorType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Errors")]],
+    ["message", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Message")]],
+    ["version", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Version")]],
+    ["build", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Build")]],
+    ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
+    ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
+    ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
+    ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
+    ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
+    ["validToken", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ValidToken")]]
+  ]
+
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :eIASToken
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_reader :__xmlele_any
+  attr_accessor :validToken
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, validToken = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @__xmlele_any = nil
+    @validToken = validToken
   end
 end
 
@@ -12486,6 +13932,7 @@ class ValidateTestUserRegistrationResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -12501,6 +13948,7 @@ class ValidateTestUserRegistrationResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -12509,7 +13957,7 @@ class ValidateTestUserRegistrationResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12520,6 +13968,7 @@ class ValidateTestUserRegistrationResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -12540,6 +13989,7 @@ class VerifyAddItemRequestType
     ["warningLevel", ["WarningLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WarningLevel")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["item", ["ItemType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Item")]],
+    ["includeExpressRequirements", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "IncludeExpressRequirements")]],
     ["externalProductID", ["ExternalProductIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExternalProductID")]]
   ]
 
@@ -12552,13 +14002,14 @@ class VerifyAddItemRequestType
   attr_accessor :warningLevel
   attr_reader :__xmlele_any
   attr_accessor :item
+  attr_accessor :includeExpressRequirements
   attr_accessor :externalProductID
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, item = nil, externalProductID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, item = nil, includeExpressRequirements = nil, externalProductID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -12568,6 +14019,7 @@ class VerifyAddItemRequestType
     @warningLevel = warningLevel
     @__xmlele_any = nil
     @item = item
+    @includeExpressRequirements = includeExpressRequirements
     @externalProductID = externalProductID
   end
 end
@@ -12587,11 +14039,14 @@ class VerifyAddItemResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["fees", ["FeesType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Fees")]],
+    ["expressListing", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressListing")]],
+    ["expressItemRequirements", ["ExpressItemRequirementsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressItemRequirements")]],
     ["categoryID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CategoryID")]],
     ["category2ID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category2ID")]]
   ]
@@ -12606,11 +14061,14 @@ class VerifyAddItemResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :fees
+  attr_accessor :expressListing
+  attr_accessor :expressItemRequirements
   attr_accessor :categoryID
   attr_accessor :category2ID
 
@@ -12618,7 +14076,7 @@ class VerifyAddItemResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, itemID = nil, fees = nil, categoryID = nil, category2ID = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, itemID = nil, fees = nil, expressListing = nil, expressItemRequirements = nil, categoryID = nil, category2ID = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12629,11 +14087,14 @@ class VerifyAddItemResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
     @itemID = itemID
     @fees = fees
+    @expressListing = expressListing
+    @expressItemRequirements = expressItemRequirements
     @categoryID = categoryID
     @category2ID = category2ID
   end
@@ -12657,7 +14118,8 @@ class VerifyAddSecondChanceItemRequestType
     ["copyEmailToSeller", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CopyEmailToSeller")]],
     ["duration", ["SecondChanceOfferDurationCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Duration")]],
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
-    ["site", ["SiteCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Site")]]
+    ["site", ["SiteCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Site")]],
+    ["sellerMessage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerMessage")]]
   ]
 
   attr_accessor :detailLevel
@@ -12674,12 +14136,13 @@ class VerifyAddSecondChanceItemRequestType
   attr_accessor :duration
   attr_accessor :itemID
   attr_accessor :site
+  attr_accessor :sellerMessage
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, recipientBidderUserID = nil, buyItNowPrice = nil, copyEmailToSeller = nil, duration = nil, itemID = nil, site = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, recipientBidderUserID = nil, buyItNowPrice = nil, copyEmailToSeller = nil, duration = nil, itemID = nil, site = nil, sellerMessage = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -12694,6 +14157,7 @@ class VerifyAddSecondChanceItemRequestType
     @duration = duration
     @itemID = itemID
     @site = site
+    @sellerMessage = sellerMessage
   end
 end
 
@@ -12712,6 +14176,7 @@ class VerifyAddSecondChanceItemResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -12730,6 +14195,7 @@ class VerifyAddSecondChanceItemResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -12741,7 +14207,7 @@ class VerifyAddSecondChanceItemResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, fees = nil, startTime = nil, endTime = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, fees = nil, startTime = nil, endTime = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12752,6 +14218,7 @@ class VerifyAddSecondChanceItemResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -12816,6 +14283,7 @@ class AbstractResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
@@ -12831,6 +14299,7 @@ class AbstractResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -12839,7 +14308,7 @@ class AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12850,6 +14319,7 @@ class AbstractResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -12883,6 +14353,90 @@ class CustomSecurityHeaderType
     @hardExpirationWarning = hardExpirationWarning
     @credentials = credentials
     @notificationSignature = notificationSignature
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DisputeFilterCountType
+class DisputeFilterCountType
+  @@schema_type = "DisputeFilterCountType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["disputeFilterType", ["DisputeFilterTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeFilterType")]],
+    ["totalAvailable", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalAvailable")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :disputeFilterType
+  attr_accessor :totalAvailable
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(disputeFilterType = nil, totalAvailable = nil)
+    @disputeFilterType = disputeFilterType
+    @totalAvailable = totalAvailable
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DisputeMessageType
+class DisputeMessageType
+  @@schema_type = "DisputeMessageType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["messageID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
+    ["messageSource", ["DisputeMessageSourceCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageSource")]],
+    ["messageCreationTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageCreationTime")]],
+    ["messageText", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageText")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :messageID
+  attr_accessor :messageSource
+  attr_accessor :messageCreationTime
+  attr_accessor :messageText
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(messageID = nil, messageSource = nil, messageCreationTime = nil, messageText = nil)
+    @messageID = messageID
+    @messageSource = messageSource
+    @messageCreationTime = messageCreationTime
+    @messageText = messageText
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DisputeResolutionType
+class DisputeResolutionType
+  @@schema_type = "DisputeResolutionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["disputeResolutionRecordType", ["DisputeResolutionRecordTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeResolutionRecordType")]],
+    ["disputeResolutionReason", ["DisputeResolutionReasonCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeResolutionReason")]],
+    ["resolutionTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ResolutionTime")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :disputeResolutionRecordType
+  attr_accessor :disputeResolutionReason
+  attr_accessor :resolutionTime
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(disputeResolutionRecordType = nil, disputeResolutionReason = nil, resolutionTime = nil)
+    @disputeResolutionRecordType = disputeResolutionRecordType
+    @disputeResolutionReason = disputeResolutionReason
+    @resolutionTime = resolutionTime
     @__xmlele_any = nil
   end
 end
@@ -13021,7 +14575,8 @@ end
 #   contains SOAP::SOAPDecimal
 class MeasureType < ::String
   @@schema_attribute = {
-    XSD::QName.new(nil, "unit") => nil
+    XSD::QName.new(nil, "unit") => nil,
+    XSD::QName.new(nil, "measurementSystem") => nil
   }
 
   def xmlattr_unit
@@ -13032,9 +14587,42 @@ class MeasureType < ::String
     (@__xmlattr ||= {})[XSD::QName.new(nil, "unit")] = value
   end
 
+  def xmlattr_measurementSystem
+    (@__xmlattr ||= {})[XSD::QName.new(nil, "measurementSystem")]
+  end
+
+  def xmlattr_measurementSystem=(value)
+    (@__xmlattr ||= {})[XSD::QName.new(nil, "measurementSystem")] = value
+  end
+
   def initialize(*arg)
     super
     @__xmlattr = {}
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}PaginationType
+class PaginationType
+  @@schema_type = "PaginationType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["entriesPerPage", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EntriesPerPage")]],
+    ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PageNumber")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :entriesPerPage
+  attr_accessor :pageNumber
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(entriesPerPage = nil, pageNumber = nil)
+    @entriesPerPage = entriesPerPage
+    @pageNumber = pageNumber
+    @__xmlele_any = nil
   end
 end
 
@@ -13342,6 +14930,45 @@ class AdFormatLeadType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}AddMemberMessagesAAQToBidderRequestContainerType
+class AddMemberMessagesAAQToBidderRequestContainerType
+  @@schema_type = "AddMemberMessagesAAQToBidderRequestContainerType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
+    ["memberMessage", ["MemberMessageType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MemberMessage")]]
+  ]
+
+  attr_accessor :correlationID
+  attr_accessor :itemID
+  attr_accessor :memberMessage
+
+  def initialize(correlationID = nil, itemID = nil, memberMessage = nil)
+    @correlationID = correlationID
+    @itemID = itemID
+    @memberMessage = memberMessage
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}AddMemberMessagesAAQToBidderResponseContainerType
+class AddMemberMessagesAAQToBidderResponseContainerType
+  @@schema_type = "AddMemberMessagesAAQToBidderResponseContainerType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["correlationID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CorrelationID")]],
+    ["ack", ["AckCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ack")]]
+  ]
+
+  attr_accessor :correlationID
+  attr_accessor :ack
+
+  def initialize(correlationID = nil, ack = nil)
+    @correlationID = correlationID
+    @ack = ack
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}AdditionalAccountType
 class AdditionalAccountType
   @@schema_type = "AdditionalAccountType"
@@ -13380,10 +15007,19 @@ class AddressType
     ["street1", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Street1")]],
     ["street2", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Street2")]],
     ["cityName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CityName")]],
+    ["county", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "County")]],
     ["stateOrProvince", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StateOrProvince")]],
     ["country", ["CountryCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Country")]],
     ["countryName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CountryName")]],
     ["phone", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Phone")]],
+    ["phoneCountryCode", ["CountryCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PhoneCountryCode")]],
+    ["phoneCountryPrefix", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PhoneCountryPrefix")]],
+    ["phoneAreaOrCityCode", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PhoneAreaOrCityCode")]],
+    ["phoneLocalNumber", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PhoneLocalNumber")]],
+    ["phone2CountryCode", ["CountryCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Phone2CountryCode")]],
+    ["phone2CountryPrefix", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Phone2CountryPrefix")]],
+    ["phone2AreaOrCityCode", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Phone2AreaOrCityCode")]],
+    ["phone2LocalNumber", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Phone2LocalNumber")]],
     ["postalCode", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PostalCode")]],
     ["addressID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AddressID")]],
     ["addressOwner", ["AddressOwnerCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AddressOwner")]],
@@ -13402,10 +15038,19 @@ class AddressType
   attr_accessor :street1
   attr_accessor :street2
   attr_accessor :cityName
+  attr_accessor :county
   attr_accessor :stateOrProvince
   attr_accessor :country
   attr_accessor :countryName
   attr_accessor :phone
+  attr_accessor :phoneCountryCode
+  attr_accessor :phoneCountryPrefix
+  attr_accessor :phoneAreaOrCityCode
+  attr_accessor :phoneLocalNumber
+  attr_accessor :phone2CountryCode
+  attr_accessor :phone2CountryPrefix
+  attr_accessor :phone2AreaOrCityCode
+  attr_accessor :phone2LocalNumber
   attr_accessor :postalCode
   attr_accessor :addressID
   attr_accessor :addressOwner
@@ -13422,16 +15067,25 @@ class AddressType
     @__xmlele_any = elements
   end
 
-  def initialize(name = nil, street = nil, street1 = nil, street2 = nil, cityName = nil, stateOrProvince = nil, country = nil, countryName = nil, phone = nil, postalCode = nil, addressID = nil, addressOwner = nil, addressStatus = nil, externalAddressID = nil, internationalName = nil, internationalStateAndCity = nil, internationalStreet = nil, companyName = nil, addressRecordType = nil)
+  def initialize(name = nil, street = nil, street1 = nil, street2 = nil, cityName = nil, county = nil, stateOrProvince = nil, country = nil, countryName = nil, phone = nil, phoneCountryCode = nil, phoneCountryPrefix = nil, phoneAreaOrCityCode = nil, phoneLocalNumber = nil, phone2CountryCode = nil, phone2CountryPrefix = nil, phone2AreaOrCityCode = nil, phone2LocalNumber = nil, postalCode = nil, addressID = nil, addressOwner = nil, addressStatus = nil, externalAddressID = nil, internationalName = nil, internationalStateAndCity = nil, internationalStreet = nil, companyName = nil, addressRecordType = nil)
     @name = name
     @street = street
     @street1 = street1
     @street2 = street2
     @cityName = cityName
+    @county = county
     @stateOrProvince = stateOrProvince
     @country = country
     @countryName = countryName
     @phone = phone
+    @phoneCountryCode = phoneCountryCode
+    @phoneCountryPrefix = phoneCountryPrefix
+    @phoneAreaOrCityCode = phoneAreaOrCityCode
+    @phoneLocalNumber = phoneLocalNumber
+    @phone2CountryCode = phone2CountryCode
+    @phone2CountryPrefix = phone2CountryPrefix
+    @phone2AreaOrCityCode = phone2AreaOrCityCode
+    @phone2LocalNumber = phone2LocalNumber
     @postalCode = postalCode
     @addressID = addressID
     @addressOwner = addressOwner
@@ -14079,13 +15733,31 @@ class BuyerRequirementsType
   @@schema_type = "BuyerRequirementsType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
-    ["linkedPayPalAccount", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LinkedPayPalAccount")]]
+    ["shipToRegistrationCountry", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShipToRegistrationCountry")]],
+    ["zeroFeedbackScore", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ZeroFeedbackScore")]],
+    ["minimumFeedbackScore", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinimumFeedbackScore")]],
+    ["maximumUnpaidItemStrikes", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MaximumUnpaidItemStrikes")]],
+    ["maximumItemRequirements", ["MaximumItemRequirementsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MaximumItemRequirements")]],
+    ["linkedPayPalAccount", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LinkedPayPalAccount")]],
+    ["verifiedUserRequirements", ["VerifiedUserRequirementsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "VerifiedUserRequirements")]]
   ]
 
+  attr_accessor :shipToRegistrationCountry
+  attr_accessor :zeroFeedbackScore
+  attr_accessor :minimumFeedbackScore
+  attr_accessor :maximumUnpaidItemStrikes
+  attr_accessor :maximumItemRequirements
   attr_accessor :linkedPayPalAccount
+  attr_accessor :verifiedUserRequirements
 
-  def initialize(linkedPayPalAccount = nil)
+  def initialize(shipToRegistrationCountry = nil, zeroFeedbackScore = nil, minimumFeedbackScore = nil, maximumUnpaidItemStrikes = nil, maximumItemRequirements = nil, linkedPayPalAccount = nil, verifiedUserRequirements = nil)
+    @shipToRegistrationCountry = shipToRegistrationCountry
+    @zeroFeedbackScore = zeroFeedbackScore
+    @minimumFeedbackScore = minimumFeedbackScore
+    @maximumUnpaidItemStrikes = maximumUnpaidItemStrikes
+    @maximumItemRequirements = maximumItemRequirements
     @linkedPayPalAccount = linkedPayPalAccount
+    @verifiedUserRequirements = verifiedUserRequirements
   end
 end
 
@@ -14245,6 +15917,7 @@ class CalculatedShippingRateType
     ["shippingPackage", ["ShippingPackageCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingPackage")]],
     ["weightMajor", ["MeasureType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WeightMajor")]],
     ["weightMinor", ["MeasureType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WeightMinor")]],
+    ["internationalPackagingHandlingCosts", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InternationalPackagingHandlingCosts")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
   ]
 
@@ -14257,13 +15930,14 @@ class CalculatedShippingRateType
   attr_accessor :shippingPackage
   attr_accessor :weightMajor
   attr_accessor :weightMinor
+  attr_accessor :internationalPackagingHandlingCosts
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(originatingPostalCode = nil, packageDepth = nil, packageLength = nil, packageWidth = nil, packagingHandlingCosts = nil, shippingIrregular = nil, shippingPackage = nil, weightMajor = nil, weightMinor = nil)
+  def initialize(originatingPostalCode = nil, packageDepth = nil, packageLength = nil, packageWidth = nil, packagingHandlingCosts = nil, shippingIrregular = nil, shippingPackage = nil, weightMajor = nil, weightMinor = nil, internationalPackagingHandlingCosts = nil)
     @originatingPostalCode = originatingPostalCode
     @packageDepth = packageDepth
     @packageLength = packageLength
@@ -14273,6 +15947,7 @@ class CalculatedShippingRateType
     @shippingPackage = shippingPackage
     @weightMajor = weightMajor
     @weightMinor = weightMinor
+    @internationalPackagingHandlingCosts = internationalPackagingHandlingCosts
     @__xmlele_any = nil
   end
 end
@@ -14351,6 +16026,19 @@ class CategoryFeatureType
     ["digitalDeliveryEnabled", ["DigitalDeliveryEnabledCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DigitalDeliveryEnabled")]],
     ["bestOfferCounterEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferCounterEnabled")]],
     ["bestOfferAutoDeclineEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferAutoDeclineEnabled")]],
+    ["localMarketSpecialitySubscription", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalMarketSpecialitySubscription")]],
+    ["localMarketRegularSubscription", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalMarketRegularSubscription")]],
+    ["localMarketPremiumSubscription", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalMarketPremiumSubscription")]],
+    ["localMarketNonSubscription", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalMarketNonSubscription")]],
+    ["expressEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressEnabled")]],
+    ["expressPicturesRequired", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressPicturesRequired")]],
+    ["expressConditionRequired", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressConditionRequired")]],
+    ["minimumReservePrice", ["SOAP::SOAPDouble", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinimumReservePrice")]],
+    ["sellerContactDetailsEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerContactDetailsEnabled")]],
+    ["transactionConfirmationRequestEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionConfirmationRequestEnabled")]],
+    ["storeInventoryEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoreInventoryEnabled")]],
+    ["skypeMeTransactionalEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SkypeMeTransactionalEnabled")]],
+    ["skypeMeNonTransactionalEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SkypeMeNonTransactionalEnabled")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
   ]
 
@@ -14369,13 +16057,26 @@ class CategoryFeatureType
   attr_accessor :digitalDeliveryEnabled
   attr_accessor :bestOfferCounterEnabled
   attr_accessor :bestOfferAutoDeclineEnabled
+  attr_accessor :localMarketSpecialitySubscription
+  attr_accessor :localMarketRegularSubscription
+  attr_accessor :localMarketPremiumSubscription
+  attr_accessor :localMarketNonSubscription
+  attr_accessor :expressEnabled
+  attr_accessor :expressPicturesRequired
+  attr_accessor :expressConditionRequired
+  attr_accessor :minimumReservePrice
+  attr_accessor :sellerContactDetailsEnabled
+  attr_accessor :transactionConfirmationRequestEnabled
+  attr_accessor :storeInventoryEnabled
+  attr_accessor :skypeMeTransactionalEnabled
+  attr_accessor :skypeMeNonTransactionalEnabled
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(categoryID = nil, listingDuration = [], shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil)
+  def initialize(categoryID = nil, listingDuration = [], shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil, localMarketSpecialitySubscription = nil, localMarketRegularSubscription = nil, localMarketPremiumSubscription = nil, localMarketNonSubscription = nil, expressEnabled = nil, expressPicturesRequired = nil, expressConditionRequired = nil, minimumReservePrice = nil, sellerContactDetailsEnabled = nil, transactionConfirmationRequestEnabled = nil, storeInventoryEnabled = nil, skypeMeTransactionalEnabled = nil, skypeMeNonTransactionalEnabled = nil)
     @categoryID = categoryID
     @listingDuration = listingDuration
     @shippingTermsRequired = shippingTermsRequired
@@ -14391,6 +16092,19 @@ class CategoryFeatureType
     @digitalDeliveryEnabled = digitalDeliveryEnabled
     @bestOfferCounterEnabled = bestOfferCounterEnabled
     @bestOfferAutoDeclineEnabled = bestOfferAutoDeclineEnabled
+    @localMarketSpecialitySubscription = localMarketSpecialitySubscription
+    @localMarketRegularSubscription = localMarketRegularSubscription
+    @localMarketPremiumSubscription = localMarketPremiumSubscription
+    @localMarketNonSubscription = localMarketNonSubscription
+    @expressEnabled = expressEnabled
+    @expressPicturesRequired = expressPicturesRequired
+    @expressConditionRequired = expressConditionRequired
+    @minimumReservePrice = minimumReservePrice
+    @sellerContactDetailsEnabled = sellerContactDetailsEnabled
+    @transactionConfirmationRequestEnabled = transactionConfirmationRequestEnabled
+    @storeInventoryEnabled = storeInventoryEnabled
+    @skypeMeTransactionalEnabled = skypeMeTransactionalEnabled
+    @skypeMeNonTransactionalEnabled = skypeMeNonTransactionalEnabled
     @__xmlele_any = nil
   end
 end
@@ -14904,6 +16618,30 @@ class CombinedPaymentPreferencesType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}ContextSearchAssetType
+class ContextSearchAssetType
+  @@schema_type = "ContextSearchAssetType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["keyword", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Keyword")]],
+    ["category", ["CategoryType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Category")]],
+    ["score", ["SOAP::SOAPFloat", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Score")]],
+    ["ranking", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Ranking")]]
+  ]
+
+  attr_accessor :keyword
+  attr_accessor :category
+  attr_accessor :score
+  attr_accessor :ranking
+
+  def initialize(keyword = nil, category = nil, score = nil, ranking = nil)
+    @keyword = keyword
+    @category = category
+    @score = score
+    @ranking = ranking
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}CountryDetailsType
 class CountryDetailsType
   @@schema_type = "CountryDetailsType"
@@ -15193,90 +16931,6 @@ class DisputeArrayType < ::Array
   ]
 end
 
-# {urn:ebay:apis:eBLBaseComponents}DisputeFilterCountType
-class DisputeFilterCountType
-  @@schema_type = "DisputeFilterCountType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [
-    ["disputeFilterType", ["DisputeFilterTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeFilterType")]],
-    ["totalAvailable", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalAvailable")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
-  ]
-
-  attr_accessor :disputeFilterType
-  attr_accessor :totalAvailable
-  attr_reader :__xmlele_any
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(disputeFilterType = nil, totalAvailable = nil)
-    @disputeFilterType = disputeFilterType
-    @totalAvailable = totalAvailable
-    @__xmlele_any = nil
-  end
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DisputeMessageType
-class DisputeMessageType
-  @@schema_type = "DisputeMessageType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [
-    ["messageID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageID")]],
-    ["messageSource", ["DisputeMessageSourceCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageSource")]],
-    ["messageCreationTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageCreationTime")]],
-    ["messageText", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MessageText")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
-  ]
-
-  attr_accessor :messageID
-  attr_accessor :messageSource
-  attr_accessor :messageCreationTime
-  attr_accessor :messageText
-  attr_reader :__xmlele_any
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(messageID = nil, messageSource = nil, messageCreationTime = nil, messageText = nil)
-    @messageID = messageID
-    @messageSource = messageSource
-    @messageCreationTime = messageCreationTime
-    @messageText = messageText
-    @__xmlele_any = nil
-  end
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DisputeResolutionType
-class DisputeResolutionType
-  @@schema_type = "DisputeResolutionType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [
-    ["disputeResolutionRecordType", ["DisputeResolutionRecordTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeResolutionRecordType")]],
-    ["disputeResolutionReason", ["DisputeResolutionReasonCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisputeResolutionReason")]],
-    ["resolutionTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ResolutionTime")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
-  ]
-
-  attr_accessor :disputeResolutionRecordType
-  attr_accessor :disputeResolutionReason
-  attr_accessor :resolutionTime
-  attr_reader :__xmlele_any
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(disputeResolutionRecordType = nil, disputeResolutionReason = nil, resolutionTime = nil)
-    @disputeResolutionRecordType = disputeResolutionRecordType
-    @disputeResolutionReason = disputeResolutionReason
-    @resolutionTime = resolutionTime
-    @__xmlele_any = nil
-  end
-end
-
 # {urn:ebay:apis:eBLBaseComponents}DisputeType
 class DisputeType
   @@schema_type = "DisputeType"
@@ -15381,6 +17035,28 @@ class DistanceType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}DomainHistogramType
+class DomainHistogramType
+  @@schema_type = "DomainHistogramType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["department", ["ExpressHistogramDepartmentType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Department")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :department
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(department = [])
+    @department = department
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}DutchBINEnabledDefinitionType
 class DutchBINEnabledDefinitionType
   @@schema_type = "DutchBINEnabledDefinitionType"
@@ -15455,6 +17131,396 @@ class ExpansionArrayType
   def initialize(expansionItem = [], totalAvailable = nil)
     @expansionItem = expansionItem
     @totalAvailable = totalAvailable
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ExpressConditionRequiredDefinitionType
+class ExpressConditionRequiredDefinitionType
+  @@schema_type = "ExpressConditionRequiredDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ExpressDetailsType
+class ExpressDetailsType
+  @@schema_type = "ExpressDetailsType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["expressLargeImage", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressLargeImage")]],
+    ["expressSmallImage", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressSmallImage")]],
+    ["condition", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Condition")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :expressLargeImage
+  attr_accessor :expressSmallImage
+  attr_accessor :condition
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(expressLargeImage = nil, expressSmallImage = nil, condition = nil)
+    @expressLargeImage = expressLargeImage
+    @expressSmallImage = expressSmallImage
+    @condition = condition
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ExpressEnabledDefinitionType
+class ExpressEnabledDefinitionType
+  @@schema_type = "ExpressEnabledDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ExpressHistogramAisleType
+class ExpressHistogramAisleType
+  @@schema_type = "ExpressHistogramAisleType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["domainDetails", ["ExpressHistogramDomainDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DomainDetails")]],
+    ["productType", ["ExpressHistogramProductType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductType")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :domainDetails
+  attr_accessor :productType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(domainDetails = nil, productType = [])
+    @domainDetails = domainDetails
+    @productType = productType
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ExpressHistogramDepartmentType
+class ExpressHistogramDepartmentType
+  @@schema_type = "ExpressHistogramDepartmentType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["domainDetails", ["ExpressHistogramDomainDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DomainDetails")]],
+    ["aisle", ["ExpressHistogramAisleType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Aisle")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :domainDetails
+  attr_accessor :aisle
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(domainDetails = nil, aisle = [])
+    @domainDetails = domainDetails
+    @aisle = aisle
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ExpressHistogramDomainDetailsType
+class ExpressHistogramDomainDetailsType
+  @@schema_type = "ExpressHistogramDomainDetailsType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["name", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Name")]],
+    ["breadCrumb", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BreadCrumb")]],
+    ["itemCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemCount")]],
+    ["productCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductCount")]],
+    ["imageURL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ImageURL")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :name
+  attr_accessor :breadCrumb
+  attr_accessor :itemCount
+  attr_accessor :productCount
+  attr_accessor :imageURL
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(name = nil, breadCrumb = nil, itemCount = nil, productCount = nil, imageURL = nil)
+    @name = name
+    @breadCrumb = breadCrumb
+    @itemCount = itemCount
+    @productCount = productCount
+    @imageURL = imageURL
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ExpressHistogramProductType
+class ExpressHistogramProductType
+  @@schema_type = "ExpressHistogramProductType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["domainDetails", ["ExpressHistogramDomainDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DomainDetails")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :domainDetails
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(domainDetails = nil)
+    @domainDetails = domainDetails
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ExpressItemRequirementsType
+class ExpressItemRequirementsType
+  @@schema_type = "ExpressItemRequirementsType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["sellerExpressEligible", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerExpressEligible")]],
+    ["expressOptOut", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressOptOut")]],
+    ["expressApproved", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressApproved")]],
+    ["expressEligibleListingType", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressEligibleListingType")]],
+    ["expressEnabledCategory", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressEnabledCategory")]],
+    ["eligiblePayPalAccount", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EligiblePayPalAccount")]],
+    ["domesticShippingCost", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DomesticShippingCost")]],
+    ["eligibleReturnPolicy", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EligibleReturnPolicy")]],
+    ["picture", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Picture")]],
+    ["eligibleItemCondition", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EligibleItemCondition")]],
+    ["priceAboveMinimum", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PriceAboveMinimum")]],
+    ["priceBelowMaximum", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PriceBelowMaximum")]],
+    ["eligibleCheckout", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EligibleCheckout")]],
+    ["noPreapprovedBidderList", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NoPreapprovedBidderList")]],
+    ["noCharity", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NoCharity")]],
+    ["noDigitalDelivery", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NoDigitalDelivery")]],
+    ["combinedShippingDiscount", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CombinedShippingDiscount")]],
+    ["shipFromEligibleCountry", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShipFromEligibleCountry")]],
+    ["payPalAccountAcceptsUnconfirmedAddress", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PayPalAccountAcceptsUnconfirmedAddress")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :sellerExpressEligible
+  attr_accessor :expressOptOut
+  attr_accessor :expressApproved
+  attr_accessor :expressEligibleListingType
+  attr_accessor :expressEnabledCategory
+  attr_accessor :eligiblePayPalAccount
+  attr_accessor :domesticShippingCost
+  attr_accessor :eligibleReturnPolicy
+  attr_accessor :picture
+  attr_accessor :eligibleItemCondition
+  attr_accessor :priceAboveMinimum
+  attr_accessor :priceBelowMaximum
+  attr_accessor :eligibleCheckout
+  attr_accessor :noPreapprovedBidderList
+  attr_accessor :noCharity
+  attr_accessor :noDigitalDelivery
+  attr_accessor :combinedShippingDiscount
+  attr_accessor :shipFromEligibleCountry
+  attr_accessor :payPalAccountAcceptsUnconfirmedAddress
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(sellerExpressEligible = nil, expressOptOut = nil, expressApproved = nil, expressEligibleListingType = nil, expressEnabledCategory = nil, eligiblePayPalAccount = nil, domesticShippingCost = nil, eligibleReturnPolicy = nil, picture = nil, eligibleItemCondition = nil, priceAboveMinimum = nil, priceBelowMaximum = nil, eligibleCheckout = nil, noPreapprovedBidderList = nil, noCharity = nil, noDigitalDelivery = nil, combinedShippingDiscount = nil, shipFromEligibleCountry = nil, payPalAccountAcceptsUnconfirmedAddress = nil)
+    @sellerExpressEligible = sellerExpressEligible
+    @expressOptOut = expressOptOut
+    @expressApproved = expressApproved
+    @expressEligibleListingType = expressEligibleListingType
+    @expressEnabledCategory = expressEnabledCategory
+    @eligiblePayPalAccount = eligiblePayPalAccount
+    @domesticShippingCost = domesticShippingCost
+    @eligibleReturnPolicy = eligibleReturnPolicy
+    @picture = picture
+    @eligibleItemCondition = eligibleItemCondition
+    @priceAboveMinimum = priceAboveMinimum
+    @priceBelowMaximum = priceBelowMaximum
+    @eligibleCheckout = eligibleCheckout
+    @noPreapprovedBidderList = noPreapprovedBidderList
+    @noCharity = noCharity
+    @noDigitalDelivery = noDigitalDelivery
+    @combinedShippingDiscount = combinedShippingDiscount
+    @shipFromEligibleCountry = shipFromEligibleCountry
+    @payPalAccountAcceptsUnconfirmedAddress = payPalAccountAcceptsUnconfirmedAddress
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ExpressPicturesRequiredDefinitionType
+class ExpressPicturesRequiredDefinitionType
+  @@schema_type = "ExpressPicturesRequiredDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ExpressPreferencesType
+class ExpressPreferencesType
+  @@schema_type = "ExpressPreferencesType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["expressSellingPreference", ["ExpressSellingPreferenceCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressSellingPreference")]],
+    ["defaultPayPalAccount", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DefaultPayPalAccount")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :expressSellingPreference
+  attr_accessor :defaultPayPalAccount
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(expressSellingPreference = nil, defaultPayPalAccount = nil)
+    @expressSellingPreference = expressSellingPreference
+    @defaultPayPalAccount = defaultPayPalAccount
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ExpressProductType
+class ExpressProductType
+  @@schema_type = "ExpressProductType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["title", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Title")]],
+    ["minPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinPrice")]],
+    ["maxPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MaxPrice")]],
+    ["stockPhotoURL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StockPhotoURL")]],
+    ["itemCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemCount")]],
+    ["externalProductID", ["ExternalProductIDType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExternalProductID")]],
+    ["productReferenceID", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProductReferenceID")]],
+    ["itemSpecifics", ["NameValueListArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemSpecifics")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :title
+  attr_accessor :minPrice
+  attr_accessor :maxPrice
+  attr_accessor :stockPhotoURL
+  attr_accessor :itemCount
+  attr_accessor :externalProductID
+  attr_accessor :productReferenceID
+  attr_accessor :itemSpecifics
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(title = nil, minPrice = nil, maxPrice = nil, stockPhotoURL = nil, itemCount = nil, externalProductID = nil, productReferenceID = nil, itemSpecifics = nil)
+    @title = title
+    @minPrice = minPrice
+    @maxPrice = maxPrice
+    @stockPhotoURL = stockPhotoURL
+    @itemCount = itemCount
+    @externalProductID = externalProductID
+    @productReferenceID = productReferenceID
+    @itemSpecifics = itemSpecifics
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ExpressSellerRequirementsType
+class ExpressSellerRequirementsType
+  @@schema_type = "ExpressSellerRequirementsType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["expressSellingPreference", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressSellingPreference")]],
+    ["expressApproved", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressApproved")]],
+    ["goodStanding", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GoodStanding")]],
+    ["feedbackScore", ["FeedbackRequirementsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackScore")]],
+    ["positiveFeedbackPercent", ["FeedbackRequirementsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PositiveFeedbackPercent")]],
+    ["feedbackAsSellerScore", ["FeedbackRequirementsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackAsSellerScore")]],
+    ["positiveFeedbackAsSellerPercent", ["FeedbackRequirementsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PositiveFeedbackAsSellerPercent")]],
+    ["businessSeller", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BusinessSeller")]],
+    ["eligiblePayPalAccount", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EligiblePayPalAccount")]],
+    ["payPalAccountAcceptsUnconfirmedAddress", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PayPalAccountAcceptsUnconfirmedAddress")]],
+    ["combinedPaymentsAccepted", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CombinedPaymentsAccepted")]],
+    ["feedbackPublic", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackPublic")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :expressSellingPreference
+  attr_accessor :expressApproved
+  attr_accessor :goodStanding
+  attr_accessor :feedbackScore
+  attr_accessor :positiveFeedbackPercent
+  attr_accessor :feedbackAsSellerScore
+  attr_accessor :positiveFeedbackAsSellerPercent
+  attr_accessor :businessSeller
+  attr_accessor :eligiblePayPalAccount
+  attr_accessor :payPalAccountAcceptsUnconfirmedAddress
+  attr_accessor :combinedPaymentsAccepted
+  attr_accessor :feedbackPublic
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(expressSellingPreference = nil, expressApproved = nil, goodStanding = nil, feedbackScore = nil, positiveFeedbackPercent = nil, feedbackAsSellerScore = nil, positiveFeedbackAsSellerPercent = nil, businessSeller = nil, eligiblePayPalAccount = nil, payPalAccountAcceptsUnconfirmedAddress = nil, combinedPaymentsAccepted = nil, feedbackPublic = nil)
+    @expressSellingPreference = expressSellingPreference
+    @expressApproved = expressApproved
+    @goodStanding = goodStanding
+    @feedbackScore = feedbackScore
+    @positiveFeedbackPercent = positiveFeedbackPercent
+    @feedbackAsSellerScore = feedbackAsSellerScore
+    @positiveFeedbackAsSellerPercent = positiveFeedbackAsSellerPercent
+    @businessSeller = businessSeller
+    @eligiblePayPalAccount = eligiblePayPalAccount
+    @payPalAccountAcceptsUnconfirmedAddress = payPalAccountAcceptsUnconfirmedAddress
+    @combinedPaymentsAccepted = combinedPaymentsAccepted
+    @feedbackPublic = feedbackPublic
+    @__xmlele_any = nil
   end
 end
 
@@ -15561,6 +17627,22 @@ class FeatureDefinitionsType
     ["digitalDeliveryEnabled", ["DigitalDeliveryEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DigitalDeliveryEnabled")]],
     ["bestOfferCounterEnabled", ["BestOfferCounterEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferCounterEnabled")]],
     ["bestOfferAutoDeclineEnabled", ["BestOfferAutoDeclineEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferAutoDeclineEnabled")]],
+    ["localMarketSpecialitySubscription", ["LocalMarketSpecialitySubscriptionDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalMarketSpecialitySubscription")]],
+    ["localMarketRegularSubscription", ["LocalMarketRegularSubscriptionDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalMarketRegularSubscription")]],
+    ["localMarketPremiumSubscription", ["LocalMarketPremiumSubscriptionDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalMarketPremiumSubscription")]],
+    ["localMarketNonSubscription", ["LocalMarketNonSubscriptionDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalMarketNonSubscription")]],
+    ["expressEnabled", ["ExpressEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressEnabled")]],
+    ["expressPicturesRequired", ["ExpressPicturesRequiredDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressPicturesRequired")]],
+    ["expressConditionRequired", ["ExpressConditionRequiredDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressConditionRequired")]],
+    ["minimumReservePrice", ["MinimumReservePriceDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinimumReservePrice")]],
+    ["transactionConfirmationRequestEnabled", ["TCREnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionConfirmationRequestEnabled")]],
+    ["sellerContactDetailsEnabled", ["SellerContactDetailsEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerContactDetailsEnabled")]],
+    ["storeInventoryEnabled", ["StoreInventoryEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoreInventoryEnabled")]],
+    ["skypeMeTransactionalEnabled", ["SkypeMeTransactionalEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SkypeMeTransactionalEnabled")]],
+    ["skypeMeNonTransactionalEnabled", ["SkypeMeNonTransactionalEnabledDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SkypeMeNonTransactionalEnabled")]],
+    ["localListingDistancesRegular", ["LocalListingDistancesRegularDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalListingDistancesRegular")]],
+    ["localListingDistancesSpecialty", ["LocalListingDistancesSpecialtyDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalListingDistancesSpecialty")]],
+    ["localListingDistancesNonSubscription", ["LocalListingDistancesNonSubscriptionDefinitionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalListingDistancesNonSubscription")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
   ]
 
@@ -15578,13 +17660,29 @@ class FeatureDefinitionsType
   attr_accessor :digitalDeliveryEnabled
   attr_accessor :bestOfferCounterEnabled
   attr_accessor :bestOfferAutoDeclineEnabled
+  attr_accessor :localMarketSpecialitySubscription
+  attr_accessor :localMarketRegularSubscription
+  attr_accessor :localMarketPremiumSubscription
+  attr_accessor :localMarketNonSubscription
+  attr_accessor :expressEnabled
+  attr_accessor :expressPicturesRequired
+  attr_accessor :expressConditionRequired
+  attr_accessor :minimumReservePrice
+  attr_accessor :transactionConfirmationRequestEnabled
+  attr_accessor :sellerContactDetailsEnabled
+  attr_accessor :storeInventoryEnabled
+  attr_accessor :skypeMeTransactionalEnabled
+  attr_accessor :skypeMeNonTransactionalEnabled
+  attr_accessor :localListingDistancesRegular
+  attr_accessor :localListingDistancesSpecialty
+  attr_accessor :localListingDistancesNonSubscription
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(listingDurations = nil, shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil)
+  def initialize(listingDurations = nil, shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil, localMarketSpecialitySubscription = nil, localMarketRegularSubscription = nil, localMarketPremiumSubscription = nil, localMarketNonSubscription = nil, expressEnabled = nil, expressPicturesRequired = nil, expressConditionRequired = nil, minimumReservePrice = nil, transactionConfirmationRequestEnabled = nil, sellerContactDetailsEnabled = nil, storeInventoryEnabled = nil, skypeMeTransactionalEnabled = nil, skypeMeNonTransactionalEnabled = nil, localListingDistancesRegular = nil, localListingDistancesSpecialty = nil, localListingDistancesNonSubscription = nil)
     @listingDurations = listingDurations
     @shippingTermsRequired = shippingTermsRequired
     @bestOfferEnabled = bestOfferEnabled
@@ -15599,6 +17697,22 @@ class FeatureDefinitionsType
     @digitalDeliveryEnabled = digitalDeliveryEnabled
     @bestOfferCounterEnabled = bestOfferCounterEnabled
     @bestOfferAutoDeclineEnabled = bestOfferAutoDeclineEnabled
+    @localMarketSpecialitySubscription = localMarketSpecialitySubscription
+    @localMarketRegularSubscription = localMarketRegularSubscription
+    @localMarketPremiumSubscription = localMarketPremiumSubscription
+    @localMarketNonSubscription = localMarketNonSubscription
+    @expressEnabled = expressEnabled
+    @expressPicturesRequired = expressPicturesRequired
+    @expressConditionRequired = expressConditionRequired
+    @minimumReservePrice = minimumReservePrice
+    @transactionConfirmationRequestEnabled = transactionConfirmationRequestEnabled
+    @sellerContactDetailsEnabled = sellerContactDetailsEnabled
+    @storeInventoryEnabled = storeInventoryEnabled
+    @skypeMeTransactionalEnabled = skypeMeTransactionalEnabled
+    @skypeMeNonTransactionalEnabled = skypeMeNonTransactionalEnabled
+    @localListingDistancesRegular = localListingDistancesRegular
+    @localListingDistancesSpecialty = localListingDistancesSpecialty
+    @localListingDistancesNonSubscription = localListingDistancesNonSubscription
     @__xmlele_any = nil
   end
 end
@@ -15759,6 +17873,27 @@ class FeedbackPeriodType
     @periodInDays = periodInDays
     @count = count
     @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}FeedbackRequirementsType
+#   contains SOAP::SOAPBoolean
+class FeedbackRequirementsType < ::String
+  @@schema_attribute = {
+    XSD::QName.new(nil, "minimum") => "SOAP::SOAPString"
+  }
+
+  def xmlattr_minimum
+    (@__xmlattr ||= {})[XSD::QName.new(nil, "minimum")]
+  end
+
+  def xmlattr_minimum=(value)
+    (@__xmlattr ||= {})[XSD::QName.new(nil, "minimum")] = value
+  end
+
+  def initialize(*arg)
+    super
+    @__xmlattr = {}
   end
 end
 
@@ -16020,12 +18155,37 @@ class HomePageFeaturedEnabledDefinitionType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}InsuranceDetailsType
+class InsuranceDetailsType
+  @@schema_type = "InsuranceDetailsType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["insuranceFee", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InsuranceFee")]],
+    ["insuranceOption", ["InsuranceOptionCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InsuranceOption")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :insuranceFee
+  attr_accessor :insuranceOption
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(insuranceFee = nil, insuranceOption = nil)
+    @insuranceFee = insuranceFee
+    @insuranceOption = insuranceOption
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}InternationalShippingServiceOptionsType
 class InternationalShippingServiceOptionsType
   @@schema_type = "InternationalShippingServiceOptionsType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
-    ["shippingService", ["ShippingServiceCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingService")]],
+    ["shippingService", ["Token", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingService")]],
     ["shippingServiceCost", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingServiceCost")]],
     ["shippingServiceAdditionalCost", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingServiceAdditionalCost")]],
     ["shippingServicePriority", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingServicePriority")]],
@@ -16098,6 +18258,24 @@ class ItemListCustomizationType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}ItemTotalsType
+class ItemTotalsType
+  @@schema_type = "ItemTotalsType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["totalQuantity", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalQuantity")]],
+    ["totalValue", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalValue")]]
+  ]
+
+  attr_accessor :totalQuantity
+  attr_accessor :totalValue
+
+  def initialize(totalQuantity = nil, totalValue = nil)
+    @totalQuantity = totalQuantity
+    @totalValue = totalValue
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}ItemTransactionIDArrayType
 class ItemTransactionIDArrayType < ::Array
   @@schema_element = [
@@ -16152,6 +18330,7 @@ class ItemType
     ["crossPromotion", ["CrossPromotionsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CrossPromotion")]],
     ["currency", ["CurrencyCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Currency")]],
     ["description", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Description")]],
+    ["descriptionReviseMode", ["DescriptionReviseModeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DescriptionReviseMode")]],
     ["distance", ["DistanceType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Distance")]],
     ["financeOfferID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FinanceOfferID")]],
     ["giftIcon", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GiftIcon")]],
@@ -16160,9 +18339,10 @@ class ItemType
     ["itemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemID")]],
     ["listingDetails", ["ListingDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingDetails")]],
     ["listingDesigner", ["ListingDesignerType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingDesigner")]],
-    ["listingDuration", ["ListingDurationCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingDuration")]],
+    ["listingDuration", ["Token", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingDuration")]],
     ["listingEnhancement", ["ListingEnhancementsCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingEnhancement")]],
     ["listingType", ["ListingTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingType")]],
+    ["listingSubtype", ["ListingSubtypeEnum", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingSubtype")]],
     ["location", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Location")]],
     ["lotSize", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LotSize")]],
     ["nowAndNew", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NowAndNew")]],
@@ -16203,6 +18383,7 @@ class ItemType
     ["sellerVacationNote", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerVacationNote")]],
     ["watchCount", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WatchCount")]],
     ["hitCount", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HitCount")]],
+    ["disableBuyerRequirements", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DisableBuyerRequirements")]],
     ["buyerRequirements", ["BuyerRequirementsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BuyerRequirements")]],
     ["bestOfferDetails", ["BestOfferDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferDetails")]],
     ["anythingPoints", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "AnythingPoints")]],
@@ -16227,6 +18408,19 @@ class ItemType
     ["pictureDetails", ["PictureDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PictureDetails")]],
     ["digitalDeliveryDetails", ["DigitalDeliveryDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DigitalDeliveryDetails")]],
     ["dispatchTimeMax", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DispatchTimeMax")]],
+    ["skypeEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SkypeEnabled")]],
+    ["skypeID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SkypeID")]],
+    ["skypeOption", ["SkypeOptionCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SkypeOption")]],
+    ["skypeContactOption", ["SkypeContactOptionCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SkypeContactOption")]],
+    ["bestOfferEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferEnabled")]],
+    ["localListing", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalListing")]],
+    ["thirdPartyCheckoutIntegration", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ThirdPartyCheckoutIntegration")]],
+    ["expressOptOut", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressOptOut")]],
+    ["listingCheckoutRedirectPreference", ["ListingCheckoutRedirectPreferenceType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingCheckoutRedirectPreference")]],
+    ["expressDetails", ["ExpressDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressDetails")]],
+    ["sellerContactDetails", ["AddressType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerContactDetails")]],
+    ["totalQuestionCount", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TotalQuestionCount")]],
+    ["proxyItem", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProxyItem")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
   ]
 
@@ -16247,6 +18441,7 @@ class ItemType
   attr_accessor :crossPromotion
   attr_accessor :currency
   attr_accessor :description
+  attr_accessor :descriptionReviseMode
   attr_accessor :distance
   attr_accessor :financeOfferID
   attr_accessor :giftIcon
@@ -16258,6 +18453,7 @@ class ItemType
   attr_accessor :listingDuration
   attr_accessor :listingEnhancement
   attr_accessor :listingType
+  attr_accessor :listingSubtype
   attr_accessor :location
   attr_accessor :lotSize
   attr_accessor :nowAndNew
@@ -16298,6 +18494,7 @@ class ItemType
   attr_accessor :sellerVacationNote
   attr_accessor :watchCount
   attr_accessor :hitCount
+  attr_accessor :disableBuyerRequirements
   attr_accessor :buyerRequirements
   attr_accessor :bestOfferDetails
   attr_accessor :anythingPoints
@@ -16322,13 +18519,26 @@ class ItemType
   attr_accessor :pictureDetails
   attr_accessor :digitalDeliveryDetails
   attr_accessor :dispatchTimeMax
+  attr_accessor :skypeEnabled
+  attr_accessor :skypeID
+  attr_accessor :skypeOption
+  attr_accessor :skypeContactOption
+  attr_accessor :bestOfferEnabled
+  attr_accessor :localListing
+  attr_accessor :thirdPartyCheckoutIntegration
+  attr_accessor :expressOptOut
+  attr_accessor :listingCheckoutRedirectPreference
+  attr_accessor :expressDetails
+  attr_accessor :sellerContactDetails
+  attr_accessor :totalQuestionCount
+  attr_accessor :proxyItem
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(applicationData = nil, attributeSetArray = nil, attributeArray = nil, lookupAttributeArray = nil, applyShippingDiscount = nil, autoPay = nil, paymentDetails = nil, biddingDetails = nil, motorsGermanySearchable = nil, buyerProtection = nil, buyItNowPrice = nil, categoryMappingAllowed = nil, charity = nil, country = nil, crossPromotion = nil, currency = nil, description = nil, distance = nil, financeOfferID = nil, giftIcon = nil, giftServices = [], hitCounter = nil, itemID = nil, listingDetails = nil, listingDesigner = nil, listingDuration = nil, listingEnhancement = [], listingType = nil, location = nil, lotSize = nil, nowAndNew = nil, partnerCode = nil, partnerName = nil, paymentMethods = [], payPalEmailAddress = nil, primaryCategory = nil, privateListing = nil, productListingDetails = nil, proximitySearchDetails = nil, quantity = nil, privateNotes = nil, regionID = nil, relistLink = nil, reservePrice = nil, reviseStatus = nil, scheduleTime = nil, secondaryCategory = nil, freeAddedCategory = nil, siteHostedPicture = nil, seller = nil, sellingStatus = nil, shippingOption = nil, shippingDetails = nil, shippingRegions = [], shippingTerms = nil, shipToLocations = [], site = nil, startPrice = nil, storefront = nil, subTitle = nil, timeLeft = nil, title = nil, uUID = nil, vATDetails = nil, vendorHostedPicture = nil, sellerVacationNote = nil, watchCount = nil, hitCount = nil, buyerRequirements = nil, bestOfferDetails = nil, anythingPoints = nil, liveAuctionDetails = nil, locationDefaulted = nil, thirdPartyCheckout = nil, useTaxTable = nil, getItFast = nil, buyerResponsibleForShipping = nil, limitedWarrantyEligible = nil, eBayNotes = nil, questionCount = nil, relisted = nil, quantityAvailable = nil, sKU = nil, categoryBasedAttributesPrefill = nil, searchDetails = nil, postalCode = nil, shippingTermsInDescription = nil, externalProductID = nil, sellerInventoryID = nil, pictureDetails = nil, digitalDeliveryDetails = nil, dispatchTimeMax = nil)
+  def initialize(applicationData = nil, attributeSetArray = nil, attributeArray = nil, lookupAttributeArray = nil, applyShippingDiscount = nil, autoPay = nil, paymentDetails = nil, biddingDetails = nil, motorsGermanySearchable = nil, buyerProtection = nil, buyItNowPrice = nil, categoryMappingAllowed = nil, charity = nil, country = nil, crossPromotion = nil, currency = nil, description = nil, descriptionReviseMode = nil, distance = nil, financeOfferID = nil, giftIcon = nil, giftServices = [], hitCounter = nil, itemID = nil, listingDetails = nil, listingDesigner = nil, listingDuration = nil, listingEnhancement = [], listingType = nil, listingSubtype = nil, location = nil, lotSize = nil, nowAndNew = nil, partnerCode = nil, partnerName = nil, paymentMethods = [], payPalEmailAddress = nil, primaryCategory = nil, privateListing = nil, productListingDetails = nil, proximitySearchDetails = nil, quantity = nil, privateNotes = nil, regionID = nil, relistLink = nil, reservePrice = nil, reviseStatus = nil, scheduleTime = nil, secondaryCategory = nil, freeAddedCategory = nil, siteHostedPicture = nil, seller = nil, sellingStatus = nil, shippingOption = nil, shippingDetails = nil, shippingRegions = [], shippingTerms = nil, shipToLocations = [], site = nil, startPrice = nil, storefront = nil, subTitle = nil, timeLeft = nil, title = nil, uUID = nil, vATDetails = nil, vendorHostedPicture = nil, sellerVacationNote = nil, watchCount = nil, hitCount = nil, disableBuyerRequirements = nil, buyerRequirements = nil, bestOfferDetails = nil, anythingPoints = nil, liveAuctionDetails = nil, locationDefaulted = nil, thirdPartyCheckout = nil, useTaxTable = nil, getItFast = nil, buyerResponsibleForShipping = nil, limitedWarrantyEligible = nil, eBayNotes = nil, questionCount = nil, relisted = nil, quantityAvailable = nil, sKU = nil, categoryBasedAttributesPrefill = nil, searchDetails = nil, postalCode = nil, shippingTermsInDescription = nil, externalProductID = nil, sellerInventoryID = nil, pictureDetails = nil, digitalDeliveryDetails = nil, dispatchTimeMax = nil, skypeEnabled = nil, skypeID = nil, skypeOption = [], skypeContactOption = [], bestOfferEnabled = nil, localListing = nil, thirdPartyCheckoutIntegration = nil, expressOptOut = nil, listingCheckoutRedirectPreference = nil, expressDetails = nil, sellerContactDetails = nil, totalQuestionCount = nil, proxyItem = nil)
     @applicationData = applicationData
     @attributeSetArray = attributeSetArray
     @attributeArray = attributeArray
@@ -16346,6 +18556,7 @@ class ItemType
     @crossPromotion = crossPromotion
     @currency = currency
     @description = description
+    @descriptionReviseMode = descriptionReviseMode
     @distance = distance
     @financeOfferID = financeOfferID
     @giftIcon = giftIcon
@@ -16357,6 +18568,7 @@ class ItemType
     @listingDuration = listingDuration
     @listingEnhancement = listingEnhancement
     @listingType = listingType
+    @listingSubtype = listingSubtype
     @location = location
     @lotSize = lotSize
     @nowAndNew = nowAndNew
@@ -16397,6 +18609,7 @@ class ItemType
     @sellerVacationNote = sellerVacationNote
     @watchCount = watchCount
     @hitCount = hitCount
+    @disableBuyerRequirements = disableBuyerRequirements
     @buyerRequirements = buyerRequirements
     @bestOfferDetails = bestOfferDetails
     @anythingPoints = anythingPoints
@@ -16421,6 +18634,19 @@ class ItemType
     @pictureDetails = pictureDetails
     @digitalDeliveryDetails = digitalDeliveryDetails
     @dispatchTimeMax = dispatchTimeMax
+    @skypeEnabled = skypeEnabled
+    @skypeID = skypeID
+    @skypeOption = skypeOption
+    @skypeContactOption = skypeContactOption
+    @bestOfferEnabled = bestOfferEnabled
+    @localListing = localListing
+    @thirdPartyCheckoutIntegration = thirdPartyCheckoutIntegration
+    @expressOptOut = expressOptOut
+    @listingCheckoutRedirectPreference = listingCheckoutRedirectPreference
+    @expressDetails = expressDetails
+    @sellerContactDetails = sellerContactDetails
+    @totalQuestionCount = totalQuestionCount
+    @proxyItem = proxyItem
     @__xmlele_any = nil
   end
 end
@@ -16481,6 +18707,31 @@ class ListingAnalyzerRecommendationsType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}ListingCheckoutRedirectPreferenceType
+class ListingCheckoutRedirectPreferenceType
+  @@schema_type = "ListingCheckoutRedirectPreferenceType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["proStoresStoreName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProStoresStoreName")]],
+    ["sellerThirdPartyUsername", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerThirdPartyUsername")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :proStoresStoreName
+  attr_accessor :sellerThirdPartyUsername
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(proStoresStoreName = nil, sellerThirdPartyUsername = nil)
+    @proStoresStoreName = proStoresStoreName
+    @sellerThirdPartyUsername = sellerThirdPartyUsername
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}ListingDesignerType
 class ListingDesignerType
   @@schema_type = "ListingDesignerType"
@@ -16533,6 +18784,10 @@ class ListingDetailsType
     ["sellerBusinessType", ["SellerBusinessCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerBusinessType")]],
     ["minimumBestOfferPrice", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinimumBestOfferPrice")]],
     ["minimumBestOfferMessage", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinimumBestOfferMessage")]],
+    ["localListingDistance", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalListingDistance")]],
+    ["expressListing", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressListing")]],
+    ["expressItemRequirements", ["ExpressItemRequirementsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressItemRequirements")]],
+    ["tCROriginalItemID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TCROriginalItemID")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
   ]
 
@@ -16555,13 +18810,17 @@ class ListingDetailsType
   attr_accessor :sellerBusinessType
   attr_accessor :minimumBestOfferPrice
   attr_accessor :minimumBestOfferMessage
+  attr_accessor :localListingDistance
+  attr_accessor :expressListing
+  attr_accessor :expressItemRequirements
+  attr_accessor :tCROriginalItemID
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(adult = nil, bindingAuction = nil, checkoutEnabled = nil, convertedBuyItNowPrice = nil, convertedStartPrice = nil, convertedReservePrice = nil, hasReservePrice = nil, regionName = nil, relistedItemID = nil, secondChanceOriginalItemID = nil, startTime = nil, endTime = nil, viewItemURL = nil, hasUnansweredQuestions = nil, hasPublicMessages = nil, buyItNowAvailable = nil, sellerBusinessType = nil, minimumBestOfferPrice = nil, minimumBestOfferMessage = nil)
+  def initialize(adult = nil, bindingAuction = nil, checkoutEnabled = nil, convertedBuyItNowPrice = nil, convertedStartPrice = nil, convertedReservePrice = nil, hasReservePrice = nil, regionName = nil, relistedItemID = nil, secondChanceOriginalItemID = nil, startTime = nil, endTime = nil, viewItemURL = nil, hasUnansweredQuestions = nil, hasPublicMessages = nil, buyItNowAvailable = nil, sellerBusinessType = nil, minimumBestOfferPrice = nil, minimumBestOfferMessage = nil, localListingDistance = nil, expressListing = nil, expressItemRequirements = nil, tCROriginalItemID = nil)
     @adult = adult
     @bindingAuction = bindingAuction
     @checkoutEnabled = checkoutEnabled
@@ -16581,6 +18840,10 @@ class ListingDetailsType
     @sellerBusinessType = sellerBusinessType
     @minimumBestOfferPrice = minimumBestOfferPrice
     @minimumBestOfferMessage = minimumBestOfferMessage
+    @localListingDistance = localListingDistance
+    @expressListing = expressListing
+    @expressItemRequirements = expressItemRequirements
+    @tCROriginalItemID = tCROriginalItemID
     @__xmlele_any = nil
   end
 end
@@ -16593,7 +18856,7 @@ class ListingDurationDefinitionType
     XSD::QName.new(nil, "durationSetID") => "SOAP::SOAPInt"
   }
   @@schema_element = [
-    ["duration", ["ListingDurationCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Duration")]],
+    ["duration", ["Token[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Duration")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
   ]
 
@@ -16892,6 +19155,164 @@ class LiveAuctionDetailsType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}LocalListingDistancesNonSubscriptionDefinitionType
+class LocalListingDistancesNonSubscriptionDefinitionType
+  @@schema_type = "LocalListingDistancesNonSubscriptionDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalListingDistancesRegularDefinitionType
+class LocalListingDistancesRegularDefinitionType
+  @@schema_type = "LocalListingDistancesRegularDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalListingDistancesSpecialtyDefinitionType
+class LocalListingDistancesSpecialtyDefinitionType
+  @@schema_type = "LocalListingDistancesSpecialtyDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketNonSubscriptionDefinitionType
+class LocalMarketNonSubscriptionDefinitionType
+  @@schema_type = "LocalMarketNonSubscriptionDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketPremiumSubscriptionDefinitionType
+class LocalMarketPremiumSubscriptionDefinitionType
+  @@schema_type = "LocalMarketPremiumSubscriptionDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketRegularSubscriptionDefinitionType
+class LocalMarketRegularSubscriptionDefinitionType
+  @@schema_type = "LocalMarketRegularSubscriptionDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketSpecialitySubscriptionDefinitionType
+class LocalMarketSpecialitySubscriptionDefinitionType
+  @@schema_type = "LocalMarketSpecialitySubscriptionDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalSearchType
+class LocalSearchType
+  @@schema_type = "LocalSearchType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["maxDistance", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MaxDistance")]],
+    ["postalCode", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PostalCode")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :maxDistance
+  attr_accessor :postalCode
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(maxDistance = nil, postalCode = nil)
+    @maxDistance = maxDistance
+    @postalCode = postalCode
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}LookupAttributeArrayType
 class LookupAttributeArrayType < ::Array
   @@schema_element = [
@@ -16957,6 +19378,24 @@ class MarkUpMarkDownHistoryType < ::Array
   @@schema_element = [
     ["MarkUpMarkDownEvent", ["MarkUpMarkDownEventType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MarkUpMarkDownEvent")]]
   ]
+end
+
+# {urn:ebay:apis:eBLBaseComponents}MaximumItemRequirementsType
+class MaximumItemRequirementsType
+  @@schema_type = "MaximumItemRequirementsType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["maximumItemCount", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MaximumItemCount")]],
+    ["minimumFeedbackScore", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinimumFeedbackScore")]]
+  ]
+
+  attr_accessor :maximumItemCount
+  attr_accessor :minimumFeedbackScore
+
+  def initialize(maximumItemCount = nil, minimumFeedbackScore = nil)
+    @maximumItemCount = maximumItemCount
+    @minimumFeedbackScore = minimumFeedbackScore
+  end
 end
 
 # {urn:ebay:apis:eBLBaseComponents}MemberMessageExchangeArrayType
@@ -17054,6 +19493,25 @@ class MemberMessageType
     @body = body
     @messageID = messageID
     @parentMessageID = parentMessageID
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}MinimumReservePriceDefinitionType
+class MinimumReservePriceDefinitionType
+  @@schema_type = "MinimumReservePriceDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
     @__xmlele_any = nil
   end
 end
@@ -17709,9 +20167,9 @@ class NotificationEventPropertyType
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}NotificationMessageResponseType
-class NotificationMessageResponseType
-  @@schema_type = "NotificationMessageResponseType"
+# {urn:ebay:apis:eBLBaseComponents}NotificationMessageType
+class NotificationMessageType
+  @@schema_type = "NotificationMessageType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Timestamp")]],
@@ -17724,6 +20182,7 @@ class NotificationMessageResponseType
     ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationEventName")]],
     ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DuplicateInvocationDetails")]],
     ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RecipientUserID")]],
+    ["eIASToken", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EIASToken")]],
     ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "NotificationSignature")]],
     ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "HardExpirationWarning")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]],
@@ -17741,6 +20200,7 @@ class NotificationMessageResponseType
   attr_accessor :notificationEventName
   attr_accessor :duplicateInvocationDetails
   attr_accessor :recipientUserID
+  attr_accessor :eIASToken
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_reader :__xmlele_any
@@ -17751,7 +20211,7 @@ class NotificationMessageResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, notificationSignature = nil, hardExpirationWarning = nil, messageBody = nil, eIAS = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, messageBody = nil, eIAS = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -17762,6 +20222,7 @@ class NotificationMessageResponseType
     @notificationEventName = notificationEventName
     @duplicateInvocationDetails = duplicateInvocationDetails
     @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @__xmlele_any = nil
@@ -17809,19 +20270,22 @@ class NotificationUserDataType
   @@schema_type = "NotificationUserDataType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
-    ["sMSPhone", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SMSPhone")]],
+    ["sMSSubscription", ["SMSSubscriptionType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SMSSubscription")]],
+    ["summarySchedule", ["SummaryEventScheduleType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SummarySchedule")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
   ]
 
-  attr_accessor :sMSPhone
+  attr_accessor :sMSSubscription
+  attr_accessor :summarySchedule
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(sMSPhone = nil)
-    @sMSPhone = sMSPhone
+  def initialize(sMSSubscription = nil, summarySchedule = [])
+    @sMSSubscription = sMSSubscription
+    @summarySchedule = summarySchedule
     @__xmlele_any = nil
   end
 end
@@ -17959,7 +20423,9 @@ class OrderType
     ["subtotal", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Subtotal")]],
     ["total", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Total")]],
     ["externalTransaction", ["ExternalTransactionType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExternalTransaction")]],
+    ["digitalDelivery", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DigitalDelivery")]],
     ["transactionArray", ["TransactionArrayType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionArray")]],
+    ["buyerUserID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BuyerUserID")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
   ]
 
@@ -17980,14 +20446,16 @@ class OrderType
   attr_accessor :subtotal
   attr_accessor :total
   attr_accessor :externalTransaction
+  attr_accessor :digitalDelivery
   attr_accessor :transactionArray
+  attr_accessor :buyerUserID
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(orderID = nil, orderStatus = nil, adjustmentAmount = nil, amountPaid = nil, amountSaved = nil, checkoutStatus = nil, shippingDetails = nil, creatingUserRole = nil, createdTime = nil, financeOfferID = nil, paymentMethods = [], sellerEmail = nil, shippingAddress = nil, shippingServiceSelected = nil, subtotal = nil, total = nil, externalTransaction = [], transactionArray = nil)
+  def initialize(orderID = nil, orderStatus = nil, adjustmentAmount = nil, amountPaid = nil, amountSaved = nil, checkoutStatus = nil, shippingDetails = nil, creatingUserRole = nil, createdTime = nil, financeOfferID = nil, paymentMethods = [], sellerEmail = nil, shippingAddress = nil, shippingServiceSelected = nil, subtotal = nil, total = nil, externalTransaction = [], digitalDelivery = nil, transactionArray = nil, buyerUserID = nil)
     @orderID = orderID
     @orderStatus = orderStatus
     @adjustmentAmount = adjustmentAmount
@@ -18005,7 +20473,9 @@ class OrderType
     @subtotal = subtotal
     @total = total
     @externalTransaction = externalTransaction
+    @digitalDelivery = digitalDelivery
     @transactionArray = transactionArray
+    @buyerUserID = buyerUserID
     @__xmlele_any = nil
   end
 end
@@ -18089,31 +20559,6 @@ class PaginationResultType
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}PaginationType
-class PaginationType
-  @@schema_type = "PaginationType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [
-    ["entriesPerPage", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EntriesPerPage")]],
-    ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PageNumber")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
-  ]
-
-  attr_accessor :entriesPerPage
-  attr_accessor :pageNumber
-  attr_reader :__xmlele_any
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(entriesPerPage = nil, pageNumber = nil)
-    @entriesPerPage = entriesPerPage
-    @pageNumber = pageNumber
-    @__xmlele_any = nil
-  end
-end
-
 # {urn:ebay:apis:eBLBaseComponents}PaymentDetailsType
 class PaymentDetailsType
   @@schema_type = "PaymentDetailsType"
@@ -18135,28 +20580,6 @@ class PaymentDetailsType
   def initialize(hoursToDeposit = nil, daysToFullPayment = nil)
     @hoursToDeposit = hoursToDeposit
     @daysToFullPayment = daysToFullPayment
-    @__xmlele_any = nil
-  end
-end
-
-# {urn:ebay:apis:eBLBaseComponents}PaymentMeansType
-class PaymentMeansType
-  @@schema_type = "PaymentMeansType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [
-    ["typeCodeID", ["SellerPaymentMethodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TypeCodeID")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
-  ]
-
-  attr_accessor :typeCodeID
-  attr_reader :__xmlele_any
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(typeCodeID = nil)
-    @typeCodeID = typeCodeID
     @__xmlele_any = nil
   end
 end
@@ -18186,28 +20609,6 @@ class PaymentOptionDetailsType
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}PaymentType
-class PaymentType
-  @@schema_type = "PaymentType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-  @@schema_element = [
-    ["paymentMeans", ["PaymentMeansType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentMeans")]],
-    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
-  ]
-
-  attr_accessor :paymentMeans
-  attr_reader :__xmlele_any
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(paymentMeans = nil)
-    @paymentMeans = paymentMeans
-    @__xmlele_any = nil
-  end
-end
-
 # {urn:ebay:apis:eBLBaseComponents}PictureDetailsType
 class PictureDetailsType
   @@schema_type = "PictureDetailsType"
@@ -18217,6 +20618,7 @@ class PictureDetailsType
     ["galleryURL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GalleryURL")]],
     ["photoDisplay", ["PhotoDisplayCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PhotoDisplay")]],
     ["pictureURL", ["SOAP::SOAPAnyURI[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PictureURL")]],
+    ["pictureSource", ["PictureSourceCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PictureSource")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
   ]
 
@@ -18224,17 +20626,19 @@ class PictureDetailsType
   attr_accessor :galleryURL
   attr_accessor :photoDisplay
   attr_accessor :pictureURL
+  attr_accessor :pictureSource
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(galleryType = nil, galleryURL = nil, photoDisplay = nil, pictureURL = [])
+  def initialize(galleryType = nil, galleryURL = nil, photoDisplay = nil, pictureURL = [], pictureSource = nil)
     @galleryType = galleryType
     @galleryURL = galleryURL
     @photoDisplay = photoDisplay
     @pictureURL = pictureURL
+    @pictureSource = pictureSource
     @__xmlele_any = nil
   end
 end
@@ -18476,6 +20880,66 @@ class ProPackPlusEnabledDefinitionType
   def initialize
     @__xmlele_any = nil
   end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ProStoresCheckoutPreferenceType
+class ProStoresCheckoutPreferenceType
+  @@schema_type = "ProStoresCheckoutPreferenceType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["checkoutRedirectProStores", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CheckoutRedirectProStores")]],
+    ["proStoresDetails", ["ProStoresDetailsType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProStoresDetails")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :checkoutRedirectProStores
+  attr_accessor :proStoresDetails
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(checkoutRedirectProStores = nil, proStoresDetails = [])
+    @checkoutRedirectProStores = checkoutRedirectProStores
+    @proStoresDetails = proStoresDetails
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ProStoresDetailsType
+class ProStoresDetailsType
+  @@schema_type = "ProStoresDetailsType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["sellerThirdPartyUsername", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerThirdPartyUsername")]],
+    ["storeName", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoreName")]],
+    ["status", ["EnableCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Status")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :sellerThirdPartyUsername
+  attr_accessor :storeName
+  attr_accessor :status
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(sellerThirdPartyUsername = nil, storeName = nil, status = nil)
+    @sellerThirdPartyUsername = sellerThirdPartyUsername
+    @storeName = storeName
+    @status = status
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ProductArrayType
+class ProductArrayType < ::Array
+  @@schema_element = [
+    ["Product", ["ExpressProductType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Product")]]
+  ]
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ProductFamilyType
@@ -19177,6 +21641,40 @@ class SKUArrayType < ::Array
   ]
 end
 
+# {urn:ebay:apis:eBLBaseComponents}SMSSubscriptionType
+class SMSSubscriptionType
+  @@schema_type = "SMSSubscriptionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["sMSPhone", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SMSPhone")]],
+    ["userStatus", ["SMSSubscriptionUserStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserStatus")]],
+    ["carrierID", ["WirelessCarrierIDCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CarrierID")]],
+    ["errorCode", ["SMSSubscriptionErrorCodeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ErrorCode")]],
+    ["itemToUnsubscribe", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ItemToUnsubscribe")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :sMSPhone
+  attr_accessor :userStatus
+  attr_accessor :carrierID
+  attr_accessor :errorCode
+  attr_accessor :itemToUnsubscribe
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(sMSPhone = nil, userStatus = nil, carrierID = nil, errorCode = nil, itemToUnsubscribe = nil)
+    @sMSPhone = sMSPhone
+    @userStatus = userStatus
+    @carrierID = carrierID
+    @errorCode = errorCode
+    @itemToUnsubscribe = itemToUnsubscribe
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}SalesTaxType
 class SalesTaxType
   @@schema_type = "SalesTaxType"
@@ -19464,6 +21962,25 @@ class SearchStoreFilterType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}SellerContactDetailsEnabledDefinitionType
+class SellerContactDetailsEnabledDefinitionType
+  @@schema_type = "SellerContactDetailsEnabledDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}SellerFavoriteItemPreferencesType
 class SellerFavoriteItemPreferencesType
   @@schema_type = "SellerFavoriteItemPreferencesType"
@@ -19623,6 +22140,13 @@ class SellerType
     ["storeOwner", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoreOwner")]],
     ["storeURL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoreURL")]],
     ["sellerBusinessType", ["SellerBusinessCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerBusinessType")]],
+    ["registeredBusinessSeller", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "RegisteredBusinessSeller")]],
+    ["expressEligible", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressEligible")]],
+    ["paymentMethod", ["SellerPaymentMethodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PaymentMethod")]],
+    ["proStoresPreference", ["ProStoresCheckoutPreferenceType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ProStoresPreference")]],
+    ["expressWallet", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressWallet")]],
+    ["expressSellerRequirements", ["ExpressSellerRequirementsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressSellerRequirements")]],
+    ["charityRegistered", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "CharityRegistered")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
   ]
 
@@ -19642,13 +22166,20 @@ class SellerType
   attr_accessor :storeOwner
   attr_accessor :storeURL
   attr_accessor :sellerBusinessType
+  attr_accessor :registeredBusinessSeller
+  attr_accessor :expressEligible
+  attr_accessor :paymentMethod
+  attr_accessor :proStoresPreference
+  attr_accessor :expressWallet
+  attr_accessor :expressSellerRequirements
+  attr_accessor :charityRegistered
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(paisaPayStatus = nil, allowPaymentEdit = nil, billingCurrency = nil, checkoutEnabled = nil, cIPBankAccountStored = nil, goodStanding = nil, liveAuctionAuthorized = nil, merchandizingPref = nil, qualifiesForB2BVAT = nil, sellerGuaranteeLevel = nil, sellerLevel = nil, sellerPaymentAddress = nil, schedulingInfo = nil, storeOwner = nil, storeURL = nil, sellerBusinessType = nil)
+  def initialize(paisaPayStatus = nil, allowPaymentEdit = nil, billingCurrency = nil, checkoutEnabled = nil, cIPBankAccountStored = nil, goodStanding = nil, liveAuctionAuthorized = nil, merchandizingPref = nil, qualifiesForB2BVAT = nil, sellerGuaranteeLevel = nil, sellerLevel = nil, sellerPaymentAddress = nil, schedulingInfo = nil, storeOwner = nil, storeURL = nil, sellerBusinessType = nil, registeredBusinessSeller = nil, expressEligible = nil, paymentMethod = nil, proStoresPreference = nil, expressWallet = nil, expressSellerRequirements = nil, charityRegistered = nil)
     @paisaPayStatus = paisaPayStatus
     @allowPaymentEdit = allowPaymentEdit
     @billingCurrency = billingCurrency
@@ -19665,6 +22196,13 @@ class SellerType
     @storeOwner = storeOwner
     @storeURL = storeURL
     @sellerBusinessType = sellerBusinessType
+    @registeredBusinessSeller = registeredBusinessSeller
+    @expressEligible = expressEligible
+    @paymentMethod = paymentMethod
+    @proStoresPreference = proStoresPreference
+    @expressWallet = expressWallet
+    @expressSellerRequirements = expressSellerRequirements
+    @charityRegistered = charityRegistered
     @__xmlele_any = nil
   end
 end
@@ -19799,7 +22337,7 @@ class ShipmentType
     ["packageLength", ["MeasureType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PackageLength")]],
     ["packageWidth", ["MeasureType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PackageWidth")]],
     ["payPalShipmentID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PayPalShipmentID")]],
-    ["shipmentID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShipmentID")]],
+    ["shipmentID", ["SOAP::SOAPLong", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShipmentID")]],
     ["postageTotal", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PostageTotal")]],
     ["printedTime", ["SOAP::SOAPDateTime", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PrintedTime")]],
     ["shipFromAddress", ["AddressType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShipFromAddress")]],
@@ -19807,7 +22345,7 @@ class ShipmentType
     ["shippingCarrierUsed", ["ShippingCarrierCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingCarrierUsed")]],
     ["shippingFeature", ["ShippingFeatureCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingFeature")]],
     ["shippingPackage", ["ShippingPackageCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingPackage")]],
-    ["shippingServiceUsed", ["ShippingServiceCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingServiceUsed")]],
+    ["shippingServiceUsed", ["Token", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingServiceUsed")]],
     ["shipmentTrackingNumber", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShipmentTrackingNumber")]],
     ["weightMajor", ["MeasureType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WeightMajor")]],
     ["weightMinor", ["MeasureType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "WeightMinor")]],
@@ -19905,8 +22443,10 @@ class ShippingDetailsType
     ["taxTable", ["TaxTableType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TaxTable")]],
     ["getItFast", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GetItFast")]],
     ["shipmentTrackingNumber", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShipmentTrackingNumber")]],
-    ["shippingServiceUsed", ["ShippingServiceCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingServiceUsed")]],
+    ["shippingServiceUsed", ["Token", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingServiceUsed")]],
     ["defaultShippingCost", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DefaultShippingCost")]],
+    ["insuranceDetails", ["InsuranceDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InsuranceDetails")]],
+    ["internationalInsuranceDetails", ["InsuranceDetailsType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InternationalInsuranceDetails")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
   ]
 
@@ -19933,13 +22473,15 @@ class ShippingDetailsType
   attr_accessor :shipmentTrackingNumber
   attr_accessor :shippingServiceUsed
   attr_accessor :defaultShippingCost
+  attr_accessor :insuranceDetails
+  attr_accessor :internationalInsuranceDetails
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(allowPaymentEdit = nil, applyShippingDiscount = nil, calculatedShippingRate = nil, changePaymentInstructions = nil, insuranceFee = nil, insuranceOption = nil, insuranceWanted = nil, paymentEdited = nil, paymentInstructions = nil, salesTax = nil, sellerPostalCode = nil, shippingRateErrorMessage = nil, shippingRateType = nil, shippingServiceOptions = [], internationalShippingServiceOption = [], shippingType = nil, sellingManagerSalesRecordNumber = nil, thirdPartyCheckout = nil, taxTable = nil, getItFast = nil, shipmentTrackingNumber = nil, shippingServiceUsed = nil, defaultShippingCost = nil)
+  def initialize(allowPaymentEdit = nil, applyShippingDiscount = nil, calculatedShippingRate = nil, changePaymentInstructions = nil, insuranceFee = nil, insuranceOption = nil, insuranceWanted = nil, paymentEdited = nil, paymentInstructions = nil, salesTax = nil, sellerPostalCode = nil, shippingRateErrorMessage = nil, shippingRateType = nil, shippingServiceOptions = [], internationalShippingServiceOption = [], shippingType = nil, sellingManagerSalesRecordNumber = nil, thirdPartyCheckout = nil, taxTable = nil, getItFast = nil, shipmentTrackingNumber = nil, shippingServiceUsed = nil, defaultShippingCost = nil, insuranceDetails = nil, internationalInsuranceDetails = nil)
     @allowPaymentEdit = allowPaymentEdit
     @applyShippingDiscount = applyShippingDiscount
     @calculatedShippingRate = calculatedShippingRate
@@ -19963,6 +22505,8 @@ class ShippingDetailsType
     @shipmentTrackingNumber = shipmentTrackingNumber
     @shippingServiceUsed = shippingServiceUsed
     @defaultShippingCost = defaultShippingCost
+    @insuranceDetails = insuranceDetails
+    @internationalInsuranceDetails = internationalInsuranceDetails
     @__xmlele_any = nil
   end
 end
@@ -20000,10 +22544,11 @@ class ShippingServiceDetailsType
     ["description", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Description")]],
     ["expeditedService", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpeditedService")]],
     ["internationalService", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "InternationalService")]],
-    ["shippingService", ["ShippingServiceCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingService")]],
+    ["shippingService", ["Token", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingService")]],
     ["shippingServiceID", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingServiceID")]],
     ["shippingTimeMax", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingTimeMax")]],
     ["shippingTimeMin", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingTimeMin")]],
+    ["shippingServiceCode", ["ShippingServiceCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingServiceCode")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
   ]
 
@@ -20014,13 +22559,14 @@ class ShippingServiceDetailsType
   attr_accessor :shippingServiceID
   attr_accessor :shippingTimeMax
   attr_accessor :shippingTimeMin
+  attr_accessor :shippingServiceCode
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(description = nil, expeditedService = nil, internationalService = nil, shippingService = nil, shippingServiceID = nil, shippingTimeMax = nil, shippingTimeMin = nil)
+  def initialize(description = nil, expeditedService = nil, internationalService = nil, shippingService = nil, shippingServiceID = nil, shippingTimeMax = nil, shippingTimeMin = nil, shippingServiceCode = nil)
     @description = description
     @expeditedService = expeditedService
     @internationalService = internationalService
@@ -20028,6 +22574,7 @@ class ShippingServiceDetailsType
     @shippingServiceID = shippingServiceID
     @shippingTimeMax = shippingTimeMax
     @shippingTimeMin = shippingTimeMin
+    @shippingServiceCode = shippingServiceCode
     @__xmlele_any = nil
   end
 end
@@ -20038,13 +22585,14 @@ class ShippingServiceOptionsType
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
   @@schema_element = [
     ["shippingInsuranceCost", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingInsuranceCost")]],
-    ["shippingService", ["ShippingServiceCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingService")]],
+    ["shippingService", ["Token", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingService")]],
     ["shippingServiceCost", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingServiceCost")]],
     ["shippingServiceAdditionalCost", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingServiceAdditionalCost")]],
     ["shippingServicePriority", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingServicePriority")]],
     ["expeditedService", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpeditedService")]],
     ["shippingTimeMin", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingTimeMin")]],
     ["shippingTimeMax", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingTimeMax")]],
+    ["shippingSurcharge", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ShippingSurcharge")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
   ]
 
@@ -20056,13 +22604,14 @@ class ShippingServiceOptionsType
   attr_accessor :expeditedService
   attr_accessor :shippingTimeMin
   attr_accessor :shippingTimeMax
+  attr_accessor :shippingSurcharge
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(shippingInsuranceCost = nil, shippingService = nil, shippingServiceCost = nil, shippingServiceAdditionalCost = nil, shippingServicePriority = nil, expeditedService = nil, shippingTimeMin = nil, shippingTimeMax = nil)
+  def initialize(shippingInsuranceCost = nil, shippingService = nil, shippingServiceCost = nil, shippingServiceAdditionalCost = nil, shippingServicePriority = nil, expeditedService = nil, shippingTimeMin = nil, shippingTimeMax = nil, shippingSurcharge = nil)
     @shippingInsuranceCost = shippingInsuranceCost
     @shippingService = shippingService
     @shippingServiceCost = shippingServiceCost
@@ -20071,6 +22620,7 @@ class ShippingServiceOptionsType
     @expeditedService = expeditedService
     @shippingTimeMin = shippingTimeMin
     @shippingTimeMax = shippingTimeMax
+    @shippingSurcharge = shippingSurcharge
     @__xmlele_any = nil
   end
 end
@@ -20113,6 +22663,22 @@ class SiteDefaultsType
     ["digitalDeliveryEnabled", ["DigitalDeliveryEnabledCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "DigitalDeliveryEnabled")]],
     ["bestOfferCounterEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferCounterEnabled")]],
     ["bestOfferAutoDeclineEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "BestOfferAutoDeclineEnabled")]],
+    ["localMarketSpecialitySubscription", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalMarketSpecialitySubscription")]],
+    ["localMarketRegularSubscription", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalMarketRegularSubscription")]],
+    ["localMarketPremiumSubscription", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalMarketPremiumSubscription")]],
+    ["localMarketNonSubscription", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalMarketNonSubscription")]],
+    ["expressEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressEnabled")]],
+    ["expressPicturesRequired", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressPicturesRequired")]],
+    ["expressConditionRequired", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ExpressConditionRequired")]],
+    ["minimumReservePrice", ["SOAP::SOAPDouble", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinimumReservePrice")]],
+    ["sellerContactDetailsEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerContactDetailsEnabled")]],
+    ["transactionConfirmationRequestEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionConfirmationRequestEnabled")]],
+    ["storeInventoryEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "StoreInventoryEnabled")]],
+    ["skypeMeTransactionalEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SkypeMeTransactionalEnabled")]],
+    ["skypeMeNonTransactionalEnabled", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SkypeMeNonTransactionalEnabled")]],
+    ["localListingDistancesRegular", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalListingDistancesRegular")]],
+    ["localListingDistancesSpecialty", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalListingDistancesSpecialty")]],
+    ["localListingDistancesNonSubscription", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "LocalListingDistancesNonSubscription")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
   ]
 
@@ -20130,13 +22696,29 @@ class SiteDefaultsType
   attr_accessor :digitalDeliveryEnabled
   attr_accessor :bestOfferCounterEnabled
   attr_accessor :bestOfferAutoDeclineEnabled
+  attr_accessor :localMarketSpecialitySubscription
+  attr_accessor :localMarketRegularSubscription
+  attr_accessor :localMarketPremiumSubscription
+  attr_accessor :localMarketNonSubscription
+  attr_accessor :expressEnabled
+  attr_accessor :expressPicturesRequired
+  attr_accessor :expressConditionRequired
+  attr_accessor :minimumReservePrice
+  attr_accessor :sellerContactDetailsEnabled
+  attr_accessor :transactionConfirmationRequestEnabled
+  attr_accessor :storeInventoryEnabled
+  attr_accessor :skypeMeTransactionalEnabled
+  attr_accessor :skypeMeNonTransactionalEnabled
+  attr_accessor :localListingDistancesRegular
+  attr_accessor :localListingDistancesSpecialty
+  attr_accessor :localListingDistancesNonSubscription
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(listingDuration = [], shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil)
+  def initialize(listingDuration = [], shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil, localMarketSpecialitySubscription = nil, localMarketRegularSubscription = nil, localMarketPremiumSubscription = nil, localMarketNonSubscription = nil, expressEnabled = nil, expressPicturesRequired = nil, expressConditionRequired = nil, minimumReservePrice = nil, sellerContactDetailsEnabled = nil, transactionConfirmationRequestEnabled = nil, storeInventoryEnabled = nil, skypeMeTransactionalEnabled = nil, skypeMeNonTransactionalEnabled = nil, localListingDistancesRegular = nil, localListingDistancesSpecialty = nil, localListingDistancesNonSubscription = nil)
     @listingDuration = listingDuration
     @shippingTermsRequired = shippingTermsRequired
     @bestOfferEnabled = bestOfferEnabled
@@ -20151,6 +22733,22 @@ class SiteDefaultsType
     @digitalDeliveryEnabled = digitalDeliveryEnabled
     @bestOfferCounterEnabled = bestOfferCounterEnabled
     @bestOfferAutoDeclineEnabled = bestOfferAutoDeclineEnabled
+    @localMarketSpecialitySubscription = localMarketSpecialitySubscription
+    @localMarketRegularSubscription = localMarketRegularSubscription
+    @localMarketPremiumSubscription = localMarketPremiumSubscription
+    @localMarketNonSubscription = localMarketNonSubscription
+    @expressEnabled = expressEnabled
+    @expressPicturesRequired = expressPicturesRequired
+    @expressConditionRequired = expressConditionRequired
+    @minimumReservePrice = minimumReservePrice
+    @sellerContactDetailsEnabled = sellerContactDetailsEnabled
+    @transactionConfirmationRequestEnabled = transactionConfirmationRequestEnabled
+    @storeInventoryEnabled = storeInventoryEnabled
+    @skypeMeTransactionalEnabled = skypeMeTransactionalEnabled
+    @skypeMeNonTransactionalEnabled = skypeMeNonTransactionalEnabled
+    @localListingDistancesRegular = localListingDistancesRegular
+    @localListingDistancesSpecialty = localListingDistancesSpecialty
+    @localListingDistancesNonSubscription = localListingDistancesNonSubscription
     @__xmlele_any = nil
   end
 end
@@ -20188,22 +22786,28 @@ class SiteHostedPictureType
     ["pictureURL", ["SOAP::SOAPAnyURI[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PictureURL")]],
     ["photoDisplay", ["PhotoDisplayCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PhotoDisplay")]],
     ["galleryType", ["GalleryTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GalleryType")]],
+    ["galleryURL", ["SOAP::SOAPAnyURI", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "GalleryURL")]],
+    ["pictureSource", ["PictureSourceCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PictureSource")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
   ]
 
   attr_accessor :pictureURL
   attr_accessor :photoDisplay
   attr_accessor :galleryType
+  attr_accessor :galleryURL
+  attr_accessor :pictureSource
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(pictureURL = [], photoDisplay = nil, galleryType = nil)
+  def initialize(pictureURL = [], photoDisplay = nil, galleryType = nil, galleryURL = nil, pictureSource = nil)
     @pictureURL = pictureURL
     @photoDisplay = photoDisplay
     @galleryType = galleryType
+    @galleryURL = galleryURL
+    @pictureSource = pictureSource
     @__xmlele_any = nil
   end
 end
@@ -20251,6 +22855,44 @@ class SiteWideCharacteristicsType
   def initialize(characteristicsSet = nil, excludeCategoryID = [])
     @characteristicsSet = characteristicsSet
     @excludeCategoryID = excludeCategoryID
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}SkypeMeNonTransactionalEnabledDefinitionType
+class SkypeMeNonTransactionalEnabledDefinitionType
+  @@schema_type = "SkypeMeNonTransactionalEnabledDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}SkypeMeTransactionalEnabledDefinitionType
+class SkypeMeTransactionalEnabledDefinitionType
+  @@schema_type = "SkypeMeTransactionalEnabledDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
     @__xmlele_any = nil
   end
 end
@@ -20550,6 +23192,25 @@ class StoreFontType
     @descFace = descFace
     @descSize = descSize
     @descColor = descColor
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}StoreInventoryEnabledDefinitionType
+class StoreInventoryEnabledDefinitionType
+  @@schema_type = "StoreInventoryEnabledDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
     @__xmlele_any = nil
   end
 end
@@ -20901,6 +23562,60 @@ class SuggestedCategoryType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}SummaryEventScheduleType
+class SummaryEventScheduleType
+  @@schema_type = "SummaryEventScheduleType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["eventType", ["NotificationEventTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EventType")]],
+    ["summaryPeriod", ["SummaryWindowPeriodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SummaryPeriod")]],
+    ["frequency", ["SummaryFrequencyCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "Frequency")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :eventType
+  attr_accessor :summaryPeriod
+  attr_accessor :frequency
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(eventType = nil, summaryPeriod = nil, frequency = nil)
+    @eventType = eventType
+    @summaryPeriod = summaryPeriod
+    @frequency = frequency
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}SupportedEventTypesArrayType
+class SupportedEventTypesArrayType < ::Array
+  @@schema_element = [
+    ["EventType", ["NotificationEventTypeCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "EventType")]]
+  ]
+end
+
+# {urn:ebay:apis:eBLBaseComponents}TCREnabledDefinitionType
+class TCREnabledDefinitionType
+  @@schema_type = "TCREnabledDefinitionType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}TaxJurisdictionType
 class TaxJurisdictionType
   @@schema_type = "TaxJurisdictionType"
@@ -21049,6 +23764,8 @@ class TransactionType
     ["feedbackReceived", ["FeedbackInfoType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FeedbackReceived")]],
     ["containingOrder", ["OrderType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ContainingOrder")]],
     ["finalValueFee", ["AmountType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "FinalValueFee")]],
+    ["transactionPlatform", ["TransactionPlatformType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TransactionPlatform")]],
+    ["listingCheckoutRedirectPreference", ["ListingCheckoutRedirectPreferenceType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "ListingCheckoutRedirectPreference")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
   ]
 
@@ -21082,13 +23799,15 @@ class TransactionType
   attr_accessor :feedbackReceived
   attr_accessor :containingOrder
   attr_accessor :finalValueFee
+  attr_accessor :transactionPlatform
+  attr_accessor :listingCheckoutRedirectPreference
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(amountPaid = nil, adjustmentAmount = nil, convertedAdjustmentAmount = nil, buyer = nil, shippingDetails = nil, convertedAmountPaid = nil, convertedTransactionPrice = nil, createdDate = nil, depositType = nil, item = nil, quantityPurchased = nil, status = nil, transactionID = nil, transactionPrice = nil, bestOfferSale = nil, vATPercent = nil, externalTransaction = [], sellingManagerProductDetails = nil, shippingServiceSelected = nil, buyerMessage = nil, dutchAuctionBid = nil, buyerPaidStatus = nil, sellerPaidStatus = nil, paidTime = nil, shippedTime = nil, totalPrice = nil, feedbackLeft = nil, feedbackReceived = nil, containingOrder = nil, finalValueFee = nil)
+  def initialize(amountPaid = nil, adjustmentAmount = nil, convertedAdjustmentAmount = nil, buyer = nil, shippingDetails = nil, convertedAmountPaid = nil, convertedTransactionPrice = nil, createdDate = nil, depositType = nil, item = nil, quantityPurchased = nil, status = nil, transactionID = nil, transactionPrice = nil, bestOfferSale = nil, vATPercent = nil, externalTransaction = [], sellingManagerProductDetails = nil, shippingServiceSelected = nil, buyerMessage = nil, dutchAuctionBid = nil, buyerPaidStatus = nil, sellerPaidStatus = nil, paidTime = nil, shippedTime = nil, totalPrice = nil, feedbackLeft = nil, feedbackReceived = nil, containingOrder = nil, finalValueFee = nil, transactionPlatform = nil, listingCheckoutRedirectPreference = nil)
     @amountPaid = amountPaid
     @adjustmentAmount = adjustmentAmount
     @convertedAdjustmentAmount = convertedAdjustmentAmount
@@ -21119,6 +23838,8 @@ class TransactionType
     @feedbackReceived = feedbackReceived
     @containingOrder = containingOrder
     @finalValueFee = finalValueFee
+    @transactionPlatform = transactionPlatform
+    @listingCheckoutRedirectPreference = listingCheckoutRedirectPreference
     @__xmlele_any = nil
   end
 end
@@ -21163,6 +23884,28 @@ class UserConsentRequiredDefinitionType
   end
 
   def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}UserIDArrayType
+class UserIDArrayType
+  @@schema_type = "UserIDArrayType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["userID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserID")]],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :userID
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(userID = [])
+    @userID = userID
     @__xmlele_any = nil
   end
 end
@@ -21225,7 +23968,14 @@ class UserType
     ["payPalAccountLevel", ["PayPalAccountLevelCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PayPalAccountLevel")]],
     ["payPalAccountType", ["PayPalAccountTypeCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PayPalAccountType")]],
     ["payPalAccountStatus", ["PayPalAccountStatusCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "PayPalAccountStatus")]],
+    ["userSubscription", ["EBaySubscriptionTypeCodeType[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "UserSubscription")]],
     ["siteVerified", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SiteVerified")]],
+    ["skypeID", ["SOAP::SOAPString[]", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SkypeID")]],
+    ["eBayWikiReadOnly", "SOAP::SOAPBoolean"],
+    ["tUVLevel", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "TUVLevel")]],
+    ["vATID", ["SOAP::SOAPString", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "VATID")]],
+    ["motorsDealer", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MotorsDealer")]],
+    ["sellerPaymentMethod", ["SellerPaymentMethodCodeType", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "SellerPaymentMethod")]],
     ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
   ]
 
@@ -21257,14 +24007,21 @@ class UserType
   attr_accessor :payPalAccountLevel
   attr_accessor :payPalAccountType
   attr_accessor :payPalAccountStatus
+  attr_accessor :userSubscription
   attr_accessor :siteVerified
+  attr_accessor :skypeID
+  attr_accessor :eBayWikiReadOnly
+  attr_accessor :tUVLevel
+  attr_accessor :vATID
+  attr_accessor :motorsDealer
+  attr_accessor :sellerPaymentMethod
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(aboutMePage = nil, eIASToken = nil, rESTToken = nil, email = nil, feedbackScore = nil, uniqueNegativeFeedbackCount = nil, uniquePositiveFeedbackCount = nil, positiveFeedbackPercent = nil, feedbackPrivate = nil, feedbackRatingStar = nil, iDVerified = nil, eBayGoodStanding = nil, newUser = nil, registrationAddress = nil, registrationDate = nil, site = nil, status = nil, userID = nil, userIDChanged = nil, userIDLastChanged = nil, vATStatus = nil, buyerInfo = nil, sellerInfo = nil, charityAffiliations = nil, charitySeller = nil, payPalAccountLevel = nil, payPalAccountType = nil, payPalAccountStatus = nil, siteVerified = nil)
+  def initialize(aboutMePage = nil, eIASToken = nil, rESTToken = nil, email = nil, feedbackScore = nil, uniqueNegativeFeedbackCount = nil, uniquePositiveFeedbackCount = nil, positiveFeedbackPercent = nil, feedbackPrivate = nil, feedbackRatingStar = nil, iDVerified = nil, eBayGoodStanding = nil, newUser = nil, registrationAddress = nil, registrationDate = nil, site = nil, status = nil, userID = nil, userIDChanged = nil, userIDLastChanged = nil, vATStatus = nil, buyerInfo = nil, sellerInfo = nil, charityAffiliations = nil, charitySeller = nil, payPalAccountLevel = nil, payPalAccountType = nil, payPalAccountStatus = nil, userSubscription = [], siteVerified = nil, skypeID = [], eBayWikiReadOnly = nil, tUVLevel = nil, vATID = nil, motorsDealer = nil, sellerPaymentMethod = nil)
     @aboutMePage = aboutMePage
     @eIASToken = eIASToken
     @rESTToken = rESTToken
@@ -21293,7 +24050,14 @@ class UserType
     @payPalAccountLevel = payPalAccountLevel
     @payPalAccountType = payPalAccountType
     @payPalAccountStatus = payPalAccountStatus
+    @userSubscription = userSubscription
     @siteVerified = siteVerified
+    @skypeID = skypeID
+    @eBayWikiReadOnly = eBayWikiReadOnly
+    @tUVLevel = tUVLevel
+    @vATID = vATID
+    @motorsDealer = motorsDealer
+    @sellerPaymentMethod = sellerPaymentMethod
     @__xmlele_any = nil
   end
 end
@@ -21407,6 +24171,24 @@ class VendorHostedPictureType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}VerifiedUserRequirementsType
+class VerifiedUserRequirementsType
+  @@schema_type = "VerifiedUserRequirementsType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["verifiedUser", ["SOAP::SOAPBoolean", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "VerifiedUser")]],
+    ["minimumFeedbackScore", ["SOAP::SOAPInt", XSD::QName.new("urn:ebay:apis:eBLBaseComponents", "MinimumFeedbackScore")]]
+  ]
+
+  attr_accessor :verifiedUser
+  attr_accessor :minimumFeedbackScore
+
+  def initialize(verifiedUser = nil, minimumFeedbackScore = nil)
+    @verifiedUser = verifiedUser
+    @minimumFeedbackScore = minimumFeedbackScore
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}WantItNowPostArrayType
 class WantItNowPostArrayType < ::Array
   @@schema_element = [
@@ -21475,6 +24257,28 @@ class XSLFileType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}eBxOptInPreferenceType
+class EBxOptInPreferenceType
+  @@schema_type = "eBxOptInPreferenceType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+  @@schema_element = [
+    ["eBxOptInPreference", "SOAP::SOAPBoolean"],
+    ["any", [nil, XSD::QName.new("http://www.w3.org/2001/XMLSchema", "anyType")]]
+  ]
+
+  attr_accessor :eBxOptInPreference
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(eBxOptInPreference = nil)
+    @eBxOptInPreference = eBxOptInPreference
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}AckCodeType
 class AckCodeType < ::String
   @@schema_type = "AckCodeType"
@@ -21485,6 +24289,37 @@ class AckCodeType < ::String
   PartialFailure = AckCodeType.new("PartialFailure")
   Success = AckCodeType.new("Success")
   Warning = AckCodeType.new("Warning")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}BuyerPaymentMethodCodeType
+class BuyerPaymentMethodCodeType < ::String
+  @@schema_type = "BuyerPaymentMethodCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AmEx = BuyerPaymentMethodCodeType.new("AmEx")
+  CCAccepted = BuyerPaymentMethodCodeType.new("CCAccepted")
+  COD = BuyerPaymentMethodCodeType.new("COD")
+  CODPrePayDelivery = BuyerPaymentMethodCodeType.new("CODPrePayDelivery")
+  CashInPerson = BuyerPaymentMethodCodeType.new("CashInPerson")
+  CashOnPickup = BuyerPaymentMethodCodeType.new("CashOnPickup")
+  CustomCode = BuyerPaymentMethodCodeType.new("CustomCode")
+  Discover = BuyerPaymentMethodCodeType.new("Discover")
+  ELV = BuyerPaymentMethodCodeType.new("ELV")
+  Escrow = BuyerPaymentMethodCodeType.new("Escrow")
+  LoanCheck = BuyerPaymentMethodCodeType.new("LoanCheck")
+  MOCC = BuyerPaymentMethodCodeType.new("MOCC")
+  MoneyXferAccepted = BuyerPaymentMethodCodeType.new("MoneyXferAccepted")
+  MoneyXferAcceptedInCheckout = BuyerPaymentMethodCodeType.new("MoneyXferAcceptedInCheckout")
+  None = BuyerPaymentMethodCodeType.new("None")
+  Other = BuyerPaymentMethodCodeType.new("Other")
+  OtherOnlinePayments = BuyerPaymentMethodCodeType.new("OtherOnlinePayments")
+  PaisaPayAccepted = BuyerPaymentMethodCodeType.new("PaisaPayAccepted")
+  PayPal = BuyerPaymentMethodCodeType.new("PayPal")
+  PaymentSeeDescription = BuyerPaymentMethodCodeType.new("PaymentSeeDescription")
+  PersonalCheck = BuyerPaymentMethodCodeType.new("PersonalCheck")
+  PostalTransfer = BuyerPaymentMethodCodeType.new("PostalTransfer")
+  PrePayDelivery = BuyerPaymentMethodCodeType.new("PrePayDelivery")
+  VisaMC = BuyerPaymentMethodCodeType.new("VisaMC")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DetailLevelCodeType
@@ -21499,6 +24334,197 @@ class DetailLevelCodeType < ::String
   ReturnHeaders = DetailLevelCodeType.new("ReturnHeaders")
   ReturnMessages = DetailLevelCodeType.new("ReturnMessages")
   ReturnSummary = DetailLevelCodeType.new("ReturnSummary")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DisputeActivityCodeType
+class DisputeActivityCodeType < ::String
+  @@schema_type = "DisputeActivityCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CameToAgreementNeedFVFCredit = DisputeActivityCodeType.new("CameToAgreementNeedFVFCredit")
+  CustomCode = DisputeActivityCodeType.new("CustomCode")
+  MutualAgreementOrNoBuyerResponse = DisputeActivityCodeType.new("MutualAgreementOrNoBuyerResponse")
+  SellerAddInformation = DisputeActivityCodeType.new("SellerAddInformation")
+  SellerComment = DisputeActivityCodeType.new("SellerComment")
+  SellerCompletedTransaction = DisputeActivityCodeType.new("SellerCompletedTransaction")
+  SellerEndCommunication = DisputeActivityCodeType.new("SellerEndCommunication")
+  SellerOffersRefund = DisputeActivityCodeType.new("SellerOffersRefund")
+  SellerPaymentNotReceived = DisputeActivityCodeType.new("SellerPaymentNotReceived")
+  SellerShippedItem = DisputeActivityCodeType.new("SellerShippedItem")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DisputeCreditEligibilityCodeType
+class DisputeCreditEligibilityCodeType < ::String
+  @@schema_type = "DisputeCreditEligibilityCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = DisputeCreditEligibilityCodeType.new("CustomCode")
+  Eligible = DisputeCreditEligibilityCodeType.new("Eligible")
+  InEligible = DisputeCreditEligibilityCodeType.new("InEligible")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DisputeExplanationCodeType
+class DisputeExplanationCodeType < ::String
+  @@schema_type = "DisputeExplanationCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BuyerHasNotResponded = DisputeExplanationCodeType.new("BuyerHasNotResponded")
+  BuyerNoLongerRegistered = DisputeExplanationCodeType.new("BuyerNoLongerRegistered")
+  BuyerNoLongerWantsItem = DisputeExplanationCodeType.new("BuyerNoLongerWantsItem")
+  BuyerNotClearedToPay = DisputeExplanationCodeType.new("BuyerNotClearedToPay")
+  BuyerPurchasingMistake = DisputeExplanationCodeType.new("BuyerPurchasingMistake")
+  BuyerRefusedToPay = DisputeExplanationCodeType.new("BuyerRefusedToPay")
+  BuyerReturnedItemForRefund = DisputeExplanationCodeType.new("BuyerReturnedItemForRefund")
+  CustomCode = DisputeExplanationCodeType.new("CustomCode")
+  OtherExplanation = DisputeExplanationCodeType.new("OtherExplanation")
+  PaymentMethodNotSupported = DisputeExplanationCodeType.new("PaymentMethodNotSupported")
+  ShipCountryNotSupported = DisputeExplanationCodeType.new("ShipCountryNotSupported")
+  ShippingAddressNotConfirmed = DisputeExplanationCodeType.new("ShippingAddressNotConfirmed")
+  UnableToResolveTerms = DisputeExplanationCodeType.new("UnableToResolveTerms")
+  Unspecified = DisputeExplanationCodeType.new("Unspecified")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DisputeFilterTypeCodeType
+class DisputeFilterTypeCodeType < ::String
+  @@schema_type = "DisputeFilterTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AllInvolvedClosedDisputes = DisputeFilterTypeCodeType.new("AllInvolvedClosedDisputes")
+  AllInvolvedDisputes = DisputeFilterTypeCodeType.new("AllInvolvedDisputes")
+  CustomCode = DisputeFilterTypeCodeType.new("CustomCode")
+  DisputesAwaitingMyResponse = DisputeFilterTypeCodeType.new("DisputesAwaitingMyResponse")
+  DisputesAwaitingOtherPartyResponse = DisputeFilterTypeCodeType.new("DisputesAwaitingOtherPartyResponse")
+  EligibleForCredit = DisputeFilterTypeCodeType.new("EligibleForCredit")
+  ItemNotReceivedDisputes = DisputeFilterTypeCodeType.new("ItemNotReceivedDisputes")
+  UnpaidItemDisputes = DisputeFilterTypeCodeType.new("UnpaidItemDisputes")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DisputeMessageSourceCodeType
+class DisputeMessageSourceCodeType < ::String
+  @@schema_type = "DisputeMessageSourceCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Buyer = DisputeMessageSourceCodeType.new("Buyer")
+  CustomCode = DisputeMessageSourceCodeType.new("CustomCode")
+  EBay = DisputeMessageSourceCodeType.new("eBay")
+  Seller = DisputeMessageSourceCodeType.new("Seller")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DisputeReasonCodeType
+class DisputeReasonCodeType < ::String
+  @@schema_type = "DisputeReasonCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BuyerHasNotPaid = DisputeReasonCodeType.new("BuyerHasNotPaid")
+  CustomCode = DisputeReasonCodeType.new("CustomCode")
+  ItemNotReceived = DisputeReasonCodeType.new("ItemNotReceived")
+  SignificantlyNotAsDescribed = DisputeReasonCodeType.new("SignificantlyNotAsDescribed")
+  TransactionMutuallyCanceled = DisputeReasonCodeType.new("TransactionMutuallyCanceled")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DisputeRecordTypeCodeType
+class DisputeRecordTypeCodeType < ::String
+  @@schema_type = "DisputeRecordTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = DisputeRecordTypeCodeType.new("CustomCode")
+  ItemNotReceived = DisputeRecordTypeCodeType.new("ItemNotReceived")
+  UnpaidItem = DisputeRecordTypeCodeType.new("UnpaidItem")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DisputeResolutionReasonCodeType
+class DisputeResolutionReasonCodeType < ::String
+  @@schema_type = "DisputeResolutionReasonCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BuyerPaidAuctionFees = DisputeResolutionReasonCodeType.new("BuyerPaidAuctionFees")
+  CameToAgreement = DisputeResolutionReasonCodeType.new("CameToAgreement")
+  ComputerTechnicalProblem = DisputeResolutionReasonCodeType.new("ComputerTechnicalProblem")
+  CustomCode = DisputeResolutionReasonCodeType.new("CustomCode")
+  FamilyEmergency = DisputeResolutionReasonCodeType.new("FamilyEmergency")
+  FirstInfraction = DisputeResolutionReasonCodeType.new("FirstInfraction")
+  ItemReturned = DisputeResolutionReasonCodeType.new("ItemReturned")
+  NoContact = DisputeResolutionReasonCodeType.new("NoContact")
+  OtherResolution = DisputeResolutionReasonCodeType.new("OtherResolution")
+  ProofGivenInFeedback = DisputeResolutionReasonCodeType.new("ProofGivenInFeedback")
+  ProofOfPayment = DisputeResolutionReasonCodeType.new("ProofOfPayment")
+  SellerReceivedPayment = DisputeResolutionReasonCodeType.new("SellerReceivedPayment")
+  Unresolved = DisputeResolutionReasonCodeType.new("Unresolved")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DisputeResolutionRecordTypeCodeType
+class DisputeResolutionRecordTypeCodeType < ::String
+  @@schema_type = "DisputeResolutionRecordTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  AppealBuyerStrike = DisputeResolutionRecordTypeCodeType.new("AppealBuyerStrike")
+  CustomCode = DisputeResolutionRecordTypeCodeType.new("CustomCode")
+  FVFCredit = DisputeResolutionRecordTypeCodeType.new("FVFCredit")
+  FVFCreditNotGranted = DisputeResolutionRecordTypeCodeType.new("FVFCreditNotGranted")
+  GenerateCSTicketForSuspend = DisputeResolutionRecordTypeCodeType.new("GenerateCSTicketForSuspend")
+  InsertionFeeCredit = DisputeResolutionRecordTypeCodeType.new("InsertionFeeCredit")
+  ReverseFVFCredit = DisputeResolutionRecordTypeCodeType.new("ReverseFVFCredit")
+  ReverseInsertionFeeCredit = DisputeResolutionRecordTypeCodeType.new("ReverseInsertionFeeCredit")
+  StrikeBuyer = DisputeResolutionRecordTypeCodeType.new("StrikeBuyer")
+  SuspendBuyer = DisputeResolutionRecordTypeCodeType.new("SuspendBuyer")
+  UnsuspendBuyer = DisputeResolutionRecordTypeCodeType.new("UnsuspendBuyer")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DisputeSortTypeCodeType
+class DisputeSortTypeCodeType < ::String
+  @@schema_type = "DisputeSortTypeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = DisputeSortTypeCodeType.new("CustomCode")
+  DisputeCreatedTimeAscending = DisputeSortTypeCodeType.new("DisputeCreatedTimeAscending")
+  DisputeCreatedTimeDescending = DisputeSortTypeCodeType.new("DisputeCreatedTimeDescending")
+  DisputeCreditEligibilityAscending = DisputeSortTypeCodeType.new("DisputeCreditEligibilityAscending")
+  DisputeCreditEligibilityDescending = DisputeSortTypeCodeType.new("DisputeCreditEligibilityDescending")
+  DisputeStatusAscending = DisputeSortTypeCodeType.new("DisputeStatusAscending")
+  DisputeStatusDescending = DisputeSortTypeCodeType.new("DisputeStatusDescending")
+  None = DisputeSortTypeCodeType.new("None")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DisputeStateCodeType
+class DisputeStateCodeType < ::String
+  @@schema_type = "DisputeStateCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  BuyerFirstResponseNoPayOption = DisputeStateCodeType.new("BuyerFirstResponseNoPayOption")
+  BuyerFirstResponseNoPayOptionLateResponse = DisputeStateCodeType.new("BuyerFirstResponseNoPayOptionLateResponse")
+  BuyerFirstResponsePayOption = DisputeStateCodeType.new("BuyerFirstResponsePayOption")
+  BuyerFirstResponsePayOptionLateResponse = DisputeStateCodeType.new("BuyerFirstResponsePayOptionLateResponse")
+  Closed = DisputeStateCodeType.new("Closed")
+  CustomCode = DisputeStateCodeType.new("CustomCode")
+  Locked = DisputeStateCodeType.new("Locked")
+  MutualAgreementOrBuyerReturningItem = DisputeStateCodeType.new("MutualAgreementOrBuyerReturningItem")
+  MutualCommunicationNoPayOption = DisputeStateCodeType.new("MutualCommunicationNoPayOption")
+  MutualCommunicationPayOption = DisputeStateCodeType.new("MutualCommunicationPayOption")
+  MutualWithdrawalAgreement = DisputeStateCodeType.new("MutualWithdrawalAgreement")
+  MutualWithdrawalAgreementLate = DisputeStateCodeType.new("MutualWithdrawalAgreementLate")
+  NotAsDescribedMutualCommunication = DisputeStateCodeType.new("NotAsDescribedMutualCommunication")
+  NotAsDescribedNoSellerResponse = DisputeStateCodeType.new("NotAsDescribedNoSellerResponse")
+  NotReceivedMutualCommunication = DisputeStateCodeType.new("NotReceivedMutualCommunication")
+  NotReceivedNoSellerResponse = DisputeStateCodeType.new("NotReceivedNoSellerResponse")
+  PendingResolve = DisputeStateCodeType.new("PendingResolve")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}DisputeStatusCodeType
+class DisputeStatusCodeType < ::String
+  @@schema_type = "DisputeStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Closed = DisputeStatusCodeType.new("Closed")
+  ClosedFVFCreditNoStrike = DisputeStatusCodeType.new("ClosedFVFCreditNoStrike")
+  ClosedFVFCreditStrike = DisputeStatusCodeType.new("ClosedFVFCreditStrike")
+  ClosedNoFVFCreditNoStrike = DisputeStatusCodeType.new("ClosedNoFVFCreditNoStrike")
+  ClosedNoFVFCreditStrike = DisputeStatusCodeType.new("ClosedNoFVFCreditStrike")
+  CustomCode = DisputeStatusCodeType.new("CustomCode")
+  FVFCreditReversedAfterClosing = DisputeStatusCodeType.new("FVFCreditReversedAfterClosing")
+  StrikeAppealedAfterClosing = DisputeStatusCodeType.new("StrikeAppealedAfterClosing")
+  StrikeAppealedAndFVFCreditReversed = DisputeStatusCodeType.new("StrikeAppealedAndFVFCreditReversed")
+  WaitingForBuyerResponse = DisputeStatusCodeType.new("WaitingForBuyerResponse")
+  WaitingForSellerResponse = DisputeStatusCodeType.new("WaitingForSellerResponse")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ErrorClassificationCodeType
@@ -21531,6 +24557,15 @@ class InvocationStatusType < ::String
   Failure = InvocationStatusType.new("Failure")
   InProgress = InvocationStatusType.new("InProgress")
   Success = InvocationStatusType.new("Success")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}MeasurementSystemCodeType
+class MeasurementSystemCodeType < ::String
+  @@schema_type = "MeasurementSystemCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  English = MeasurementSystemCodeType.new("English")
+  Metric = MeasurementSystemCodeType.new("Metric")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SeverityCodeType
@@ -21594,6 +24629,8 @@ class AccountDetailEntryCodeType < ::String
   AutoTraderOn = AccountDetailEntryCodeType.new("AutoTraderOn")
   BBAdminCredit = AccountDetailEntryCodeType.new("BBAdminCredit")
   BBAdminDebit = AccountDetailEntryCodeType.new("BBAdminDebit")
+  BasicBundleFee = AccountDetailEntryCodeType.new("BasicBundleFee")
+  BasicBundleFeeCredit = AccountDetailEntryCodeType.new("BasicBundleFeeCredit")
   BasicUpgradePackBundleFee = AccountDetailEntryCodeType.new("BasicUpgradePackBundleFee")
   BasicUpgradePackBundleFeeCredit = AccountDetailEntryCodeType.new("BasicUpgradePackBundleFeeCredit")
   BonusPointsAddition = AccountDetailEntryCodeType.new("BonusPointsAddition")
@@ -21632,6 +24669,7 @@ class AccountDetailEntryCodeType < ::String
   CreditFinalValue = AccountDetailEntryCodeType.new("CreditFinalValue")
   CreditFinalValueFixedPrice = AccountDetailEntryCodeType.new("CreditFinalValueFixedPrice")
   CreditGallery = AccountDetailEntryCodeType.new("CreditGallery")
+  CreditGalleryPlus = AccountDetailEntryCodeType.new("CreditGalleryPlus")
   CreditGiftIcon = AccountDetailEntryCodeType.new("CreditGiftIcon")
   CreditHighlight = AccountDetailEntryCodeType.new("CreditHighlight")
   CreditIPIXPhoto = AccountDetailEntryCodeType.new("CreditIPIXPhoto")
@@ -21656,6 +24694,8 @@ class AccountDetailEntryCodeType < ::String
   CreditSoftOutage = AccountDetailEntryCodeType.new("CreditSoftOutage")
   CreditTenDayAuction = AccountDetailEntryCodeType.new("CreditTenDayAuction")
   CreditTransferFrom = AccountDetailEntryCodeType.new("CreditTransferFrom")
+  CrediteBayMotorsProFeatureFee = AccountDetailEntryCodeType.new("CrediteBayMotorsProFeatureFee")
+  CrediteBayMotorsProFee = AccountDetailEntryCodeType.new("CrediteBayMotorsProFee")
   CrediteBayStores = AccountDetailEntryCodeType.new("CrediteBayStores")
   CustomCode = AccountDetailEntryCodeType.new("CustomCode")
   DebitTransferTo = AccountDetailEntryCodeType.new("DebitTransferTo")
@@ -21665,6 +24705,8 @@ class AccountDetailEntryCodeType < ::String
   DirectDebitReversal = AccountDetailEntryCodeType.new("DirectDebitReversal")
   EBayCredit = AccountDetailEntryCodeType.new("eBayCredit")
   EBayDebit = AccountDetailEntryCodeType.new("eBayDebit")
+  EBayMotorsProFeatureFee = AccountDetailEntryCodeType.new("eBayMotorsProFeatureFee")
+  EBayMotorsProFee = AccountDetailEntryCodeType.new("eBayMotorsProFee")
   EBayStoreInventorySubscriptionCredit = AccountDetailEntryCodeType.new("eBayStoreInventorySubscriptionCredit")
   EBayVISACredit = AccountDetailEntryCodeType.new("eBayVISACredit")
   EOMRestriction = AccountDetailEntryCodeType.new("EOMRestriction")
@@ -21686,6 +24728,7 @@ class AccountDetailEntryCodeType < ::String
   FeeFinalValue = AccountDetailEntryCodeType.new("FeeFinalValue")
   FeeFinalValueFixedPrice = AccountDetailEntryCodeType.new("FeeFinalValueFixedPrice")
   FeeGallery = AccountDetailEntryCodeType.new("FeeGallery")
+  FeeGalleryPlus = AccountDetailEntryCodeType.new("FeeGalleryPlus")
   FeeGiftIcon = AccountDetailEntryCodeType.new("FeeGiftIcon")
   FeeHighlight = AccountDetailEntryCodeType.new("FeeHighlight")
   FeeIPIXPhoto = AccountDetailEntryCodeType.new("FeeIPIXPhoto")
@@ -21714,6 +24757,8 @@ class AccountDetailEntryCodeType < ::String
   FlagDDPaymentConfirmed = AccountDetailEntryCodeType.new("FlagDDPaymentConfirmed")
   ForeignFundsCheckReversal = AccountDetailEntryCodeType.new("ForeignFundsCheckReversal")
   ForeignFundsConvert = AccountDetailEntryCodeType.new("ForeignFundsConvert")
+  InternationalListingCredit = AccountDetailEntryCodeType.new("InternationalListingCredit")
+  InternationalListingFee = AccountDetailEntryCodeType.new("InternationalListingFee")
   InvoiceCreditBalance = AccountDetailEntryCodeType.new("InvoiceCreditBalance")
   Invoiced = AccountDetailEntryCodeType.new("Invoiced")
   InvoicedCreditCard = AccountDetailEntryCodeType.new("InvoicedCreditCard")
@@ -21730,6 +24775,12 @@ class AccountDetailEntryCodeType < ::String
   LAFinalValueFeeRefund = AccountDetailEntryCodeType.new("LAFinalValueFeeRefund")
   ListingDesignerCredit = AccountDetailEntryCodeType.new("ListingDesignerCredit")
   ListingDesignerFee = AccountDetailEntryCodeType.new("ListingDesignerFee")
+  MarketplaceResearchBasicSubscriptionFee = AccountDetailEntryCodeType.new("MarketplaceResearchBasicSubscriptionFee")
+  MarketplaceResearchBasicSubscriptionFeeCredit = AccountDetailEntryCodeType.new("MarketplaceResearchBasicSubscriptionFeeCredit")
+  MarketplaceResearchExpiredSubscriptionFee = AccountDetailEntryCodeType.new("MarketplaceResearchExpiredSubscriptionFee")
+  MarketplaceResearchExpiredSubscriptionFeeCredit = AccountDetailEntryCodeType.new("MarketplaceResearchExpiredSubscriptionFeeCredit")
+  MarketplaceResearchProSubscriptionFee = AccountDetailEntryCodeType.new("MarketplaceResearchProSubscriptionFee")
+  MarketplaceResearchProSubscriptionFeeCredit = AccountDetailEntryCodeType.new("MarketplaceResearchProSubscriptionFeeCredit")
   Memo = AccountDetailEntryCodeType.new("Memo")
   Merged = AccountDetailEntryCodeType.new("Merged")
   OutageCredit = AccountDetailEntryCodeType.new("OutageCredit")
@@ -21807,6 +24858,14 @@ class AccountDetailEntryCodeType < ::String
   VATStatusDeletedByUser = AccountDetailEntryCodeType.new("VATStatusDeletedByUser")
   ValuePackBundleFee = AccountDetailEntryCodeType.new("ValuePackBundleFee")
   ValuePackBundleFeeCredit = AccountDetailEntryCodeType.new("ValuePackBundleFeeCredit")
+  VehicleLocalFinalValueFee = AccountDetailEntryCodeType.new("VehicleLocalFinalValueFee")
+  VehicleLocalFinalValueFeeCredit = AccountDetailEntryCodeType.new("VehicleLocalFinalValueFeeCredit")
+  VehicleLocalGTCFee = AccountDetailEntryCodeType.new("VehicleLocalGTCFee")
+  VehicleLocalGTCFeeCredit = AccountDetailEntryCodeType.new("VehicleLocalGTCFeeCredit")
+  VehicleLocalInsertionFee = AccountDetailEntryCodeType.new("VehicleLocalInsertionFee")
+  VehicleLocalInsertionFeeCredit = AccountDetailEntryCodeType.new("VehicleLocalInsertionFeeCredit")
+  VehicleLocalSubscriptionFee = AccountDetailEntryCodeType.new("VehicleLocalSubscriptionFee")
+  VehicleLocalSubscriptionFeeCredit = AccountDetailEntryCodeType.new("VehicleLocalSubscriptionFeeCredit")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}AccountEntrySortTypeCodeType
@@ -21851,6 +24910,8 @@ class AdFormatEnabledCodeType < ::String
   @@schema_type = "AdFormatEnabledCodeType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
 
+  ClassifiedAdEnabled = AdFormatEnabledCodeType.new("ClassifiedAdEnabled")
+  ClassifiedAdOnly = AdFormatEnabledCodeType.new("ClassifiedAdOnly")
   Disabled = AdFormatEnabledCodeType.new("Disabled")
   Enabled = AdFormatEnabledCodeType.new("Enabled")
   Only = AdFormatEnabledCodeType.new("Only")
@@ -21988,36 +25049,6 @@ class BulkCatalogListerStatusCodeType < ::String
   WatchWarn = BulkCatalogListerStatusCodeType.new("WatchWarn")
 end
 
-# {urn:ebay:apis:eBLBaseComponents}BuyerPaymentMethodCodeType
-class BuyerPaymentMethodCodeType < ::String
-  @@schema_type = "BuyerPaymentMethodCodeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-
-  AmEx = BuyerPaymentMethodCodeType.new("AmEx")
-  CCAccepted = BuyerPaymentMethodCodeType.new("CCAccepted")
-  COD = BuyerPaymentMethodCodeType.new("COD")
-  CODPrePayDelivery = BuyerPaymentMethodCodeType.new("CODPrePayDelivery")
-  CashInPerson = BuyerPaymentMethodCodeType.new("CashInPerson")
-  CashOnPickup = BuyerPaymentMethodCodeType.new("CashOnPickup")
-  CustomCode = BuyerPaymentMethodCodeType.new("CustomCode")
-  Discover = BuyerPaymentMethodCodeType.new("Discover")
-  Escrow = BuyerPaymentMethodCodeType.new("Escrow")
-  LoanCheck = BuyerPaymentMethodCodeType.new("LoanCheck")
-  MOCC = BuyerPaymentMethodCodeType.new("MOCC")
-  MoneyXferAccepted = BuyerPaymentMethodCodeType.new("MoneyXferAccepted")
-  MoneyXferAcceptedInCheckout = BuyerPaymentMethodCodeType.new("MoneyXferAcceptedInCheckout")
-  None = BuyerPaymentMethodCodeType.new("None")
-  Other = BuyerPaymentMethodCodeType.new("Other")
-  OtherOnlinePayments = BuyerPaymentMethodCodeType.new("OtherOnlinePayments")
-  PaisaPayAccepted = BuyerPaymentMethodCodeType.new("PaisaPayAccepted")
-  PayPal = BuyerPaymentMethodCodeType.new("PayPal")
-  PaymentSeeDescription = BuyerPaymentMethodCodeType.new("PaymentSeeDescription")
-  PersonalCheck = BuyerPaymentMethodCodeType.new("PersonalCheck")
-  PostalTransfer = BuyerPaymentMethodCodeType.new("PostalTransfer")
-  PrePayDelivery = BuyerPaymentMethodCodeType.new("PrePayDelivery")
-  VisaMC = BuyerPaymentMethodCodeType.new("VisaMC")
-end
-
 # {urn:ebay:apis:eBLBaseComponents}BuyerProtectionCodeType
 class BuyerProtectionCodeType < ::String
   @@schema_type = "BuyerProtectionCodeType"
@@ -22065,6 +25096,7 @@ class CategoryListingsOrderCodeType < ::String
   @@schema_type = "CategoryListingsOrderCodeType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
 
+  BestMatchSort = CategoryListingsOrderCodeType.new("BestMatchSort")
   CustomCode = CategoryListingsOrderCodeType.new("CustomCode")
   DistanceSort = CategoryListingsOrderCodeType.new("DistanceSort")
   ItemsBy24Hr = CategoryListingsOrderCodeType.new("ItemsBy24Hr")
@@ -22139,7 +25171,6 @@ class CheckoutMethodCodeType < ::String
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
 
   CustomCode = CheckoutMethodCodeType.new("CustomCode")
-  LogosIneBayListing = CheckoutMethodCodeType.new("LogosIneBayListing")
   Other = CheckoutMethodCodeType.new("Other")
   ThirdPartyCheckout = CheckoutMethodCodeType.new("ThirdPartyCheckout")
 end
@@ -22186,6 +25217,7 @@ class CommentTypeCodeType < ::String
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
 
   CustomCode = CommentTypeCodeType.new("CustomCode")
+  IndependentlyWithdrawn = CommentTypeCodeType.new("IndependentlyWithdrawn")
   Negative = CommentTypeCodeType.new("Negative")
   Neutral = CommentTypeCodeType.new("Neutral")
   Positive = CommentTypeCodeType.new("Positive")
@@ -22200,6 +25232,17 @@ class CompleteStatusCodeType < ::String
   Complete = CompleteStatusCodeType.new("Complete")
   CustomCode = CompleteStatusCodeType.new("CustomCode")
   Incomplete = CompleteStatusCodeType.new("Incomplete")
+  Pending = CompleteStatusCodeType.new("Pending")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ConditionSelectionCodeType
+class ConditionSelectionCodeType < ::String
+  @@schema_type = "ConditionSelectionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  All = ConditionSelectionCodeType.new("All")
+  CustomCode = ConditionSelectionCodeType.new("CustomCode")
+  New = ConditionSelectionCodeType.new("New")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CountryCodeType
@@ -22658,6 +25701,17 @@ class DepositTypeCodeType < ::String
   OtherMethod = DepositTypeCodeType.new("OtherMethod")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}DescriptionReviseModeCodeType
+class DescriptionReviseModeCodeType < ::String
+  @@schema_type = "DescriptionReviseModeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Append = DescriptionReviseModeCodeType.new("Append")
+  CustomCode = DescriptionReviseModeCodeType.new("CustomCode")
+  Prepend = DescriptionReviseModeCodeType.new("Prepend")
+  Replace = DescriptionReviseModeCodeType.new("Replace")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}DescriptionTemplateCodeType
 class DescriptionTemplateCodeType < ::String
   @@schema_type = "DescriptionTemplateCodeType"
@@ -22728,195 +25782,32 @@ class DisplayPayNowButtonCodeType < ::String
   ShowPayNowButtonForPayPalOnly = DisplayPayNowButtonCodeType.new("ShowPayNowButtonForPayPalOnly")
 end
 
-# {urn:ebay:apis:eBLBaseComponents}DisputeActivityCodeType
-class DisputeActivityCodeType < ::String
-  @@schema_type = "DisputeActivityCodeType"
+# {urn:ebay:apis:eBLBaseComponents}EBaySubscriptionTypeCodeType
+class EBaySubscriptionTypeCodeType < ::String
+  @@schema_type = "EBaySubscriptionTypeCodeType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
 
-  CameToAgreementNeedFVFCredit = DisputeActivityCodeType.new("CameToAgreementNeedFVFCredit")
-  CustomCode = DisputeActivityCodeType.new("CustomCode")
-  MutualAgreementOrNoBuyerResponse = DisputeActivityCodeType.new("MutualAgreementOrNoBuyerResponse")
-  SellerAddInformation = DisputeActivityCodeType.new("SellerAddInformation")
-  SellerComment = DisputeActivityCodeType.new("SellerComment")
-  SellerCompletedTransaction = DisputeActivityCodeType.new("SellerCompletedTransaction")
-  SellerEndCommunication = DisputeActivityCodeType.new("SellerEndCommunication")
-  SellerOffersRefund = DisputeActivityCodeType.new("SellerOffersRefund")
-  SellerPaymentNotReceived = DisputeActivityCodeType.new("SellerPaymentNotReceived")
-  SellerShippedItem = DisputeActivityCodeType.new("SellerShippedItem")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DisputeCreditEligibilityCodeType
-class DisputeCreditEligibilityCodeType < ::String
-  @@schema_type = "DisputeCreditEligibilityCodeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-
-  CustomCode = DisputeCreditEligibilityCodeType.new("CustomCode")
-  Eligible = DisputeCreditEligibilityCodeType.new("Eligible")
-  InEligible = DisputeCreditEligibilityCodeType.new("InEligible")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DisputeExplanationCodeType
-class DisputeExplanationCodeType < ::String
-  @@schema_type = "DisputeExplanationCodeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-
-  BuyerHasNotResponded = DisputeExplanationCodeType.new("BuyerHasNotResponded")
-  BuyerNoLongerRegistered = DisputeExplanationCodeType.new("BuyerNoLongerRegistered")
-  BuyerNoLongerWantsItem = DisputeExplanationCodeType.new("BuyerNoLongerWantsItem")
-  BuyerNotClearedToPay = DisputeExplanationCodeType.new("BuyerNotClearedToPay")
-  BuyerPurchasingMistake = DisputeExplanationCodeType.new("BuyerPurchasingMistake")
-  BuyerRefusedToPay = DisputeExplanationCodeType.new("BuyerRefusedToPay")
-  BuyerReturnedItemForRefund = DisputeExplanationCodeType.new("BuyerReturnedItemForRefund")
-  CustomCode = DisputeExplanationCodeType.new("CustomCode")
-  OtherExplanation = DisputeExplanationCodeType.new("OtherExplanation")
-  PaymentMethodNotSupported = DisputeExplanationCodeType.new("PaymentMethodNotSupported")
-  ShipCountryNotSupported = DisputeExplanationCodeType.new("ShipCountryNotSupported")
-  ShippingAddressNotConfirmed = DisputeExplanationCodeType.new("ShippingAddressNotConfirmed")
-  UnableToResolveTerms = DisputeExplanationCodeType.new("UnableToResolveTerms")
-  Unspecified = DisputeExplanationCodeType.new("Unspecified")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DisputeFilterTypeCodeType
-class DisputeFilterTypeCodeType < ::String
-  @@schema_type = "DisputeFilterTypeCodeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-
-  AllInvolvedClosedDisputes = DisputeFilterTypeCodeType.new("AllInvolvedClosedDisputes")
-  AllInvolvedDisputes = DisputeFilterTypeCodeType.new("AllInvolvedDisputes")
-  CustomCode = DisputeFilterTypeCodeType.new("CustomCode")
-  DisputesAwaitingMyResponse = DisputeFilterTypeCodeType.new("DisputesAwaitingMyResponse")
-  DisputesAwaitingOtherPartyResponse = DisputeFilterTypeCodeType.new("DisputesAwaitingOtherPartyResponse")
-  EligibleForCredit = DisputeFilterTypeCodeType.new("EligibleForCredit")
-  ItemNotReceivedDisputes = DisputeFilterTypeCodeType.new("ItemNotReceivedDisputes")
-  UnpaidItemDisputes = DisputeFilterTypeCodeType.new("UnpaidItemDisputes")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DisputeMessageSourceCodeType
-class DisputeMessageSourceCodeType < ::String
-  @@schema_type = "DisputeMessageSourceCodeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-
-  Buyer = DisputeMessageSourceCodeType.new("Buyer")
-  CustomCode = DisputeMessageSourceCodeType.new("CustomCode")
-  EBay = DisputeMessageSourceCodeType.new("eBay")
-  Seller = DisputeMessageSourceCodeType.new("Seller")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DisputeReasonCodeType
-class DisputeReasonCodeType < ::String
-  @@schema_type = "DisputeReasonCodeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-
-  BuyerHasNotPaid = DisputeReasonCodeType.new("BuyerHasNotPaid")
-  CustomCode = DisputeReasonCodeType.new("CustomCode")
-  ItemNotReceived = DisputeReasonCodeType.new("ItemNotReceived")
-  SignificantlyNotAsDescribed = DisputeReasonCodeType.new("SignificantlyNotAsDescribed")
-  TransactionMutuallyCanceled = DisputeReasonCodeType.new("TransactionMutuallyCanceled")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DisputeRecordTypeCodeType
-class DisputeRecordTypeCodeType < ::String
-  @@schema_type = "DisputeRecordTypeCodeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-
-  CustomCode = DisputeRecordTypeCodeType.new("CustomCode")
-  ItemNotReceived = DisputeRecordTypeCodeType.new("ItemNotReceived")
-  UnpaidItem = DisputeRecordTypeCodeType.new("UnpaidItem")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DisputeResolutionReasonCodeType
-class DisputeResolutionReasonCodeType < ::String
-  @@schema_type = "DisputeResolutionReasonCodeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-
-  BuyerPaidAuctionFees = DisputeResolutionReasonCodeType.new("BuyerPaidAuctionFees")
-  CameToAgreement = DisputeResolutionReasonCodeType.new("CameToAgreement")
-  ComputerTechnicalProblem = DisputeResolutionReasonCodeType.new("ComputerTechnicalProblem")
-  CustomCode = DisputeResolutionReasonCodeType.new("CustomCode")
-  FamilyEmergency = DisputeResolutionReasonCodeType.new("FamilyEmergency")
-  FirstInfraction = DisputeResolutionReasonCodeType.new("FirstInfraction")
-  ItemReturned = DisputeResolutionReasonCodeType.new("ItemReturned")
-  NoContact = DisputeResolutionReasonCodeType.new("NoContact")
-  OtherResolution = DisputeResolutionReasonCodeType.new("OtherResolution")
-  ProofGivenInFeedback = DisputeResolutionReasonCodeType.new("ProofGivenInFeedback")
-  ProofOfPayment = DisputeResolutionReasonCodeType.new("ProofOfPayment")
-  SellerReceivedPayment = DisputeResolutionReasonCodeType.new("SellerReceivedPayment")
-  Unresolved = DisputeResolutionReasonCodeType.new("Unresolved")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DisputeResolutionRecordTypeCodeType
-class DisputeResolutionRecordTypeCodeType < ::String
-  @@schema_type = "DisputeResolutionRecordTypeCodeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-
-  AppealBuyerStrike = DisputeResolutionRecordTypeCodeType.new("AppealBuyerStrike")
-  CustomCode = DisputeResolutionRecordTypeCodeType.new("CustomCode")
-  FVFCredit = DisputeResolutionRecordTypeCodeType.new("FVFCredit")
-  FVFCreditNotGranted = DisputeResolutionRecordTypeCodeType.new("FVFCreditNotGranted")
-  GenerateCSTicketForSuspend = DisputeResolutionRecordTypeCodeType.new("GenerateCSTicketForSuspend")
-  InsertionFeeCredit = DisputeResolutionRecordTypeCodeType.new("InsertionFeeCredit")
-  ReverseFVFCredit = DisputeResolutionRecordTypeCodeType.new("ReverseFVFCredit")
-  ReverseInsertionFeeCredit = DisputeResolutionRecordTypeCodeType.new("ReverseInsertionFeeCredit")
-  StrikeBuyer = DisputeResolutionRecordTypeCodeType.new("StrikeBuyer")
-  SuspendBuyer = DisputeResolutionRecordTypeCodeType.new("SuspendBuyer")
-  UnsuspendBuyer = DisputeResolutionRecordTypeCodeType.new("UnsuspendBuyer")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DisputeSortTypeCodeType
-class DisputeSortTypeCodeType < ::String
-  @@schema_type = "DisputeSortTypeCodeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-
-  CustomCode = DisputeSortTypeCodeType.new("CustomCode")
-  DisputeCreatedTimeAscending = DisputeSortTypeCodeType.new("DisputeCreatedTimeAscending")
-  DisputeCreatedTimeDescending = DisputeSortTypeCodeType.new("DisputeCreatedTimeDescending")
-  DisputeCreditEligibilityAscending = DisputeSortTypeCodeType.new("DisputeCreditEligibilityAscending")
-  DisputeCreditEligibilityDescending = DisputeSortTypeCodeType.new("DisputeCreditEligibilityDescending")
-  DisputeStatusAscending = DisputeSortTypeCodeType.new("DisputeStatusAscending")
-  DisputeStatusDescending = DisputeSortTypeCodeType.new("DisputeStatusDescending")
-  None = DisputeSortTypeCodeType.new("None")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DisputeStateCodeType
-class DisputeStateCodeType < ::String
-  @@schema_type = "DisputeStateCodeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-
-  BuyerFirstResponseNoPayOption = DisputeStateCodeType.new("BuyerFirstResponseNoPayOption")
-  BuyerFirstResponseNoPayOptionLateResponse = DisputeStateCodeType.new("BuyerFirstResponseNoPayOptionLateResponse")
-  BuyerFirstResponsePayOption = DisputeStateCodeType.new("BuyerFirstResponsePayOption")
-  BuyerFirstResponsePayOptionLateResponse = DisputeStateCodeType.new("BuyerFirstResponsePayOptionLateResponse")
-  Closed = DisputeStateCodeType.new("Closed")
-  CustomCode = DisputeStateCodeType.new("CustomCode")
-  Locked = DisputeStateCodeType.new("Locked")
-  MutualAgreementOrBuyerReturningItem = DisputeStateCodeType.new("MutualAgreementOrBuyerReturningItem")
-  MutualCommunicationNoPayOption = DisputeStateCodeType.new("MutualCommunicationNoPayOption")
-  MutualCommunicationPayOption = DisputeStateCodeType.new("MutualCommunicationPayOption")
-  MutualWithdrawalAgreement = DisputeStateCodeType.new("MutualWithdrawalAgreement")
-  MutualWithdrawalAgreementLate = DisputeStateCodeType.new("MutualWithdrawalAgreementLate")
-  NotAsDescribedMutualCommunication = DisputeStateCodeType.new("NotAsDescribedMutualCommunication")
-  NotAsDescribedNoSellerResponse = DisputeStateCodeType.new("NotAsDescribedNoSellerResponse")
-  NotReceivedMutualCommunication = DisputeStateCodeType.new("NotReceivedMutualCommunication")
-  NotReceivedNoSellerResponse = DisputeStateCodeType.new("NotReceivedNoSellerResponse")
-  PendingResolve = DisputeStateCodeType.new("PendingResolve")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DisputeStatusCodeType
-class DisputeStatusCodeType < ::String
-  @@schema_type = "DisputeStatusCodeType"
-  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
-
-  Closed = DisputeStatusCodeType.new("Closed")
-  ClosedFVFCreditNoStrike = DisputeStatusCodeType.new("ClosedFVFCreditNoStrike")
-  ClosedFVFCreditStrike = DisputeStatusCodeType.new("ClosedFVFCreditStrike")
-  ClosedNoFVFCreditNoStrike = DisputeStatusCodeType.new("ClosedNoFVFCreditNoStrike")
-  ClosedNoFVFCreditStrike = DisputeStatusCodeType.new("ClosedNoFVFCreditStrike")
-  CustomCode = DisputeStatusCodeType.new("CustomCode")
-  FVFCreditReversedAfterClosing = DisputeStatusCodeType.new("FVFCreditReversedAfterClosing")
-  StrikeAppealedAfterClosing = DisputeStatusCodeType.new("StrikeAppealedAfterClosing")
-  StrikeAppealedAndFVFCreditReversed = DisputeStatusCodeType.new("StrikeAppealedAndFVFCreditReversed")
-  WaitingForBuyerResponse = DisputeStatusCodeType.new("WaitingForBuyerResponse")
-  WaitingForSellerResponse = DisputeStatusCodeType.new("WaitingForSellerResponse")
+  CustomCode = EBaySubscriptionTypeCodeType.new("CustomCode")
+  EBayStoreAnchor = EBaySubscriptionTypeCodeType.new("EBayStoreAnchor")
+  EBayStoreBasic = EBaySubscriptionTypeCodeType.new("EBayStoreBasic")
+  EBayStoreFeatured = EBaySubscriptionTypeCodeType.new("EBayStoreFeatured")
+  FileExchange = EBaySubscriptionTypeCodeType.new("FileExchange")
+  LocalMarketPremium = EBaySubscriptionTypeCodeType.new("LocalMarketPremium")
+  LocalMarketRegular = EBaySubscriptionTypeCodeType.new("LocalMarketRegular")
+  LocalMarketSpecialty = EBaySubscriptionTypeCodeType.new("LocalMarketSpecialty")
+  PictureManagerLevel1 = EBaySubscriptionTypeCodeType.new("PictureManagerLevel1")
+  PictureManagerLevel2 = EBaySubscriptionTypeCodeType.new("PictureManagerLevel2")
+  PictureManagerLevel3 = EBaySubscriptionTypeCodeType.new("PictureManagerLevel3")
+  PictureManagerLevel4 = EBaySubscriptionTypeCodeType.new("PictureManagerLevel4")
+  PictureManagerLevel5 = EBaySubscriptionTypeCodeType.new("PictureManagerLevel5")
+  PictureManagerLevel6 = EBaySubscriptionTypeCodeType.new("PictureManagerLevel6")
+  PictureManagerLevel7 = EBaySubscriptionTypeCodeType.new("PictureManagerLevel7")
+  SellerAssistant = EBaySubscriptionTypeCodeType.new("SellerAssistant")
+  SellerAssistantPro = EBaySubscriptionTypeCodeType.new("SellerAssistantPro")
+  SellerReportsBasic = EBaySubscriptionTypeCodeType.new("SellerReportsBasic")
+  SellerReportsPlus = EBaySubscriptionTypeCodeType.new("SellerReportsPlus")
+  SellingManager = EBaySubscriptionTypeCodeType.new("SellingManager")
+  SellingManagerPro = EBaySubscriptionTypeCodeType.new("SellingManagerPro")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}EnableCodeType
@@ -22951,6 +25842,7 @@ class EndReasonCodeType < ::String
   LostOrBroken = EndReasonCodeType.new("LostOrBroken")
   NotAvailable = EndReasonCodeType.new("NotAvailable")
   OtherListingError = EndReasonCodeType.new("OtherListingError")
+  SellToHighBidder = EndReasonCodeType.new("SellToHighBidder")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}EscrowCodeType
@@ -22962,6 +25854,61 @@ class EscrowCodeType < ::String
   BySeller = EscrowCodeType.new("BySeller")
   CustomCode = EscrowCodeType.new("CustomCode")
   None = EscrowCodeType.new("None")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ExpressDetailLevelCodeType
+class ExpressDetailLevelCodeType < ::String
+  @@schema_type = "ExpressDetailLevelCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Coarse = ExpressDetailLevelCodeType.new("Coarse")
+  CustomCode = ExpressDetailLevelCodeType.new("CustomCode")
+  Fine = ExpressDetailLevelCodeType.new("Fine")
+  None = ExpressDetailLevelCodeType.new("None")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ExpressHistogramSortCodeType
+class ExpressHistogramSortCodeType < ::String
+  @@schema_type = "ExpressHistogramSortCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Alphabetical = ExpressHistogramSortCodeType.new("Alphabetical")
+  CustomCode = ExpressHistogramSortCodeType.new("CustomCode")
+  ItemCount = ExpressHistogramSortCodeType.new("ItemCount")
+  ProductCount = ExpressHistogramSortCodeType.new("ProductCount")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ExpressItemSortCodeType
+class ExpressItemSortCodeType < ::String
+  @@schema_type = "ExpressItemSortCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = ExpressItemSortCodeType.new("CustomCode")
+  HighestTotalCost = ExpressItemSortCodeType.new("HighestTotalCost")
+  LowestTotalCost = ExpressItemSortCodeType.new("LowestTotalCost")
+  Relevance = ExpressItemSortCodeType.new("Relevance")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ExpressProductSortCodeType
+class ExpressProductSortCodeType < ::String
+  @@schema_type = "ExpressProductSortCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = ExpressProductSortCodeType.new("CustomCode")
+  HighestPrice = ExpressProductSortCodeType.new("HighestPrice")
+  LowestPrice = ExpressProductSortCodeType.new("LowestPrice")
+  SalesRank = ExpressProductSortCodeType.new("SalesRank")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ExpressSellingPreferenceCodeType
+class ExpressSellingPreferenceCodeType < ::String
+  @@schema_type = "ExpressSellingPreferenceCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  All = ExpressSellingPreferenceCodeType.new("All")
+  CustomCode = ExpressSellingPreferenceCodeType.new("CustomCode")
+  ExpressOnly = ExpressSellingPreferenceCodeType.new("ExpressOnly")
+  OptOut = ExpressSellingPreferenceCodeType.new("OptOut")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ExternalProductCodeType
@@ -22990,11 +25937,25 @@ class FeatureIDCodeType < ::String
   CustomCode = FeatureIDCodeType.new("CustomCode")
   DigitalDeliveryEnabled = FeatureIDCodeType.new("DigitalDeliveryEnabled")
   DutchBINEnabled = FeatureIDCodeType.new("DutchBINEnabled")
+  ExpressConditionRequired = FeatureIDCodeType.new("ExpressConditionRequired")
+  ExpressEnabled = FeatureIDCodeType.new("ExpressEnabled")
+  ExpressPicturesRequired = FeatureIDCodeType.new("ExpressPicturesRequired")
   HomePageFeaturedEnabled = FeatureIDCodeType.new("HomePageFeaturedEnabled")
   ListingDurations = FeatureIDCodeType.new("ListingDurations")
+  LocalListingDistances = FeatureIDCodeType.new("LocalListingDistances")
+  LocalMarketNonSubscription = FeatureIDCodeType.new("LocalMarketNonSubscription")
+  LocalMarketPremiumSubscription = FeatureIDCodeType.new("LocalMarketPremiumSubscription")
+  LocalMarketRegularSubscription = FeatureIDCodeType.new("LocalMarketRegularSubscription")
+  LocalMarketSpecialitySubscription = FeatureIDCodeType.new("LocalMarketSpecialitySubscription")
+  MinimumReservePrice = FeatureIDCodeType.new("MinimumReservePrice")
   ProPack = FeatureIDCodeType.new("ProPack")
   ProPackPlus = FeatureIDCodeType.new("ProPackPlus")
+  SellerContactDetailsEnabled = FeatureIDCodeType.new("SellerContactDetailsEnabled")
   ShippingTermsRequired = FeatureIDCodeType.new("ShippingTermsRequired")
+  SkypeMeNonTransactionalEnabled = FeatureIDCodeType.new("SkypeMeNonTransactionalEnabled")
+  SkypeMeTransactionalEnabled = FeatureIDCodeType.new("SkypeMeTransactionalEnabled")
+  StoreInventoryEnabled = FeatureIDCodeType.new("StoreInventoryEnabled")
+  TransactionConfirmationRequestEnabled = FeatureIDCodeType.new("TransactionConfirmationRequestEnabled")
   UserConsentRequired = FeatureIDCodeType.new("UserConsentRequired")
   ValuePack = FeatureIDCodeType.new("ValuePack")
 end
@@ -23072,6 +26033,7 @@ class GalleryTypeCodeType < ::String
   Featured = GalleryTypeCodeType.new("Featured")
   Gallery = GalleryTypeCodeType.new("Gallery")
   None = GalleryTypeCodeType.new("None")
+  Plus = GalleryTypeCodeType.new("Plus")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}GeneralPaymentMethodCodeType
@@ -23254,6 +26216,8 @@ class ItemSortTypeCodeType < ::String
   SellerUserIDDescending = ItemSortTypeCodeType.new("SellerUserIDDescending")
   ShippingServiceCost = ItemSortTypeCodeType.new("ShippingServiceCost")
   ShippingServiceCostDescending = ItemSortTypeCodeType.new("ShippingServiceCostDescending")
+  SoldPlatform = ItemSortTypeCodeType.new("SoldPlatform")
+  SoldPlatformDescending = ItemSortTypeCodeType.new("SoldPlatformDescending")
   StartPrice = ItemSortTypeCodeType.new("StartPrice")
   StartPriceDescending = ItemSortTypeCodeType.new("StartPriceDescending")
   StartTime = ItemSortTypeCodeType.new("StartTime")
@@ -23268,6 +26232,8 @@ class ItemSortTypeCodeType < ::String
   UserIDDescending = ItemSortTypeCodeType.new("UserIDDescending")
   WatchCount = ItemSortTypeCodeType.new("WatchCount")
   WatchCountDescending = ItemSortTypeCodeType.new("WatchCountDescending")
+  WonPlatform = ItemSortTypeCodeType.new("WonPlatform")
+  WonPlatformDescending = ItemSortTypeCodeType.new("WonPlatformDescending")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ItemTypeFilterCodeType
@@ -23275,10 +26241,16 @@ class ItemTypeFilterCodeType < ::String
   @@schema_type = "ItemTypeFilterCodeType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
 
+  AllFixedPriceItemTypes = ItemTypeFilterCodeType.new("AllFixedPriceItemTypes")
+  AllItemTypes = ItemTypeFilterCodeType.new("AllItemTypes")
   AllItems = ItemTypeFilterCodeType.new("AllItems")
   AuctionItemsOnly = ItemTypeFilterCodeType.new("AuctionItemsOnly")
+  ClassifiedItemsOnly = ItemTypeFilterCodeType.new("ClassifiedItemsOnly")
   CustomCode = ItemTypeFilterCodeType.new("CustomCode")
+  ExcludeStoreInventory = ItemTypeFilterCodeType.new("ExcludeStoreInventory")
+  FixedPriceExcludeStoreInventory = ItemTypeFilterCodeType.new("FixedPriceExcludeStoreInventory")
   FixedPricedItem = ItemTypeFilterCodeType.new("FixedPricedItem")
+  StoreInventoryOnly = ItemTypeFilterCodeType.new("StoreInventoryOnly")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ListingDurationCodeType
@@ -23341,6 +26313,14 @@ class ListingStatusCodeType < ::String
   Ended = ListingStatusCodeType.new("Ended")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}ListingSubtypeEnum
+class ListingSubtypeEnum < ::String
+  @@schema_type = "ListingSubtypeEnum"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  ClassifiedAd = ListingSubtypeEnum.new("ClassifiedAd")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}ListingTypeCodeType
 class ListingTypeCodeType < ::String
   @@schema_type = "ListingTypeCodeType"
@@ -23351,8 +26331,10 @@ class ListingTypeCodeType < ::String
   Chinese = ListingTypeCodeType.new("Chinese")
   CustomCode = ListingTypeCodeType.new("CustomCode")
   Dutch = ListingTypeCodeType.new("Dutch")
+  Express = ListingTypeCodeType.new("Express")
   FixedPriceItem = ListingTypeCodeType.new("FixedPriceItem")
   Half = ListingTypeCodeType.new("Half")
+  LeadGeneration = ListingTypeCodeType.new("LeadGeneration")
   Live = ListingTypeCodeType.new("Live")
   PersonalOffer = ListingTypeCodeType.new("PersonalOffer")
   StoresFixedPrice = ListingTypeCodeType.new("StoresFixedPrice")
@@ -23428,6 +26410,7 @@ class MessageTypeCodeType < ::String
 
   AskSellerQuestion = MessageTypeCodeType.new("AskSellerQuestion")
   ContactEbayMember = MessageTypeCodeType.new("ContactEbayMember")
+  ContactTransactionPartner = MessageTypeCodeType.new("ContactTransactionPartner")
   CustomCode = MessageTypeCodeType.new("CustomCode")
   ResponseToASQQuestion = MessageTypeCodeType.new("ResponseToASQQuestion")
 end
@@ -23518,12 +26501,16 @@ class NotificationEventTypeCodeType < ::String
   @@schema_type = "NotificationEventTypeCodeType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
 
+  AccountSummary = NotificationEventTypeCodeType.new("AccountSummary")
+  AccountSuspended = NotificationEventTypeCodeType.new("AccountSuspended")
   AskSellerQuestion = NotificationEventTypeCodeType.new("AskSellerQuestion")
   AuctionCheckoutComplete = NotificationEventTypeCodeType.new("AuctionCheckoutComplete")
   BestOffer = NotificationEventTypeCodeType.new("BestOffer")
   BuyerResponseDispute = NotificationEventTypeCodeType.new("BuyerResponseDispute")
+  Checkout = NotificationEventTypeCodeType.new("Checkout")
   CheckoutBuyerRequestsTotal = NotificationEventTypeCodeType.new("CheckoutBuyerRequestsTotal")
   CustomCode = NotificationEventTypeCodeType.new("CustomCode")
+  EmailAddressChanged = NotificationEventTypeCodeType.new("EmailAddressChanged")
   EndOfAuction = NotificationEventTypeCodeType.new("EndOfAuction")
   Feedback = NotificationEventTypeCodeType.new("Feedback")
   FeedbackForSeller = NotificationEventTypeCodeType.new("FeedbackForSeller")
@@ -23533,8 +26520,12 @@ class NotificationEventTypeCodeType < ::String
   INRBuyerOpenedDispute = NotificationEventTypeCodeType.new("INRBuyerOpenedDispute")
   INRBuyerRespondedToDispute = NotificationEventTypeCodeType.new("INRBuyerRespondedToDispute")
   INRSellerRespondedToDispute = NotificationEventTypeCodeType.new("INRSellerRespondedToDispute")
+  ItemClosed = NotificationEventTypeCodeType.new("ItemClosed")
+  ItemExtended = NotificationEventTypeCodeType.new("ItemExtended")
   ItemListed = NotificationEventTypeCodeType.new("ItemListed")
   ItemRevised = NotificationEventTypeCodeType.new("ItemRevised")
+  ItemSold = NotificationEventTypeCodeType.new("ItemSold")
+  ItemSuspended = NotificationEventTypeCodeType.new("ItemSuspended")
   MyMessagesAlert = NotificationEventTypeCodeType.new("MyMessagesAlert")
   MyMessagesAlertHeader = NotificationEventTypeCodeType.new("MyMessagesAlertHeader")
   MyMessagesM2MMessage = NotificationEventTypeCodeType.new("MyMessagesM2MMessage")
@@ -23543,10 +26534,14 @@ class NotificationEventTypeCodeType < ::String
   MyMessageseBayMessageHeader = NotificationEventTypeCodeType.new("MyMessageseBayMessageHeader")
   None = NotificationEventTypeCodeType.new("None")
   OutBid = NotificationEventTypeCodeType.new("OutBid")
+  PasswordChanged = NotificationEventTypeCodeType.new("PasswordChanged")
+  PasswordHintChanged = NotificationEventTypeCodeType.new("PasswordHintChanged")
+  PaymentDetailChanged = NotificationEventTypeCodeType.new("PaymentDetailChanged")
   SecondChanceOffer = NotificationEventTypeCodeType.new("SecondChanceOffer")
   SellerClosedDispute = NotificationEventTypeCodeType.new("SellerClosedDispute")
   SellerOpenedDispute = NotificationEventTypeCodeType.new("SellerOpenedDispute")
   SellerRespondedToDispute = NotificationEventTypeCodeType.new("SellerRespondedToDispute")
+  UserIDChanged = NotificationEventTypeCodeType.new("UserIDChanged")
   WatchedItemEndingSoon = NotificationEventTypeCodeType.new("WatchedItemEndingSoon")
 end
 
@@ -23557,7 +26552,6 @@ class NotificationPayloadTypeCodeType < ::String
 
   CustomCode = NotificationPayloadTypeCodeType.new("CustomCode")
   EBLSchemaSOAP = NotificationPayloadTypeCodeType.new("eBLSchemaSOAP")
-  NonSchemaSOAP = NotificationPayloadTypeCodeType.new("NonSchemaSOAP")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}NotificationRoleCodeType
@@ -23695,9 +26689,12 @@ class PaymentTypeCodeType < ::String
   @@schema_type = "PaymentTypeCodeType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
 
+  AdminReversal = PaymentTypeCodeType.new("AdminReversal")
+  AllOther = PaymentTypeCodeType.new("AllOther")
   CustomCode = PaymentTypeCodeType.new("CustomCode")
   Refund = PaymentTypeCodeType.new("Refund")
   Sale = PaymentTypeCodeType.new("Sale")
+  SellerDeniedPayment = PaymentTypeCodeType.new("SellerDeniedPayment")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}PhotoDisplayCodeType
@@ -23766,6 +26763,17 @@ class PictureManagerSubscriptionLevelCodeType < ::String
   Level4 = PictureManagerSubscriptionLevelCodeType.new("Level4")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}PictureSourceCodeType
+class PictureSourceCodeType < ::String
+  @@schema_type = "PictureSourceCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = PictureSourceCodeType.new("CustomCode")
+  EPS = PictureSourceCodeType.new("EPS")
+  PictureManager = PictureSourceCodeType.new("PictureManager")
+  Vendor = PictureSourceCodeType.new("Vendor")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}ProductUseCaseCodeType
 class ProductUseCaseCodeType < ::String
   @@schema_type = "ProductUseCaseCodeType"
@@ -23783,7 +26791,9 @@ class PromotionItemPriceTypeCodeType < ::String
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
 
   AuctionPrice = PromotionItemPriceTypeCodeType.new("AuctionPrice")
+  BestOfferOnlyPrice = PromotionItemPriceTypeCodeType.new("BestOfferOnlyPrice")
   BuyItNowPrice = PromotionItemPriceTypeCodeType.new("BuyItNowPrice")
+  ClassifiedAdPrice = PromotionItemPriceTypeCodeType.new("ClassifiedAdPrice")
   CustomCode = PromotionItemPriceTypeCodeType.new("CustomCode")
 end
 
@@ -23818,6 +26828,7 @@ class PromotionSchemeCodeType < ::String
   ItemToDefaultRule = PromotionSchemeCodeType.new("ItemToDefaultRule")
   ItemToItem = PromotionSchemeCodeType.new("ItemToItem")
   ItemToStoreCat = PromotionSchemeCodeType.new("ItemToStoreCat")
+  RelatedCategoryRule = PromotionSchemeCodeType.new("RelatedCategoryRule")
   StoreToStoreCat = PromotionSchemeCodeType.new("StoreToStoreCat")
 end
 
@@ -23883,6 +26894,18 @@ class RangeCodeType < ::String
   Low = RangeCodeType.new("Low")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}RecipientRelationCodeType
+class RecipientRelationCodeType < ::String
+  @@schema_type = "RecipientRelationCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  C_1 = RecipientRelationCodeType.new("1")
+  C_2 = RecipientRelationCodeType.new("2")
+  C_3 = RecipientRelationCodeType.new("3")
+  C_4 = RecipientRelationCodeType.new("4")
+  CustomCode = RecipientRelationCodeType.new("CustomCode")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}RecommendationEngineCodeType
 class RecommendationEngineCodeType < ::String
   @@schema_type = "RecommendationEngineCodeType"
@@ -23920,6 +26943,31 @@ class RefundTypeCodeType < ::String
   FullPlusShipping = RefundTypeCodeType.new("FullPlusShipping")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}SMSSubscriptionErrorCodeCodeType
+class SMSSubscriptionErrorCodeCodeType < ::String
+  @@schema_type = "SMSSubscriptionErrorCodeCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = SMSSubscriptionErrorCodeCodeType.new("CustomCode")
+  PhoneNumberCarrierChanged = SMSSubscriptionErrorCodeCodeType.new("PhoneNumberCarrierChanged")
+  PhoneNumberChanged = SMSSubscriptionErrorCodeCodeType.new("PhoneNumberChanged")
+  PhoneNumberInvalid = SMSSubscriptionErrorCodeCodeType.new("PhoneNumberInvalid")
+  SMSAggregatorNotAvailable = SMSSubscriptionErrorCodeCodeType.new("SMSAggregatorNotAvailable")
+  UserRequestedUnregistration = SMSSubscriptionErrorCodeCodeType.new("UserRequestedUnregistration")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}SMSSubscriptionUserStatusCodeType
+class SMSSubscriptionUserStatusCodeType < ::String
+  @@schema_type = "SMSSubscriptionUserStatusCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CustomCode = SMSSubscriptionUserStatusCodeType.new("CustomCode")
+  Failed = SMSSubscriptionUserStatusCodeType.new("Failed")
+  Pending = SMSSubscriptionUserStatusCodeType.new("Pending")
+  Registered = SMSSubscriptionUserStatusCodeType.new("Registered")
+  Unregistered = SMSSubscriptionUserStatusCodeType.new("Unregistered")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}SearchFlagsCodeType
 class SearchFlagsCodeType < ::String
   @@schema_type = "SearchFlagsCodeType"
@@ -23950,6 +26998,7 @@ class SearchSortOrderCodeType < ::String
   @@schema_type = "SearchSortOrderCodeType"
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
 
+  BestMatchSort = SearchSortOrderCodeType.new("BestMatchSort")
   CustomCode = SearchSortOrderCodeType.new("CustomCode")
   SortByBidCountAsc = SearchSortOrderCodeType.new("SortByBidCountAsc")
   SortByBidCountDesc = SearchSortOrderCodeType.new("SortByBidCountDesc")
@@ -24166,6 +27215,7 @@ class ShippingRegionCodeType < ::String
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
 
   Africa = ShippingRegionCodeType.new("Africa")
+  Americas = ShippingRegionCodeType.new("Americas")
   Asia = ShippingRegionCodeType.new("Asia")
   Caribbean = ShippingRegionCodeType.new("Caribbean")
   CustomCode = ShippingRegionCodeType.new("CustomCode")
@@ -24173,6 +27223,7 @@ class ShippingRegionCodeType < ::String
   EuropeanUnion = ShippingRegionCodeType.new("EuropeanUnion")
   LatinAmerica = ShippingRegionCodeType.new("LatinAmerica")
   MiddleEast = ShippingRegionCodeType.new("MiddleEast")
+  None = ShippingRegionCodeType.new("None")
   NorthAmerica = ShippingRegionCodeType.new("NorthAmerica")
   Oceania = ShippingRegionCodeType.new("Oceania")
   SouthAmerica = ShippingRegionCodeType.new("SouthAmerica")
@@ -24216,21 +27267,47 @@ class ShippingServiceCodeType < ::String
   BEFR_DHLInternational = ShippingServiceCodeType.new("BEFR_DHLInternational")
   BEFR_DePostInternational = ShippingServiceCodeType.new("BEFR_DePostInternational")
   BEFR_ExpeditedInternational = ShippingServiceCodeType.new("BEFR_ExpeditedInternational")
+  BEFR_ExpressTaxipost = ShippingServiceCodeType.new("BEFR_ExpressTaxipost")
   BEFR_FedExInternational = ShippingServiceCodeType.new("BEFR_FedExInternational")
+  BEFR_LaPosteEnvoiNONPRIOR = ShippingServiceCodeType.new("BEFR_LaPosteEnvoiNONPRIOR")
+  BEFR_LaPosteEnvoiPRIOR = ShippingServiceCodeType.new("BEFR_LaPosteEnvoiPRIOR")
+  BEFR_LaPosteEnvoiRecommande = ShippingServiceCodeType.new("BEFR_LaPosteEnvoiRecommande")
   BEFR_LaPosteInternational = ShippingServiceCodeType.new("BEFR_LaPosteInternational")
+  BEFR_LaPosteenvoieNONPRIOR = ShippingServiceCodeType.new("BEFR_LaPosteenvoieNONPRIOR")
+  BEFR_LaPosteenvoiePRIOR = ShippingServiceCodeType.new("BEFR_LaPosteenvoiePRIOR")
+  BEFR_LaPosteenvoieRecommande = ShippingServiceCodeType.new("BEFR_LaPosteenvoieRecommande")
+  BEFR_LivraisonExpressInternationalePrixforFaitaire = ShippingServiceCodeType.new("BEFR_LivraisonExpressInternationalePrixforFaitaire")
+  BEFR_LivraisonExpressPrixforFaitaire = ShippingServiceCodeType.new("BEFR_LivraisonExpressPrixforFaitaire")
+  BEFR_LivraisonSecurise = ShippingServiceCodeType.new("BEFR_LivraisonSecurise")
+  BEFR_LivraisonSecuriseInternational = ShippingServiceCodeType.new("BEFR_LivraisonSecuriseInternational")
+  BEFR_LivraisonStandardInternationalePrixforFaitaire = ShippingServiceCodeType.new("BEFR_LivraisonStandardInternationalePrixforFaitaire")
+  BEFR_LivraisonStandardPrixforFaitaire = ShippingServiceCodeType.new("BEFR_LivraisonStandardPrixforFaitaire")
   BEFR_Other = ShippingServiceCodeType.new("BEFR_Other")
   BEFR_OtherInternational = ShippingServiceCodeType.new("BEFR_OtherInternational")
+  BEFR_PaquetKilopost = ShippingServiceCodeType.new("BEFR_PaquetKilopost")
+  BEFR_PaquetKilopostInternationale = ShippingServiceCodeType.new("BEFR_PaquetKilopostInternationale")
   BEFR_ParcelPost = ShippingServiceCodeType.new("BEFR_ParcelPost")
+  BEFR_PointRetraitKiala = ShippingServiceCodeType.new("BEFR_PointRetraitKiala")
   BEFR_PriorityDelivery = ShippingServiceCodeType.new("BEFR_PriorityDelivery")
   BEFR_RegisteredMail = ShippingServiceCodeType.new("BEFR_RegisteredMail")
   BEFR_StandardDelivery = ShippingServiceCodeType.new("BEFR_StandardDelivery")
   BEFR_StandardInternational = ShippingServiceCodeType.new("BEFR_StandardInternational")
   BEFR_TPGPostTNTInternational = ShippingServiceCodeType.new("BEFR_TPGPostTNTInternational")
+  BEFR_Taxipost = ShippingServiceCodeType.new("BEFR_Taxipost")
   BEFR_UPSInternational = ShippingServiceCodeType.new("BEFR_UPSInternational")
   BENL_DHLInternational = ShippingServiceCodeType.new("BENL_DHLInternational")
   BENL_DePostInternational = ShippingServiceCodeType.new("BENL_DePostInternational")
+  BENL_DePostZendingAangetekend = ShippingServiceCodeType.new("BENL_DePostZendingAangetekend")
+  BENL_DePostZendingAangetekendInternational = ShippingServiceCodeType.new("BENL_DePostZendingAangetekendInternational")
+  BENL_DePostZendingNONPRIOR = ShippingServiceCodeType.new("BENL_DePostZendingNONPRIOR")
+  BENL_DePostZendingNONPRIORInternational = ShippingServiceCodeType.new("BENL_DePostZendingNONPRIORInternational")
+  BENL_DePostZendingPRIOR = ShippingServiceCodeType.new("BENL_DePostZendingPRIOR")
+  BENL_DePostZendingPRIORInternational = ShippingServiceCodeType.new("BENL_DePostZendingPRIORInternational")
   BENL_ExpeditedInternational = ShippingServiceCodeType.new("BENL_ExpeditedInternational")
   BENL_FedExInternational = ShippingServiceCodeType.new("BENL_FedExInternational")
+  BENL_KialaAfhaalpunt = ShippingServiceCodeType.new("BENL_KialaAfhaalpunt")
+  BENL_KilopostPakje = ShippingServiceCodeType.new("BENL_KilopostPakje")
+  BENL_KilopostPakjeInternational = ShippingServiceCodeType.new("BENL_KilopostPakjeInternational")
   BENL_LaPosteInternational = ShippingServiceCodeType.new("BENL_LaPosteInternational")
   BENL_Other = ShippingServiceCodeType.new("BENL_Other")
   BENL_OtherInternational = ShippingServiceCodeType.new("BENL_OtherInternational")
@@ -24240,7 +27317,13 @@ class ShippingServiceCodeType < ::String
   BENL_StandardDelivery = ShippingServiceCodeType.new("BENL_StandardDelivery")
   BENL_StandardInternational = ShippingServiceCodeType.new("BENL_StandardInternational")
   BENL_TPGPostTNTInternational = ShippingServiceCodeType.new("BENL_TPGPostTNTInternational")
+  BENL_Taxipost = ShippingServiceCodeType.new("BENL_Taxipost")
+  BENL_TaxipostExpressverzending = ShippingServiceCodeType.new("BENL_TaxipostExpressverzending")
   BENL_UPSInternational = ShippingServiceCodeType.new("BENL_UPSInternational")
+  BENL_VasteKostenStandaardVerzending = ShippingServiceCodeType.new("BENL_VasteKostenStandaardVerzending")
+  BENL_VasteKostenVersneldeVerzending = ShippingServiceCodeType.new("BENL_VasteKostenVersneldeVerzending")
+  BENL_VerzekerdeVerzending = ShippingServiceCodeType.new("BENL_VerzekerdeVerzending")
+  BENL_VerzekerdeVerzendingInternational = ShippingServiceCodeType.new("BENL_VerzekerdeVerzendingInternational")
   CA_ExpeditedDelivery = ShippingServiceCodeType.new("CA_ExpeditedDelivery")
   CA_ExpeditedInternational = ShippingServiceCodeType.new("CA_ExpeditedInternational")
   CA_OtherInternational = ShippingServiceCodeType.new("CA_OtherInternational")
@@ -24355,6 +27438,7 @@ class ShippingServiceCodeType < ::String
   ExpeditedInternational = ShippingServiceCodeType.new("ExpeditedInternational")
   FR_AuteModeDenvoiDeColis = ShippingServiceCodeType.new("FR_AuteModeDenvoiDeColis")
   FR_Autre = ShippingServiceCodeType.new("FR_Autre")
+  FR_Chronopost = ShippingServiceCodeType.new("FR_Chronopost")
   FR_ChronopostClassicInternational = ShippingServiceCodeType.new("FR_ChronopostClassicInternational")
   FR_ChronopostPremiumInternational = ShippingServiceCodeType.new("FR_ChronopostPremiumInternational")
   FR_ChronoposteInternationalClassic = ShippingServiceCodeType.new("FR_ChronoposteInternationalClassic")
@@ -24365,10 +27449,10 @@ class ShippingServiceCodeType < ::String
   FR_DHLExpressEuropack = ShippingServiceCodeType.new("FR_DHLExpressEuropack")
   FR_DHLInternational = ShippingServiceCodeType.new("FR_DHLInternational")
   FR_Ecopli = ShippingServiceCodeType.new("FR_Ecopli")
-  FR_EmballageColissimoInternational = ShippingServiceCodeType.new("FR_EmballageColissimoInternational")
   FR_ExpeditedInternational = ShippingServiceCodeType.new("FR_ExpeditedInternational")
-  FR_LaPosteColisPostalEconomyInternational = ShippingServiceCodeType.new("FR_LaPosteColisPostalEconomyInternational")
-  FR_LaPosteColisPostalPriorityInternational = ShippingServiceCodeType.new("FR_LaPosteColisPostalPriorityInternational")
+  FR_LaPosteColisEconomiqueInternational = ShippingServiceCodeType.new("FR_LaPosteColisEconomiqueInternational")
+  FR_LaPosteColissimoEmballageInternational = ShippingServiceCodeType.new("FR_LaPosteColissimoEmballageInternational")
+  FR_LaPosteColissimoInternational = ShippingServiceCodeType.new("FR_LaPosteColissimoInternational")
   FR_LaPosteInternationalEconomyCourier = ShippingServiceCodeType.new("FR_LaPosteInternationalEconomyCourier")
   FR_LaPosteInternationalPriorityCourier = ShippingServiceCodeType.new("FR_LaPosteInternationalPriorityCourier")
   FR_OtherInternational = ShippingServiceCodeType.new("FR_OtherInternational")
@@ -24554,8 +27638,10 @@ class ShippingTypeCodeType < ::String
   @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
 
   Calculated = ShippingTypeCodeType.new("Calculated")
+  CalculatedDomesticFlatInternational = ShippingTypeCodeType.new("CalculatedDomesticFlatInternational")
   CustomCode = ShippingTypeCodeType.new("CustomCode")
   Flat = ShippingTypeCodeType.new("Flat")
+  FlatDomesticCalculatedInternational = ShippingTypeCodeType.new("FlatDomesticCalculatedInternational")
   Free = ShippingTypeCodeType.new("Free")
   Freight = ShippingTypeCodeType.new("Freight")
   NotSpecified = ShippingTypeCodeType.new("NotSpecified")
@@ -24604,6 +27690,25 @@ class SiteIDFilterCodeType < ::String
   ListedInCurrencyImplied = SiteIDFilterCodeType.new("ListedInCurrencyImplied")
   LocatedInCountryImplied = SiteIDFilterCodeType.new("LocatedInCountryImplied")
   SiteImplied = SiteIDFilterCodeType.new("SiteImplied")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}SkypeContactOptionCodeType
+class SkypeContactOptionCodeType < ::String
+  @@schema_type = "SkypeContactOptionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Chat = SkypeContactOptionCodeType.new("Chat")
+  CustomCode = SkypeContactOptionCodeType.new("CustomCode")
+  Voice = SkypeContactOptionCodeType.new("Voice")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}SkypeOptionCodeType
+class SkypeOptionCodeType < ::String
+  @@schema_type = "SkypeOptionCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  None = SkypeOptionCodeType.new("None")
+  Voice = SkypeOptionCodeType.new("Voice")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SortOrderCodeType
@@ -24765,6 +27870,68 @@ class StringMatchCodeType < ::String
   StartsWith = StringMatchCodeType.new("StartsWith")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}SummaryFrequencyCodeType
+class SummaryFrequencyCodeType < ::String
+  @@schema_type = "SummaryFrequencyCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  Every31Days = SummaryFrequencyCodeType.new("Every31Days")
+  Every60Days = SummaryFrequencyCodeType.new("Every60Days")
+  EveryFriday = SummaryFrequencyCodeType.new("EveryFriday")
+  EveryMonday = SummaryFrequencyCodeType.new("EveryMonday")
+  EverySaturday = SummaryFrequencyCodeType.new("EverySaturday")
+  EverySunday = SummaryFrequencyCodeType.new("EverySunday")
+  EveryThursday = SummaryFrequencyCodeType.new("EveryThursday")
+  EveryTuesday = SummaryFrequencyCodeType.new("EveryTuesday")
+  EveryWednesday = SummaryFrequencyCodeType.new("EveryWednesday")
+  MonthlyOn10th = SummaryFrequencyCodeType.new("MonthlyOn10th")
+  MonthlyOn11th = SummaryFrequencyCodeType.new("MonthlyOn11th")
+  MonthlyOn12th = SummaryFrequencyCodeType.new("MonthlyOn12th")
+  MonthlyOn13th = SummaryFrequencyCodeType.new("MonthlyOn13th")
+  MonthlyOn14th = SummaryFrequencyCodeType.new("MonthlyOn14th")
+  MonthlyOn15th = SummaryFrequencyCodeType.new("MonthlyOn15th")
+  MonthlyOn16th = SummaryFrequencyCodeType.new("MonthlyOn16th")
+  MonthlyOn17th = SummaryFrequencyCodeType.new("MonthlyOn17th")
+  MonthlyOn18th = SummaryFrequencyCodeType.new("MonthlyOn18th")
+  MonthlyOn19th = SummaryFrequencyCodeType.new("MonthlyOn19th")
+  MonthlyOn1st = SummaryFrequencyCodeType.new("MonthlyOn1st")
+  MonthlyOn20th = SummaryFrequencyCodeType.new("MonthlyOn20th")
+  MonthlyOn21st = SummaryFrequencyCodeType.new("MonthlyOn21st")
+  MonthlyOn22nd = SummaryFrequencyCodeType.new("MonthlyOn22nd")
+  MonthlyOn23rd = SummaryFrequencyCodeType.new("MonthlyOn23rd")
+  MonthlyOn24th = SummaryFrequencyCodeType.new("MonthlyOn24th")
+  MonthlyOn25th = SummaryFrequencyCodeType.new("MonthlyOn25th")
+  MonthlyOn26th = SummaryFrequencyCodeType.new("MonthlyOn26th")
+  MonthlyOn27th = SummaryFrequencyCodeType.new("MonthlyOn27th")
+  MonthlyOn28th = SummaryFrequencyCodeType.new("MonthlyOn28th")
+  MonthlyOn29th = SummaryFrequencyCodeType.new("MonthlyOn29th")
+  MonthlyOn2nd = SummaryFrequencyCodeType.new("MonthlyOn2nd")
+  MonthlyOn30th = SummaryFrequencyCodeType.new("MonthlyOn30th")
+  MonthlyOn31st = SummaryFrequencyCodeType.new("MonthlyOn31st")
+  MonthlyOn3rd = SummaryFrequencyCodeType.new("MonthlyOn3rd")
+  MonthlyOn4th = SummaryFrequencyCodeType.new("MonthlyOn4th")
+  MonthlyOn5th = SummaryFrequencyCodeType.new("MonthlyOn5th")
+  MonthlyOn6th = SummaryFrequencyCodeType.new("MonthlyOn6th")
+  MonthlyOn7th = SummaryFrequencyCodeType.new("MonthlyOn7th")
+  MonthlyOn8th = SummaryFrequencyCodeType.new("MonthlyOn8th")
+  MonthlyOn9th = SummaryFrequencyCodeType.new("MonthlyOn9th")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}SummaryWindowPeriodCodeType
+class SummaryWindowPeriodCodeType < ::String
+  @@schema_type = "SummaryWindowPeriodCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  CurrentMonth = SummaryWindowPeriodCodeType.new("CurrentMonth")
+  CurrentWeek = SummaryWindowPeriodCodeType.new("CurrentWeek")
+  Last24Hours = SummaryWindowPeriodCodeType.new("Last24Hours")
+  Last31Days = SummaryWindowPeriodCodeType.new("Last31Days")
+  Last60Days = SummaryWindowPeriodCodeType.new("Last60Days")
+  Last7Days = SummaryWindowPeriodCodeType.new("Last7Days")
+  LastMonth = SummaryWindowPeriodCodeType.new("LastMonth")
+  LastWeek = SummaryWindowPeriodCodeType.new("LastWeek")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}TaskStatusCodeType
 class TaskStatusCodeType < ::String
   @@schema_type = "TaskStatusCodeType"
@@ -24795,6 +27962,15 @@ class TradingRoleCodeType < ::String
   Buyer = TradingRoleCodeType.new("Buyer")
   CustomCode = TradingRoleCodeType.new("CustomCode")
   Seller = TradingRoleCodeType.new("Seller")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}TransactionPlatformType
+class TransactionPlatformType < ::String
+  @@schema_type = "TransactionPlatformType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  EBay = TransactionPlatformType.new("eBay")
+  Express = TransactionPlatformType.new("Express")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}UPSRateOptionCodeType
@@ -24874,4 +28050,26 @@ class VATStatusCodeType < ::String
   NoVATTax = VATStatusCodeType.new("NoVATTax")
   VATExempt = VATStatusCodeType.new("VATExempt")
   VATTax = VATStatusCodeType.new("VATTax")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}WirelessCarrierIDCodeType
+class WirelessCarrierIDCodeType < ::String
+  @@schema_type = "WirelessCarrierIDCodeType"
+  @@schema_ns = "urn:ebay:apis:eBLBaseComponents"
+
+  ATT = WirelessCarrierIDCodeType.new("ATT")
+  Alltel = WirelessCarrierIDCodeType.new("Alltel")
+  Amena = WirelessCarrierIDCodeType.new("Amena")
+  CincinnatiBell = WirelessCarrierIDCodeType.new("CincinnatiBell")
+  Cingular = WirelessCarrierIDCodeType.new("Cingular")
+  CustomCode = WirelessCarrierIDCodeType.new("CustomCode")
+  Dobson = WirelessCarrierIDCodeType.new("Dobson")
+  Leap = WirelessCarrierIDCodeType.new("Leap")
+  Movistar = WirelessCarrierIDCodeType.new("Movistar")
+  Nextel = WirelessCarrierIDCodeType.new("Nextel")
+  Sprint = WirelessCarrierIDCodeType.new("Sprint")
+  TMobile = WirelessCarrierIDCodeType.new("TMobile")
+  USCellular = WirelessCarrierIDCodeType.new("USCellular")
+  Verizon = WirelessCarrierIDCodeType.new("Verizon")
+  Vodafone = WirelessCarrierIDCodeType.new("Vodafone")
 end

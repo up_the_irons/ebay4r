@@ -1,10 +1,8 @@
 
 == Welcome to eBay4R
 
-eBay4R is a Ruby wrapper for eBay's Web Services SOAP API (v449). Emphasis is
+eBay4R is a Ruby wrapper for eBay's Web Services SOAP API (v481). Emphasis is
 on ease of use and small footprint.
-
-<b>This code is currently beta</b>.
 
 Please report bugs and other problems, see "Author" section at the bottom.
 
@@ -375,4 +373,4 @@ You should have received a copy of the GNU General Public License along with
 eBay4R; if not, write to the Free Software Foundation, Inc., 51 Franklin
 Street, Fifth Floor, Boston, MA  02110-1301, USA
 
-$Id: README,v 1.17 2006/05/11 02:34:44 garrydolley Exp $
+$Id: README,v 1.18 2006/10/10 08:04:48 garrydolley Exp $

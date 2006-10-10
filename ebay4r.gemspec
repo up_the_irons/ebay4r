@@ -1,10 +1,10 @@
-# $Id: ebay4r.gemspec,v 1.7 2006/04/24 05:51:18 garrydolley Exp $
+# $Id: ebay4r.gemspec,v 1.8 2006/10/10 08:04:49 garrydolley Exp $
 
 require 'rubygems'
 
 spec = Gem::Specification.new do |s|
   s.name     = "ebay"
-  s.version  = "0.6.0"
+  s.version  = "0.8.0"
   s.author   = "Garry Dolley"
   s.email    = "gdolley@ucla.edu"
   s.homepage = "http://ebay4r.rubyforge.org"
