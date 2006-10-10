@@ -1,0 +1,64 @@
+Below is a bit of documentation contributed by David Balatero regarding eBay 
+Platform Notifications:
+
+Tips on how to handle eBay Platform Notifications within a Rails app
+====================================================================
+
+One quick way to handle incoming notifications from eBay is to setup a Rails 
+controller to receive them. There are a few tricks you need to do in order to 
+receive them, however.
+
+1. First, you need to create a controller.
+
+  script/generate controller Ebay
+
+2. Next, you need to tell eBay to send all notifications to this new controller. 
+You can do this from script/console, if you want (just make sure that in the 
+console, you load the appropriate eBay4r classes)
+
+{{{
+@ebay = EBay::API.new('auth_token', 'dev_id', 'app_id', 'cert_id', :sandbox => true)
+resp = @ebay.SetNotificationPreferences(:ApplicationDeliveryPreferences => {
+                                         :ApplicationEnable       => 'Enable',
+                                         :ApplicationURL          => 'http://' + request.env["SERVER_NAME"] + '/ebay/notification',
+                                         :NotificationPayloadType => 'eBLSchemaSOAP' },
+                                       :UserDeliveryPreferenceArray => {
+                                         :NotificationEnable => [
+                                           { :EventEnable => 'Enable',
+                                             :EventType   => 'EndOfAuction' },
+                                           { :EventEnable => 'Enable',
+                                             :EventType   => 'Feedback' },
+                                           { :EventEnable => 'Enable',
+                                             :EventType   => 'AskSellerQuestion' }
+                                         ]
+                                       })
+}}}
+
+3. Finally, you need to write some controller methods to handle the incoming notifications.
+
+{{{
+def notification
+  # Grab the raw SOAP XML into a string
+  post_data = request.raw_post
+
+  # Unmarshal the XML into a SOAP object
+  resp = SOAP::Marshal.unmarshal(post_data)
+
+  # Now it's business as usual -- use the resp object like you would
+  # use any outgoing eBay call object.
+
+  case resp.notificationEventName
+    when 'AskSellerQuestion'
+      # code here
+    when 'EndOfAuction'
+      # end of auction code
+    when 'Feedback'
+      # feedback received code
+  end
+end
+}}}
+
+
+Hope this helps!
+
+- David Balatero ezwelty [at] NOSPAM- u.washington.edu
