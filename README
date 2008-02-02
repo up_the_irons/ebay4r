@@ -6,9 +6,13 @@ on ease of use and small footprint.
 
 Please report bugs and other problems, see "Author" section at the bottom.
 
-Current releases and CVS snapshots can be downloaded from:
+Current release can be downloaded from:
 
 http://rubyforge.org/projects/ebay4r
+
+The latest code is in the following Git repository:
+
+git://github.com/up_the_irons/ebay4r.git
 
 
 == Requirements
@@ -53,17 +57,16 @@ variable)
   
     gem install -r ebay
 
-=== CVS
+=== Git
 
-You can download the latest and greatest code using anonymous CVS, just type:
+You can download the latest and greatest code using Git, just type:
 
-  cvs -d :pserver:anonymous@rubyforge.org:/var/cvs/ebay4r login
-  cvs -d :pserver:anonymous@rubyforge.org:/var/cvs/ebay4r checkout ebay4r
+  git clone git://github.com/up_the_irons/ebay4r.git
 
 
 == Getting Started
 
-If you installed eBay4R from a tarball or CVS, you will want to add the
+If you installed eBay4R from a tarball or git repo, you will want to add the
 ebay4r/lib directory to your Ruby include path ($RUBYLIB).  Then put
 
   require 'eBayAPI'
