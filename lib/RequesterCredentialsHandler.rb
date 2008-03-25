@@ -30,10 +30,10 @@ module EBay
     HeaderName    = XSD::QName.new('urn:ebay:apis:eBLBaseComponents', 'RequesterCredentials') 
     Credentials   = XSD::QName.new('urn:ebay:apis:eBLBaseComponents', 'Credentials') 
 
-    EbayAuthToken = XSD::QName.new(nil, 'eBayAuthToken')
-    DevId         = XSD::QName.new(nil, 'DevId')
-    AppId         = XSD::QName.new(nil, 'AppId')
-    AuthCert      = XSD::QName.new(nil, 'AuthCert')
+    EbayAuthToken = XSD::QName.new(nil, 'n1:eBayAuthToken')
+    DevId         = XSD::QName.new(nil, 'n1:DevId')
+    AppId         = XSD::QName.new(nil, 'n1:AppId')
+    AuthCert      = XSD::QName.new(nil, 'n1:AuthCert')
 
     def initialize(eBayAuthToken, devId, appId, authCert) 
       super(HeaderName) 
