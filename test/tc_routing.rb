@@ -45,7 +45,7 @@ class TestRouting < Test::Unit::TestCase
     assert_respond_to(resp, "ack")
     assert_equal(resp.ack, "Success")
 
-    assert_equal(resp.categoryArray.category.categoryName, "eBay Motors")
+    assert_equal(resp.categoryArray[0].categoryName, "eBay Motors")
   end
 
 end
