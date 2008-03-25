@@ -1,0 +1,14 @@
+RELEASE NOTES
+-------------
+
+v0.9::
+
+  * Dependency SOAP4R 1.5.7+ has better support for arrays.  Notice how the 
+    test/tc_routing.rb test had to be changed:
+
+      -    assert_equal(resp.categoryArray.category.categoryName, "eBay Motors")
+      +    assert_equal(resp.categoryArray[0].categoryName, "eBay Motors")
+
+    When single element arrays are returned in the SOAP response, you now 
+    access them with the familiar Ruby array index, instead of following the
+    XML tree and putting "." in between each node.
