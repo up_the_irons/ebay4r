@@ -40,3 +40,25 @@ v1.0:
     New::
 
       resp.fees.each do |fee|
+
+  * Short-hand way of creating complex data types no longer works.  I think
+    older SOAP4R's gave me this for free, but upon looking at the XML dump a
+    second time, it doesn't create the objects correctly.  Not sure if eBay's
+    API in the 4xx range silently ignored these bad values.  If anyone can get
+    this working again, send me a patch.
+
+    Old::
+
+      resp = eBay.AddItem(:Item => { :PrimaryCategory => { :CategoryID => 57882 },
+                                     ...
+                                     ...
+                                     })
+
+    New::
+
+      resp = eBay.AddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:CategoryID => 57882),
+                                             ...
+                                             ...
+                                             })
+
+

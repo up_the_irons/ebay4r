@@ -139,27 +139,6 @@ This is a more complex example that performs a real (useful) function::
   eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
 
   # Notice how we nest hashes to mimic the XML structure of an AddItem request
-  resp = eBay.AddItem(:Item => { :PrimaryCategory => { :CategoryID => 57882 },
-                                 :Title => 'Mouse Pad',
-                                 :Description => 'A really cool mouse pad, you know you want it...',
-                                 :Location => 'On Earth',
-                                 :StartPrice => '12.0',
-                                 :Quantity => 1,
-                                 :ListingDuration => "Days_7",
-                                 :Country => "US",
-                                 :Currency => "USD",
-                                 :PaymentMethods => ["VisaMC", "PersonalCheck"] })
-
-  puts "New Item #" + resp.itemID + " added."
-
-The way we nest hashes in the above AddItem() call may be confusing at first. 
-It is just a short-hand way of creating the complex types we need for the 
-call.
-
-You may instead explicitly create the complex types (see "Creating Complex 
-Data Types" below) needed for the call (it makes the code longer, but a bit
-more readable)::
-
   resp = eBay.AddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:CategoryID => 57882),
                                          :Title => 'Mouse Pad',
                                          :Description => 'A really cool mouse pad, you know you want it...',
@@ -170,6 +149,12 @@ more readable)::
                                          :Country => "US",
                                          :Currency => "USD",
                                          :PaymentMethods => ["VisaMC", "PersonalCheck"]))
+
+  puts "New Item #" + resp.itemID + " added."
+
+
+Don't worry too much about EBay.Item and EBay.Category calls for now, they are
+explained in the "Creating Complex Data Types" section below.
 
 
 Format of Requests
