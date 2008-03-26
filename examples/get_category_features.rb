@@ -32,7 +32,7 @@ puts "Site wide defaults for listing durations given listing type:\n\n"
 
 [resp.siteDefaults.listingDuration].flatten.each do |duration|
   puts duration.xmlattr_type # This is an example of how we read an XML attribute, just prepend "xmlattr_" to the name
-  [durationHash[duration]].flatten.each do |c|
-    puts "  " + c
+  [durationHash[duration.to_i]].flatten.each do |c|
+    puts "  " + c 
   end
 end

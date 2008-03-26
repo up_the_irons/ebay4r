@@ -23,7 +23,7 @@ puts "Account Summary -- Account State: " + resp.accountSummary.accountState if 
 # Some statements may not have any entries in them (no sales that month?), so
 # we must test to make sure "accountEntries" exists before we traverse it.
 if resp.respond_to?(:accountEntries)
-  resp.accountEntries.accountEntry.each do |entry|
+  resp.accountEntries.each do |entry|
     puts "Account Entries -- Description: " + entry.description
   end
 end

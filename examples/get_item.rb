@@ -9,11 +9,11 @@ load('myCredentials.rb')
 eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
 
 # Replace ItemID with some item you know exists
-resp = eBay.GetItem(:DetailLevel => 'ReturnAll', :ItemID => '4504390345', :IncludeWatchCount => 'true')
+resp = eBay.GetItem(:DetailLevel => 'ReturnAll', :ItemID => '110029878327', :IncludeWatchCount => 'true')
 
-puts "AutoPay: "  + resp.item.autoPay
+puts "AutoPay: "  + resp.item.autoPay.to_s
 puts "Country: "  + resp.item.country
-puts "ItemID: "   + resp.item.itemID
+puts "ItemID: "   + resp.item.itemID.to_s
 puts "Descr: "    + resp.item.description
 puts "Location: " + resp.item.location
 

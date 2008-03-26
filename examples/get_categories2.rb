@@ -25,11 +25,11 @@ resp = eBay.GetCategories(:DetailLevel => 'ReturnAll', # Return all available in
 puts "eBay Motors Top Level Categories (Cat. Version " + resp.categoryVersion + "):"
 puts ""
 
-resp.categoryArray.category.each do |cat|
+resp.categoryArray.each do |cat|
   puts "  Category Name : " + cat.categoryName
   puts "  Category ID   : " + cat.categoryID
-  puts "  Category Level: " + cat.categoryLevel
-  puts "  Is Leaf?      : " + cat.leafCategory
-  puts "  Parent ID     : " + cat.categoryParentID
+  puts "  Category Level: " + cat.categoryLevel.to_s
+  puts "  Is Leaf?      : " + cat.leafCategory.to_s
+  puts "  Parent ID     : " + cat.categoryParentID.to_s
   puts ""
 end

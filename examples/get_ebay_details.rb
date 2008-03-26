@@ -34,6 +34,6 @@ if resp.respond_to? 'shippingServiceDetails'
   puts "Shipping service codes:\n\n"
 
   [resp.shippingServiceDetails].flatten.each do |s|
-    puts s.shippingService + ": " + s.description + " (" + s.shippingServiceID + ")"
+    puts s.shippingService + ": " + s.description + " (" + s.shippingServiceID.to_s + ")"
   end
 end

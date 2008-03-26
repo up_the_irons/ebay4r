@@ -13,16 +13,16 @@ load('myCredentials.rb')
 eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
 
 # Shorter way of passing complex types (implied by hashing) than when we did in v0.5.2 and prior
-resp = eBay.AddItem(:Item => { :PrimaryCategory => { :CategoryID => 57882 },
+resp = eBay.AddItem(:Item => EBay.Item({ :PrimaryCategory => EBay.Category({ :CategoryID => 57882 }),
                                :Title => 'Mouse Pad',
                                :Description => 'A really cool mouse pad, you know you want it...',
                                :Location => 'On Earth',
-                               :StartPrice => 12.0,
+                               :StartPrice => '12.0',
                                :Quantity => 1,
                                :ListingDuration => "Days_7",
                                :Country => "US",
                                :Currency => "USD",
-                               :PaymentMethods => ["VisaMC", "PersonalCheck"] })
+                               :PaymentMethods => ["VisaMC", "PersonalCheck"] }))
 
 puts "New Item #" + resp.itemID + " added."
 puts "You spent:\n"
@@ -48,7 +48,7 @@ puts "You spent:\n"
 # </Fees>
 #
 # So this is now we traverse it:
-resp.fees.fee.each do |fee|
+resp.fees.each do |fee|
   puts fee.name + ": " + fee.fee + " " + fee.fee.xmlattr_currencyID
 end
 

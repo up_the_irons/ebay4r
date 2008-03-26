@@ -22,27 +22,27 @@ puts "Unique Positive Feedbacks: #{resp.feedbackSummary.uniquePositiveFeedbackCo
 puts "Unique Negative Feedbacks: #{resp.feedbackSummary.uniqueNegativeFeedbackCount}"
 
 puts "Bid Retractions:"
-resp.feedbackSummary.bidRetractionFeedbackPeriodArray.feedbackPeriod.each do |fb|
+resp.feedbackSummary.bidRetractionFeedbackPeriodArray.each do |fb|
   puts "  Last #{fb.periodInDays} Days: #{fb.count}"
 end
 
 puts "Positive Feedback:"
-resp.feedbackSummary.positiveFeedbackPeriodArray.feedbackPeriod.each do |fb|
+resp.feedbackSummary.positiveFeedbackPeriodArray.each do |fb|
   puts "  Last #{fb.periodInDays} Days: #{fb.count}"
 end
 
 puts "Negative Feedback:"
-resp.feedbackSummary.negativeFeedbackPeriodArray.feedbackPeriod.each do |fb|
+resp.feedbackSummary.negativeFeedbackPeriodArray.each do |fb|
   puts "  Last #{fb.periodInDays} Days: #{fb.count}"
 end
 
 puts "Neutral Feedback:"
-resp.feedbackSummary.neutralFeedbackPeriodArray.feedbackPeriod.each do |fb|
+resp.feedbackSummary.neutralFeedbackPeriodArray.each do |fb|
   puts "  Last #{fb.periodInDays} Days: #{fb.count}"
 end
 
 puts "Total Feedback:"
-resp.feedbackSummary.totalFeedbackPeriodArray.feedbackPeriod.each do |fb|
+resp.feedbackSummary.totalFeedbackPeriodArray.each do |fb|
   puts "  Last #{fb.periodInDays} Days: #{fb.count}"
 end
 
