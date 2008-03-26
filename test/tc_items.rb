@@ -42,7 +42,7 @@ class TestItems < Test::Unit::TestCase
                                             :Title => @@item_title,
                                             :Description => @@item_descr,
                                             :Location => 'RubyForge',
-                                            :StartPrice => 12.0,
+                                            :StartPrice => '12.0',
                                             :Quantity => 1,
                                             :ListingDuration => "Days_7",
                                             :Country => "US",
