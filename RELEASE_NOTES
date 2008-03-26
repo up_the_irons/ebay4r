@@ -1,7 +1,16 @@
 RELEASE NOTES
 -------------
 
-v0.9:
+v1.0:
+
+  **IMPORTANT** 
+  
+  For all but the simplest of calls to eBay's API, you will need to make
+  changes to your code if you are upgrading from previous versions of eBay4R.
+
+  There were some subtle, but very important, changes.  The version of SOAP4R
+  needed to use eBay's newer API versions changes the way we interact with
+  certain data types.  
 
   * AmountType fields must be strings, implicit conversion from float no longer
     occurs in SOAP4R 1.5.7+.  For example, previously you could have::
@@ -21,3 +30,13 @@ v0.9:
     When single element arrays are returned in the SOAP response, you now 
     access them with the familiar Ruby array index, instead of following the
     XML tree and putting "." in between each node.
+
+    Another example of before/after (from examples/add_item.rb):
+
+    Old::
+
+      resp.fees.fee.each do |fee|
+
+    New::
+
+      resp.fees.each do |fee|
