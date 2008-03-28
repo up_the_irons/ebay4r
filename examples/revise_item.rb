@@ -8,8 +8,8 @@ load('myCredentials.rb')
 
 eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
 
-# I want to revise Item #450439034 -- replace this with an Item # that you know exists and is active
-item = EBay.Item(:ItemID => '4504390345', :Location => 'Brave New World', :Title => 'My new title')
+# I want to revise Item #110029878327 -- replace this with an Item # that you know exists and is active
+item = EBay.Item(:ItemID => '110029878327', :Location => 'Brave New World', :Title => 'My new title')
 
 resp = eBay.ReviseItem(:DetailLevel => 'ReturnAll', :Item => item, 
                        :ModifiedFields => [ {:Field => 'Item.Location', :ModifyType => 'Modify'},

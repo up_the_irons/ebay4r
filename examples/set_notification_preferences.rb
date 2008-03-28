@@ -14,15 +14,16 @@ load('myCredentials.rb')
 # Create new eBay caller object.  Omit last argument to use live platform.
 eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true) 
 
-resp = eBay.SetNotificationPreferences(:ApplicationDeliveryPreferences => {
+resp = eBay.SetNotificationPreferences(:ApplicationDeliveryPreferences => EBay.ApplicationDeliveryPreferences({
                                          :ApplicationEnable       => 'Enable',
                                          :ApplicationURL          => 'http://www.xyz.com/my_script',
-                                         :NotificationPayloadType => 'eBLSchemaSOAP' },
-                                       :UserDeliveryPreferenceArray => { 
-                                         :NotificationEnable => [ 
-                                           { :EventEnable => 'Enable',
-                                             :EventType   => 'EndOfAuction' },
-                                           { :EventEnable => 'Enable',
-                                             :EventType   => 'Feedback' }
+                                         :NotificationPayloadType => 'eBLSchemaSOAP' }),
+                                       :UserDeliveryPreferenceArray => [ 
+                                         EBay.NotificationEnable( 
+                                           :EventEnable => 'Enable',
+                                           :EventType   => 'EndOfAuction'),
+                                         EBay.NotificationEnable( 
+                                           :EventEnable => 'Enable',
+                                           :EventType   => 'Feedback')
                                          ]
-                                       })
+                                       )

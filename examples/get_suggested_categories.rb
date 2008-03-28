@@ -21,9 +21,9 @@ resp = eBay.GetSuggestedCategories(:Query => "stuff")
 # Report results
 
 if resp.categoryCount.to_i > 0
- [ resp.suggestedCategoryArray.suggestedCategory ].flatten.each do |cat|
-    puts "  Category ID   : " + cat.category.categoryID
-    puts "  Category Name : " + cat.category.categoryName + " (" + cat.percentItemFound + "%)"
+  resp.suggestedCategoryArray.suggestedCategory.each do |cat|
+    puts "  Category ID   : " + cat.category.categoryID.to_s
+    puts "  Category Name : " + cat.category.categoryName + " (" + cat.percentItemFound.to_s + "%)"
     puts ""
   end
 else
