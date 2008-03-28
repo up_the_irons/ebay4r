@@ -19,6 +19,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -65,6 +66,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -112,6 +114,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -160,6 +163,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -206,6 +210,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -249,6 +254,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -292,6 +298,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -335,6 +342,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -379,6 +387,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -428,6 +437,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -471,6 +481,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -515,6 +526,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -567,6 +579,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -613,6 +626,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -621,7 +635,8 @@ module DefaultMappingRegistry
       ["feedbackInfo", ["FeedbackInfoType", XSD::QName.new(NsEBLBaseComponents, "FeedbackInfo")], [0, 1]],
       ["shipped", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Shipped")], [0, 1]],
       ["paid", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Paid")], [0, 1]],
-      ["listingType", ["ListingTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingType")], [0, 1]]
+      ["listingType", ["ListingTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingType")], [0, 1]],
+      ["shipment", ["ShipmentType", XSD::QName.new(NsEBLBaseComponents, "Shipment")], [0, 1]]
     ]
   )
 
@@ -660,6 +675,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -703,6 +719,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -748,6 +765,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -794,6 +812,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -805,7 +824,8 @@ module DefaultMappingRegistry
       ["excludeBalance", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ExcludeBalance")], [0, 1]],
       ["excludeSummary", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ExcludeSummary")], [0, 1]],
       ["accountEntrySortType", ["AccountEntrySortTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "AccountEntrySortType")], [0, 1]],
-      ["currency", ["CurrencyCodeType", XSD::QName.new(NsEBLBaseComponents, "Currency")], [0, 1]]
+      ["currency", ["CurrencyCodeType", XSD::QName.new(NsEBLBaseComponents, "Currency")], [0, 1]],
+      ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]]
     ]
   )
 
@@ -852,6 +872,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -898,6 +919,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -946,6 +968,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -988,6 +1011,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1035,6 +1059,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1079,6 +1104,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1125,6 +1151,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1173,6 +1200,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1218,6 +1246,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1270,6 +1299,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1317,6 +1347,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1367,6 +1398,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1435,6 +1467,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1479,6 +1512,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1526,6 +1560,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -1570,6 +1605,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1619,6 +1655,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1664,6 +1701,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1709,6 +1747,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1759,6 +1798,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1791,6 +1831,56 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => GetExpressWishListRequestType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetExpressWishListRequestType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["userID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]],
+      ["firstName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FirstName")], [0, 1]],
+      ["lastName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LastName")], [0, 1]],
+      ["wishListID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "WishListID")], [0, 1]],
+      ["sortOrder", ["WishListSortCodeType", XSD::QName.new(NsEBLBaseComponents, "SortOrder")], [0, 1]],
+      ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => GetExpressWishListResponseType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetExpressWishListResponseType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["wishList", ["WishListType[]", XSD::QName.new(NsEBLBaseComponents, "WishList")], [0, nil]],
+      ["pagination", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => GetFeedbackRequestType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetFeedbackRequestType"),
     :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
@@ -1802,6 +1892,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1850,6 +1941,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1894,6 +1986,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1901,7 +1994,8 @@ module DefaultMappingRegistry
       ["includeExpressRequirements", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeExpressRequirements")], [0, 1]],
       ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeWatchCount")], [0, 1]],
       ["includeCrossPromotion", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeCrossPromotion")], [0, 1]],
-      ["includeItemSpecifics", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeItemSpecifics")], [0, 1]]
+      ["includeItemSpecifics", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeItemSpecifics")], [0, 1]],
+      ["includeTaxTable", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeTaxTable")], [0, 1]]
     ]
   )
 
@@ -1941,6 +2035,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -1984,6 +2079,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2030,6 +2126,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2040,7 +2137,8 @@ module DefaultMappingRegistry
       ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]],
       ["includeFinalValueFee", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeFinalValueFee")], [0, 1]],
       ["includeContainingOrder", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeContainingOrder")], [0, 1]],
-      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]]
+      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]],
+      ["numberOfDays", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "NumberOfDays")], [0, 1]]
     ]
   )
 
@@ -2087,6 +2185,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2131,6 +2230,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2181,6 +2281,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -2223,6 +2324,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2276,6 +2378,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2320,6 +2423,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2369,6 +2473,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2429,6 +2534,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2474,6 +2580,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2525,6 +2632,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2571,6 +2679,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2620,6 +2729,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2665,6 +2775,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2719,6 +2830,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2764,6 +2876,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -2807,6 +2920,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2855,6 +2969,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2899,6 +3014,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2944,6 +3060,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -2988,6 +3105,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -3033,6 +3151,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -3077,6 +3196,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -3121,6 +3241,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -3177,6 +3298,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -3222,6 +3344,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -3265,6 +3388,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -3308,6 +3432,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -3351,6 +3476,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -3447,6 +3573,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -3515,6 +3642,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -3567,6 +3695,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -3626,6 +3755,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -3677,6 +3807,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -3686,7 +3817,8 @@ module DefaultMappingRegistry
       ["includeFinalValueFee", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeFinalValueFee")], [0, 1]],
       ["includeContainingOrder", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeContainingOrder")], [0, 1]],
       ["sKUArray", ["SKUArrayType", XSD::QName.new(NsEBLBaseComponents, "SKUArray")], [0, 1]],
-      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]]
+      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]],
+      ["numberOfDays", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "NumberOfDays")], [0, 1]]
     ]
   )
 
@@ -3733,6 +3865,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -3783,6 +3916,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -3829,6 +3963,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -3872,6 +4007,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -3915,6 +4051,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -3962,6 +4099,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -4004,6 +4142,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4048,6 +4187,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -4091,6 +4231,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4136,6 +4277,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4183,6 +4325,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4236,6 +4379,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4292,6 +4436,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4336,6 +4481,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4390,6 +4536,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4433,6 +4580,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4484,6 +4632,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4523,7 +4672,10 @@ module DefaultMappingRegistry
       ["uRLDetails", ["URLDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "URLDetails")], [0, nil]],
       ["timeZoneDetails", ["TimeZoneDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "TimeZoneDetails")], [0, nil]],
       ["itemSpecificDetails", ["ItemSpecificDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ItemSpecificDetails")], [0, nil]],
-      ["unitOfMeasurementDetails", ["UnitOfMeasurementDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "UnitOfMeasurementDetails")], [0, nil]]
+      ["unitOfMeasurementDetails", ["UnitOfMeasurementDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "UnitOfMeasurementDetails")], [0, nil]],
+      ["regionOfOriginDetails", ["RegionOfOriginDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "RegionOfOriginDetails")], [0, nil]],
+      ["shippingPackageDetails", ["ShippingPackageDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingPackageDetails")], [0, nil]],
+      ["shippingCarrierDetails", ["ShippingCarrierDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrierDetails")], [0, nil]]
     ]
   )
 
@@ -4539,6 +4691,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -4580,6 +4733,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4629,6 +4783,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4677,6 +4832,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4707,7 +4863,9 @@ module DefaultMappingRegistry
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["sellingStatus", ["SellingStatusType", XSD::QName.new(NsEBLBaseComponents, "SellingStatus")], [0, 1]]
+      ["sellingStatus", ["SellingStatusType", XSD::QName.new(NsEBLBaseComponents, "SellingStatus")], [0, 1]],
+      ["transactionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TransactionID")], [0, 1]],
+      ["bestOffer", ["BestOfferType", XSD::QName.new(NsEBLBaseComponents, "BestOffer")], [0, 1]]
     ]
   )
 
@@ -4723,6 +4881,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4772,6 +4931,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4817,6 +4977,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4865,6 +5026,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4912,6 +5074,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4955,6 +5118,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -4977,7 +5141,8 @@ module DefaultMappingRegistry
       ["shippingCost", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "ShippingCost")], [0, 1]],
       ["encryptedID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EncryptedID")], [0, 1]],
       ["externalTransaction", ["ExternalTransactionType", XSD::QName.new(NsEBLBaseComponents, "ExternalTransaction")], [0, 1]],
-      ["multipleSellerPaymentID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MultipleSellerPaymentID")], [0, 1]]
+      ["multipleSellerPaymentID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MultipleSellerPaymentID")], [0, 1]],
+      ["cODCost", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "CODCost")], [0, 1]]
     ]
   )
 
@@ -5016,6 +5181,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5065,6 +5231,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5112,6 +5279,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5158,6 +5326,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5202,6 +5371,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5245,6 +5415,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5259,7 +5430,8 @@ module DefaultMappingRegistry
       ["paymentMethods", ["BuyerPaymentMethodCodeType[]", XSD::QName.new(NsEBLBaseComponents, "PaymentMethods")], [0, nil]],
       ["payPalEmailAddress", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PayPalEmailAddress")], [0, 1]],
       ["checkoutInstructions", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CheckoutInstructions")], [0, 1]],
-      ["emailCopyToSeller", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EmailCopyToSeller")], [0, 1]]
+      ["emailCopyToSeller", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EmailCopyToSeller")], [0, 1]],
+      ["cODCost", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "CODCost")], [0, 1]]
     ]
   )
 
@@ -5298,6 +5470,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5345,6 +5518,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5387,6 +5561,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5432,6 +5607,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5475,6 +5651,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5520,6 +5697,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5529,7 +5707,8 @@ module DefaultMappingRegistry
       ["storeCategoryID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "StoreCategoryID")], [0, 1]],
       ["categoryID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "CategoryID")], [0, 1]],
       ["allFixedPriceItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "AllFixedPriceItems")], [0, 1]],
-      ["allStoreInventoryItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "AllStoreInventoryItems")], [0, 1]]
+      ["allStoreInventoryItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "AllStoreInventoryItems")], [0, 1]],
+      ["allAuctionItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "AllAuctionItems")], [0, 1]]
     ]
   )
 
@@ -5569,6 +5748,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5613,6 +5793,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5663,6 +5844,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5705,6 +5887,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5752,6 +5935,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5795,6 +5979,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5837,6 +6022,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5879,12 +6065,14 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["action", ["SetUserNotesActionCodeType", XSD::QName.new(NsEBLBaseComponents, "Action")], [0, 1]],
-      ["noteText", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NoteText")], [0, 1]]
+      ["noteText", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NoteText")], [0, 1]],
+      ["transactionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TransactionID")], [0, 1]]
     ]
   )
 
@@ -5923,6 +6111,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -5971,13 +6160,15 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["pictureName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PictureName")], [0, 1]],
       ["pictureSystemVersion", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PictureSystemVersion")], [0, 1]],
       ["pictureSet", ["PictureSetCodeType", XSD::QName.new(NsEBLBaseComponents, "PictureSet")], [0, 1]],
-      ["pictureData", ["Base64BinaryType", XSD::QName.new(NsEBLBaseComponents, "PictureData")], [0, 1]]
+      ["pictureData", ["Base64BinaryType", XSD::QName.new(NsEBLBaseComponents, "PictureData")], [0, 1]],
+      ["pictureUploadPolicy", ["PictureUploadPolicyCodeType", XSD::QName.new(NsEBLBaseComponents, "PictureUploadPolicy")], [0, 1]]
     ]
   )
 
@@ -6018,6 +6209,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -6063,6 +6255,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -6110,6 +6303,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -6155,6 +6349,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -6205,6 +6400,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -6624,6 +6820,7 @@ module DefaultMappingRegistry
       ["alertEnable", ["EnableCodeType", XSD::QName.new(NsEBLBaseComponents, "AlertEnable")], [0, 1]],
       ["notificationPayloadType", ["NotificationPayloadTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "NotificationPayloadType")], [0, 1]],
       ["deviceType", ["DeviceTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "DeviceType")], [0, 1]],
+      ["payloadVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PayloadVersion")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -6748,6 +6945,14 @@ module DefaultMappingRegistry
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "BestOfferArrayType"),
     :schema_element => [
       ["bestOffer", ["BestOfferType[]", XSD::QName.new(NsEBLBaseComponents, "BestOffer")], [0, nil]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => BestOfferAutoAcceptEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoAcceptEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
 
@@ -6896,6 +7101,7 @@ module DefaultMappingRegistry
       ["uniqueNegativeFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueNegativeFeedbackCount")], [0, 1]],
       ["uniquePositiveFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniquePositiveFeedbackCount")], [0, 1]],
       ["liveAuctionBidResult", ["LiveAuctionBidType", XSD::QName.new(NsEBLBaseComponents, "LiveAuctionBidResult")], [0, 1]],
+      ["uniqueNeutralFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueNeutralFeedbackCount")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -7051,6 +7257,7 @@ module DefaultMappingRegistry
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "CalculatedShippingRateType"),
     :schema_element => [
       ["originatingPostalCode", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "OriginatingPostalCode")], [0, 1]],
+      ["measurementUnit", ["MeasurementSystemCodeType", XSD::QName.new(NsEBLBaseComponents, "MeasurementUnit")], [0, 1]],
       ["packageDepth", ["MeasureType", XSD::QName.new(NsEBLBaseComponents, "PackageDepth")], [0, 1]],
       ["packageLength", ["MeasureType", XSD::QName.new(NsEBLBaseComponents, "PackageLength")], [0, 1]],
       ["packageWidth", ["MeasureType", XSD::QName.new(NsEBLBaseComponents, "PackageWidth")], [0, 1]],
@@ -7188,6 +7395,9 @@ module DefaultMappingRegistry
       ["safePaymentRequired", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SafePaymentRequired")], [0, 1]],
       ["classifiedAdPayPerLeadEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdPayPerLeadEnabled")], [0, 1]],
       ["itemSpecificsEnabled", ["ItemSpecificsEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemSpecificsEnabled")], [0, 1]],
+      ["paisaPayFullEscrowEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PaisaPayFullEscrowEnabled")], [0, 1]],
+      ["classifiedAdAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdAutoAcceptEnabled")], [0, 1]],
+      ["bestOfferAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoAcceptEnabled")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -7330,6 +7540,8 @@ module DefaultMappingRegistry
       ["charityRegion", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CharityRegion")], [0, 1]],
       ["charityDomain", ["SOAP::SOAPInt[]", XSD::QName.new(NsEBLBaseComponents, "CharityDomain")], [0, 3]],
       ["charityID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CharityID")], [0, 1]],
+      ["logoURLSelling", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "LogoURLSelling")], [0, 1]],
+      ["displayLogoSelling", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DisplayLogoSelling")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ],
     :schema_attribute => {
@@ -7393,6 +7605,14 @@ module DefaultMappingRegistry
       ["lastModifiedTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "LastModifiedTime")], [0, 1]],
       ["paymentMethod", ["BuyerPaymentMethodCodeType", XSD::QName.new(NsEBLBaseComponents, "PaymentMethod")], [0, 1]],
       ["status", ["CompleteStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => ClassifiedAdAutoAcceptEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdAutoAcceptEnabledDefinitionType"),
+    :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -7846,6 +8066,7 @@ module DefaultMappingRegistry
       ["externalProductID", ["ExternalProductIDType", XSD::QName.new(NsEBLBaseComponents, "ExternalProductID")], [0, 1]],
       ["productReferenceID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "ProductReferenceID")], [0, 1]],
       ["itemSpecifics", ["NameValueListArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemSpecifics")], [0, 1]],
+      ["detailsURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "DetailsURL")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -7966,6 +8187,9 @@ module DefaultMappingRegistry
       ["safePaymentRequired", ["SafePaymentRequiredDefinitionType", XSD::QName.new(NsEBLBaseComponents, "SafePaymentRequired")], [0, 1]],
       ["classifiedAdPayPerLeadEnabled", ["ClassifiedAdPayPerLeadEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdPayPerLeadEnabled")], [0, 1]],
       ["itemSpecificsEnabled", ["ItemSpecificsEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ItemSpecificsEnabled")], [0, 1]],
+      ["paisaPayFullEscrowEnabled", ["PaisaPayFullEscrowEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "PaisaPayFullEscrowEnabled")], [0, 1]],
+      ["bestOfferAutoAcceptEnabled", ["BestOfferAutoAcceptEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoAcceptEnabled")], [0, 1]],
+      ["classifiedAdAutoAcceptEnabled", ["ClassifiedAdAutoAcceptEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdAutoAcceptEnabled")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -8063,6 +8287,7 @@ module DefaultMappingRegistry
       ["uniqueNegativeFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueNegativeFeedbackCount")], [0, 1]],
       ["uniquePositiveFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniquePositiveFeedbackCount")], [0, 1]],
       ["sellerAverageRatingDetailArray", ["AverageRatingDetailArrayType", XSD::QName.new(NsEBLBaseComponents, "SellerAverageRatingDetailArray")], [0, 1]],
+      ["uniqueNeutralFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueNeutralFeedbackCount")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -8237,6 +8462,16 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => ItemPolicyViolationType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ItemPolicyViolationType"),
+    :schema_element => [
+      ["policyID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "PolicyID")], [0, 1]],
+      ["policyText", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PolicyText")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => ItemRatingDetailArrayType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ItemRatingDetailArrayType"),
     :schema_element => [
@@ -8342,7 +8577,6 @@ module DefaultMappingRegistry
       ["listingDuration", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "ListingDuration")], [0, 1]],
       ["listingEnhancement", ["ListingEnhancementsCodeType[]", XSD::QName.new(NsEBLBaseComponents, "ListingEnhancement")], [0, nil]],
       ["listingType", ["ListingTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingType")], [0, 1]],
-      ["listingSubtype", ["ListingSubtypeEnum", XSD::QName.new(NsEBLBaseComponents, "ListingSubtype")], [0, 1]],
       ["location", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Location")], [0, 1]],
       ["lotSize", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "LotSize")], [0, 1]],
       ["nowAndNew", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "NowAndNew")], [0, 1]],
@@ -8421,6 +8655,11 @@ module DefaultMappingRegistry
       ["classifiedAdPayPerLeadFee", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdPayPerLeadFee")], [0, 1]],
       ["bidGroupItem", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BidGroupItem")], [0, 1]],
       ["applyBuyerProtection", ["BuyerProtectionDetailsType", XSD::QName.new(NsEBLBaseComponents, "ApplyBuyerProtection")], [0, 1]],
+      ["listingSubtype2", ["ListingSubtypeCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingSubtype2")], [0, 1]],
+      ["mechanicalCheckAccepted", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "MechanicalCheckAccepted")], [0, 1]],
+      ["updateSellerInfo", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "UpdateSellerInfo")], [0, 1]],
+      ["updateReturnPolicy", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "UpdateReturnPolicy")], [0, 1]],
+      ["itemPolicyViolation", ["ItemPolicyViolationType", XSD::QName.new(NsEBLBaseComponents, "ItemPolicyViolation")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -8495,6 +8734,7 @@ module DefaultMappingRegistry
       ["tCROriginalItemID", [nil, XSD::QName.new(NsEBLBaseComponents, "TCROriginalItemID")], [0, 1]],
       ["viewItemURLForNaturalSearch", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "ViewItemURLForNaturalSearch")], [0, 1]],
       ["payPerLeadEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPerLeadEnabled")], [0, 1]],
+      ["bestOfferAutoAcceptPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoAcceptPrice")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -9177,6 +9417,8 @@ module DefaultMappingRegistry
       ["user", ["UserType", XSD::QName.new(NsEBLBaseComponents, "User")], [0, 1]],
       ["userConsent", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "UserConsent")], [0, 1]],
       ["bidCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "BidCount")], [0, 1]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["bestOfferID", [nil, XSD::QName.new(NsEBLBaseComponents, "BestOfferID")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -9238,6 +9480,8 @@ module DefaultMappingRegistry
       ["digitalDelivery", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DigitalDelivery")], [0, 1]],
       ["transactionArray", ["TransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "TransactionArray")], [0, 1]],
       ["buyerUserID", [nil, XSD::QName.new(NsEBLBaseComponents, "BuyerUserID")], [0, 1]],
+      ["paidTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "PaidTime")], [0, 1]],
+      ["shippedTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "ShippedTime")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -9277,6 +9521,14 @@ module DefaultMappingRegistry
     :schema_element => [
       ["totalNumberOfPages", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "TotalNumberOfPages")], [0, 1]],
       ["totalNumberOfEntries", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "TotalNumberOfEntries")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => PaisaPayFullEscrowEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PaisaPayFullEscrowEnabledDefinitionType"),
+    :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -9655,6 +9907,7 @@ module DefaultMappingRegistry
       ["discountValue", ["SOAP::SOAPDouble", XSD::QName.new(NsEBLBaseComponents, "DiscountValue")], [0, 1]],
       ["promotionalSaleStartTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleStartTime")], [0, 1]],
       ["promotionalSaleEndTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleEndTime")], [0, 1]],
+      ["promotionalSaleType", ["PromotionalSaleTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleType")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -9724,6 +9977,17 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => RegionOfOriginDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "RegionOfOriginDetailsType"),
+    :schema_element => [
+      ["regionOfOrigin", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RegionOfOrigin")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["status", ["StatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => RelatedSearchKeywordArrayType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "RelatedSearchKeywordArrayType"),
     :schema_element => [
@@ -9752,7 +10016,18 @@ module DefaultMappingRegistry
       ["secondChanceOfferCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "SecondChanceOfferCount")], [0, 1]],
       ["shippingNeededCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ShippingNeededCount")], [0, 1]],
       ["relistingNeededCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "RelistingNeededCount")], [0, 1]],
-      ["totalNewLeadsCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "TotalNewLeadsCount")], [0, 1]]
+      ["totalNewLeadsCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "TotalNewLeadsCount")], [0, 1]],
+      ["docsForCCProcessingToSendCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "DocsForCCProcessingToSendCount")], [0, 1]],
+      ["rTEToProcessCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "RTEToProcessCount")], [0, 1]],
+      ["itemReceiptToConfirmCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ItemReceiptToConfirmCount")], [0, 1]],
+      ["refundOnHoldCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "RefundOnHoldCount")], [0, 1]],
+      ["refundCancelledCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "RefundCancelledCount")], [0, 1]],
+      ["shippingDetailsToBeProvidedCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ShippingDetailsToBeProvidedCount")], [0, 1]],
+      ["itemReceiptConfirmationToReceiveCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ItemReceiptConfirmationToReceiveCount")], [0, 1]],
+      ["refundInitiatedCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "RefundInitiatedCount")], [0, 1]],
+      ["pendingRTERequestCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PendingRTERequestCount")], [0, 1]],
+      ["declinedRTERequestCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "DeclinedRTERequestCount")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
 
@@ -10063,6 +10338,7 @@ module DefaultMappingRegistry
       ["expressSellerRequirements", ["ExpressSellerRequirementsType", XSD::QName.new(NsEBLBaseComponents, "ExpressSellerRequirements")], [0, 1]],
       ["charityRegistered", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CharityRegistered")], [0, 1]],
       ["safePaymentExempt", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SafePaymentExempt")], [0, 1]],
+      ["paisaPayEscrowEMIStatus", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PaisaPayEscrowEMIStatus")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -10100,6 +10376,7 @@ module DefaultMappingRegistry
       ["listingStatus", ["ListingStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingStatus")], [0, 1]],
       ["finalValueFee", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "FinalValueFee")], [0, 1]],
       ["promotionalSaleDetails", ["PromotionalSaleDetailsType", XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleDetails")], [0, 1]],
+      ["adminEnded", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "AdminEnded")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -10151,6 +10428,17 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => ShippingCarrierDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ShippingCarrierDetailsType"),
+    :schema_element => [
+      ["shippingCarrierID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrierID")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["shippingCarrier", ["ShippingCarrierCodeType", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrier")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => ShippingDetailsType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ShippingDetailsType"),
     :schema_element => [
@@ -10187,6 +10475,7 @@ module DefaultMappingRegistry
       ["internationalCalculatedShippingDiscount", ["CalculatedShippingDiscountType", XSD::QName.new(NsEBLBaseComponents, "InternationalCalculatedShippingDiscount")], [0, 1]],
       ["internationalPromotionalShippingDiscount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "InternationalPromotionalShippingDiscount")], [0, 1]],
       ["promotionalShippingDiscountDetails", ["PromotionalShippingDiscountDetailsType", XSD::QName.new(NsEBLBaseComponents, "PromotionalShippingDiscountDetails")], [0, 1]],
+      ["cODCost", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "CODCost")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -10212,6 +10501,18 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => ShippingPackageDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ShippingPackageDetailsType"),
+    :schema_element => [
+      ["packageID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PackageID")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["shippingPackage", ["ShippingPackageCodeType", XSD::QName.new(NsEBLBaseComponents, "ShippingPackage")], [0, 1]],
+      ["default", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Default")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => ShippingServiceDetailsType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ShippingServiceDetailsType"),
     :schema_element => [
@@ -10228,6 +10529,8 @@ module DefaultMappingRegistry
       ["dimensionsRequired", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DimensionsRequired")], [0, 1]],
       ["validForSellingFlow", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ValidForSellingFlow")], [0, 1]],
       ["surchargeApplicable", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SurchargeApplicable")], [0, 1]],
+      ["shippingCarrier", ["ShippingCarrierCodeType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrier")], [0, nil]],
+      ["cODService", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CODService")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -10245,6 +10548,7 @@ module DefaultMappingRegistry
       ["shippingTimeMin", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ShippingTimeMin")], [0, 1]],
       ["shippingTimeMax", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ShippingTimeMax")], [0, 1]],
       ["shippingSurcharge", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "ShippingSurcharge")], [0, 1]],
+      ["freeShipping", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "FreeShipping")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -10301,6 +10605,9 @@ module DefaultMappingRegistry
       ["safePaymentRequired", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SafePaymentRequired")], [0, 1]],
       ["classifiedAdPayPerLeadEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdPayPerLeadEnabled")], [0, 1]],
       ["itemSpecificsEnabled", ["ItemSpecificsEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemSpecificsEnabled")], [0, 1]],
+      ["paisaPayFullEscrowEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PaisaPayFullEscrowEnabled")], [0, 1]],
+      ["classifiedAdAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdAutoAcceptEnabled")], [0, 1]],
+      ["bestOfferAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoAcceptEnabled")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -10752,6 +11059,7 @@ module DefaultMappingRegistry
       ["paymentMethodUsed", ["BuyerPaymentMethodCodeType", XSD::QName.new(NsEBLBaseComponents, "PaymentMethodUsed")], [0, 1]],
       ["completeStatus", ["CompleteStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "CompleteStatus")], [0, 1]],
       ["buyerSelectedShipping", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BuyerSelectedShipping")], [0, 1]],
+      ["paymentHoldStatus", ["PaymentHoldStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "PaymentHoldStatus")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -10797,6 +11105,8 @@ module DefaultMappingRegistry
       ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]],
       ["cartID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CartID")], [0, 1]],
       ["sellerContactBuyerByEmail", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SellerContactBuyerByEmail")], [0, 1]],
+      ["payPalEmailAddress", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PayPalEmailAddress")], [0, 1]],
+      ["paisaPayID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PaisaPayID")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -10899,6 +11209,7 @@ module DefaultMappingRegistry
       ["sellerPaymentMethod", ["SellerPaymentMethodCodeType", XSD::QName.new(NsEBLBaseComponents, "SellerPaymentMethod")], [0, 1]],
       ["biddingSummary", ["BiddingSummaryType", XSD::QName.new(NsEBLBaseComponents, "BiddingSummary")], [0, 1]],
       ["userAnonymized", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "UserAnonymized")], [0, 1]],
+      ["uniqueNeutralFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueNeutralFeedbackCount")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -11018,6 +11329,36 @@ module DefaultMappingRegistry
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
       ["responseCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ResponseCount")], [0, 1]],
       ["title", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Title")], [0, 1]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => WishListEntryType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WishListEntryType"),
+    :schema_element => [
+      ["item", ["ItemType", XSD::QName.new(NsEBLBaseComponents, "Item")], [0, 1]],
+      ["product", ["ExpressProductType", XSD::QName.new(NsEBLBaseComponents, "Product")], [0, 1]],
+      ["notes", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Notes")], [0, 1]],
+      ["creationDate", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "CreationDate")], [0, 1]],
+      ["quantityWanted", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "QuantityWanted")], [0, 1]],
+      ["quantityReceived", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "QuantityReceived")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => WishListType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WishListType"),
+    :schema_element => [
+      ["wishListID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "WishListID")], [0, 1]],
+      ["wishListURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "WishListURL")], [0, 1]],
+      ["name", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Name")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["firstName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FirstName")], [0, 1]],
+      ["lastName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LastName")], [0, 1]],
+      ["userLocation", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "UserLocation")], [0, 1]],
+      ["wishListEntry", ["WishListEntryType[]", XSD::QName.new(NsEBLBaseComponents, "WishListEntry")], [0, nil]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
 
@@ -11618,8 +11959,8 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
-    :class => ListingSubtypeEnum,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ListingSubtypeEnum")
+    :class => ListingSubtypeCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ListingSubtypeCodeType")
   )
 
   EncodedRegistry.register(
@@ -11738,6 +12079,11 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => PaymentHoldStatusCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PaymentHoldStatusCodeType")
+  )
+
+  EncodedRegistry.register(
     :class => PaymentMethodSearchCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "PaymentMethodSearchCodeType")
   )
@@ -11793,6 +12139,11 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => PictureUploadPolicyCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PictureUploadPolicyCodeType")
+  )
+
+  EncodedRegistry.register(
     :class => ProductSortCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ProductSortCodeType")
   )
@@ -11825,6 +12176,11 @@ module DefaultMappingRegistry
   EncodedRegistry.register(
     :class => PromotionalSaleStatusCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleStatusCodeType")
+  )
+
+  EncodedRegistry.register(
+    :class => PromotionalSaleTypeCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleTypeCodeType")
   )
 
   EncodedRegistry.register(
@@ -12003,6 +12359,11 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => StatusCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "StatusCodeType")
+  )
+
+  EncodedRegistry.register(
     :class => StoreCategoryUpdateActionCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "StoreCategoryUpdateActionCodeType")
   )
@@ -12145,6 +12506,11 @@ module DefaultMappingRegistry
   EncodedRegistry.register(
     :class => WirelessCarrierIDCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "WirelessCarrierIDCodeType")
+  )
+
+  EncodedRegistry.register(
+    :class => WishListSortCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WishListSortCodeType")
   )
 
   LiteralRegistry.register(
@@ -12159,6 +12525,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12205,6 +12572,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12252,6 +12620,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12300,6 +12669,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12346,6 +12716,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12389,6 +12760,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12432,6 +12804,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12475,6 +12848,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12519,6 +12893,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12568,6 +12943,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12611,6 +12987,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12655,6 +13032,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12707,6 +13085,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12753,6 +13132,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12761,7 +13141,8 @@ module DefaultMappingRegistry
       ["feedbackInfo", ["FeedbackInfoType", XSD::QName.new(NsEBLBaseComponents, "FeedbackInfo")], [0, 1]],
       ["shipped", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Shipped")], [0, 1]],
       ["paid", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Paid")], [0, 1]],
-      ["listingType", ["ListingTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingType")], [0, 1]]
+      ["listingType", ["ListingTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingType")], [0, 1]],
+      ["shipment", ["ShipmentType", XSD::QName.new(NsEBLBaseComponents, "Shipment")], [0, 1]]
     ]
   )
 
@@ -12800,6 +13181,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12843,6 +13225,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12888,6 +13271,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12934,6 +13318,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -12945,7 +13330,8 @@ module DefaultMappingRegistry
       ["excludeBalance", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ExcludeBalance")], [0, 1]],
       ["excludeSummary", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ExcludeSummary")], [0, 1]],
       ["accountEntrySortType", ["AccountEntrySortTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "AccountEntrySortType")], [0, 1]],
-      ["currency", ["CurrencyCodeType", XSD::QName.new(NsEBLBaseComponents, "Currency")], [0, 1]]
+      ["currency", ["CurrencyCodeType", XSD::QName.new(NsEBLBaseComponents, "Currency")], [0, 1]],
+      ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]]
     ]
   )
 
@@ -12992,6 +13378,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13038,6 +13425,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13086,6 +13474,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -13128,6 +13517,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13175,6 +13565,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13219,6 +13610,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13265,6 +13657,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13313,6 +13706,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13358,6 +13752,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13410,6 +13805,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13457,6 +13853,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13507,6 +13904,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13575,6 +13973,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13619,6 +14018,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13666,6 +14066,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -13710,6 +14111,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13759,6 +14161,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13804,6 +14207,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13849,6 +14253,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13899,6 +14304,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13931,6 +14337,56 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => GetExpressWishListRequestType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetExpressWishListRequestType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["userID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]],
+      ["firstName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FirstName")], [0, 1]],
+      ["lastName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LastName")], [0, 1]],
+      ["wishListID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "WishListID")], [0, 1]],
+      ["sortOrder", ["WishListSortCodeType", XSD::QName.new(NsEBLBaseComponents, "SortOrder")], [0, 1]],
+      ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => GetExpressWishListResponseType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetExpressWishListResponseType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["wishList", ["WishListType[]", XSD::QName.new(NsEBLBaseComponents, "WishList")], [0, nil]],
+      ["pagination", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => GetFeedbackRequestType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetFeedbackRequestType"),
     :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
@@ -13942,6 +14398,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -13990,6 +14447,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14034,6 +14492,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14041,7 +14500,8 @@ module DefaultMappingRegistry
       ["includeExpressRequirements", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeExpressRequirements")], [0, 1]],
       ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeWatchCount")], [0, 1]],
       ["includeCrossPromotion", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeCrossPromotion")], [0, 1]],
-      ["includeItemSpecifics", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeItemSpecifics")], [0, 1]]
+      ["includeItemSpecifics", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeItemSpecifics")], [0, 1]],
+      ["includeTaxTable", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeTaxTable")], [0, 1]]
     ]
   )
 
@@ -14081,6 +14541,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14124,6 +14585,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14170,6 +14632,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14180,7 +14643,8 @@ module DefaultMappingRegistry
       ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]],
       ["includeFinalValueFee", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeFinalValueFee")], [0, 1]],
       ["includeContainingOrder", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeContainingOrder")], [0, 1]],
-      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]]
+      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]],
+      ["numberOfDays", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "NumberOfDays")], [0, 1]]
     ]
   )
 
@@ -14227,6 +14691,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14271,6 +14736,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14321,6 +14787,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -14363,6 +14830,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14416,6 +14884,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14460,6 +14929,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14509,6 +14979,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14569,6 +15040,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14614,6 +15086,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14665,6 +15138,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14711,6 +15185,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14760,6 +15235,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14805,6 +15281,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14859,6 +15336,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14904,6 +15382,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -14947,6 +15426,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -14995,6 +15475,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -15039,6 +15520,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -15084,6 +15566,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -15128,6 +15611,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -15173,6 +15657,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -15217,6 +15702,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -15261,6 +15747,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -15317,6 +15804,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -15362,6 +15850,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -15405,6 +15894,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -15448,6 +15938,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -15491,6 +15982,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -15587,6 +16079,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -15655,6 +16148,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -15707,6 +16201,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -15766,6 +16261,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -15817,6 +16313,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -15826,7 +16323,8 @@ module DefaultMappingRegistry
       ["includeFinalValueFee", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeFinalValueFee")], [0, 1]],
       ["includeContainingOrder", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeContainingOrder")], [0, 1]],
       ["sKUArray", ["SKUArrayType", XSD::QName.new(NsEBLBaseComponents, "SKUArray")], [0, 1]],
-      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]]
+      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]],
+      ["numberOfDays", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "NumberOfDays")], [0, 1]]
     ]
   )
 
@@ -15873,6 +16371,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -15923,6 +16422,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -15969,6 +16469,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -16012,6 +16513,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -16055,6 +16557,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -16102,6 +16605,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -16144,6 +16648,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -16188,6 +16693,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -16231,6 +16737,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -16276,6 +16783,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -16323,6 +16831,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -16376,6 +16885,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -16432,6 +16942,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -16476,6 +16987,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -16530,6 +17042,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -16573,6 +17086,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -16624,6 +17138,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -16663,7 +17178,10 @@ module DefaultMappingRegistry
       ["uRLDetails", ["URLDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "URLDetails")], [0, nil]],
       ["timeZoneDetails", ["TimeZoneDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "TimeZoneDetails")], [0, nil]],
       ["itemSpecificDetails", ["ItemSpecificDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ItemSpecificDetails")], [0, nil]],
-      ["unitOfMeasurementDetails", ["UnitOfMeasurementDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "UnitOfMeasurementDetails")], [0, nil]]
+      ["unitOfMeasurementDetails", ["UnitOfMeasurementDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "UnitOfMeasurementDetails")], [0, nil]],
+      ["regionOfOriginDetails", ["RegionOfOriginDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "RegionOfOriginDetails")], [0, nil]],
+      ["shippingPackageDetails", ["ShippingPackageDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingPackageDetails")], [0, nil]],
+      ["shippingCarrierDetails", ["ShippingCarrierDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrierDetails")], [0, nil]]
     ]
   )
 
@@ -16679,6 +17197,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -16720,6 +17239,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -16769,6 +17289,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -16817,6 +17338,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -16847,7 +17369,9 @@ module DefaultMappingRegistry
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["sellingStatus", ["SellingStatusType", XSD::QName.new(NsEBLBaseComponents, "SellingStatus")], [0, 1]]
+      ["sellingStatus", ["SellingStatusType", XSD::QName.new(NsEBLBaseComponents, "SellingStatus")], [0, 1]],
+      ["transactionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TransactionID")], [0, 1]],
+      ["bestOffer", ["BestOfferType", XSD::QName.new(NsEBLBaseComponents, "BestOffer")], [0, 1]]
     ]
   )
 
@@ -16863,6 +17387,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -16912,6 +17437,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -16957,6 +17483,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17005,6 +17532,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17052,6 +17580,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17095,6 +17624,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17117,7 +17647,8 @@ module DefaultMappingRegistry
       ["shippingCost", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "ShippingCost")], [0, 1]],
       ["encryptedID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EncryptedID")], [0, 1]],
       ["externalTransaction", ["ExternalTransactionType", XSD::QName.new(NsEBLBaseComponents, "ExternalTransaction")], [0, 1]],
-      ["multipleSellerPaymentID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MultipleSellerPaymentID")], [0, 1]]
+      ["multipleSellerPaymentID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MultipleSellerPaymentID")], [0, 1]],
+      ["cODCost", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "CODCost")], [0, 1]]
     ]
   )
 
@@ -17156,6 +17687,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17205,6 +17737,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17252,6 +17785,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17298,6 +17832,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17342,6 +17877,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17385,6 +17921,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17399,7 +17936,8 @@ module DefaultMappingRegistry
       ["paymentMethods", ["BuyerPaymentMethodCodeType[]", XSD::QName.new(NsEBLBaseComponents, "PaymentMethods")], [0, nil]],
       ["payPalEmailAddress", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PayPalEmailAddress")], [0, 1]],
       ["checkoutInstructions", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CheckoutInstructions")], [0, 1]],
-      ["emailCopyToSeller", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EmailCopyToSeller")], [0, 1]]
+      ["emailCopyToSeller", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EmailCopyToSeller")], [0, 1]],
+      ["cODCost", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "CODCost")], [0, 1]]
     ]
   )
 
@@ -17438,6 +17976,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17485,6 +18024,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17527,6 +18067,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17572,6 +18113,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17615,6 +18157,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17660,6 +18203,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17669,7 +18213,8 @@ module DefaultMappingRegistry
       ["storeCategoryID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "StoreCategoryID")], [0, 1]],
       ["categoryID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "CategoryID")], [0, 1]],
       ["allFixedPriceItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "AllFixedPriceItems")], [0, 1]],
-      ["allStoreInventoryItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "AllStoreInventoryItems")], [0, 1]]
+      ["allStoreInventoryItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "AllStoreInventoryItems")], [0, 1]],
+      ["allAuctionItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "AllAuctionItems")], [0, 1]]
     ]
   )
 
@@ -17709,6 +18254,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17753,6 +18299,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17803,6 +18350,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17845,6 +18393,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17892,6 +18441,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17935,6 +18485,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -17977,6 +18528,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -18019,12 +18571,14 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["action", ["SetUserNotesActionCodeType", XSD::QName.new(NsEBLBaseComponents, "Action")], [0, 1]],
-      ["noteText", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NoteText")], [0, 1]]
+      ["noteText", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NoteText")], [0, 1]],
+      ["transactionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TransactionID")], [0, 1]]
     ]
   )
 
@@ -18063,6 +18617,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -18111,13 +18666,15 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["pictureName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PictureName")], [0, 1]],
       ["pictureSystemVersion", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PictureSystemVersion")], [0, 1]],
       ["pictureSet", ["PictureSetCodeType", XSD::QName.new(NsEBLBaseComponents, "PictureSet")], [0, 1]],
-      ["pictureData", ["Base64BinaryType", XSD::QName.new(NsEBLBaseComponents, "PictureData")], [0, 1]]
+      ["pictureData", ["Base64BinaryType", XSD::QName.new(NsEBLBaseComponents, "PictureData")], [0, 1]],
+      ["pictureUploadPolicy", ["PictureUploadPolicyCodeType", XSD::QName.new(NsEBLBaseComponents, "PictureUploadPolicy")], [0, 1]]
     ]
   )
 
@@ -18158,6 +18715,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -18203,6 +18761,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -18250,6 +18809,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -18295,6 +18855,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -18345,6 +18906,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -18764,6 +19326,7 @@ module DefaultMappingRegistry
       ["alertEnable", ["EnableCodeType", XSD::QName.new(NsEBLBaseComponents, "AlertEnable")], [0, 1]],
       ["notificationPayloadType", ["NotificationPayloadTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "NotificationPayloadType")], [0, 1]],
       ["deviceType", ["DeviceTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "DeviceType")], [0, 1]],
+      ["payloadVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PayloadVersion")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -18888,6 +19451,14 @@ module DefaultMappingRegistry
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "BestOfferArrayType"),
     :schema_element => [
       ["bestOffer", ["BestOfferType[]", XSD::QName.new(NsEBLBaseComponents, "BestOffer")], [0, nil]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => BestOfferAutoAcceptEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoAcceptEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
 
@@ -19036,6 +19607,7 @@ module DefaultMappingRegistry
       ["uniqueNegativeFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueNegativeFeedbackCount")], [0, 1]],
       ["uniquePositiveFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniquePositiveFeedbackCount")], [0, 1]],
       ["liveAuctionBidResult", ["LiveAuctionBidType", XSD::QName.new(NsEBLBaseComponents, "LiveAuctionBidResult")], [0, 1]],
+      ["uniqueNeutralFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueNeutralFeedbackCount")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -19191,6 +19763,7 @@ module DefaultMappingRegistry
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "CalculatedShippingRateType"),
     :schema_element => [
       ["originatingPostalCode", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "OriginatingPostalCode")], [0, 1]],
+      ["measurementUnit", ["MeasurementSystemCodeType", XSD::QName.new(NsEBLBaseComponents, "MeasurementUnit")], [0, 1]],
       ["packageDepth", ["MeasureType", XSD::QName.new(NsEBLBaseComponents, "PackageDepth")], [0, 1]],
       ["packageLength", ["MeasureType", XSD::QName.new(NsEBLBaseComponents, "PackageLength")], [0, 1]],
       ["packageWidth", ["MeasureType", XSD::QName.new(NsEBLBaseComponents, "PackageWidth")], [0, 1]],
@@ -19328,6 +19901,9 @@ module DefaultMappingRegistry
       ["safePaymentRequired", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SafePaymentRequired")], [0, 1]],
       ["classifiedAdPayPerLeadEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdPayPerLeadEnabled")], [0, 1]],
       ["itemSpecificsEnabled", ["ItemSpecificsEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemSpecificsEnabled")], [0, 1]],
+      ["paisaPayFullEscrowEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PaisaPayFullEscrowEnabled")], [0, 1]],
+      ["classifiedAdAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdAutoAcceptEnabled")], [0, 1]],
+      ["bestOfferAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoAcceptEnabled")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -19470,6 +20046,8 @@ module DefaultMappingRegistry
       ["charityRegion", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CharityRegion")], [0, 1]],
       ["charityDomain", ["SOAP::SOAPInt[]", XSD::QName.new(NsEBLBaseComponents, "CharityDomain")], [0, 3]],
       ["charityID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CharityID")], [0, 1]],
+      ["logoURLSelling", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "LogoURLSelling")], [0, 1]],
+      ["displayLogoSelling", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DisplayLogoSelling")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ],
     :schema_attribute => {
@@ -19533,6 +20111,14 @@ module DefaultMappingRegistry
       ["lastModifiedTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "LastModifiedTime")], [0, 1]],
       ["paymentMethod", ["BuyerPaymentMethodCodeType", XSD::QName.new(NsEBLBaseComponents, "PaymentMethod")], [0, 1]],
       ["status", ["CompleteStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => ClassifiedAdAutoAcceptEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdAutoAcceptEnabledDefinitionType"),
+    :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -19986,6 +20572,7 @@ module DefaultMappingRegistry
       ["externalProductID", ["ExternalProductIDType", XSD::QName.new(NsEBLBaseComponents, "ExternalProductID")], [0, 1]],
       ["productReferenceID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "ProductReferenceID")], [0, 1]],
       ["itemSpecifics", ["NameValueListArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemSpecifics")], [0, 1]],
+      ["detailsURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "DetailsURL")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -20106,6 +20693,9 @@ module DefaultMappingRegistry
       ["safePaymentRequired", ["SafePaymentRequiredDefinitionType", XSD::QName.new(NsEBLBaseComponents, "SafePaymentRequired")], [0, 1]],
       ["classifiedAdPayPerLeadEnabled", ["ClassifiedAdPayPerLeadEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdPayPerLeadEnabled")], [0, 1]],
       ["itemSpecificsEnabled", ["ItemSpecificsEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ItemSpecificsEnabled")], [0, 1]],
+      ["paisaPayFullEscrowEnabled", ["PaisaPayFullEscrowEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "PaisaPayFullEscrowEnabled")], [0, 1]],
+      ["bestOfferAutoAcceptEnabled", ["BestOfferAutoAcceptEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoAcceptEnabled")], [0, 1]],
+      ["classifiedAdAutoAcceptEnabled", ["ClassifiedAdAutoAcceptEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdAutoAcceptEnabled")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -20203,6 +20793,7 @@ module DefaultMappingRegistry
       ["uniqueNegativeFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueNegativeFeedbackCount")], [0, 1]],
       ["uniquePositiveFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniquePositiveFeedbackCount")], [0, 1]],
       ["sellerAverageRatingDetailArray", ["AverageRatingDetailArrayType", XSD::QName.new(NsEBLBaseComponents, "SellerAverageRatingDetailArray")], [0, 1]],
+      ["uniqueNeutralFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueNeutralFeedbackCount")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -20377,6 +20968,16 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => ItemPolicyViolationType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ItemPolicyViolationType"),
+    :schema_element => [
+      ["policyID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "PolicyID")], [0, 1]],
+      ["policyText", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PolicyText")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => ItemRatingDetailArrayType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ItemRatingDetailArrayType"),
     :schema_element => [
@@ -20482,7 +21083,6 @@ module DefaultMappingRegistry
       ["listingDuration", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "ListingDuration")], [0, 1]],
       ["listingEnhancement", ["ListingEnhancementsCodeType[]", XSD::QName.new(NsEBLBaseComponents, "ListingEnhancement")], [0, nil]],
       ["listingType", ["ListingTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingType")], [0, 1]],
-      ["listingSubtype", ["ListingSubtypeEnum", XSD::QName.new(NsEBLBaseComponents, "ListingSubtype")], [0, 1]],
       ["location", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Location")], [0, 1]],
       ["lotSize", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "LotSize")], [0, 1]],
       ["nowAndNew", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "NowAndNew")], [0, 1]],
@@ -20561,6 +21161,11 @@ module DefaultMappingRegistry
       ["classifiedAdPayPerLeadFee", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdPayPerLeadFee")], [0, 1]],
       ["bidGroupItem", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BidGroupItem")], [0, 1]],
       ["applyBuyerProtection", ["BuyerProtectionDetailsType", XSD::QName.new(NsEBLBaseComponents, "ApplyBuyerProtection")], [0, 1]],
+      ["listingSubtype2", ["ListingSubtypeCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingSubtype2")], [0, 1]],
+      ["mechanicalCheckAccepted", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "MechanicalCheckAccepted")], [0, 1]],
+      ["updateSellerInfo", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "UpdateSellerInfo")], [0, 1]],
+      ["updateReturnPolicy", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "UpdateReturnPolicy")], [0, 1]],
+      ["itemPolicyViolation", ["ItemPolicyViolationType", XSD::QName.new(NsEBLBaseComponents, "ItemPolicyViolation")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -20635,6 +21240,7 @@ module DefaultMappingRegistry
       ["tCROriginalItemID", [nil, XSD::QName.new(NsEBLBaseComponents, "TCROriginalItemID")], [0, 1]],
       ["viewItemURLForNaturalSearch", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "ViewItemURLForNaturalSearch")], [0, 1]],
       ["payPerLeadEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPerLeadEnabled")], [0, 1]],
+      ["bestOfferAutoAcceptPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoAcceptPrice")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -21317,6 +21923,8 @@ module DefaultMappingRegistry
       ["user", ["UserType", XSD::QName.new(NsEBLBaseComponents, "User")], [0, 1]],
       ["userConsent", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "UserConsent")], [0, 1]],
       ["bidCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "BidCount")], [0, 1]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["bestOfferID", [nil, XSD::QName.new(NsEBLBaseComponents, "BestOfferID")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -21378,6 +21986,8 @@ module DefaultMappingRegistry
       ["digitalDelivery", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DigitalDelivery")], [0, 1]],
       ["transactionArray", ["TransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "TransactionArray")], [0, 1]],
       ["buyerUserID", [nil, XSD::QName.new(NsEBLBaseComponents, "BuyerUserID")], [0, 1]],
+      ["paidTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "PaidTime")], [0, 1]],
+      ["shippedTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "ShippedTime")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -21417,6 +22027,14 @@ module DefaultMappingRegistry
     :schema_element => [
       ["totalNumberOfPages", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "TotalNumberOfPages")], [0, 1]],
       ["totalNumberOfEntries", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "TotalNumberOfEntries")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => PaisaPayFullEscrowEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PaisaPayFullEscrowEnabledDefinitionType"),
+    :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -21795,6 +22413,7 @@ module DefaultMappingRegistry
       ["discountValue", ["SOAP::SOAPDouble", XSD::QName.new(NsEBLBaseComponents, "DiscountValue")], [0, 1]],
       ["promotionalSaleStartTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleStartTime")], [0, 1]],
       ["promotionalSaleEndTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleEndTime")], [0, 1]],
+      ["promotionalSaleType", ["PromotionalSaleTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleType")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -21864,6 +22483,17 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => RegionOfOriginDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "RegionOfOriginDetailsType"),
+    :schema_element => [
+      ["regionOfOrigin", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RegionOfOrigin")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["status", ["StatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => RelatedSearchKeywordArrayType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "RelatedSearchKeywordArrayType"),
     :schema_element => [
@@ -21892,7 +22522,18 @@ module DefaultMappingRegistry
       ["secondChanceOfferCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "SecondChanceOfferCount")], [0, 1]],
       ["shippingNeededCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ShippingNeededCount")], [0, 1]],
       ["relistingNeededCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "RelistingNeededCount")], [0, 1]],
-      ["totalNewLeadsCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "TotalNewLeadsCount")], [0, 1]]
+      ["totalNewLeadsCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "TotalNewLeadsCount")], [0, 1]],
+      ["docsForCCProcessingToSendCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "DocsForCCProcessingToSendCount")], [0, 1]],
+      ["rTEToProcessCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "RTEToProcessCount")], [0, 1]],
+      ["itemReceiptToConfirmCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ItemReceiptToConfirmCount")], [0, 1]],
+      ["refundOnHoldCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "RefundOnHoldCount")], [0, 1]],
+      ["refundCancelledCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "RefundCancelledCount")], [0, 1]],
+      ["shippingDetailsToBeProvidedCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ShippingDetailsToBeProvidedCount")], [0, 1]],
+      ["itemReceiptConfirmationToReceiveCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ItemReceiptConfirmationToReceiveCount")], [0, 1]],
+      ["refundInitiatedCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "RefundInitiatedCount")], [0, 1]],
+      ["pendingRTERequestCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PendingRTERequestCount")], [0, 1]],
+      ["declinedRTERequestCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "DeclinedRTERequestCount")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
 
@@ -22203,6 +22844,7 @@ module DefaultMappingRegistry
       ["expressSellerRequirements", ["ExpressSellerRequirementsType", XSD::QName.new(NsEBLBaseComponents, "ExpressSellerRequirements")], [0, 1]],
       ["charityRegistered", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CharityRegistered")], [0, 1]],
       ["safePaymentExempt", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SafePaymentExempt")], [0, 1]],
+      ["paisaPayEscrowEMIStatus", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PaisaPayEscrowEMIStatus")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -22240,6 +22882,7 @@ module DefaultMappingRegistry
       ["listingStatus", ["ListingStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingStatus")], [0, 1]],
       ["finalValueFee", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "FinalValueFee")], [0, 1]],
       ["promotionalSaleDetails", ["PromotionalSaleDetailsType", XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleDetails")], [0, 1]],
+      ["adminEnded", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "AdminEnded")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -22291,6 +22934,17 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => ShippingCarrierDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ShippingCarrierDetailsType"),
+    :schema_element => [
+      ["shippingCarrierID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrierID")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["shippingCarrier", ["ShippingCarrierCodeType", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrier")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => ShippingDetailsType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ShippingDetailsType"),
     :schema_element => [
@@ -22327,6 +22981,7 @@ module DefaultMappingRegistry
       ["internationalCalculatedShippingDiscount", ["CalculatedShippingDiscountType", XSD::QName.new(NsEBLBaseComponents, "InternationalCalculatedShippingDiscount")], [0, 1]],
       ["internationalPromotionalShippingDiscount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "InternationalPromotionalShippingDiscount")], [0, 1]],
       ["promotionalShippingDiscountDetails", ["PromotionalShippingDiscountDetailsType", XSD::QName.new(NsEBLBaseComponents, "PromotionalShippingDiscountDetails")], [0, 1]],
+      ["cODCost", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "CODCost")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -22352,6 +23007,18 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => ShippingPackageDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ShippingPackageDetailsType"),
+    :schema_element => [
+      ["packageID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PackageID")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["shippingPackage", ["ShippingPackageCodeType", XSD::QName.new(NsEBLBaseComponents, "ShippingPackage")], [0, 1]],
+      ["default", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Default")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => ShippingServiceDetailsType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ShippingServiceDetailsType"),
     :schema_element => [
@@ -22368,6 +23035,8 @@ module DefaultMappingRegistry
       ["dimensionsRequired", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DimensionsRequired")], [0, 1]],
       ["validForSellingFlow", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ValidForSellingFlow")], [0, 1]],
       ["surchargeApplicable", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SurchargeApplicable")], [0, 1]],
+      ["shippingCarrier", ["ShippingCarrierCodeType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrier")], [0, nil]],
+      ["cODService", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CODService")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -22385,6 +23054,7 @@ module DefaultMappingRegistry
       ["shippingTimeMin", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ShippingTimeMin")], [0, 1]],
       ["shippingTimeMax", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ShippingTimeMax")], [0, 1]],
       ["shippingSurcharge", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "ShippingSurcharge")], [0, 1]],
+      ["freeShipping", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "FreeShipping")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -22441,6 +23111,9 @@ module DefaultMappingRegistry
       ["safePaymentRequired", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SafePaymentRequired")], [0, 1]],
       ["classifiedAdPayPerLeadEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdPayPerLeadEnabled")], [0, 1]],
       ["itemSpecificsEnabled", ["ItemSpecificsEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemSpecificsEnabled")], [0, 1]],
+      ["paisaPayFullEscrowEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PaisaPayFullEscrowEnabled")], [0, 1]],
+      ["classifiedAdAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdAutoAcceptEnabled")], [0, 1]],
+      ["bestOfferAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoAcceptEnabled")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -22892,6 +23565,7 @@ module DefaultMappingRegistry
       ["paymentMethodUsed", ["BuyerPaymentMethodCodeType", XSD::QName.new(NsEBLBaseComponents, "PaymentMethodUsed")], [0, 1]],
       ["completeStatus", ["CompleteStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "CompleteStatus")], [0, 1]],
       ["buyerSelectedShipping", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BuyerSelectedShipping")], [0, 1]],
+      ["paymentHoldStatus", ["PaymentHoldStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "PaymentHoldStatus")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -22937,6 +23611,8 @@ module DefaultMappingRegistry
       ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]],
       ["cartID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CartID")], [0, 1]],
       ["sellerContactBuyerByEmail", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SellerContactBuyerByEmail")], [0, 1]],
+      ["payPalEmailAddress", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PayPalEmailAddress")], [0, 1]],
+      ["paisaPayID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PaisaPayID")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -23039,6 +23715,7 @@ module DefaultMappingRegistry
       ["sellerPaymentMethod", ["SellerPaymentMethodCodeType", XSD::QName.new(NsEBLBaseComponents, "SellerPaymentMethod")], [0, 1]],
       ["biddingSummary", ["BiddingSummaryType", XSD::QName.new(NsEBLBaseComponents, "BiddingSummary")], [0, 1]],
       ["userAnonymized", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "UserAnonymized")], [0, 1]],
+      ["uniqueNeutralFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueNeutralFeedbackCount")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -23158,6 +23835,36 @@ module DefaultMappingRegistry
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
       ["responseCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ResponseCount")], [0, 1]],
       ["title", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Title")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => WishListEntryType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WishListEntryType"),
+    :schema_element => [
+      ["item", ["ItemType", XSD::QName.new(NsEBLBaseComponents, "Item")], [0, 1]],
+      ["product", ["ExpressProductType", XSD::QName.new(NsEBLBaseComponents, "Product")], [0, 1]],
+      ["notes", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Notes")], [0, 1]],
+      ["creationDate", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "CreationDate")], [0, 1]],
+      ["quantityWanted", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "QuantityWanted")], [0, 1]],
+      ["quantityReceived", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "QuantityReceived")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => WishListType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WishListType"),
+    :schema_element => [
+      ["wishListID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "WishListID")], [0, 1]],
+      ["wishListURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "WishListURL")], [0, 1]],
+      ["name", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Name")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["firstName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FirstName")], [0, 1]],
+      ["lastName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LastName")], [0, 1]],
+      ["userLocation", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "UserLocation")], [0, 1]],
+      ["wishListEntry", ["WishListEntryType[]", XSD::QName.new(NsEBLBaseComponents, "WishListEntry")], [0, nil]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
 
@@ -23758,8 +24465,8 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
-    :class => ListingSubtypeEnum,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ListingSubtypeEnum")
+    :class => ListingSubtypeCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ListingSubtypeCodeType")
   )
 
   LiteralRegistry.register(
@@ -23878,6 +24585,11 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => PaymentHoldStatusCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PaymentHoldStatusCodeType")
+  )
+
+  LiteralRegistry.register(
     :class => PaymentMethodSearchCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "PaymentMethodSearchCodeType")
   )
@@ -23933,6 +24645,11 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => PictureUploadPolicyCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PictureUploadPolicyCodeType")
+  )
+
+  LiteralRegistry.register(
     :class => ProductSortCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ProductSortCodeType")
   )
@@ -23965,6 +24682,11 @@ module DefaultMappingRegistry
   LiteralRegistry.register(
     :class => PromotionalSaleStatusCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleStatusCodeType")
+  )
+
+  LiteralRegistry.register(
+    :class => PromotionalSaleTypeCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleTypeCodeType")
   )
 
   LiteralRegistry.register(
@@ -24143,6 +24865,11 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => StatusCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "StatusCodeType")
+  )
+
+  LiteralRegistry.register(
     :class => StoreCategoryUpdateActionCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "StoreCategoryUpdateActionCodeType")
   )
@@ -24285,6 +25012,11 @@ module DefaultMappingRegistry
   LiteralRegistry.register(
     :class => WirelessCarrierIDCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "WirelessCarrierIDCodeType")
+  )
+
+  LiteralRegistry.register(
+    :class => WishListSortCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WishListSortCodeType")
   )
 
   LiteralRegistry.register(
@@ -24310,6 +25042,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -24354,6 +25087,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -24399,6 +25133,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -24445,6 +25180,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -24489,6 +25225,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -24530,6 +25267,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -24571,6 +25309,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -24612,6 +25351,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -24654,6 +25394,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -24701,6 +25442,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -24742,6 +25484,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -24784,6 +25527,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -24834,6 +25578,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -24878,6 +25623,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -24886,7 +25632,8 @@ module DefaultMappingRegistry
       ["feedbackInfo", ["FeedbackInfoType", XSD::QName.new(NsEBLBaseComponents, "FeedbackInfo")], [0, 1]],
       ["shipped", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Shipped")], [0, 1]],
       ["paid", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Paid")], [0, 1]],
-      ["listingType", ["ListingTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingType")], [0, 1]]
+      ["listingType", ["ListingTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingType")], [0, 1]],
+      ["shipment", ["ShipmentType", XSD::QName.new(NsEBLBaseComponents, "Shipment")], [0, 1]]
     ]
   )
 
@@ -24923,6 +25670,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -24964,6 +25712,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25007,6 +25756,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25051,6 +25801,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25062,7 +25813,8 @@ module DefaultMappingRegistry
       ["excludeBalance", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ExcludeBalance")], [0, 1]],
       ["excludeSummary", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ExcludeSummary")], [0, 1]],
       ["accountEntrySortType", ["AccountEntrySortTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "AccountEntrySortType")], [0, 1]],
-      ["currency", ["CurrencyCodeType", XSD::QName.new(NsEBLBaseComponents, "Currency")], [0, 1]]
+      ["currency", ["CurrencyCodeType", XSD::QName.new(NsEBLBaseComponents, "Currency")], [0, 1]],
+      ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]]
     ]
   )
 
@@ -25107,6 +25859,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25151,6 +25904,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25197,6 +25951,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -25237,6 +25992,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25282,6 +26038,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25324,6 +26081,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25368,6 +26126,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25414,6 +26173,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25457,6 +26217,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25507,6 +26268,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25552,6 +26314,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25600,6 +26363,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25666,6 +26430,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25708,6 +26473,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25753,6 +26519,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -25795,6 +26562,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25842,6 +26610,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25885,6 +26654,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25928,6 +26698,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -25976,6 +26747,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26007,6 +26779,54 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => GetExpressWishListRequestType,
+    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetExpressWishListRequest"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["userID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]],
+      ["firstName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FirstName")], [0, 1]],
+      ["lastName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LastName")], [0, 1]],
+      ["wishListID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "WishListID")], [0, 1]],
+      ["sortOrder", ["WishListSortCodeType", XSD::QName.new(NsEBLBaseComponents, "SortOrder")], [0, 1]],
+      ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => GetExpressWishListResponseType,
+    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetExpressWishListResponse"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["wishList", ["WishListType[]", XSD::QName.new(NsEBLBaseComponents, "WishList")], [0, nil]],
+      ["pagination", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => GetFeedbackRequestType,
     :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetFeedbackRequest"),
     :schema_element => [
@@ -26017,6 +26837,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26063,6 +26884,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26105,6 +26927,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26112,7 +26935,8 @@ module DefaultMappingRegistry
       ["includeExpressRequirements", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeExpressRequirements")], [0, 1]],
       ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeWatchCount")], [0, 1]],
       ["includeCrossPromotion", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeCrossPromotion")], [0, 1]],
-      ["includeItemSpecifics", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeItemSpecifics")], [0, 1]]
+      ["includeItemSpecifics", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeItemSpecifics")], [0, 1]],
+      ["includeTaxTable", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeTaxTable")], [0, 1]]
     ]
   )
 
@@ -26150,6 +26974,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26191,6 +27016,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26235,6 +27061,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26245,7 +27072,8 @@ module DefaultMappingRegistry
       ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]],
       ["includeFinalValueFee", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeFinalValueFee")], [0, 1]],
       ["includeContainingOrder", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeContainingOrder")], [0, 1]],
-      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]]
+      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]],
+      ["numberOfDays", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "NumberOfDays")], [0, 1]]
     ]
   )
 
@@ -26290,6 +27118,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26332,6 +27161,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26380,6 +27210,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -26420,6 +27251,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26471,6 +27303,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26513,6 +27346,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26560,6 +27394,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26618,6 +27453,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26661,6 +27497,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26710,6 +27547,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26754,6 +27592,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26801,6 +27640,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26844,6 +27684,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26896,6 +27737,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -26939,6 +27781,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -26980,6 +27823,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27026,6 +27870,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27068,6 +27913,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27111,6 +27957,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27153,6 +28000,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27196,6 +28044,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27238,6 +28087,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27280,6 +28130,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27334,6 +28185,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27377,6 +28229,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27418,6 +28271,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -27459,6 +28313,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27500,6 +28355,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27594,6 +28450,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27660,6 +28517,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27710,6 +28568,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27767,6 +28626,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27816,6 +28676,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27825,7 +28686,8 @@ module DefaultMappingRegistry
       ["includeFinalValueFee", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeFinalValueFee")], [0, 1]],
       ["includeContainingOrder", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeContainingOrder")], [0, 1]],
       ["sKUArray", ["SKUArrayType", XSD::QName.new(NsEBLBaseComponents, "SKUArray")], [0, 1]],
-      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]]
+      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]],
+      ["numberOfDays", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "NumberOfDays")], [0, 1]]
     ]
   )
 
@@ -27870,6 +28732,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -27918,6 +28781,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -27962,6 +28826,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28003,6 +28868,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28044,6 +28910,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -28089,6 +28956,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -28129,6 +28997,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28171,6 +29040,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -28212,6 +29082,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28255,6 +29126,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28300,6 +29172,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28351,6 +29224,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28405,6 +29279,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28447,6 +29322,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28499,6 +29375,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28540,6 +29417,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28589,6 +29467,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28627,7 +29506,10 @@ module DefaultMappingRegistry
       ["uRLDetails", ["URLDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "URLDetails")], [0, nil]],
       ["timeZoneDetails", ["TimeZoneDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "TimeZoneDetails")], [0, nil]],
       ["itemSpecificDetails", ["ItemSpecificDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ItemSpecificDetails")], [0, nil]],
-      ["unitOfMeasurementDetails", ["UnitOfMeasurementDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "UnitOfMeasurementDetails")], [0, nil]]
+      ["unitOfMeasurementDetails", ["UnitOfMeasurementDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "UnitOfMeasurementDetails")], [0, nil]],
+      ["regionOfOriginDetails", ["RegionOfOriginDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "RegionOfOriginDetails")], [0, nil]],
+      ["shippingPackageDetails", ["ShippingPackageDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingPackageDetails")], [0, nil]],
+      ["shippingCarrierDetails", ["ShippingCarrierDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrierDetails")], [0, nil]]
     ]
   )
 
@@ -28642,6 +29524,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
@@ -28681,6 +29564,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28728,6 +29612,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28774,6 +29659,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28803,7 +29689,9 @@ module DefaultMappingRegistry
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["sellingStatus", ["SellingStatusType", XSD::QName.new(NsEBLBaseComponents, "SellingStatus")], [0, 1]]
+      ["sellingStatus", ["SellingStatusType", XSD::QName.new(NsEBLBaseComponents, "SellingStatus")], [0, 1]],
+      ["transactionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TransactionID")], [0, 1]],
+      ["bestOffer", ["BestOfferType", XSD::QName.new(NsEBLBaseComponents, "BestOffer")], [0, 1]]
     ]
   )
 
@@ -28818,6 +29706,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28865,6 +29754,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28908,6 +29798,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28954,6 +29845,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -28999,6 +29891,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29040,6 +29933,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29062,7 +29956,8 @@ module DefaultMappingRegistry
       ["shippingCost", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "ShippingCost")], [0, 1]],
       ["encryptedID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EncryptedID")], [0, 1]],
       ["externalTransaction", ["ExternalTransactionType", XSD::QName.new(NsEBLBaseComponents, "ExternalTransaction")], [0, 1]],
-      ["multipleSellerPaymentID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MultipleSellerPaymentID")], [0, 1]]
+      ["multipleSellerPaymentID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MultipleSellerPaymentID")], [0, 1]],
+      ["cODCost", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "CODCost")], [0, 1]]
     ]
   )
 
@@ -29099,6 +29994,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29146,6 +30042,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29191,6 +30088,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29235,6 +30133,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29277,6 +30176,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29318,6 +30218,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29332,7 +30233,8 @@ module DefaultMappingRegistry
       ["paymentMethods", ["BuyerPaymentMethodCodeType[]", XSD::QName.new(NsEBLBaseComponents, "PaymentMethods")], [0, nil]],
       ["payPalEmailAddress", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PayPalEmailAddress")], [0, 1]],
       ["checkoutInstructions", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CheckoutInstructions")], [0, 1]],
-      ["emailCopyToSeller", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EmailCopyToSeller")], [0, 1]]
+      ["emailCopyToSeller", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EmailCopyToSeller")], [0, 1]],
+      ["cODCost", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "CODCost")], [0, 1]]
     ]
   )
 
@@ -29369,6 +30271,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29414,6 +30317,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29454,6 +30358,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29497,6 +30402,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29538,6 +30444,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29581,6 +30488,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29590,7 +30498,8 @@ module DefaultMappingRegistry
       ["storeCategoryID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "StoreCategoryID")], [0, 1]],
       ["categoryID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "CategoryID")], [0, 1]],
       ["allFixedPriceItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "AllFixedPriceItems")], [0, 1]],
-      ["allStoreInventoryItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "AllStoreInventoryItems")], [0, 1]]
+      ["allStoreInventoryItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "AllStoreInventoryItems")], [0, 1]],
+      ["allAuctionItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "AllAuctionItems")], [0, 1]]
     ]
   )
 
@@ -29628,6 +30537,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29670,6 +30580,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29718,6 +30629,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29758,6 +30670,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29803,6 +30716,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29844,6 +30758,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29884,6 +30799,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -29924,12 +30840,14 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["action", ["SetUserNotesActionCodeType", XSD::QName.new(NsEBLBaseComponents, "Action")], [0, 1]],
-      ["noteText", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NoteText")], [0, 1]]
+      ["noteText", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NoteText")], [0, 1]],
+      ["transactionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TransactionID")], [0, 1]]
     ]
   )
 
@@ -29966,6 +30884,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -30012,13 +30931,15 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["pictureName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PictureName")], [0, 1]],
       ["pictureSystemVersion", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PictureSystemVersion")], [0, 1]],
       ["pictureSet", ["PictureSetCodeType", XSD::QName.new(NsEBLBaseComponents, "PictureSet")], [0, 1]],
-      ["pictureData", ["Base64BinaryType", XSD::QName.new(NsEBLBaseComponents, "PictureData")], [0, 1]]
+      ["pictureData", ["Base64BinaryType", XSD::QName.new(NsEBLBaseComponents, "PictureData")], [0, 1]],
+      ["pictureUploadPolicy", ["PictureUploadPolicyCodeType", XSD::QName.new(NsEBLBaseComponents, "PictureUploadPolicy")], [0, 1]]
     ]
   )
 
@@ -30057,6 +30978,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -30100,6 +31022,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -30145,6 +31068,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -30188,6 +31112,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
@@ -30236,6 +31161,7 @@ module DefaultMappingRegistry
       ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
       ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
       ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],

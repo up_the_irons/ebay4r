@@ -9,6 +9,7 @@ require 'xsd/qname'
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 class AbstractRequestType
@@ -19,6 +20,7 @@ class AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -27,7 +29,7 @@ class AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -35,6 +37,7 @@ class AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -49,6 +52,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   disputeExplanation - DisputeExplanationCodeType
@@ -63,6 +67,7 @@ class AddDisputeRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -75,7 +80,7 @@ class AddDisputeRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, disputeExplanation = nil, disputeReason = nil, itemID = nil, transactionID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, disputeExplanation = nil, disputeReason = nil, itemID = nil, transactionID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -83,6 +88,7 @@ class AddDisputeRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -101,6 +107,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   disputeID - (any)
@@ -117,6 +124,7 @@ class AddDisputeResponseRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -131,7 +139,7 @@ class AddDisputeResponseRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, disputeID = nil, messageText = nil, disputeActivity = nil, shippingCarrierUsed = nil, shipmentTrackNumber = nil, shippingTime = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, disputeID = nil, messageText = nil, disputeActivity = nil, shippingCarrierUsed = nil, shipmentTrackNumber = nil, shippingTime = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -139,6 +147,7 @@ class AddDisputeResponseRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -159,6 +168,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   item - ItemType
@@ -170,6 +180,7 @@ class AddItemRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -179,7 +190,7 @@ class AddItemRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, item = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, item = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -187,6 +198,7 @@ class AddItemRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -202,6 +214,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   item - ItemType
@@ -213,6 +226,7 @@ class AddLiveAuctionItemRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -222,7 +236,7 @@ class AddLiveAuctionItemRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, item = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, item = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -230,6 +244,7 @@ class AddLiveAuctionItemRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -245,6 +260,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -257,6 +273,7 @@ class AddMemberMessageAAQToPartnerRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -267,7 +284,7 @@ class AddMemberMessageAAQToPartnerRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, memberMessage = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, memberMessage = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -275,6 +292,7 @@ class AddMemberMessageAAQToPartnerRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -291,6 +309,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -303,6 +322,7 @@ class AddMemberMessageRTQRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -313,7 +333,7 @@ class AddMemberMessageRTQRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, memberMessage = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, memberMessage = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -321,6 +341,7 @@ class AddMemberMessageRTQRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -337,6 +358,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   addMemberMessagesAAQToBidderRequestContainer - AddMemberMessagesAAQToBidderRequestContainerType
@@ -348,6 +370,7 @@ class AddMemberMessagesAAQToBidderRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -357,7 +380,7 @@ class AddMemberMessagesAAQToBidderRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, addMemberMessagesAAQToBidderRequestContainer = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, addMemberMessagesAAQToBidderRequestContainer = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -365,6 +388,7 @@ class AddMemberMessagesAAQToBidderRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -380,6 +404,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   order - OrderType
@@ -391,6 +416,7 @@ class AddOrderRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -400,7 +426,7 @@ class AddOrderRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, order = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, order = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -408,6 +434,7 @@ class AddOrderRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -423,6 +450,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   recipientBidderUserID - (any)
@@ -438,6 +466,7 @@ class AddSecondChanceItemRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -451,7 +480,7 @@ class AddSecondChanceItemRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, recipientBidderUserID = nil, buyItNowPrice = nil, duration = nil, itemID = nil, sellerMessage = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, recipientBidderUserID = nil, buyItNowPrice = nil, duration = nil, itemID = nil, sellerMessage = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -459,6 +488,7 @@ class AddSecondChanceItemRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -478,6 +508,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -490,6 +521,7 @@ class AddToItemDescriptionRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -500,7 +532,7 @@ class AddToItemDescriptionRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, description = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, description = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -508,6 +540,7 @@ class AddToItemDescriptionRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -524,6 +557,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -535,6 +569,7 @@ class AddToWatchListRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -544,7 +579,7 @@ class AddToWatchListRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -552,6 +587,7 @@ class AddToWatchListRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -567,6 +603,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   recipientUserID - (any)
@@ -585,6 +622,7 @@ class AddTransactionConfirmationItemRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -601,7 +639,7 @@ class AddTransactionConfirmationItemRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, recipientUserID = nil, verifyEligibilityOnly = nil, recipientPostalCode = nil, recipientRelationType = nil, negotiatedPrice = nil, listingDuration = nil, itemID = nil, comments = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, recipientUserID = nil, verifyEligibilityOnly = nil, recipientPostalCode = nil, recipientRelationType = nil, negotiatedPrice = nil, listingDuration = nil, itemID = nil, comments = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -609,6 +647,7 @@ class AddTransactionConfirmationItemRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -631,6 +670,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   userCatalogID - SOAP::SOAPInt
@@ -645,6 +685,7 @@ class ApproveLiveAuctionBiddersRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -657,7 +698,7 @@ class ApproveLiveAuctionBiddersRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, userCatalogID = nil, bidApproval = nil, approveAllPending = nil, allApprovedBiddingLimit = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, userCatalogID = nil, bidApproval = nil, approveAllPending = nil, allApprovedBiddingLimit = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -665,6 +706,7 @@ class ApproveLiveAuctionBiddersRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -683,6 +725,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -691,6 +734,7 @@ end
 #   shipped - SOAP::SOAPBoolean
 #   paid - SOAP::SOAPBoolean
 #   listingType - ListingTypeCodeType
+#   shipment - ShipmentType
 class CompleteSaleRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -699,6 +743,7 @@ class CompleteSaleRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -708,12 +753,13 @@ class CompleteSaleRequestType < AbstractRequestType
   attr_accessor :shipped
   attr_accessor :paid
   attr_accessor :listingType
+  attr_accessor :shipment
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, transactionID = nil, feedbackInfo = nil, shipped = nil, paid = nil, listingType = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, transactionID = nil, feedbackInfo = nil, shipped = nil, paid = nil, listingType = nil, shipment = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -721,6 +767,7 @@ class CompleteSaleRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -730,6 +777,7 @@ class CompleteSaleRequestType < AbstractRequestType
     @shipped = shipped
     @paid = paid
     @listingType = listingType
+    @shipment = shipment
   end
 end
 
@@ -741,6 +789,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   alertIDs - MyMessagesAlertIDArrayType
@@ -753,6 +802,7 @@ class DeleteMyMessagesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -763,7 +813,7 @@ class DeleteMyMessagesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, alertIDs = nil, messageIDs = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, alertIDs = nil, messageIDs = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -771,6 +821,7 @@ class DeleteMyMessagesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -787,6 +838,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -800,6 +852,7 @@ class EndItemRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -811,7 +864,7 @@ class EndItemRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, endingReason = nil, sellerInventoryID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, endingReason = nil, sellerInventoryID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -819,6 +872,7 @@ class EndItemRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -836,6 +890,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   secretID - SOAP::SOAPString
@@ -848,6 +903,7 @@ class FetchTokenRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -858,7 +914,7 @@ class FetchTokenRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, secretID = nil, includeRESTToken = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, secretID = nil, includeRESTToken = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -866,6 +922,7 @@ class FetchTokenRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -882,6 +939,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   accountHistorySelection - AccountHistorySelectionCodeType
@@ -893,6 +951,7 @@ end
 #   excludeSummary - SOAP::SOAPBoolean
 #   accountEntrySortType - AccountEntrySortTypeCodeType
 #   currency - CurrencyCodeType
+#   itemID - (any)
 class GetAccountRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -901,6 +960,7 @@ class GetAccountRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -913,12 +973,13 @@ class GetAccountRequestType < AbstractRequestType
   attr_accessor :excludeSummary
   attr_accessor :accountEntrySortType
   attr_accessor :currency
+  attr_accessor :itemID
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, accountHistorySelection = nil, invoiceDate = nil, beginDate = nil, endDate = nil, pagination = nil, excludeBalance = nil, excludeSummary = nil, accountEntrySortType = nil, currency = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, accountHistorySelection = nil, invoiceDate = nil, beginDate = nil, endDate = nil, pagination = nil, excludeBalance = nil, excludeSummary = nil, accountEntrySortType = nil, currency = nil, itemID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -926,6 +987,7 @@ class GetAccountRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -938,6 +1000,7 @@ class GetAccountRequestType < AbstractRequestType
     @excludeSummary = excludeSummary
     @accountEntrySortType = accountEntrySortType
     @currency = currency
+    @itemID = itemID
   end
 end
 
@@ -949,6 +1012,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -962,6 +1026,7 @@ class GetAdFormatLeadsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -973,7 +1038,7 @@ class GetAdFormatLeadsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, status = nil, includeMemberMessages = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, status = nil, includeMemberMessages = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -981,6 +1046,7 @@ class GetAdFormatLeadsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -998,6 +1064,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -1011,6 +1078,7 @@ class GetAllBiddersRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1022,7 +1090,7 @@ class GetAllBiddersRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, callMode = nil, includeBiddingSummary = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, callMode = nil, includeBiddingSummary = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1030,6 +1098,7 @@ class GetAllBiddersRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1047,6 +1116,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 class GetApiAccessRulesRequestType < AbstractRequestType
@@ -1057,6 +1127,7 @@ class GetApiAccessRulesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1065,7 +1136,7 @@ class GetApiAccessRulesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1073,6 +1144,7 @@ class GetApiAccessRulesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1087,6 +1159,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   attributeSystemVersion - SOAP::SOAPString
@@ -1101,6 +1174,7 @@ class GetAttributesCSRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1113,7 +1187,7 @@ class GetAttributesCSRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, attributeSystemVersion = nil, attributeSetID = [], includeCategoryMappingDetails = nil, digitalDelivery = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, attributeSystemVersion = nil, attributeSetID = [], includeCategoryMappingDetails = nil, digitalDelivery = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1121,6 +1195,7 @@ class GetAttributesCSRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1139,6 +1214,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   fileName - SOAP::SOAPString
@@ -1151,6 +1227,7 @@ class GetAttributesXSLRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1161,7 +1238,7 @@ class GetAttributesXSLRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, fileName = nil, fileVersion = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, fileName = nil, fileVersion = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1169,6 +1246,7 @@ class GetAttributesXSLRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1185,6 +1263,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -1198,6 +1277,7 @@ class GetBestOffersRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1209,7 +1289,7 @@ class GetBestOffersRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, bestOfferID = nil, bestOfferStatus = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, bestOfferID = nil, bestOfferStatus = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1217,6 +1297,7 @@ class GetBestOffersRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1234,6 +1315,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   activeItemsOnly - SOAP::SOAPBoolean
@@ -1249,6 +1331,7 @@ class GetBidderListRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1262,7 +1345,7 @@ class GetBidderListRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, activeItemsOnly = nil, endTimeFrom = nil, endTimeTo = nil, userID = nil, granularityLevel = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, activeItemsOnly = nil, endTimeFrom = nil, endTimeTo = nil, userID = nil, granularityLevel = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1270,6 +1353,7 @@ class GetBidderListRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1289,6 +1373,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   affiliateTrackingDetails - AffiliateTrackingDetailsType
@@ -1302,6 +1387,7 @@ class GetCartRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1313,7 +1399,7 @@ class GetCartRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, affiliateTrackingDetails = nil, cartID = nil, shippingAddress = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, affiliateTrackingDetails = nil, cartID = nil, shippingAddress = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1321,6 +1407,7 @@ class GetCartRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1338,6 +1425,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   categorySiteID - SOAP::SOAPString
@@ -1352,6 +1440,7 @@ class GetCategoriesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1364,7 +1453,7 @@ class GetCategoriesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, categorySiteID = nil, categoryParent = [], levelLimit = nil, viewAllNodes = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, categorySiteID = nil, categoryParent = [], levelLimit = nil, viewAllNodes = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1372,6 +1461,7 @@ class GetCategoriesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1390,6 +1480,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   categoryID - SOAP::SOAPString
@@ -1402,6 +1493,7 @@ class GetCategory2CSRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1412,7 +1504,7 @@ class GetCategory2CSRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, categoryID = nil, attributeSystemVersion = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, categoryID = nil, attributeSystemVersion = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1420,6 +1512,7 @@ class GetCategory2CSRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1436,6 +1529,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   categoryID - SOAP::SOAPString
@@ -1450,6 +1544,7 @@ class GetCategoryFeaturesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1462,7 +1557,7 @@ class GetCategoryFeaturesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, categoryID = nil, levelLimit = nil, viewAllNodes = nil, featureID = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, categoryID = nil, levelLimit = nil, viewAllNodes = nil, featureID = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1470,6 +1565,7 @@ class GetCategoryFeaturesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1488,6 +1584,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   motorsGermanySearchable - SOAP::SOAPBoolean
@@ -1516,6 +1613,7 @@ class GetCategoryListingsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1542,7 +1640,7 @@ class GetCategoryListingsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, motorsGermanySearchable = nil, categoryID = nil, adFormat = nil, freeShipping = nil, currency = nil, itemTypeFilter = nil, searchType = nil, orderBy = nil, pagination = nil, searchLocation = nil, proximitySearch = nil, includeGetItFastItems = nil, paymentMethod = nil, includeCondition = nil, includeFeedback = nil, localSearchPostalCode = nil, maxRelatedSearchKeywords = nil, group = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, motorsGermanySearchable = nil, categoryID = nil, adFormat = nil, freeShipping = nil, currency = nil, itemTypeFilter = nil, searchType = nil, orderBy = nil, pagination = nil, searchLocation = nil, proximitySearch = nil, includeGetItFastItems = nil, paymentMethod = nil, includeCondition = nil, includeFeedback = nil, localSearchPostalCode = nil, maxRelatedSearchKeywords = nil, group = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1550,6 +1648,7 @@ class GetCategoryListingsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1582,6 +1681,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   categoryVersion - SOAP::SOAPString
@@ -1593,6 +1693,7 @@ class GetCategoryMappingsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1602,7 +1703,7 @@ class GetCategoryMappingsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, categoryVersion = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, categoryVersion = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1610,6 +1711,7 @@ class GetCategoryMappingsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1625,6 +1727,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   categoryID - SOAP::SOAPString
@@ -1640,6 +1743,7 @@ class GetCategorySpecificsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1653,7 +1757,7 @@ class GetCategorySpecificsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, categoryID = [], lastUpdateTime = nil, maxNames = nil, maxValuesPerName = nil, name = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, categoryID = [], lastUpdateTime = nil, maxNames = nil, maxValuesPerName = nil, name = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1661,6 +1765,7 @@ class GetCategorySpecificsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1680,6 +1785,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 class GetChallengeTokenRequestType < AbstractRequestType
@@ -1690,6 +1796,7 @@ class GetChallengeTokenRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1698,7 +1805,7 @@ class GetChallengeTokenRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1706,6 +1813,7 @@ class GetChallengeTokenRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1720,6 +1828,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   charityID - SOAP::SOAPString
@@ -1737,6 +1846,7 @@ class GetCharitiesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1752,7 +1862,7 @@ class GetCharitiesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, charityID = nil, charityName = nil, query = nil, charityRegion = nil, charityDomain = nil, includeDescription = nil, matchType = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, charityID = nil, charityName = nil, query = nil, charityRegion = nil, charityDomain = nil, includeDescription = nil, matchType = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1760,6 +1870,7 @@ class GetCharitiesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1781,6 +1892,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   uRL - SOAP::SOAPAnyURI
@@ -1794,6 +1906,7 @@ class GetContextualKeywordsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1805,7 +1918,7 @@ class GetContextualKeywordsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, uRL = nil, encoding = nil, categoryID = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, uRL = nil, encoding = nil, categoryID = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1813,6 +1926,7 @@ class GetContextualKeywordsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1830,6 +1944,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -1843,6 +1958,7 @@ class GetCrossPromotionsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1854,7 +1970,7 @@ class GetCrossPromotionsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, promotionMethod = nil, promotionViewMode = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, promotionMethod = nil, promotionViewMode = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1862,6 +1978,7 @@ class GetCrossPromotionsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1879,6 +1996,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   categoryID - SOAP::SOAPString
@@ -1892,6 +2010,7 @@ class GetDescriptionTemplatesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1903,7 +2022,7 @@ class GetDescriptionTemplatesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, categoryID = nil, lastModifiedTime = nil, motorVehicles = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, categoryID = nil, lastModifiedTime = nil, motorVehicles = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1911,6 +2030,7 @@ class GetDescriptionTemplatesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -1928,6 +2048,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   disputeID - (any)
@@ -1939,6 +2060,7 @@ class GetDisputeRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1948,7 +2070,7 @@ class GetDisputeRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, disputeID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, disputeID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1956,10 +2078,72 @@ class GetDisputeRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
     @disputeID = disputeID
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetExpressWishListRequestType
+#   detailLevel - DetailLevelCodeType
+#   errorLanguage - SOAP::SOAPString
+#   messageID - SOAP::SOAPString
+#   version - SOAP::SOAPString
+#   endUserIP - SOAP::SOAPString
+#   errorHandling - ErrorHandlingCodeType
+#   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
+#   warningLevel - WarningLevelCodeType
+#   botBlock - BotBlockRequestType
+#   userID - SOAP::SOAPString
+#   firstName - SOAP::SOAPString
+#   lastName - SOAP::SOAPString
+#   wishListID - SOAP::SOAPString
+#   sortOrder - WishListSortCodeType
+#   pagination - PaginationType
+class GetExpressWishListRequestType < AbstractRequestType
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :endUserIP
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :outputSelector
+  attr_accessor :warningLevel
+  attr_accessor :botBlock
+  attr_reader :__xmlele_any
+  attr_accessor :userID
+  attr_accessor :firstName
+  attr_accessor :lastName
+  attr_accessor :wishListID
+  attr_accessor :sortOrder
+  attr_accessor :pagination
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, userID = nil, firstName = nil, lastName = nil, wishListID = nil, sortOrder = nil, pagination = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @endUserIP = endUserIP
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @outputSelector = outputSelector
+    @warningLevel = warningLevel
+    @botBlock = botBlock
+    @__xmlele_any = nil
+    @userID = userID
+    @firstName = firstName
+    @lastName = lastName
+    @wishListID = wishListID
+    @sortOrder = sortOrder
+    @pagination = pagination
   end
 end
 
@@ -1971,6 +2155,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   pagination - PaginationType
@@ -1984,6 +2169,7 @@ class GetFeedbackRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -1995,7 +2181,7 @@ class GetFeedbackRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, pagination = nil, userID = nil, feedbackID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, pagination = nil, userID = nil, feedbackID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2003,6 +2189,7 @@ class GetFeedbackRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2020,6 +2207,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -2031,6 +2219,7 @@ class GetHighBiddersRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2040,7 +2229,7 @@ class GetHighBiddersRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2048,6 +2237,7 @@ class GetHighBiddersRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2063,6 +2253,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -2070,6 +2261,7 @@ end
 #   includeWatchCount - SOAP::SOAPBoolean
 #   includeCrossPromotion - SOAP::SOAPBoolean
 #   includeItemSpecifics - SOAP::SOAPBoolean
+#   includeTaxTable - SOAP::SOAPBoolean
 class GetItemRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -2078,6 +2270,7 @@ class GetItemRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2086,12 +2279,13 @@ class GetItemRequestType < AbstractRequestType
   attr_accessor :includeWatchCount
   attr_accessor :includeCrossPromotion
   attr_accessor :includeItemSpecifics
+  attr_accessor :includeTaxTable
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, includeExpressRequirements = nil, includeWatchCount = nil, includeCrossPromotion = nil, includeItemSpecifics = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, includeExpressRequirements = nil, includeWatchCount = nil, includeCrossPromotion = nil, includeItemSpecifics = nil, includeTaxTable = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2099,6 +2293,7 @@ class GetItemRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2107,6 +2302,7 @@ class GetItemRequestType < AbstractRequestType
     @includeWatchCount = includeWatchCount
     @includeCrossPromotion = includeCrossPromotion
     @includeItemSpecifics = includeItemSpecifics
+    @includeTaxTable = includeTaxTable
   end
 end
 
@@ -2118,6 +2314,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   getRecommendationsRequestContainer - GetRecommendationsRequestContainerType
@@ -2129,6 +2326,7 @@ class GetItemRecommendationsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2138,7 +2336,7 @@ class GetItemRecommendationsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, getRecommendationsRequestContainer = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, getRecommendationsRequestContainer = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2146,6 +2344,7 @@ class GetItemRecommendationsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2161,6 +2360,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -2175,6 +2375,7 @@ class GetItemShippingRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2187,7 +2388,7 @@ class GetItemShippingRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, quantitySold = nil, destinationPostalCode = nil, destinationCountryCode = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, quantitySold = nil, destinationPostalCode = nil, destinationCountryCode = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2195,6 +2396,7 @@ class GetItemShippingRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2213,6 +2415,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -2223,6 +2426,7 @@ end
 #   includeFinalValueFee - SOAP::SOAPBoolean
 #   includeContainingOrder - SOAP::SOAPBoolean
 #   platform - TransactionPlatformCodeType
+#   numberOfDays - SOAP::SOAPInt
 class GetItemTransactionsRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -2231,6 +2435,7 @@ class GetItemTransactionsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2242,12 +2447,13 @@ class GetItemTransactionsRequestType < AbstractRequestType
   attr_accessor :includeFinalValueFee
   attr_accessor :includeContainingOrder
   attr_accessor :platform
+  attr_accessor :numberOfDays
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, modTimeFrom = nil, modTimeTo = nil, transactionID = nil, pagination = nil, includeFinalValueFee = nil, includeContainingOrder = nil, platform = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, modTimeFrom = nil, modTimeTo = nil, transactionID = nil, pagination = nil, includeFinalValueFee = nil, includeContainingOrder = nil, platform = nil, numberOfDays = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2255,6 +2461,7 @@ class GetItemTransactionsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2266,6 +2473,7 @@ class GetItemTransactionsRequestType < AbstractRequestType
     @includeFinalValueFee = includeFinalValueFee
     @includeContainingOrder = includeContainingOrder
     @platform = platform
+    @numberOfDays = numberOfDays
   end
 end
 
@@ -2277,6 +2485,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   sort - ItemSortTypeCodeType
@@ -2289,6 +2498,7 @@ class GetItemsAwaitingFeedbackRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2299,7 +2509,7 @@ class GetItemsAwaitingFeedbackRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, sort = nil, pagination = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, sort = nil, pagination = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2307,6 +2517,7 @@ class GetItemsAwaitingFeedbackRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2323,6 +2534,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   userCatalogID - SOAP::SOAPInt
@@ -2336,6 +2548,7 @@ class GetLiveAuctionBiddersRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2347,7 +2560,7 @@ class GetLiveAuctionBiddersRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, userCatalogID = nil, bidderStatus = [], pagination = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, userCatalogID = nil, bidderStatus = [], pagination = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2355,6 +2568,7 @@ class GetLiveAuctionBiddersRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2372,6 +2586,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 class GetLiveAuctionCatalogDetailsRequestType < AbstractRequestType
@@ -2382,6 +2597,7 @@ class GetLiveAuctionCatalogDetailsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2390,7 +2606,7 @@ class GetLiveAuctionCatalogDetailsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2398,6 +2614,7 @@ class GetLiveAuctionCatalogDetailsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2412,6 +2629,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -2431,6 +2649,7 @@ class GetMemberMessagesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2448,7 +2667,7 @@ class GetMemberMessagesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, mailMessageType = nil, messageStatus = nil, displayToPublic = nil, startCreationTime = nil, endCreationTime = nil, pagination = nil, memberMessageID = nil, senderID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, mailMessageType = nil, messageStatus = nil, displayToPublic = nil, startCreationTime = nil, endCreationTime = nil, pagination = nil, memberMessageID = nil, senderID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2456,6 +2675,7 @@ class GetMemberMessagesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2479,6 +2699,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   sellerID - (any)
@@ -2491,6 +2712,7 @@ class GetMessagePreferencesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2501,7 +2723,7 @@ class GetMessagePreferencesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, sellerID = nil, includeASQPreferences = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, sellerID = nil, includeASQPreferences = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2509,6 +2731,7 @@ class GetMessagePreferencesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2525,6 +2748,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   alertIDs - MyMessagesAlertIDArrayType
@@ -2540,6 +2764,7 @@ class GetMyMessagesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2553,7 +2778,7 @@ class GetMyMessagesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, alertIDs = nil, messageIDs = nil, folderID = nil, startTime = nil, endTime = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, alertIDs = nil, messageIDs = nil, folderID = nil, startTime = nil, endTime = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2561,6 +2786,7 @@ class GetMyMessagesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2580,6 +2806,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   watchList - ItemListCustomizationType
@@ -2599,6 +2826,7 @@ class GetMyeBayBuyingRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2616,7 +2844,7 @@ class GetMyeBayBuyingRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, watchList = nil, bidList = nil, bestOfferList = nil, wonList = nil, lostList = nil, favoriteSearches = nil, favoriteSellers = nil, secondChanceOffer = nil, bidAssistantList = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, watchList = nil, bidList = nil, bestOfferList = nil, wonList = nil, lostList = nil, favoriteSearches = nil, favoriteSellers = nil, secondChanceOffer = nil, bidAssistantList = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2624,6 +2852,7 @@ class GetMyeBayBuyingRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2647,6 +2876,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   buyingReminders - ReminderCustomizationType
@@ -2659,6 +2889,7 @@ class GetMyeBayRemindersRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2669,7 +2900,7 @@ class GetMyeBayRemindersRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, buyingReminders = nil, sellingReminders = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, buyingReminders = nil, sellingReminders = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2677,6 +2908,7 @@ class GetMyeBayRemindersRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2693,6 +2925,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   scheduledList - ItemListCustomizationType
@@ -2707,6 +2940,7 @@ class GetMyeBaySellingRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2719,7 +2953,7 @@ class GetMyeBaySellingRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, scheduledList = nil, activeList = nil, soldList = nil, unsoldList = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, scheduledList = nil, activeList = nil, soldList = nil, unsoldList = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2727,6 +2961,7 @@ class GetMyeBaySellingRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2745,6 +2980,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   preferenceLevel - NotificationRoleCodeType
@@ -2756,6 +2992,7 @@ class GetNotificationPreferencesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2765,7 +3002,7 @@ class GetNotificationPreferencesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, preferenceLevel = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, preferenceLevel = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2773,6 +3010,7 @@ class GetNotificationPreferencesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2788,6 +3026,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   startTime - SOAP::SOAPDateTime
@@ -2801,6 +3040,7 @@ class GetNotificationsUsageRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2812,7 +3052,7 @@ class GetNotificationsUsageRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, startTime = nil, endTime = nil, itemID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, startTime = nil, endTime = nil, itemID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2820,6 +3060,7 @@ class GetNotificationsUsageRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2837,6 +3078,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemTransactionIDArray - ItemTransactionIDArrayType
@@ -2850,6 +3092,7 @@ class GetOrderTransactionsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2861,7 +3104,7 @@ class GetOrderTransactionsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemTransactionIDArray = nil, orderIDArray = nil, platform = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemTransactionIDArray = nil, orderIDArray = nil, platform = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2869,6 +3112,7 @@ class GetOrderTransactionsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2886,6 +3130,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   orderIDArray - OrderIDArrayType
@@ -2903,6 +3148,7 @@ class GetOrdersRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2918,7 +3164,7 @@ class GetOrdersRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, orderIDArray = nil, createTimeFrom = nil, createTimeTo = nil, orderRole = nil, orderStatus = nil, listingType = nil, pagination = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, orderIDArray = nil, createTimeFrom = nil, createTimeTo = nil, orderRole = nil, orderStatus = nil, listingType = nil, pagination = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2926,6 +3172,7 @@ class GetOrdersRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2947,6 +3194,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   folderID - SOAP::SOAPInt
@@ -2960,6 +3208,7 @@ class GetPictureManagerDetailsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -2971,7 +3220,7 @@ class GetPictureManagerDetailsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, folderID = nil, pictureURL = nil, pictureManagerDetailLevel = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, folderID = nil, pictureURL = nil, pictureManagerDetailLevel = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2979,6 +3228,7 @@ class GetPictureManagerDetailsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -2996,6 +3246,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 class GetPictureManagerOptionsRequestType < AbstractRequestType
@@ -3006,6 +3257,7 @@ class GetPictureManagerOptionsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -3014,7 +3266,7 @@ class GetPictureManagerOptionsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3022,6 +3274,7 @@ class GetPictureManagerOptionsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -3036,6 +3289,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   categoryID - SOAP::SOAPString
@@ -3050,6 +3304,7 @@ class GetPopularKeywordsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -3062,7 +3317,7 @@ class GetPopularKeywordsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, categoryID = [], includeChildCategories = nil, maxKeywordsRetrieved = nil, pagination = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, categoryID = [], includeChildCategories = nil, maxKeywordsRetrieved = nil, pagination = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3070,6 +3325,7 @@ class GetPopularKeywordsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -3088,6 +3344,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   productSearch - ProductSearchType
@@ -3099,6 +3356,7 @@ class GetProductFamilyMembersRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -3108,7 +3366,7 @@ class GetProductFamilyMembersRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, productSearch = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, productSearch = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3116,6 +3374,7 @@ class GetProductFamilyMembersRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -3131,6 +3390,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   attributeSystemVersion - SOAP::SOAPString
@@ -3143,6 +3403,7 @@ class GetProductFinderRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -3153,7 +3414,7 @@ class GetProductFinderRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, attributeSystemVersion = nil, productFinderID = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, attributeSystemVersion = nil, productFinderID = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3161,6 +3422,7 @@ class GetProductFinderRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -3177,6 +3439,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   fileName - SOAP::SOAPString
@@ -3189,6 +3452,7 @@ class GetProductFinderXSLRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -3199,7 +3463,7 @@ class GetProductFinderXSLRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, fileName = nil, fileVersion = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, fileName = nil, fileVersion = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3207,6 +3471,7 @@ class GetProductFinderXSLRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -3223,6 +3488,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   attributeSystemVersion - SOAP::SOAPString
@@ -3235,6 +3501,7 @@ class GetProductSearchPageRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -3245,7 +3512,7 @@ class GetProductSearchPageRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, attributeSystemVersion = nil, attributeSetID = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, attributeSystemVersion = nil, attributeSetID = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3253,6 +3520,7 @@ class GetProductSearchPageRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -3269,6 +3537,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   productSearch - ProductSearchType
@@ -3280,6 +3549,7 @@ class GetProductSearchResultsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -3289,7 +3559,7 @@ class GetProductSearchResultsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, productSearch = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, productSearch = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3297,6 +3567,7 @@ class GetProductSearchResultsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -3312,6 +3583,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   useCase - ProductUseCaseCodeType
@@ -3324,6 +3596,7 @@ class GetProductSellingPagesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -3334,7 +3607,7 @@ class GetProductSellingPagesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, useCase = nil, product = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, useCase = nil, product = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3342,6 +3615,7 @@ class GetProductSellingPagesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -3358,6 +3632,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   productSearch - ProductSearchType
@@ -3375,6 +3650,7 @@ class GetProductsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -3390,7 +3666,7 @@ class GetProductsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, productSearch = nil, productSort = nil, includeItemArray = nil, includeReviewDetails = nil, includeBuyingGuideDetails = nil, includeHistogram = nil, affiliateTrackingDetails = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, productSearch = nil, productSort = nil, includeItemArray = nil, includeReviewDetails = nil, includeBuyingGuideDetails = nil, includeHistogram = nil, affiliateTrackingDetails = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3398,6 +3674,7 @@ class GetProductsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -3419,6 +3696,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -3432,6 +3710,7 @@ class GetPromotionRulesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -3443,7 +3722,7 @@ class GetPromotionRulesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, storeCategoryID = nil, promotionMethod = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, storeCategoryID = nil, promotionMethod = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3451,6 +3730,7 @@ class GetPromotionRulesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -3468,6 +3748,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   promotionalSaleID - SOAP::SOAPLong
@@ -3479,6 +3760,7 @@ class GetPromotionalSaleDetailsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -3488,7 +3770,7 @@ class GetPromotionalSaleDetailsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, promotionalSaleID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, promotionalSaleID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3496,6 +3778,7 @@ class GetPromotionalSaleDetailsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -3511,6 +3794,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 class GetReturnURLRequestType < AbstractRequestType
@@ -3521,6 +3805,7 @@ class GetReturnURLRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -3529,7 +3814,7 @@ class GetReturnURLRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3537,6 +3822,7 @@ class GetReturnURLRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -3551,6 +3837,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   clientUseCase - SOAP::SOAPString
@@ -3562,6 +3849,7 @@ class GetRuNameRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -3571,7 +3859,7 @@ class GetRuNameRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, clientUseCase = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, clientUseCase = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3579,6 +3867,7 @@ class GetRuNameRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -3594,6 +3883,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   motorsGermanySearchable - SOAP::SOAPBoolean
@@ -3646,6 +3936,7 @@ class GetSearchResultsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -3696,7 +3987,7 @@ class GetSearchResultsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, motorsGermanySearchable = nil, query = nil, categoryID = nil, searchFlags = [], priceRangeFilter = nil, proximitySearch = nil, itemTypeFilter = nil, searchType = nil, userIdFilter = nil, searchLocationFilter = nil, storeSearchFilter = nil, order = nil, pagination = nil, searchRequest = nil, productID = nil, externalProductID = nil, categories = nil, totalOnly = nil, endTimeFrom = nil, endTimeTo = nil, modTimeFrom = nil, includeGetItFastItems = nil, paymentMethod = nil, granularityLevel = nil, expandSearch = nil, lot = nil, adFormat = nil, freeShipping = nil, quantity = nil, quantityOperator = nil, sellerBusinessType = nil, digitalDelivery = nil, includeCondition = nil, includeFeedback = nil, charityID = nil, localSearchPostalCode = nil, maxRelatedSearchKeywords = nil, affiliateTrackingDetails = nil, bidRange = nil, itemCondition = nil, ticketFinder = nil, group = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, motorsGermanySearchable = nil, query = nil, categoryID = nil, searchFlags = [], priceRangeFilter = nil, proximitySearch = nil, itemTypeFilter = nil, searchType = nil, userIdFilter = nil, searchLocationFilter = nil, storeSearchFilter = nil, order = nil, pagination = nil, searchRequest = nil, productID = nil, externalProductID = nil, categories = nil, totalOnly = nil, endTimeFrom = nil, endTimeTo = nil, modTimeFrom = nil, includeGetItFastItems = nil, paymentMethod = nil, granularityLevel = nil, expandSearch = nil, lot = nil, adFormat = nil, freeShipping = nil, quantity = nil, quantityOperator = nil, sellerBusinessType = nil, digitalDelivery = nil, includeCondition = nil, includeFeedback = nil, charityID = nil, localSearchPostalCode = nil, maxRelatedSearchKeywords = nil, affiliateTrackingDetails = nil, bidRange = nil, itemCondition = nil, ticketFinder = nil, group = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3704,6 +3995,7 @@ class GetSearchResultsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -3760,6 +4052,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   query - SOAP::SOAPString
@@ -3791,6 +4084,7 @@ class GetSearchResultsExpressRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -3820,7 +4114,7 @@ class GetSearchResultsExpressRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, query = nil, externalProductIDType = nil, externalProductIDValue = nil, productReferenceID = nil, departmentName = nil, aisleName = nil, productTypeName = nil, histogramSort = nil, itemSort = nil, productSort = nil, highestPrice = nil, lowestPrice = nil, condition = nil, sellerID = nil, postalCode = nil, histogramDetails = nil, productDetails = nil, itemDetails = nil, entriesPerPage = nil, pageNumber = nil, affiliateTrackingDetails = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, query = nil, externalProductIDType = nil, externalProductIDValue = nil, productReferenceID = nil, departmentName = nil, aisleName = nil, productTypeName = nil, histogramSort = nil, itemSort = nil, productSort = nil, highestPrice = nil, lowestPrice = nil, condition = nil, sellerID = nil, postalCode = nil, histogramDetails = nil, productDetails = nil, itemDetails = nil, entriesPerPage = nil, pageNumber = nil, affiliateTrackingDetails = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3828,6 +4122,7 @@ class GetSearchResultsExpressRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -3863,6 +4158,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   userID - (any)
@@ -3882,6 +4178,7 @@ class GetSellerEventsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -3899,7 +4196,7 @@ class GetSellerEventsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, userID = nil, startTimeFrom = nil, startTimeTo = nil, endTimeFrom = nil, endTimeTo = nil, modTimeFrom = nil, modTimeTo = nil, newItemFilter = nil, includeWatchCount = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, userID = nil, startTimeFrom = nil, startTimeTo = nil, endTimeFrom = nil, endTimeTo = nil, modTimeFrom = nil, modTimeTo = nil, newItemFilter = nil, includeWatchCount = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3907,6 +4204,7 @@ class GetSellerEventsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -3930,6 +4228,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   userID - (any)
@@ -3951,6 +4250,7 @@ class GetSellerListRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -3970,7 +4270,7 @@ class GetSellerListRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, userID = nil, motorsDealerUsers = nil, endTimeFrom = nil, endTimeTo = nil, sort = nil, startTimeFrom = nil, startTimeTo = nil, pagination = nil, granularityLevel = nil, sKUArray = nil, includeWatchCount = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, userID = nil, motorsDealerUsers = nil, endTimeFrom = nil, endTimeTo = nil, sort = nil, startTimeFrom = nil, startTimeTo = nil, pagination = nil, granularityLevel = nil, sKUArray = nil, includeWatchCount = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3978,6 +4278,7 @@ class GetSellerListRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4003,6 +4304,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   paymentStatus - RCSPaymentStatusCodeType
@@ -4017,6 +4319,7 @@ class GetSellerPaymentsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4029,7 +4332,7 @@ class GetSellerPaymentsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, paymentStatus = nil, paymentTimeFrom = nil, paymentTimeTo = nil, pagination = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, paymentStatus = nil, paymentTimeFrom = nil, paymentTimeTo = nil, pagination = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4037,6 +4340,7 @@ class GetSellerPaymentsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4055,6 +4359,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   modTimeFrom - SOAP::SOAPDateTime
@@ -4064,6 +4369,7 @@ end
 #   includeContainingOrder - SOAP::SOAPBoolean
 #   sKUArray - SKUArrayType
 #   platform - TransactionPlatformCodeType
+#   numberOfDays - SOAP::SOAPInt
 class GetSellerTransactionsRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -4072,6 +4378,7 @@ class GetSellerTransactionsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4082,12 +4389,13 @@ class GetSellerTransactionsRequestType < AbstractRequestType
   attr_accessor :includeContainingOrder
   attr_accessor :sKUArray
   attr_accessor :platform
+  attr_accessor :numberOfDays
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, modTimeFrom = nil, modTimeTo = nil, pagination = nil, includeFinalValueFee = nil, includeContainingOrder = nil, sKUArray = nil, platform = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, modTimeFrom = nil, modTimeTo = nil, pagination = nil, includeFinalValueFee = nil, includeContainingOrder = nil, sKUArray = nil, platform = nil, numberOfDays = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4095,6 +4403,7 @@ class GetSellerTransactionsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4105,6 +4414,7 @@ class GetSellerTransactionsRequestType < AbstractRequestType
     @includeContainingOrder = includeContainingOrder
     @sKUArray = sKUArray
     @platform = platform
+    @numberOfDays = numberOfDays
   end
 end
 
@@ -4116,6 +4426,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 class GetShippingDiscountProfilesRequestType < AbstractRequestType
@@ -4126,6 +4437,7 @@ class GetShippingDiscountProfilesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4134,7 +4446,7 @@ class GetShippingDiscountProfilesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4142,6 +4454,7 @@ class GetShippingDiscountProfilesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4156,6 +4469,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   categoryStructureOnly - SOAP::SOAPBoolean
@@ -4170,6 +4484,7 @@ class GetStoreRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4182,7 +4497,7 @@ class GetStoreRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, categoryStructureOnly = nil, rootCategoryID = nil, levelLimit = nil, userID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, categoryStructureOnly = nil, rootCategoryID = nil, levelLimit = nil, userID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4190,6 +4505,7 @@ class GetStoreRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4208,6 +4524,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   taskID - SOAP::SOAPLong
@@ -4219,6 +4536,7 @@ class GetStoreCategoryUpdateStatusRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4228,7 +4546,7 @@ class GetStoreCategoryUpdateStatusRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, taskID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, taskID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4236,6 +4554,7 @@ class GetStoreCategoryUpdateStatusRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4251,6 +4570,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   pageID - SOAP::SOAPLong
@@ -4262,6 +4582,7 @@ class GetStoreCustomPageRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4271,7 +4592,7 @@ class GetStoreCustomPageRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, pageID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, pageID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4279,6 +4600,7 @@ class GetStoreCustomPageRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4294,6 +4616,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 class GetStoreOptionsRequestType < AbstractRequestType
@@ -4304,6 +4627,7 @@ class GetStoreOptionsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4312,7 +4636,7 @@ class GetStoreOptionsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4320,6 +4644,7 @@ class GetStoreOptionsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4334,6 +4659,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 class GetStorePreferencesRequestType < AbstractRequestType
@@ -4344,6 +4670,7 @@ class GetStorePreferencesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4352,7 +4679,7 @@ class GetStorePreferencesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4360,6 +4687,7 @@ class GetStorePreferencesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4374,6 +4702,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   query - SOAP::SOAPString
@@ -4385,6 +4714,7 @@ class GetSuggestedCategoriesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4394,7 +4724,7 @@ class GetSuggestedCategoriesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, query = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, query = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4402,6 +4732,7 @@ class GetSuggestedCategoriesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4417,6 +4748,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 class GetTaxTableRequestType < AbstractRequestType
@@ -4427,6 +4759,7 @@ class GetTaxTableRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4435,7 +4768,7 @@ class GetTaxTableRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4443,6 +4776,7 @@ class GetTaxTableRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4457,6 +4791,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -4470,6 +4805,7 @@ class GetUserRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4481,7 +4817,7 @@ class GetUserRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, userID = nil, includeExpressRequirements = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, userID = nil, includeExpressRequirements = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4489,6 +4825,7 @@ class GetUserRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4506,6 +4843,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - SOAP::SOAPString
@@ -4519,6 +4857,7 @@ class GetUserContactDetailsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4530,7 +4869,7 @@ class GetUserContactDetailsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, contactID = nil, requesterID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, contactID = nil, requesterID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4538,6 +4877,7 @@ class GetUserContactDetailsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4555,6 +4895,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   disputeFilterType - DisputeFilterTypeCodeType
@@ -4570,6 +4911,7 @@ class GetUserDisputesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4583,7 +4925,7 @@ class GetUserDisputesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, disputeFilterType = nil, disputeSortType = nil, modTimeFrom = nil, modTimeTo = nil, pagination = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, disputeFilterType = nil, disputeSortType = nil, modTimeFrom = nil, modTimeTo = nil, pagination = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4591,6 +4933,7 @@ class GetUserDisputesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4610,6 +4953,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   showBidderNoticePreferences - SOAP::SOAPBoolean
@@ -4627,6 +4971,7 @@ class GetUserPreferencesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4642,7 +4987,7 @@ class GetUserPreferencesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, showBidderNoticePreferences = nil, showCombinedPaymentPreferences = nil, showCrossPromotionPreferences = nil, showSellerPaymentPreferences = nil, showEndOfAuctionEmailPreferences = nil, showSellerFavoriteItemPreferences = nil, showProStoresPreferences = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, showBidderNoticePreferences = nil, showCombinedPaymentPreferences = nil, showCrossPromotionPreferences = nil, showSellerPaymentPreferences = nil, showEndOfAuctionEmailPreferences = nil, showSellerFavoriteItemPreferences = nil, showProStoresPreferences = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4650,6 +4995,7 @@ class GetUserPreferencesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4671,6 +5017,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   reasonCodeID - SOAP::SOAPLong
@@ -4683,6 +5030,7 @@ class GetVeROReasonCodeDetailsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4693,7 +5041,7 @@ class GetVeROReasonCodeDetailsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, reasonCodeID = nil, returnAllSites = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, reasonCodeID = nil, returnAllSites = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4701,6 +5049,7 @@ class GetVeROReasonCodeDetailsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4717,6 +5066,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   veROReportPacketID - SOAP::SOAPLong
@@ -4733,6 +5083,7 @@ class GetVeROReportStatusRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4747,7 +5098,7 @@ class GetVeROReportStatusRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, veROReportPacketID = nil, itemID = nil, includeReportedItemDetails = nil, timeFrom = nil, timeTo = nil, pagination = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, veROReportPacketID = nil, itemID = nil, includeReportedItemDetails = nil, timeFrom = nil, timeTo = nil, pagination = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4755,6 +5106,7 @@ class GetVeROReportStatusRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4775,6 +5127,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   postID - (any)
@@ -4786,6 +5139,7 @@ class GetWantItNowPostRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4795,7 +5149,7 @@ class GetWantItNowPostRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, postID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, postID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4803,6 +5157,7 @@ class GetWantItNowPostRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4818,6 +5173,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   categoryID - SOAP::SOAPString
@@ -4833,6 +5189,7 @@ class GetWantItNowSearchResultsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4846,7 +5203,7 @@ class GetWantItNowSearchResultsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, categoryID = nil, query = nil, searchInDescription = nil, searchWorldwide = nil, pagination = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, categoryID = nil, query = nil, searchInDescription = nil, searchWorldwide = nil, pagination = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4854,6 +5211,7 @@ class GetWantItNowSearchResultsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4873,6 +5231,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   detailName - DetailNameCodeType
@@ -4884,6 +5243,7 @@ class GeteBayDetailsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4893,7 +5253,7 @@ class GeteBayDetailsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, detailName = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, detailName = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4901,6 +5261,7 @@ class GeteBayDetailsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4916,6 +5277,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 class GeteBayOfficialTimeRequestType < AbstractRequestType
@@ -4926,6 +5288,7 @@ class GeteBayOfficialTimeRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4934,7 +5297,7 @@ class GeteBayOfficialTimeRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4942,6 +5305,7 @@ class GeteBayOfficialTimeRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -4956,6 +5320,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -4972,6 +5337,7 @@ class IssueRefundRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -4986,7 +5352,7 @@ class IssueRefundRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, transactionID = nil, refundReason = nil, refundType = nil, refundAmount = nil, refundMessage = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, transactionID = nil, refundReason = nil, refundType = nil, refundAmount = nil, refundMessage = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4994,6 +5360,7 @@ class IssueRefundRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5014,6 +5381,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -5030,6 +5398,7 @@ class LeaveFeedbackRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5044,7 +5413,7 @@ class LeaveFeedbackRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, commentText = nil, commentType = nil, transactionID = nil, targetUser = nil, sellerItemRatingDetailArray = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, commentText = nil, commentType = nil, transactionID = nil, targetUser = nil, sellerItemRatingDetailArray = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5052,6 +5421,7 @@ class LeaveFeedbackRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5072,6 +5442,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   offer - OfferType
@@ -5086,6 +5457,7 @@ class PlaceOfferRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5098,7 +5470,7 @@ class PlaceOfferRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, offer = nil, itemID = nil, blockOnWarning = nil, affiliateTrackingDetails = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, offer = nil, itemID = nil, blockOnWarning = nil, affiliateTrackingDetails = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5106,6 +5478,7 @@ class PlaceOfferRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5124,6 +5497,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   item - ItemType
@@ -5136,6 +5510,7 @@ class RelistItemRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5146,7 +5521,7 @@ class RelistItemRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, item = nil, deletedField = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, item = nil, deletedField = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5154,6 +5529,7 @@ class RelistItemRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5170,6 +5546,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -5182,6 +5559,7 @@ class RemoveFromWatchListRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5192,7 +5570,7 @@ class RemoveFromWatchListRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = [], removeAllItems = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = [], removeAllItems = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5200,6 +5578,7 @@ class RemoveFromWatchListRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5216,6 +5595,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -5232,6 +5612,7 @@ class RespondToBestOfferRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5246,7 +5627,7 @@ class RespondToBestOfferRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, bestOfferID = [], action = nil, sellerResponse = nil, counterOfferPrice = nil, counterOfferQuantity = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, bestOfferID = [], action = nil, sellerResponse = nil, counterOfferPrice = nil, counterOfferQuantity = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5254,6 +5635,7 @@ class RespondToBestOfferRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5274,6 +5656,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   feedbackID - SOAP::SOAPString
@@ -5290,6 +5673,7 @@ class RespondToFeedbackRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5304,7 +5688,7 @@ class RespondToFeedbackRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, feedbackID = nil, itemID = nil, transactionID = nil, targetUserID = nil, responseType = nil, responseText = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, feedbackID = nil, itemID = nil, transactionID = nil, targetUserID = nil, responseType = nil, responseText = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5312,6 +5696,7 @@ class RespondToFeedbackRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5332,6 +5717,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -5344,6 +5730,7 @@ class RespondToWantItNowPostRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5354,7 +5741,7 @@ class RespondToWantItNowPostRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, postID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, postID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5362,6 +5749,7 @@ class RespondToWantItNowPostRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5378,6 +5766,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -5400,6 +5789,7 @@ end
 #   encryptedID - SOAP::SOAPString
 #   externalTransaction - ExternalTransactionType
 #   multipleSellerPaymentID - SOAP::SOAPString
+#   cODCost - AmountType
 class ReviseCheckoutStatusRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -5408,6 +5798,7 @@ class ReviseCheckoutStatusRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5431,12 +5822,13 @@ class ReviseCheckoutStatusRequestType < AbstractRequestType
   attr_accessor :encryptedID
   attr_accessor :externalTransaction
   attr_accessor :multipleSellerPaymentID
+  attr_accessor :cODCost
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, transactionID = nil, orderID = nil, amountPaid = nil, paymentMethodUsed = nil, checkoutStatus = nil, shippingService = nil, shippingIncludedInTax = nil, checkoutMethod = nil, insuranceType = nil, paymentStatus = nil, adjustmentAmount = nil, shippingAddress = nil, buyerID = nil, shippingInsuranceCost = nil, salesTax = nil, shippingCost = nil, encryptedID = nil, externalTransaction = nil, multipleSellerPaymentID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, transactionID = nil, orderID = nil, amountPaid = nil, paymentMethodUsed = nil, checkoutStatus = nil, shippingService = nil, shippingIncludedInTax = nil, checkoutMethod = nil, insuranceType = nil, paymentStatus = nil, adjustmentAmount = nil, shippingAddress = nil, buyerID = nil, shippingInsuranceCost = nil, salesTax = nil, shippingCost = nil, encryptedID = nil, externalTransaction = nil, multipleSellerPaymentID = nil, cODCost = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5444,6 +5836,7 @@ class ReviseCheckoutStatusRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5467,6 +5860,7 @@ class ReviseCheckoutStatusRequestType < AbstractRequestType
     @encryptedID = encryptedID
     @externalTransaction = externalTransaction
     @multipleSellerPaymentID = multipleSellerPaymentID
+    @cODCost = cODCost
   end
 end
 
@@ -5478,6 +5872,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   item - ItemType
@@ -5490,6 +5885,7 @@ class ReviseItemRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5500,7 +5896,7 @@ class ReviseItemRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, item = nil, deletedField = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, item = nil, deletedField = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5508,6 +5904,7 @@ class ReviseItemRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5524,6 +5921,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   item - ItemType
@@ -5536,6 +5934,7 @@ class ReviseLiveAuctionItemRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5546,7 +5945,7 @@ class ReviseLiveAuctionItemRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, item = nil, deletedField = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, item = nil, deletedField = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5554,6 +5953,7 @@ class ReviseLiveAuctionItemRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5570,6 +5970,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   messageIDs - MyMessagesMessageIDArrayType
@@ -5585,6 +5986,7 @@ class ReviseMyMessagesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5598,7 +6000,7 @@ class ReviseMyMessagesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, messageIDs = nil, alertIDs = nil, read = nil, flagged = nil, folderID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, messageIDs = nil, alertIDs = nil, read = nil, flagged = nil, folderID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5606,6 +6008,7 @@ class ReviseMyMessagesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5625,6 +6028,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   operation - MyMessagesFolderOperationCodeType
@@ -5638,6 +6042,7 @@ class ReviseMyMessagesFoldersRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5649,7 +6054,7 @@ class ReviseMyMessagesFoldersRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, operation = nil, folderID = [], folderName = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, operation = nil, folderID = [], folderName = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5657,6 +6062,7 @@ class ReviseMyMessagesFoldersRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5674,6 +6080,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   disputeID - (any)
@@ -5686,6 +6093,7 @@ class SellerReverseDisputeRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5696,7 +6104,7 @@ class SellerReverseDisputeRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, disputeID = nil, disputeResolutionReason = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, disputeID = nil, disputeResolutionReason = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5704,6 +6112,7 @@ class SellerReverseDisputeRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5720,6 +6129,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
@@ -5734,6 +6144,7 @@ end
 #   payPalEmailAddress - SOAP::SOAPString
 #   checkoutInstructions - SOAP::SOAPString
 #   emailCopyToSeller - SOAP::SOAPBoolean
+#   cODCost - AmountType
 class SendInvoiceRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -5742,6 +6153,7 @@ class SendInvoiceRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5757,12 +6169,13 @@ class SendInvoiceRequestType < AbstractRequestType
   attr_accessor :payPalEmailAddress
   attr_accessor :checkoutInstructions
   attr_accessor :emailCopyToSeller
+  attr_accessor :cODCost
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, transactionID = nil, orderID = nil, internationalShippingServiceOptions = [], shippingServiceOptions = [], salesTax = nil, insuranceOption = nil, insuranceFee = nil, paymentMethods = [], payPalEmailAddress = nil, checkoutInstructions = nil, emailCopyToSeller = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, transactionID = nil, orderID = nil, internationalShippingServiceOptions = [], shippingServiceOptions = [], salesTax = nil, insuranceOption = nil, insuranceFee = nil, paymentMethods = [], payPalEmailAddress = nil, checkoutInstructions = nil, emailCopyToSeller = nil, cODCost = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5770,6 +6183,7 @@ class SendInvoiceRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5785,6 +6199,7 @@ class SendInvoiceRequestType < AbstractRequestType
     @payPalEmailAddress = payPalEmailAddress
     @checkoutInstructions = checkoutInstructions
     @emailCopyToSeller = emailCopyToSeller
+    @cODCost = cODCost
   end
 end
 
@@ -5796,6 +6211,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   affiliateTrackingDetails - AffiliateTrackingDetailsType
@@ -5811,6 +6227,7 @@ class SetCartRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5824,7 +6241,7 @@ class SetCartRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, affiliateTrackingDetails = nil, cartID = nil, shippingAddress = nil, checkoutCompleteRedirect = nil, cartItemArray = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, affiliateTrackingDetails = nil, cartID = nil, shippingAddress = nil, checkoutCompleteRedirect = nil, cartItemArray = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5832,6 +6249,7 @@ class SetCartRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5851,6 +6269,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   aSQPreferences - ASQPreferencesType
@@ -5862,6 +6281,7 @@ class SetMessagePreferencesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5871,7 +6291,7 @@ class SetMessagePreferencesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, aSQPreferences = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, aSQPreferences = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5879,6 +6299,7 @@ class SetMessagePreferencesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5894,6 +6315,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   applicationDeliveryPreferences - ApplicationDeliveryPreferencesType
@@ -5908,6 +6330,7 @@ class SetNotificationPreferencesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5920,7 +6343,7 @@ class SetNotificationPreferencesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, applicationDeliveryPreferences = nil, userDeliveryPreferenceArray = nil, userData = nil, eventProperty = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, applicationDeliveryPreferences = nil, userDeliveryPreferenceArray = nil, userData = nil, eventProperty = [])
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5928,6 +6351,7 @@ class SetNotificationPreferencesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5946,6 +6370,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   pictureManagerDetails - PictureManagerDetailsType
@@ -5958,6 +6383,7 @@ class SetPictureManagerDetailsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -5968,7 +6394,7 @@ class SetPictureManagerDetailsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, pictureManagerDetails = nil, action = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, pictureManagerDetails = nil, action = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5976,6 +6402,7 @@ class SetPictureManagerDetailsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -5992,6 +6419,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   action - ModifyActionCodeType
@@ -6004,6 +6432,7 @@ class SetPromotionalSaleRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -6014,7 +6443,7 @@ class SetPromotionalSaleRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, action = nil, promotionalSaleDetails = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, action = nil, promotionalSaleDetails = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6022,6 +6451,7 @@ class SetPromotionalSaleRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -6038,6 +6468,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   promotionalSaleID - SOAP::SOAPLong
@@ -6047,6 +6478,7 @@ end
 #   categoryID - SOAP::SOAPLong
 #   allFixedPriceItems - SOAP::SOAPBoolean
 #   allStoreInventoryItems - SOAP::SOAPBoolean
+#   allAuctionItems - SOAP::SOAPBoolean
 class SetPromotionalSaleListingsRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -6055,6 +6487,7 @@ class SetPromotionalSaleListingsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -6065,12 +6498,13 @@ class SetPromotionalSaleListingsRequestType < AbstractRequestType
   attr_accessor :categoryID
   attr_accessor :allFixedPriceItems
   attr_accessor :allStoreInventoryItems
+  attr_accessor :allAuctionItems
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, promotionalSaleID = nil, action = nil, promotionalSaleItemIDArray = nil, storeCategoryID = nil, categoryID = nil, allFixedPriceItems = nil, allStoreInventoryItems = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, promotionalSaleID = nil, action = nil, promotionalSaleItemIDArray = nil, storeCategoryID = nil, categoryID = nil, allFixedPriceItems = nil, allStoreInventoryItems = nil, allAuctionItems = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6078,6 +6512,7 @@ class SetPromotionalSaleListingsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -6088,6 +6523,7 @@ class SetPromotionalSaleListingsRequestType < AbstractRequestType
     @categoryID = categoryID
     @allFixedPriceItems = allFixedPriceItems
     @allStoreInventoryItems = allStoreInventoryItems
+    @allAuctionItems = allAuctionItems
   end
 end
 
@@ -6099,6 +6535,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   authenticationEntry - AuthenticationEntryType
@@ -6112,6 +6549,7 @@ class SetReturnURLRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -6123,7 +6561,7 @@ class SetReturnURLRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, authenticationEntry = nil, applicationDisplayName = nil, action = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, authenticationEntry = nil, applicationDisplayName = nil, action = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6131,6 +6569,7 @@ class SetReturnURLRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -6148,6 +6587,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   currencyID - CurrencyCodeType
@@ -6167,6 +6607,7 @@ class SetShippingDiscountProfilesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -6184,7 +6625,7 @@ class SetShippingDiscountProfilesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, currencyID = nil, combinedDuration = nil, modifyActionCode = nil, flatShippingDiscount = nil, calculatedShippingDiscount = nil, calculatedHandlingDiscount = nil, promotionalShippingDiscountDetails = nil, shippingInsurance = nil, internationalShippingInsurance = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, currencyID = nil, combinedDuration = nil, modifyActionCode = nil, flatShippingDiscount = nil, calculatedShippingDiscount = nil, calculatedHandlingDiscount = nil, promotionalShippingDiscountDetails = nil, shippingInsurance = nil, internationalShippingInsurance = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6192,6 +6633,7 @@ class SetShippingDiscountProfilesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -6215,6 +6657,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   store - StoreType
@@ -6226,6 +6669,7 @@ class SetStoreRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -6235,7 +6679,7 @@ class SetStoreRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, store = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, store = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6243,6 +6687,7 @@ class SetStoreRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -6258,6 +6703,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   action - StoreCategoryUpdateActionCodeType
@@ -6272,6 +6718,7 @@ class SetStoreCategoriesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -6284,7 +6731,7 @@ class SetStoreCategoriesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, action = nil, itemDestinationCategoryID = nil, destinationParentCategoryID = nil, storeCategories = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, action = nil, itemDestinationCategoryID = nil, destinationParentCategoryID = nil, storeCategories = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6292,6 +6739,7 @@ class SetStoreCategoriesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -6310,6 +6758,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   customPage - StoreCustomPageType
@@ -6321,6 +6770,7 @@ class SetStoreCustomPageRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -6330,7 +6780,7 @@ class SetStoreCustomPageRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, customPage = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, customPage = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6338,6 +6788,7 @@ class SetStoreCustomPageRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -6353,6 +6804,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   storePreferences - StorePreferencesType
@@ -6364,6 +6816,7 @@ class SetStorePreferencesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -6373,7 +6826,7 @@ class SetStorePreferencesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, storePreferences = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, storePreferences = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6381,6 +6834,7 @@ class SetStorePreferencesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -6396,6 +6850,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   taxTable - TaxTableType
@@ -6407,6 +6862,7 @@ class SetTaxTableRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -6416,7 +6872,7 @@ class SetTaxTableRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, taxTable = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, taxTable = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6424,6 +6880,7 @@ class SetTaxTableRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -6439,11 +6896,13 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
 #   action - SetUserNotesActionCodeType
 #   noteText - SOAP::SOAPString
+#   transactionID - SOAP::SOAPString
 class SetUserNotesRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -6452,18 +6911,20 @@ class SetUserNotesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :action
   attr_accessor :noteText
+  attr_accessor :transactionID
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, itemID = nil, action = nil, noteText = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, action = nil, noteText = nil, transactionID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6471,12 +6932,14 @@ class SetUserNotesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
     @itemID = itemID
     @action = action
     @noteText = noteText
+    @transactionID = transactionID
   end
 end
 
@@ -6488,6 +6951,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   bidderNoticePreferences - BidderNoticePreferencesType
@@ -6505,6 +6969,7 @@ class SetUserPreferencesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -6520,7 +6985,7 @@ class SetUserPreferencesRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, bidderNoticePreferences = nil, combinedPaymentPreferences = nil, crossPromotionPreferences = nil, sellerPaymentPreferences = nil, sellerFavoriteItemPreferences = nil, endOfAuctionEmailPreferences = nil, expressPreferences = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, bidderNoticePreferences = nil, combinedPaymentPreferences = nil, crossPromotionPreferences = nil, sellerPaymentPreferences = nil, sellerFavoriteItemPreferences = nil, endOfAuctionEmailPreferences = nil, expressPreferences = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6528,6 +6993,7 @@ class SetUserPreferencesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -6549,12 +7015,14 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   pictureName - SOAP::SOAPString
 #   pictureSystemVersion - SOAP::SOAPInt
 #   pictureSet - PictureSetCodeType
 #   pictureData - Base64BinaryType
+#   pictureUploadPolicy - PictureUploadPolicyCodeType
 class UploadSiteHostedPicturesRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -6563,6 +7031,7 @@ class UploadSiteHostedPicturesRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -6570,12 +7039,13 @@ class UploadSiteHostedPicturesRequestType < AbstractRequestType
   attr_accessor :pictureSystemVersion
   attr_accessor :pictureSet
   attr_accessor :pictureData
+  attr_accessor :pictureUploadPolicy
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, pictureName = nil, pictureSystemVersion = nil, pictureSet = nil, pictureData = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, pictureName = nil, pictureSystemVersion = nil, pictureSet = nil, pictureData = nil, pictureUploadPolicy = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6583,6 +7053,7 @@ class UploadSiteHostedPicturesRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -6590,6 +7061,7 @@ class UploadSiteHostedPicturesRequestType < AbstractRequestType
     @pictureSystemVersion = pictureSystemVersion
     @pictureSet = pictureSet
     @pictureData = pictureData
+    @pictureUploadPolicy = pictureUploadPolicy
   end
 end
 
@@ -6601,6 +7073,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   challengeToken - SOAP::SOAPString
@@ -6614,6 +7087,7 @@ class ValidateChallengeInputRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -6625,7 +7099,7 @@ class ValidateChallengeInputRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, challengeToken = nil, userInput = nil, keepTokenValid = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, challengeToken = nil, userInput = nil, keepTokenValid = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6633,6 +7107,7 @@ class ValidateChallengeInputRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -6650,6 +7125,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   feedbackScore - SOAP::SOAPInt
@@ -6666,6 +7142,7 @@ class ValidateTestUserRegistrationRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -6680,7 +7157,7 @@ class ValidateTestUserRegistrationRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, feedbackScore = nil, registrationDate = nil, subscribeSA = nil, subscribeSAPro = nil, subscribeSM = nil, subscribeSMPro = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, feedbackScore = nil, registrationDate = nil, subscribeSA = nil, subscribeSAPro = nil, subscribeSM = nil, subscribeSMPro = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6688,6 +7165,7 @@ class ValidateTestUserRegistrationRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -6708,6 +7186,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   rightsOwnerID - (any)
@@ -6720,6 +7199,7 @@ class VeROReportItemsRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -6730,7 +7210,7 @@ class VeROReportItemsRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, rightsOwnerID = nil, reportItems = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, rightsOwnerID = nil, reportItems = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6738,6 +7218,7 @@ class VeROReportItemsRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -6754,6 +7235,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   item - ItemType
@@ -6767,6 +7249,7 @@ class VerifyAddItemRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -6778,7 +7261,7 @@ class VerifyAddItemRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, item = nil, includeExpressRequirements = nil, externalProductID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, item = nil, includeExpressRequirements = nil, externalProductID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6786,6 +7269,7 @@ class VerifyAddItemRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -6803,6 +7287,7 @@ end
 #   endUserIP - SOAP::SOAPString
 #   errorHandling - ErrorHandlingCodeType
 #   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   recipientBidderUserID - (any)
@@ -6818,6 +7303,7 @@ class VerifyAddSecondChanceItemRequestType < AbstractRequestType
   attr_accessor :endUserIP
   attr_accessor :errorHandling
   attr_accessor :invocationID
+  attr_accessor :outputSelector
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
@@ -6831,7 +7317,7 @@ class VerifyAddSecondChanceItemRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, warningLevel = nil, botBlock = nil, recipientBidderUserID = nil, buyItNowPrice = nil, duration = nil, itemID = nil, sellerMessage = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, recipientBidderUserID = nil, buyItNowPrice = nil, duration = nil, itemID = nil, sellerMessage = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6839,6 +7325,7 @@ class VerifyAddSecondChanceItemRequestType < AbstractRequestType
     @endUserIP = endUserIP
     @errorHandling = errorHandling
     @invocationID = invocationID
+    @outputSelector = outputSelector
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
@@ -9266,6 +9753,67 @@ class GetDisputeResponseType < AbstractResponseType
     @botBlock = botBlock
     @__xmlele_any = nil
     @dispute = dispute
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetExpressWishListResponseType
+#   timestamp - SOAP::SOAPDateTime
+#   ack - AckCodeType
+#   correlationID - SOAP::SOAPString
+#   errors - ErrorType
+#   message - SOAP::SOAPString
+#   version - SOAP::SOAPString
+#   build - SOAP::SOAPString
+#   notificationEventName - SOAP::SOAPString
+#   duplicateInvocationDetails - DuplicateInvocationDetailsType
+#   recipientUserID - SOAP::SOAPString
+#   eIASToken - SOAP::SOAPString
+#   notificationSignature - SOAP::SOAPString
+#   hardExpirationWarning - SOAP::SOAPString
+#   botBlock - BotBlockResponseType
+#   wishList - WishListType
+#   pagination - PaginationResultType
+class GetExpressWishListResponseType < AbstractResponseType
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :eIASToken
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_accessor :botBlock
+  attr_reader :__xmlele_any
+  attr_accessor :wishList
+  attr_accessor :pagination
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, wishList = [], pagination = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @botBlock = botBlock
+    @__xmlele_any = nil
+    @wishList = wishList
+    @pagination = pagination
   end
 end
 
@@ -12901,6 +13449,9 @@ end
 #   timeZoneDetails - TimeZoneDetailsType
 #   itemSpecificDetails - ItemSpecificDetailsType
 #   unitOfMeasurementDetails - UnitOfMeasurementDetailsType
+#   regionOfOriginDetails - RegionOfOriginDetailsType
+#   shippingPackageDetails - ShippingPackageDetailsType
+#   shippingCarrierDetails - ShippingCarrierDetailsType
 class GeteBayDetailsResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -12930,12 +13481,15 @@ class GeteBayDetailsResponseType < AbstractResponseType
   attr_accessor :timeZoneDetails
   attr_accessor :itemSpecificDetails
   attr_accessor :unitOfMeasurementDetails
+  attr_accessor :regionOfOriginDetails
+  attr_accessor :shippingPackageDetails
+  attr_accessor :shippingCarrierDetails
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, countryDetails = [], currencyDetails = [], dispatchTimeMaxDetails = [], paymentOptionDetails = [], regionDetails = [], shippingLocationDetails = [], shippingServiceDetails = [], siteDetails = [], taxJurisdiction = [], uRLDetails = [], timeZoneDetails = [], itemSpecificDetails = [], unitOfMeasurementDetails = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, countryDetails = [], currencyDetails = [], dispatchTimeMaxDetails = [], paymentOptionDetails = [], regionDetails = [], shippingLocationDetails = [], shippingServiceDetails = [], siteDetails = [], taxJurisdiction = [], uRLDetails = [], timeZoneDetails = [], itemSpecificDetails = [], unitOfMeasurementDetails = [], regionOfOriginDetails = [], shippingPackageDetails = [], shippingCarrierDetails = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12964,6 +13518,9 @@ class GeteBayDetailsResponseType < AbstractResponseType
     @timeZoneDetails = timeZoneDetails
     @itemSpecificDetails = itemSpecificDetails
     @unitOfMeasurementDetails = unitOfMeasurementDetails
+    @regionOfOriginDetails = regionOfOriginDetails
+    @shippingPackageDetails = shippingPackageDetails
+    @shippingCarrierDetails = shippingCarrierDetails
   end
 end
 
@@ -13157,6 +13714,8 @@ end
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
 #   sellingStatus - SellingStatusType
+#   transactionID - SOAP::SOAPString
+#   bestOffer - BestOfferType
 class PlaceOfferResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -13174,12 +13733,14 @@ class PlaceOfferResponseType < AbstractResponseType
   attr_accessor :botBlock
   attr_reader :__xmlele_any
   attr_accessor :sellingStatus
+  attr_accessor :transactionID
+  attr_accessor :bestOffer
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, sellingStatus = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, sellingStatus = nil, transactionID = nil, bestOffer = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -13196,6 +13757,8 @@ class PlaceOfferResponseType < AbstractResponseType
     @botBlock = botBlock
     @__xmlele_any = nil
     @sellingStatus = sellingStatus
+    @transactionID = transactionID
+    @bestOffer = bestOffer
   end
 end
 
@@ -16048,6 +16611,7 @@ end
 #   alertEnable - EnableCodeType
 #   notificationPayloadType - NotificationPayloadTypeCodeType
 #   deviceType - DeviceTypeCodeType
+#   payloadVersion - SOAP::SOAPString
 class ApplicationDeliveryPreferencesType
   attr_accessor :applicationURL
   attr_accessor :applicationEnable
@@ -16055,19 +16619,21 @@ class ApplicationDeliveryPreferencesType
   attr_accessor :alertEnable
   attr_accessor :notificationPayloadType
   attr_accessor :deviceType
+  attr_accessor :payloadVersion
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(applicationURL = nil, applicationEnable = nil, alertEmail = nil, alertEnable = nil, notificationPayloadType = nil, deviceType = nil)
+  def initialize(applicationURL = nil, applicationEnable = nil, alertEmail = nil, alertEnable = nil, notificationPayloadType = nil, deviceType = nil, payloadVersion = nil)
     @applicationURL = applicationURL
     @applicationEnable = applicationEnable
     @alertEmail = alertEmail
     @alertEnable = alertEnable
     @notificationPayloadType = notificationPayloadType
     @deviceType = deviceType
+    @payloadVersion = payloadVersion
     @__xmlele_any = nil
   end
 end
@@ -16299,6 +16865,19 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}BestOfferArrayType
 class BestOfferArrayType < ::Array
+end
+
+# {urn:ebay:apis:eBLBaseComponents}BestOfferAutoAcceptEnabledDefinitionType
+class BestOfferAutoAcceptEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
 end
 
 # {urn:ebay:apis:eBLBaseComponents}BestOfferAutoDeclineEnabledDefinitionType
@@ -16552,6 +17131,7 @@ end
 #   uniqueNegativeFeedbackCount - SOAP::SOAPInt
 #   uniquePositiveFeedbackCount - SOAP::SOAPInt
 #   liveAuctionBidResult - LiveAuctionBidType
+#   uniqueNeutralFeedbackCount - SOAP::SOAPInt
 class BidderDetailType
   attr_accessor :userID
   attr_accessor :email
@@ -16559,19 +17139,21 @@ class BidderDetailType
   attr_accessor :uniqueNegativeFeedbackCount
   attr_accessor :uniquePositiveFeedbackCount
   attr_accessor :liveAuctionBidResult
+  attr_accessor :uniqueNeutralFeedbackCount
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(userID = nil, email = nil, feedbackScore = nil, uniqueNegativeFeedbackCount = nil, uniquePositiveFeedbackCount = nil, liveAuctionBidResult = nil)
+  def initialize(userID = nil, email = nil, feedbackScore = nil, uniqueNegativeFeedbackCount = nil, uniquePositiveFeedbackCount = nil, liveAuctionBidResult = nil, uniqueNeutralFeedbackCount = nil)
     @userID = userID
     @email = email
     @feedbackScore = feedbackScore
     @uniqueNegativeFeedbackCount = uniqueNegativeFeedbackCount
     @uniquePositiveFeedbackCount = uniquePositiveFeedbackCount
     @liveAuctionBidResult = liveAuctionBidResult
+    @uniqueNeutralFeedbackCount = uniqueNeutralFeedbackCount
     @__xmlele_any = nil
   end
 end
@@ -16878,6 +17460,7 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}CalculatedShippingRateType
 #   originatingPostalCode - SOAP::SOAPString
+#   measurementUnit - MeasurementSystemCodeType
 #   packageDepth - MeasureType
 #   packageLength - MeasureType
 #   packageWidth - MeasureType
@@ -16889,6 +17472,7 @@ end
 #   internationalPackagingHandlingCosts - AmountType
 class CalculatedShippingRateType
   attr_accessor :originatingPostalCode
+  attr_accessor :measurementUnit
   attr_accessor :packageDepth
   attr_accessor :packageLength
   attr_accessor :packageWidth
@@ -16904,8 +17488,9 @@ class CalculatedShippingRateType
     @__xmlele_any = elements
   end
 
-  def initialize(originatingPostalCode = nil, packageDepth = nil, packageLength = nil, packageWidth = nil, packagingHandlingCosts = nil, shippingIrregular = nil, shippingPackage = nil, weightMajor = nil, weightMinor = nil, internationalPackagingHandlingCosts = nil)
+  def initialize(originatingPostalCode = nil, measurementUnit = nil, packageDepth = nil, packageLength = nil, packageWidth = nil, packagingHandlingCosts = nil, shippingIrregular = nil, shippingPackage = nil, weightMajor = nil, weightMinor = nil, internationalPackagingHandlingCosts = nil)
     @originatingPostalCode = originatingPostalCode
+    @measurementUnit = measurementUnit
     @packageDepth = packageDepth
     @packageLength = packageLength
     @packageWidth = packageWidth
@@ -17109,6 +17694,9 @@ end
 #   safePaymentRequired - SOAP::SOAPBoolean
 #   classifiedAdPayPerLeadEnabled - SOAP::SOAPBoolean
 #   itemSpecificsEnabled - ItemSpecificsEnabledCodeType
+#   paisaPayFullEscrowEnabled - SOAP::SOAPBoolean
+#   classifiedAdAutoAcceptEnabled - SOAP::SOAPBoolean
+#   bestOfferAutoAcceptEnabled - SOAP::SOAPBoolean
 class CategoryFeatureType
   attr_accessor :categoryID
   attr_accessor :listingDuration
@@ -17148,13 +17736,16 @@ class CategoryFeatureType
   attr_accessor :safePaymentRequired
   attr_accessor :classifiedAdPayPerLeadEnabled
   attr_accessor :itemSpecificsEnabled
+  attr_accessor :paisaPayFullEscrowEnabled
+  attr_accessor :classifiedAdAutoAcceptEnabled
+  attr_accessor :bestOfferAutoAcceptEnabled
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(categoryID = nil, listingDuration = [], shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil, localMarketSpecialitySubscription = nil, localMarketRegularSubscription = nil, localMarketPremiumSubscription = nil, localMarketNonSubscription = nil, expressEnabled = nil, expressPicturesRequired = nil, expressConditionRequired = nil, minimumReservePrice = nil, sellerContactDetailsEnabled = nil, transactionConfirmationRequestEnabled = nil, storeInventoryEnabled = nil, skypeMeTransactionalEnabled = nil, skypeMeNonTransactionalEnabled = nil, classifiedAdPaymentMethodEnabled = nil, classifiedAdShippingMethodEnabled = nil, classifiedAdBestOfferEnabled = nil, classifiedAdCounterOfferEnabled = nil, classifiedAdAutoDeclineEnabled = nil, classifiedAdContactByPhoneEnabled = nil, classifiedAdContactByEmailEnabled = nil, safePaymentRequired = nil, classifiedAdPayPerLeadEnabled = nil, itemSpecificsEnabled = nil)
+  def initialize(categoryID = nil, listingDuration = [], shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil, localMarketSpecialitySubscription = nil, localMarketRegularSubscription = nil, localMarketPremiumSubscription = nil, localMarketNonSubscription = nil, expressEnabled = nil, expressPicturesRequired = nil, expressConditionRequired = nil, minimumReservePrice = nil, sellerContactDetailsEnabled = nil, transactionConfirmationRequestEnabled = nil, storeInventoryEnabled = nil, skypeMeTransactionalEnabled = nil, skypeMeNonTransactionalEnabled = nil, classifiedAdPaymentMethodEnabled = nil, classifiedAdShippingMethodEnabled = nil, classifiedAdBestOfferEnabled = nil, classifiedAdCounterOfferEnabled = nil, classifiedAdAutoDeclineEnabled = nil, classifiedAdContactByPhoneEnabled = nil, classifiedAdContactByEmailEnabled = nil, safePaymentRequired = nil, classifiedAdPayPerLeadEnabled = nil, itemSpecificsEnabled = nil, paisaPayFullEscrowEnabled = nil, classifiedAdAutoAcceptEnabled = nil, bestOfferAutoAcceptEnabled = nil)
     @categoryID = categoryID
     @listingDuration = listingDuration
     @shippingTermsRequired = shippingTermsRequired
@@ -17193,6 +17784,9 @@ class CategoryFeatureType
     @safePaymentRequired = safePaymentRequired
     @classifiedAdPayPerLeadEnabled = classifiedAdPayPerLeadEnabled
     @itemSpecificsEnabled = itemSpecificsEnabled
+    @paisaPayFullEscrowEnabled = paisaPayFullEscrowEnabled
+    @classifiedAdAutoAcceptEnabled = classifiedAdAutoAcceptEnabled
+    @bestOfferAutoAcceptEnabled = bestOfferAutoAcceptEnabled
     @__xmlele_any = nil
   end
 end
@@ -17503,6 +18097,8 @@ end
 #   charityRegion - SOAP::SOAPInt
 #   charityDomain - SOAP::SOAPInt
 #   charityID - SOAP::SOAPString
+#   logoURLSelling - SOAP::SOAPAnyURI
+#   displayLogoSelling - SOAP::SOAPBoolean
 #   xmlattr_id - SOAP::SOAPString
 class CharityInfoType
   AttrId = XSD::QName.new(nil, "id")
@@ -17515,6 +18111,8 @@ class CharityInfoType
   attr_accessor :charityRegion
   attr_accessor :charityDomain
   attr_accessor :charityID
+  attr_accessor :logoURLSelling
+  attr_accessor :displayLogoSelling
   attr_reader :__xmlele_any
 
   def set_any(elements)
@@ -17533,7 +18131,7 @@ class CharityInfoType
     __xmlattr[AttrId] = value
   end
 
-  def initialize(name = nil, mission = nil, logoURL = nil, status = nil, searchableString = nil, charityRegion = nil, charityDomain = [], charityID = nil)
+  def initialize(name = nil, mission = nil, logoURL = nil, status = nil, searchableString = nil, charityRegion = nil, charityDomain = [], charityID = nil, logoURLSelling = nil, displayLogoSelling = nil)
     @name = name
     @mission = mission
     @logoURL = logoURL
@@ -17542,6 +18140,8 @@ class CharityInfoType
     @charityRegion = charityRegion
     @charityDomain = charityDomain
     @charityID = charityID
+    @logoURLSelling = logoURLSelling
+    @displayLogoSelling = displayLogoSelling
     @__xmlele_any = nil
     @__xmlattr = {}
   end
@@ -17668,6 +18268,19 @@ class CheckoutStatusType
     @lastModifiedTime = lastModifiedTime
     @paymentMethod = paymentMethod
     @status = status
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ClassifiedAdAutoAcceptEnabledDefinitionType
+class ClassifiedAdAutoAcceptEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
     @__xmlele_any = nil
   end
 end
@@ -18555,6 +19168,7 @@ end
 #   externalProductID - ExternalProductIDType
 #   productReferenceID - SOAP::SOAPLong
 #   itemSpecifics - NameValueListArrayType
+#   detailsURL - SOAP::SOAPAnyURI
 class ExpressProductType
   attr_accessor :title
   attr_accessor :minPrice
@@ -18564,13 +19178,14 @@ class ExpressProductType
   attr_accessor :externalProductID
   attr_accessor :productReferenceID
   attr_accessor :itemSpecifics
+  attr_accessor :detailsURL
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(title = nil, minPrice = nil, maxPrice = nil, stockPhotoURL = nil, itemCount = nil, externalProductID = nil, productReferenceID = nil, itemSpecifics = nil)
+  def initialize(title = nil, minPrice = nil, maxPrice = nil, stockPhotoURL = nil, itemCount = nil, externalProductID = nil, productReferenceID = nil, itemSpecifics = nil, detailsURL = nil)
     @title = title
     @minPrice = minPrice
     @maxPrice = maxPrice
@@ -18579,6 +19194,7 @@ class ExpressProductType
     @externalProductID = externalProductID
     @productReferenceID = productReferenceID
     @itemSpecifics = itemSpecifics
+    @detailsURL = detailsURL
     @__xmlele_any = nil
   end
 end
@@ -18762,6 +19378,9 @@ end
 #   safePaymentRequired - SafePaymentRequiredDefinitionType
 #   classifiedAdPayPerLeadEnabled - ClassifiedAdPayPerLeadEnabledDefinitionType
 #   itemSpecificsEnabled - ItemSpecificsEnabledDefinitionType
+#   paisaPayFullEscrowEnabled - PaisaPayFullEscrowEnabledDefinitionType
+#   bestOfferAutoAcceptEnabled - BestOfferAutoAcceptEnabledDefinitionType
+#   classifiedAdAutoAcceptEnabled - ClassifiedAdAutoAcceptEnabledDefinitionType
 class FeatureDefinitionsType
   attr_accessor :listingDurations
   attr_accessor :shippingTermsRequired
@@ -18803,13 +19422,16 @@ class FeatureDefinitionsType
   attr_accessor :safePaymentRequired
   attr_accessor :classifiedAdPayPerLeadEnabled
   attr_accessor :itemSpecificsEnabled
+  attr_accessor :paisaPayFullEscrowEnabled
+  attr_accessor :bestOfferAutoAcceptEnabled
+  attr_accessor :classifiedAdAutoAcceptEnabled
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(listingDurations = nil, shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil, localMarketSpecialitySubscription = nil, localMarketRegularSubscription = nil, localMarketPremiumSubscription = nil, localMarketNonSubscription = nil, expressEnabled = nil, expressPicturesRequired = nil, expressConditionRequired = nil, minimumReservePrice = nil, transactionConfirmationRequestEnabled = nil, sellerContactDetailsEnabled = nil, storeInventoryEnabled = nil, skypeMeTransactionalEnabled = nil, skypeMeNonTransactionalEnabled = nil, localListingDistancesRegular = nil, localListingDistancesSpecialty = nil, localListingDistancesNonSubscription = nil, classifiedAdPaymentMethodEnabled = nil, classifiedAdShippingMethodEnabled = nil, classifiedAdBestOfferEnabled = nil, classifiedAdCounterOfferEnabled = nil, classifiedAdAutoDeclineEnabled = nil, classifiedAdContactByPhoneEnabled = nil, classifiedAdContactByEmailEnabled = nil, safePaymentRequired = nil, classifiedAdPayPerLeadEnabled = nil, itemSpecificsEnabled = nil)
+  def initialize(listingDurations = nil, shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil, localMarketSpecialitySubscription = nil, localMarketRegularSubscription = nil, localMarketPremiumSubscription = nil, localMarketNonSubscription = nil, expressEnabled = nil, expressPicturesRequired = nil, expressConditionRequired = nil, minimumReservePrice = nil, transactionConfirmationRequestEnabled = nil, sellerContactDetailsEnabled = nil, storeInventoryEnabled = nil, skypeMeTransactionalEnabled = nil, skypeMeNonTransactionalEnabled = nil, localListingDistancesRegular = nil, localListingDistancesSpecialty = nil, localListingDistancesNonSubscription = nil, classifiedAdPaymentMethodEnabled = nil, classifiedAdShippingMethodEnabled = nil, classifiedAdBestOfferEnabled = nil, classifiedAdCounterOfferEnabled = nil, classifiedAdAutoDeclineEnabled = nil, classifiedAdContactByPhoneEnabled = nil, classifiedAdContactByEmailEnabled = nil, safePaymentRequired = nil, classifiedAdPayPerLeadEnabled = nil, itemSpecificsEnabled = nil, paisaPayFullEscrowEnabled = nil, bestOfferAutoAcceptEnabled = nil, classifiedAdAutoAcceptEnabled = nil)
     @listingDurations = listingDurations
     @shippingTermsRequired = shippingTermsRequired
     @bestOfferEnabled = bestOfferEnabled
@@ -18850,6 +19472,9 @@ class FeatureDefinitionsType
     @safePaymentRequired = safePaymentRequired
     @classifiedAdPayPerLeadEnabled = classifiedAdPayPerLeadEnabled
     @itemSpecificsEnabled = itemSpecificsEnabled
+    @paisaPayFullEscrowEnabled = paisaPayFullEscrowEnabled
+    @bestOfferAutoAcceptEnabled = bestOfferAutoAcceptEnabled
+    @classifiedAdAutoAcceptEnabled = classifiedAdAutoAcceptEnabled
     @__xmlele_any = nil
   end
 end
@@ -19019,6 +19644,7 @@ end
 #   uniqueNegativeFeedbackCount - SOAP::SOAPInt
 #   uniquePositiveFeedbackCount - SOAP::SOAPInt
 #   sellerAverageRatingDetailArray - AverageRatingDetailArrayType
+#   uniqueNeutralFeedbackCount - SOAP::SOAPInt
 class FeedbackSummaryType
   attr_accessor :bidRetractionFeedbackPeriodArray
   attr_accessor :negativeFeedbackPeriodArray
@@ -19029,13 +19655,14 @@ class FeedbackSummaryType
   attr_accessor :uniqueNegativeFeedbackCount
   attr_accessor :uniquePositiveFeedbackCount
   attr_accessor :sellerAverageRatingDetailArray
+  attr_accessor :uniqueNeutralFeedbackCount
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(bidRetractionFeedbackPeriodArray = nil, negativeFeedbackPeriodArray = nil, neutralFeedbackPeriodArray = nil, positiveFeedbackPeriodArray = nil, totalFeedbackPeriodArray = nil, neutralCommentCountFromSuspendedUsers = nil, uniqueNegativeFeedbackCount = nil, uniquePositiveFeedbackCount = nil, sellerAverageRatingDetailArray = nil)
+  def initialize(bidRetractionFeedbackPeriodArray = nil, negativeFeedbackPeriodArray = nil, neutralFeedbackPeriodArray = nil, positiveFeedbackPeriodArray = nil, totalFeedbackPeriodArray = nil, neutralCommentCountFromSuspendedUsers = nil, uniqueNegativeFeedbackCount = nil, uniquePositiveFeedbackCount = nil, sellerAverageRatingDetailArray = nil, uniqueNeutralFeedbackCount = nil)
     @bidRetractionFeedbackPeriodArray = bidRetractionFeedbackPeriodArray
     @negativeFeedbackPeriodArray = negativeFeedbackPeriodArray
     @neutralFeedbackPeriodArray = neutralFeedbackPeriodArray
@@ -19045,6 +19672,7 @@ class FeedbackSummaryType
     @uniqueNegativeFeedbackCount = uniqueNegativeFeedbackCount
     @uniquePositiveFeedbackCount = uniquePositiveFeedbackCount
     @sellerAverageRatingDetailArray = sellerAverageRatingDetailArray
+    @uniqueNeutralFeedbackCount = uniqueNeutralFeedbackCount
     @__xmlele_any = nil
   end
 end
@@ -19387,6 +20015,25 @@ class ItemListCustomizationType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}ItemPolicyViolationType
+#   policyID - SOAP::SOAPLong
+#   policyText - SOAP::SOAPString
+class ItemPolicyViolationType
+  attr_accessor :policyID
+  attr_accessor :policyText
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(policyID = nil, policyText = nil)
+    @policyID = policyID
+    @policyText = policyText
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}ItemRatingDetailArrayType
 class ItemRatingDetailArrayType < ::Array
 end
@@ -19529,7 +20176,6 @@ end
 #   listingDuration - SOAP::SOAPToken
 #   listingEnhancement - ListingEnhancementsCodeType
 #   listingType - ListingTypeCodeType
-#   listingSubtype - ListingSubtypeEnum
 #   location - SOAP::SOAPString
 #   lotSize - SOAP::SOAPInt
 #   nowAndNew - SOAP::SOAPBoolean
@@ -19608,6 +20254,11 @@ end
 #   classifiedAdPayPerLeadFee - AmountType
 #   bidGroupItem - SOAP::SOAPBoolean
 #   applyBuyerProtection - BuyerProtectionDetailsType
+#   listingSubtype2 - ListingSubtypeCodeType
+#   mechanicalCheckAccepted - SOAP::SOAPBoolean
+#   updateSellerInfo - SOAP::SOAPBoolean
+#   updateReturnPolicy - SOAP::SOAPBoolean
+#   itemPolicyViolation - ItemPolicyViolationType
 class ItemType
   attr_accessor :applicationData
   attr_accessor :attributeSetArray
@@ -19637,7 +20288,6 @@ class ItemType
   attr_accessor :listingDuration
   attr_accessor :listingEnhancement
   attr_accessor :listingType
-  attr_accessor :listingSubtype
   attr_accessor :location
   attr_accessor :lotSize
   attr_accessor :nowAndNew
@@ -19716,13 +20366,18 @@ class ItemType
   attr_accessor :classifiedAdPayPerLeadFee
   attr_accessor :bidGroupItem
   attr_accessor :applyBuyerProtection
+  attr_accessor :listingSubtype2
+  attr_accessor :mechanicalCheckAccepted
+  attr_accessor :updateSellerInfo
+  attr_accessor :updateReturnPolicy
+  attr_accessor :itemPolicyViolation
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(applicationData = nil, attributeSetArray = nil, attributeArray = nil, lookupAttributeArray = nil, applyShippingDiscount = nil, autoPay = nil, paymentDetails = nil, biddingDetails = nil, motorsGermanySearchable = nil, buyerProtection = nil, buyItNowPrice = nil, categoryMappingAllowed = nil, charity = nil, country = nil, crossPromotion = nil, currency = nil, description = nil, descriptionReviseMode = nil, distance = nil, giftIcon = nil, giftServices = [], hitCounter = nil, itemID = nil, listingDetails = nil, listingDesigner = nil, listingDuration = nil, listingEnhancement = [], listingType = nil, listingSubtype = nil, location = nil, lotSize = nil, nowAndNew = nil, partnerCode = nil, partnerName = nil, paymentMethods = [], payPalEmailAddress = nil, primaryCategory = nil, privateListing = nil, productListingDetails = nil, quantity = nil, privateNotes = nil, regionID = nil, relistLink = nil, reservePrice = nil, reviseStatus = nil, scheduleTime = nil, secondaryCategory = nil, freeAddedCategory = nil, seller = nil, sellingStatus = nil, shippingDetails = nil, shipToLocations = [], site = nil, startPrice = nil, storefront = nil, subTitle = nil, timeLeft = nil, title = nil, uUID = nil, vATDetails = nil, sellerVacationNote = nil, watchCount = nil, hitCount = nil, disableBuyerRequirements = nil, buyerRequirements = nil, bestOfferDetails = nil, liveAuctionDetails = nil, locationDefaulted = nil, thirdPartyCheckout = nil, useTaxTable = nil, getItFast = nil, buyerResponsibleForShipping = nil, limitedWarrantyEligible = nil, eBayNotes = nil, questionCount = nil, relisted = nil, quantityAvailable = nil, sKU = nil, categoryBasedAttributesPrefill = nil, searchDetails = nil, postalCode = nil, shippingTermsInDescription = nil, externalProductID = nil, sellerInventoryID = nil, pictureDetails = nil, digitalDeliveryDetails = nil, dispatchTimeMax = nil, skypeEnabled = nil, skypeID = nil, skypeContactOption = [], bestOfferEnabled = nil, localListing = nil, thirdPartyCheckoutIntegration = nil, expressOptOut = nil, listingCheckoutRedirectPreference = nil, expressDetails = nil, sellerContactDetails = nil, totalQuestionCount = nil, proxyItem = nil, extendedSellerContactDetails = nil, leadCount = nil, newLeadCount = nil, itemSpecifics = nil, groupCategoryID = nil, classifiedAdPayPerLeadFee = nil, bidGroupItem = nil, applyBuyerProtection = nil)
+  def initialize(applicationData = nil, attributeSetArray = nil, attributeArray = nil, lookupAttributeArray = nil, applyShippingDiscount = nil, autoPay = nil, paymentDetails = nil, biddingDetails = nil, motorsGermanySearchable = nil, buyerProtection = nil, buyItNowPrice = nil, categoryMappingAllowed = nil, charity = nil, country = nil, crossPromotion = nil, currency = nil, description = nil, descriptionReviseMode = nil, distance = nil, giftIcon = nil, giftServices = [], hitCounter = nil, itemID = nil, listingDetails = nil, listingDesigner = nil, listingDuration = nil, listingEnhancement = [], listingType = nil, location = nil, lotSize = nil, nowAndNew = nil, partnerCode = nil, partnerName = nil, paymentMethods = [], payPalEmailAddress = nil, primaryCategory = nil, privateListing = nil, productListingDetails = nil, quantity = nil, privateNotes = nil, regionID = nil, relistLink = nil, reservePrice = nil, reviseStatus = nil, scheduleTime = nil, secondaryCategory = nil, freeAddedCategory = nil, seller = nil, sellingStatus = nil, shippingDetails = nil, shipToLocations = [], site = nil, startPrice = nil, storefront = nil, subTitle = nil, timeLeft = nil, title = nil, uUID = nil, vATDetails = nil, sellerVacationNote = nil, watchCount = nil, hitCount = nil, disableBuyerRequirements = nil, buyerRequirements = nil, bestOfferDetails = nil, liveAuctionDetails = nil, locationDefaulted = nil, thirdPartyCheckout = nil, useTaxTable = nil, getItFast = nil, buyerResponsibleForShipping = nil, limitedWarrantyEligible = nil, eBayNotes = nil, questionCount = nil, relisted = nil, quantityAvailable = nil, sKU = nil, categoryBasedAttributesPrefill = nil, searchDetails = nil, postalCode = nil, shippingTermsInDescription = nil, externalProductID = nil, sellerInventoryID = nil, pictureDetails = nil, digitalDeliveryDetails = nil, dispatchTimeMax = nil, skypeEnabled = nil, skypeID = nil, skypeContactOption = [], bestOfferEnabled = nil, localListing = nil, thirdPartyCheckoutIntegration = nil, expressOptOut = nil, listingCheckoutRedirectPreference = nil, expressDetails = nil, sellerContactDetails = nil, totalQuestionCount = nil, proxyItem = nil, extendedSellerContactDetails = nil, leadCount = nil, newLeadCount = nil, itemSpecifics = nil, groupCategoryID = nil, classifiedAdPayPerLeadFee = nil, bidGroupItem = nil, applyBuyerProtection = nil, listingSubtype2 = nil, mechanicalCheckAccepted = nil, updateSellerInfo = nil, updateReturnPolicy = nil, itemPolicyViolation = nil)
     @applicationData = applicationData
     @attributeSetArray = attributeSetArray
     @attributeArray = attributeArray
@@ -19751,7 +20406,6 @@ class ItemType
     @listingDuration = listingDuration
     @listingEnhancement = listingEnhancement
     @listingType = listingType
-    @listingSubtype = listingSubtype
     @location = location
     @lotSize = lotSize
     @nowAndNew = nowAndNew
@@ -19830,6 +20484,11 @@ class ItemType
     @classifiedAdPayPerLeadFee = classifiedAdPayPerLeadFee
     @bidGroupItem = bidGroupItem
     @applyBuyerProtection = applyBuyerProtection
+    @listingSubtype2 = listingSubtype2
+    @mechanicalCheckAccepted = mechanicalCheckAccepted
+    @updateSellerInfo = updateSellerInfo
+    @updateReturnPolicy = updateReturnPolicy
+    @itemPolicyViolation = itemPolicyViolation
     @__xmlele_any = nil
   end
 end
@@ -19948,6 +20607,7 @@ end
 #   tCROriginalItemID - (any)
 #   viewItemURLForNaturalSearch - SOAP::SOAPAnyURI
 #   payPerLeadEnabled - SOAP::SOAPBoolean
+#   bestOfferAutoAcceptPrice - AmountType
 class ListingDetailsType
   attr_accessor :adult
   attr_accessor :bindingAuction
@@ -19973,13 +20633,14 @@ class ListingDetailsType
   attr_accessor :tCROriginalItemID
   attr_accessor :viewItemURLForNaturalSearch
   attr_accessor :payPerLeadEnabled
+  attr_accessor :bestOfferAutoAcceptPrice
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(adult = nil, bindingAuction = nil, checkoutEnabled = nil, convertedBuyItNowPrice = nil, convertedStartPrice = nil, convertedReservePrice = nil, hasReservePrice = nil, relistedItemID = nil, secondChanceOriginalItemID = nil, startTime = nil, endTime = nil, viewItemURL = nil, hasUnansweredQuestions = nil, hasPublicMessages = nil, buyItNowAvailable = nil, sellerBusinessType = nil, minimumBestOfferPrice = nil, minimumBestOfferMessage = nil, localListingDistance = nil, expressListing = nil, expressItemRequirements = nil, tCROriginalItemID = nil, viewItemURLForNaturalSearch = nil, payPerLeadEnabled = nil)
+  def initialize(adult = nil, bindingAuction = nil, checkoutEnabled = nil, convertedBuyItNowPrice = nil, convertedStartPrice = nil, convertedReservePrice = nil, hasReservePrice = nil, relistedItemID = nil, secondChanceOriginalItemID = nil, startTime = nil, endTime = nil, viewItemURL = nil, hasUnansweredQuestions = nil, hasPublicMessages = nil, buyItNowAvailable = nil, sellerBusinessType = nil, minimumBestOfferPrice = nil, minimumBestOfferMessage = nil, localListingDistance = nil, expressListing = nil, expressItemRequirements = nil, tCROriginalItemID = nil, viewItemURLForNaturalSearch = nil, payPerLeadEnabled = nil, bestOfferAutoAcceptPrice = nil)
     @adult = adult
     @bindingAuction = bindingAuction
     @checkoutEnabled = checkoutEnabled
@@ -20004,6 +20665,7 @@ class ListingDetailsType
     @tCROriginalItemID = tCROriginalItemID
     @viewItemURLForNaturalSearch = viewItemURLForNaturalSearch
     @payPerLeadEnabled = payPerLeadEnabled
+    @bestOfferAutoAcceptPrice = bestOfferAutoAcceptPrice
     @__xmlele_any = nil
   end
 end
@@ -21165,6 +21827,8 @@ end
 #   user - UserType
 #   userConsent - SOAP::SOAPBoolean
 #   bidCount - SOAP::SOAPInt
+#   message - SOAP::SOAPString
+#   bestOfferID - (any)
 class OfferType
   attr_accessor :action
   attr_accessor :currency
@@ -21180,13 +21844,15 @@ class OfferType
   attr_accessor :user
   attr_accessor :userConsent
   attr_accessor :bidCount
+  attr_accessor :message
+  attr_accessor :bestOfferID
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(action = nil, currency = nil, itemID = nil, maxBid = nil, quantity = nil, secondChanceEnabled = nil, siteCurrency = nil, timeBid = nil, highestBid = nil, convertedPrice = nil, transactionID = nil, user = nil, userConsent = nil, bidCount = nil)
+  def initialize(action = nil, currency = nil, itemID = nil, maxBid = nil, quantity = nil, secondChanceEnabled = nil, siteCurrency = nil, timeBid = nil, highestBid = nil, convertedPrice = nil, transactionID = nil, user = nil, userConsent = nil, bidCount = nil, message = nil, bestOfferID = nil)
     @action = action
     @currency = currency
     @itemID = itemID
@@ -21201,6 +21867,8 @@ class OfferType
     @user = user
     @userConsent = userConsent
     @bidCount = bidCount
+    @message = message
+    @bestOfferID = bestOfferID
     @__xmlele_any = nil
   end
 end
@@ -21256,6 +21924,8 @@ end
 #   digitalDelivery - SOAP::SOAPBoolean
 #   transactionArray - TransactionArrayType
 #   buyerUserID - (any)
+#   paidTime - SOAP::SOAPDateTime
+#   shippedTime - SOAP::SOAPDateTime
 class OrderType
   attr_accessor :orderID
   attr_accessor :orderStatus
@@ -21276,13 +21946,15 @@ class OrderType
   attr_accessor :digitalDelivery
   attr_accessor :transactionArray
   attr_accessor :buyerUserID
+  attr_accessor :paidTime
+  attr_accessor :shippedTime
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(orderID = nil, orderStatus = nil, adjustmentAmount = nil, amountPaid = nil, amountSaved = nil, checkoutStatus = nil, shippingDetails = nil, creatingUserRole = nil, createdTime = nil, paymentMethods = [], sellerEmail = nil, shippingAddress = nil, shippingServiceSelected = nil, subtotal = nil, total = nil, externalTransaction = [], digitalDelivery = nil, transactionArray = nil, buyerUserID = nil)
+  def initialize(orderID = nil, orderStatus = nil, adjustmentAmount = nil, amountPaid = nil, amountSaved = nil, checkoutStatus = nil, shippingDetails = nil, creatingUserRole = nil, createdTime = nil, paymentMethods = [], sellerEmail = nil, shippingAddress = nil, shippingServiceSelected = nil, subtotal = nil, total = nil, externalTransaction = [], digitalDelivery = nil, transactionArray = nil, buyerUserID = nil, paidTime = nil, shippedTime = nil)
     @orderID = orderID
     @orderStatus = orderStatus
     @adjustmentAmount = adjustmentAmount
@@ -21302,6 +21974,8 @@ class OrderType
     @digitalDelivery = digitalDelivery
     @transactionArray = transactionArray
     @buyerUserID = buyerUserID
+    @paidTime = paidTime
+    @shippedTime = shippedTime
     @__xmlele_any = nil
   end
 end
@@ -21372,6 +22046,19 @@ class PaginationResultType
   def initialize(totalNumberOfPages = nil, totalNumberOfEntries = nil)
     @totalNumberOfPages = totalNumberOfPages
     @totalNumberOfEntries = totalNumberOfEntries
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}PaisaPayFullEscrowEnabledDefinitionType
+class PaisaPayFullEscrowEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
     @__xmlele_any = nil
   end
 end
@@ -22123,6 +22810,7 @@ end
 #   discountValue - SOAP::SOAPDouble
 #   promotionalSaleStartTime - SOAP::SOAPDateTime
 #   promotionalSaleEndTime - SOAP::SOAPDateTime
+#   promotionalSaleType - PromotionalSaleTypeCodeType
 class PromotionalSaleType
   attr_accessor :promotionalSaleID
   attr_accessor :promotionalSaleName
@@ -22132,13 +22820,14 @@ class PromotionalSaleType
   attr_accessor :discountValue
   attr_accessor :promotionalSaleStartTime
   attr_accessor :promotionalSaleEndTime
+  attr_accessor :promotionalSaleType
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(promotionalSaleID = nil, promotionalSaleName = nil, promotionalSaleItemIDArray = nil, status = nil, discountType = nil, discountValue = nil, promotionalSaleStartTime = nil, promotionalSaleEndTime = nil)
+  def initialize(promotionalSaleID = nil, promotionalSaleName = nil, promotionalSaleItemIDArray = nil, status = nil, discountType = nil, discountValue = nil, promotionalSaleStartTime = nil, promotionalSaleEndTime = nil, promotionalSaleType = nil)
     @promotionalSaleID = promotionalSaleID
     @promotionalSaleName = promotionalSaleName
     @promotionalSaleItemIDArray = promotionalSaleItemIDArray
@@ -22147,6 +22836,7 @@ class PromotionalSaleType
     @discountValue = discountValue
     @promotionalSaleStartTime = promotionalSaleStartTime
     @promotionalSaleEndTime = promotionalSaleEndTime
+    @promotionalSaleType = promotionalSaleType
     @__xmlele_any = nil
   end
 end
@@ -22275,6 +22965,28 @@ class RegionDetailsType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}RegionOfOriginDetailsType
+#   regionOfOrigin - SOAP::SOAPString
+#   description - SOAP::SOAPString
+#   status - StatusCodeType
+class RegionOfOriginDetailsType
+  attr_accessor :regionOfOrigin
+  attr_accessor :description
+  attr_accessor :status
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(regionOfOrigin = nil, description = nil, status = nil)
+    @regionOfOrigin = regionOfOrigin
+    @description = description
+    @status = status
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}RelatedSearchKeywordArrayType
 class RelatedSearchKeywordArrayType < ::Array
 end
@@ -22302,6 +23014,16 @@ end
 #   shippingNeededCount - SOAP::SOAPInt
 #   relistingNeededCount - SOAP::SOAPInt
 #   totalNewLeadsCount - SOAP::SOAPInt
+#   docsForCCProcessingToSendCount - SOAP::SOAPInt
+#   rTEToProcessCount - SOAP::SOAPInt
+#   itemReceiptToConfirmCount - SOAP::SOAPInt
+#   refundOnHoldCount - SOAP::SOAPInt
+#   refundCancelledCount - SOAP::SOAPInt
+#   shippingDetailsToBeProvidedCount - SOAP::SOAPInt
+#   itemReceiptConfirmationToReceiveCount - SOAP::SOAPInt
+#   refundInitiatedCount - SOAP::SOAPInt
+#   pendingRTERequestCount - SOAP::SOAPInt
+#   declinedRTERequestCount - SOAP::SOAPInt
 class RemindersType
   attr_accessor :paymentToSendCount
   attr_accessor :feedbackToReceiveCount
@@ -22312,8 +23034,23 @@ class RemindersType
   attr_accessor :shippingNeededCount
   attr_accessor :relistingNeededCount
   attr_accessor :totalNewLeadsCount
+  attr_accessor :docsForCCProcessingToSendCount
+  attr_accessor :rTEToProcessCount
+  attr_accessor :itemReceiptToConfirmCount
+  attr_accessor :refundOnHoldCount
+  attr_accessor :refundCancelledCount
+  attr_accessor :shippingDetailsToBeProvidedCount
+  attr_accessor :itemReceiptConfirmationToReceiveCount
+  attr_accessor :refundInitiatedCount
+  attr_accessor :pendingRTERequestCount
+  attr_accessor :declinedRTERequestCount
+  attr_reader :__xmlele_any
 
-  def initialize(paymentToSendCount = nil, feedbackToReceiveCount = nil, feedbackToSendCount = nil, outbidCount = nil, paymentToReceiveCount = nil, secondChanceOfferCount = nil, shippingNeededCount = nil, relistingNeededCount = nil, totalNewLeadsCount = nil)
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(paymentToSendCount = nil, feedbackToReceiveCount = nil, feedbackToSendCount = nil, outbidCount = nil, paymentToReceiveCount = nil, secondChanceOfferCount = nil, shippingNeededCount = nil, relistingNeededCount = nil, totalNewLeadsCount = nil, docsForCCProcessingToSendCount = nil, rTEToProcessCount = nil, itemReceiptToConfirmCount = nil, refundOnHoldCount = nil, refundCancelledCount = nil, shippingDetailsToBeProvidedCount = nil, itemReceiptConfirmationToReceiveCount = nil, refundInitiatedCount = nil, pendingRTERequestCount = nil, declinedRTERequestCount = nil)
     @paymentToSendCount = paymentToSendCount
     @feedbackToReceiveCount = feedbackToReceiveCount
     @feedbackToSendCount = feedbackToSendCount
@@ -22323,6 +23060,17 @@ class RemindersType
     @shippingNeededCount = shippingNeededCount
     @relistingNeededCount = relistingNeededCount
     @totalNewLeadsCount = totalNewLeadsCount
+    @docsForCCProcessingToSendCount = docsForCCProcessingToSendCount
+    @rTEToProcessCount = rTEToProcessCount
+    @itemReceiptToConfirmCount = itemReceiptToConfirmCount
+    @refundOnHoldCount = refundOnHoldCount
+    @refundCancelledCount = refundCancelledCount
+    @shippingDetailsToBeProvidedCount = shippingDetailsToBeProvidedCount
+    @itemReceiptConfirmationToReceiveCount = itemReceiptConfirmationToReceiveCount
+    @refundInitiatedCount = refundInitiatedCount
+    @pendingRTERequestCount = pendingRTERequestCount
+    @declinedRTERequestCount = declinedRTERequestCount
+    @__xmlele_any = nil
   end
 end
 
@@ -22906,6 +23654,7 @@ end
 #   expressSellerRequirements - ExpressSellerRequirementsType
 #   charityRegistered - SOAP::SOAPBoolean
 #   safePaymentExempt - SOAP::SOAPBoolean
+#   paisaPayEscrowEMIStatus - SOAP::SOAPInt
 class SellerType
   attr_accessor :paisaPayStatus
   attr_accessor :allowPaymentEdit
@@ -22931,13 +23680,14 @@ class SellerType
   attr_accessor :expressSellerRequirements
   attr_accessor :charityRegistered
   attr_accessor :safePaymentExempt
+  attr_accessor :paisaPayEscrowEMIStatus
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(paisaPayStatus = nil, allowPaymentEdit = nil, billingCurrency = nil, checkoutEnabled = nil, cIPBankAccountStored = nil, goodStanding = nil, liveAuctionAuthorized = nil, merchandizingPref = nil, qualifiesForB2BVAT = nil, sellerGuaranteeLevel = nil, sellerLevel = nil, sellerPaymentAddress = nil, schedulingInfo = nil, storeOwner = nil, storeURL = nil, sellerBusinessType = nil, registeredBusinessSeller = nil, expressEligible = nil, paymentMethod = nil, proStoresPreference = nil, expressWallet = nil, expressSellerRequirements = nil, charityRegistered = nil, safePaymentExempt = nil)
+  def initialize(paisaPayStatus = nil, allowPaymentEdit = nil, billingCurrency = nil, checkoutEnabled = nil, cIPBankAccountStored = nil, goodStanding = nil, liveAuctionAuthorized = nil, merchandizingPref = nil, qualifiesForB2BVAT = nil, sellerGuaranteeLevel = nil, sellerLevel = nil, sellerPaymentAddress = nil, schedulingInfo = nil, storeOwner = nil, storeURL = nil, sellerBusinessType = nil, registeredBusinessSeller = nil, expressEligible = nil, paymentMethod = nil, proStoresPreference = nil, expressWallet = nil, expressSellerRequirements = nil, charityRegistered = nil, safePaymentExempt = nil, paisaPayEscrowEMIStatus = nil)
     @paisaPayStatus = paisaPayStatus
     @allowPaymentEdit = allowPaymentEdit
     @billingCurrency = billingCurrency
@@ -22962,6 +23712,7 @@ class SellerType
     @expressSellerRequirements = expressSellerRequirements
     @charityRegistered = charityRegistered
     @safePaymentExempt = safePaymentExempt
+    @paisaPayEscrowEMIStatus = paisaPayEscrowEMIStatus
     @__xmlele_any = nil
   end
 end
@@ -23015,6 +23766,7 @@ end
 #   listingStatus - ListingStatusCodeType
 #   finalValueFee - AmountType
 #   promotionalSaleDetails - PromotionalSaleDetailsType
+#   adminEnded - SOAP::SOAPBoolean
 class SellingStatusType
   attr_accessor :bidCount
   attr_accessor :bidIncrement
@@ -23030,13 +23782,14 @@ class SellingStatusType
   attr_accessor :listingStatus
   attr_accessor :finalValueFee
   attr_accessor :promotionalSaleDetails
+  attr_accessor :adminEnded
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(bidCount = nil, bidIncrement = nil, convertedCurrentPrice = nil, currentPrice = nil, highBidder = nil, leadCount = nil, minimumToBid = nil, quantitySold = nil, reserveMet = nil, secondChanceEligible = nil, bidderCount = nil, listingStatus = nil, finalValueFee = nil, promotionalSaleDetails = nil)
+  def initialize(bidCount = nil, bidIncrement = nil, convertedCurrentPrice = nil, currentPrice = nil, highBidder = nil, leadCount = nil, minimumToBid = nil, quantitySold = nil, reserveMet = nil, secondChanceEligible = nil, bidderCount = nil, listingStatus = nil, finalValueFee = nil, promotionalSaleDetails = nil, adminEnded = nil)
     @bidCount = bidCount
     @bidIncrement = bidIncrement
     @convertedCurrentPrice = convertedCurrentPrice
@@ -23051,6 +23804,7 @@ class SellingStatusType
     @listingStatus = listingStatus
     @finalValueFee = finalValueFee
     @promotionalSaleDetails = promotionalSaleDetails
+    @adminEnded = adminEnded
     @__xmlele_any = nil
   end
 end
@@ -23168,6 +23922,28 @@ class ShipmentType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}ShippingCarrierDetailsType
+#   shippingCarrierID - SOAP::SOAPInt
+#   description - SOAP::SOAPString
+#   shippingCarrier - ShippingCarrierCodeType
+class ShippingCarrierDetailsType
+  attr_accessor :shippingCarrierID
+  attr_accessor :description
+  attr_accessor :shippingCarrier
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(shippingCarrierID = nil, description = nil, shippingCarrier = nil)
+    @shippingCarrierID = shippingCarrierID
+    @description = description
+    @shippingCarrier = shippingCarrier
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}ShippingDetailsType
 #   allowPaymentEdit - SOAP::SOAPBoolean
 #   applyShippingDiscount - SOAP::SOAPBoolean
@@ -23202,6 +23978,7 @@ end
 #   internationalCalculatedShippingDiscount - CalculatedShippingDiscountType
 #   internationalPromotionalShippingDiscount - SOAP::SOAPBoolean
 #   promotionalShippingDiscountDetails - PromotionalShippingDiscountDetailsType
+#   cODCost - AmountType
 class ShippingDetailsType
   attr_accessor :allowPaymentEdit
   attr_accessor :applyShippingDiscount
@@ -23236,13 +24013,14 @@ class ShippingDetailsType
   attr_accessor :internationalCalculatedShippingDiscount
   attr_accessor :internationalPromotionalShippingDiscount
   attr_accessor :promotionalShippingDiscountDetails
+  attr_accessor :cODCost
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(allowPaymentEdit = nil, applyShippingDiscount = nil, calculatedShippingRate = nil, changePaymentInstructions = nil, insuranceFee = nil, insuranceOption = nil, insuranceWanted = nil, paymentEdited = nil, paymentInstructions = nil, salesTax = nil, shippingRateErrorMessage = nil, shippingRateType = nil, shippingServiceOptions = [], internationalShippingServiceOption = [], shippingType = nil, sellingManagerSalesRecordNumber = nil, thirdPartyCheckout = nil, taxTable = nil, getItFast = nil, shipmentTrackingNumber = nil, shippingServiceUsed = nil, defaultShippingCost = nil, insuranceDetails = nil, internationalInsuranceDetails = nil, shippingDiscountProfileID = nil, flatShippingDiscount = nil, calculatedShippingDiscount = nil, promotionalShippingDiscount = nil, internationalShippingDiscountProfileID = nil, internationalFlatShippingDiscount = nil, internationalCalculatedShippingDiscount = nil, internationalPromotionalShippingDiscount = nil, promotionalShippingDiscountDetails = nil)
+  def initialize(allowPaymentEdit = nil, applyShippingDiscount = nil, calculatedShippingRate = nil, changePaymentInstructions = nil, insuranceFee = nil, insuranceOption = nil, insuranceWanted = nil, paymentEdited = nil, paymentInstructions = nil, salesTax = nil, shippingRateErrorMessage = nil, shippingRateType = nil, shippingServiceOptions = [], internationalShippingServiceOption = [], shippingType = nil, sellingManagerSalesRecordNumber = nil, thirdPartyCheckout = nil, taxTable = nil, getItFast = nil, shipmentTrackingNumber = nil, shippingServiceUsed = nil, defaultShippingCost = nil, insuranceDetails = nil, internationalInsuranceDetails = nil, shippingDiscountProfileID = nil, flatShippingDiscount = nil, calculatedShippingDiscount = nil, promotionalShippingDiscount = nil, internationalShippingDiscountProfileID = nil, internationalFlatShippingDiscount = nil, internationalCalculatedShippingDiscount = nil, internationalPromotionalShippingDiscount = nil, promotionalShippingDiscountDetails = nil, cODCost = nil)
     @allowPaymentEdit = allowPaymentEdit
     @applyShippingDiscount = applyShippingDiscount
     @calculatedShippingRate = calculatedShippingRate
@@ -23276,6 +24054,7 @@ class ShippingDetailsType
     @internationalCalculatedShippingDiscount = internationalCalculatedShippingDiscount
     @internationalPromotionalShippingDiscount = internationalPromotionalShippingDiscount
     @promotionalShippingDiscountDetails = promotionalShippingDiscountDetails
+    @cODCost = cODCost
     @__xmlele_any = nil
   end
 end
@@ -23318,6 +24097,31 @@ class ShippingLocationDetailsType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}ShippingPackageDetailsType
+#   packageID - SOAP::SOAPInt
+#   description - SOAP::SOAPString
+#   shippingPackage - ShippingPackageCodeType
+#   default - SOAP::SOAPBoolean
+class ShippingPackageDetailsType
+  attr_accessor :packageID
+  attr_accessor :description
+  attr_accessor :shippingPackage
+  attr_accessor :default
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(packageID = nil, description = nil, shippingPackage = nil, default = nil)
+    @packageID = packageID
+    @description = description
+    @shippingPackage = shippingPackage
+    @default = default
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}ShippingServiceDetailsType
 #   description - SOAP::SOAPString
 #   expeditedService - SOAP::SOAPBoolean
@@ -23332,6 +24136,8 @@ end
 #   dimensionsRequired - SOAP::SOAPBoolean
 #   validForSellingFlow - SOAP::SOAPBoolean
 #   surchargeApplicable - SOAP::SOAPBoolean
+#   shippingCarrier - ShippingCarrierCodeType
+#   cODService - SOAP::SOAPBoolean
 class ShippingServiceDetailsType
   attr_accessor :description
   attr_accessor :expeditedService
@@ -23346,13 +24152,15 @@ class ShippingServiceDetailsType
   attr_accessor :dimensionsRequired
   attr_accessor :validForSellingFlow
   attr_accessor :surchargeApplicable
+  attr_accessor :shippingCarrier
+  attr_accessor :cODService
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(description = nil, expeditedService = nil, internationalService = nil, shippingService = nil, shippingServiceID = nil, shippingTimeMax = nil, shippingTimeMin = nil, shippingServiceCode = nil, serviceType = [], shippingPackage = [], dimensionsRequired = nil, validForSellingFlow = nil, surchargeApplicable = nil)
+  def initialize(description = nil, expeditedService = nil, internationalService = nil, shippingService = nil, shippingServiceID = nil, shippingTimeMax = nil, shippingTimeMin = nil, shippingServiceCode = nil, serviceType = [], shippingPackage = [], dimensionsRequired = nil, validForSellingFlow = nil, surchargeApplicable = nil, shippingCarrier = [], cODService = nil)
     @description = description
     @expeditedService = expeditedService
     @internationalService = internationalService
@@ -23366,6 +24174,8 @@ class ShippingServiceDetailsType
     @dimensionsRequired = dimensionsRequired
     @validForSellingFlow = validForSellingFlow
     @surchargeApplicable = surchargeApplicable
+    @shippingCarrier = shippingCarrier
+    @cODService = cODService
     @__xmlele_any = nil
   end
 end
@@ -23380,6 +24190,7 @@ end
 #   shippingTimeMin - SOAP::SOAPInt
 #   shippingTimeMax - SOAP::SOAPInt
 #   shippingSurcharge - AmountType
+#   freeShipping - SOAP::SOAPBoolean
 class ShippingServiceOptionsType
   attr_accessor :shippingInsuranceCost
   attr_accessor :shippingService
@@ -23390,13 +24201,14 @@ class ShippingServiceOptionsType
   attr_accessor :shippingTimeMin
   attr_accessor :shippingTimeMax
   attr_accessor :shippingSurcharge
+  attr_accessor :freeShipping
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(shippingInsuranceCost = nil, shippingService = nil, shippingServiceCost = nil, shippingServiceAdditionalCost = nil, shippingServicePriority = nil, expeditedService = nil, shippingTimeMin = nil, shippingTimeMax = nil, shippingSurcharge = nil)
+  def initialize(shippingInsuranceCost = nil, shippingService = nil, shippingServiceCost = nil, shippingServiceAdditionalCost = nil, shippingServicePriority = nil, expeditedService = nil, shippingTimeMin = nil, shippingTimeMax = nil, shippingSurcharge = nil, freeShipping = nil)
     @shippingInsuranceCost = shippingInsuranceCost
     @shippingService = shippingService
     @shippingServiceCost = shippingServiceCost
@@ -23406,6 +24218,7 @@ class ShippingServiceOptionsType
     @shippingTimeMin = shippingTimeMin
     @shippingTimeMax = shippingTimeMax
     @shippingSurcharge = shippingSurcharge
+    @freeShipping = freeShipping
     @__xmlele_any = nil
   end
 end
@@ -23464,6 +24277,9 @@ end
 #   safePaymentRequired - SOAP::SOAPBoolean
 #   classifiedAdPayPerLeadEnabled - SOAP::SOAPBoolean
 #   itemSpecificsEnabled - ItemSpecificsEnabledCodeType
+#   paisaPayFullEscrowEnabled - SOAP::SOAPBoolean
+#   classifiedAdAutoAcceptEnabled - SOAP::SOAPBoolean
+#   bestOfferAutoAcceptEnabled - SOAP::SOAPBoolean
 class SiteDefaultsType
   attr_accessor :listingDuration
   attr_accessor :shippingTermsRequired
@@ -23505,13 +24321,16 @@ class SiteDefaultsType
   attr_accessor :safePaymentRequired
   attr_accessor :classifiedAdPayPerLeadEnabled
   attr_accessor :itemSpecificsEnabled
+  attr_accessor :paisaPayFullEscrowEnabled
+  attr_accessor :classifiedAdAutoAcceptEnabled
+  attr_accessor :bestOfferAutoAcceptEnabled
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(listingDuration = [], shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil, localMarketSpecialitySubscription = nil, localMarketRegularSubscription = nil, localMarketPremiumSubscription = nil, localMarketNonSubscription = nil, expressEnabled = nil, expressPicturesRequired = nil, expressConditionRequired = nil, minimumReservePrice = nil, sellerContactDetailsEnabled = nil, transactionConfirmationRequestEnabled = nil, storeInventoryEnabled = nil, skypeMeTransactionalEnabled = nil, skypeMeNonTransactionalEnabled = nil, localListingDistancesRegular = nil, localListingDistancesSpecialty = nil, localListingDistancesNonSubscription = nil, classifiedAdPaymentMethodEnabled = nil, classifiedAdShippingMethodEnabled = nil, classifiedAdBestOfferEnabled = nil, classifiedAdCounterOfferEnabled = nil, classifiedAdAutoDeclineEnabled = nil, classifiedAdContactByPhoneEnabled = nil, classifiedAdContactByEmailEnabled = nil, safePaymentRequired = nil, classifiedAdPayPerLeadEnabled = nil, itemSpecificsEnabled = nil)
+  def initialize(listingDuration = [], shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil, localMarketSpecialitySubscription = nil, localMarketRegularSubscription = nil, localMarketPremiumSubscription = nil, localMarketNonSubscription = nil, expressEnabled = nil, expressPicturesRequired = nil, expressConditionRequired = nil, minimumReservePrice = nil, sellerContactDetailsEnabled = nil, transactionConfirmationRequestEnabled = nil, storeInventoryEnabled = nil, skypeMeTransactionalEnabled = nil, skypeMeNonTransactionalEnabled = nil, localListingDistancesRegular = nil, localListingDistancesSpecialty = nil, localListingDistancesNonSubscription = nil, classifiedAdPaymentMethodEnabled = nil, classifiedAdShippingMethodEnabled = nil, classifiedAdBestOfferEnabled = nil, classifiedAdCounterOfferEnabled = nil, classifiedAdAutoDeclineEnabled = nil, classifiedAdContactByPhoneEnabled = nil, classifiedAdContactByEmailEnabled = nil, safePaymentRequired = nil, classifiedAdPayPerLeadEnabled = nil, itemSpecificsEnabled = nil, paisaPayFullEscrowEnabled = nil, classifiedAdAutoAcceptEnabled = nil, bestOfferAutoAcceptEnabled = nil)
     @listingDuration = listingDuration
     @shippingTermsRequired = shippingTermsRequired
     @bestOfferEnabled = bestOfferEnabled
@@ -23552,6 +24371,9 @@ class SiteDefaultsType
     @safePaymentRequired = safePaymentRequired
     @classifiedAdPayPerLeadEnabled = classifiedAdPayPerLeadEnabled
     @itemSpecificsEnabled = itemSpecificsEnabled
+    @paisaPayFullEscrowEnabled = paisaPayFullEscrowEnabled
+    @classifiedAdAutoAcceptEnabled = classifiedAdAutoAcceptEnabled
+    @bestOfferAutoAcceptEnabled = bestOfferAutoAcceptEnabled
     @__xmlele_any = nil
   end
 end
@@ -24356,6 +25178,7 @@ end
 #   paymentMethodUsed - BuyerPaymentMethodCodeType
 #   completeStatus - CompleteStatusCodeType
 #   buyerSelectedShipping - SOAP::SOAPBoolean
+#   paymentHoldStatus - PaymentHoldStatusCodeType
 class TransactionStatusType
   attr_accessor :eBayPaymentStatus
   attr_accessor :checkoutStatus
@@ -24363,19 +25186,21 @@ class TransactionStatusType
   attr_accessor :paymentMethodUsed
   attr_accessor :completeStatus
   attr_accessor :buyerSelectedShipping
+  attr_accessor :paymentHoldStatus
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(eBayPaymentStatus = nil, checkoutStatus = nil, lastTimeModified = nil, paymentMethodUsed = nil, completeStatus = nil, buyerSelectedShipping = nil)
+  def initialize(eBayPaymentStatus = nil, checkoutStatus = nil, lastTimeModified = nil, paymentMethodUsed = nil, completeStatus = nil, buyerSelectedShipping = nil, paymentHoldStatus = nil)
     @eBayPaymentStatus = eBayPaymentStatus
     @checkoutStatus = checkoutStatus
     @lastTimeModified = lastTimeModified
     @paymentMethodUsed = paymentMethodUsed
     @completeStatus = completeStatus
     @buyerSelectedShipping = buyerSelectedShipping
+    @paymentHoldStatus = paymentHoldStatus
     @__xmlele_any = nil
   end
 end
@@ -24418,6 +25243,8 @@ end
 #   platform - TransactionPlatformCodeType
 #   cartID - SOAP::SOAPString
 #   sellerContactBuyerByEmail - SOAP::SOAPBoolean
+#   payPalEmailAddress - SOAP::SOAPString
+#   paisaPayID - SOAP::SOAPString
 class TransactionType
   attr_accessor :amountPaid
   attr_accessor :adjustmentAmount
@@ -24456,13 +25283,15 @@ class TransactionType
   attr_accessor :platform
   attr_accessor :cartID
   attr_accessor :sellerContactBuyerByEmail
+  attr_accessor :payPalEmailAddress
+  attr_accessor :paisaPayID
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(amountPaid = nil, adjustmentAmount = nil, convertedAdjustmentAmount = nil, buyer = nil, shippingDetails = nil, convertedAmountPaid = nil, convertedTransactionPrice = nil, createdDate = nil, depositType = nil, item = nil, quantityPurchased = nil, status = nil, transactionID = nil, transactionPrice = nil, bestOfferSale = nil, vATPercent = nil, externalTransaction = [], sellingManagerProductDetails = nil, shippingServiceSelected = nil, buyerMessage = nil, dutchAuctionBid = nil, buyerPaidStatus = nil, sellerPaidStatus = nil, paidTime = nil, shippedTime = nil, totalPrice = nil, feedbackLeft = nil, feedbackReceived = nil, containingOrder = nil, finalValueFee = nil, transactionPlatform = nil, listingCheckoutRedirectPreference = nil, refundArray = nil, transactionSiteID = nil, platform = nil, cartID = nil, sellerContactBuyerByEmail = nil)
+  def initialize(amountPaid = nil, adjustmentAmount = nil, convertedAdjustmentAmount = nil, buyer = nil, shippingDetails = nil, convertedAmountPaid = nil, convertedTransactionPrice = nil, createdDate = nil, depositType = nil, item = nil, quantityPurchased = nil, status = nil, transactionID = nil, transactionPrice = nil, bestOfferSale = nil, vATPercent = nil, externalTransaction = [], sellingManagerProductDetails = nil, shippingServiceSelected = nil, buyerMessage = nil, dutchAuctionBid = nil, buyerPaidStatus = nil, sellerPaidStatus = nil, paidTime = nil, shippedTime = nil, totalPrice = nil, feedbackLeft = nil, feedbackReceived = nil, containingOrder = nil, finalValueFee = nil, transactionPlatform = nil, listingCheckoutRedirectPreference = nil, refundArray = nil, transactionSiteID = nil, platform = nil, cartID = nil, sellerContactBuyerByEmail = nil, payPalEmailAddress = nil, paisaPayID = nil)
     @amountPaid = amountPaid
     @adjustmentAmount = adjustmentAmount
     @convertedAdjustmentAmount = convertedAdjustmentAmount
@@ -24500,6 +25329,8 @@ class TransactionType
     @platform = platform
     @cartID = cartID
     @sellerContactBuyerByEmail = sellerContactBuyerByEmail
+    @payPalEmailAddress = payPalEmailAddress
+    @paisaPayID = paisaPayID
     @__xmlele_any = nil
   end
 end
@@ -24645,6 +25476,7 @@ end
 #   sellerPaymentMethod - SellerPaymentMethodCodeType
 #   biddingSummary - BiddingSummaryType
 #   userAnonymized - SOAP::SOAPBoolean
+#   uniqueNeutralFeedbackCount - SOAP::SOAPInt
 class UserType
   attr_accessor :aboutMePage
   attr_accessor :eIASToken
@@ -24684,13 +25516,14 @@ class UserType
   attr_accessor :sellerPaymentMethod
   attr_accessor :biddingSummary
   attr_accessor :userAnonymized
+  attr_accessor :uniqueNeutralFeedbackCount
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(aboutMePage = nil, eIASToken = nil, rESTToken = nil, email = nil, feedbackScore = nil, uniqueNegativeFeedbackCount = nil, uniquePositiveFeedbackCount = nil, positiveFeedbackPercent = nil, feedbackPrivate = nil, feedbackRatingStar = nil, iDVerified = nil, eBayGoodStanding = nil, newUser = nil, registrationAddress = nil, registrationDate = nil, site = nil, status = nil, userID = nil, userIDChanged = nil, userIDLastChanged = nil, vATStatus = nil, buyerInfo = nil, sellerInfo = nil, charityAffiliations = nil, charitySeller = nil, payPalAccountLevel = nil, payPalAccountType = nil, payPalAccountStatus = nil, userSubscription = [], siteVerified = nil, skypeID = [], eBayWikiReadOnly = nil, tUVLevel = nil, vATID = nil, motorsDealer = nil, sellerPaymentMethod = nil, biddingSummary = nil, userAnonymized = nil)
+  def initialize(aboutMePage = nil, eIASToken = nil, rESTToken = nil, email = nil, feedbackScore = nil, uniqueNegativeFeedbackCount = nil, uniquePositiveFeedbackCount = nil, positiveFeedbackPercent = nil, feedbackPrivate = nil, feedbackRatingStar = nil, iDVerified = nil, eBayGoodStanding = nil, newUser = nil, registrationAddress = nil, registrationDate = nil, site = nil, status = nil, userID = nil, userIDChanged = nil, userIDLastChanged = nil, vATStatus = nil, buyerInfo = nil, sellerInfo = nil, charityAffiliations = nil, charitySeller = nil, payPalAccountLevel = nil, payPalAccountType = nil, payPalAccountStatus = nil, userSubscription = [], siteVerified = nil, skypeID = [], eBayWikiReadOnly = nil, tUVLevel = nil, vATID = nil, motorsDealer = nil, sellerPaymentMethod = nil, biddingSummary = nil, userAnonymized = nil, uniqueNeutralFeedbackCount = nil)
     @aboutMePage = aboutMePage
     @eIASToken = eIASToken
     @rESTToken = rESTToken
@@ -24729,6 +25562,7 @@ class UserType
     @sellerPaymentMethod = sellerPaymentMethod
     @biddingSummary = biddingSummary
     @userAnonymized = userAnonymized
+    @uniqueNeutralFeedbackCount = uniqueNeutralFeedbackCount
     @__xmlele_any = nil
   end
 end
@@ -24913,6 +25747,74 @@ class WantItNowPostType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}WishListEntryType
+#   item - ItemType
+#   product - ExpressProductType
+#   notes - SOAP::SOAPString
+#   creationDate - SOAP::SOAPDateTime
+#   quantityWanted - SOAP::SOAPInt
+#   quantityReceived - SOAP::SOAPInt
+class WishListEntryType
+  attr_accessor :item
+  attr_accessor :product
+  attr_accessor :notes
+  attr_accessor :creationDate
+  attr_accessor :quantityWanted
+  attr_accessor :quantityReceived
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(item = nil, product = nil, notes = nil, creationDate = nil, quantityWanted = nil, quantityReceived = nil)
+    @item = item
+    @product = product
+    @notes = notes
+    @creationDate = creationDate
+    @quantityWanted = quantityWanted
+    @quantityReceived = quantityReceived
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}WishListType
+#   wishListID - SOAP::SOAPString
+#   wishListURL - SOAP::SOAPAnyURI
+#   name - SOAP::SOAPString
+#   description - SOAP::SOAPString
+#   firstName - SOAP::SOAPString
+#   lastName - SOAP::SOAPString
+#   userLocation - SOAP::SOAPString
+#   wishListEntry - WishListEntryType
+class WishListType
+  attr_accessor :wishListID
+  attr_accessor :wishListURL
+  attr_accessor :name
+  attr_accessor :description
+  attr_accessor :firstName
+  attr_accessor :lastName
+  attr_accessor :userLocation
+  attr_accessor :wishListEntry
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(wishListID = nil, wishListURL = nil, name = nil, description = nil, firstName = nil, lastName = nil, userLocation = nil, wishListEntry = [])
+    @wishListID = wishListID
+    @wishListURL = wishListURL
+    @name = name
+    @description = description
+    @firstName = firstName
+    @lastName = lastName
+    @userLocation = userLocation
+    @wishListEntry = wishListEntry
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}XSLFileType
 #   fileName - SOAP::SOAPString
 #   fileVersion - SOAP::SOAPString
@@ -24964,6 +25866,8 @@ class BuyerPaymentMethodCodeType < ::String
   Other = BuyerPaymentMethodCodeType.new("Other")
   OtherOnlinePayments = BuyerPaymentMethodCodeType.new("OtherOnlinePayments")
   PaisaPayAccepted = BuyerPaymentMethodCodeType.new("PaisaPayAccepted")
+  PaisaPayEscrow = BuyerPaymentMethodCodeType.new("PaisaPayEscrow")
+  PaisaPayEscrowEMI = BuyerPaymentMethodCodeType.new("PaisaPayEscrowEMI")
   PayPal = BuyerPaymentMethodCodeType.new("PayPal")
   PaymentSeeDescription = BuyerPaymentMethodCodeType.new("PaymentSeeDescription")
   PersonalCheck = BuyerPaymentMethodCodeType.new("PersonalCheck")
@@ -25280,6 +26184,8 @@ class AccountDetailEntryCodeType < ::String
   CreditHighlight = AccountDetailEntryCodeType.new("CreditHighlight")
   CreditIPIXPhoto = AccountDetailEntryCodeType.new("CreditIPIXPhoto")
   CreditIPIXSlideShow = AccountDetailEntryCodeType.new("CreditIPIXSlideShow")
+  CreditImmoProFeatureFee = AccountDetailEntryCodeType.new("CreditImmoProFeatureFee")
+  CreditImmoProFee = AccountDetailEntryCodeType.new("CreditImmoProFee")
   CreditInsertion = AccountDetailEntryCodeType.new("CreditInsertion")
   CreditInsertionFee = AccountDetailEntryCodeType.new("CreditInsertionFee")
   CreditInsertionFixedPrice = AccountDetailEntryCodeType.new("CreditInsertionFixedPrice")
@@ -25293,6 +26199,8 @@ class AccountDetailEntryCodeType < ::String
   CreditPictureShow = AccountDetailEntryCodeType.new("CreditPictureShow")
   CreditPrivateListing = AccountDetailEntryCodeType.new("CreditPrivateListing")
   CreditRealEstate30DaysListing = AccountDetailEntryCodeType.new("CreditRealEstate30DaysListing")
+  CreditRealEstateProFeatureFee = AccountDetailEntryCodeType.new("CreditRealEstateProFeatureFee")
+  CreditRealEstateProFee = AccountDetailEntryCodeType.new("CreditRealEstateProFee")
   CreditReserve = AccountDetailEntryCodeType.new("CreditReserve")
   CreditSMBasic = AccountDetailEntryCodeType.new("CreditSMBasic")
   CreditSMBasicPro = AccountDetailEntryCodeType.new("CreditSMBasicPro")
@@ -25364,6 +26272,8 @@ class AccountDetailEntryCodeType < ::String
   FlagDDPaymentConfirmed = AccountDetailEntryCodeType.new("FlagDDPaymentConfirmed")
   ForeignFundsCheckReversal = AccountDetailEntryCodeType.new("ForeignFundsCheckReversal")
   ForeignFundsConvert = AccountDetailEntryCodeType.new("ForeignFundsConvert")
+  ImmoProFeatureFee = AccountDetailEntryCodeType.new("ImmoProFeatureFee")
+  ImmoProFee = AccountDetailEntryCodeType.new("ImmoProFee")
   InternationalListingCredit = AccountDetailEntryCodeType.new("InternationalListingCredit")
   InternationalListingFee = AccountDetailEntryCodeType.new("InternationalListingFee")
   InvoiceCreditBalance = AccountDetailEntryCodeType.new("InvoiceCreditBalance")
@@ -25424,6 +26334,8 @@ class AccountDetailEntryCodeType < ::String
   ProPackPlusBundleFee = AccountDetailEntryCodeType.new("ProPackPlusBundleFee")
   ProPackPlusBundleFeeCredit = AccountDetailEntryCodeType.new("ProPackPlusBundleFeeCredit")
   PromotionalCredit = AccountDetailEntryCodeType.new("PromotionalCredit")
+  RealEstateProFeatureFee = AccountDetailEntryCodeType.new("RealEstateProFeatureFee")
+  RealEstateProFee = AccountDetailEntryCodeType.new("RealEstateProFee")
   ReferrerCredit = AccountDetailEntryCodeType.new("ReferrerCredit")
   ReferrerDebit = AccountDetailEntryCodeType.new("ReferrerDebit")
   RefundCC = AccountDetailEntryCodeType.new("RefundCC")
@@ -25599,13 +26511,17 @@ end
 # {urn:ebay:apis:eBLBaseComponents}BidActionCodeType
 class BidActionCodeType < ::String
   Absentee = BidActionCodeType.new("Absentee")
+  Accept = BidActionCodeType.new("Accept")
   AutoCancel = BidActionCodeType.new("AutoCancel")
   AutoRetraction = BidActionCodeType.new("AutoRetraction")
   Bid = BidActionCodeType.new("Bid")
   BuyItNow = BidActionCodeType.new("BuyItNow")
   Cancelled = BidActionCodeType.new("Cancelled")
+  Counter = BidActionCodeType.new("Counter")
   CustomCode = BidActionCodeType.new("CustomCode")
+  Decline = BidActionCodeType.new("Decline")
   NotUsed = BidActionCodeType.new("NotUsed")
+  Offer = BidActionCodeType.new("Offer")
   Purchase = BidActionCodeType.new("Purchase")
   Retraction = BidActionCodeType.new("Retraction")
   Unknown = BidActionCodeType.new("Unknown")
@@ -25967,6 +26883,7 @@ class CountryCodeType < ::String
   MA = CountryCodeType.new("MA")
   MC = CountryCodeType.new("MC")
   MD = CountryCodeType.new("MD")
+  ME = CountryCodeType.new("ME")
   MG = CountryCodeType.new("MG")
   MH = CountryCodeType.new("MH")
   MK = CountryCodeType.new("MK")
@@ -26019,6 +26936,7 @@ class CountryCodeType < ::String
   QP = CountryCodeType.new("QP")
   RE = CountryCodeType.new("RE")
   RO = CountryCodeType.new("RO")
+  RS = CountryCodeType.new("RS")
   RU = CountryCodeType.new("RU")
   RW = CountryCodeType.new("RW")
   SA = CountryCodeType.new("SA")
@@ -26309,7 +27227,10 @@ class DetailNameCodeType < ::String
   ItemSpecificDetails = DetailNameCodeType.new("ItemSpecificDetails")
   PaymentOptionDetails = DetailNameCodeType.new("PaymentOptionDetails")
   RegionDetails = DetailNameCodeType.new("RegionDetails")
+  RegionOfOriginDetails = DetailNameCodeType.new("RegionOfOriginDetails")
+  ShippingCarrierDetails = DetailNameCodeType.new("ShippingCarrierDetails")
   ShippingLocationDetails = DetailNameCodeType.new("ShippingLocationDetails")
+  ShippingPackageDetails = DetailNameCodeType.new("ShippingPackageDetails")
   ShippingServiceDetails = DetailNameCodeType.new("ShippingServiceDetails")
   SiteDetails = DetailNameCodeType.new("SiteDetails")
   TaxJurisdiction = DetailNameCodeType.new("TaxJurisdiction")
@@ -26483,9 +27404,11 @@ end
 class FeatureIDCodeType < ::String
   AdFormatEnabled = FeatureIDCodeType.new("AdFormatEnabled")
   BasicUpgradePack = FeatureIDCodeType.new("BasicUpgradePack")
+  BestOfferAutoAcceptEnabled = FeatureIDCodeType.new("BestOfferAutoAcceptEnabled")
   BestOfferAutoDeclineEnabled = FeatureIDCodeType.new("BestOfferAutoDeclineEnabled")
   BestOfferCounterEnabled = FeatureIDCodeType.new("BestOfferCounterEnabled")
   BestOfferEnabled = FeatureIDCodeType.new("BestOfferEnabled")
+  ClassifiedAdAutoAcceptEnabled = FeatureIDCodeType.new("ClassifiedAdAutoAcceptEnabled")
   ClassifiedAdAutoDeclineEnabled = FeatureIDCodeType.new("ClassifiedAdAutoDeclineEnabled")
   ClassifiedAdBestOfferEnabled = FeatureIDCodeType.new("ClassifiedAdBestOfferEnabled")
   ClassifiedAdContactByEmailAvailable = FeatureIDCodeType.new("ClassifiedAdContactByEmailAvailable")
@@ -26512,6 +27435,7 @@ class FeatureIDCodeType < ::String
   LocalMarketSpecialitySubscription = FeatureIDCodeType.new("LocalMarketSpecialitySubscription")
   MaximumBestOffersAllowed = FeatureIDCodeType.new("MaximumBestOffersAllowed")
   MinimumReservePrice = FeatureIDCodeType.new("MinimumReservePrice")
+  PaisaPayFullEscrowEnabled = FeatureIDCodeType.new("PaisaPayFullEscrowEnabled")
   ProPack = FeatureIDCodeType.new("ProPack")
   ProPackPlus = FeatureIDCodeType.new("ProPackPlus")
   SafePaymentRequired = FeatureIDCodeType.new("SafePaymentRequired")
@@ -26552,6 +27476,7 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}FeedbackResponseCodeType
 class FeedbackResponseCodeType < ::String
+  CustomCode = FeedbackResponseCodeType.new("CustomCode")
   FollowUp = FeedbackResponseCodeType.new("FollowUp")
   Reply = FeedbackResponseCodeType.new("Reply")
 end
@@ -26621,6 +27546,7 @@ end
 # {urn:ebay:apis:eBLBaseComponents}GranularityLevelCodeType
 class GranularityLevelCodeType < ::String
   Coarse = GranularityLevelCodeType.new("Coarse")
+  CustomCode = GranularityLevelCodeType.new("CustomCode")
   Fine = GranularityLevelCodeType.new("Fine")
   Medium = GranularityLevelCodeType.new("Medium")
 end
@@ -26859,9 +27785,11 @@ class ListingStatusCodeType < ::String
   Ended = ListingStatusCodeType.new("Ended")
 end
 
-# {urn:ebay:apis:eBLBaseComponents}ListingSubtypeEnum
-class ListingSubtypeEnum < ::String
-  ClassifiedAd = ListingSubtypeEnum.new("ClassifiedAd")
+# {urn:ebay:apis:eBLBaseComponents}ListingSubtypeCodeType
+class ListingSubtypeCodeType < ::String
+  ClassifiedAd = ListingSubtypeCodeType.new("ClassifiedAd")
+  CustomCode = ListingSubtypeCodeType.new("CustomCode")
+  LocalMarketBestOfferOnly = ListingSubtypeCodeType.new("LocalMarketBestOfferOnly")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ListingTypeCodeType
@@ -26948,6 +27876,7 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}MyMessagesAlertResolutionStatusCode
 class MyMessagesAlertResolutionStatusCode < ::String
+  CustomCode = MyMessagesAlertResolutionStatusCode.new("CustomCode")
   ResolvedByAutoResolution = MyMessagesAlertResolutionStatusCode.new("ResolvedByAutoResolution")
   ResolvedByUser = MyMessagesAlertResolutionStatusCode.new("ResolvedByUser")
   Unresolved = MyMessagesAlertResolutionStatusCode.new("Unresolved")
@@ -26998,27 +27927,42 @@ class NotificationEventTypeCodeType < ::String
   AskSellerQuestion = NotificationEventTypeCodeType.new("AskSellerQuestion")
   AuctionCheckoutComplete = NotificationEventTypeCodeType.new("AuctionCheckoutComplete")
   BestOffer = NotificationEventTypeCodeType.new("BestOffer")
+  BestOfferDeclined = NotificationEventTypeCodeType.new("BestOfferDeclined")
+  BestOfferPlaced = NotificationEventTypeCodeType.new("BestOfferPlaced")
+  BidPlaced = NotificationEventTypeCodeType.new("BidPlaced")
+  BidReceived = NotificationEventTypeCodeType.new("BidReceived")
   BuyerResponseDispute = NotificationEventTypeCodeType.new("BuyerResponseDispute")
   Checkout = NotificationEventTypeCodeType.new("Checkout")
   CheckoutBuyerRequestsTotal = NotificationEventTypeCodeType.new("CheckoutBuyerRequestsTotal")
+  CounterOfferReceived = NotificationEventTypeCodeType.new("CounterOfferReceived")
   CustomCode = NotificationEventTypeCodeType.new("CustomCode")
   EmailAddressChanged = NotificationEventTypeCodeType.new("EmailAddressChanged")
   EndOfAuction = NotificationEventTypeCodeType.new("EndOfAuction")
   Feedback = NotificationEventTypeCodeType.new("Feedback")
   FeedbackForSeller = NotificationEventTypeCodeType.new("FeedbackForSeller")
+  FeedbackLeft = NotificationEventTypeCodeType.new("FeedbackLeft")
+  FeedbackReceived = NotificationEventTypeCodeType.new("FeedbackReceived")
+  FeedbackStarChanged = NotificationEventTypeCodeType.new("FeedbackStarChanged")
   FixedPriceEndOfTransaction = NotificationEventTypeCodeType.new("FixedPriceEndOfTransaction")
   FixedPriceTransaction = NotificationEventTypeCodeType.new("FixedPriceTransaction")
   INRBuyerClosedDispute = NotificationEventTypeCodeType.new("INRBuyerClosedDispute")
   INRBuyerOpenedDispute = NotificationEventTypeCodeType.new("INRBuyerOpenedDispute")
   INRBuyerRespondedToDispute = NotificationEventTypeCodeType.new("INRBuyerRespondedToDispute")
   INRSellerRespondedToDispute = NotificationEventTypeCodeType.new("INRSellerRespondedToDispute")
+  ItemAddedToBidGroup = NotificationEventTypeCodeType.new("ItemAddedToBidGroup")
+  ItemAddedToWatchList = NotificationEventTypeCodeType.new("ItemAddedToWatchList")
   ItemClosed = NotificationEventTypeCodeType.new("ItemClosed")
   ItemExtended = NotificationEventTypeCodeType.new("ItemExtended")
   ItemListed = NotificationEventTypeCodeType.new("ItemListed")
+  ItemLost = NotificationEventTypeCodeType.new("ItemLost")
+  ItemRemovedFromBidGroup = NotificationEventTypeCodeType.new("ItemRemovedFromBidGroup")
+  ItemRemovedFromWatchList = NotificationEventTypeCodeType.new("ItemRemovedFromWatchList")
   ItemRevised = NotificationEventTypeCodeType.new("ItemRevised")
   ItemRevisedAddCharity = NotificationEventTypeCodeType.new("ItemRevisedAddCharity")
   ItemSold = NotificationEventTypeCodeType.new("ItemSold")
   ItemSuspended = NotificationEventTypeCodeType.new("ItemSuspended")
+  ItemUnsold = NotificationEventTypeCodeType.new("ItemUnsold")
+  ItemWon = NotificationEventTypeCodeType.new("ItemWon")
   MyMessagesAlert = NotificationEventTypeCodeType.new("MyMessagesAlert")
   MyMessagesAlertHeader = NotificationEventTypeCodeType.new("MyMessagesAlertHeader")
   MyMessagesM2MMessage = NotificationEventTypeCodeType.new("MyMessagesM2MMessage")
@@ -27126,9 +28070,20 @@ class PayPalAccountTypeCodeType < ::String
   Unknown = PayPalAccountTypeCodeType.new("Unknown")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}PaymentHoldStatusCodeType
+class PaymentHoldStatusCodeType < ::String
+  CustomCode = PaymentHoldStatusCodeType.new("CustomCode")
+  MerchantHold = PaymentHoldStatusCodeType.new("MerchantHold")
+  None = PaymentHoldStatusCodeType.new("None")
+  PaymentReview = PaymentHoldStatusCodeType.new("PaymentReview")
+  Released = PaymentHoldStatusCodeType.new("Released")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}PaymentMethodSearchCodeType
 class PaymentMethodSearchCodeType < ::String
+  CustomCode = PaymentMethodSearchCodeType.new("CustomCode")
   PaisaPay = PaymentMethodSearchCodeType.new("PaisaPay")
+  PaisaPayEscrowEMI = PaymentMethodSearchCodeType.new("PaisaPayEscrowEMI")
   PayPal = PaymentMethodSearchCodeType.new("PayPal")
   PayPalOrPaisaPay = PaymentMethodSearchCodeType.new("PayPalOrPaisaPay")
 end
@@ -27228,6 +28183,13 @@ class PictureSourceCodeType < ::String
   Vendor = PictureSourceCodeType.new("Vendor")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}PictureUploadPolicyCodeType
+class PictureUploadPolicyCodeType < ::String
+  Add = PictureUploadPolicyCodeType.new("Add")
+  ClearAndAdd = PictureUploadPolicyCodeType.new("ClearAndAdd")
+  CustomCode = PictureUploadPolicyCodeType.new("CustomCode")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}ProductSortCodeType
 class ProductSortCodeType < ::String
   CustomCode = ProductSortCodeType.new("CustomCode")
@@ -27296,6 +28258,14 @@ class PromotionalSaleStatusCodeType < ::String
   Inactive = PromotionalSaleStatusCodeType.new("Inactive")
   Processing = PromotionalSaleStatusCodeType.new("Processing")
   Scheduled = PromotionalSaleStatusCodeType.new("Scheduled")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}PromotionalSaleTypeCodeType
+class PromotionalSaleTypeCodeType < ::String
+  CustomCode = PromotionalSaleTypeCodeType.new("CustomCode")
+  FreeShippingOnly = PromotionalSaleTypeCodeType.new("FreeShippingOnly")
+  PriceDiscountAndFreeShipping = PromotionalSaleTypeCodeType.new("PriceDiscountAndFreeShipping")
+  PriceDiscountOnly = PromotionalSaleTypeCodeType.new("PriceDiscountOnly")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}PurchasePurposeTypeCodeType
@@ -27472,6 +28442,7 @@ end
 # {urn:ebay:apis:eBLBaseComponents}SellerBusinessCodeType
 class SellerBusinessCodeType < ::String
   Commercial = SellerBusinessCodeType.new("Commercial")
+  CustomCode = SellerBusinessCodeType.new("CustomCode")
   Private = SellerBusinessCodeType.new("Private")
   Undefined = SellerBusinessCodeType.new("Undefined")
 end
@@ -27504,11 +28475,13 @@ class SellerPaymentMethodCodeType < ::String
   DirectDebitPendingSignatureMandate = SellerPaymentMethodCodeType.new("DirectDebitPendingSignatureMandate")
   EBayDirectPay = SellerPaymentMethodCodeType.new("eBayDirectPay")
   NothingOnFile = SellerPaymentMethodCodeType.new("NothingOnFile")
+  PayPal = SellerPaymentMethodCodeType.new("PayPal")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SetUserNotesActionCodeType
 class SetUserNotesActionCodeType < ::String
   AddOrUpdate = SetUserNotesActionCodeType.new("AddOrUpdate")
+  CustomCode = SetUserNotesActionCodeType.new("CustomCode")
   Delete = SetUserNotesActionCodeType.new("Delete")
 end
 
@@ -27654,15 +28627,31 @@ class ShippingServiceCodeType < ::String
   AU_EconomyAirInternational = ShippingServiceCodeType.new("AU_EconomyAirInternational")
   AU_ExpeditedInternational = ShippingServiceCodeType.new("AU_ExpeditedInternational")
   AU_Express = ShippingServiceCodeType.new("AU_Express")
+  AU_ExpressCourierInternational = ShippingServiceCodeType.new("AU_ExpressCourierInternational")
+  AU_ExpressPostInternational = ShippingServiceCodeType.new("AU_ExpressPostInternational")
   AU_ExpressPostInternationalDocuments = ShippingServiceCodeType.new("AU_ExpressPostInternationalDocuments")
   AU_ExpressWithInsurance = ShippingServiceCodeType.new("AU_ExpressWithInsurance")
   AU_Other = ShippingServiceCodeType.new("AU_Other")
   AU_OtherInternational = ShippingServiceCodeType.new("AU_OtherInternational")
   AU_Pickup = ShippingServiceCodeType.new("AU_Pickup")
+  AU_PrePaidExpressPostInternationalBox10kg = ShippingServiceCodeType.new("AU_PrePaidExpressPostInternationalBox10kg")
+  AU_PrePaidExpressPostInternationalBox20kg = ShippingServiceCodeType.new("AU_PrePaidExpressPostInternationalBox20kg")
+  AU_PrePaidExpressPostInternationalBox5kg = ShippingServiceCodeType.new("AU_PrePaidExpressPostInternationalBox5kg")
+  AU_PrePaidExpressPostInternationalEnvelopeB4 = ShippingServiceCodeType.new("AU_PrePaidExpressPostInternationalEnvelopeB4")
+  AU_PrePaidExpressPostInternationalEnvelopeC5 = ShippingServiceCodeType.new("AU_PrePaidExpressPostInternationalEnvelopeC5")
+  AU_PrePaidExpressPostInternationalSatchels2kg = ShippingServiceCodeType.new("AU_PrePaidExpressPostInternationalSatchels2kg")
+  AU_PrePaidExpressPostInternationalSatchels3kg = ShippingServiceCodeType.new("AU_PrePaidExpressPostInternationalSatchels3kg")
+  AU_PrePaidExpressPostPlatinum3kg = ShippingServiceCodeType.new("AU_PrePaidExpressPostPlatinum3kg")
+  AU_PrePaidExpressPostPlatinum500g = ShippingServiceCodeType.new("AU_PrePaidExpressPostPlatinum500g")
+  AU_PrePaidExpressPostSatchel3kg = ShippingServiceCodeType.new("AU_PrePaidExpressPostSatchel3kg")
+  AU_PrePaidExpressPostSatchel500g = ShippingServiceCodeType.new("AU_PrePaidExpressPostSatchel500g")
+  AU_PrePaidParcelPostSatchels3kg = ShippingServiceCodeType.new("AU_PrePaidParcelPostSatchels3kg")
+  AU_PrePaidParcelPostSatchels500g = ShippingServiceCodeType.new("AU_PrePaidParcelPostSatchels500g")
   AU_Registered = ShippingServiceCodeType.new("AU_Registered")
   AU_Regular = ShippingServiceCodeType.new("AU_Regular")
   AU_RegularWithInsurance = ShippingServiceCodeType.new("AU_RegularWithInsurance")
   AU_SeaMailInternational = ShippingServiceCodeType.new("AU_SeaMailInternational")
+  AU_SmallParcels = ShippingServiceCodeType.new("AU_SmallParcels")
   AU_StandardInternational = ShippingServiceCodeType.new("AU_StandardInternational")
   BEFR_DHLInternational = ShippingServiceCodeType.new("BEFR_DHLInternational")
   BEFR_DePostInternational = ShippingServiceCodeType.new("BEFR_DePostInternational")
@@ -27934,6 +28923,7 @@ class ShippingServiceCodeType < ::String
   FR_LaPosteColissimoInternational = ShippingServiceCodeType.new("FR_LaPosteColissimoInternational")
   FR_LaPosteInternationalEconomyCourier = ShippingServiceCodeType.new("FR_LaPosteInternationalEconomyCourier")
   FR_LaPosteInternationalPriorityCourier = ShippingServiceCodeType.new("FR_LaPosteInternationalPriorityCourier")
+  FR_LaPosteLetterMax = ShippingServiceCodeType.new("FR_LaPosteLetterMax")
   FR_OtherInternational = ShippingServiceCodeType.new("FR_OtherInternational")
   FR_Pickup = ShippingServiceCodeType.new("FR_Pickup")
   FR_PostOfficeLetter = ShippingServiceCodeType.new("FR_PostOfficeLetter")
@@ -27985,6 +28975,7 @@ class ShippingServiceCodeType < ::String
   IN_StandardInternational = ShippingServiceCodeType.new("IN_StandardInternational")
   IT_ExpeditedInternational = ShippingServiceCodeType.new("IT_ExpeditedInternational")
   IT_ExpressCourier = ShippingServiceCodeType.new("IT_ExpressCourier")
+  IT_ExpressPackageMaxi = ShippingServiceCodeType.new("IT_ExpressPackageMaxi")
   IT_InsuredMail = ShippingServiceCodeType.new("IT_InsuredMail")
   IT_MailRegisteredLetter = ShippingServiceCodeType.new("IT_MailRegisteredLetter")
   IT_MailRegisteredLetterWithMark = ShippingServiceCodeType.new("IT_MailRegisteredLetterWithMark")
@@ -28064,6 +29055,8 @@ class ShippingServiceCodeType < ::String
   UK_CollectInPersonInternational = ShippingServiceCodeType.new("UK_CollectInPersonInternational")
   UK_ExpeditedInternationalFlatRatePostage = ShippingServiceCodeType.new("UK_ExpeditedInternationalFlatRatePostage")
   UK_OtherCourier = ShippingServiceCodeType.new("UK_OtherCourier")
+  UK_OtherCourier24 = ShippingServiceCodeType.new("UK_OtherCourier24")
+  UK_OtherCourier48 = ShippingServiceCodeType.new("UK_OtherCourier48")
   UK_OtherCourierOrDeliveryInternational = ShippingServiceCodeType.new("UK_OtherCourierOrDeliveryInternational")
   UK_OtherInternationalPostage = ShippingServiceCodeType.new("UK_OtherInternationalPostage")
   UK_ParcelForceEuro48International = ShippingServiceCodeType.new("UK_ParcelForceEuro48International")
@@ -28108,7 +29101,9 @@ class ShippingServiceCodeType < ::String
   USPSEconomyParcel = ShippingServiceCodeType.new("USPSEconomyParcel")
   USPSExpressFlatRateEnvelope = ShippingServiceCodeType.new("USPSExpressFlatRateEnvelope")
   USPSExpressMail = ShippingServiceCodeType.new("USPSExpressMail")
+  USPSExpressMailFlatRateEnvelope = ShippingServiceCodeType.new("USPSExpressMailFlatRateEnvelope")
   USPSExpressMailInternational = ShippingServiceCodeType.new("USPSExpressMailInternational")
+  USPSExpressMailInternationalFlatRateEnvelope = ShippingServiceCodeType.new("USPSExpressMailInternationalFlatRateEnvelope")
   USPSFirstClass = ShippingServiceCodeType.new("USPSFirstClass")
   USPSFirstClassMailInternational = ShippingServiceCodeType.new("USPSFirstClassMailInternational")
   USPSGlobalExpress = ShippingServiceCodeType.new("USPSGlobalExpress")
@@ -28122,7 +29117,13 @@ class ShippingServiceCodeType < ::String
   USPSPriority = ShippingServiceCodeType.new("USPSPriority")
   USPSPriorityFlatRateBox = ShippingServiceCodeType.new("USPSPriorityFlatRateBox")
   USPSPriorityFlatRateEnvelope = ShippingServiceCodeType.new("USPSPriorityFlatRateEnvelope")
+  USPSPriorityMailFlatRateBox = ShippingServiceCodeType.new("USPSPriorityMailFlatRateBox")
+  USPSPriorityMailFlatRateEnvelope = ShippingServiceCodeType.new("USPSPriorityMailFlatRateEnvelope")
   USPSPriorityMailInternational = ShippingServiceCodeType.new("USPSPriorityMailInternational")
+  USPSPriorityMailInternationalFlatRateBox = ShippingServiceCodeType.new("USPSPriorityMailInternationalFlatRateBox")
+  USPSPriorityMailInternationalFlatRateEnvelope = ShippingServiceCodeType.new("USPSPriorityMailInternationalFlatRateEnvelope")
+  USPSPriorityMailInternationalLargeFlatRateBox = ShippingServiceCodeType.new("USPSPriorityMailInternationalLargeFlatRateBox")
+  USPSPriorityMailLargeFlatRateBox = ShippingServiceCodeType.new("USPSPriorityMailLargeFlatRateBox")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ShippingTypeCodeType
@@ -28189,6 +29190,13 @@ class SortOrderCodeType < ::String
   Ascending = SortOrderCodeType.new("Ascending")
   CustomCode = SortOrderCodeType.new("CustomCode")
   Descending = SortOrderCodeType.new("Descending")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}StatusCodeType
+class StatusCodeType < ::String
+  Active = StatusCodeType.new("Active")
+  CustomCode = StatusCodeType.new("CustomCode")
+  Inactive = StatusCodeType.new("Inactive")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}StoreCategoryUpdateActionCodeType
@@ -28303,6 +29311,7 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}SummaryFrequencyCodeType
 class SummaryFrequencyCodeType < ::String
+  CustomCode = SummaryFrequencyCodeType.new("CustomCode")
   Every31Days = SummaryFrequencyCodeType.new("Every31Days")
   Every60Days = SummaryFrequencyCodeType.new("Every60Days")
   EveryFriday = SummaryFrequencyCodeType.new("EveryFriday")
@@ -28349,6 +29358,7 @@ end
 class SummaryWindowPeriodCodeType < ::String
   CurrentMonth = SummaryWindowPeriodCodeType.new("CurrentMonth")
   CurrentWeek = SummaryWindowPeriodCodeType.new("CurrentWeek")
+  CustomCode = SummaryWindowPeriodCodeType.new("CustomCode")
   Last24Hours = SummaryWindowPeriodCodeType.new("Last24Hours")
   Last31Days = SummaryWindowPeriodCodeType.new("Last31Days")
   Last60Days = SummaryWindowPeriodCodeType.new("Last60Days")
@@ -28450,9 +29460,11 @@ class UnitCodeType < ::String
   Cm = UnitCodeType.new("cm")
   CustomCode = UnitCodeType.new("CustomCode")
   Ft = UnitCodeType.new("ft")
+  Gm = UnitCodeType.new("gm")
   Inches = UnitCodeType.new("inches")
   Kg = UnitCodeType.new("kg")
   Lbs = UnitCodeType.new("lbs")
+  Mm = UnitCodeType.new("mm")
   Oz = UnitCodeType.new("oz")
 end
 
@@ -28466,6 +29478,7 @@ class UserStatusCodeType < ::String
   CustomCode = UserStatusCodeType.new("CustomCode")
   Deleted = UserStatusCodeType.new("Deleted")
   Ghost = UserStatusCodeType.new("Ghost")
+  Guest = UserStatusCodeType.new("Guest")
   InMaintenance = UserStatusCodeType.new("InMaintenance")
   Merged = UserStatusCodeType.new("Merged")
   RegistrationCodeMailOut = UserStatusCodeType.new("RegistrationCodeMailOut")
@@ -28521,4 +29534,13 @@ class WirelessCarrierIDCodeType < ::String
   USCellular = WirelessCarrierIDCodeType.new("USCellular")
   Verizon = WirelessCarrierIDCodeType.new("Verizon")
   Vodafone = WirelessCarrierIDCodeType.new("Vodafone")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}WishListSortCodeType
+class WishListSortCodeType < ::String
+  CreationDateAscending = WishListSortCodeType.new("CreationDateAscending")
+  CreationDateDescending = WishListSortCodeType.new("CreationDateDescending")
+  CustomCode = WishListSortCodeType.new("CustomCode")
+  PriceAscending = WishListSortCodeType.new("PriceAscending")
+  PriceDescending = WishListSortCodeType.new("PriceDescending")
 end

@@ -311,6 +311,14 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
         :faults => {} }
     ],
     [ "",
+      "getExpressWishList",
+      [ ["in", "GetExpressWishListRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetExpressWishListRequest"]],
+        ["out", "GetExpressWishListResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetExpressWishListResponse"]] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal,
+        :faults => {} }
+    ],
+    [ "",
       "getFeedback",
       [ ["in", "GetFeedbackRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetFeedbackRequest"]],
         ["out", "GetFeedbackResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetFeedbackResponse"]] ],
