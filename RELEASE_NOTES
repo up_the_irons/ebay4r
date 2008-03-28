@@ -5,9 +5,14 @@ v1.1:
 
   * Upgraded to eBay API 555
 
+  * See the very important changes in v1.0 below.
+
 v1.0:
 
   * Upgraded to eBay API 529
+
+  * I never made a tarball/gem of this release, but if you really want API 529
+    instead of the newer 555, grab the "releases/1.0" tag from the git repo.
 
   **IMPORTANT** 
   
