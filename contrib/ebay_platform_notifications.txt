@@ -1,3 +1,7 @@
+[Author's note: the example code for SetNotificationPreferences below is old
+and won't work with eBay4R v1.0 or above.  See 
+examples/set_notification_preferences.rb for a more up-to-date code sample]
+
 Below is a bit of documentation contributed by David Balatero regarding eBay 
 Platform Notifications:
 
