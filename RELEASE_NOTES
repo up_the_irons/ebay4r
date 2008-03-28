@@ -61,4 +61,6 @@ v1.0:
                                              ...
                                              })
 
-
+  * SetNotificationPreferences suffers the most (of the examples) from the
+    above changes.  See examples/set_notification_preferences.rb to see how
+    it's done now.
