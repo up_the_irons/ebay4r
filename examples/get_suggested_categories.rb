@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-# $Id: get_suggested_categories.rb,v 1.2 2006/01/25 08:39:28 garrydolley Exp $
 
 $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 

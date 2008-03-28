@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-# $Id: set_notification_preferences.rb,v 1.1 2006/03/10 03:52:37 garrydolley Exp $
 
 $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 require 'eBayAPI'
