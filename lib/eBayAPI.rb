@@ -23,6 +23,23 @@
 
 #:main: README
 
+# Load SOAP4R from gem if it is available, suitable for most users.
+#
+# The gem will most likely be newer than the Ruby built-in SOAP4R and so we
+# want to avoid the error:
+#
+#   uninitialized constant SOAP::Mapping::EncodedRegistry
+#
+# If you have a different version of SOAP4R in a directory included in $RUBYLIB
+# *and* you want to use that version instead of the gem you also have
+# installed, you will most likely have to comment out this block.
+begin
+  require 'rubygems'
+  gem 'soap4r'
+rescue Exception
+  nil
+end
+
 require 'eBayDriver.rb'
 require 'RequesterCredentialsHandler.rb'
 
