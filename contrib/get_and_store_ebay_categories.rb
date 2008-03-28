@@ -193,7 +193,7 @@ while (some_parents = parents_to_process.first(concurrency)).length > 0
   end
 
   if resp.categoryCount.to_i > 0
-    [resp.categoryArray.category].flatten.each do |cat|
+    resp.categoryArray.each do |cat|
       if cat.categoryLevel.to_i == seek_depth
         if cat.leafCategory == "false"
           parents_to_process << { :id => cat.categoryID, :depth => cat.categoryLevel.to_i }
