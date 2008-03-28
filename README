@@ -24,21 +24,8 @@ git://github.com/up_the_irons/ebay4r.git
 Requirements
 ------------
 
-* SOAP4R library newer than v1.5.5.  At the time of this writing, the latest
-  version was v1.5.5, which will not work.  You have to get a snapshot that is
-  dated 11-06-2005 or newer.  You can find development snapshots here:
-
-  http://dev.ctor.org/download
-
-  So, for example, to download the 11-06-2005 snapshot (the one I personally
-  used during development), go here:
-
-  http://dev.ctor.org/download/archive/soap4r-20051106.tar.gz
-
-  Note: I _have_ seen one instance of SOAP4R v1.5.5 work out-of-the-box, and
-  that was on a Ruby v1.8.3 source install on NetBSD 2.1.  On my Debian 3.1
-  box, however, I had to install the newer snapshot.  Go figure, I don't 
-  know what the diff is...
+* SOAP4R library v1.5.7 or newer.  The specific version I'm using for testing
+  is soap4r-1.5.7.90.20070921.
 
 
 Optionals
@@ -76,6 +63,31 @@ You can download the latest and greatest code using Git, just type::
   git clone git://github.com/up_the_irons/ebay4r.git
 
 
+Important Note about Using eBay4R and Ruby on Rails
+---------------------------------------------------
+
+If you installed SOAP4R as a gem you must put the following two lines at the
+very top of your config/environment.rb::
+
+  require 'rubygems'
+  gem 'soap4r'
+
+This must be done before Rails starts auto-loading things.
+
+Additionally, you have to put those two lines in *every* Rails app you have
+on your machine, even if it doesn't use SOAP4R!  This is, allegedly, because
+ActiveSupport (in dependency.rb) wrongly loads the SOAP4R included with Ruby
+instead of your Gem.  More details can be found here:
+
+  http://dev.ctor.org/soap4r/ticket/433
+
+If you get this error, or similar, in every Rails app::
+
+  [...]/activesupport-1.4.2/lib/active_support/dependencies.rb:477:in `const_missing': uninitialized constant XSD::NS::KNOWN_TAG (NameError?)
+
+you've hit this problem.
+
+
 Getting Started
 ---------------
 
@@ -94,7 +106,7 @@ Ruby's include path, just put
 ::
 
   require 'rubygems'
-  require_gem 'ebay'
+  gem 'ebay'
 
 at the top of your programs.
 
@@ -111,7 +123,7 @@ The simplest eBay API call is "GeteBayOfficialTime".  Here's how to call it
 with eBay4R::
 
   require 'rubygems'
-  require_gem 'ebay'
+  gem 'ebay'
 
   # Put your credentials in this file
   load('myCredentials.rb')
@@ -132,7 +144,7 @@ Adding an Item
 This is a more complex example that performs a real (useful) function::
 
   require 'rubygems'
-  require_gem 'ebay'
+  gem 'ebay'
 
   load('myCredentials.rb')
 
