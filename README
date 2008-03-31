@@ -16,9 +16,10 @@ Current release can be downloaded from:
 
 http://rubyforge.org/projects/ebay4r
 
-The latest code is in the following Git repository:
+The latest code is available at both RubyForge and GitHub:
 
-git://github.com/up_the_irons/ebay4r.git
+  * git://rubyforge.org/ebay4r.git
+  * git://github.com/up_the_irons/ebay4r.git
 
 
 Requirements
