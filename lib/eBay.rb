@@ -735,6 +735,7 @@ end
 #   paid - SOAP::SOAPBoolean
 #   listingType - ListingTypeCodeType
 #   shipment - ShipmentType
+#   orderID - SOAP::SOAPString
 class CompleteSaleRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -754,12 +755,13 @@ class CompleteSaleRequestType < AbstractRequestType
   attr_accessor :paid
   attr_accessor :listingType
   attr_accessor :shipment
+  attr_accessor :orderID
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, transactionID = nil, feedbackInfo = nil, shipped = nil, paid = nil, listingType = nil, shipment = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, transactionID = nil, feedbackInfo = nil, shipped = nil, paid = nil, listingType = nil, shipment = nil, orderID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -778,6 +780,53 @@ class CompleteSaleRequestType < AbstractRequestType
     @paid = paid
     @listingType = listingType
     @shipment = shipment
+    @orderID = orderID
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ConfirmIdentityRequestType
+#   detailLevel - DetailLevelCodeType
+#   errorLanguage - SOAP::SOAPString
+#   messageID - SOAP::SOAPString
+#   version - SOAP::SOAPString
+#   endUserIP - SOAP::SOAPString
+#   errorHandling - ErrorHandlingCodeType
+#   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
+#   warningLevel - WarningLevelCodeType
+#   botBlock - BotBlockRequestType
+#   sessionID - SOAP::SOAPString
+class ConfirmIdentityRequestType < AbstractRequestType
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :endUserIP
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :outputSelector
+  attr_accessor :warningLevel
+  attr_accessor :botBlock
+  attr_reader :__xmlele_any
+  attr_accessor :sessionID
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, sessionID = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @endUserIP = endUserIP
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @outputSelector = outputSelector
+    @warningLevel = warningLevel
+    @botBlock = botBlock
+    @__xmlele_any = nil
+    @sessionID = sessionID
   end
 end
 
@@ -894,6 +943,7 @@ end
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   secretID - SOAP::SOAPString
+#   sessionID - SOAP::SOAPString
 #   includeRESTToken - SOAP::SOAPBoolean
 class FetchTokenRequestType < AbstractRequestType
   attr_accessor :detailLevel
@@ -908,13 +958,14 @@ class FetchTokenRequestType < AbstractRequestType
   attr_accessor :botBlock
   attr_reader :__xmlele_any
   attr_accessor :secretID
+  attr_accessor :sessionID
   attr_accessor :includeRESTToken
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, secretID = nil, includeRESTToken = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, secretID = nil, sessionID = nil, includeRESTToken = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -927,6 +978,7 @@ class FetchTokenRequestType < AbstractRequestType
     @botBlock = botBlock
     @__xmlele_any = nil
     @secretID = secretID
+    @sessionID = sessionID
     @includeRESTToken = includeRESTToken
   end
 end
@@ -1018,6 +1070,8 @@ end
 #   itemID - (any)
 #   status - MessageStatusTypeCodeType
 #   includeMemberMessages - SOAP::SOAPBoolean
+#   startCreationTime - SOAP::SOAPDateTime
+#   endCreationTime - SOAP::SOAPDateTime
 class GetAdFormatLeadsRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -1033,12 +1087,14 @@ class GetAdFormatLeadsRequestType < AbstractRequestType
   attr_accessor :itemID
   attr_accessor :status
   attr_accessor :includeMemberMessages
+  attr_accessor :startCreationTime
+  attr_accessor :endCreationTime
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, status = nil, includeMemberMessages = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, status = nil, includeMemberMessages = nil, startCreationTime = nil, endCreationTime = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1053,6 +1109,8 @@ class GetAdFormatLeadsRequestType < AbstractRequestType
     @itemID = itemID
     @status = status
     @includeMemberMessages = includeMemberMessages
+    @startCreationTime = startCreationTime
+    @endCreationTime = endCreationTime
   end
 end
 
@@ -1165,7 +1223,6 @@ end
 #   attributeSystemVersion - SOAP::SOAPString
 #   attributeSetID - SOAP::SOAPInt
 #   includeCategoryMappingDetails - SOAP::SOAPBoolean
-#   digitalDelivery - SOAP::SOAPBoolean
 class GetAttributesCSRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -1181,13 +1238,12 @@ class GetAttributesCSRequestType < AbstractRequestType
   attr_accessor :attributeSystemVersion
   attr_accessor :attributeSetID
   attr_accessor :includeCategoryMappingDetails
-  attr_accessor :digitalDelivery
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, attributeSystemVersion = nil, attributeSetID = [], includeCategoryMappingDetails = nil, digitalDelivery = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, attributeSystemVersion = nil, attributeSetID = [], includeCategoryMappingDetails = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1202,7 +1258,6 @@ class GetAttributesCSRequestType < AbstractRequestType
     @attributeSystemVersion = attributeSystemVersion
     @attributeSetID = attributeSetID
     @includeCategoryMappingDetails = includeCategoryMappingDetails
-    @digitalDelivery = digitalDelivery
   end
 end
 
@@ -1362,58 +1417,6 @@ class GetBidderListRequestType < AbstractRequestType
     @endTimeTo = endTimeTo
     @userID = userID
     @granularityLevel = granularityLevel
-  end
-end
-
-# {urn:ebay:apis:eBLBaseComponents}GetCartRequestType
-#   detailLevel - DetailLevelCodeType
-#   errorLanguage - SOAP::SOAPString
-#   messageID - SOAP::SOAPString
-#   version - SOAP::SOAPString
-#   endUserIP - SOAP::SOAPString
-#   errorHandling - ErrorHandlingCodeType
-#   invocationID - (any)
-#   outputSelector - SOAP::SOAPString
-#   warningLevel - WarningLevelCodeType
-#   botBlock - BotBlockRequestType
-#   affiliateTrackingDetails - AffiliateTrackingDetailsType
-#   cartID - SOAP::SOAPLong
-#   shippingAddress - AddressType
-class GetCartRequestType < AbstractRequestType
-  attr_accessor :detailLevel
-  attr_accessor :errorLanguage
-  attr_accessor :messageID
-  attr_accessor :version
-  attr_accessor :endUserIP
-  attr_accessor :errorHandling
-  attr_accessor :invocationID
-  attr_accessor :outputSelector
-  attr_accessor :warningLevel
-  attr_accessor :botBlock
-  attr_reader :__xmlele_any
-  attr_accessor :affiliateTrackingDetails
-  attr_accessor :cartID
-  attr_accessor :shippingAddress
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, affiliateTrackingDetails = nil, cartID = nil, shippingAddress = nil)
-    @detailLevel = detailLevel
-    @errorLanguage = errorLanguage
-    @messageID = messageID
-    @version = version
-    @endUserIP = endUserIP
-    @errorHandling = errorHandling
-    @invocationID = invocationID
-    @outputSelector = outputSelector
-    @warningLevel = warningLevel
-    @botBlock = botBlock
-    @__xmlele_any = nil
-    @affiliateTrackingDetails = affiliateTrackingDetails
-    @cartID = cartID
-    @shippingAddress = shippingAddress
   end
 end
 
@@ -1605,6 +1608,7 @@ end
 #   localSearchPostalCode - SOAP::SOAPString
 #   maxRelatedSearchKeywords - SOAP::SOAPInt
 #   group - GroupType
+#   hideDuplicateItems - SOAP::SOAPBoolean
 class GetCategoryListingsRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -1635,12 +1639,13 @@ class GetCategoryListingsRequestType < AbstractRequestType
   attr_accessor :localSearchPostalCode
   attr_accessor :maxRelatedSearchKeywords
   attr_accessor :group
+  attr_accessor :hideDuplicateItems
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, motorsGermanySearchable = nil, categoryID = nil, adFormat = nil, freeShipping = nil, currency = nil, itemTypeFilter = nil, searchType = nil, orderBy = nil, pagination = nil, searchLocation = nil, proximitySearch = nil, includeGetItFastItems = nil, paymentMethod = nil, includeCondition = nil, includeFeedback = nil, localSearchPostalCode = nil, maxRelatedSearchKeywords = nil, group = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, motorsGermanySearchable = nil, categoryID = nil, adFormat = nil, freeShipping = nil, currency = nil, itemTypeFilter = nil, searchType = nil, orderBy = nil, pagination = nil, searchLocation = nil, proximitySearch = nil, includeGetItFastItems = nil, paymentMethod = nil, includeCondition = nil, includeFeedback = nil, localSearchPostalCode = nil, maxRelatedSearchKeywords = nil, group = nil, hideDuplicateItems = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1670,6 +1675,7 @@ class GetCategoryListingsRequestType < AbstractRequestType
     @localSearchPostalCode = localSearchPostalCode
     @maxRelatedSearchKeywords = maxRelatedSearchKeywords
     @group = group
+    @hideDuplicateItems = hideDuplicateItems
   end
 end
 
@@ -1838,6 +1844,7 @@ end
 #   charityDomain - SOAP::SOAPInt
 #   includeDescription - SOAP::SOAPBoolean
 #   matchType - StringMatchCodeType
+#   featured - SOAP::SOAPBoolean
 class GetCharitiesRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -1857,12 +1864,13 @@ class GetCharitiesRequestType < AbstractRequestType
   attr_accessor :charityDomain
   attr_accessor :includeDescription
   attr_accessor :matchType
+  attr_accessor :featured
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, charityID = nil, charityName = nil, query = nil, charityRegion = nil, charityDomain = nil, includeDescription = nil, matchType = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, charityID = nil, charityName = nil, query = nil, charityRegion = nil, charityDomain = nil, includeDescription = nil, matchType = nil, featured = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -1881,6 +1889,50 @@ class GetCharitiesRequestType < AbstractRequestType
     @charityDomain = charityDomain
     @includeDescription = includeDescription
     @matchType = matchType
+    @featured = featured
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetClientAlertsAuthTokenRequestType
+#   detailLevel - DetailLevelCodeType
+#   errorLanguage - SOAP::SOAPString
+#   messageID - SOAP::SOAPString
+#   version - SOAP::SOAPString
+#   endUserIP - SOAP::SOAPString
+#   errorHandling - ErrorHandlingCodeType
+#   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
+#   warningLevel - WarningLevelCodeType
+#   botBlock - BotBlockRequestType
+class GetClientAlertsAuthTokenRequestType < AbstractRequestType
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :endUserIP
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :outputSelector
+  attr_accessor :warningLevel
+  attr_accessor :botBlock
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @endUserIP = endUserIP
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @outputSelector = outputSelector
+    @warningLevel = warningLevel
+    @botBlock = botBlock
+    @__xmlele_any = nil
   end
 end
 
@@ -2086,67 +2138,6 @@ class GetDisputeRequestType < AbstractRequestType
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}GetExpressWishListRequestType
-#   detailLevel - DetailLevelCodeType
-#   errorLanguage - SOAP::SOAPString
-#   messageID - SOAP::SOAPString
-#   version - SOAP::SOAPString
-#   endUserIP - SOAP::SOAPString
-#   errorHandling - ErrorHandlingCodeType
-#   invocationID - (any)
-#   outputSelector - SOAP::SOAPString
-#   warningLevel - WarningLevelCodeType
-#   botBlock - BotBlockRequestType
-#   userID - SOAP::SOAPString
-#   firstName - SOAP::SOAPString
-#   lastName - SOAP::SOAPString
-#   wishListID - SOAP::SOAPString
-#   sortOrder - WishListSortCodeType
-#   pagination - PaginationType
-class GetExpressWishListRequestType < AbstractRequestType
-  attr_accessor :detailLevel
-  attr_accessor :errorLanguage
-  attr_accessor :messageID
-  attr_accessor :version
-  attr_accessor :endUserIP
-  attr_accessor :errorHandling
-  attr_accessor :invocationID
-  attr_accessor :outputSelector
-  attr_accessor :warningLevel
-  attr_accessor :botBlock
-  attr_reader :__xmlele_any
-  attr_accessor :userID
-  attr_accessor :firstName
-  attr_accessor :lastName
-  attr_accessor :wishListID
-  attr_accessor :sortOrder
-  attr_accessor :pagination
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, userID = nil, firstName = nil, lastName = nil, wishListID = nil, sortOrder = nil, pagination = nil)
-    @detailLevel = detailLevel
-    @errorLanguage = errorLanguage
-    @messageID = messageID
-    @version = version
-    @endUserIP = endUserIP
-    @errorHandling = errorHandling
-    @invocationID = invocationID
-    @outputSelector = outputSelector
-    @warningLevel = warningLevel
-    @botBlock = botBlock
-    @__xmlele_any = nil
-    @userID = userID
-    @firstName = firstName
-    @lastName = lastName
-    @wishListID = wishListID
-    @sortOrder = sortOrder
-    @pagination = pagination
-  end
-end
-
 # {urn:ebay:apis:eBLBaseComponents}GetFeedbackRequestType
 #   detailLevel - DetailLevelCodeType
 #   errorLanguage - SOAP::SOAPString
@@ -2158,9 +2149,12 @@ end
 #   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
-#   pagination - PaginationType
 #   userID - (any)
 #   feedbackID - SOAP::SOAPString
+#   itemID - (any)
+#   transactionID - SOAP::SOAPString
+#   commentType - CommentTypeCodeType
+#   pagination - PaginationType
 class GetFeedbackRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -2173,15 +2167,18 @@ class GetFeedbackRequestType < AbstractRequestType
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
-  attr_accessor :pagination
   attr_accessor :userID
   attr_accessor :feedbackID
+  attr_accessor :itemID
+  attr_accessor :transactionID
+  attr_accessor :commentType
+  attr_accessor :pagination
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, pagination = nil, userID = nil, feedbackID = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, userID = nil, feedbackID = nil, itemID = nil, transactionID = nil, commentType = [], pagination = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2193,9 +2190,12 @@ class GetFeedbackRequestType < AbstractRequestType
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
-    @pagination = pagination
     @userID = userID
     @feedbackID = feedbackID
+    @itemID = itemID
+    @transactionID = transactionID
+    @commentType = commentType
+    @pagination = pagination
   end
 end
 
@@ -2257,7 +2257,6 @@ end
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
 #   itemID - (any)
-#   includeExpressRequirements - SOAP::SOAPBoolean
 #   includeWatchCount - SOAP::SOAPBoolean
 #   includeCrossPromotion - SOAP::SOAPBoolean
 #   includeItemSpecifics - SOAP::SOAPBoolean
@@ -2275,7 +2274,6 @@ class GetItemRequestType < AbstractRequestType
   attr_accessor :botBlock
   attr_reader :__xmlele_any
   attr_accessor :itemID
-  attr_accessor :includeExpressRequirements
   attr_accessor :includeWatchCount
   attr_accessor :includeCrossPromotion
   attr_accessor :includeItemSpecifics
@@ -2285,7 +2283,7 @@ class GetItemRequestType < AbstractRequestType
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, includeExpressRequirements = nil, includeWatchCount = nil, includeCrossPromotion = nil, includeItemSpecifics = nil, includeTaxTable = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemID = nil, includeWatchCount = nil, includeCrossPromotion = nil, includeItemSpecifics = nil, includeTaxTable = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2298,7 +2296,6 @@ class GetItemRequestType < AbstractRequestType
     @botBlock = botBlock
     @__xmlele_any = nil
     @itemID = itemID
-    @includeExpressRequirements = includeExpressRequirements
     @includeWatchCount = includeWatchCount
     @includeCrossPromotion = includeCrossPromotion
     @includeItemSpecifics = includeItemSpecifics
@@ -2756,6 +2753,7 @@ end
 #   folderID - SOAP::SOAPLong
 #   startTime - SOAP::SOAPDateTime
 #   endTime - SOAP::SOAPDateTime
+#   externalMessageIDs - MyMessagesExternalMessageIDArrayType
 class GetMyMessagesRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -2773,12 +2771,13 @@ class GetMyMessagesRequestType < AbstractRequestType
   attr_accessor :folderID
   attr_accessor :startTime
   attr_accessor :endTime
+  attr_accessor :externalMessageIDs
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, alertIDs = nil, messageIDs = nil, folderID = nil, startTime = nil, endTime = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, alertIDs = nil, messageIDs = nil, folderID = nil, startTime = nil, endTime = nil, externalMessageIDs = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2795,6 +2794,7 @@ class GetMyMessagesRequestType < AbstractRequestType
     @folderID = folderID
     @startTime = startTime
     @endTime = endTime
+    @externalMessageIDs = externalMessageIDs
   end
 end
 
@@ -2818,6 +2818,8 @@ end
 #   favoriteSellers - MyeBaySelectionType
 #   secondChanceOffer - MyeBaySelectionType
 #   bidAssistantList - BidAssistantListType
+#   deletedFromWonList - ItemListCustomizationType
+#   deletedFromLostList - ItemListCustomizationType
 class GetMyeBayBuyingRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -2839,12 +2841,14 @@ class GetMyeBayBuyingRequestType < AbstractRequestType
   attr_accessor :favoriteSellers
   attr_accessor :secondChanceOffer
   attr_accessor :bidAssistantList
+  attr_accessor :deletedFromWonList
+  attr_accessor :deletedFromLostList
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, watchList = nil, bidList = nil, bestOfferList = nil, wonList = nil, lostList = nil, favoriteSearches = nil, favoriteSellers = nil, secondChanceOffer = nil, bidAssistantList = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, watchList = nil, bidList = nil, bestOfferList = nil, wonList = nil, lostList = nil, favoriteSearches = nil, favoriteSellers = nil, secondChanceOffer = nil, bidAssistantList = nil, deletedFromWonList = nil, deletedFromLostList = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2865,6 +2869,8 @@ class GetMyeBayBuyingRequestType < AbstractRequestType
     @favoriteSellers = favoriteSellers
     @secondChanceOffer = secondChanceOffer
     @bidAssistantList = bidAssistantList
+    @deletedFromWonList = deletedFromWonList
+    @deletedFromLostList = deletedFromLostList
   end
 end
 
@@ -2932,6 +2938,9 @@ end
 #   activeList - ItemListCustomizationType
 #   soldList - ItemListCustomizationType
 #   unsoldList - ItemListCustomizationType
+#   bidList - ItemListCustomizationType
+#   deletedFromSoldList - ItemListCustomizationType
+#   deletedFromUnsoldList - ItemListCustomizationType
 class GetMyeBaySellingRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -2948,12 +2957,15 @@ class GetMyeBaySellingRequestType < AbstractRequestType
   attr_accessor :activeList
   attr_accessor :soldList
   attr_accessor :unsoldList
+  attr_accessor :bidList
+  attr_accessor :deletedFromSoldList
+  attr_accessor :deletedFromUnsoldList
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, scheduledList = nil, activeList = nil, soldList = nil, unsoldList = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, scheduledList = nil, activeList = nil, soldList = nil, unsoldList = nil, bidList = nil, deletedFromSoldList = nil, deletedFromUnsoldList = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -2969,6 +2981,9 @@ class GetMyeBaySellingRequestType < AbstractRequestType
     @activeList = activeList
     @soldList = soldList
     @unsoldList = unsoldList
+    @bidList = bidList
+    @deletedFromSoldList = deletedFromSoldList
+    @deletedFromUnsoldList = deletedFromUnsoldList
   end
 end
 
@@ -3084,6 +3099,7 @@ end
 #   itemTransactionIDArray - ItemTransactionIDArrayType
 #   orderIDArray - OrderIDArrayType
 #   platform - TransactionPlatformCodeType
+#   includeFinalValueFees - SOAP::SOAPBoolean
 class GetOrderTransactionsRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -3099,12 +3115,13 @@ class GetOrderTransactionsRequestType < AbstractRequestType
   attr_accessor :itemTransactionIDArray
   attr_accessor :orderIDArray
   attr_accessor :platform
+  attr_accessor :includeFinalValueFees
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemTransactionIDArray = nil, orderIDArray = nil, platform = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, itemTransactionIDArray = nil, orderIDArray = nil, platform = nil, includeFinalValueFees = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3119,6 +3136,7 @@ class GetOrderTransactionsRequestType < AbstractRequestType
     @itemTransactionIDArray = itemTransactionIDArray
     @orderIDArray = orderIDArray
     @platform = platform
+    @includeFinalValueFees = includeFinalValueFees
   end
 end
 
@@ -3642,6 +3660,7 @@ end
 #   includeBuyingGuideDetails - SOAP::SOAPBoolean
 #   includeHistogram - SOAP::SOAPBoolean
 #   affiliateTrackingDetails - AffiliateTrackingDetailsType
+#   hideDuplicateItems - SOAP::SOAPBoolean
 class GetProductsRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -3661,12 +3680,13 @@ class GetProductsRequestType < AbstractRequestType
   attr_accessor :includeBuyingGuideDetails
   attr_accessor :includeHistogram
   attr_accessor :affiliateTrackingDetails
+  attr_accessor :hideDuplicateItems
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, productSearch = nil, productSort = nil, includeItemArray = nil, includeReviewDetails = nil, includeBuyingGuideDetails = nil, includeHistogram = nil, affiliateTrackingDetails = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, productSearch = nil, productSort = nil, includeItemArray = nil, includeReviewDetails = nil, includeBuyingGuideDetails = nil, includeHistogram = nil, affiliateTrackingDetails = nil, hideDuplicateItems = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -3685,6 +3705,7 @@ class GetProductsRequestType < AbstractRequestType
     @includeBuyingGuideDetails = includeBuyingGuideDetails
     @includeHistogram = includeHistogram
     @affiliateTrackingDetails = affiliateTrackingDetails
+    @hideDuplicateItems = hideDuplicateItems
   end
 end
 
@@ -3786,95 +3807,6 @@ class GetPromotionalSaleDetailsRequestType < AbstractRequestType
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}GetReturnURLRequestType
-#   detailLevel - DetailLevelCodeType
-#   errorLanguage - SOAP::SOAPString
-#   messageID - SOAP::SOAPString
-#   version - SOAP::SOAPString
-#   endUserIP - SOAP::SOAPString
-#   errorHandling - ErrorHandlingCodeType
-#   invocationID - (any)
-#   outputSelector - SOAP::SOAPString
-#   warningLevel - WarningLevelCodeType
-#   botBlock - BotBlockRequestType
-class GetReturnURLRequestType < AbstractRequestType
-  attr_accessor :detailLevel
-  attr_accessor :errorLanguage
-  attr_accessor :messageID
-  attr_accessor :version
-  attr_accessor :endUserIP
-  attr_accessor :errorHandling
-  attr_accessor :invocationID
-  attr_accessor :outputSelector
-  attr_accessor :warningLevel
-  attr_accessor :botBlock
-  attr_reader :__xmlele_any
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil)
-    @detailLevel = detailLevel
-    @errorLanguage = errorLanguage
-    @messageID = messageID
-    @version = version
-    @endUserIP = endUserIP
-    @errorHandling = errorHandling
-    @invocationID = invocationID
-    @outputSelector = outputSelector
-    @warningLevel = warningLevel
-    @botBlock = botBlock
-    @__xmlele_any = nil
-  end
-end
-
-# {urn:ebay:apis:eBLBaseComponents}GetRuNameRequestType
-#   detailLevel - DetailLevelCodeType
-#   errorLanguage - SOAP::SOAPString
-#   messageID - SOAP::SOAPString
-#   version - SOAP::SOAPString
-#   endUserIP - SOAP::SOAPString
-#   errorHandling - ErrorHandlingCodeType
-#   invocationID - (any)
-#   outputSelector - SOAP::SOAPString
-#   warningLevel - WarningLevelCodeType
-#   botBlock - BotBlockRequestType
-#   clientUseCase - SOAP::SOAPString
-class GetRuNameRequestType < AbstractRequestType
-  attr_accessor :detailLevel
-  attr_accessor :errorLanguage
-  attr_accessor :messageID
-  attr_accessor :version
-  attr_accessor :endUserIP
-  attr_accessor :errorHandling
-  attr_accessor :invocationID
-  attr_accessor :outputSelector
-  attr_accessor :warningLevel
-  attr_accessor :botBlock
-  attr_reader :__xmlele_any
-  attr_accessor :clientUseCase
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, clientUseCase = nil)
-    @detailLevel = detailLevel
-    @errorLanguage = errorLanguage
-    @messageID = messageID
-    @version = version
-    @endUserIP = endUserIP
-    @errorHandling = errorHandling
-    @invocationID = invocationID
-    @outputSelector = outputSelector
-    @warningLevel = warningLevel
-    @botBlock = botBlock
-    @__xmlele_any = nil
-    @clientUseCase = clientUseCase
-  end
-end
-
 # {urn:ebay:apis:eBLBaseComponents}GetSearchResultsRequestType
 #   detailLevel - DetailLevelCodeType
 #   errorLanguage - SOAP::SOAPString
@@ -3917,7 +3849,6 @@ end
 #   quantity - SOAP::SOAPInt
 #   quantityOperator - QuantityOperatorCodeType
 #   sellerBusinessType - SellerBusinessCodeType
-#   digitalDelivery - SOAP::SOAPBoolean
 #   includeCondition - SOAP::SOAPBoolean
 #   includeFeedback - SOAP::SOAPBoolean
 #   charityID - SOAP::SOAPInt
@@ -3928,6 +3859,7 @@ end
 #   itemCondition - ItemConditionCodeType
 #   ticketFinder - TicketDetailsType
 #   group - GroupType
+#   hideDuplicateItems - SOAP::SOAPBoolean
 class GetSearchResultsRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -3971,7 +3903,6 @@ class GetSearchResultsRequestType < AbstractRequestType
   attr_accessor :quantity
   attr_accessor :quantityOperator
   attr_accessor :sellerBusinessType
-  attr_accessor :digitalDelivery
   attr_accessor :includeCondition
   attr_accessor :includeFeedback
   attr_accessor :charityID
@@ -3982,12 +3913,13 @@ class GetSearchResultsRequestType < AbstractRequestType
   attr_accessor :itemCondition
   attr_accessor :ticketFinder
   attr_accessor :group
+  attr_accessor :hideDuplicateItems
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, motorsGermanySearchable = nil, query = nil, categoryID = nil, searchFlags = [], priceRangeFilter = nil, proximitySearch = nil, itemTypeFilter = nil, searchType = nil, userIdFilter = nil, searchLocationFilter = nil, storeSearchFilter = nil, order = nil, pagination = nil, searchRequest = nil, productID = nil, externalProductID = nil, categories = nil, totalOnly = nil, endTimeFrom = nil, endTimeTo = nil, modTimeFrom = nil, includeGetItFastItems = nil, paymentMethod = nil, granularityLevel = nil, expandSearch = nil, lot = nil, adFormat = nil, freeShipping = nil, quantity = nil, quantityOperator = nil, sellerBusinessType = nil, digitalDelivery = nil, includeCondition = nil, includeFeedback = nil, charityID = nil, localSearchPostalCode = nil, maxRelatedSearchKeywords = nil, affiliateTrackingDetails = nil, bidRange = nil, itemCondition = nil, ticketFinder = nil, group = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, motorsGermanySearchable = nil, query = nil, categoryID = nil, searchFlags = [], priceRangeFilter = nil, proximitySearch = nil, itemTypeFilter = nil, searchType = nil, userIdFilter = nil, searchLocationFilter = nil, storeSearchFilter = nil, order = nil, pagination = nil, searchRequest = nil, productID = nil, externalProductID = nil, categories = nil, totalOnly = nil, endTimeFrom = nil, endTimeTo = nil, modTimeFrom = nil, includeGetItFastItems = nil, paymentMethod = nil, granularityLevel = nil, expandSearch = nil, lot = nil, adFormat = nil, freeShipping = nil, quantity = nil, quantityOperator = nil, sellerBusinessType = nil, includeCondition = nil, includeFeedback = nil, charityID = nil, localSearchPostalCode = nil, maxRelatedSearchKeywords = nil, affiliateTrackingDetails = nil, bidRange = nil, itemCondition = nil, ticketFinder = nil, group = nil, hideDuplicateItems = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4030,7 +3962,6 @@ class GetSearchResultsRequestType < AbstractRequestType
     @quantity = quantity
     @quantityOperator = quantityOperator
     @sellerBusinessType = sellerBusinessType
-    @digitalDelivery = digitalDelivery
     @includeCondition = includeCondition
     @includeFeedback = includeFeedback
     @charityID = charityID
@@ -4041,10 +3972,11 @@ class GetSearchResultsRequestType < AbstractRequestType
     @itemCondition = itemCondition
     @ticketFinder = ticketFinder
     @group = group
+    @hideDuplicateItems = hideDuplicateItems
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}GetSearchResultsExpressRequestType
+# {urn:ebay:apis:eBLBaseComponents}GetSellerDashboardRequestType
 #   detailLevel - DetailLevelCodeType
 #   errorLanguage - SOAP::SOAPString
 #   messageID - SOAP::SOAPString
@@ -4055,28 +3987,7 @@ end
 #   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
-#   query - SOAP::SOAPString
-#   externalProductIDType - ExternalProductCodeType
-#   externalProductIDValue - SOAP::SOAPString
-#   productReferenceID - SOAP::SOAPLong
-#   departmentName - SOAP::SOAPString
-#   aisleName - SOAP::SOAPString
-#   productTypeName - SOAP::SOAPString
-#   histogramSort - ExpressHistogramSortCodeType
-#   itemSort - ExpressItemSortCodeType
-#   productSort - ExpressProductSortCodeType
-#   highestPrice - AmountType
-#   lowestPrice - AmountType
-#   condition - ConditionSelectionCodeType
-#   sellerID - (any)
-#   postalCode - SOAP::SOAPString
-#   histogramDetails - ExpressDetailLevelCodeType
-#   productDetails - ExpressDetailLevelCodeType
-#   itemDetails - ExpressDetailLevelCodeType
-#   entriesPerPage - SOAP::SOAPInt
-#   pageNumber - SOAP::SOAPInt
-#   affiliateTrackingDetails - AffiliateTrackingDetailsType
-class GetSearchResultsExpressRequestType < AbstractRequestType
+class GetSellerDashboardRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
   attr_accessor :messageID
@@ -4088,33 +3999,12 @@ class GetSearchResultsExpressRequestType < AbstractRequestType
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
-  attr_accessor :query
-  attr_accessor :externalProductIDType
-  attr_accessor :externalProductIDValue
-  attr_accessor :productReferenceID
-  attr_accessor :departmentName
-  attr_accessor :aisleName
-  attr_accessor :productTypeName
-  attr_accessor :histogramSort
-  attr_accessor :itemSort
-  attr_accessor :productSort
-  attr_accessor :highestPrice
-  attr_accessor :lowestPrice
-  attr_accessor :condition
-  attr_accessor :sellerID
-  attr_accessor :postalCode
-  attr_accessor :histogramDetails
-  attr_accessor :productDetails
-  attr_accessor :itemDetails
-  attr_accessor :entriesPerPage
-  attr_accessor :pageNumber
-  attr_accessor :affiliateTrackingDetails
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, query = nil, externalProductIDType = nil, externalProductIDValue = nil, productReferenceID = nil, departmentName = nil, aisleName = nil, productTypeName = nil, histogramSort = nil, itemSort = nil, productSort = nil, highestPrice = nil, lowestPrice = nil, condition = nil, sellerID = nil, postalCode = nil, histogramDetails = nil, productDetails = nil, itemDetails = nil, entriesPerPage = nil, pageNumber = nil, affiliateTrackingDetails = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4126,27 +4016,6 @@ class GetSearchResultsExpressRequestType < AbstractRequestType
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
-    @query = query
-    @externalProductIDType = externalProductIDType
-    @externalProductIDValue = externalProductIDValue
-    @productReferenceID = productReferenceID
-    @departmentName = departmentName
-    @aisleName = aisleName
-    @productTypeName = productTypeName
-    @histogramSort = histogramSort
-    @itemSort = itemSort
-    @productSort = productSort
-    @highestPrice = highestPrice
-    @lowestPrice = lowestPrice
-    @condition = condition
-    @sellerID = sellerID
-    @postalCode = postalCode
-    @histogramDetails = histogramDetails
-    @productDetails = productDetails
-    @itemDetails = itemDetails
-    @entriesPerPage = entriesPerPage
-    @pageNumber = pageNumber
-    @affiliateTrackingDetails = affiliateTrackingDetails
   end
 end
 
@@ -4242,6 +4111,8 @@ end
 #   granularityLevel - GranularityLevelCodeType
 #   sKUArray - SKUArrayType
 #   includeWatchCount - SOAP::SOAPBoolean
+#   adminEndedItemsOnly - SOAP::SOAPBoolean
+#   categoryID - SOAP::SOAPInt
 class GetSellerListRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -4265,12 +4136,14 @@ class GetSellerListRequestType < AbstractRequestType
   attr_accessor :granularityLevel
   attr_accessor :sKUArray
   attr_accessor :includeWatchCount
+  attr_accessor :adminEndedItemsOnly
+  attr_accessor :categoryID
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, userID = nil, motorsDealerUsers = nil, endTimeFrom = nil, endTimeTo = nil, sort = nil, startTimeFrom = nil, startTimeTo = nil, pagination = nil, granularityLevel = nil, sKUArray = nil, includeWatchCount = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, userID = nil, motorsDealerUsers = nil, endTimeFrom = nil, endTimeTo = nil, sort = nil, startTimeFrom = nil, startTimeTo = nil, pagination = nil, granularityLevel = nil, sKUArray = nil, includeWatchCount = nil, adminEndedItemsOnly = nil, categoryID = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -4293,6 +4166,8 @@ class GetSellerListRequestType < AbstractRequestType
     @granularityLevel = granularityLevel
     @sKUArray = sKUArray
     @includeWatchCount = includeWatchCount
+    @adminEndedItemsOnly = adminEndedItemsOnly
+    @categoryID = categoryID
   end
 end
 
@@ -4415,6 +4290,52 @@ class GetSellerTransactionsRequestType < AbstractRequestType
     @sKUArray = sKUArray
     @platform = platform
     @numberOfDays = numberOfDays
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetSessionIDRequestType
+#   detailLevel - DetailLevelCodeType
+#   errorLanguage - SOAP::SOAPString
+#   messageID - SOAP::SOAPString
+#   version - SOAP::SOAPString
+#   endUserIP - SOAP::SOAPString
+#   errorHandling - ErrorHandlingCodeType
+#   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
+#   warningLevel - WarningLevelCodeType
+#   botBlock - BotBlockRequestType
+#   ruName - SOAP::SOAPString
+class GetSessionIDRequestType < AbstractRequestType
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :endUserIP
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :outputSelector
+  attr_accessor :warningLevel
+  attr_accessor :botBlock
+  attr_reader :__xmlele_any
+  attr_accessor :ruName
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, ruName = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @endUserIP = endUserIP
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @outputSelector = outputSelector
+    @warningLevel = warningLevel
+    @botBlock = botBlock
+    @__xmlele_any = nil
+    @ruName = ruName
   end
 end
 
@@ -4783,6 +4704,49 @@ class GetTaxTableRequestType < AbstractRequestType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}GetTokenStatusRequestType
+#   detailLevel - DetailLevelCodeType
+#   errorLanguage - SOAP::SOAPString
+#   messageID - SOAP::SOAPString
+#   version - SOAP::SOAPString
+#   endUserIP - SOAP::SOAPString
+#   errorHandling - ErrorHandlingCodeType
+#   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
+#   warningLevel - WarningLevelCodeType
+#   botBlock - BotBlockRequestType
+class GetTokenStatusRequestType < AbstractRequestType
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :endUserIP
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :outputSelector
+  attr_accessor :warningLevel
+  attr_accessor :botBlock
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @endUserIP = endUserIP
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @outputSelector = outputSelector
+    @warningLevel = warningLevel
+    @botBlock = botBlock
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}GetUserRequestType
 #   detailLevel - DetailLevelCodeType
 #   errorLanguage - SOAP::SOAPString
@@ -4963,6 +4927,7 @@ end
 #   showEndOfAuctionEmailPreferences - SOAP::SOAPBoolean
 #   showSellerFavoriteItemPreferences - SOAP::SOAPBoolean
 #   showProStoresPreferences - SOAP::SOAPBoolean
+#   showEmailShipmentTrackingNumberPreference - SOAP::SOAPBoolean
 class GetUserPreferencesRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -4982,12 +4947,13 @@ class GetUserPreferencesRequestType < AbstractRequestType
   attr_accessor :showEndOfAuctionEmailPreferences
   attr_accessor :showSellerFavoriteItemPreferences
   attr_accessor :showProStoresPreferences
+  attr_accessor :showEmailShipmentTrackingNumberPreference
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, showBidderNoticePreferences = nil, showCombinedPaymentPreferences = nil, showCrossPromotionPreferences = nil, showSellerPaymentPreferences = nil, showEndOfAuctionEmailPreferences = nil, showSellerFavoriteItemPreferences = nil, showProStoresPreferences = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, showBidderNoticePreferences = nil, showCombinedPaymentPreferences = nil, showCrossPromotionPreferences = nil, showSellerPaymentPreferences = nil, showEndOfAuctionEmailPreferences = nil, showSellerFavoriteItemPreferences = nil, showProStoresPreferences = nil, showEmailShipmentTrackingNumberPreference = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -5006,6 +4972,7 @@ class GetUserPreferencesRequestType < AbstractRequestType
     @showEndOfAuctionEmailPreferences = showEndOfAuctionEmailPreferences
     @showSellerFavoriteItemPreferences = showSellerFavoriteItemPreferences
     @showProStoresPreferences = showProStoresPreferences
+    @showEmailShipmentTrackingNumberPreference = showEmailShipmentTrackingNumberPreference
   end
 end
 
@@ -6072,6 +6039,52 @@ class ReviseMyMessagesFoldersRequestType < AbstractRequestType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}RevokeTokenRequestType
+#   detailLevel - DetailLevelCodeType
+#   errorLanguage - SOAP::SOAPString
+#   messageID - SOAP::SOAPString
+#   version - SOAP::SOAPString
+#   endUserIP - SOAP::SOAPString
+#   errorHandling - ErrorHandlingCodeType
+#   invocationID - (any)
+#   outputSelector - SOAP::SOAPString
+#   warningLevel - WarningLevelCodeType
+#   botBlock - BotBlockRequestType
+#   unsubscribeNotification - SOAP::SOAPBoolean
+class RevokeTokenRequestType < AbstractRequestType
+  attr_accessor :detailLevel
+  attr_accessor :errorLanguage
+  attr_accessor :messageID
+  attr_accessor :version
+  attr_accessor :endUserIP
+  attr_accessor :errorHandling
+  attr_accessor :invocationID
+  attr_accessor :outputSelector
+  attr_accessor :warningLevel
+  attr_accessor :botBlock
+  attr_reader :__xmlele_any
+  attr_accessor :unsubscribeNotification
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, unsubscribeNotification = nil)
+    @detailLevel = detailLevel
+    @errorLanguage = errorLanguage
+    @messageID = messageID
+    @version = version
+    @endUserIP = endUserIP
+    @errorHandling = errorHandling
+    @invocationID = invocationID
+    @outputSelector = outputSelector
+    @warningLevel = warningLevel
+    @botBlock = botBlock
+    @__xmlele_any = nil
+    @unsubscribeNotification = unsubscribeNotification
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}SellerReverseDisputeRequestType
 #   detailLevel - DetailLevelCodeType
 #   errorLanguage - SOAP::SOAPString
@@ -6203,64 +6216,6 @@ class SendInvoiceRequestType < AbstractRequestType
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}SetCartRequestType
-#   detailLevel - DetailLevelCodeType
-#   errorLanguage - SOAP::SOAPString
-#   messageID - SOAP::SOAPString
-#   version - SOAP::SOAPString
-#   endUserIP - SOAP::SOAPString
-#   errorHandling - ErrorHandlingCodeType
-#   invocationID - (any)
-#   outputSelector - SOAP::SOAPString
-#   warningLevel - WarningLevelCodeType
-#   botBlock - BotBlockRequestType
-#   affiliateTrackingDetails - AffiliateTrackingDetailsType
-#   cartID - SOAP::SOAPLong
-#   shippingAddress - AddressType
-#   checkoutCompleteRedirect - CheckoutCompleteRedirectType
-#   cartItemArray - CartItemArrayType
-class SetCartRequestType < AbstractRequestType
-  attr_accessor :detailLevel
-  attr_accessor :errorLanguage
-  attr_accessor :messageID
-  attr_accessor :version
-  attr_accessor :endUserIP
-  attr_accessor :errorHandling
-  attr_accessor :invocationID
-  attr_accessor :outputSelector
-  attr_accessor :warningLevel
-  attr_accessor :botBlock
-  attr_reader :__xmlele_any
-  attr_accessor :affiliateTrackingDetails
-  attr_accessor :cartID
-  attr_accessor :shippingAddress
-  attr_accessor :checkoutCompleteRedirect
-  attr_accessor :cartItemArray
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, affiliateTrackingDetails = nil, cartID = nil, shippingAddress = nil, checkoutCompleteRedirect = nil, cartItemArray = nil)
-    @detailLevel = detailLevel
-    @errorLanguage = errorLanguage
-    @messageID = messageID
-    @version = version
-    @endUserIP = endUserIP
-    @errorHandling = errorHandling
-    @invocationID = invocationID
-    @outputSelector = outputSelector
-    @warningLevel = warningLevel
-    @botBlock = botBlock
-    @__xmlele_any = nil
-    @affiliateTrackingDetails = affiliateTrackingDetails
-    @cartID = cartID
-    @shippingAddress = shippingAddress
-    @checkoutCompleteRedirect = checkoutCompleteRedirect
-    @cartItemArray = cartItemArray
-  end
-end
-
 # {urn:ebay:apis:eBLBaseComponents}SetMessagePreferencesRequestType
 #   detailLevel - DetailLevelCodeType
 #   errorLanguage - SOAP::SOAPString
@@ -6322,6 +6277,7 @@ end
 #   userDeliveryPreferenceArray - NotificationEnableArrayType
 #   userData - NotificationUserDataType
 #   eventProperty - NotificationEventPropertyType
+#   deliveryURLName - SOAP::SOAPString
 class SetNotificationPreferencesRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -6338,12 +6294,13 @@ class SetNotificationPreferencesRequestType < AbstractRequestType
   attr_accessor :userDeliveryPreferenceArray
   attr_accessor :userData
   attr_accessor :eventProperty
+  attr_accessor :deliveryURLName
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, applicationDeliveryPreferences = nil, userDeliveryPreferenceArray = nil, userData = nil, eventProperty = [])
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, applicationDeliveryPreferences = nil, userDeliveryPreferenceArray = nil, userData = nil, eventProperty = [], deliveryURLName = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6359,6 +6316,7 @@ class SetNotificationPreferencesRequestType < AbstractRequestType
     @userDeliveryPreferenceArray = userDeliveryPreferenceArray
     @userData = userData
     @eventProperty = eventProperty
+    @deliveryURLName = deliveryURLName
   end
 end
 
@@ -6527,7 +6485,7 @@ class SetPromotionalSaleListingsRequestType < AbstractRequestType
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}SetReturnURLRequestType
+# {urn:ebay:apis:eBLBaseComponents}SetSellingManagerFeedbackOptionsRequestType
 #   detailLevel - DetailLevelCodeType
 #   errorLanguage - SOAP::SOAPString
 #   messageID - SOAP::SOAPString
@@ -6538,10 +6496,9 @@ end
 #   outputSelector - SOAP::SOAPString
 #   warningLevel - WarningLevelCodeType
 #   botBlock - BotBlockRequestType
-#   authenticationEntry - AuthenticationEntryType
-#   applicationDisplayName - SOAP::SOAPString
-#   action - ModifyActionCodeType
-class SetReturnURLRequestType < AbstractRequestType
+#   automatedLeaveFeedbackEvent - AutomatedLeaveFeedbackEventCodeType
+#   storedComments - FeedbackCommentArrayType
+class SetSellingManagerFeedbackOptionsRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
   attr_accessor :messageID
@@ -6553,15 +6510,14 @@ class SetReturnURLRequestType < AbstractRequestType
   attr_accessor :warningLevel
   attr_accessor :botBlock
   attr_reader :__xmlele_any
-  attr_accessor :authenticationEntry
-  attr_accessor :applicationDisplayName
-  attr_accessor :action
+  attr_accessor :automatedLeaveFeedbackEvent
+  attr_accessor :storedComments
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, authenticationEntry = nil, applicationDisplayName = nil, action = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, automatedLeaveFeedbackEvent = nil, storedComments = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -6573,9 +6529,8 @@ class SetReturnURLRequestType < AbstractRequestType
     @warningLevel = warningLevel
     @botBlock = botBlock
     @__xmlele_any = nil
-    @authenticationEntry = authenticationEntry
-    @applicationDisplayName = applicationDisplayName
-    @action = action
+    @automatedLeaveFeedbackEvent = automatedLeaveFeedbackEvent
+    @storedComments = storedComments
   end
 end
 
@@ -6960,7 +6915,7 @@ end
 #   sellerPaymentPreferences - SellerPaymentPreferencesType
 #   sellerFavoriteItemPreferences - SellerFavoriteItemPreferencesType
 #   endOfAuctionEmailPreferences - EndOfAuctionEmailPreferencesType
-#   expressPreferences - ExpressPreferencesType
+#   emailShipmentTrackingNumberPreference - SOAP::SOAPBoolean
 class SetUserPreferencesRequestType < AbstractRequestType
   attr_accessor :detailLevel
   attr_accessor :errorLanguage
@@ -6979,13 +6934,13 @@ class SetUserPreferencesRequestType < AbstractRequestType
   attr_accessor :sellerPaymentPreferences
   attr_accessor :sellerFavoriteItemPreferences
   attr_accessor :endOfAuctionEmailPreferences
-  attr_accessor :expressPreferences
+  attr_accessor :emailShipmentTrackingNumberPreference
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, bidderNoticePreferences = nil, combinedPaymentPreferences = nil, crossPromotionPreferences = nil, sellerPaymentPreferences = nil, sellerFavoriteItemPreferences = nil, endOfAuctionEmailPreferences = nil, expressPreferences = nil)
+  def initialize(detailLevel = [], errorLanguage = nil, messageID = nil, version = nil, endUserIP = nil, errorHandling = nil, invocationID = nil, outputSelector = [], warningLevel = nil, botBlock = nil, bidderNoticePreferences = nil, combinedPaymentPreferences = nil, crossPromotionPreferences = nil, sellerPaymentPreferences = nil, sellerFavoriteItemPreferences = nil, endOfAuctionEmailPreferences = nil, emailShipmentTrackingNumberPreference = nil)
     @detailLevel = detailLevel
     @errorLanguage = errorLanguage
     @messageID = messageID
@@ -7003,7 +6958,7 @@ class SetUserPreferencesRequestType < AbstractRequestType
     @sellerPaymentPreferences = sellerPaymentPreferences
     @sellerFavoriteItemPreferences = sellerFavoriteItemPreferences
     @endOfAuctionEmailPreferences = endOfAuctionEmailPreferences
-    @expressPreferences = expressPreferences
+    @emailShipmentTrackingNumberPreference = emailShipmentTrackingNumberPreference
   end
 end
 
@@ -7353,6 +7308,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -7368,13 +7324,14 @@ class AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7389,6 +7346,7 @@ class AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -7408,6 +7366,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   disputeID - (any)
 class AddDisputeResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -7424,6 +7383,7 @@ class AddDisputeResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :disputeID
 
@@ -7431,7 +7391,7 @@ class AddDisputeResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, disputeID = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, disputeID = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7446,6 +7406,7 @@ class AddDisputeResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @disputeID = disputeID
   end
@@ -7466,6 +7427,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class AddDisputeResponseResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -7481,13 +7443,14 @@ class AddDisputeResponseResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7502,6 +7465,7 @@ class AddDisputeResponseResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -7521,6 +7485,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   itemID - (any)
 #   startTime - SOAP::SOAPDateTime
 #   endTime - SOAP::SOAPDateTime
@@ -7542,6 +7507,7 @@ class AddItemResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :startTime
@@ -7554,7 +7520,7 @@ class AddItemResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, itemID = nil, startTime = nil, endTime = nil, fees = nil, categoryID = nil, category2ID = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, itemID = nil, startTime = nil, endTime = nil, fees = nil, categoryID = nil, category2ID = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7569,6 +7535,7 @@ class AddItemResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @itemID = itemID
     @startTime = startTime
@@ -7594,6 +7561,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   itemID - (any)
 #   fees - FeesType
 #   categoryID - SOAP::SOAPString
@@ -7613,6 +7581,7 @@ class AddLiveAuctionItemResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :fees
@@ -7623,7 +7592,7 @@ class AddLiveAuctionItemResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, itemID = nil, fees = nil, categoryID = nil, category2ID = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, itemID = nil, fees = nil, categoryID = nil, category2ID = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7638,6 +7607,7 @@ class AddLiveAuctionItemResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @itemID = itemID
     @fees = fees
@@ -7661,6 +7631,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class AddMemberMessageAAQToPartnerResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -7676,13 +7647,14 @@ class AddMemberMessageAAQToPartnerResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7697,6 +7669,7 @@ class AddMemberMessageAAQToPartnerResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -7716,6 +7689,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class AddMemberMessageRTQResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -7731,13 +7705,14 @@ class AddMemberMessageRTQResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7752,6 +7727,7 @@ class AddMemberMessageRTQResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -7771,6 +7747,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   addMemberMessagesAAQToBidderResponseContainer - AddMemberMessagesAAQToBidderResponseContainerType
 class AddMemberMessagesAAQToBidderResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -7787,6 +7764,7 @@ class AddMemberMessagesAAQToBidderResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :addMemberMessagesAAQToBidderResponseContainer
 
@@ -7794,7 +7772,7 @@ class AddMemberMessagesAAQToBidderResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, addMemberMessagesAAQToBidderResponseContainer = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, addMemberMessagesAAQToBidderResponseContainer = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7809,6 +7787,7 @@ class AddMemberMessagesAAQToBidderResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @addMemberMessagesAAQToBidderResponseContainer = addMemberMessagesAAQToBidderResponseContainer
   end
@@ -7829,6 +7808,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   orderID - (any)
 #   createdTime - SOAP::SOAPDateTime
 class AddOrderResponseType < AbstractResponseType
@@ -7846,6 +7826,7 @@ class AddOrderResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :orderID
   attr_accessor :createdTime
@@ -7854,7 +7835,7 @@ class AddOrderResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, orderID = nil, createdTime = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, orderID = nil, createdTime = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7869,6 +7850,7 @@ class AddOrderResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @orderID = orderID
     @createdTime = createdTime
@@ -7890,6 +7872,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   itemID - (any)
 #   startTime - SOAP::SOAPDateTime
 #   endTime - SOAP::SOAPDateTime
@@ -7908,6 +7891,7 @@ class AddSecondChanceItemResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :startTime
@@ -7917,7 +7901,7 @@ class AddSecondChanceItemResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, itemID = nil, startTime = nil, endTime = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, itemID = nil, startTime = nil, endTime = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7932,6 +7916,7 @@ class AddSecondChanceItemResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @itemID = itemID
     @startTime = startTime
@@ -7954,6 +7939,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class AddToItemDescriptionResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -7969,13 +7955,14 @@ class AddToItemDescriptionResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -7990,6 +7977,7 @@ class AddToItemDescriptionResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -8009,6 +7997,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   watchListCount - SOAP::SOAPInt
 #   watchListMaximum - SOAP::SOAPInt
 class AddToWatchListResponseType < AbstractResponseType
@@ -8026,6 +8015,7 @@ class AddToWatchListResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :watchListCount
   attr_accessor :watchListMaximum
@@ -8034,7 +8024,7 @@ class AddToWatchListResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, watchListCount = nil, watchListMaximum = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, watchListCount = nil, watchListMaximum = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8049,6 +8039,7 @@ class AddToWatchListResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @watchListCount = watchListCount
     @watchListMaximum = watchListMaximum
@@ -8070,6 +8061,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   itemID - (any)
 #   startTime - SOAP::SOAPDateTime
 #   endTime - SOAP::SOAPDateTime
@@ -8088,6 +8080,7 @@ class AddTransactionConfirmationItemResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :startTime
@@ -8097,7 +8090,7 @@ class AddTransactionConfirmationItemResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, itemID = nil, startTime = nil, endTime = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, itemID = nil, startTime = nil, endTime = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8112,6 +8105,7 @@ class AddTransactionConfirmationItemResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @itemID = itemID
     @startTime = startTime
@@ -8134,6 +8128,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   bidderUpdateStatus - LiveAuctionApprovalStatusArrayType
 class ApproveLiveAuctionBiddersResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -8150,6 +8145,7 @@ class ApproveLiveAuctionBiddersResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :bidderUpdateStatus
 
@@ -8157,7 +8153,7 @@ class ApproveLiveAuctionBiddersResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, bidderUpdateStatus = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, bidderUpdateStatus = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8172,6 +8168,7 @@ class ApproveLiveAuctionBiddersResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @bidderUpdateStatus = bidderUpdateStatus
   end
@@ -8192,6 +8189,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class CompleteSaleResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -8207,13 +8205,14 @@ class CompleteSaleResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8228,7 +8227,69 @@ class CompleteSaleResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ConfirmIdentityResponseType
+#   timestamp - SOAP::SOAPDateTime
+#   ack - AckCodeType
+#   correlationID - SOAP::SOAPString
+#   errors - ErrorType
+#   message - SOAP::SOAPString
+#   version - SOAP::SOAPString
+#   build - SOAP::SOAPString
+#   notificationEventName - SOAP::SOAPString
+#   duplicateInvocationDetails - DuplicateInvocationDetailsType
+#   recipientUserID - SOAP::SOAPString
+#   eIASToken - SOAP::SOAPString
+#   notificationSignature - SOAP::SOAPString
+#   hardExpirationWarning - SOAP::SOAPString
+#   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
+#   userID - SOAP::SOAPString
+class ConfirmIdentityResponseType < AbstractResponseType
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :eIASToken
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_accessor :botBlock
+  attr_accessor :externalUserData
+  attr_reader :__xmlele_any
+  attr_accessor :userID
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, userID = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @botBlock = botBlock
+    @externalUserData = externalUserData
+    @__xmlele_any = nil
+    @userID = userID
   end
 end
 
@@ -8247,6 +8308,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class DeleteMyMessagesResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -8262,13 +8324,14 @@ class DeleteMyMessagesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8283,6 +8346,7 @@ class DeleteMyMessagesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -8302,6 +8366,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   endTime - SOAP::SOAPDateTime
 class EndItemResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -8318,6 +8383,7 @@ class EndItemResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :endTime
 
@@ -8325,7 +8391,7 @@ class EndItemResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, endTime = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, endTime = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8340,6 +8406,7 @@ class EndItemResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @endTime = endTime
   end
@@ -8360,6 +8427,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   eBayAuthToken - SOAP::SOAPString
 #   hardExpirationTime - SOAP::SOAPDateTime
 #   rESTToken - SOAP::SOAPString
@@ -8378,6 +8446,7 @@ class FetchTokenResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :eBayAuthToken
   attr_accessor :hardExpirationTime
@@ -8387,7 +8456,7 @@ class FetchTokenResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, eBayAuthToken = nil, hardExpirationTime = nil, rESTToken = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, eBayAuthToken = nil, hardExpirationTime = nil, rESTToken = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8402,6 +8471,7 @@ class FetchTokenResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @eBayAuthToken = eBayAuthToken
     @hardExpirationTime = hardExpirationTime
@@ -8424,6 +8494,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   accountID - SOAP::SOAPString
 #   accountSummary - AccountSummaryType
 #   currency - CurrencyCodeType
@@ -8447,6 +8518,7 @@ class GetAccountResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :accountID
   attr_accessor :accountSummary
@@ -8461,7 +8533,7 @@ class GetAccountResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, accountID = nil, accountSummary = nil, currency = nil, accountEntries = nil, paginationResult = nil, hasMoreEntries = nil, entriesPerPage = nil, pageNumber = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, accountID = nil, accountSummary = nil, currency = nil, accountEntries = nil, paginationResult = nil, hasMoreEntries = nil, entriesPerPage = nil, pageNumber = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8476,6 +8548,7 @@ class GetAccountResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @accountID = accountID
     @accountSummary = accountSummary
@@ -8503,6 +8576,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   adFormatLead - AdFormatLeadType
 #   adFormatLeadCount - SOAP::SOAPInt
 class GetAdFormatLeadsResponseType < AbstractResponseType
@@ -8520,6 +8594,7 @@ class GetAdFormatLeadsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :adFormatLead
   attr_accessor :adFormatLeadCount
@@ -8528,7 +8603,7 @@ class GetAdFormatLeadsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, adFormatLead = [], adFormatLeadCount = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, adFormatLead = [], adFormatLeadCount = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8543,6 +8618,7 @@ class GetAdFormatLeadsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @adFormatLead = adFormatLead
     @adFormatLeadCount = adFormatLeadCount
@@ -8564,6 +8640,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   bidArray - OfferArrayType
 #   highBidder - (any)
 #   highestBid - AmountType
@@ -8583,6 +8660,7 @@ class GetAllBiddersResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :bidArray
   attr_accessor :highBidder
@@ -8593,7 +8671,7 @@ class GetAllBiddersResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, bidArray = nil, highBidder = nil, highestBid = nil, listingStatus = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, bidArray = nil, highBidder = nil, highestBid = nil, listingStatus = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8608,6 +8686,7 @@ class GetAllBiddersResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @bidArray = bidArray
     @highBidder = highBidder
@@ -8631,6 +8710,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   apiAccessRule - ApiAccessRuleType
 class GetApiAccessRulesResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -8647,6 +8727,7 @@ class GetApiAccessRulesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :apiAccessRule
 
@@ -8654,7 +8735,7 @@ class GetApiAccessRulesResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, apiAccessRule = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, apiAccessRule = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8669,6 +8750,7 @@ class GetApiAccessRulesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @apiAccessRule = apiAccessRule
   end
@@ -8689,6 +8771,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   attributeSystemVersion - SOAP::SOAPString
 #   attributeData - SOAP::SOAPString
 class GetAttributesCSResponseType < AbstractResponseType
@@ -8706,6 +8789,7 @@ class GetAttributesCSResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :attributeSystemVersion
   attr_accessor :attributeData
@@ -8714,7 +8798,7 @@ class GetAttributesCSResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, attributeSystemVersion = nil, attributeData = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, attributeSystemVersion = nil, attributeData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8729,6 +8813,7 @@ class GetAttributesCSResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @attributeSystemVersion = attributeSystemVersion
     @attributeData = attributeData
@@ -8750,6 +8835,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   xSLFile - XSLFileType
 class GetAttributesXSLResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -8766,6 +8852,7 @@ class GetAttributesXSLResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :xSLFile
 
@@ -8773,7 +8860,7 @@ class GetAttributesXSLResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, xSLFile = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, xSLFile = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8788,6 +8875,7 @@ class GetAttributesXSLResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @xSLFile = xSLFile
   end
@@ -8808,6 +8896,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   bestOfferArray - BestOfferArrayType
 #   item - ItemType
 class GetBestOffersResponseType < AbstractResponseType
@@ -8825,6 +8914,7 @@ class GetBestOffersResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :bestOfferArray
   attr_accessor :item
@@ -8833,7 +8923,7 @@ class GetBestOffersResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, bestOfferArray = nil, item = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, bestOfferArray = nil, item = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8848,6 +8938,7 @@ class GetBestOffersResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @bestOfferArray = bestOfferArray
     @item = item
@@ -8869,6 +8960,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   bidder - UserType
 #   bidItemArray - ItemArrayType
 class GetBidderListResponseType < AbstractResponseType
@@ -8886,6 +8978,7 @@ class GetBidderListResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :bidder
   attr_accessor :bidItemArray
@@ -8894,7 +8987,7 @@ class GetBidderListResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, bidder = nil, bidItemArray = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, bidder = nil, bidItemArray = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -8909,67 +9002,10 @@ class GetBidderListResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @bidder = bidder
     @bidItemArray = bidItemArray
-  end
-end
-
-# {urn:ebay:apis:eBLBaseComponents}GetCartResponseType
-#   timestamp - SOAP::SOAPDateTime
-#   ack - AckCodeType
-#   correlationID - SOAP::SOAPString
-#   errors - ErrorType
-#   message - SOAP::SOAPString
-#   version - SOAP::SOAPString
-#   build - SOAP::SOAPString
-#   notificationEventName - SOAP::SOAPString
-#   duplicateInvocationDetails - DuplicateInvocationDetailsType
-#   recipientUserID - SOAP::SOAPString
-#   eIASToken - SOAP::SOAPString
-#   notificationSignature - SOAP::SOAPString
-#   hardExpirationWarning - SOAP::SOAPString
-#   botBlock - BotBlockResponseType
-#   cart - CartType
-class GetCartResponseType < AbstractResponseType
-  attr_accessor :timestamp
-  attr_accessor :ack
-  attr_accessor :correlationID
-  attr_accessor :errors
-  attr_accessor :message
-  attr_accessor :version
-  attr_accessor :build
-  attr_accessor :notificationEventName
-  attr_accessor :duplicateInvocationDetails
-  attr_accessor :recipientUserID
-  attr_accessor :eIASToken
-  attr_accessor :notificationSignature
-  attr_accessor :hardExpirationWarning
-  attr_accessor :botBlock
-  attr_reader :__xmlele_any
-  attr_accessor :cart
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, cart = nil)
-    @timestamp = timestamp
-    @ack = ack
-    @correlationID = correlationID
-    @errors = errors
-    @message = message
-    @version = version
-    @build = build
-    @notificationEventName = notificationEventName
-    @duplicateInvocationDetails = duplicateInvocationDetails
-    @recipientUserID = recipientUserID
-    @eIASToken = eIASToken
-    @notificationSignature = notificationSignature
-    @hardExpirationWarning = hardExpirationWarning
-    @botBlock = botBlock
-    @__xmlele_any = nil
-    @cart = cart
   end
 end
 
@@ -8988,6 +9024,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   categoryArray - CategoryArrayType
 #   categoryCount - SOAP::SOAPInt
 #   updateTime - SOAP::SOAPDateTime
@@ -9010,6 +9047,7 @@ class GetCategoriesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :categoryArray
   attr_accessor :categoryCount
@@ -9023,7 +9061,7 @@ class GetCategoriesResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, categoryArray = nil, categoryCount = nil, updateTime = nil, categoryVersion = nil, reservePriceAllowed = nil, minimumReservePrice = nil, reduceReserveAllowed = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, categoryArray = nil, categoryCount = nil, updateTime = nil, categoryVersion = nil, reservePriceAllowed = nil, minimumReservePrice = nil, reduceReserveAllowed = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9038,6 +9076,7 @@ class GetCategoriesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @categoryArray = categoryArray
     @categoryCount = categoryCount
@@ -9064,6 +9103,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   mappedCategoryArray - CategoryArrayType
 #   unmappedCategoryArray - CategoryArrayType
 #   attributeSystemVersion - SOAP::SOAPString
@@ -9083,6 +9123,7 @@ class GetCategory2CSResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :mappedCategoryArray
   attr_accessor :unmappedCategoryArray
@@ -9093,7 +9134,7 @@ class GetCategory2CSResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, mappedCategoryArray = nil, unmappedCategoryArray = nil, attributeSystemVersion = nil, siteWideCharacteristicSets = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, mappedCategoryArray = nil, unmappedCategoryArray = nil, attributeSystemVersion = nil, siteWideCharacteristicSets = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9108,6 +9149,7 @@ class GetCategory2CSResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @mappedCategoryArray = mappedCategoryArray
     @unmappedCategoryArray = unmappedCategoryArray
@@ -9131,6 +9173,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   categoryVersion - SOAP::SOAPString
 #   updateTime - SOAP::SOAPDateTime
 #   category - CategoryFeatureType
@@ -9151,6 +9194,7 @@ class GetCategoryFeaturesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :categoryVersion
   attr_accessor :updateTime
@@ -9162,7 +9206,7 @@ class GetCategoryFeaturesResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, categoryVersion = nil, updateTime = nil, category = [], siteDefaults = nil, featureDefinitions = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, categoryVersion = nil, updateTime = nil, category = [], siteDefaults = nil, featureDefinitions = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9177,6 +9221,7 @@ class GetCategoryFeaturesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @categoryVersion = categoryVersion
     @updateTime = updateTime
@@ -9201,6 +9246,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   itemArray - ItemArrayType
 #   category - CategoryType
 #   subCategories - CategoryArrayType
@@ -9210,6 +9256,7 @@ end
 #   paginationResult - PaginationResultType
 #   buyingGuideDetails - BuyingGuideDetailsType
 #   relatedSearchKeywordArray - RelatedSearchKeywordArrayType
+#   duplicateItems - SOAP::SOAPBoolean
 class GetCategoryListingsResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -9225,6 +9272,7 @@ class GetCategoryListingsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :itemArray
   attr_accessor :category
@@ -9235,12 +9283,13 @@ class GetCategoryListingsResponseType < AbstractResponseType
   attr_accessor :paginationResult
   attr_accessor :buyingGuideDetails
   attr_accessor :relatedSearchKeywordArray
+  attr_accessor :duplicateItems
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, itemArray = nil, category = nil, subCategories = nil, itemsPerPage = nil, pageNumber = nil, hasMoreItems = nil, paginationResult = nil, buyingGuideDetails = nil, relatedSearchKeywordArray = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, itemArray = nil, category = nil, subCategories = nil, itemsPerPage = nil, pageNumber = nil, hasMoreItems = nil, paginationResult = nil, buyingGuideDetails = nil, relatedSearchKeywordArray = nil, duplicateItems = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9255,6 +9304,7 @@ class GetCategoryListingsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @itemArray = itemArray
     @category = category
@@ -9265,6 +9315,7 @@ class GetCategoryListingsResponseType < AbstractResponseType
     @paginationResult = paginationResult
     @buyingGuideDetails = buyingGuideDetails
     @relatedSearchKeywordArray = relatedSearchKeywordArray
+    @duplicateItems = duplicateItems
   end
 end
 
@@ -9283,6 +9334,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   categoryMapping - CategoryMappingType
 #   categoryVersion - SOAP::SOAPString
 class GetCategoryMappingsResponseType < AbstractResponseType
@@ -9300,6 +9352,7 @@ class GetCategoryMappingsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :categoryMapping
   attr_accessor :categoryVersion
@@ -9308,7 +9361,7 @@ class GetCategoryMappingsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, categoryMapping = [], categoryVersion = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, categoryMapping = [], categoryVersion = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9323,6 +9376,7 @@ class GetCategoryMappingsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @categoryMapping = categoryMapping
     @categoryVersion = categoryVersion
@@ -9344,6 +9398,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   categoryItemSpecifics - CategoryItemSpecificsType
 class GetCategorySpecificsResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -9360,6 +9415,7 @@ class GetCategorySpecificsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :categoryItemSpecifics
 
@@ -9367,7 +9423,7 @@ class GetCategorySpecificsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, categoryItemSpecifics = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, categoryItemSpecifics = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9382,6 +9438,7 @@ class GetCategorySpecificsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @categoryItemSpecifics = categoryItemSpecifics
   end
@@ -9402,6 +9459,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   challengeToken - SOAP::SOAPString
 #   imageChallengeURL - SOAP::SOAPString
 #   audioChallengeURL - SOAP::SOAPString
@@ -9420,6 +9478,7 @@ class GetChallengeTokenResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :challengeToken
   attr_accessor :imageChallengeURL
@@ -9429,7 +9488,7 @@ class GetChallengeTokenResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, challengeToken = nil, imageChallengeURL = nil, audioChallengeURL = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, challengeToken = nil, imageChallengeURL = nil, audioChallengeURL = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9444,6 +9503,7 @@ class GetChallengeTokenResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @challengeToken = challengeToken
     @imageChallengeURL = imageChallengeURL
@@ -9466,6 +9526,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   charity - CharityInfoType
 class GetCharitiesResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -9482,6 +9543,7 @@ class GetCharitiesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :charity
 
@@ -9489,7 +9551,7 @@ class GetCharitiesResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, charity = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, charity = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9504,8 +9566,73 @@ class GetCharitiesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @charity = charity
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetClientAlertsAuthTokenResponseType
+#   timestamp - SOAP::SOAPDateTime
+#   ack - AckCodeType
+#   correlationID - SOAP::SOAPString
+#   errors - ErrorType
+#   message - SOAP::SOAPString
+#   version - SOAP::SOAPString
+#   build - SOAP::SOAPString
+#   notificationEventName - SOAP::SOAPString
+#   duplicateInvocationDetails - DuplicateInvocationDetailsType
+#   recipientUserID - SOAP::SOAPString
+#   eIASToken - SOAP::SOAPString
+#   notificationSignature - SOAP::SOAPString
+#   hardExpirationWarning - SOAP::SOAPString
+#   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
+#   clientAlertsAuthToken - SOAP::SOAPString
+#   hardExpirationTime - SOAP::SOAPDateTime
+class GetClientAlertsAuthTokenResponseType < AbstractResponseType
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :eIASToken
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_accessor :botBlock
+  attr_accessor :externalUserData
+  attr_reader :__xmlele_any
+  attr_accessor :clientAlertsAuthToken
+  attr_accessor :hardExpirationTime
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, clientAlertsAuthToken = nil, hardExpirationTime = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @botBlock = botBlock
+    @externalUserData = externalUserData
+    @__xmlele_any = nil
+    @clientAlertsAuthToken = clientAlertsAuthToken
+    @hardExpirationTime = hardExpirationTime
   end
 end
 
@@ -9524,6 +9651,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   contextSearchAsset - ContextSearchAssetType
 class GetContextualKeywordsResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -9540,6 +9668,7 @@ class GetContextualKeywordsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :contextSearchAsset
 
@@ -9547,7 +9676,7 @@ class GetContextualKeywordsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, contextSearchAsset = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, contextSearchAsset = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9562,6 +9691,7 @@ class GetContextualKeywordsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @contextSearchAsset = contextSearchAsset
   end
@@ -9582,6 +9712,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   crossPromotion - CrossPromotionsType
 class GetCrossPromotionsResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -9598,6 +9729,7 @@ class GetCrossPromotionsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :crossPromotion
 
@@ -9605,7 +9737,7 @@ class GetCrossPromotionsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, crossPromotion = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, crossPromotion = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9620,6 +9752,7 @@ class GetCrossPromotionsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @crossPromotion = crossPromotion
   end
@@ -9640,6 +9773,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   descriptionTemplate - DescriptionTemplateType
 #   layoutTotal - SOAP::SOAPInt
 #   obsoleteLayoutID - SOAP::SOAPInt
@@ -9661,6 +9795,7 @@ class GetDescriptionTemplatesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :descriptionTemplate
   attr_accessor :layoutTotal
@@ -9673,7 +9808,7 @@ class GetDescriptionTemplatesResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, descriptionTemplate = [], layoutTotal = nil, obsoleteLayoutID = [], obsoleteThemeID = [], themeGroup = [], themeTotal = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, descriptionTemplate = [], layoutTotal = nil, obsoleteLayoutID = [], obsoleteThemeID = [], themeGroup = [], themeTotal = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9688,6 +9823,7 @@ class GetDescriptionTemplatesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @descriptionTemplate = descriptionTemplate
     @layoutTotal = layoutTotal
@@ -9713,6 +9849,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   dispute - DisputeType
 class GetDisputeResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -9729,6 +9866,7 @@ class GetDisputeResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :dispute
 
@@ -9736,7 +9874,7 @@ class GetDisputeResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, dispute = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, dispute = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9751,69 +9889,9 @@ class GetDisputeResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @dispute = dispute
-  end
-end
-
-# {urn:ebay:apis:eBLBaseComponents}GetExpressWishListResponseType
-#   timestamp - SOAP::SOAPDateTime
-#   ack - AckCodeType
-#   correlationID - SOAP::SOAPString
-#   errors - ErrorType
-#   message - SOAP::SOAPString
-#   version - SOAP::SOAPString
-#   build - SOAP::SOAPString
-#   notificationEventName - SOAP::SOAPString
-#   duplicateInvocationDetails - DuplicateInvocationDetailsType
-#   recipientUserID - SOAP::SOAPString
-#   eIASToken - SOAP::SOAPString
-#   notificationSignature - SOAP::SOAPString
-#   hardExpirationWarning - SOAP::SOAPString
-#   botBlock - BotBlockResponseType
-#   wishList - WishListType
-#   pagination - PaginationResultType
-class GetExpressWishListResponseType < AbstractResponseType
-  attr_accessor :timestamp
-  attr_accessor :ack
-  attr_accessor :correlationID
-  attr_accessor :errors
-  attr_accessor :message
-  attr_accessor :version
-  attr_accessor :build
-  attr_accessor :notificationEventName
-  attr_accessor :duplicateInvocationDetails
-  attr_accessor :recipientUserID
-  attr_accessor :eIASToken
-  attr_accessor :notificationSignature
-  attr_accessor :hardExpirationWarning
-  attr_accessor :botBlock
-  attr_reader :__xmlele_any
-  attr_accessor :wishList
-  attr_accessor :pagination
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, wishList = [], pagination = nil)
-    @timestamp = timestamp
-    @ack = ack
-    @correlationID = correlationID
-    @errors = errors
-    @message = message
-    @version = version
-    @build = build
-    @notificationEventName = notificationEventName
-    @duplicateInvocationDetails = duplicateInvocationDetails
-    @recipientUserID = recipientUserID
-    @eIASToken = eIASToken
-    @notificationSignature = notificationSignature
-    @hardExpirationWarning = hardExpirationWarning
-    @botBlock = botBlock
-    @__xmlele_any = nil
-    @wishList = wishList
-    @pagination = pagination
   end
 end
 
@@ -9832,10 +9910,14 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   feedbackDetailArray - FeedbackDetailArrayType
 #   feedbackDetailItemTotal - SOAP::SOAPInt
 #   feedbackSummary - FeedbackSummaryType
 #   feedbackScore - SOAP::SOAPInt
+#   paginationResult - PaginationResultType
+#   entriesPerPage - SOAP::SOAPInt
+#   pageNumber - SOAP::SOAPInt
 class GetFeedbackResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -9851,17 +9933,21 @@ class GetFeedbackResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :feedbackDetailArray
   attr_accessor :feedbackDetailItemTotal
   attr_accessor :feedbackSummary
   attr_accessor :feedbackScore
+  attr_accessor :paginationResult
+  attr_accessor :entriesPerPage
+  attr_accessor :pageNumber
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, feedbackDetailArray = nil, feedbackDetailItemTotal = nil, feedbackSummary = nil, feedbackScore = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, feedbackDetailArray = nil, feedbackDetailItemTotal = nil, feedbackSummary = nil, feedbackScore = nil, paginationResult = nil, entriesPerPage = nil, pageNumber = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9876,11 +9962,15 @@ class GetFeedbackResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @feedbackDetailArray = feedbackDetailArray
     @feedbackDetailItemTotal = feedbackDetailItemTotal
     @feedbackSummary = feedbackSummary
     @feedbackScore = feedbackScore
+    @paginationResult = paginationResult
+    @entriesPerPage = entriesPerPage
+    @pageNumber = pageNumber
   end
 end
 
@@ -9899,6 +9989,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   bidArray - OfferArrayType
 #   listingStatus - ListingStatusCodeType
 class GetHighBiddersResponseType < AbstractResponseType
@@ -9916,6 +10007,7 @@ class GetHighBiddersResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :bidArray
   attr_accessor :listingStatus
@@ -9924,7 +10016,7 @@ class GetHighBiddersResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, bidArray = nil, listingStatus = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, bidArray = nil, listingStatus = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9939,6 +10031,7 @@ class GetHighBiddersResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @bidArray = bidArray
     @listingStatus = listingStatus
@@ -9960,6 +10053,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   item - ItemType
 class GetItemResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -9976,6 +10070,7 @@ class GetItemResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :item
 
@@ -9983,7 +10078,7 @@ class GetItemResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, item = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, item = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -9998,6 +10093,7 @@ class GetItemResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @item = item
   end
@@ -10018,6 +10114,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   getRecommendationsResponseContainer - GetRecommendationsResponseContainerType
 class GetItemRecommendationsResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -10034,6 +10131,7 @@ class GetItemRecommendationsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :getRecommendationsResponseContainer
 
@@ -10041,7 +10139,7 @@ class GetItemRecommendationsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, getRecommendationsResponseContainer = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, getRecommendationsResponseContainer = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10056,6 +10154,7 @@ class GetItemRecommendationsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @getRecommendationsResponseContainer = getRecommendationsResponseContainer
   end
@@ -10076,6 +10175,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   shippingDetails - ShippingDetailsType
 class GetItemShippingResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -10092,6 +10192,7 @@ class GetItemShippingResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :shippingDetails
 
@@ -10099,7 +10200,7 @@ class GetItemShippingResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, shippingDetails = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, shippingDetails = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10114,6 +10215,7 @@ class GetItemShippingResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @shippingDetails = shippingDetails
   end
@@ -10134,6 +10236,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   paginationResult - PaginationResultType
 #   hasMoreTransactions - SOAP::SOAPBoolean
 #   transactionsPerPage - SOAP::SOAPInt
@@ -10157,6 +10260,7 @@ class GetItemTransactionsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :paginationResult
   attr_accessor :hasMoreTransactions
@@ -10171,7 +10275,7 @@ class GetItemTransactionsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, paginationResult = nil, hasMoreTransactions = nil, transactionsPerPage = nil, pageNumber = nil, returnedTransactionCountActual = nil, item = nil, transactionArray = nil, payPalPreferred = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, paginationResult = nil, hasMoreTransactions = nil, transactionsPerPage = nil, pageNumber = nil, returnedTransactionCountActual = nil, item = nil, transactionArray = nil, payPalPreferred = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10186,6 +10290,7 @@ class GetItemTransactionsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @paginationResult = paginationResult
     @hasMoreTransactions = hasMoreTransactions
@@ -10213,6 +10318,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   itemsAwaitingFeedback - PaginatedTransactionArrayType
 class GetItemsAwaitingFeedbackResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -10229,6 +10335,7 @@ class GetItemsAwaitingFeedbackResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :itemsAwaitingFeedback
 
@@ -10236,7 +10343,7 @@ class GetItemsAwaitingFeedbackResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, itemsAwaitingFeedback = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, itemsAwaitingFeedback = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10251,6 +10358,7 @@ class GetItemsAwaitingFeedbackResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @itemsAwaitingFeedback = itemsAwaitingFeedback
   end
@@ -10271,6 +10379,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   bidderDetails - BidderDetailArrayType
 #   totalPending - SOAP::SOAPInt
 #   totalApproved - SOAP::SOAPInt
@@ -10292,6 +10401,7 @@ class GetLiveAuctionBiddersResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :bidderDetails
   attr_accessor :totalPending
@@ -10304,7 +10414,7 @@ class GetLiveAuctionBiddersResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, bidderDetails = nil, totalPending = nil, totalApproved = nil, totalDenied = nil, pageNumber = nil, paginationResult = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, bidderDetails = nil, totalPending = nil, totalApproved = nil, totalDenied = nil, pageNumber = nil, paginationResult = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10319,6 +10429,7 @@ class GetLiveAuctionBiddersResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @bidderDetails = bidderDetails
     @totalPending = totalPending
@@ -10344,6 +10455,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   liveAuctionCatalog - LiveAuctionCatalogType
 class GetLiveAuctionCatalogDetailsResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -10360,6 +10472,7 @@ class GetLiveAuctionCatalogDetailsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :liveAuctionCatalog
 
@@ -10367,7 +10480,7 @@ class GetLiveAuctionCatalogDetailsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, liveAuctionCatalog = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, liveAuctionCatalog = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10382,6 +10495,7 @@ class GetLiveAuctionCatalogDetailsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @liveAuctionCatalog = liveAuctionCatalog
   end
@@ -10402,6 +10516,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   memberMessage - MemberMessageExchangeArrayType
 #   paginationResult - PaginationResultType
 #   hasMoreItems - SOAP::SOAPBoolean
@@ -10420,6 +10535,7 @@ class GetMemberMessagesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :memberMessage
   attr_accessor :paginationResult
@@ -10429,7 +10545,7 @@ class GetMemberMessagesResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, memberMessage = nil, paginationResult = nil, hasMoreItems = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, memberMessage = nil, paginationResult = nil, hasMoreItems = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10444,6 +10560,7 @@ class GetMemberMessagesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @memberMessage = memberMessage
     @paginationResult = paginationResult
@@ -10466,6 +10583,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   aSQPreferences - ASQPreferencesType
 class GetMessagePreferencesResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -10482,6 +10600,7 @@ class GetMessagePreferencesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :aSQPreferences
 
@@ -10489,7 +10608,7 @@ class GetMessagePreferencesResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, aSQPreferences = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, aSQPreferences = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10504,6 +10623,7 @@ class GetMessagePreferencesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @aSQPreferences = aSQPreferences
   end
@@ -10524,6 +10644,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   summary - MyMessagesSummaryType
 #   alerts - MyMessagesAlertArrayType
 #   messages - MyMessagesMessageArrayType
@@ -10542,6 +10663,7 @@ class GetMyMessagesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :summary
   attr_accessor :alerts
@@ -10551,7 +10673,7 @@ class GetMyMessagesResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, summary = nil, alerts = nil, messages = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, summary = nil, alerts = nil, messages = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10566,6 +10688,7 @@ class GetMyMessagesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @summary = summary
     @alerts = alerts
@@ -10588,6 +10711,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   buyingSummary - BuyingSummaryType
 #   watchList - PaginatedItemArrayType
 #   bidList - PaginatedItemArrayType
@@ -10598,6 +10722,8 @@ end
 #   favoriteSellers - MyeBayFavoriteSellerListType
 #   secondChanceOffer - ItemType
 #   bidAssistantList - BidGroupArrayType
+#   deletedFromWonList - PaginatedOrderTransactionArrayType
+#   deletedFromLostList - PaginatedItemArrayType
 class GetMyeBayBuyingResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -10613,6 +10739,7 @@ class GetMyeBayBuyingResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :buyingSummary
   attr_accessor :watchList
@@ -10624,12 +10751,14 @@ class GetMyeBayBuyingResponseType < AbstractResponseType
   attr_accessor :favoriteSellers
   attr_accessor :secondChanceOffer
   attr_accessor :bidAssistantList
+  attr_accessor :deletedFromWonList
+  attr_accessor :deletedFromLostList
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, buyingSummary = nil, watchList = nil, bidList = nil, bestOfferList = nil, wonList = nil, lostList = nil, favoriteSearches = nil, favoriteSellers = nil, secondChanceOffer = [], bidAssistantList = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, buyingSummary = nil, watchList = nil, bidList = nil, bestOfferList = nil, wonList = nil, lostList = nil, favoriteSearches = nil, favoriteSellers = nil, secondChanceOffer = [], bidAssistantList = nil, deletedFromWonList = nil, deletedFromLostList = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10644,6 +10773,7 @@ class GetMyeBayBuyingResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @buyingSummary = buyingSummary
     @watchList = watchList
@@ -10655,6 +10785,8 @@ class GetMyeBayBuyingResponseType < AbstractResponseType
     @favoriteSellers = favoriteSellers
     @secondChanceOffer = secondChanceOffer
     @bidAssistantList = bidAssistantList
+    @deletedFromWonList = deletedFromWonList
+    @deletedFromLostList = deletedFromLostList
   end
 end
 
@@ -10673,6 +10805,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   buyingReminders - RemindersType
 #   sellingReminders - RemindersType
 class GetMyeBayRemindersResponseType < AbstractResponseType
@@ -10690,6 +10823,7 @@ class GetMyeBayRemindersResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :buyingReminders
   attr_accessor :sellingReminders
@@ -10698,7 +10832,7 @@ class GetMyeBayRemindersResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, buyingReminders = nil, sellingReminders = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, buyingReminders = nil, sellingReminders = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10713,6 +10847,7 @@ class GetMyeBayRemindersResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @buyingReminders = buyingReminders
     @sellingReminders = sellingReminders
@@ -10734,12 +10869,16 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   sellingSummary - SellingSummaryType
 #   scheduledList - PaginatedItemArrayType
 #   activeList - PaginatedItemArrayType
 #   soldList - PaginatedOrderTransactionArrayType
 #   unsoldList - PaginatedItemArrayType
 #   summary - MyeBaySellingSummaryType
+#   bidList - PaginatedItemArrayType
+#   deletedFromSoldList - PaginatedOrderTransactionArrayType
+#   deletedFromUnsoldList - PaginatedItemArrayType
 class GetMyeBaySellingResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -10755,6 +10894,7 @@ class GetMyeBaySellingResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :sellingSummary
   attr_accessor :scheduledList
@@ -10762,12 +10902,15 @@ class GetMyeBaySellingResponseType < AbstractResponseType
   attr_accessor :soldList
   attr_accessor :unsoldList
   attr_accessor :summary
+  attr_accessor :bidList
+  attr_accessor :deletedFromSoldList
+  attr_accessor :deletedFromUnsoldList
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, sellingSummary = nil, scheduledList = nil, activeList = nil, soldList = nil, unsoldList = nil, summary = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, sellingSummary = nil, scheduledList = nil, activeList = nil, soldList = nil, unsoldList = nil, summary = nil, bidList = nil, deletedFromSoldList = nil, deletedFromUnsoldList = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10782,6 +10925,7 @@ class GetMyeBaySellingResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @sellingSummary = sellingSummary
     @scheduledList = scheduledList
@@ -10789,6 +10933,9 @@ class GetMyeBaySellingResponseType < AbstractResponseType
     @soldList = soldList
     @unsoldList = unsoldList
     @summary = summary
+    @bidList = bidList
+    @deletedFromSoldList = deletedFromSoldList
+    @deletedFromUnsoldList = deletedFromUnsoldList
   end
 end
 
@@ -10807,7 +10954,9 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   applicationDeliveryPreferences - ApplicationDeliveryPreferencesType
+#   deliveryURLName - SOAP::SOAPString
 #   userDeliveryPreferenceArray - NotificationEnableArrayType
 #   userData - NotificationUserDataType
 #   eventProperty - NotificationEventPropertyType
@@ -10826,8 +10975,10 @@ class GetNotificationPreferencesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :applicationDeliveryPreferences
+  attr_accessor :deliveryURLName
   attr_accessor :userDeliveryPreferenceArray
   attr_accessor :userData
   attr_accessor :eventProperty
@@ -10836,7 +10987,7 @@ class GetNotificationPreferencesResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, applicationDeliveryPreferences = nil, userDeliveryPreferenceArray = nil, userData = nil, eventProperty = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, applicationDeliveryPreferences = nil, deliveryURLName = nil, userDeliveryPreferenceArray = nil, userData = nil, eventProperty = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10851,8 +11002,10 @@ class GetNotificationPreferencesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @applicationDeliveryPreferences = applicationDeliveryPreferences
+    @deliveryURLName = deliveryURLName
     @userDeliveryPreferenceArray = userDeliveryPreferenceArray
     @userData = userData
     @eventProperty = eventProperty
@@ -10874,6 +11027,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   startTime - SOAP::SOAPDateTime
 #   endTime - SOAP::SOAPDateTime
 #   notificationDetailsArray - NotificationDetailsArrayType
@@ -10894,6 +11048,7 @@ class GetNotificationsUsageResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :startTime
   attr_accessor :endTime
@@ -10905,7 +11060,7 @@ class GetNotificationsUsageResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, startTime = nil, endTime = nil, notificationDetailsArray = nil, markUpMarkDownHistory = nil, notificationStatistics = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, startTime = nil, endTime = nil, notificationDetailsArray = nil, markUpMarkDownHistory = nil, notificationStatistics = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10920,6 +11075,7 @@ class GetNotificationsUsageResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @startTime = startTime
     @endTime = endTime
@@ -10944,6 +11100,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   orderArray - OrderArrayType
 class GetOrderTransactionsResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -10960,6 +11117,7 @@ class GetOrderTransactionsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :orderArray
 
@@ -10967,7 +11125,7 @@ class GetOrderTransactionsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, orderArray = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, orderArray = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -10982,6 +11140,7 @@ class GetOrderTransactionsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @orderArray = orderArray
   end
@@ -11002,6 +11161,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   paginationResult - PaginationResultType
 #   hasMoreOrders - SOAP::SOAPBoolean
 #   orderArray - OrderArrayType
@@ -11023,6 +11183,7 @@ class GetOrdersResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :paginationResult
   attr_accessor :hasMoreOrders
@@ -11035,7 +11196,7 @@ class GetOrdersResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, paginationResult = nil, hasMoreOrders = nil, orderArray = nil, ordersPerPage = nil, pageNumber = nil, returnedOrderCountActual = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, paginationResult = nil, hasMoreOrders = nil, orderArray = nil, ordersPerPage = nil, pageNumber = nil, returnedOrderCountActual = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11050,6 +11211,7 @@ class GetOrdersResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @paginationResult = paginationResult
     @hasMoreOrders = hasMoreOrders
@@ -11075,6 +11237,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   pictureManagerDetails - PictureManagerDetailsType
 class GetPictureManagerDetailsResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -11091,6 +11254,7 @@ class GetPictureManagerDetailsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :pictureManagerDetails
 
@@ -11098,7 +11262,7 @@ class GetPictureManagerDetailsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, pictureManagerDetails = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, pictureManagerDetails = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11113,6 +11277,7 @@ class GetPictureManagerDetailsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @pictureManagerDetails = pictureManagerDetails
   end
@@ -11133,6 +11298,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   subscription - PictureManagerSubscriptionType
 #   pictureType - PictureManagerPictureDisplayType
 class GetPictureManagerOptionsResponseType < AbstractResponseType
@@ -11150,6 +11316,7 @@ class GetPictureManagerOptionsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :subscription
   attr_accessor :pictureType
@@ -11158,7 +11325,7 @@ class GetPictureManagerOptionsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, subscription = [], pictureType = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, subscription = [], pictureType = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11173,6 +11340,7 @@ class GetPictureManagerOptionsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @subscription = subscription
     @pictureType = pictureType
@@ -11194,6 +11362,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   paginationResult - PaginationResultType
 #   categoryArray - CategoryArrayType
 #   hasMore - SOAP::SOAPBoolean
@@ -11212,6 +11381,7 @@ class GetPopularKeywordsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :paginationResult
   attr_accessor :categoryArray
@@ -11221,7 +11391,7 @@ class GetPopularKeywordsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, paginationResult = nil, categoryArray = nil, hasMore = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, paginationResult = nil, categoryArray = nil, hasMore = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11236,6 +11406,7 @@ class GetPopularKeywordsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @paginationResult = paginationResult
     @categoryArray = categoryArray
@@ -11258,6 +11429,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   dataElementSets - DataElementSetType
 #   productSearchResult - ProductSearchResultType
 class GetProductFamilyMembersResponseType < AbstractResponseType
@@ -11275,6 +11447,7 @@ class GetProductFamilyMembersResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :dataElementSets
   attr_accessor :productSearchResult
@@ -11283,7 +11456,7 @@ class GetProductFamilyMembersResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, dataElementSets = [], productSearchResult = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, dataElementSets = [], productSearchResult = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11298,6 +11471,7 @@ class GetProductFamilyMembersResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @dataElementSets = dataElementSets
     @productSearchResult = productSearchResult
@@ -11319,6 +11493,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   attributeSystemVersion - SOAP::SOAPString
 #   productFinderData - SOAP::SOAPString
 class GetProductFinderResponseType < AbstractResponseType
@@ -11336,6 +11511,7 @@ class GetProductFinderResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :attributeSystemVersion
   attr_accessor :productFinderData
@@ -11344,7 +11520,7 @@ class GetProductFinderResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, attributeSystemVersion = nil, productFinderData = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, attributeSystemVersion = nil, productFinderData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11359,6 +11535,7 @@ class GetProductFinderResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @attributeSystemVersion = attributeSystemVersion
     @productFinderData = productFinderData
@@ -11380,6 +11557,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   xSLFile - XSLFileType
 class GetProductFinderXSLResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -11396,6 +11574,7 @@ class GetProductFinderXSLResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :xSLFile
 
@@ -11403,7 +11582,7 @@ class GetProductFinderXSLResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, xSLFile = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, xSLFile = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11418,6 +11597,7 @@ class GetProductFinderXSLResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @xSLFile = xSLFile
   end
@@ -11438,6 +11618,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   attributeSystemVersion - SOAP::SOAPString
 #   productSearchPage - ProductSearchPageType
 class GetProductSearchPageResponseType < AbstractResponseType
@@ -11455,6 +11636,7 @@ class GetProductSearchPageResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :attributeSystemVersion
   attr_accessor :productSearchPage
@@ -11463,7 +11645,7 @@ class GetProductSearchPageResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, attributeSystemVersion = nil, productSearchPage = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, attributeSystemVersion = nil, productSearchPage = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11478,6 +11660,7 @@ class GetProductSearchPageResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @attributeSystemVersion = attributeSystemVersion
     @productSearchPage = productSearchPage
@@ -11499,6 +11682,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   dataElementSets - DataElementSetType
 #   productSearchResult - ProductSearchResultType
 class GetProductSearchResultsResponseType < AbstractResponseType
@@ -11516,6 +11700,7 @@ class GetProductSearchResultsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :dataElementSets
   attr_accessor :productSearchResult
@@ -11524,7 +11709,7 @@ class GetProductSearchResultsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, dataElementSets = [], productSearchResult = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, dataElementSets = [], productSearchResult = [])
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11539,6 +11724,7 @@ class GetProductSearchResultsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @dataElementSets = dataElementSets
     @productSearchResult = productSearchResult
@@ -11560,6 +11746,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   productSellingPagesData - SOAP::SOAPString
 class GetProductSellingPagesResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -11576,6 +11763,7 @@ class GetProductSellingPagesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :productSellingPagesData
 
@@ -11583,7 +11771,7 @@ class GetProductSellingPagesResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, productSellingPagesData = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, productSellingPagesData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11598,6 +11786,7 @@ class GetProductSellingPagesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @productSellingPagesData = productSellingPagesData
   end
@@ -11618,6 +11807,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   characteristicsSetProductHistogram - CharacteristicsSetProductHistogramType
 #   pageNumber - SOAP::SOAPInt
 #   approximatePages - SOAP::SOAPInt
@@ -11626,6 +11816,7 @@ end
 #   product - CatalogProductType
 #   itemArray - ItemArrayType
 #   buyingGuideDetails - BuyingGuideDetailsType
+#   duplicateItems - SOAP::SOAPBoolean
 class GetProductsResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -11641,6 +11832,7 @@ class GetProductsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :characteristicsSetProductHistogram
   attr_accessor :pageNumber
@@ -11650,12 +11842,13 @@ class GetProductsResponseType < AbstractResponseType
   attr_accessor :product
   attr_accessor :itemArray
   attr_accessor :buyingGuideDetails
+  attr_accessor :duplicateItems
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, characteristicsSetProductHistogram = nil, pageNumber = nil, approximatePages = nil, hasMore = nil, totalProducts = nil, product = [], itemArray = nil, buyingGuideDetails = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, characteristicsSetProductHistogram = nil, pageNumber = nil, approximatePages = nil, hasMore = nil, totalProducts = nil, product = [], itemArray = nil, buyingGuideDetails = nil, duplicateItems = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11670,6 +11863,7 @@ class GetProductsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @characteristicsSetProductHistogram = characteristicsSetProductHistogram
     @pageNumber = pageNumber
@@ -11679,6 +11873,7 @@ class GetProductsResponseType < AbstractResponseType
     @product = product
     @itemArray = itemArray
     @buyingGuideDetails = buyingGuideDetails
+    @duplicateItems = duplicateItems
   end
 end
 
@@ -11697,6 +11892,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   promotionRuleArray - PromotionRuleArrayType
 class GetPromotionRulesResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -11713,6 +11909,7 @@ class GetPromotionRulesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :promotionRuleArray
 
@@ -11720,7 +11917,7 @@ class GetPromotionRulesResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, promotionRuleArray = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, promotionRuleArray = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11735,6 +11932,7 @@ class GetPromotionRulesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @promotionRuleArray = promotionRuleArray
   end
@@ -11755,6 +11953,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   promotionalSaleDetails - PromotionalSaleArrayType
 class GetPromotionalSaleDetailsResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -11771,6 +11970,7 @@ class GetPromotionalSaleDetailsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :promotionalSaleDetails
 
@@ -11778,7 +11978,7 @@ class GetPromotionalSaleDetailsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, promotionalSaleDetails = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, promotionalSaleDetails = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11793,127 +11993,9 @@ class GetPromotionalSaleDetailsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @promotionalSaleDetails = promotionalSaleDetails
-  end
-end
-
-# {urn:ebay:apis:eBLBaseComponents}GetReturnURLResponseType
-#   timestamp - SOAP::SOAPDateTime
-#   ack - AckCodeType
-#   correlationID - SOAP::SOAPString
-#   errors - ErrorType
-#   message - SOAP::SOAPString
-#   version - SOAP::SOAPString
-#   build - SOAP::SOAPString
-#   notificationEventName - SOAP::SOAPString
-#   duplicateInvocationDetails - DuplicateInvocationDetailsType
-#   recipientUserID - SOAP::SOAPString
-#   eIASToken - SOAP::SOAPString
-#   notificationSignature - SOAP::SOAPString
-#   hardExpirationWarning - SOAP::SOAPString
-#   botBlock - BotBlockResponseType
-#   applicationDisplayName - SOAP::SOAPString
-#   authenticationEntryArray - AuthenticationEntryArrayType
-class GetReturnURLResponseType < AbstractResponseType
-  attr_accessor :timestamp
-  attr_accessor :ack
-  attr_accessor :correlationID
-  attr_accessor :errors
-  attr_accessor :message
-  attr_accessor :version
-  attr_accessor :build
-  attr_accessor :notificationEventName
-  attr_accessor :duplicateInvocationDetails
-  attr_accessor :recipientUserID
-  attr_accessor :eIASToken
-  attr_accessor :notificationSignature
-  attr_accessor :hardExpirationWarning
-  attr_accessor :botBlock
-  attr_reader :__xmlele_any
-  attr_accessor :applicationDisplayName
-  attr_accessor :authenticationEntryArray
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, applicationDisplayName = nil, authenticationEntryArray = nil)
-    @timestamp = timestamp
-    @ack = ack
-    @correlationID = correlationID
-    @errors = errors
-    @message = message
-    @version = version
-    @build = build
-    @notificationEventName = notificationEventName
-    @duplicateInvocationDetails = duplicateInvocationDetails
-    @recipientUserID = recipientUserID
-    @eIASToken = eIASToken
-    @notificationSignature = notificationSignature
-    @hardExpirationWarning = hardExpirationWarning
-    @botBlock = botBlock
-    @__xmlele_any = nil
-    @applicationDisplayName = applicationDisplayName
-    @authenticationEntryArray = authenticationEntryArray
-  end
-end
-
-# {urn:ebay:apis:eBLBaseComponents}GetRuNameResponseType
-#   timestamp - SOAP::SOAPDateTime
-#   ack - AckCodeType
-#   correlationID - SOAP::SOAPString
-#   errors - ErrorType
-#   message - SOAP::SOAPString
-#   version - SOAP::SOAPString
-#   build - SOAP::SOAPString
-#   notificationEventName - SOAP::SOAPString
-#   duplicateInvocationDetails - DuplicateInvocationDetailsType
-#   recipientUserID - SOAP::SOAPString
-#   eIASToken - SOAP::SOAPString
-#   notificationSignature - SOAP::SOAPString
-#   hardExpirationWarning - SOAP::SOAPString
-#   botBlock - BotBlockResponseType
-#   ruName - SOAP::SOAPString
-class GetRuNameResponseType < AbstractResponseType
-  attr_accessor :timestamp
-  attr_accessor :ack
-  attr_accessor :correlationID
-  attr_accessor :errors
-  attr_accessor :message
-  attr_accessor :version
-  attr_accessor :build
-  attr_accessor :notificationEventName
-  attr_accessor :duplicateInvocationDetails
-  attr_accessor :recipientUserID
-  attr_accessor :eIASToken
-  attr_accessor :notificationSignature
-  attr_accessor :hardExpirationWarning
-  attr_accessor :botBlock
-  attr_reader :__xmlele_any
-  attr_accessor :ruName
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, ruName = nil)
-    @timestamp = timestamp
-    @ack = ack
-    @correlationID = correlationID
-    @errors = errors
-    @message = message
-    @version = version
-    @build = build
-    @notificationEventName = notificationEventName
-    @duplicateInvocationDetails = duplicateInvocationDetails
-    @recipientUserID = recipientUserID
-    @eIASToken = eIASToken
-    @notificationSignature = notificationSignature
-    @hardExpirationWarning = hardExpirationWarning
-    @botBlock = botBlock
-    @__xmlele_any = nil
-    @ruName = ruName
   end
 end
 
@@ -11932,6 +12014,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   searchResultItemArray - SearchResultItemArrayType
 #   itemsPerPage - SOAP::SOAPInt
 #   pageNumber - SOAP::SOAPInt
@@ -11945,6 +12028,7 @@ end
 #   allCategoriesExpansionArray - ExpansionArrayType
 #   spellingSuggestion - SpellingSuggestionType
 #   relatedSearchKeywordArray - RelatedSearchKeywordArrayType
+#   duplicateItems - SOAP::SOAPBoolean
 class GetSearchResultsResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -11960,6 +12044,7 @@ class GetSearchResultsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :searchResultItemArray
   attr_accessor :itemsPerPage
@@ -11974,12 +12059,13 @@ class GetSearchResultsResponseType < AbstractResponseType
   attr_accessor :allCategoriesExpansionArray
   attr_accessor :spellingSuggestion
   attr_accessor :relatedSearchKeywordArray
+  attr_accessor :duplicateItems
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, searchResultItemArray = nil, itemsPerPage = nil, pageNumber = nil, hasMoreItems = nil, paginationResult = nil, categoryArray = nil, buyingGuideDetails = nil, storeExpansionArray = nil, internationalExpansionArray = nil, filterRemovedExpansionArray = nil, allCategoriesExpansionArray = nil, spellingSuggestion = nil, relatedSearchKeywordArray = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, searchResultItemArray = nil, itemsPerPage = nil, pageNumber = nil, hasMoreItems = nil, paginationResult = nil, categoryArray = nil, buyingGuideDetails = nil, storeExpansionArray = nil, internationalExpansionArray = nil, filterRemovedExpansionArray = nil, allCategoriesExpansionArray = nil, spellingSuggestion = nil, relatedSearchKeywordArray = nil, duplicateItems = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -11994,6 +12080,7 @@ class GetSearchResultsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @searchResultItemArray = searchResultItemArray
     @itemsPerPage = itemsPerPage
@@ -12008,10 +12095,11 @@ class GetSearchResultsResponseType < AbstractResponseType
     @allCategoriesExpansionArray = allCategoriesExpansionArray
     @spellingSuggestion = spellingSuggestion
     @relatedSearchKeywordArray = relatedSearchKeywordArray
+    @duplicateItems = duplicateItems
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}GetSearchResultsExpressResponseType
+# {urn:ebay:apis:eBLBaseComponents}GetSellerDashboardResponseType
 #   timestamp - SOAP::SOAPDateTime
 #   ack - AckCodeType
 #   correlationID - SOAP::SOAPString
@@ -12026,13 +12114,14 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
-#   histogram - DomainHistogramType
-#   itemArray - ItemArrayType
-#   productArray - ProductArrayType
-#   entriesPerPage - SOAP::SOAPInt
-#   pageNumber - SOAP::SOAPInt
-#   hasMoreEntries - SOAP::SOAPBoolean
-class GetSearchResultsExpressResponseType < AbstractResponseType
+#   externalUserData - SOAP::SOAPString
+#   searchStanding - SearchStandingDashboardType
+#   sellerFeeDiscount - SellerFeeDiscountDashboardType
+#   powerSellerStatus - PowerSellerDashboardType
+#   policyCompliance - PolicyComplianceDashboardType
+#   buyerSatisfaction - BuyerSatisfactionDashboardType
+#   sellerAccount - SellerAccountDashboardType
+class GetSellerDashboardResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
   attr_accessor :correlationID
@@ -12047,19 +12136,20 @@ class GetSearchResultsExpressResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
-  attr_accessor :histogram
-  attr_accessor :itemArray
-  attr_accessor :productArray
-  attr_accessor :entriesPerPage
-  attr_accessor :pageNumber
-  attr_accessor :hasMoreEntries
+  attr_accessor :searchStanding
+  attr_accessor :sellerFeeDiscount
+  attr_accessor :powerSellerStatus
+  attr_accessor :policyCompliance
+  attr_accessor :buyerSatisfaction
+  attr_accessor :sellerAccount
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, histogram = nil, itemArray = nil, productArray = nil, entriesPerPage = nil, pageNumber = nil, hasMoreEntries = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, searchStanding = nil, sellerFeeDiscount = nil, powerSellerStatus = nil, policyCompliance = nil, buyerSatisfaction = nil, sellerAccount = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12074,13 +12164,14 @@ class GetSearchResultsExpressResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
-    @histogram = histogram
-    @itemArray = itemArray
-    @productArray = productArray
-    @entriesPerPage = entriesPerPage
-    @pageNumber = pageNumber
-    @hasMoreEntries = hasMoreEntries
+    @searchStanding = searchStanding
+    @sellerFeeDiscount = sellerFeeDiscount
+    @powerSellerStatus = powerSellerStatus
+    @policyCompliance = policyCompliance
+    @buyerSatisfaction = buyerSatisfaction
+    @sellerAccount = sellerAccount
   end
 end
 
@@ -12099,6 +12190,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   timeTo - SOAP::SOAPDateTime
 #   itemArray - ItemArrayType
 class GetSellerEventsResponseType < AbstractResponseType
@@ -12116,6 +12208,7 @@ class GetSellerEventsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :timeTo
   attr_accessor :itemArray
@@ -12124,7 +12217,7 @@ class GetSellerEventsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, timeTo = nil, itemArray = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, timeTo = nil, itemArray = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12139,6 +12232,7 @@ class GetSellerEventsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @timeTo = timeTo
     @itemArray = itemArray
@@ -12160,6 +12254,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   paginationResult - PaginationResultType
 #   hasMoreItems - SOAP::SOAPBoolean
 #   itemArray - ItemArrayType
@@ -12182,6 +12277,7 @@ class GetSellerListResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :paginationResult
   attr_accessor :hasMoreItems
@@ -12195,7 +12291,7 @@ class GetSellerListResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, paginationResult = nil, hasMoreItems = nil, itemArray = nil, itemsPerPage = nil, pageNumber = nil, returnedItemCountActual = nil, seller = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, paginationResult = nil, hasMoreItems = nil, itemArray = nil, itemsPerPage = nil, pageNumber = nil, returnedItemCountActual = nil, seller = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12210,6 +12306,7 @@ class GetSellerListResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @paginationResult = paginationResult
     @hasMoreItems = hasMoreItems
@@ -12236,6 +12333,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   paginationResult - PaginationResultType
 #   hasMorePayments - SOAP::SOAPBoolean
 #   sellerPayment - SellerPaymentType
@@ -12257,6 +12355,7 @@ class GetSellerPaymentsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :paginationResult
   attr_accessor :hasMorePayments
@@ -12269,7 +12368,7 @@ class GetSellerPaymentsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, paginationResult = nil, hasMorePayments = nil, sellerPayment = [], paymentsPerPage = nil, pageNumber = nil, returnedPaymentCountActual = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, paginationResult = nil, hasMorePayments = nil, sellerPayment = [], paymentsPerPage = nil, pageNumber = nil, returnedPaymentCountActual = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12284,6 +12383,7 @@ class GetSellerPaymentsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @paginationResult = paginationResult
     @hasMorePayments = hasMorePayments
@@ -12309,6 +12409,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   paginationResult - PaginationResultType
 #   hasMoreTransactions - SOAP::SOAPBoolean
 #   transactionsPerPage - SOAP::SOAPInt
@@ -12332,6 +12433,7 @@ class GetSellerTransactionsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :paginationResult
   attr_accessor :hasMoreTransactions
@@ -12346,7 +12448,7 @@ class GetSellerTransactionsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, paginationResult = nil, hasMoreTransactions = nil, transactionsPerPage = nil, pageNumber = nil, returnedTransactionCountActual = nil, seller = nil, transactionArray = nil, payPalPreferred = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, paginationResult = nil, hasMoreTransactions = nil, transactionsPerPage = nil, pageNumber = nil, returnedTransactionCountActual = nil, seller = nil, transactionArray = nil, payPalPreferred = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12361,6 +12463,7 @@ class GetSellerTransactionsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @paginationResult = paginationResult
     @hasMoreTransactions = hasMoreTransactions
@@ -12370,6 +12473,67 @@ class GetSellerTransactionsResponseType < AbstractResponseType
     @seller = seller
     @transactionArray = transactionArray
     @payPalPreferred = payPalPreferred
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetSessionIDResponseType
+#   timestamp - SOAP::SOAPDateTime
+#   ack - AckCodeType
+#   correlationID - SOAP::SOAPString
+#   errors - ErrorType
+#   message - SOAP::SOAPString
+#   version - SOAP::SOAPString
+#   build - SOAP::SOAPString
+#   notificationEventName - SOAP::SOAPString
+#   duplicateInvocationDetails - DuplicateInvocationDetailsType
+#   recipientUserID - SOAP::SOAPString
+#   eIASToken - SOAP::SOAPString
+#   notificationSignature - SOAP::SOAPString
+#   hardExpirationWarning - SOAP::SOAPString
+#   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
+#   sessionID - SOAP::SOAPString
+class GetSessionIDResponseType < AbstractResponseType
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :eIASToken
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_accessor :botBlock
+  attr_accessor :externalUserData
+  attr_reader :__xmlele_any
+  attr_accessor :sessionID
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, sessionID = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @botBlock = botBlock
+    @externalUserData = externalUserData
+    @__xmlele_any = nil
+    @sessionID = sessionID
   end
 end
 
@@ -12388,6 +12552,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   currencyID - CurrencyCodeType
 #   flatShippingDiscount - FlatShippingDiscountType
 #   calculatedShippingDiscount - CalculatedShippingDiscountType
@@ -12412,6 +12577,7 @@ class GetShippingDiscountProfilesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :currencyID
   attr_accessor :flatShippingDiscount
@@ -12427,7 +12593,7 @@ class GetShippingDiscountProfilesResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, currencyID = nil, flatShippingDiscount = nil, calculatedShippingDiscount = nil, promotionalShippingDiscount = nil, calculatedHandlingDiscount = nil, promotionalShippingDiscountDetails = nil, shippingInsurance = nil, internationalShippingInsurance = nil, combinedDuration = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, currencyID = nil, flatShippingDiscount = nil, calculatedShippingDiscount = nil, promotionalShippingDiscount = nil, calculatedHandlingDiscount = nil, promotionalShippingDiscountDetails = nil, shippingInsurance = nil, internationalShippingInsurance = nil, combinedDuration = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12442,6 +12608,7 @@ class GetShippingDiscountProfilesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @currencyID = currencyID
     @flatShippingDiscount = flatShippingDiscount
@@ -12470,6 +12637,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   store - StoreType
 class GetStoreResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -12486,6 +12654,7 @@ class GetStoreResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :store
 
@@ -12493,7 +12662,7 @@ class GetStoreResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, store = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, store = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12508,6 +12677,7 @@ class GetStoreResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @store = store
   end
@@ -12528,6 +12698,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   status - TaskStatusCodeType
 class GetStoreCategoryUpdateStatusResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -12544,6 +12715,7 @@ class GetStoreCategoryUpdateStatusResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :status
 
@@ -12551,7 +12723,7 @@ class GetStoreCategoryUpdateStatusResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, status = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, status = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12566,6 +12738,7 @@ class GetStoreCategoryUpdateStatusResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @status = status
   end
@@ -12586,6 +12759,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   customPageArray - StoreCustomPageArrayType
 class GetStoreCustomPageResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -12602,6 +12776,7 @@ class GetStoreCustomPageResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :customPageArray
 
@@ -12609,7 +12784,7 @@ class GetStoreCustomPageResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, customPageArray = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, customPageArray = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12624,6 +12799,7 @@ class GetStoreCustomPageResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @customPageArray = customPageArray
   end
@@ -12644,6 +12820,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   basicThemeArray - StoreThemeArrayType
 #   advancedThemeArray - StoreThemeArrayType
 #   logoArray - StoreLogoArrayType
@@ -12665,6 +12842,7 @@ class GetStoreOptionsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :basicThemeArray
   attr_accessor :advancedThemeArray
@@ -12677,7 +12855,7 @@ class GetStoreOptionsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, basicThemeArray = nil, advancedThemeArray = nil, logoArray = nil, subscriptionArray = nil, maxCategories = nil, maxCategoryLevels = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, basicThemeArray = nil, advancedThemeArray = nil, logoArray = nil, subscriptionArray = nil, maxCategories = nil, maxCategoryLevels = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12692,6 +12870,7 @@ class GetStoreOptionsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @basicThemeArray = basicThemeArray
     @advancedThemeArray = advancedThemeArray
@@ -12717,6 +12896,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   storePreferences - StorePreferencesType
 class GetStorePreferencesResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -12733,6 +12913,7 @@ class GetStorePreferencesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :storePreferences
 
@@ -12740,7 +12921,7 @@ class GetStorePreferencesResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, storePreferences = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, storePreferences = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12755,6 +12936,7 @@ class GetStorePreferencesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @storePreferences = storePreferences
   end
@@ -12775,6 +12957,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   suggestedCategoryArray - SuggestedCategoryArrayType
 #   categoryCount - SOAP::SOAPInt
 class GetSuggestedCategoriesResponseType < AbstractResponseType
@@ -12792,6 +12975,7 @@ class GetSuggestedCategoriesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :suggestedCategoryArray
   attr_accessor :categoryCount
@@ -12800,7 +12984,7 @@ class GetSuggestedCategoriesResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, suggestedCategoryArray = nil, categoryCount = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, suggestedCategoryArray = nil, categoryCount = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12815,6 +12999,7 @@ class GetSuggestedCategoriesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @suggestedCategoryArray = suggestedCategoryArray
     @categoryCount = categoryCount
@@ -12836,6 +13021,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   lastUpdateTime - SOAP::SOAPDateTime
 #   taxTable - TaxTableType
 class GetTaxTableResponseType < AbstractResponseType
@@ -12853,6 +13039,7 @@ class GetTaxTableResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :lastUpdateTime
   attr_accessor :taxTable
@@ -12861,7 +13048,7 @@ class GetTaxTableResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, lastUpdateTime = nil, taxTable = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, lastUpdateTime = nil, taxTable = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12876,9 +13063,71 @@ class GetTaxTableResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @lastUpdateTime = lastUpdateTime
     @taxTable = taxTable
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}GetTokenStatusResponseType
+#   timestamp - SOAP::SOAPDateTime
+#   ack - AckCodeType
+#   correlationID - SOAP::SOAPString
+#   errors - ErrorType
+#   message - SOAP::SOAPString
+#   version - SOAP::SOAPString
+#   build - SOAP::SOAPString
+#   notificationEventName - SOAP::SOAPString
+#   duplicateInvocationDetails - DuplicateInvocationDetailsType
+#   recipientUserID - SOAP::SOAPString
+#   eIASToken - SOAP::SOAPString
+#   notificationSignature - SOAP::SOAPString
+#   hardExpirationWarning - SOAP::SOAPString
+#   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
+#   tokenStatus - TokenStatusType
+class GetTokenStatusResponseType < AbstractResponseType
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :eIASToken
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_accessor :botBlock
+  attr_accessor :externalUserData
+  attr_reader :__xmlele_any
+  attr_accessor :tokenStatus
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, tokenStatus = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @botBlock = botBlock
+    @externalUserData = externalUserData
+    @__xmlele_any = nil
+    @tokenStatus = tokenStatus
   end
 end
 
@@ -12897,6 +13146,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   user - UserType
 class GetUserResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -12913,6 +13163,7 @@ class GetUserResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :user
 
@@ -12920,7 +13171,7 @@ class GetUserResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, user = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, user = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12935,6 +13186,7 @@ class GetUserResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @user = user
   end
@@ -12955,6 +13207,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   userID - SOAP::SOAPString
 #   contactAddress - AddressType
 #   registrationDate - SOAP::SOAPDateTime
@@ -12973,6 +13226,7 @@ class GetUserContactDetailsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :userID
   attr_accessor :contactAddress
@@ -12982,7 +13236,7 @@ class GetUserContactDetailsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, userID = nil, contactAddress = nil, registrationDate = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, userID = nil, contactAddress = nil, registrationDate = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -12997,6 +13251,7 @@ class GetUserContactDetailsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @userID = userID
     @contactAddress = contactAddress
@@ -13019,6 +13274,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   startingDisputeID - (any)
 #   endingDisputeID - (any)
 #   disputeArray - DisputeArrayType
@@ -13041,6 +13297,7 @@ class GetUserDisputesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :startingDisputeID
   attr_accessor :endingDisputeID
@@ -13054,7 +13311,7 @@ class GetUserDisputesResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, startingDisputeID = nil, endingDisputeID = nil, disputeArray = nil, itemsPerPage = nil, pageNumber = nil, disputeFilterCount = [], paginationResult = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, startingDisputeID = nil, endingDisputeID = nil, disputeArray = nil, itemsPerPage = nil, pageNumber = nil, disputeFilterCount = [], paginationResult = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -13069,6 +13326,7 @@ class GetUserDisputesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @startingDisputeID = startingDisputeID
     @endingDisputeID = endingDisputeID
@@ -13095,13 +13353,14 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   bidderNoticePreferences - BidderNoticePreferencesType
 #   combinedPaymentPreferences - CombinedPaymentPreferencesType
 #   crossPromotionPreferences - CrossPromotionPreferencesType
 #   sellerPaymentPreferences - SellerPaymentPreferencesType
 #   sellerFavoriteItemPreferences - SellerFavoriteItemPreferencesType
 #   endOfAuctionEmailPreferences - EndOfAuctionEmailPreferencesType
-#   expressPreferences - ExpressPreferencesType
+#   emailShipmentTrackingNumberPreference - SOAP::SOAPBoolean
 #   proStoresPreference - ProStoresCheckoutPreferenceType
 class GetUserPreferencesResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -13118,6 +13377,7 @@ class GetUserPreferencesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :bidderNoticePreferences
   attr_accessor :combinedPaymentPreferences
@@ -13125,14 +13385,14 @@ class GetUserPreferencesResponseType < AbstractResponseType
   attr_accessor :sellerPaymentPreferences
   attr_accessor :sellerFavoriteItemPreferences
   attr_accessor :endOfAuctionEmailPreferences
-  attr_accessor :expressPreferences
+  attr_accessor :emailShipmentTrackingNumberPreference
   attr_accessor :proStoresPreference
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, bidderNoticePreferences = nil, combinedPaymentPreferences = nil, crossPromotionPreferences = nil, sellerPaymentPreferences = nil, sellerFavoriteItemPreferences = nil, endOfAuctionEmailPreferences = nil, expressPreferences = nil, proStoresPreference = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, bidderNoticePreferences = nil, combinedPaymentPreferences = nil, crossPromotionPreferences = nil, sellerPaymentPreferences = nil, sellerFavoriteItemPreferences = nil, endOfAuctionEmailPreferences = nil, emailShipmentTrackingNumberPreference = nil, proStoresPreference = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -13147,6 +13407,7 @@ class GetUserPreferencesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @bidderNoticePreferences = bidderNoticePreferences
     @combinedPaymentPreferences = combinedPaymentPreferences
@@ -13154,7 +13415,7 @@ class GetUserPreferencesResponseType < AbstractResponseType
     @sellerPaymentPreferences = sellerPaymentPreferences
     @sellerFavoriteItemPreferences = sellerFavoriteItemPreferences
     @endOfAuctionEmailPreferences = endOfAuctionEmailPreferences
-    @expressPreferences = expressPreferences
+    @emailShipmentTrackingNumberPreference = emailShipmentTrackingNumberPreference
     @proStoresPreference = proStoresPreference
   end
 end
@@ -13174,6 +13435,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   veROReasonCodeDetails - VeROReasonCodeDetailsType
 class GetVeROReasonCodeDetailsResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -13190,6 +13452,7 @@ class GetVeROReasonCodeDetailsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :veROReasonCodeDetails
 
@@ -13197,7 +13460,7 @@ class GetVeROReasonCodeDetailsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, veROReasonCodeDetails = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, veROReasonCodeDetails = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -13212,6 +13475,7 @@ class GetVeROReasonCodeDetailsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @veROReasonCodeDetails = veROReasonCodeDetails
   end
@@ -13232,6 +13496,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   paginationResult - PaginationResultType
 #   hasMoreItems - SOAP::SOAPBoolean
 #   itemsPerPage - SOAP::SOAPInt
@@ -13254,6 +13519,7 @@ class GetVeROReportStatusResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :paginationResult
   attr_accessor :hasMoreItems
@@ -13267,7 +13533,7 @@ class GetVeROReportStatusResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, paginationResult = nil, hasMoreItems = nil, itemsPerPage = nil, pageNumber = nil, veROReportPacketID = nil, veROReportPacketStatus = nil, reportedItemDetails = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, paginationResult = nil, hasMoreItems = nil, itemsPerPage = nil, pageNumber = nil, veROReportPacketID = nil, veROReportPacketStatus = nil, reportedItemDetails = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -13282,6 +13548,7 @@ class GetVeROReportStatusResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @paginationResult = paginationResult
     @hasMoreItems = hasMoreItems
@@ -13308,6 +13575,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   wantItNowPost - WantItNowPostType
 class GetWantItNowPostResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -13324,6 +13592,7 @@ class GetWantItNowPostResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :wantItNowPost
 
@@ -13331,7 +13600,7 @@ class GetWantItNowPostResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, wantItNowPost = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, wantItNowPost = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -13346,6 +13615,7 @@ class GetWantItNowPostResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @wantItNowPost = wantItNowPost
   end
@@ -13366,6 +13636,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   wantItNowPostArray - WantItNowPostArrayType
 #   hasMoreItems - SOAP::SOAPBoolean
 #   itemsPerPage - SOAP::SOAPInt
@@ -13386,6 +13657,7 @@ class GetWantItNowSearchResultsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :wantItNowPostArray
   attr_accessor :hasMoreItems
@@ -13397,7 +13669,7 @@ class GetWantItNowSearchResultsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, wantItNowPostArray = nil, hasMoreItems = nil, itemsPerPage = nil, pageNumber = nil, paginationResult = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, wantItNowPostArray = nil, hasMoreItems = nil, itemsPerPage = nil, pageNumber = nil, paginationResult = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -13412,6 +13684,7 @@ class GetWantItNowSearchResultsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @wantItNowPostArray = wantItNowPostArray
     @hasMoreItems = hasMoreItems
@@ -13436,6 +13709,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   countryDetails - CountryDetailsType
 #   currencyDetails - CurrencyDetailsType
 #   dispatchTimeMaxDetails - DispatchTimeMaxDetailsType
@@ -13452,6 +13726,7 @@ end
 #   regionOfOriginDetails - RegionOfOriginDetailsType
 #   shippingPackageDetails - ShippingPackageDetailsType
 #   shippingCarrierDetails - ShippingCarrierDetailsType
+#   returnPolicyDetails - ReturnPolicyDetailsType
 class GeteBayDetailsResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -13467,6 +13742,7 @@ class GeteBayDetailsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :countryDetails
   attr_accessor :currencyDetails
@@ -13484,12 +13760,13 @@ class GeteBayDetailsResponseType < AbstractResponseType
   attr_accessor :regionOfOriginDetails
   attr_accessor :shippingPackageDetails
   attr_accessor :shippingCarrierDetails
+  attr_accessor :returnPolicyDetails
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, countryDetails = [], currencyDetails = [], dispatchTimeMaxDetails = [], paymentOptionDetails = [], regionDetails = [], shippingLocationDetails = [], shippingServiceDetails = [], siteDetails = [], taxJurisdiction = [], uRLDetails = [], timeZoneDetails = [], itemSpecificDetails = [], unitOfMeasurementDetails = [], regionOfOriginDetails = [], shippingPackageDetails = [], shippingCarrierDetails = [])
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, countryDetails = [], currencyDetails = [], dispatchTimeMaxDetails = [], paymentOptionDetails = [], regionDetails = [], shippingLocationDetails = [], shippingServiceDetails = [], siteDetails = [], taxJurisdiction = [], uRLDetails = [], timeZoneDetails = [], itemSpecificDetails = [], unitOfMeasurementDetails = [], regionOfOriginDetails = [], shippingPackageDetails = [], shippingCarrierDetails = [], returnPolicyDetails = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -13504,6 +13781,7 @@ class GeteBayDetailsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @countryDetails = countryDetails
     @currencyDetails = currencyDetails
@@ -13521,6 +13799,7 @@ class GeteBayDetailsResponseType < AbstractResponseType
     @regionOfOriginDetails = regionOfOriginDetails
     @shippingPackageDetails = shippingPackageDetails
     @shippingCarrierDetails = shippingCarrierDetails
+    @returnPolicyDetails = returnPolicyDetails
   end
 end
 
@@ -13539,6 +13818,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class GeteBayOfficialTimeResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -13554,13 +13834,14 @@ class GeteBayOfficialTimeResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -13575,6 +13856,7 @@ class GeteBayOfficialTimeResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -13594,6 +13876,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   refundFromSeller - AmountType
 #   totalRefundToBuyer - AmountType
 class IssueRefundResponseType < AbstractResponseType
@@ -13611,6 +13894,7 @@ class IssueRefundResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :refundFromSeller
   attr_accessor :totalRefundToBuyer
@@ -13619,7 +13903,7 @@ class IssueRefundResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, refundFromSeller = nil, totalRefundToBuyer = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, refundFromSeller = nil, totalRefundToBuyer = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -13634,6 +13918,7 @@ class IssueRefundResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @refundFromSeller = refundFromSeller
     @totalRefundToBuyer = totalRefundToBuyer
@@ -13655,6 +13940,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   feedbackID - SOAP::SOAPString
 class LeaveFeedbackResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -13671,6 +13957,7 @@ class LeaveFeedbackResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :feedbackID
 
@@ -13678,7 +13965,7 @@ class LeaveFeedbackResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, feedbackID = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, feedbackID = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -13693,6 +13980,7 @@ class LeaveFeedbackResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @feedbackID = feedbackID
   end
@@ -13713,6 +14001,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   sellingStatus - SellingStatusType
 #   transactionID - SOAP::SOAPString
 #   bestOffer - BestOfferType
@@ -13731,6 +14020,7 @@ class PlaceOfferResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :sellingStatus
   attr_accessor :transactionID
@@ -13740,7 +14030,7 @@ class PlaceOfferResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, sellingStatus = nil, transactionID = nil, bestOffer = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, sellingStatus = nil, transactionID = nil, bestOffer = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -13755,6 +14045,7 @@ class PlaceOfferResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @sellingStatus = sellingStatus
     @transactionID = transactionID
@@ -13777,6 +14068,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   itemID - (any)
 #   fees - FeesType
 #   startTime - SOAP::SOAPDateTime
@@ -13798,6 +14090,7 @@ class RelistItemResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :fees
@@ -13810,7 +14103,7 @@ class RelistItemResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, itemID = nil, fees = nil, startTime = nil, endTime = nil, categoryID = nil, category2ID = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, itemID = nil, fees = nil, startTime = nil, endTime = nil, categoryID = nil, category2ID = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -13825,6 +14118,7 @@ class RelistItemResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @itemID = itemID
     @fees = fees
@@ -13850,6 +14144,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   watchListCount - SOAP::SOAPInt
 #   watchListMaximum - SOAP::SOAPInt
 class RemoveFromWatchListResponseType < AbstractResponseType
@@ -13867,6 +14162,7 @@ class RemoveFromWatchListResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :watchListCount
   attr_accessor :watchListMaximum
@@ -13875,7 +14171,7 @@ class RemoveFromWatchListResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, watchListCount = nil, watchListMaximum = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, watchListCount = nil, watchListMaximum = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -13890,6 +14186,7 @@ class RemoveFromWatchListResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @watchListCount = watchListCount
     @watchListMaximum = watchListMaximum
@@ -13911,6 +14208,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   respondToBestOffer - BestOfferArrayType
 class RespondToBestOfferResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -13927,6 +14225,7 @@ class RespondToBestOfferResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :respondToBestOffer
 
@@ -13934,7 +14233,7 @@ class RespondToBestOfferResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, respondToBestOffer = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, respondToBestOffer = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -13949,6 +14248,7 @@ class RespondToBestOfferResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @respondToBestOffer = respondToBestOffer
   end
@@ -13969,6 +14269,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class RespondToFeedbackResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -13984,13 +14285,14 @@ class RespondToFeedbackResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -14005,6 +14307,7 @@ class RespondToFeedbackResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -14024,6 +14327,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class RespondToWantItNowPostResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -14039,13 +14343,14 @@ class RespondToWantItNowPostResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -14060,6 +14365,7 @@ class RespondToWantItNowPostResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -14079,6 +14385,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class ReviseCheckoutStatusResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -14094,13 +14401,14 @@ class ReviseCheckoutStatusResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -14115,6 +14423,7 @@ class ReviseCheckoutStatusResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -14134,6 +14443,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   itemID - (any)
 #   startTime - SOAP::SOAPDateTime
 #   endTime - SOAP::SOAPDateTime
@@ -14155,6 +14465,7 @@ class ReviseItemResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :startTime
@@ -14167,7 +14478,7 @@ class ReviseItemResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, itemID = nil, startTime = nil, endTime = nil, fees = nil, categoryID = nil, category2ID = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, itemID = nil, startTime = nil, endTime = nil, fees = nil, categoryID = nil, category2ID = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -14182,6 +14493,7 @@ class ReviseItemResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @itemID = itemID
     @startTime = startTime
@@ -14207,6 +14519,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   itemID - (any)
 #   fees - FeesType
 #   categoryID - SOAP::SOAPString
@@ -14226,6 +14539,7 @@ class ReviseLiveAuctionItemResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :fees
@@ -14236,7 +14550,7 @@ class ReviseLiveAuctionItemResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, itemID = nil, fees = nil, categoryID = nil, category2ID = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, itemID = nil, fees = nil, categoryID = nil, category2ID = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -14251,6 +14565,7 @@ class ReviseLiveAuctionItemResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @itemID = itemID
     @fees = fees
@@ -14274,6 +14589,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class ReviseMyMessagesResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -14289,13 +14605,14 @@ class ReviseMyMessagesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -14310,6 +14627,7 @@ class ReviseMyMessagesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -14329,6 +14647,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class ReviseMyMessagesFoldersResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -14344,13 +14663,14 @@ class ReviseMyMessagesFoldersResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -14365,6 +14685,65 @@ class ReviseMyMessagesFoldersResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}RevokeTokenResponseType
+#   timestamp - SOAP::SOAPDateTime
+#   ack - AckCodeType
+#   correlationID - SOAP::SOAPString
+#   errors - ErrorType
+#   message - SOAP::SOAPString
+#   version - SOAP::SOAPString
+#   build - SOAP::SOAPString
+#   notificationEventName - SOAP::SOAPString
+#   duplicateInvocationDetails - DuplicateInvocationDetailsType
+#   recipientUserID - SOAP::SOAPString
+#   eIASToken - SOAP::SOAPString
+#   notificationSignature - SOAP::SOAPString
+#   hardExpirationWarning - SOAP::SOAPString
+#   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
+class RevokeTokenResponseType < AbstractResponseType
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :eIASToken
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_accessor :botBlock
+  attr_accessor :externalUserData
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -14384,6 +14763,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class SellerReverseDisputeResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -14399,13 +14779,14 @@ class SellerReverseDisputeResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -14420,6 +14801,7 @@ class SellerReverseDisputeResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -14439,6 +14821,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class SendInvoiceResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -14454,13 +14837,14 @@ class SendInvoiceResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -14475,65 +14859,8 @@ class SendInvoiceResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
-  end
-end
-
-# {urn:ebay:apis:eBLBaseComponents}SetCartResponseType
-#   timestamp - SOAP::SOAPDateTime
-#   ack - AckCodeType
-#   correlationID - SOAP::SOAPString
-#   errors - ErrorType
-#   message - SOAP::SOAPString
-#   version - SOAP::SOAPString
-#   build - SOAP::SOAPString
-#   notificationEventName - SOAP::SOAPString
-#   duplicateInvocationDetails - DuplicateInvocationDetailsType
-#   recipientUserID - SOAP::SOAPString
-#   eIASToken - SOAP::SOAPString
-#   notificationSignature - SOAP::SOAPString
-#   hardExpirationWarning - SOAP::SOAPString
-#   botBlock - BotBlockResponseType
-#   cart - CartType
-class SetCartResponseType < AbstractResponseType
-  attr_accessor :timestamp
-  attr_accessor :ack
-  attr_accessor :correlationID
-  attr_accessor :errors
-  attr_accessor :message
-  attr_accessor :version
-  attr_accessor :build
-  attr_accessor :notificationEventName
-  attr_accessor :duplicateInvocationDetails
-  attr_accessor :recipientUserID
-  attr_accessor :eIASToken
-  attr_accessor :notificationSignature
-  attr_accessor :hardExpirationWarning
-  attr_accessor :botBlock
-  attr_reader :__xmlele_any
-  attr_accessor :cart
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, cart = nil)
-    @timestamp = timestamp
-    @ack = ack
-    @correlationID = correlationID
-    @errors = errors
-    @message = message
-    @version = version
-    @build = build
-    @notificationEventName = notificationEventName
-    @duplicateInvocationDetails = duplicateInvocationDetails
-    @recipientUserID = recipientUserID
-    @eIASToken = eIASToken
-    @notificationSignature = notificationSignature
-    @hardExpirationWarning = hardExpirationWarning
-    @botBlock = botBlock
-    @__xmlele_any = nil
-    @cart = cart
   end
 end
 
@@ -14552,6 +14879,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class SetMessagePreferencesResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -14567,13 +14895,14 @@ class SetMessagePreferencesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -14588,6 +14917,7 @@ class SetMessagePreferencesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -14607,6 +14937,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class SetNotificationPreferencesResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -14622,13 +14953,14 @@ class SetNotificationPreferencesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -14643,6 +14975,7 @@ class SetNotificationPreferencesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -14662,6 +14995,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class SetPictureManagerDetailsResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -14677,13 +15011,14 @@ class SetPictureManagerDetailsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -14698,6 +15033,7 @@ class SetPictureManagerDetailsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -14717,6 +15053,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   status - PromotionalSaleStatusCodeType
 #   promotionalSaleID - SOAP::SOAPLong
 class SetPromotionalSaleResponseType < AbstractResponseType
@@ -14734,6 +15071,7 @@ class SetPromotionalSaleResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :status
   attr_accessor :promotionalSaleID
@@ -14742,7 +15080,7 @@ class SetPromotionalSaleResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, status = nil, promotionalSaleID = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, status = nil, promotionalSaleID = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -14757,6 +15095,7 @@ class SetPromotionalSaleResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @status = status
     @promotionalSaleID = promotionalSaleID
@@ -14778,6 +15117,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   status - PromotionalSaleStatusCodeType
 class SetPromotionalSaleListingsResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -14794,6 +15134,7 @@ class SetPromotionalSaleListingsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :status
 
@@ -14801,7 +15142,7 @@ class SetPromotionalSaleListingsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, status = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, status = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -14816,12 +15157,13 @@ class SetPromotionalSaleListingsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @status = status
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}SetReturnURLResponseType
+# {urn:ebay:apis:eBLBaseComponents}SetSellingManagerFeedbackOptionsResponseType
 #   timestamp - SOAP::SOAPDateTime
 #   ack - AckCodeType
 #   correlationID - SOAP::SOAPString
@@ -14836,7 +15178,8 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
-class SetReturnURLResponseType < AbstractResponseType
+#   externalUserData - SOAP::SOAPString
+class SetSellingManagerFeedbackOptionsResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
   attr_accessor :correlationID
@@ -14851,13 +15194,14 @@ class SetReturnURLResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -14872,6 +15216,7 @@ class SetReturnURLResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -14891,6 +15236,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class SetShippingDiscountProfilesResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -14906,13 +15252,14 @@ class SetShippingDiscountProfilesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -14927,6 +15274,7 @@ class SetShippingDiscountProfilesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -14946,6 +15294,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class SetStoreResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -14961,13 +15310,14 @@ class SetStoreResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -14982,6 +15332,7 @@ class SetStoreResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -15001,6 +15352,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   taskID - SOAP::SOAPLong
 #   status - TaskStatusCodeType
 class SetStoreCategoriesResponseType < AbstractResponseType
@@ -15018,6 +15370,7 @@ class SetStoreCategoriesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :taskID
   attr_accessor :status
@@ -15026,7 +15379,7 @@ class SetStoreCategoriesResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, taskID = nil, status = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, taskID = nil, status = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -15041,6 +15394,7 @@ class SetStoreCategoriesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @taskID = taskID
     @status = status
@@ -15062,6 +15416,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   customPage - StoreCustomPageType
 class SetStoreCustomPageResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -15078,6 +15433,7 @@ class SetStoreCustomPageResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :customPage
 
@@ -15085,7 +15441,7 @@ class SetStoreCustomPageResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, customPage = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, customPage = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -15100,6 +15456,7 @@ class SetStoreCustomPageResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @customPage = customPage
   end
@@ -15120,6 +15477,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class SetStorePreferencesResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -15135,13 +15493,14 @@ class SetStorePreferencesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -15156,6 +15515,7 @@ class SetStorePreferencesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -15175,6 +15535,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class SetTaxTableResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -15190,13 +15551,14 @@ class SetTaxTableResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -15211,6 +15573,7 @@ class SetTaxTableResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -15230,6 +15593,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class SetUserNotesResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -15245,13 +15609,14 @@ class SetUserNotesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -15266,6 +15631,7 @@ class SetUserNotesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -15285,6 +15651,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class SetUserPreferencesResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -15300,13 +15667,14 @@ class SetUserPreferencesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -15321,6 +15689,7 @@ class SetUserPreferencesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -15340,6 +15709,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   pictureSystemVersion - SOAP::SOAPInt
 #   siteHostedPictureDetails - SiteHostedPictureDetailsType
 class UploadSiteHostedPicturesResponseType < AbstractResponseType
@@ -15357,6 +15727,7 @@ class UploadSiteHostedPicturesResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :pictureSystemVersion
   attr_accessor :siteHostedPictureDetails
@@ -15365,7 +15736,7 @@ class UploadSiteHostedPicturesResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, pictureSystemVersion = nil, siteHostedPictureDetails = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, pictureSystemVersion = nil, siteHostedPictureDetails = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -15380,6 +15751,7 @@ class UploadSiteHostedPicturesResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @pictureSystemVersion = pictureSystemVersion
     @siteHostedPictureDetails = siteHostedPictureDetails
@@ -15401,6 +15773,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   validToken - SOAP::SOAPBoolean
 class ValidateChallengeInputResponseType < AbstractResponseType
   attr_accessor :timestamp
@@ -15417,6 +15790,7 @@ class ValidateChallengeInputResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :validToken
 
@@ -15424,7 +15798,7 @@ class ValidateChallengeInputResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, validToken = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, validToken = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -15439,6 +15813,7 @@ class ValidateChallengeInputResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @validToken = validToken
   end
@@ -15459,6 +15834,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 class ValidateTestUserRegistrationResponseType < AbstractResponseType
   attr_accessor :timestamp
   attr_accessor :ack
@@ -15474,13 +15850,14 @@ class ValidateTestUserRegistrationResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -15495,6 +15872,7 @@ class ValidateTestUserRegistrationResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -15514,6 +15892,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   veROReportPacketID - SOAP::SOAPLong
 #   veROReportPacketStatus - VeROReportPacketStatusCodeType
 class VeROReportItemsResponseType < AbstractResponseType
@@ -15531,6 +15910,7 @@ class VeROReportItemsResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :veROReportPacketID
   attr_accessor :veROReportPacketStatus
@@ -15539,7 +15919,7 @@ class VeROReportItemsResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, veROReportPacketID = nil, veROReportPacketStatus = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, veROReportPacketID = nil, veROReportPacketStatus = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -15554,6 +15934,7 @@ class VeROReportItemsResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @veROReportPacketID = veROReportPacketID
     @veROReportPacketStatus = veROReportPacketStatus
@@ -15575,6 +15956,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   itemID - (any)
 #   fees - FeesType
 #   expressListing - SOAP::SOAPBoolean
@@ -15596,6 +15978,7 @@ class VerifyAddItemResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :itemID
   attr_accessor :fees
@@ -15608,7 +15991,7 @@ class VerifyAddItemResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, itemID = nil, fees = nil, expressListing = nil, expressItemRequirements = nil, categoryID = nil, category2ID = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, itemID = nil, fees = nil, expressListing = nil, expressItemRequirements = nil, categoryID = nil, category2ID = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -15623,6 +16006,7 @@ class VerifyAddItemResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @itemID = itemID
     @fees = fees
@@ -15648,6 +16032,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   startTime - SOAP::SOAPDateTime
 #   endTime - SOAP::SOAPDateTime
 class VerifyAddSecondChanceItemResponseType < AbstractResponseType
@@ -15665,6 +16050,7 @@ class VerifyAddSecondChanceItemResponseType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :startTime
   attr_accessor :endTime
@@ -15673,7 +16059,7 @@ class VerifyAddSecondChanceItemResponseType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, startTime = nil, endTime = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, startTime = nil, endTime = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -15688,9 +16074,77 @@ class VerifyAddSecondChanceItemResponseType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @startTime = startTime
     @endTime = endTime
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ItemsCanceledEventType
+#   timestamp - SOAP::SOAPDateTime
+#   ack - AckCodeType
+#   correlationID - SOAP::SOAPString
+#   errors - ErrorType
+#   message - SOAP::SOAPString
+#   version - SOAP::SOAPString
+#   build - SOAP::SOAPString
+#   notificationEventName - SOAP::SOAPString
+#   duplicateInvocationDetails - DuplicateInvocationDetailsType
+#   recipientUserID - SOAP::SOAPString
+#   eIASToken - SOAP::SOAPString
+#   notificationSignature - SOAP::SOAPString
+#   hardExpirationWarning - SOAP::SOAPString
+#   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
+#   canceledItemIDArray - ItemIDArrayType
+#   eligibleForRelist - SOAP::SOAPBoolean
+#   sellerID - (any)
+class ItemsCanceledEventType < AbstractResponseType
+  attr_accessor :timestamp
+  attr_accessor :ack
+  attr_accessor :correlationID
+  attr_accessor :errors
+  attr_accessor :message
+  attr_accessor :version
+  attr_accessor :build
+  attr_accessor :notificationEventName
+  attr_accessor :duplicateInvocationDetails
+  attr_accessor :recipientUserID
+  attr_accessor :eIASToken
+  attr_accessor :notificationSignature
+  attr_accessor :hardExpirationWarning
+  attr_accessor :botBlock
+  attr_accessor :externalUserData
+  attr_reader :__xmlele_any
+  attr_accessor :canceledItemIDArray
+  attr_accessor :eligibleForRelist
+  attr_accessor :sellerID
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, canceledItemIDArray = nil, eligibleForRelist = nil, sellerID = nil)
+    @timestamp = timestamp
+    @ack = ack
+    @correlationID = correlationID
+    @errors = errors
+    @message = message
+    @version = version
+    @build = build
+    @notificationEventName = notificationEventName
+    @duplicateInvocationDetails = duplicateInvocationDetails
+    @recipientUserID = recipientUserID
+    @eIASToken = eIASToken
+    @notificationSignature = notificationSignature
+    @hardExpirationWarning = hardExpirationWarning
+    @botBlock = botBlock
+    @externalUserData = externalUserData
+    @__xmlele_any = nil
+    @canceledItemIDArray = canceledItemIDArray
+    @eligibleForRelist = eligibleForRelist
+    @sellerID = sellerID
   end
 end
 
@@ -15709,6 +16163,7 @@ end
 #   notificationSignature - SOAP::SOAPString
 #   hardExpirationWarning - SOAP::SOAPString
 #   botBlock - BotBlockResponseType
+#   externalUserData - SOAP::SOAPString
 #   messageBody - SOAP::SOAPString
 #   eIAS - SOAP::SOAPString
 class NotificationMessageType < AbstractResponseType
@@ -15726,6 +16181,7 @@ class NotificationMessageType < AbstractResponseType
   attr_accessor :notificationSignature
   attr_accessor :hardExpirationWarning
   attr_accessor :botBlock
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
   attr_accessor :messageBody
   attr_accessor :eIAS
@@ -15734,7 +16190,7 @@ class NotificationMessageType < AbstractResponseType
     @__xmlele_any = elements
   end
 
-  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, messageBody = nil, eIAS = nil)
+  def initialize(timestamp = nil, ack = nil, correlationID = nil, errors = [], message = nil, version = nil, build = nil, notificationEventName = nil, duplicateInvocationDetails = nil, recipientUserID = nil, eIASToken = nil, notificationSignature = nil, hardExpirationWarning = nil, botBlock = nil, externalUserData = nil, messageBody = nil, eIAS = nil)
     @timestamp = timestamp
     @ack = ack
     @correlationID = correlationID
@@ -15749,6 +16205,7 @@ class NotificationMessageType < AbstractResponseType
     @notificationSignature = notificationSignature
     @hardExpirationWarning = hardExpirationWarning
     @botBlock = botBlock
+    @externalUserData = externalUserData
     @__xmlele_any = nil
     @messageBody = messageBody
     @eIAS = eIAS
@@ -16294,55 +16751,67 @@ end
 #   address - AddressType
 #   bestTimeToCall - SOAP::SOAPString
 #   email - SOAP::SOAPString
-#   firstName - SOAP::SOAPString
-#   lastName - SOAP::SOAPString
-#   phone - SOAP::SOAPString
 #   submittedTime - SOAP::SOAPDateTime
 #   itemID - (any)
 #   itemTitle - SOAP::SOAPString
 #   userID - (any)
 #   memberMessage - MemberMessageExchangeArrayType
 #   status - AdFormatLeadStatusCodeType
-#   phone2 - SOAP::SOAPString
 #   leadFee - AmountType
+#   externalEmail - SOAP::SOAPString
+#   purchaseTimeFrame - SOAP::SOAPString
+#   tradeInYear - SOAP::SOAPString
+#   tradeInMake - SOAP::SOAPString
+#   tradeInModel - SOAP::SOAPString
+#   financingAnswer - SOAP::SOAPBoolean
+#   answer1 - SOAP::SOAPBoolean
+#   answer2 - SOAP::SOAPBoolean
 class AdFormatLeadType
   attr_accessor :additionalInformation
   attr_accessor :address
   attr_accessor :bestTimeToCall
   attr_accessor :email
-  attr_accessor :firstName
-  attr_accessor :lastName
-  attr_accessor :phone
   attr_accessor :submittedTime
   attr_accessor :itemID
   attr_accessor :itemTitle
   attr_accessor :userID
   attr_accessor :memberMessage
   attr_accessor :status
-  attr_accessor :phone2
   attr_accessor :leadFee
+  attr_accessor :externalEmail
+  attr_accessor :purchaseTimeFrame
+  attr_accessor :tradeInYear
+  attr_accessor :tradeInMake
+  attr_accessor :tradeInModel
+  attr_accessor :financingAnswer
+  attr_accessor :answer1
+  attr_accessor :answer2
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(additionalInformation = nil, address = nil, bestTimeToCall = nil, email = nil, firstName = nil, lastName = nil, phone = nil, submittedTime = nil, itemID = nil, itemTitle = nil, userID = nil, memberMessage = nil, status = nil, phone2 = nil, leadFee = nil)
+  def initialize(additionalInformation = nil, address = nil, bestTimeToCall = nil, email = nil, submittedTime = nil, itemID = nil, itemTitle = nil, userID = nil, memberMessage = nil, status = nil, leadFee = nil, externalEmail = nil, purchaseTimeFrame = nil, tradeInYear = nil, tradeInMake = nil, tradeInModel = nil, financingAnswer = nil, answer1 = nil, answer2 = nil)
     @additionalInformation = additionalInformation
     @address = address
     @bestTimeToCall = bestTimeToCall
     @email = email
-    @firstName = firstName
-    @lastName = lastName
-    @phone = phone
     @submittedTime = submittedTime
     @itemID = itemID
     @itemTitle = itemTitle
     @userID = userID
     @memberMessage = memberMessage
     @status = status
-    @phone2 = phone2
     @leadFee = leadFee
+    @externalEmail = externalEmail
+    @purchaseTimeFrame = purchaseTimeFrame
+    @tradeInYear = tradeInYear
+    @tradeInMake = tradeInMake
+    @tradeInModel = tradeInModel
+    @financingAnswer = financingAnswer
+    @answer1 = answer1
+    @answer2 = answer2
     @__xmlele_any = nil
   end
 end
@@ -16427,6 +16896,9 @@ end
 #   internationalStreet - SOAP::SOAPString
 #   companyName - SOAP::SOAPString
 #   addressRecordType - AddressRecordTypeCodeType
+#   firstName - SOAP::SOAPString
+#   lastName - SOAP::SOAPString
+#   phone2 - SOAP::SOAPString
 class AddressType
   attr_accessor :name
   attr_accessor :street
@@ -16456,13 +16928,16 @@ class AddressType
   attr_accessor :internationalStreet
   attr_accessor :companyName
   attr_accessor :addressRecordType
+  attr_accessor :firstName
+  attr_accessor :lastName
+  attr_accessor :phone2
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(name = nil, street = nil, street1 = nil, street2 = nil, cityName = nil, county = nil, stateOrProvince = nil, country = nil, countryName = nil, phone = nil, phoneCountryCode = nil, phoneCountryPrefix = nil, phoneAreaOrCityCode = nil, phoneLocalNumber = nil, phone2CountryCode = nil, phone2CountryPrefix = nil, phone2AreaOrCityCode = nil, phone2LocalNumber = nil, postalCode = nil, addressID = nil, addressOwner = nil, addressStatus = nil, externalAddressID = nil, internationalName = nil, internationalStateAndCity = nil, internationalStreet = nil, companyName = nil, addressRecordType = nil)
+  def initialize(name = nil, street = nil, street1 = nil, street2 = nil, cityName = nil, county = nil, stateOrProvince = nil, country = nil, countryName = nil, phone = nil, phoneCountryCode = nil, phoneCountryPrefix = nil, phoneAreaOrCityCode = nil, phoneLocalNumber = nil, phone2CountryCode = nil, phone2CountryPrefix = nil, phone2AreaOrCityCode = nil, phone2LocalNumber = nil, postalCode = nil, addressID = nil, addressOwner = nil, addressStatus = nil, externalAddressID = nil, internationalName = nil, internationalStateAndCity = nil, internationalStreet = nil, companyName = nil, addressRecordType = nil, firstName = nil, lastName = nil, phone2 = nil)
     @name = name
     @street = street
     @street1 = street1
@@ -16491,6 +16966,9 @@ class AddressType
     @internationalStreet = internationalStreet
     @companyName = companyName
     @addressRecordType = addressRecordType
+    @firstName = firstName
+    @lastName = lastName
+    @phone2 = phone2
     @__xmlele_any = nil
   end
 end
@@ -16540,6 +17018,28 @@ class AmountType < ::String
   def initialize(*arg)
     super
     @__xmlattr = {}
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}AnnouncementMessageType
+#   announcementStartTime - SOAP::SOAPDateTime
+#   eventTime - SOAP::SOAPDateTime
+#   messageType - AnnouncementMessageCodeType
+class AnnouncementMessageType
+  attr_accessor :announcementStartTime
+  attr_accessor :eventTime
+  attr_accessor :messageType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(announcementStartTime = nil, eventTime = nil, messageType = nil)
+    @announcementStartTime = announcementStartTime
+    @eventTime = eventTime
+    @messageType = messageType
+    @__xmlele_any = nil
   end
 end
 
@@ -16612,6 +17112,7 @@ end
 #   notificationPayloadType - NotificationPayloadTypeCodeType
 #   deviceType - DeviceTypeCodeType
 #   payloadVersion - SOAP::SOAPString
+#   deliveryURLDetails - DeliveryURLDetailType
 class ApplicationDeliveryPreferencesType
   attr_accessor :applicationURL
   attr_accessor :applicationEnable
@@ -16620,13 +17121,14 @@ class ApplicationDeliveryPreferencesType
   attr_accessor :notificationPayloadType
   attr_accessor :deviceType
   attr_accessor :payloadVersion
+  attr_accessor :deliveryURLDetails
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(applicationURL = nil, applicationEnable = nil, alertEmail = nil, alertEnable = nil, notificationPayloadType = nil, deviceType = nil, payloadVersion = nil)
+  def initialize(applicationURL = nil, applicationEnable = nil, alertEmail = nil, alertEnable = nil, notificationPayloadType = nil, deviceType = nil, payloadVersion = nil, deliveryURLDetails = [])
     @applicationURL = applicationURL
     @applicationEnable = applicationEnable
     @alertEmail = alertEmail
@@ -16634,6 +17136,7 @@ class ApplicationDeliveryPreferencesType
     @notificationPayloadType = notificationPayloadType
     @deviceType = deviceType
     @payloadVersion = payloadVersion
+    @deliveryURLDetails = deliveryURLDetails
     @__xmlele_any = nil
   end
 end
@@ -16746,38 +17249,6 @@ class AttributeType
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}AuthenticationEntryArrayType
-class AuthenticationEntryArrayType < ::Array
-end
-
-# {urn:ebay:apis:eBLBaseComponents}AuthenticationEntryType
-#   acceptURL - SOAP::SOAPAnyURI
-#   privacyPolicyURL - SOAP::SOAPAnyURI
-#   rejectURL - SOAP::SOAPAnyURI
-#   ruName - SOAP::SOAPString
-#   tokenReturnMethod - TokenReturnMethodCodeType
-class AuthenticationEntryType
-  attr_accessor :acceptURL
-  attr_accessor :privacyPolicyURL
-  attr_accessor :rejectURL
-  attr_accessor :ruName
-  attr_accessor :tokenReturnMethod
-  attr_reader :__xmlele_any
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(acceptURL = nil, privacyPolicyURL = nil, rejectURL = nil, ruName = nil, tokenReturnMethod = nil)
-    @acceptURL = acceptURL
-    @privacyPolicyURL = privacyPolicyURL
-    @rejectURL = rejectURL
-    @ruName = ruName
-    @tokenReturnMethod = tokenReturnMethod
-    @__xmlele_any = nil
-  end
-end
-
 # {urn:ebay:apis:eBLBaseComponents}AverageRatingDetailArrayType
 class AverageRatingDetailArrayType < ::Array
 end
@@ -16800,6 +17271,25 @@ class AverageRatingDetailsType
     @ratingDetail = ratingDetail
     @rating = rating
     @ratingCount = ratingCount
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}AverageRatingSummaryType
+#   feedbackSummaryPeriod - FeedbackSummaryPeriodCodeType
+#   averageRatingDetails - AverageRatingDetailsType
+class AverageRatingSummaryType
+  attr_accessor :feedbackSummaryPeriod
+  attr_accessor :averageRatingDetails
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(feedbackSummaryPeriod = nil, averageRatingDetails = [])
+    @feedbackSummaryPeriod = feedbackSummaryPeriod
+    @averageRatingDetails = averageRatingDetails
     @__xmlele_any = nil
   end
 end
@@ -17239,6 +17729,56 @@ class BiddingSummaryType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}BusinessSellerDetailsType
+#   address - AddressType
+#   fax - SOAP::SOAPString
+#   email - SOAP::SOAPString
+#   additionalContactInformation - SOAP::SOAPString
+#   tradeRegistrationNumber - SOAP::SOAPString
+#   legalInvoice - SOAP::SOAPBoolean
+#   termsAndConditions - SOAP::SOAPString
+#   vATDetails - VATDetailsType
+class BusinessSellerDetailsType
+  attr_accessor :address
+  attr_accessor :fax
+  attr_accessor :email
+  attr_accessor :additionalContactInformation
+  attr_accessor :tradeRegistrationNumber
+  attr_accessor :legalInvoice
+  attr_accessor :termsAndConditions
+  attr_accessor :vATDetails
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(address = nil, fax = nil, email = nil, additionalContactInformation = nil, tradeRegistrationNumber = nil, legalInvoice = nil, termsAndConditions = nil, vATDetails = nil)
+    @address = address
+    @fax = fax
+    @email = email
+    @additionalContactInformation = additionalContactInformation
+    @tradeRegistrationNumber = tradeRegistrationNumber
+    @legalInvoice = legalInvoice
+    @termsAndConditions = termsAndConditions
+    @vATDetails = vATDetails
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}BuyerGuaranteeEnabledDefinitionType
+class BuyerGuaranteeEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}BuyerProtectionDetailsType
 #   buyerProtectionSource - BuyerProtectionSourceCodeType
 #   buyerProtectionStatus - BuyerProtectionCodeType
@@ -17258,31 +17798,84 @@ class BuyerProtectionDetailsType
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}BuyerRequirementsType
+# {urn:ebay:apis:eBLBaseComponents}BuyerRequirementDetailsType
 #   shipToRegistrationCountry - SOAP::SOAPBoolean
 #   zeroFeedbackScore - SOAP::SOAPBoolean
 #   minimumFeedbackScore - SOAP::SOAPInt
-#   maximumUnpaidItemStrikes - SOAP::SOAPBoolean
 #   maximumItemRequirements - MaximumItemRequirementsType
 #   linkedPayPalAccount - SOAP::SOAPBoolean
 #   verifiedUserRequirements - VerifiedUserRequirementsType
-class BuyerRequirementsType
+#   maximumUnpaidItemStrikesInfo - MaximumUnpaidItemStrikesInfoType
+#   maximumBuyerPolicyViolations - MaximumBuyerPolicyViolationsType
+class BuyerRequirementDetailsType
   attr_accessor :shipToRegistrationCountry
   attr_accessor :zeroFeedbackScore
   attr_accessor :minimumFeedbackScore
-  attr_accessor :maximumUnpaidItemStrikes
   attr_accessor :maximumItemRequirements
   attr_accessor :linkedPayPalAccount
   attr_accessor :verifiedUserRequirements
+  attr_accessor :maximumUnpaidItemStrikesInfo
+  attr_accessor :maximumBuyerPolicyViolations
+  attr_reader :__xmlele_any
 
-  def initialize(shipToRegistrationCountry = nil, zeroFeedbackScore = nil, minimumFeedbackScore = nil, maximumUnpaidItemStrikes = nil, maximumItemRequirements = nil, linkedPayPalAccount = nil, verifiedUserRequirements = nil)
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(shipToRegistrationCountry = nil, zeroFeedbackScore = nil, minimumFeedbackScore = nil, maximumItemRequirements = nil, linkedPayPalAccount = nil, verifiedUserRequirements = nil, maximumUnpaidItemStrikesInfo = nil, maximumBuyerPolicyViolations = nil)
     @shipToRegistrationCountry = shipToRegistrationCountry
     @zeroFeedbackScore = zeroFeedbackScore
     @minimumFeedbackScore = minimumFeedbackScore
-    @maximumUnpaidItemStrikes = maximumUnpaidItemStrikes
     @maximumItemRequirements = maximumItemRequirements
     @linkedPayPalAccount = linkedPayPalAccount
     @verifiedUserRequirements = verifiedUserRequirements
+    @maximumUnpaidItemStrikesInfo = maximumUnpaidItemStrikesInfo
+    @maximumBuyerPolicyViolations = maximumBuyerPolicyViolations
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}BuyerRoleMetricsType
+#   positiveFeedbackLeftCount - SOAP::SOAPInt
+#   negativeFeedbackLeftCount - SOAP::SOAPInt
+#   neutralFeedbackLeftCount - SOAP::SOAPInt
+#   feedbackLeftPercent - SOAP::SOAPFloat
+class BuyerRoleMetricsType
+  attr_accessor :positiveFeedbackLeftCount
+  attr_accessor :negativeFeedbackLeftCount
+  attr_accessor :neutralFeedbackLeftCount
+  attr_accessor :feedbackLeftPercent
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(positiveFeedbackLeftCount = nil, negativeFeedbackLeftCount = nil, neutralFeedbackLeftCount = nil, feedbackLeftPercent = nil)
+    @positiveFeedbackLeftCount = positiveFeedbackLeftCount
+    @negativeFeedbackLeftCount = negativeFeedbackLeftCount
+    @neutralFeedbackLeftCount = neutralFeedbackLeftCount
+    @feedbackLeftPercent = feedbackLeftPercent
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}BuyerSatisfactionDashboardType
+#   status - BuyerSatisfactionStatusCodeType
+#   alert - SellerDashboardAlertType
+class BuyerSatisfactionDashboardType
+  attr_accessor :status
+  attr_accessor :alert
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(status = nil, alert = [])
+    @status = status
+    @alert = alert
+    @__xmlele_any = nil
   end
 end
 
@@ -17539,10 +18132,6 @@ class CancelOfferType
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}CartItemArrayType
-class CartItemArrayType < ::Array
-end
-
 # {urn:ebay:apis:eBLBaseComponents}CartItemType
 #   item - ItemType
 #   referenceID - SOAP::SOAPLong
@@ -17565,46 +18154,6 @@ class CartItemType
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}CartType
-#   cartID - SOAP::SOAPLong
-#   shippingAddress - AddressType
-#   cartStatus - OrderStatusCodeType
-#   creationTime - SOAP::SOAPDateTime
-#   expirationTime - SOAP::SOAPDateTime
-#   checkoutURL - SOAP::SOAPAnyURI
-#   checkoutCompleteRedirect - CheckoutCompleteRedirectType
-#   cartItemArray - CartItemArrayType
-#   orderDetail - CheckoutOrderDetailType
-class CartType
-  attr_accessor :cartID
-  attr_accessor :shippingAddress
-  attr_accessor :cartStatus
-  attr_accessor :creationTime
-  attr_accessor :expirationTime
-  attr_accessor :checkoutURL
-  attr_accessor :checkoutCompleteRedirect
-  attr_accessor :cartItemArray
-  attr_accessor :orderDetail
-  attr_reader :__xmlele_any
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(cartID = nil, shippingAddress = nil, cartStatus = nil, creationTime = nil, expirationTime = nil, checkoutURL = nil, checkoutCompleteRedirect = nil, cartItemArray = nil, orderDetail = nil)
-    @cartID = cartID
-    @shippingAddress = shippingAddress
-    @cartStatus = cartStatus
-    @creationTime = creationTime
-    @expirationTime = expirationTime
-    @checkoutURL = checkoutURL
-    @checkoutCompleteRedirect = checkoutCompleteRedirect
-    @cartItemArray = cartItemArray
-    @orderDetail = orderDetail
-    @__xmlele_any = nil
-  end
-end
-
 # {urn:ebay:apis:eBLBaseComponents}CatalogProductType
 #   title - SOAP::SOAPString
 #   detailsURL - SOAP::SOAPAnyURI
@@ -17617,6 +18166,7 @@ end
 #   itemSpecifics - NameValueListArrayType
 #   reviewCount - SOAP::SOAPInt
 #   reviewDetails - ReviewDetailsType
+#   productState - ProductStateCodeType
 class CatalogProductType
   attr_accessor :title
   attr_accessor :detailsURL
@@ -17629,13 +18179,14 @@ class CatalogProductType
   attr_accessor :itemSpecifics
   attr_accessor :reviewCount
   attr_accessor :reviewDetails
+  attr_accessor :productState
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(title = nil, detailsURL = nil, stockPhotoURL = nil, displayStockPhotos = nil, itemCount = nil, externalProductID = nil, productReferenceID = nil, attributeSetID = nil, itemSpecifics = nil, reviewCount = nil, reviewDetails = nil)
+  def initialize(title = nil, detailsURL = nil, stockPhotoURL = nil, displayStockPhotos = nil, itemCount = nil, externalProductID = nil, productReferenceID = nil, attributeSetID = nil, itemSpecifics = nil, reviewCount = nil, reviewDetails = nil, productState = nil)
     @title = title
     @detailsURL = detailsURL
     @stockPhotoURL = stockPhotoURL
@@ -17647,6 +18198,7 @@ class CatalogProductType
     @itemSpecifics = itemSpecifics
     @reviewCount = reviewCount
     @reviewDetails = reviewDetails
+    @productState = productState
     @__xmlele_any = nil
   end
 end
@@ -17668,7 +18220,6 @@ end
 #   valuePackEnabled - SOAP::SOAPBoolean
 #   proPackPlusEnabled - SOAP::SOAPBoolean
 #   adFormatEnabled - AdFormatEnabledCodeType
-#   digitalDeliveryEnabled - DigitalDeliveryEnabledCodeType
 #   bestOfferCounterEnabled - SOAP::SOAPBoolean
 #   bestOfferAutoDeclineEnabled - SOAP::SOAPBoolean
 #   localMarketSpecialitySubscription - SOAP::SOAPBoolean
@@ -17697,6 +18248,59 @@ end
 #   paisaPayFullEscrowEnabled - SOAP::SOAPBoolean
 #   classifiedAdAutoAcceptEnabled - SOAP::SOAPBoolean
 #   bestOfferAutoAcceptEnabled - SOAP::SOAPBoolean
+#   crossBorderTradeNorthAmericaEnabled - SOAP::SOAPBoolean
+#   crossBorderTradeGBEnabled - SOAP::SOAPBoolean
+#   crossBorderTradeAustraliaEnabled - SOAP::SOAPBoolean
+#   payPalBuyerProtectionEnabled - SOAP::SOAPBoolean
+#   buyerGuaranteeEnabled - SOAP::SOAPBoolean
+#   combinedFixedPriceTreatmentEnabled - SOAP::SOAPBoolean
+#   galleryFeaturedDurations - ListingEnhancementDurationReferenceType
+#   payPalRequired - SOAP::SOAPBoolean
+#   eBayMotorsProAdFormatEnabled - AdFormatEnabledCodeType
+#   eBayMotorsProContactByPhoneEnabled - SOAP::SOAPBoolean
+#   eBayMotorsProPhoneCount - SOAP::SOAPInt
+#   eBayMotorsProContactByAddressEnabled - SOAP::SOAPBoolean
+#   eBayMotorsProStreetCount - SOAP::SOAPInt
+#   eBayMotorsProCompanyNameEnabled - SOAP::SOAPBoolean
+#   eBayMotorsProContactByEmailEnabled - SOAP::SOAPBoolean
+#   eBayMotorsProBestOfferEnabled - ClassifiedAdBestOfferEnabledCodeType
+#   eBayMotorsProAutoAcceptEnabled - SOAP::SOAPBoolean
+#   eBayMotorsProAutoDeclineEnabled - SOAP::SOAPBoolean
+#   eBayMotorsProPaymentMethodCheckOutEnabled - ClassifiedAdPaymentMethodEnabledCodeType
+#   eBayMotorsProShippingMethodEnabled - SOAP::SOAPBoolean
+#   eBayMotorsProCounterOfferEnabled - SOAP::SOAPBoolean
+#   eBayMotorsProSellerContactDetailsEnabled - SOAP::SOAPBoolean
+#   localMarketAdFormatEnabled - AdFormatEnabledCodeType
+#   localMarketContactByPhoneEnabled - SOAP::SOAPBoolean
+#   localMarketPhoneCount - SOAP::SOAPInt
+#   localMarketContactByAddressEnabled - SOAP::SOAPBoolean
+#   localMarketStreetCount - SOAP::SOAPInt
+#   localMarketCompanyNameEnabled - SOAP::SOAPBoolean
+#   localMarketContactByEmailEnabled - SOAP::SOAPBoolean
+#   localMarketBestOfferEnabled - ClassifiedAdBestOfferEnabledCodeType
+#   localMarketAutoAcceptEnabled - SOAP::SOAPBoolean
+#   localMarketAutoDeclineEnabled - SOAP::SOAPBoolean
+#   localMarketPaymentMethodCheckOutEnabled - ClassifiedAdPaymentMethodEnabledCodeType
+#   localMarketShippingMethodEnabled - SOAP::SOAPBoolean
+#   localMarketCounterOfferEnabled - SOAP::SOAPBoolean
+#   localMarketSellerContactDetailsEnabled - SOAP::SOAPBoolean
+#   classifiedAdPhoneCount - SOAP::SOAPInt
+#   classifiedAdContactByAddressEnabled - SOAP::SOAPBoolean
+#   classifiedAdStreetCount - SOAP::SOAPInt
+#   classifiedAdCompanyNameEnabled - SOAP::SOAPBoolean
+#   specialitySubscription - GeographicExposureCodeType
+#   regularSubscription - GeographicExposureCodeType
+#   premiumSubscription - GeographicExposureCodeType
+#   nonSubscription - GeographicExposureCodeType
+#   iNEscrowWorkflowTimeline - INEscrowWorkflowTimelineCodeType
+#   payPalRequiredForStoreOwner - SOAP::SOAPBoolean
+#   reviseQuantityAllowed - SOAP::SOAPBoolean
+#   revisePriceAllowed - SOAP::SOAPBoolean
+#   storeOwnerExtendedListingDurationsEnabled - SOAP::SOAPBoolean
+#   storeOwnerExtendedListingDurations - StoreOwnerExtendedListingDurationsType
+#   returnPolicyEnabled - SOAP::SOAPBoolean
+#   handlingTimeEnabled - SOAP::SOAPBoolean
+#   maxFlatShippingCost - SOAP::SOAPDouble
 class CategoryFeatureType
   attr_accessor :categoryID
   attr_accessor :listingDuration
@@ -17710,7 +18314,6 @@ class CategoryFeatureType
   attr_accessor :valuePackEnabled
   attr_accessor :proPackPlusEnabled
   attr_accessor :adFormatEnabled
-  attr_accessor :digitalDeliveryEnabled
   attr_accessor :bestOfferCounterEnabled
   attr_accessor :bestOfferAutoDeclineEnabled
   attr_accessor :localMarketSpecialitySubscription
@@ -17739,13 +18342,66 @@ class CategoryFeatureType
   attr_accessor :paisaPayFullEscrowEnabled
   attr_accessor :classifiedAdAutoAcceptEnabled
   attr_accessor :bestOfferAutoAcceptEnabled
+  attr_accessor :crossBorderTradeNorthAmericaEnabled
+  attr_accessor :crossBorderTradeGBEnabled
+  attr_accessor :crossBorderTradeAustraliaEnabled
+  attr_accessor :payPalBuyerProtectionEnabled
+  attr_accessor :buyerGuaranteeEnabled
+  attr_accessor :combinedFixedPriceTreatmentEnabled
+  attr_accessor :galleryFeaturedDurations
+  attr_accessor :payPalRequired
+  attr_accessor :eBayMotorsProAdFormatEnabled
+  attr_accessor :eBayMotorsProContactByPhoneEnabled
+  attr_accessor :eBayMotorsProPhoneCount
+  attr_accessor :eBayMotorsProContactByAddressEnabled
+  attr_accessor :eBayMotorsProStreetCount
+  attr_accessor :eBayMotorsProCompanyNameEnabled
+  attr_accessor :eBayMotorsProContactByEmailEnabled
+  attr_accessor :eBayMotorsProBestOfferEnabled
+  attr_accessor :eBayMotorsProAutoAcceptEnabled
+  attr_accessor :eBayMotorsProAutoDeclineEnabled
+  attr_accessor :eBayMotorsProPaymentMethodCheckOutEnabled
+  attr_accessor :eBayMotorsProShippingMethodEnabled
+  attr_accessor :eBayMotorsProCounterOfferEnabled
+  attr_accessor :eBayMotorsProSellerContactDetailsEnabled
+  attr_accessor :localMarketAdFormatEnabled
+  attr_accessor :localMarketContactByPhoneEnabled
+  attr_accessor :localMarketPhoneCount
+  attr_accessor :localMarketContactByAddressEnabled
+  attr_accessor :localMarketStreetCount
+  attr_accessor :localMarketCompanyNameEnabled
+  attr_accessor :localMarketContactByEmailEnabled
+  attr_accessor :localMarketBestOfferEnabled
+  attr_accessor :localMarketAutoAcceptEnabled
+  attr_accessor :localMarketAutoDeclineEnabled
+  attr_accessor :localMarketPaymentMethodCheckOutEnabled
+  attr_accessor :localMarketShippingMethodEnabled
+  attr_accessor :localMarketCounterOfferEnabled
+  attr_accessor :localMarketSellerContactDetailsEnabled
+  attr_accessor :classifiedAdPhoneCount
+  attr_accessor :classifiedAdContactByAddressEnabled
+  attr_accessor :classifiedAdStreetCount
+  attr_accessor :classifiedAdCompanyNameEnabled
+  attr_accessor :specialitySubscription
+  attr_accessor :regularSubscription
+  attr_accessor :premiumSubscription
+  attr_accessor :nonSubscription
+  attr_accessor :iNEscrowWorkflowTimeline
+  attr_accessor :payPalRequiredForStoreOwner
+  attr_accessor :reviseQuantityAllowed
+  attr_accessor :revisePriceAllowed
+  attr_accessor :storeOwnerExtendedListingDurationsEnabled
+  attr_accessor :storeOwnerExtendedListingDurations
+  attr_accessor :returnPolicyEnabled
+  attr_accessor :handlingTimeEnabled
+  attr_accessor :maxFlatShippingCost
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(categoryID = nil, listingDuration = [], shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil, localMarketSpecialitySubscription = nil, localMarketRegularSubscription = nil, localMarketPremiumSubscription = nil, localMarketNonSubscription = nil, expressEnabled = nil, expressPicturesRequired = nil, expressConditionRequired = nil, minimumReservePrice = nil, sellerContactDetailsEnabled = nil, transactionConfirmationRequestEnabled = nil, storeInventoryEnabled = nil, skypeMeTransactionalEnabled = nil, skypeMeNonTransactionalEnabled = nil, classifiedAdPaymentMethodEnabled = nil, classifiedAdShippingMethodEnabled = nil, classifiedAdBestOfferEnabled = nil, classifiedAdCounterOfferEnabled = nil, classifiedAdAutoDeclineEnabled = nil, classifiedAdContactByPhoneEnabled = nil, classifiedAdContactByEmailEnabled = nil, safePaymentRequired = nil, classifiedAdPayPerLeadEnabled = nil, itemSpecificsEnabled = nil, paisaPayFullEscrowEnabled = nil, classifiedAdAutoAcceptEnabled = nil, bestOfferAutoAcceptEnabled = nil)
+  def initialize(categoryID = nil, listingDuration = [], shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil, localMarketSpecialitySubscription = nil, localMarketRegularSubscription = nil, localMarketPremiumSubscription = nil, localMarketNonSubscription = nil, expressEnabled = nil, expressPicturesRequired = nil, expressConditionRequired = nil, minimumReservePrice = nil, sellerContactDetailsEnabled = nil, transactionConfirmationRequestEnabled = nil, storeInventoryEnabled = nil, skypeMeTransactionalEnabled = nil, skypeMeNonTransactionalEnabled = nil, classifiedAdPaymentMethodEnabled = nil, classifiedAdShippingMethodEnabled = nil, classifiedAdBestOfferEnabled = nil, classifiedAdCounterOfferEnabled = nil, classifiedAdAutoDeclineEnabled = nil, classifiedAdContactByPhoneEnabled = nil, classifiedAdContactByEmailEnabled = nil, safePaymentRequired = nil, classifiedAdPayPerLeadEnabled = nil, itemSpecificsEnabled = nil, paisaPayFullEscrowEnabled = nil, classifiedAdAutoAcceptEnabled = nil, bestOfferAutoAcceptEnabled = nil, crossBorderTradeNorthAmericaEnabled = nil, crossBorderTradeGBEnabled = nil, crossBorderTradeAustraliaEnabled = nil, payPalBuyerProtectionEnabled = nil, buyerGuaranteeEnabled = nil, combinedFixedPriceTreatmentEnabled = nil, galleryFeaturedDurations = nil, payPalRequired = nil, eBayMotorsProAdFormatEnabled = nil, eBayMotorsProContactByPhoneEnabled = nil, eBayMotorsProPhoneCount = nil, eBayMotorsProContactByAddressEnabled = nil, eBayMotorsProStreetCount = nil, eBayMotorsProCompanyNameEnabled = nil, eBayMotorsProContactByEmailEnabled = nil, eBayMotorsProBestOfferEnabled = nil, eBayMotorsProAutoAcceptEnabled = nil, eBayMotorsProAutoDeclineEnabled = nil, eBayMotorsProPaymentMethodCheckOutEnabled = nil, eBayMotorsProShippingMethodEnabled = nil, eBayMotorsProCounterOfferEnabled = nil, eBayMotorsProSellerContactDetailsEnabled = nil, localMarketAdFormatEnabled = nil, localMarketContactByPhoneEnabled = nil, localMarketPhoneCount = nil, localMarketContactByAddressEnabled = nil, localMarketStreetCount = nil, localMarketCompanyNameEnabled = nil, localMarketContactByEmailEnabled = nil, localMarketBestOfferEnabled = nil, localMarketAutoAcceptEnabled = nil, localMarketAutoDeclineEnabled = nil, localMarketPaymentMethodCheckOutEnabled = nil, localMarketShippingMethodEnabled = nil, localMarketCounterOfferEnabled = nil, localMarketSellerContactDetailsEnabled = nil, classifiedAdPhoneCount = nil, classifiedAdContactByAddressEnabled = nil, classifiedAdStreetCount = nil, classifiedAdCompanyNameEnabled = nil, specialitySubscription = nil, regularSubscription = nil, premiumSubscription = nil, nonSubscription = nil, iNEscrowWorkflowTimeline = nil, payPalRequiredForStoreOwner = nil, reviseQuantityAllowed = nil, revisePriceAllowed = nil, storeOwnerExtendedListingDurationsEnabled = nil, storeOwnerExtendedListingDurations = nil, returnPolicyEnabled = nil, handlingTimeEnabled = nil, maxFlatShippingCost = nil)
     @categoryID = categoryID
     @listingDuration = listingDuration
     @shippingTermsRequired = shippingTermsRequired
@@ -17758,7 +18414,6 @@ class CategoryFeatureType
     @valuePackEnabled = valuePackEnabled
     @proPackPlusEnabled = proPackPlusEnabled
     @adFormatEnabled = adFormatEnabled
-    @digitalDeliveryEnabled = digitalDeliveryEnabled
     @bestOfferCounterEnabled = bestOfferCounterEnabled
     @bestOfferAutoDeclineEnabled = bestOfferAutoDeclineEnabled
     @localMarketSpecialitySubscription = localMarketSpecialitySubscription
@@ -17787,6 +18442,59 @@ class CategoryFeatureType
     @paisaPayFullEscrowEnabled = paisaPayFullEscrowEnabled
     @classifiedAdAutoAcceptEnabled = classifiedAdAutoAcceptEnabled
     @bestOfferAutoAcceptEnabled = bestOfferAutoAcceptEnabled
+    @crossBorderTradeNorthAmericaEnabled = crossBorderTradeNorthAmericaEnabled
+    @crossBorderTradeGBEnabled = crossBorderTradeGBEnabled
+    @crossBorderTradeAustraliaEnabled = crossBorderTradeAustraliaEnabled
+    @payPalBuyerProtectionEnabled = payPalBuyerProtectionEnabled
+    @buyerGuaranteeEnabled = buyerGuaranteeEnabled
+    @combinedFixedPriceTreatmentEnabled = combinedFixedPriceTreatmentEnabled
+    @galleryFeaturedDurations = galleryFeaturedDurations
+    @payPalRequired = payPalRequired
+    @eBayMotorsProAdFormatEnabled = eBayMotorsProAdFormatEnabled
+    @eBayMotorsProContactByPhoneEnabled = eBayMotorsProContactByPhoneEnabled
+    @eBayMotorsProPhoneCount = eBayMotorsProPhoneCount
+    @eBayMotorsProContactByAddressEnabled = eBayMotorsProContactByAddressEnabled
+    @eBayMotorsProStreetCount = eBayMotorsProStreetCount
+    @eBayMotorsProCompanyNameEnabled = eBayMotorsProCompanyNameEnabled
+    @eBayMotorsProContactByEmailEnabled = eBayMotorsProContactByEmailEnabled
+    @eBayMotorsProBestOfferEnabled = eBayMotorsProBestOfferEnabled
+    @eBayMotorsProAutoAcceptEnabled = eBayMotorsProAutoAcceptEnabled
+    @eBayMotorsProAutoDeclineEnabled = eBayMotorsProAutoDeclineEnabled
+    @eBayMotorsProPaymentMethodCheckOutEnabled = eBayMotorsProPaymentMethodCheckOutEnabled
+    @eBayMotorsProShippingMethodEnabled = eBayMotorsProShippingMethodEnabled
+    @eBayMotorsProCounterOfferEnabled = eBayMotorsProCounterOfferEnabled
+    @eBayMotorsProSellerContactDetailsEnabled = eBayMotorsProSellerContactDetailsEnabled
+    @localMarketAdFormatEnabled = localMarketAdFormatEnabled
+    @localMarketContactByPhoneEnabled = localMarketContactByPhoneEnabled
+    @localMarketPhoneCount = localMarketPhoneCount
+    @localMarketContactByAddressEnabled = localMarketContactByAddressEnabled
+    @localMarketStreetCount = localMarketStreetCount
+    @localMarketCompanyNameEnabled = localMarketCompanyNameEnabled
+    @localMarketContactByEmailEnabled = localMarketContactByEmailEnabled
+    @localMarketBestOfferEnabled = localMarketBestOfferEnabled
+    @localMarketAutoAcceptEnabled = localMarketAutoAcceptEnabled
+    @localMarketAutoDeclineEnabled = localMarketAutoDeclineEnabled
+    @localMarketPaymentMethodCheckOutEnabled = localMarketPaymentMethodCheckOutEnabled
+    @localMarketShippingMethodEnabled = localMarketShippingMethodEnabled
+    @localMarketCounterOfferEnabled = localMarketCounterOfferEnabled
+    @localMarketSellerContactDetailsEnabled = localMarketSellerContactDetailsEnabled
+    @classifiedAdPhoneCount = classifiedAdPhoneCount
+    @classifiedAdContactByAddressEnabled = classifiedAdContactByAddressEnabled
+    @classifiedAdStreetCount = classifiedAdStreetCount
+    @classifiedAdCompanyNameEnabled = classifiedAdCompanyNameEnabled
+    @specialitySubscription = specialitySubscription
+    @regularSubscription = regularSubscription
+    @premiumSubscription = premiumSubscription
+    @nonSubscription = nonSubscription
+    @iNEscrowWorkflowTimeline = iNEscrowWorkflowTimeline
+    @payPalRequiredForStoreOwner = payPalRequiredForStoreOwner
+    @reviseQuantityAllowed = reviseQuantityAllowed
+    @revisePriceAllowed = revisePriceAllowed
+    @storeOwnerExtendedListingDurationsEnabled = storeOwnerExtendedListingDurationsEnabled
+    @storeOwnerExtendedListingDurations = storeOwnerExtendedListingDurations
+    @returnPolicyEnabled = returnPolicyEnabled
+    @handlingTimeEnabled = handlingTimeEnabled
+    @maxFlatShippingCost = maxFlatShippingCost
     @__xmlele_any = nil
   end
 end
@@ -18010,6 +18718,32 @@ class CharacteristicsSetType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}CharityAffiliationDetailType
+#   charityID - SOAP::SOAPString
+#   affiliationType - CharityAffiliationTypeCodeType
+#   lastUsedTime - SOAP::SOAPDateTime
+class CharityAffiliationDetailType
+  attr_accessor :charityID
+  attr_accessor :affiliationType
+  attr_accessor :lastUsedTime
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(charityID = nil, affiliationType = nil, lastUsedTime = nil)
+    @charityID = charityID
+    @affiliationType = affiliationType
+    @lastUsedTime = lastUsedTime
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}CharityAffiliationDetailsType
+class CharityAffiliationDetailsType < ::Array
+end
+
 # {urn:ebay:apis:eBLBaseComponents}CharityAffiliationType
 #   xmlattr_id - SOAP::SOAPString
 #   xmlattr_type - SOAP::SOAPToken
@@ -18099,6 +18833,7 @@ end
 #   charityID - SOAP::SOAPString
 #   logoURLSelling - SOAP::SOAPAnyURI
 #   displayLogoSelling - SOAP::SOAPBoolean
+#   displayNameInCheckout - SOAP::SOAPBoolean
 #   xmlattr_id - SOAP::SOAPString
 class CharityInfoType
   AttrId = XSD::QName.new(nil, "id")
@@ -18113,6 +18848,7 @@ class CharityInfoType
   attr_accessor :charityID
   attr_accessor :logoURLSelling
   attr_accessor :displayLogoSelling
+  attr_accessor :displayNameInCheckout
   attr_reader :__xmlele_any
 
   def set_any(elements)
@@ -18131,7 +18867,7 @@ class CharityInfoType
     __xmlattr[AttrId] = value
   end
 
-  def initialize(name = nil, mission = nil, logoURL = nil, status = nil, searchableString = nil, charityRegion = nil, charityDomain = [], charityID = nil, logoURLSelling = nil, displayLogoSelling = nil)
+  def initialize(name = nil, mission = nil, logoURL = nil, status = nil, searchableString = nil, charityRegion = nil, charityDomain = [], charityID = nil, logoURLSelling = nil, displayLogoSelling = nil, displayNameInCheckout = nil)
     @name = name
     @mission = mission
     @logoURL = logoURL
@@ -18142,6 +18878,7 @@ class CharityInfoType
     @charityID = charityID
     @logoURLSelling = logoURLSelling
     @displayLogoSelling = displayLogoSelling
+    @displayNameInCheckout = displayNameInCheckout
     @__xmlele_any = nil
     @__xmlattr = {}
   end
@@ -18150,18 +18887,21 @@ end
 # {urn:ebay:apis:eBLBaseComponents}CharitySellerType
 #   charitySellerStatus - CharitySellerStatusCodeType
 #   charityAffiliation - CharityAffiliationType
+#   termsAndConditionsAccepted - SOAP::SOAPBoolean
 class CharitySellerType
   attr_accessor :charitySellerStatus
   attr_accessor :charityAffiliation
+  attr_accessor :termsAndConditionsAccepted
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(charitySellerStatus = nil, charityAffiliation = [])
+  def initialize(charitySellerStatus = nil, charityAffiliation = [], termsAndConditionsAccepted = nil)
     @charitySellerStatus = charitySellerStatus
     @charityAffiliation = charityAffiliation
+    @termsAndConditionsAccepted = termsAndConditionsAccepted
     @__xmlele_any = nil
   end
 end
@@ -18199,25 +18939,6 @@ class CharityType
     @logoURL = logoURL
     @status = status
     @charityListing = charityListing
-    @__xmlele_any = nil
-  end
-end
-
-# {urn:ebay:apis:eBLBaseComponents}CheckoutCompleteRedirectType
-#   uRL - SOAP::SOAPAnyURI
-#   name - SOAP::SOAPString
-class CheckoutCompleteRedirectType
-  attr_accessor :uRL
-  attr_accessor :name
-  attr_reader :__xmlele_any
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(uRL = nil, name = nil)
-    @uRL = uRL
-    @name = name
     @__xmlele_any = nil
   end
 end
@@ -18311,6 +19032,32 @@ class ClassifiedAdBestOfferEnabledDefinitionType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}ClassifiedAdCompanyNameEnabledDefinitionType
+class ClassifiedAdCompanyNameEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ClassifiedAdContactByAddressEnabledDefinitionType
+class ClassifiedAdContactByAddressEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}ClassifiedAdContactByEmailEnabledDefintionType
 class ClassifiedAdContactByEmailEnabledDefintionType
   attr_reader :__xmlele_any
@@ -18376,8 +19123,47 @@ class ClassifiedAdPaymentMethodEnabledDefinitionType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}ClassifiedAdPhoneCountDefinitionType
+class ClassifiedAdPhoneCountDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}ClassifiedAdShippingMethodEnabledDefinitionType
 class ClassifiedAdShippingMethodEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ClassifiedAdStreetCountDefinitionType
+class ClassifiedAdStreetCountDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}CombinedFixedPriceTreatmentEnabledDefinitionType
+class CombinedFixedPriceTreatmentEnabledDefinitionType
   attr_reader :__xmlele_any
 
   def set_any(elements)
@@ -18485,6 +19271,45 @@ class CountryDetailsType
   def initialize(country = nil, description = nil)
     @country = country
     @description = description
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}CrossBorderTradeAustraliaEnabledDefinitionType
+class CrossBorderTradeAustraliaEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}CrossBorderTradeGBEnabledDefinitionType
+class CrossBorderTradeGBEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}CrossBorderTradeNorthAmericaEnabledDefinitionType
+class CrossBorderTradeNorthAmericaEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
     @__xmlele_any = nil
   end
 end
@@ -18633,6 +19458,28 @@ class DateType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}DeliveryURLDetailType
+#   deliveryURLName - SOAP::SOAPString
+#   deliveryURL - SOAP::SOAPAnyURI
+#   status - EnableCodeType
+class DeliveryURLDetailType
+  attr_accessor :deliveryURLName
+  attr_accessor :deliveryURL
+  attr_accessor :status
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(deliveryURLName = nil, deliveryURL = nil, status = nil)
+    @deliveryURLName = deliveryURLName
+    @deliveryURL = deliveryURL
+    @status = status
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}DescriptionTemplateType
 #   groupID - SOAP::SOAPInt
 #   iD - SOAP::SOAPInt
@@ -18660,44 +19507,6 @@ class DescriptionTemplateType
     @name = name
     @templateXML = templateXML
     @type = type
-    @__xmlele_any = nil
-  end
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DigitalDeliveryDetailsType
-#   requirements - SOAP::SOAPString
-#   method - DigitalDeliveryMethodCodeType
-#   uRL - SOAP::SOAPAnyURI
-#   instructions - SOAP::SOAPString
-class DigitalDeliveryDetailsType
-  attr_accessor :requirements
-  attr_accessor :method
-  attr_accessor :uRL
-  attr_accessor :instructions
-  attr_reader :__xmlele_any
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(requirements = nil, method = nil, uRL = nil, instructions = nil)
-    @requirements = requirements
-    @method = method
-    @uRL = uRL
-    @instructions = instructions
-    @__xmlele_any = nil
-  end
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DigitalDeliveryEnabledDefinitionType
-class DigitalDeliveryEnabledDefinitionType
-  attr_reader :__xmlele_any
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize
     @__xmlele_any = nil
   end
 end
@@ -18847,22 +19656,6 @@ class DistanceType
   def initialize(distanceMeasurement = nil, distanceUnit = nil)
     @distanceMeasurement = distanceMeasurement
     @distanceUnit = distanceUnit
-    @__xmlele_any = nil
-  end
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DomainHistogramType
-#   department - ExpressHistogramDepartmentType
-class DomainHistogramType
-  attr_accessor :department
-  attr_reader :__xmlele_any
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(department = [])
-    @department = department
     @__xmlele_any = nil
   end
 end
@@ -19073,7 +19866,6 @@ end
 #   eligibleCheckout - SOAP::SOAPBoolean
 #   noPreapprovedBidderList - SOAP::SOAPBoolean
 #   noCharity - SOAP::SOAPBoolean
-#   noDigitalDelivery - SOAP::SOAPBoolean
 #   combinedShippingDiscount - SOAP::SOAPBoolean
 #   shipFromEligibleCountry - SOAP::SOAPBoolean
 #   payPalAccountAcceptsUnconfirmedAddress - SOAP::SOAPBoolean
@@ -19093,7 +19885,6 @@ class ExpressItemRequirementsType
   attr_accessor :eligibleCheckout
   attr_accessor :noPreapprovedBidderList
   attr_accessor :noCharity
-  attr_accessor :noDigitalDelivery
   attr_accessor :combinedShippingDiscount
   attr_accessor :shipFromEligibleCountry
   attr_accessor :payPalAccountAcceptsUnconfirmedAddress
@@ -19103,7 +19894,7 @@ class ExpressItemRequirementsType
     @__xmlele_any = elements
   end
 
-  def initialize(sellerExpressEligible = nil, expressOptOut = nil, expressApproved = nil, expressEligibleListingType = nil, expressEnabledCategory = nil, eligiblePayPalAccount = nil, domesticShippingCost = nil, eligibleReturnPolicy = nil, picture = nil, eligibleItemCondition = nil, priceAboveMinimum = nil, priceBelowMaximum = nil, eligibleCheckout = nil, noPreapprovedBidderList = nil, noCharity = nil, noDigitalDelivery = nil, combinedShippingDiscount = nil, shipFromEligibleCountry = nil, payPalAccountAcceptsUnconfirmedAddress = nil)
+  def initialize(sellerExpressEligible = nil, expressOptOut = nil, expressApproved = nil, expressEligibleListingType = nil, expressEnabledCategory = nil, eligiblePayPalAccount = nil, domesticShippingCost = nil, eligibleReturnPolicy = nil, picture = nil, eligibleItemCondition = nil, priceAboveMinimum = nil, priceBelowMaximum = nil, eligibleCheckout = nil, noPreapprovedBidderList = nil, noCharity = nil, combinedShippingDiscount = nil, shipFromEligibleCountry = nil, payPalAccountAcceptsUnconfirmedAddress = nil)
     @sellerExpressEligible = sellerExpressEligible
     @expressOptOut = expressOptOut
     @expressApproved = expressApproved
@@ -19119,7 +19910,6 @@ class ExpressItemRequirementsType
     @eligibleCheckout = eligibleCheckout
     @noPreapprovedBidderList = noPreapprovedBidderList
     @noCharity = noCharity
-    @noDigitalDelivery = noDigitalDelivery
     @combinedShippingDiscount = combinedShippingDiscount
     @shipFromEligibleCountry = shipFromEligibleCountry
     @payPalAccountAcceptsUnconfirmedAddress = payPalAccountAcceptsUnconfirmedAddress
@@ -19169,6 +19959,7 @@ end
 #   productReferenceID - SOAP::SOAPLong
 #   itemSpecifics - NameValueListArrayType
 #   detailsURL - SOAP::SOAPAnyURI
+#   productState - ProductStateCodeType
 class ExpressProductType
   attr_accessor :title
   attr_accessor :minPrice
@@ -19179,13 +19970,14 @@ class ExpressProductType
   attr_accessor :productReferenceID
   attr_accessor :itemSpecifics
   attr_accessor :detailsURL
+  attr_accessor :productState
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(title = nil, minPrice = nil, maxPrice = nil, stockPhotoURL = nil, itemCount = nil, externalProductID = nil, productReferenceID = nil, itemSpecifics = nil, detailsURL = nil)
+  def initialize(title = nil, minPrice = nil, maxPrice = nil, stockPhotoURL = nil, itemCount = nil, externalProductID = nil, productReferenceID = nil, itemSpecifics = nil, detailsURL = nil, productState = nil)
     @title = title
     @minPrice = minPrice
     @maxPrice = maxPrice
@@ -19195,6 +19987,7 @@ class ExpressProductType
     @productReferenceID = productReferenceID
     @itemSpecifics = itemSpecifics
     @detailsURL = detailsURL
+    @productState = productState
     @__xmlele_any = nil
   end
 end
@@ -19349,7 +20142,6 @@ end
 #   valuePackEnabled - ValuePackEnabledDefinitionType
 #   proPackPlusEnabled - ProPackPlusEnabledDefinitionType
 #   adFormatEnabled - AdFormatEnabledDefinitionType
-#   digitalDeliveryEnabled - DigitalDeliveryEnabledDefinitionType
 #   bestOfferCounterEnabled - BestOfferCounterEnabledDefinitionType
 #   bestOfferAutoDeclineEnabled - BestOfferAutoDeclineEnabledDefinitionType
 #   localMarketSpecialitySubscription - LocalMarketSpecialitySubscriptionDefinitionType
@@ -19381,6 +20173,58 @@ end
 #   paisaPayFullEscrowEnabled - PaisaPayFullEscrowEnabledDefinitionType
 #   bestOfferAutoAcceptEnabled - BestOfferAutoAcceptEnabledDefinitionType
 #   classifiedAdAutoAcceptEnabled - ClassifiedAdAutoAcceptEnabledDefinitionType
+#   crossBorderTradeNorthAmericaEnabled - CrossBorderTradeNorthAmericaEnabledDefinitionType
+#   crossBorderTradeGBEnabled - CrossBorderTradeGBEnabledDefinitionType
+#   crossBorderTradeAustraliaEnabled - CrossBorderTradeAustraliaEnabledDefinitionType
+#   payPalBuyerProtectionEnabled - PayPalBuyerProtectionEnabledDefinitionType
+#   buyerGuaranteeEnabled - BuyerGuaranteeEnabledDefinitionType
+#   combinedFixedPriceTreatmentEnabled - CombinedFixedPriceTreatmentEnabledDefinitionType
+#   galleryFeaturedDurations - ListingEnhancementDurationDefinitionType
+#   iNEscrowWorkflowTimeline - INEscrowWorkflowTimelineDefinitionType
+#   payPalRequired - PayPalRequiredDefinitionType
+#   eBayMotorsProAdFormatEnabled - EBayMotorsProAdFormatEnabledDefinitionType
+#   eBayMotorsProContactByPhoneEnabled - EBayMotorsProContactByPhoneEnabledDefinitionType
+#   eBayMotorsProPhoneCount - EBayMotorsProPhoneCountDefinitionType
+#   eBayMotorsProContactByAddressEnabled - EBayMotorsProContactByAddressEnabledDefinitionType
+#   eBayMotorsProStreetCount - EBayMotorsProStreetCountDefinitionType
+#   eBayMotorsProCompanyNameEnabled - EBayMotorsProCompanyNameEnabledDefinitionType
+#   eBayMotorsProContactByEmailEnabled - EBayMotorsProContactByEmailEnabledDefinitionType
+#   eBayMotorsProBestOfferEnabled - EBayMotorsProBestOfferEnabledDefinitionType
+#   eBayMotorsProAutoAcceptEnabled - EBayMotorsProAutoAcceptEnabledDefinitionType
+#   eBayMotorsProAutoDeclineEnabled - EBayMotorsProAutoDeclineEnabledDefinitionType
+#   eBayMotorsProPaymentMethodCheckOutEnabled - EBayMotorsProPaymentMethodCheckOutEnabledDefinitionType
+#   eBayMotorsProShippingMethodEnabled - EBayMotorsProShippingMethodEnabledDefinitionType
+#   eBayMotorsProCounterOfferEnabled - EBayMotorsProCounterOfferEnabledDefinitionType
+#   eBayMotorsProSellerContactDetailsEnabled - EBayMotorsProSellerContactDetailsEnabledDefinitionType
+#   localMarketAdFormatEnabled - LocalMarketAdFormatEnabledDefinitionType
+#   localMarketContactByPhoneEnabled - LocalMarketContactByPhoneEnabledDefinitionType
+#   localMarketPhoneCount - LocalMarketPhoneCountDefinitionType
+#   localMarketContactByAddressEnabled - LocalMarketContactByAddressEnabledDefinitionType
+#   localMarketStreetCount - LocalMarketStreetCountDefinitionType
+#   localMarketCompanyNameEnabled - LocalMarketCompanyNameEnabledDefinitionType
+#   localMarketContactByEmailEnabled - LocalMarketContactByEmailEnabledDefinitionType
+#   localMarketBestOfferEnabled - LocalMarketBestOfferEnabledDefinitionType
+#   localMarketAutoAcceptEnabled - LocalMarketAutoAcceptEnabledDefinitionType
+#   localMarketAutoDeclineEnabled - LocalMarketAutoDeclineEnabledDefinitionType
+#   localMarketPaymentMethodCheckOutEnabled - LocalMarketPaymentMethodCheckOutEnabledDefinitionType
+#   localMarketShippingMethodEnabled - LocalMarketShippingMethodEnabledDefinitionType
+#   localMarketCounterOfferEnabled - LocalMarketCounterOfferEnabledDefinitionType
+#   localMarketSellerContactDetailsEnabled - LocalMarketSellerContactDetailsEnabledDefinitionType
+#   classifiedAdPhoneCount - ClassifiedAdPhoneCountDefinitionType
+#   classifiedAdContactByAddressEnabled - ClassifiedAdContactByAddressEnabledDefinitionType
+#   classifiedAdStreetCount - ClassifiedAdStreetCountDefinitionType
+#   classifiedAdCompanyNameEnabled - ClassifiedAdCompanyNameEnabledDefinitionType
+#   specialitySubscription - SpecialitySubscriptionDefinitionType
+#   regularSubscription - RegularSubscriptionDefinitionType
+#   premiumSubscription - PremiumSubscriptionDefinitionType
+#   nonSubscription - NonSubscriptionDefinitionType
+#   returnPolicyEnabled - ReturnPolicyEnabledDefinitionType
+#   handlingTimeEnabled - HandlingTimeEnabledDefinitionType
+#   payPalRequiredForStoreOwner - PayPalRequiredForStoreOwnerDefinitionType
+#   reviseQuantityAllowed - ReviseQuantityAllowedDefinitionType
+#   revisePriceAllowed - RevisePriceAllowedDefinitionType
+#   storeOwnerExtendedListingDurationsEnabled - StoreOwnerExtendedListingDurationsEnabledDefinitionType
+#   storeOwnerExtendedListingDurations - StoreOwnerExtendedListingDurationsDefinitionType
 class FeatureDefinitionsType
   attr_accessor :listingDurations
   attr_accessor :shippingTermsRequired
@@ -19393,7 +20237,6 @@ class FeatureDefinitionsType
   attr_accessor :valuePackEnabled
   attr_accessor :proPackPlusEnabled
   attr_accessor :adFormatEnabled
-  attr_accessor :digitalDeliveryEnabled
   attr_accessor :bestOfferCounterEnabled
   attr_accessor :bestOfferAutoDeclineEnabled
   attr_accessor :localMarketSpecialitySubscription
@@ -19425,13 +20268,65 @@ class FeatureDefinitionsType
   attr_accessor :paisaPayFullEscrowEnabled
   attr_accessor :bestOfferAutoAcceptEnabled
   attr_accessor :classifiedAdAutoAcceptEnabled
+  attr_accessor :crossBorderTradeNorthAmericaEnabled
+  attr_accessor :crossBorderTradeGBEnabled
+  attr_accessor :crossBorderTradeAustraliaEnabled
+  attr_accessor :payPalBuyerProtectionEnabled
+  attr_accessor :buyerGuaranteeEnabled
+  attr_accessor :combinedFixedPriceTreatmentEnabled
+  attr_accessor :galleryFeaturedDurations
+  attr_accessor :iNEscrowWorkflowTimeline
+  attr_accessor :payPalRequired
+  attr_accessor :eBayMotorsProAdFormatEnabled
+  attr_accessor :eBayMotorsProContactByPhoneEnabled
+  attr_accessor :eBayMotorsProPhoneCount
+  attr_accessor :eBayMotorsProContactByAddressEnabled
+  attr_accessor :eBayMotorsProStreetCount
+  attr_accessor :eBayMotorsProCompanyNameEnabled
+  attr_accessor :eBayMotorsProContactByEmailEnabled
+  attr_accessor :eBayMotorsProBestOfferEnabled
+  attr_accessor :eBayMotorsProAutoAcceptEnabled
+  attr_accessor :eBayMotorsProAutoDeclineEnabled
+  attr_accessor :eBayMotorsProPaymentMethodCheckOutEnabled
+  attr_accessor :eBayMotorsProShippingMethodEnabled
+  attr_accessor :eBayMotorsProCounterOfferEnabled
+  attr_accessor :eBayMotorsProSellerContactDetailsEnabled
+  attr_accessor :localMarketAdFormatEnabled
+  attr_accessor :localMarketContactByPhoneEnabled
+  attr_accessor :localMarketPhoneCount
+  attr_accessor :localMarketContactByAddressEnabled
+  attr_accessor :localMarketStreetCount
+  attr_accessor :localMarketCompanyNameEnabled
+  attr_accessor :localMarketContactByEmailEnabled
+  attr_accessor :localMarketBestOfferEnabled
+  attr_accessor :localMarketAutoAcceptEnabled
+  attr_accessor :localMarketAutoDeclineEnabled
+  attr_accessor :localMarketPaymentMethodCheckOutEnabled
+  attr_accessor :localMarketShippingMethodEnabled
+  attr_accessor :localMarketCounterOfferEnabled
+  attr_accessor :localMarketSellerContactDetailsEnabled
+  attr_accessor :classifiedAdPhoneCount
+  attr_accessor :classifiedAdContactByAddressEnabled
+  attr_accessor :classifiedAdStreetCount
+  attr_accessor :classifiedAdCompanyNameEnabled
+  attr_accessor :specialitySubscription
+  attr_accessor :regularSubscription
+  attr_accessor :premiumSubscription
+  attr_accessor :nonSubscription
+  attr_accessor :returnPolicyEnabled
+  attr_accessor :handlingTimeEnabled
+  attr_accessor :payPalRequiredForStoreOwner
+  attr_accessor :reviseQuantityAllowed
+  attr_accessor :revisePriceAllowed
+  attr_accessor :storeOwnerExtendedListingDurationsEnabled
+  attr_accessor :storeOwnerExtendedListingDurations
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(listingDurations = nil, shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil, localMarketSpecialitySubscription = nil, localMarketRegularSubscription = nil, localMarketPremiumSubscription = nil, localMarketNonSubscription = nil, expressEnabled = nil, expressPicturesRequired = nil, expressConditionRequired = nil, minimumReservePrice = nil, transactionConfirmationRequestEnabled = nil, sellerContactDetailsEnabled = nil, storeInventoryEnabled = nil, skypeMeTransactionalEnabled = nil, skypeMeNonTransactionalEnabled = nil, localListingDistancesRegular = nil, localListingDistancesSpecialty = nil, localListingDistancesNonSubscription = nil, classifiedAdPaymentMethodEnabled = nil, classifiedAdShippingMethodEnabled = nil, classifiedAdBestOfferEnabled = nil, classifiedAdCounterOfferEnabled = nil, classifiedAdAutoDeclineEnabled = nil, classifiedAdContactByPhoneEnabled = nil, classifiedAdContactByEmailEnabled = nil, safePaymentRequired = nil, classifiedAdPayPerLeadEnabled = nil, itemSpecificsEnabled = nil, paisaPayFullEscrowEnabled = nil, bestOfferAutoAcceptEnabled = nil, classifiedAdAutoAcceptEnabled = nil)
+  def initialize(listingDurations = nil, shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil, localMarketSpecialitySubscription = nil, localMarketRegularSubscription = nil, localMarketPremiumSubscription = nil, localMarketNonSubscription = nil, expressEnabled = nil, expressPicturesRequired = nil, expressConditionRequired = nil, minimumReservePrice = nil, transactionConfirmationRequestEnabled = nil, sellerContactDetailsEnabled = nil, storeInventoryEnabled = nil, skypeMeTransactionalEnabled = nil, skypeMeNonTransactionalEnabled = nil, localListingDistancesRegular = nil, localListingDistancesSpecialty = nil, localListingDistancesNonSubscription = nil, classifiedAdPaymentMethodEnabled = nil, classifiedAdShippingMethodEnabled = nil, classifiedAdBestOfferEnabled = nil, classifiedAdCounterOfferEnabled = nil, classifiedAdAutoDeclineEnabled = nil, classifiedAdContactByPhoneEnabled = nil, classifiedAdContactByEmailEnabled = nil, safePaymentRequired = nil, classifiedAdPayPerLeadEnabled = nil, itemSpecificsEnabled = nil, paisaPayFullEscrowEnabled = nil, bestOfferAutoAcceptEnabled = nil, classifiedAdAutoAcceptEnabled = nil, crossBorderTradeNorthAmericaEnabled = nil, crossBorderTradeGBEnabled = nil, crossBorderTradeAustraliaEnabled = nil, payPalBuyerProtectionEnabled = nil, buyerGuaranteeEnabled = nil, combinedFixedPriceTreatmentEnabled = nil, galleryFeaturedDurations = nil, iNEscrowWorkflowTimeline = nil, payPalRequired = nil, eBayMotorsProAdFormatEnabled = nil, eBayMotorsProContactByPhoneEnabled = nil, eBayMotorsProPhoneCount = nil, eBayMotorsProContactByAddressEnabled = nil, eBayMotorsProStreetCount = nil, eBayMotorsProCompanyNameEnabled = nil, eBayMotorsProContactByEmailEnabled = nil, eBayMotorsProBestOfferEnabled = nil, eBayMotorsProAutoAcceptEnabled = nil, eBayMotorsProAutoDeclineEnabled = nil, eBayMotorsProPaymentMethodCheckOutEnabled = nil, eBayMotorsProShippingMethodEnabled = nil, eBayMotorsProCounterOfferEnabled = nil, eBayMotorsProSellerContactDetailsEnabled = nil, localMarketAdFormatEnabled = nil, localMarketContactByPhoneEnabled = nil, localMarketPhoneCount = nil, localMarketContactByAddressEnabled = nil, localMarketStreetCount = nil, localMarketCompanyNameEnabled = nil, localMarketContactByEmailEnabled = nil, localMarketBestOfferEnabled = nil, localMarketAutoAcceptEnabled = nil, localMarketAutoDeclineEnabled = nil, localMarketPaymentMethodCheckOutEnabled = nil, localMarketShippingMethodEnabled = nil, localMarketCounterOfferEnabled = nil, localMarketSellerContactDetailsEnabled = nil, classifiedAdPhoneCount = nil, classifiedAdContactByAddressEnabled = nil, classifiedAdStreetCount = nil, classifiedAdCompanyNameEnabled = nil, specialitySubscription = nil, regularSubscription = nil, premiumSubscription = nil, nonSubscription = nil, returnPolicyEnabled = nil, handlingTimeEnabled = nil, payPalRequiredForStoreOwner = nil, reviseQuantityAllowed = nil, revisePriceAllowed = nil, storeOwnerExtendedListingDurationsEnabled = nil, storeOwnerExtendedListingDurations = nil)
     @listingDurations = listingDurations
     @shippingTermsRequired = shippingTermsRequired
     @bestOfferEnabled = bestOfferEnabled
@@ -19443,7 +20338,6 @@ class FeatureDefinitionsType
     @valuePackEnabled = valuePackEnabled
     @proPackPlusEnabled = proPackPlusEnabled
     @adFormatEnabled = adFormatEnabled
-    @digitalDeliveryEnabled = digitalDeliveryEnabled
     @bestOfferCounterEnabled = bestOfferCounterEnabled
     @bestOfferAutoDeclineEnabled = bestOfferAutoDeclineEnabled
     @localMarketSpecialitySubscription = localMarketSpecialitySubscription
@@ -19475,6 +20369,58 @@ class FeatureDefinitionsType
     @paisaPayFullEscrowEnabled = paisaPayFullEscrowEnabled
     @bestOfferAutoAcceptEnabled = bestOfferAutoAcceptEnabled
     @classifiedAdAutoAcceptEnabled = classifiedAdAutoAcceptEnabled
+    @crossBorderTradeNorthAmericaEnabled = crossBorderTradeNorthAmericaEnabled
+    @crossBorderTradeGBEnabled = crossBorderTradeGBEnabled
+    @crossBorderTradeAustraliaEnabled = crossBorderTradeAustraliaEnabled
+    @payPalBuyerProtectionEnabled = payPalBuyerProtectionEnabled
+    @buyerGuaranteeEnabled = buyerGuaranteeEnabled
+    @combinedFixedPriceTreatmentEnabled = combinedFixedPriceTreatmentEnabled
+    @galleryFeaturedDurations = galleryFeaturedDurations
+    @iNEscrowWorkflowTimeline = iNEscrowWorkflowTimeline
+    @payPalRequired = payPalRequired
+    @eBayMotorsProAdFormatEnabled = eBayMotorsProAdFormatEnabled
+    @eBayMotorsProContactByPhoneEnabled = eBayMotorsProContactByPhoneEnabled
+    @eBayMotorsProPhoneCount = eBayMotorsProPhoneCount
+    @eBayMotorsProContactByAddressEnabled = eBayMotorsProContactByAddressEnabled
+    @eBayMotorsProStreetCount = eBayMotorsProStreetCount
+    @eBayMotorsProCompanyNameEnabled = eBayMotorsProCompanyNameEnabled
+    @eBayMotorsProContactByEmailEnabled = eBayMotorsProContactByEmailEnabled
+    @eBayMotorsProBestOfferEnabled = eBayMotorsProBestOfferEnabled
+    @eBayMotorsProAutoAcceptEnabled = eBayMotorsProAutoAcceptEnabled
+    @eBayMotorsProAutoDeclineEnabled = eBayMotorsProAutoDeclineEnabled
+    @eBayMotorsProPaymentMethodCheckOutEnabled = eBayMotorsProPaymentMethodCheckOutEnabled
+    @eBayMotorsProShippingMethodEnabled = eBayMotorsProShippingMethodEnabled
+    @eBayMotorsProCounterOfferEnabled = eBayMotorsProCounterOfferEnabled
+    @eBayMotorsProSellerContactDetailsEnabled = eBayMotorsProSellerContactDetailsEnabled
+    @localMarketAdFormatEnabled = localMarketAdFormatEnabled
+    @localMarketContactByPhoneEnabled = localMarketContactByPhoneEnabled
+    @localMarketPhoneCount = localMarketPhoneCount
+    @localMarketContactByAddressEnabled = localMarketContactByAddressEnabled
+    @localMarketStreetCount = localMarketStreetCount
+    @localMarketCompanyNameEnabled = localMarketCompanyNameEnabled
+    @localMarketContactByEmailEnabled = localMarketContactByEmailEnabled
+    @localMarketBestOfferEnabled = localMarketBestOfferEnabled
+    @localMarketAutoAcceptEnabled = localMarketAutoAcceptEnabled
+    @localMarketAutoDeclineEnabled = localMarketAutoDeclineEnabled
+    @localMarketPaymentMethodCheckOutEnabled = localMarketPaymentMethodCheckOutEnabled
+    @localMarketShippingMethodEnabled = localMarketShippingMethodEnabled
+    @localMarketCounterOfferEnabled = localMarketCounterOfferEnabled
+    @localMarketSellerContactDetailsEnabled = localMarketSellerContactDetailsEnabled
+    @classifiedAdPhoneCount = classifiedAdPhoneCount
+    @classifiedAdContactByAddressEnabled = classifiedAdContactByAddressEnabled
+    @classifiedAdStreetCount = classifiedAdStreetCount
+    @classifiedAdCompanyNameEnabled = classifiedAdCompanyNameEnabled
+    @specialitySubscription = specialitySubscription
+    @regularSubscription = regularSubscription
+    @premiumSubscription = premiumSubscription
+    @nonSubscription = nonSubscription
+    @returnPolicyEnabled = returnPolicyEnabled
+    @handlingTimeEnabled = handlingTimeEnabled
+    @payPalRequiredForStoreOwner = payPalRequiredForStoreOwner
+    @reviseQuantityAllowed = reviseQuantityAllowed
+    @revisePriceAllowed = revisePriceAllowed
+    @storeOwnerExtendedListingDurationsEnabled = storeOwnerExtendedListingDurationsEnabled
+    @storeOwnerExtendedListingDurations = storeOwnerExtendedListingDurations
     @__xmlele_any = nil
   end
 end
@@ -19496,6 +20442,10 @@ class FeeType
     @fee = fee
     @__xmlele_any = nil
   end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}FeedbackCommentArrayType
+class FeedbackCommentArrayType < ::Array
 end
 
 # {urn:ebay:apis:eBLBaseComponents}FeedbackDetailArrayType
@@ -19643,8 +20593,10 @@ end
 #   neutralCommentCountFromSuspendedUsers - SOAP::SOAPInt
 #   uniqueNegativeFeedbackCount - SOAP::SOAPInt
 #   uniquePositiveFeedbackCount - SOAP::SOAPInt
-#   sellerAverageRatingDetailArray - AverageRatingDetailArrayType
 #   uniqueNeutralFeedbackCount - SOAP::SOAPInt
+#   sellerRatingSummaryArray - SellerRatingSummaryArrayType
+#   sellerRoleMetrics - SellerRoleMetricsType
+#   buyerRoleMetrics - BuyerRoleMetricsType
 class FeedbackSummaryType
   attr_accessor :bidRetractionFeedbackPeriodArray
   attr_accessor :negativeFeedbackPeriodArray
@@ -19654,15 +20606,17 @@ class FeedbackSummaryType
   attr_accessor :neutralCommentCountFromSuspendedUsers
   attr_accessor :uniqueNegativeFeedbackCount
   attr_accessor :uniquePositiveFeedbackCount
-  attr_accessor :sellerAverageRatingDetailArray
   attr_accessor :uniqueNeutralFeedbackCount
+  attr_accessor :sellerRatingSummaryArray
+  attr_accessor :sellerRoleMetrics
+  attr_accessor :buyerRoleMetrics
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(bidRetractionFeedbackPeriodArray = nil, negativeFeedbackPeriodArray = nil, neutralFeedbackPeriodArray = nil, positiveFeedbackPeriodArray = nil, totalFeedbackPeriodArray = nil, neutralCommentCountFromSuspendedUsers = nil, uniqueNegativeFeedbackCount = nil, uniquePositiveFeedbackCount = nil, sellerAverageRatingDetailArray = nil, uniqueNeutralFeedbackCount = nil)
+  def initialize(bidRetractionFeedbackPeriodArray = nil, negativeFeedbackPeriodArray = nil, neutralFeedbackPeriodArray = nil, positiveFeedbackPeriodArray = nil, totalFeedbackPeriodArray = nil, neutralCommentCountFromSuspendedUsers = nil, uniqueNegativeFeedbackCount = nil, uniquePositiveFeedbackCount = nil, uniqueNeutralFeedbackCount = nil, sellerRatingSummaryArray = nil, sellerRoleMetrics = nil, buyerRoleMetrics = nil)
     @bidRetractionFeedbackPeriodArray = bidRetractionFeedbackPeriodArray
     @negativeFeedbackPeriodArray = negativeFeedbackPeriodArray
     @neutralFeedbackPeriodArray = neutralFeedbackPeriodArray
@@ -19671,8 +20625,10 @@ class FeedbackSummaryType
     @neutralCommentCountFromSuspendedUsers = neutralCommentCountFromSuspendedUsers
     @uniqueNegativeFeedbackCount = uniqueNegativeFeedbackCount
     @uniquePositiveFeedbackCount = uniquePositiveFeedbackCount
-    @sellerAverageRatingDetailArray = sellerAverageRatingDetailArray
     @uniqueNeutralFeedbackCount = uniqueNeutralFeedbackCount
+    @sellerRatingSummaryArray = sellerRatingSummaryArray
+    @sellerRoleMetrics = sellerRoleMetrics
+    @buyerRoleMetrics = buyerRoleMetrics
     @__xmlele_any = nil
   end
 end
@@ -19831,6 +20787,19 @@ class GroupType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}HandlingTimeEnabledDefinitionType
+class HandlingTimeEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}HistogramEntryType
 #   count - SOAP::SOAPInt
 #   xmlattr_id - SOAP::SOAPString
@@ -19875,6 +20844,19 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}HomePageFeaturedEnabledDefinitionType
 class HomePageFeaturedEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}INEscrowWorkflowTimelineDefinitionType
+class INEscrowWorkflowTimelineDefinitionType
   attr_reader :__xmlele_any
 
   def set_any(elements)
@@ -20211,7 +21193,6 @@ end
 #   watchCount - SOAP::SOAPLong
 #   hitCount - SOAP::SOAPLong
 #   disableBuyerRequirements - SOAP::SOAPBoolean
-#   buyerRequirements - BuyerRequirementsType
 #   bestOfferDetails - BestOfferDetailsType
 #   liveAuctionDetails - LiveAuctionDetailsType
 #   locationDefaulted - SOAP::SOAPBoolean
@@ -20232,7 +21213,6 @@ end
 #   externalProductID - ExternalProductIDType
 #   sellerInventoryID - SOAP::SOAPString
 #   pictureDetails - PictureDetailsType
-#   digitalDeliveryDetails - DigitalDeliveryDetailsType
 #   dispatchTimeMax - SOAP::SOAPInt
 #   skypeEnabled - SOAP::SOAPBoolean
 #   skypeID - SOAP::SOAPString
@@ -20240,9 +21220,7 @@ end
 #   bestOfferEnabled - SOAP::SOAPBoolean
 #   localListing - SOAP::SOAPBoolean
 #   thirdPartyCheckoutIntegration - SOAP::SOAPBoolean
-#   expressOptOut - SOAP::SOAPBoolean
 #   listingCheckoutRedirectPreference - ListingCheckoutRedirectPreferenceType
-#   expressDetails - ExpressDetailsType
 #   sellerContactDetails - AddressType
 #   totalQuestionCount - SOAP::SOAPLong
 #   proxyItem - SOAP::SOAPBoolean
@@ -20259,6 +21237,11 @@ end
 #   updateSellerInfo - SOAP::SOAPBoolean
 #   updateReturnPolicy - SOAP::SOAPBoolean
 #   itemPolicyViolation - ItemPolicyViolationType
+#   crossBorderTrade - SOAP::SOAPString
+#   businessSellerDetails - BusinessSellerDetailsType
+#   buyerGuaranteePrice - AmountType
+#   buyerRequirementDetails - BuyerRequirementDetailsType
+#   returnPolicy - ReturnPolicyType
 class ItemType
   attr_accessor :applicationData
   attr_accessor :attributeSetArray
@@ -20323,7 +21306,6 @@ class ItemType
   attr_accessor :watchCount
   attr_accessor :hitCount
   attr_accessor :disableBuyerRequirements
-  attr_accessor :buyerRequirements
   attr_accessor :bestOfferDetails
   attr_accessor :liveAuctionDetails
   attr_accessor :locationDefaulted
@@ -20344,7 +21326,6 @@ class ItemType
   attr_accessor :externalProductID
   attr_accessor :sellerInventoryID
   attr_accessor :pictureDetails
-  attr_accessor :digitalDeliveryDetails
   attr_accessor :dispatchTimeMax
   attr_accessor :skypeEnabled
   attr_accessor :skypeID
@@ -20352,9 +21333,7 @@ class ItemType
   attr_accessor :bestOfferEnabled
   attr_accessor :localListing
   attr_accessor :thirdPartyCheckoutIntegration
-  attr_accessor :expressOptOut
   attr_accessor :listingCheckoutRedirectPreference
-  attr_accessor :expressDetails
   attr_accessor :sellerContactDetails
   attr_accessor :totalQuestionCount
   attr_accessor :proxyItem
@@ -20371,13 +21350,18 @@ class ItemType
   attr_accessor :updateSellerInfo
   attr_accessor :updateReturnPolicy
   attr_accessor :itemPolicyViolation
+  attr_accessor :crossBorderTrade
+  attr_accessor :businessSellerDetails
+  attr_accessor :buyerGuaranteePrice
+  attr_accessor :buyerRequirementDetails
+  attr_accessor :returnPolicy
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(applicationData = nil, attributeSetArray = nil, attributeArray = nil, lookupAttributeArray = nil, applyShippingDiscount = nil, autoPay = nil, paymentDetails = nil, biddingDetails = nil, motorsGermanySearchable = nil, buyerProtection = nil, buyItNowPrice = nil, categoryMappingAllowed = nil, charity = nil, country = nil, crossPromotion = nil, currency = nil, description = nil, descriptionReviseMode = nil, distance = nil, giftIcon = nil, giftServices = [], hitCounter = nil, itemID = nil, listingDetails = nil, listingDesigner = nil, listingDuration = nil, listingEnhancement = [], listingType = nil, location = nil, lotSize = nil, nowAndNew = nil, partnerCode = nil, partnerName = nil, paymentMethods = [], payPalEmailAddress = nil, primaryCategory = nil, privateListing = nil, productListingDetails = nil, quantity = nil, privateNotes = nil, regionID = nil, relistLink = nil, reservePrice = nil, reviseStatus = nil, scheduleTime = nil, secondaryCategory = nil, freeAddedCategory = nil, seller = nil, sellingStatus = nil, shippingDetails = nil, shipToLocations = [], site = nil, startPrice = nil, storefront = nil, subTitle = nil, timeLeft = nil, title = nil, uUID = nil, vATDetails = nil, sellerVacationNote = nil, watchCount = nil, hitCount = nil, disableBuyerRequirements = nil, buyerRequirements = nil, bestOfferDetails = nil, liveAuctionDetails = nil, locationDefaulted = nil, thirdPartyCheckout = nil, useTaxTable = nil, getItFast = nil, buyerResponsibleForShipping = nil, limitedWarrantyEligible = nil, eBayNotes = nil, questionCount = nil, relisted = nil, quantityAvailable = nil, sKU = nil, categoryBasedAttributesPrefill = nil, searchDetails = nil, postalCode = nil, shippingTermsInDescription = nil, externalProductID = nil, sellerInventoryID = nil, pictureDetails = nil, digitalDeliveryDetails = nil, dispatchTimeMax = nil, skypeEnabled = nil, skypeID = nil, skypeContactOption = [], bestOfferEnabled = nil, localListing = nil, thirdPartyCheckoutIntegration = nil, expressOptOut = nil, listingCheckoutRedirectPreference = nil, expressDetails = nil, sellerContactDetails = nil, totalQuestionCount = nil, proxyItem = nil, extendedSellerContactDetails = nil, leadCount = nil, newLeadCount = nil, itemSpecifics = nil, groupCategoryID = nil, classifiedAdPayPerLeadFee = nil, bidGroupItem = nil, applyBuyerProtection = nil, listingSubtype2 = nil, mechanicalCheckAccepted = nil, updateSellerInfo = nil, updateReturnPolicy = nil, itemPolicyViolation = nil)
+  def initialize(applicationData = nil, attributeSetArray = nil, attributeArray = nil, lookupAttributeArray = nil, applyShippingDiscount = nil, autoPay = nil, paymentDetails = nil, biddingDetails = nil, motorsGermanySearchable = nil, buyerProtection = nil, buyItNowPrice = nil, categoryMappingAllowed = nil, charity = nil, country = nil, crossPromotion = nil, currency = nil, description = nil, descriptionReviseMode = nil, distance = nil, giftIcon = nil, giftServices = [], hitCounter = nil, itemID = nil, listingDetails = nil, listingDesigner = nil, listingDuration = nil, listingEnhancement = [], listingType = nil, location = nil, lotSize = nil, nowAndNew = nil, partnerCode = nil, partnerName = nil, paymentMethods = [], payPalEmailAddress = nil, primaryCategory = nil, privateListing = nil, productListingDetails = nil, quantity = nil, privateNotes = nil, regionID = nil, relistLink = nil, reservePrice = nil, reviseStatus = nil, scheduleTime = nil, secondaryCategory = nil, freeAddedCategory = nil, seller = nil, sellingStatus = nil, shippingDetails = nil, shipToLocations = [], site = nil, startPrice = nil, storefront = nil, subTitle = nil, timeLeft = nil, title = nil, uUID = nil, vATDetails = nil, sellerVacationNote = nil, watchCount = nil, hitCount = nil, disableBuyerRequirements = nil, bestOfferDetails = nil, liveAuctionDetails = nil, locationDefaulted = nil, thirdPartyCheckout = nil, useTaxTable = nil, getItFast = nil, buyerResponsibleForShipping = nil, limitedWarrantyEligible = nil, eBayNotes = nil, questionCount = nil, relisted = nil, quantityAvailable = nil, sKU = nil, categoryBasedAttributesPrefill = nil, searchDetails = nil, postalCode = nil, shippingTermsInDescription = nil, externalProductID = nil, sellerInventoryID = nil, pictureDetails = nil, dispatchTimeMax = nil, skypeEnabled = nil, skypeID = nil, skypeContactOption = [], bestOfferEnabled = nil, localListing = nil, thirdPartyCheckoutIntegration = nil, listingCheckoutRedirectPreference = nil, sellerContactDetails = nil, totalQuestionCount = nil, proxyItem = nil, extendedSellerContactDetails = nil, leadCount = nil, newLeadCount = nil, itemSpecifics = nil, groupCategoryID = nil, classifiedAdPayPerLeadFee = nil, bidGroupItem = nil, applyBuyerProtection = nil, listingSubtype2 = nil, mechanicalCheckAccepted = nil, updateSellerInfo = nil, updateReturnPolicy = nil, itemPolicyViolation = nil, crossBorderTrade = [], businessSellerDetails = nil, buyerGuaranteePrice = nil, buyerRequirementDetails = nil, returnPolicy = nil)
     @applicationData = applicationData
     @attributeSetArray = attributeSetArray
     @attributeArray = attributeArray
@@ -20441,7 +21425,6 @@ class ItemType
     @watchCount = watchCount
     @hitCount = hitCount
     @disableBuyerRequirements = disableBuyerRequirements
-    @buyerRequirements = buyerRequirements
     @bestOfferDetails = bestOfferDetails
     @liveAuctionDetails = liveAuctionDetails
     @locationDefaulted = locationDefaulted
@@ -20462,7 +21445,6 @@ class ItemType
     @externalProductID = externalProductID
     @sellerInventoryID = sellerInventoryID
     @pictureDetails = pictureDetails
-    @digitalDeliveryDetails = digitalDeliveryDetails
     @dispatchTimeMax = dispatchTimeMax
     @skypeEnabled = skypeEnabled
     @skypeID = skypeID
@@ -20470,9 +21452,7 @@ class ItemType
     @bestOfferEnabled = bestOfferEnabled
     @localListing = localListing
     @thirdPartyCheckoutIntegration = thirdPartyCheckoutIntegration
-    @expressOptOut = expressOptOut
     @listingCheckoutRedirectPreference = listingCheckoutRedirectPreference
-    @expressDetails = expressDetails
     @sellerContactDetails = sellerContactDetails
     @totalQuestionCount = totalQuestionCount
     @proxyItem = proxyItem
@@ -20489,6 +21469,11 @@ class ItemType
     @updateSellerInfo = updateSellerInfo
     @updateReturnPolicy = updateReturnPolicy
     @itemPolicyViolation = itemPolicyViolation
+    @crossBorderTrade = crossBorderTrade
+    @businessSellerDetails = businessSellerDetails
+    @buyerGuaranteePrice = buyerGuaranteePrice
+    @buyerRequirementDetails = buyerRequirementDetails
+    @returnPolicy = returnPolicy
     @__xmlele_any = nil
   end
 end
@@ -20602,8 +21587,6 @@ end
 #   minimumBestOfferPrice - AmountType
 #   minimumBestOfferMessage - SOAP::SOAPString
 #   localListingDistance - SOAP::SOAPString
-#   expressListing - SOAP::SOAPBoolean
-#   expressItemRequirements - ExpressItemRequirementsType
 #   tCROriginalItemID - (any)
 #   viewItemURLForNaturalSearch - SOAP::SOAPAnyURI
 #   payPerLeadEnabled - SOAP::SOAPBoolean
@@ -20628,8 +21611,6 @@ class ListingDetailsType
   attr_accessor :minimumBestOfferPrice
   attr_accessor :minimumBestOfferMessage
   attr_accessor :localListingDistance
-  attr_accessor :expressListing
-  attr_accessor :expressItemRequirements
   attr_accessor :tCROriginalItemID
   attr_accessor :viewItemURLForNaturalSearch
   attr_accessor :payPerLeadEnabled
@@ -20640,7 +21621,7 @@ class ListingDetailsType
     @__xmlele_any = elements
   end
 
-  def initialize(adult = nil, bindingAuction = nil, checkoutEnabled = nil, convertedBuyItNowPrice = nil, convertedStartPrice = nil, convertedReservePrice = nil, hasReservePrice = nil, relistedItemID = nil, secondChanceOriginalItemID = nil, startTime = nil, endTime = nil, viewItemURL = nil, hasUnansweredQuestions = nil, hasPublicMessages = nil, buyItNowAvailable = nil, sellerBusinessType = nil, minimumBestOfferPrice = nil, minimumBestOfferMessage = nil, localListingDistance = nil, expressListing = nil, expressItemRequirements = nil, tCROriginalItemID = nil, viewItemURLForNaturalSearch = nil, payPerLeadEnabled = nil, bestOfferAutoAcceptPrice = nil)
+  def initialize(adult = nil, bindingAuction = nil, checkoutEnabled = nil, convertedBuyItNowPrice = nil, convertedStartPrice = nil, convertedReservePrice = nil, hasReservePrice = nil, relistedItemID = nil, secondChanceOriginalItemID = nil, startTime = nil, endTime = nil, viewItemURL = nil, hasUnansweredQuestions = nil, hasPublicMessages = nil, buyItNowAvailable = nil, sellerBusinessType = nil, minimumBestOfferPrice = nil, minimumBestOfferMessage = nil, localListingDistance = nil, tCROriginalItemID = nil, viewItemURLForNaturalSearch = nil, payPerLeadEnabled = nil, bestOfferAutoAcceptPrice = nil)
     @adult = adult
     @bindingAuction = bindingAuction
     @checkoutEnabled = checkoutEnabled
@@ -20660,8 +21641,6 @@ class ListingDetailsType
     @minimumBestOfferPrice = minimumBestOfferPrice
     @minimumBestOfferMessage = minimumBestOfferMessage
     @localListingDistance = localListingDistance
-    @expressListing = expressListing
-    @expressItemRequirements = expressItemRequirements
     @tCROriginalItemID = tCROriginalItemID
     @viewItemURLForNaturalSearch = viewItemURLForNaturalSearch
     @payPerLeadEnabled = payPerLeadEnabled
@@ -20748,6 +21727,35 @@ class ListingDurationReferenceType < ::String
   def initialize(*arg)
     super
     @__xmlattr = {}
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ListingEnhancementDurationDefinitionType
+class ListingEnhancementDurationDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ListingEnhancementDurationReferenceType
+#   duration - SOAP::SOAPToken
+class ListingEnhancementDurationReferenceType
+  attr_accessor :duration
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(duration = [])
+    @duration = duration
+    @__xmlele_any = nil
   end
 end
 
@@ -20965,8 +21973,151 @@ class LocalListingDistancesSpecialtyDefinitionType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketAdFormatEnabledDefinitionType
+class LocalMarketAdFormatEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketAutoAcceptEnabledDefinitionType
+class LocalMarketAutoAcceptEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketAutoDeclineEnabledDefinitionType
+class LocalMarketAutoDeclineEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketBestOfferEnabledDefinitionType
+class LocalMarketBestOfferEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketCompanyNameEnabledDefinitionType
+class LocalMarketCompanyNameEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketContactByAddressEnabledDefinitionType
+class LocalMarketContactByAddressEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketContactByEmailEnabledDefinitionType
+class LocalMarketContactByEmailEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketContactByPhoneEnabledDefinitionType
+class LocalMarketContactByPhoneEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketCounterOfferEnabledDefinitionType
+class LocalMarketCounterOfferEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}LocalMarketNonSubscriptionDefinitionType
 class LocalMarketNonSubscriptionDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketPaymentMethodCheckOutEnabledDefinitionType
+class LocalMarketPaymentMethodCheckOutEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketPhoneCountDefinitionType
+class LocalMarketPhoneCountDefinitionType
   attr_reader :__xmlele_any
 
   def set_any(elements)
@@ -21004,8 +22155,47 @@ class LocalMarketRegularSubscriptionDefinitionType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketSellerContactDetailsEnabledDefinitionType
+class LocalMarketSellerContactDetailsEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketShippingMethodEnabledDefinitionType
+class LocalMarketShippingMethodEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}LocalMarketSpecialitySubscriptionDefinitionType
 class LocalMarketSpecialitySubscriptionDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}LocalMarketStreetCountDefinitionType
+class LocalMarketStreetCountDefinitionType
   attr_reader :__xmlele_any
 
   def set_any(elements)
@@ -21085,6 +22275,25 @@ end
 class MarkUpMarkDownHistoryType < ::Array
 end
 
+# {urn:ebay:apis:eBLBaseComponents}MaximumBuyerPolicyViolationsType
+#   count - SOAP::SOAPInt
+#   period - PeriodCodeType
+class MaximumBuyerPolicyViolationsType
+  attr_accessor :count
+  attr_accessor :period
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(count = nil, period = nil)
+    @count = count
+    @period = period
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}MaximumItemRequirementsType
 #   maximumItemCount - SOAP::SOAPInt
 #   minimumFeedbackScore - SOAP::SOAPInt
@@ -21095,6 +22304,25 @@ class MaximumItemRequirementsType
   def initialize(maximumItemCount = nil, minimumFeedbackScore = nil)
     @maximumItemCount = maximumItemCount
     @minimumFeedbackScore = minimumFeedbackScore
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}MaximumUnpaidItemStrikesInfoType
+#   count - SOAP::SOAPInt
+#   period - PeriodCodeType
+class MaximumUnpaidItemStrikesInfoType
+  attr_accessor :count
+  attr_accessor :period
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(count = nil, period = nil)
+    @count = count
+    @period = period
+    @__xmlele_any = nil
   end
 end
 
@@ -21292,6 +22520,10 @@ class MyMessagesAlertType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}MyMessagesExternalMessageIDArrayType
+class MyMessagesExternalMessageIDArrayType < ::Array
+end
+
 # {urn:ebay:apis:eBLBaseComponents}MyMessagesFolderSummaryType
 #   folderID - SOAP::SOAPLong
 #   folderName - SOAP::SOAPString
@@ -21387,6 +22619,10 @@ end
 #   responseDetails - MyMessagesResponseDetailsType
 #   forwardDetails - MyMessagesForwardDetailsType
 #   folder - MyMessagesFolderType
+#   content - SOAP::SOAPString
+#   messageType - MessageTypeCodeType
+#   listingStatus - ListingStatusCodeType
+#   questionType - QuestionTypeCodeType
 class MyMessagesMessageType
   attr_accessor :sender
   attr_accessor :recipientUserID
@@ -21405,13 +22641,17 @@ class MyMessagesMessageType
   attr_accessor :responseDetails
   attr_accessor :forwardDetails
   attr_accessor :folder
+  attr_accessor :content
+  attr_accessor :messageType
+  attr_accessor :listingStatus
+  attr_accessor :questionType
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(sender = nil, recipientUserID = nil, sendToName = nil, subject = nil, messageID = nil, externalMessageID = nil, contentType = nil, text = nil, flagged = nil, read = nil, creationDate = nil, receiveDate = nil, expirationDate = nil, itemID = nil, responseDetails = nil, forwardDetails = nil, folder = nil)
+  def initialize(sender = nil, recipientUserID = nil, sendToName = nil, subject = nil, messageID = nil, externalMessageID = nil, contentType = nil, text = nil, flagged = nil, read = nil, creationDate = nil, receiveDate = nil, expirationDate = nil, itemID = nil, responseDetails = nil, forwardDetails = nil, folder = nil, content = nil, messageType = nil, listingStatus = nil, questionType = nil)
     @sender = sender
     @recipientUserID = recipientUserID
     @sendToName = sendToName
@@ -21429,6 +22669,10 @@ class MyMessagesMessageType
     @responseDetails = responseDetails
     @forwardDetails = forwardDetails
     @folder = folder
+    @content = content
+    @messageType = messageType
+    @listingStatus = listingStatus
+    @questionType = questionType
     @__xmlele_any = nil
   end
 end
@@ -21505,18 +22749,93 @@ end
 # {urn:ebay:apis:eBLBaseComponents}MyeBayFavoriteSearchType
 #   searchName - SOAP::SOAPString
 #   searchQuery - SOAP::SOAPString
+#   queryKeywords - SOAP::SOAPString
+#   categoryID - SOAP::SOAPString
+#   itemSort - SimpleItemSortCodeType
+#   sortOrder - SortOrderCodeType
+#   endTimeFrom - SOAP::SOAPDateTime
+#   endTimeTo - SOAP::SOAPDateTime
+#   maxDistance - SOAP::SOAPInt
+#   postalCode - SOAP::SOAPString
+#   itemType - ItemTypeCodeType
+#   priceMax - AmountType
+#   priceMin - AmountType
+#   currency - CurrencyCodeType
+#   bidCountMax - SOAP::SOAPInt
+#   bidCountMin - SOAP::SOAPInt
+#   searchFlag - SearchFlagCodeType
+#   paymentMethod - PaymentMethodSearchCodeType
+#   preferredLocation - PreferredLocationCodeType
+#   sellerID - SOAP::SOAPString
+#   sellerIDExclude - SOAP::SOAPString
+#   itemsAvailableTo - CountryCodeType
+#   itemsLocatedIn - CountryCodeType
+#   sellerBusinessType - SellerBusinessCodeType
+#   condition - ItemConditionCodeType
+#   quantity - SOAP::SOAPInt
+#   quantityOperator - QuantityOperatorCodeType
 class MyeBayFavoriteSearchType
   attr_accessor :searchName
   attr_accessor :searchQuery
+  attr_accessor :queryKeywords
+  attr_accessor :categoryID
+  attr_accessor :itemSort
+  attr_accessor :sortOrder
+  attr_accessor :endTimeFrom
+  attr_accessor :endTimeTo
+  attr_accessor :maxDistance
+  attr_accessor :postalCode
+  attr_accessor :itemType
+  attr_accessor :priceMax
+  attr_accessor :priceMin
+  attr_accessor :currency
+  attr_accessor :bidCountMax
+  attr_accessor :bidCountMin
+  attr_accessor :searchFlag
+  attr_accessor :paymentMethod
+  attr_accessor :preferredLocation
+  attr_accessor :sellerID
+  attr_accessor :sellerIDExclude
+  attr_accessor :itemsAvailableTo
+  attr_accessor :itemsLocatedIn
+  attr_accessor :sellerBusinessType
+  attr_accessor :condition
+  attr_accessor :quantity
+  attr_accessor :quantityOperator
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(searchName = nil, searchQuery = nil)
+  def initialize(searchName = nil, searchQuery = nil, queryKeywords = nil, categoryID = nil, itemSort = nil, sortOrder = nil, endTimeFrom = nil, endTimeTo = nil, maxDistance = nil, postalCode = nil, itemType = nil, priceMax = nil, priceMin = nil, currency = nil, bidCountMax = nil, bidCountMin = nil, searchFlag = [], paymentMethod = nil, preferredLocation = nil, sellerID = [], sellerIDExclude = [], itemsAvailableTo = nil, itemsLocatedIn = nil, sellerBusinessType = nil, condition = nil, quantity = nil, quantityOperator = nil)
     @searchName = searchName
     @searchQuery = searchQuery
+    @queryKeywords = queryKeywords
+    @categoryID = categoryID
+    @itemSort = itemSort
+    @sortOrder = sortOrder
+    @endTimeFrom = endTimeFrom
+    @endTimeTo = endTimeTo
+    @maxDistance = maxDistance
+    @postalCode = postalCode
+    @itemType = itemType
+    @priceMax = priceMax
+    @priceMin = priceMin
+    @currency = currency
+    @bidCountMax = bidCountMax
+    @bidCountMin = bidCountMin
+    @searchFlag = searchFlag
+    @paymentMethod = paymentMethod
+    @preferredLocation = preferredLocation
+    @sellerID = sellerID
+    @sellerIDExclude = sellerIDExclude
+    @itemsAvailableTo = itemsAvailableTo
+    @itemsLocatedIn = itemsLocatedIn
+    @sellerBusinessType = sellerBusinessType
+    @condition = condition
+    @quantity = quantity
+    @quantityOperator = quantityOperator
     @__xmlele_any = nil
   end
 end
@@ -21672,6 +22991,19 @@ class NameValueListType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}NonSubscriptionDefinitionType
+class NonSubscriptionDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}NotificationDetailsArrayType
 class NotificationDetailsArrayType < ::Array
 end
@@ -21686,6 +23018,7 @@ end
 #   nextRetryTime - SOAP::SOAPDateTime
 #   deliveryTime - SOAP::SOAPDateTime
 #   errorMessage - SOAP::SOAPString
+#   deliveryURLName - SOAP::SOAPString
 class NotificationDetailsType
   attr_accessor :deliveryURL
   attr_accessor :referenceID
@@ -21696,13 +23029,14 @@ class NotificationDetailsType
   attr_accessor :nextRetryTime
   attr_accessor :deliveryTime
   attr_accessor :errorMessage
+  attr_accessor :deliveryURLName
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(deliveryURL = nil, referenceID = nil, expirationTime = nil, type = nil, retries = nil, deliveryStatus = nil, nextRetryTime = nil, deliveryTime = nil, errorMessage = nil)
+  def initialize(deliveryURL = nil, referenceID = nil, expirationTime = nil, type = nil, retries = nil, deliveryStatus = nil, nextRetryTime = nil, deliveryTime = nil, errorMessage = nil, deliveryURLName = nil)
     @deliveryURL = deliveryURL
     @referenceID = referenceID
     @expirationTime = expirationTime
@@ -21712,6 +23046,7 @@ class NotificationDetailsType
     @nextRetryTime = nextRetryTime
     @deliveryTime = deliveryTime
     @errorMessage = errorMessage
+    @deliveryURLName = deliveryURLName
     @__xmlele_any = nil
   end
 end
@@ -21792,18 +23127,21 @@ end
 # {urn:ebay:apis:eBLBaseComponents}NotificationUserDataType
 #   sMSSubscription - SMSSubscriptionType
 #   summarySchedule - SummaryEventScheduleType
+#   externalUserData - SOAP::SOAPString
 class NotificationUserDataType
   attr_accessor :sMSSubscription
   attr_accessor :summarySchedule
+  attr_accessor :externalUserData
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(sMSSubscription = nil, summarySchedule = [])
+  def initialize(sMSSubscription = nil, summarySchedule = [], externalUserData = nil)
     @sMSSubscription = sMSSubscription
     @summarySchedule = summarySchedule
+    @externalUserData = externalUserData
     @__xmlele_any = nil
   end
 end
@@ -21921,7 +23259,6 @@ end
 #   subtotal - AmountType
 #   total - AmountType
 #   externalTransaction - ExternalTransactionType
-#   digitalDelivery - SOAP::SOAPBoolean
 #   transactionArray - TransactionArrayType
 #   buyerUserID - (any)
 #   paidTime - SOAP::SOAPDateTime
@@ -21943,7 +23280,6 @@ class OrderType
   attr_accessor :subtotal
   attr_accessor :total
   attr_accessor :externalTransaction
-  attr_accessor :digitalDelivery
   attr_accessor :transactionArray
   attr_accessor :buyerUserID
   attr_accessor :paidTime
@@ -21954,7 +23290,7 @@ class OrderType
     @__xmlele_any = elements
   end
 
-  def initialize(orderID = nil, orderStatus = nil, adjustmentAmount = nil, amountPaid = nil, amountSaved = nil, checkoutStatus = nil, shippingDetails = nil, creatingUserRole = nil, createdTime = nil, paymentMethods = [], sellerEmail = nil, shippingAddress = nil, shippingServiceSelected = nil, subtotal = nil, total = nil, externalTransaction = [], digitalDelivery = nil, transactionArray = nil, buyerUserID = nil, paidTime = nil, shippedTime = nil)
+  def initialize(orderID = nil, orderStatus = nil, adjustmentAmount = nil, amountPaid = nil, amountSaved = nil, checkoutStatus = nil, shippingDetails = nil, creatingUserRole = nil, createdTime = nil, paymentMethods = [], sellerEmail = nil, shippingAddress = nil, shippingServiceSelected = nil, subtotal = nil, total = nil, externalTransaction = [], transactionArray = nil, buyerUserID = nil, paidTime = nil, shippedTime = nil)
     @orderID = orderID
     @orderStatus = orderStatus
     @adjustmentAmount = adjustmentAmount
@@ -21971,7 +23307,6 @@ class OrderType
     @subtotal = subtotal
     @total = total
     @externalTransaction = externalTransaction
-    @digitalDelivery = digitalDelivery
     @transactionArray = transactionArray
     @buyerUserID = buyerUserID
     @paidTime = paidTime
@@ -22063,6 +23398,45 @@ class PaisaPayFullEscrowEnabledDefinitionType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}PayPalBuyerProtectionEnabledDefinitionType
+class PayPalBuyerProtectionEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}PayPalRequiredDefinitionType
+class PayPalRequiredDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}PayPalRequiredForStoreOwnerDefinitionType
+class PayPalRequiredForStoreOwnerDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}PaymentDetailsType
 #   hoursToDeposit - SOAP::SOAPInt
 #   daysToFullPayment - SOAP::SOAPInt
@@ -22107,24 +23481,27 @@ end
 #   photoDisplay - PhotoDisplayCodeType
 #   pictureURL - SOAP::SOAPAnyURI
 #   pictureSource - PictureSourceCodeType
+#   galleryDuration - SOAP::SOAPToken
 class PictureDetailsType
   attr_accessor :galleryType
   attr_accessor :galleryURL
   attr_accessor :photoDisplay
   attr_accessor :pictureURL
   attr_accessor :pictureSource
+  attr_accessor :galleryDuration
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(galleryType = nil, galleryURL = nil, photoDisplay = nil, pictureURL = [], pictureSource = nil)
+  def initialize(galleryType = nil, galleryURL = nil, photoDisplay = nil, pictureURL = [], pictureSource = nil, galleryDuration = nil)
     @galleryType = galleryType
     @galleryURL = galleryURL
     @photoDisplay = photoDisplay
     @pictureURL = pictureURL
     @pictureSource = pictureSource
+    @galleryDuration = galleryDuration
     @__xmlele_any = nil
   end
 end
@@ -22282,6 +23659,57 @@ class PictureSetMemberType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}PolicyComplianceDashboardType
+#   status - PolicyComplianceStatusCodeType
+#   alert - SellerDashboardAlertType
+class PolicyComplianceDashboardType
+  attr_accessor :status
+  attr_accessor :alert
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(status = nil, alert = [])
+    @status = status
+    @alert = alert
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}PowerSellerDashboardType
+#   level - SellerLevelCodeType
+#   alert - SellerDashboardAlertType
+class PowerSellerDashboardType
+  attr_accessor :level
+  attr_accessor :alert
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(level = nil, alert = [])
+    @level = level
+    @alert = alert
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}PremiumSubscriptionDefinitionType
+class PremiumSubscriptionDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}PriceRangeFilterType
 #   maxPrice - AmountType
 #   minPrice - AmountType
@@ -22378,10 +23806,6 @@ class ProStoresDetailsType
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}ProductArrayType
-class ProductArrayType < ::Array
-end
-
 # {urn:ebay:apis:eBLBaseComponents}ProductFamilyType
 #   parentProduct - ProductType
 #   familyMembers - ProductType
@@ -22440,6 +23864,7 @@ end
 #   averageStartPrice - AmountType
 #   averageSoldPrice - AmountType
 #   title - SOAP::SOAPString
+#   productState - ProductStateCodeType
 #   xmlattr_productInfoID - SOAP::SOAPString
 class ProductInfoType
   AttrProductInfoID = XSD::QName.new(nil, "productInfoID")
@@ -22447,6 +23872,7 @@ class ProductInfoType
   attr_accessor :averageStartPrice
   attr_accessor :averageSoldPrice
   attr_accessor :title
+  attr_accessor :productState
 
   def __xmlattr
     @__xmlattr ||= {}
@@ -22460,10 +23886,11 @@ class ProductInfoType
     __xmlattr[AttrProductInfoID] = value
   end
 
-  def initialize(averageStartPrice = nil, averageSoldPrice = nil, title = nil)
+  def initialize(averageStartPrice = nil, averageSoldPrice = nil, title = nil, productState = nil)
     @averageStartPrice = averageStartPrice
     @averageSoldPrice = averageSoldPrice
     @title = title
+    @productState = productState
     @__xmlattr = {}
   end
 end
@@ -22924,6 +24351,25 @@ end
 class RefundArrayType < ::Array
 end
 
+# {urn:ebay:apis:eBLBaseComponents}RefundDetailsType
+#   refundOption - SOAP::SOAPToken
+#   description - SOAP::SOAPString
+class RefundDetailsType
+  attr_accessor :refundOption
+  attr_accessor :description
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(refundOption = nil, description = nil)
+    @refundOption = refundOption
+    @description = description
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}RefundType
 #   refundFromSeller - AmountType
 #   totalRefundToBuyer - AmountType
@@ -22983,6 +24429,19 @@ class RegionOfOriginDetailsType
     @regionOfOrigin = regionOfOrigin
     @description = description
     @status = status
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}RegularSubscriptionDefinitionType
+class RegularSubscriptionDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
     @__xmlele_any = nil
   end
 end
@@ -23136,6 +24595,158 @@ class ResponseAttributeSetType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}ReturnPolicyDetailsType
+#   refund - RefundDetailsType
+#   returnsWithin - ReturnsWithinDetailsType
+#   returnsAccepted - ReturnsAcceptedDetailsType
+#   description - SOAP::SOAPBoolean
+#   warrantyOffered - WarrantyOfferedDetailsType
+#   warrantyType - WarrantyTypeDetailsType
+#   warrantyDuration - WarrantyDurationDetailsType
+#   eAN - SOAP::SOAPBoolean
+#   shippingCostPaidBy - ShippingCostPaidByDetailsType
+class ReturnPolicyDetailsType
+  attr_accessor :refund
+  attr_accessor :returnsWithin
+  attr_accessor :returnsAccepted
+  attr_accessor :description
+  attr_accessor :warrantyOffered
+  attr_accessor :warrantyType
+  attr_accessor :warrantyDuration
+  attr_accessor :eAN
+  attr_accessor :shippingCostPaidBy
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(refund = [], returnsWithin = [], returnsAccepted = [], description = nil, warrantyOffered = [], warrantyType = [], warrantyDuration = [], eAN = nil, shippingCostPaidBy = [])
+    @refund = refund
+    @returnsWithin = returnsWithin
+    @returnsAccepted = returnsAccepted
+    @description = description
+    @warrantyOffered = warrantyOffered
+    @warrantyType = warrantyType
+    @warrantyDuration = warrantyDuration
+    @eAN = eAN
+    @shippingCostPaidBy = shippingCostPaidBy
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ReturnPolicyEnabledDefinitionType
+class ReturnPolicyEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ReturnPolicyType
+#   refundOption - SOAP::SOAPToken
+#   refund - SOAP::SOAPString
+#   returnsWithinOption - SOAP::SOAPToken
+#   returnsWithin - SOAP::SOAPString
+#   returnsAcceptedOption - SOAP::SOAPToken
+#   returnsAccepted - SOAP::SOAPString
+#   description - SOAP::SOAPString
+#   warrantyOfferedOption - SOAP::SOAPToken
+#   warrantyOffered - SOAP::SOAPString
+#   warrantyTypeOption - SOAP::SOAPToken
+#   warrantyType - SOAP::SOAPString
+#   warrantyDurationOption - SOAP::SOAPToken
+#   warrantyDuration - SOAP::SOAPString
+#   eAN - SOAP::SOAPString
+#   shippingCostPaidByOption - SOAP::SOAPToken
+#   shippingCostPaidBy - SOAP::SOAPString
+class ReturnPolicyType
+  attr_accessor :refundOption
+  attr_accessor :refund
+  attr_accessor :returnsWithinOption
+  attr_accessor :returnsWithin
+  attr_accessor :returnsAcceptedOption
+  attr_accessor :returnsAccepted
+  attr_accessor :description
+  attr_accessor :warrantyOfferedOption
+  attr_accessor :warrantyOffered
+  attr_accessor :warrantyTypeOption
+  attr_accessor :warrantyType
+  attr_accessor :warrantyDurationOption
+  attr_accessor :warrantyDuration
+  attr_accessor :eAN
+  attr_accessor :shippingCostPaidByOption
+  attr_accessor :shippingCostPaidBy
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(refundOption = nil, refund = nil, returnsWithinOption = nil, returnsWithin = nil, returnsAcceptedOption = nil, returnsAccepted = nil, description = nil, warrantyOfferedOption = nil, warrantyOffered = nil, warrantyTypeOption = nil, warrantyType = nil, warrantyDurationOption = nil, warrantyDuration = nil, eAN = nil, shippingCostPaidByOption = nil, shippingCostPaidBy = nil)
+    @refundOption = refundOption
+    @refund = refund
+    @returnsWithinOption = returnsWithinOption
+    @returnsWithin = returnsWithin
+    @returnsAcceptedOption = returnsAcceptedOption
+    @returnsAccepted = returnsAccepted
+    @description = description
+    @warrantyOfferedOption = warrantyOfferedOption
+    @warrantyOffered = warrantyOffered
+    @warrantyTypeOption = warrantyTypeOption
+    @warrantyType = warrantyType
+    @warrantyDurationOption = warrantyDurationOption
+    @warrantyDuration = warrantyDuration
+    @eAN = eAN
+    @shippingCostPaidByOption = shippingCostPaidByOption
+    @shippingCostPaidBy = shippingCostPaidBy
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ReturnsAcceptedDetailsType
+#   returnsAcceptedOption - SOAP::SOAPToken
+#   description - SOAP::SOAPString
+class ReturnsAcceptedDetailsType
+  attr_accessor :returnsAcceptedOption
+  attr_accessor :description
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(returnsAcceptedOption = nil, description = nil)
+    @returnsAcceptedOption = returnsAcceptedOption
+    @description = description
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ReturnsWithinDetailsType
+#   returnsWithinOption - SOAP::SOAPToken
+#   description - SOAP::SOAPString
+class ReturnsWithinDetailsType
+  attr_accessor :returnsWithinOption
+  attr_accessor :description
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(returnsWithinOption = nil, description = nil)
+    @returnsWithinOption = returnsWithinOption
+    @description = description
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}ReviewDetailsType
 #   averageRating - SOAP::SOAPFloat
 #   review - ReviewType
@@ -23182,6 +24793,32 @@ class ReviewType
     @text = text
     @userID = userID
     @creationTime = creationTime
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}RevisePriceAllowedDefinitionType
+class RevisePriceAllowedDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ReviseQuantityAllowedDefinitionType
+class ReviseQuantityAllowedDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
     @__xmlele_any = nil
   end
 end
@@ -23477,6 +25114,22 @@ class SearchResultItemType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}SearchStandingDashboardType
+#   status - SearchStandingStatusCodeType
+class SearchStandingDashboardType
+  attr_accessor :status
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(status = nil)
+    @status = status
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}SearchStoreFilterType
 #   storeName - SOAP::SOAPString
 #   storeSearch - StoreSearchCodeType
@@ -23496,6 +25149,25 @@ class SearchStoreFilterType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}SellerAccountDashboardType
+#   status - SellerAccountStatusCodeType
+#   alert - SellerDashboardAlertType
+class SellerAccountDashboardType
+  attr_accessor :status
+  attr_accessor :alert
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(status = nil, alert = [])
+    @status = status
+    @alert = alert
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}SellerContactDetailsEnabledDefinitionType
 class SellerContactDetailsEnabledDefinitionType
   attr_reader :__xmlele_any
@@ -23505,6 +25177,25 @@ class SellerContactDetailsEnabledDefinitionType
   end
 
   def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}SellerDashboardAlertType
+#   severity - SellerDashboardAlertSeverityCodeType
+#   text - SOAP::SOAPString
+class SellerDashboardAlertType
+  attr_accessor :severity
+  attr_accessor :text
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(severity = nil, text = nil)
+    @severity = severity
+    @text = text
     @__xmlele_any = nil
   end
 end
@@ -23539,6 +25230,22 @@ class SellerFavoriteItemPreferencesType
     @minPrice = minPrice
     @maxPrice = maxPrice
     @favoriteItemID = favoriteItemID
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}SellerFeeDiscountDashboardType
+#   percent - SOAP::SOAPFloat
+class SellerFeeDiscountDashboardType
+  attr_accessor :percent
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(percent = nil)
+    @percent = percent
     @__xmlele_any = nil
   end
 end
@@ -23629,6 +25336,53 @@ class SellerPaymentType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}SellerRatingSummaryArrayType
+class SellerRatingSummaryArrayType < ::Array
+end
+
+# {urn:ebay:apis:eBLBaseComponents}SellerRoleMetricsType
+#   positiveFeedbackLeftCount - SOAP::SOAPInt
+#   negativeFeedbackLeftCount - SOAP::SOAPInt
+#   neutralFeedbackLeftCount - SOAP::SOAPInt
+#   feedbackLeftPercent - SOAP::SOAPFloat
+#   repeatBuyerCount - SOAP::SOAPInt
+#   repeatBuyerPercent - SOAP::SOAPFloat
+#   uniqueBuyerCount - SOAP::SOAPInt
+#   transactionPercent - SOAP::SOAPFloat
+#   crossBorderTransactionCount - SOAP::SOAPInt
+#   crossBorderTransactionPercent - SOAP::SOAPFloat
+class SellerRoleMetricsType
+  attr_accessor :positiveFeedbackLeftCount
+  attr_accessor :negativeFeedbackLeftCount
+  attr_accessor :neutralFeedbackLeftCount
+  attr_accessor :feedbackLeftPercent
+  attr_accessor :repeatBuyerCount
+  attr_accessor :repeatBuyerPercent
+  attr_accessor :uniqueBuyerCount
+  attr_accessor :transactionPercent
+  attr_accessor :crossBorderTransactionCount
+  attr_accessor :crossBorderTransactionPercent
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(positiveFeedbackLeftCount = nil, negativeFeedbackLeftCount = nil, neutralFeedbackLeftCount = nil, feedbackLeftPercent = nil, repeatBuyerCount = nil, repeatBuyerPercent = nil, uniqueBuyerCount = nil, transactionPercent = nil, crossBorderTransactionCount = nil, crossBorderTransactionPercent = nil)
+    @positiveFeedbackLeftCount = positiveFeedbackLeftCount
+    @negativeFeedbackLeftCount = negativeFeedbackLeftCount
+    @neutralFeedbackLeftCount = neutralFeedbackLeftCount
+    @feedbackLeftPercent = feedbackLeftPercent
+    @repeatBuyerCount = repeatBuyerCount
+    @repeatBuyerPercent = repeatBuyerPercent
+    @uniqueBuyerCount = uniqueBuyerCount
+    @transactionPercent = transactionPercent
+    @crossBorderTransactionCount = crossBorderTransactionCount
+    @crossBorderTransactionPercent = crossBorderTransactionPercent
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}SellerType
 #   paisaPayStatus - SOAP::SOAPInt
 #   allowPaymentEdit - SOAP::SOAPBoolean
@@ -23647,14 +25401,14 @@ end
 #   storeURL - SOAP::SOAPAnyURI
 #   sellerBusinessType - SellerBusinessCodeType
 #   registeredBusinessSeller - SOAP::SOAPBoolean
-#   expressEligible - SOAP::SOAPBoolean
+#   storeSite - SiteCodeType
 #   paymentMethod - SellerPaymentMethodCodeType
 #   proStoresPreference - ProStoresCheckoutPreferenceType
-#   expressWallet - SOAP::SOAPBoolean
-#   expressSellerRequirements - ExpressSellerRequirementsType
 #   charityRegistered - SOAP::SOAPBoolean
 #   safePaymentExempt - SOAP::SOAPBoolean
 #   paisaPayEscrowEMIStatus - SOAP::SOAPInt
+#   charityAffiliationDetails - CharityAffiliationDetailsType
+#   transactionPercent - SOAP::SOAPFloat
 class SellerType
   attr_accessor :paisaPayStatus
   attr_accessor :allowPaymentEdit
@@ -23673,21 +25427,21 @@ class SellerType
   attr_accessor :storeURL
   attr_accessor :sellerBusinessType
   attr_accessor :registeredBusinessSeller
-  attr_accessor :expressEligible
+  attr_accessor :storeSite
   attr_accessor :paymentMethod
   attr_accessor :proStoresPreference
-  attr_accessor :expressWallet
-  attr_accessor :expressSellerRequirements
   attr_accessor :charityRegistered
   attr_accessor :safePaymentExempt
   attr_accessor :paisaPayEscrowEMIStatus
+  attr_accessor :charityAffiliationDetails
+  attr_accessor :transactionPercent
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(paisaPayStatus = nil, allowPaymentEdit = nil, billingCurrency = nil, checkoutEnabled = nil, cIPBankAccountStored = nil, goodStanding = nil, liveAuctionAuthorized = nil, merchandizingPref = nil, qualifiesForB2BVAT = nil, sellerGuaranteeLevel = nil, sellerLevel = nil, sellerPaymentAddress = nil, schedulingInfo = nil, storeOwner = nil, storeURL = nil, sellerBusinessType = nil, registeredBusinessSeller = nil, expressEligible = nil, paymentMethod = nil, proStoresPreference = nil, expressWallet = nil, expressSellerRequirements = nil, charityRegistered = nil, safePaymentExempt = nil, paisaPayEscrowEMIStatus = nil)
+  def initialize(paisaPayStatus = nil, allowPaymentEdit = nil, billingCurrency = nil, checkoutEnabled = nil, cIPBankAccountStored = nil, goodStanding = nil, liveAuctionAuthorized = nil, merchandizingPref = nil, qualifiesForB2BVAT = nil, sellerGuaranteeLevel = nil, sellerLevel = nil, sellerPaymentAddress = nil, schedulingInfo = nil, storeOwner = nil, storeURL = nil, sellerBusinessType = nil, registeredBusinessSeller = nil, storeSite = nil, paymentMethod = nil, proStoresPreference = nil, charityRegistered = nil, safePaymentExempt = nil, paisaPayEscrowEMIStatus = nil, charityAffiliationDetails = nil, transactionPercent = nil)
     @paisaPayStatus = paisaPayStatus
     @allowPaymentEdit = allowPaymentEdit
     @billingCurrency = billingCurrency
@@ -23705,14 +25459,14 @@ class SellerType
     @storeURL = storeURL
     @sellerBusinessType = sellerBusinessType
     @registeredBusinessSeller = registeredBusinessSeller
-    @expressEligible = expressEligible
+    @storeSite = storeSite
     @paymentMethod = paymentMethod
     @proStoresPreference = proStoresPreference
-    @expressWallet = expressWallet
-    @expressSellerRequirements = expressSellerRequirements
     @charityRegistered = charityRegistered
     @safePaymentExempt = safePaymentExempt
     @paisaPayEscrowEMIStatus = paisaPayEscrowEMIStatus
+    @charityAffiliationDetails = charityAffiliationDetails
+    @transactionPercent = transactionPercent
     @__xmlele_any = nil
   end
 end
@@ -23862,6 +25616,7 @@ end
 #   refundGrantedTime - SOAP::SOAPDateTime
 #   refundRequestedTime - SOAP::SOAPDateTime
 #   status - ShipmentStatusCodeType
+#   shippedTime - SOAP::SOAPDateTime
 class ShipmentType
   attr_accessor :estimatedDeliveryDate
   attr_accessor :insuredValue
@@ -23887,13 +25642,14 @@ class ShipmentType
   attr_accessor :refundGrantedTime
   attr_accessor :refundRequestedTime
   attr_accessor :status
+  attr_accessor :shippedTime
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(estimatedDeliveryDate = nil, insuredValue = nil, packageDepth = nil, packageLength = nil, packageWidth = nil, payPalShipmentID = nil, shipmentID = nil, postageTotal = nil, printedTime = nil, shipFromAddress = nil, shippingAddress = nil, shippingCarrierUsed = nil, shippingFeature = [], shippingPackage = nil, shippingServiceUsed = nil, shipmentTrackingNumber = nil, weightMajor = nil, weightMinor = nil, itemTransactionID = [], deliveryDate = nil, deliveryStatus = nil, refundGrantedTime = nil, refundRequestedTime = nil, status = nil)
+  def initialize(estimatedDeliveryDate = nil, insuredValue = nil, packageDepth = nil, packageLength = nil, packageWidth = nil, payPalShipmentID = nil, shipmentID = nil, postageTotal = nil, printedTime = nil, shipFromAddress = nil, shippingAddress = nil, shippingCarrierUsed = nil, shippingFeature = [], shippingPackage = nil, shippingServiceUsed = nil, shipmentTrackingNumber = nil, weightMajor = nil, weightMinor = nil, itemTransactionID = [], deliveryDate = nil, deliveryStatus = nil, refundGrantedTime = nil, refundRequestedTime = nil, status = nil, shippedTime = nil)
     @estimatedDeliveryDate = estimatedDeliveryDate
     @insuredValue = insuredValue
     @packageDepth = packageDepth
@@ -23918,6 +25674,7 @@ class ShipmentType
     @refundGrantedTime = refundGrantedTime
     @refundRequestedTime = refundRequestedTime
     @status = status
+    @shippedTime = shippedTime
     @__xmlele_any = nil
   end
 end
@@ -23940,6 +25697,25 @@ class ShippingCarrierDetailsType
     @shippingCarrierID = shippingCarrierID
     @description = description
     @shippingCarrier = shippingCarrier
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ShippingCostPaidByDetailsType
+#   shippingCostPaidByOption - SOAP::SOAPToken
+#   description - SOAP::SOAPString
+class ShippingCostPaidByDetailsType
+  attr_accessor :shippingCostPaidByOption
+  attr_accessor :description
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(shippingCostPaidByOption = nil, description = nil)
+    @shippingCostPaidByOption = shippingCostPaidByOption
+    @description = description
     @__xmlele_any = nil
   end
 end
@@ -24138,6 +25914,8 @@ end
 #   surchargeApplicable - SOAP::SOAPBoolean
 #   shippingCarrier - ShippingCarrierCodeType
 #   cODService - SOAP::SOAPBoolean
+#   deprecationDetails - AnnouncementMessageType
+#   mappedToShippingServiceID - SOAP::SOAPInt
 class ShippingServiceDetailsType
   attr_accessor :description
   attr_accessor :expeditedService
@@ -24154,13 +25932,15 @@ class ShippingServiceDetailsType
   attr_accessor :surchargeApplicable
   attr_accessor :shippingCarrier
   attr_accessor :cODService
+  attr_accessor :deprecationDetails
+  attr_accessor :mappedToShippingServiceID
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(description = nil, expeditedService = nil, internationalService = nil, shippingService = nil, shippingServiceID = nil, shippingTimeMax = nil, shippingTimeMin = nil, shippingServiceCode = nil, serviceType = [], shippingPackage = [], dimensionsRequired = nil, validForSellingFlow = nil, surchargeApplicable = nil, shippingCarrier = [], cODService = nil)
+  def initialize(description = nil, expeditedService = nil, internationalService = nil, shippingService = nil, shippingServiceID = nil, shippingTimeMax = nil, shippingTimeMin = nil, shippingServiceCode = nil, serviceType = [], shippingPackage = [], dimensionsRequired = nil, validForSellingFlow = nil, surchargeApplicable = nil, shippingCarrier = [], cODService = nil, deprecationDetails = [], mappedToShippingServiceID = nil)
     @description = description
     @expeditedService = expeditedService
     @internationalService = internationalService
@@ -24176,6 +25956,8 @@ class ShippingServiceDetailsType
     @surchargeApplicable = surchargeApplicable
     @shippingCarrier = shippingCarrier
     @cODService = cODService
+    @deprecationDetails = deprecationDetails
+    @mappedToShippingServiceID = mappedToShippingServiceID
     @__xmlele_any = nil
   end
 end
@@ -24248,7 +26030,6 @@ end
 #   valuePackEnabled - SOAP::SOAPBoolean
 #   proPackPlusEnabled - SOAP::SOAPBoolean
 #   adFormatEnabled - AdFormatEnabledCodeType
-#   digitalDeliveryEnabled - DigitalDeliveryEnabledCodeType
 #   bestOfferCounterEnabled - SOAP::SOAPBoolean
 #   bestOfferAutoDeclineEnabled - SOAP::SOAPBoolean
 #   localMarketSpecialitySubscription - SOAP::SOAPBoolean
@@ -24280,6 +26061,60 @@ end
 #   paisaPayFullEscrowEnabled - SOAP::SOAPBoolean
 #   classifiedAdAutoAcceptEnabled - SOAP::SOAPBoolean
 #   bestOfferAutoAcceptEnabled - SOAP::SOAPBoolean
+#   crossBorderTradeNorthAmericaEnabled - SOAP::SOAPBoolean
+#   crossBorderTradeGBEnabled - SOAP::SOAPBoolean
+#   crossBorderTradeAustraliaEnabled - SOAP::SOAPBoolean
+#   payPalBuyerProtectionEnabled - SOAP::SOAPBoolean
+#   buyerGuaranteeEnabled - SOAP::SOAPBoolean
+#   iNEscrowWorkflowTimeline - INEscrowWorkflowTimelineCodeType
+#   combinedFixedPriceTreatmentEnabled - SOAP::SOAPBoolean
+#   galleryFeaturedDurations - ListingEnhancementDurationReferenceType
+#   payPalRequired - SOAP::SOAPBoolean
+#   eBayMotorsProAdFormatEnabled - AdFormatEnabledCodeType
+#   eBayMotorsProContactByPhoneEnabled - SOAP::SOAPBoolean
+#   eBayMotorsProPhoneCount - SOAP::SOAPInt
+#   eBayMotorsProContactByAddressEnabled - SOAP::SOAPBoolean
+#   eBayMotorsProStreetCount - SOAP::SOAPInt
+#   eBayMotorsProCompanyNameEnabled - SOAP::SOAPBoolean
+#   eBayMotorsProContactByEmailEnabled - SOAP::SOAPBoolean
+#   eBayMotorsProBestOfferEnabled - ClassifiedAdBestOfferEnabledCodeType
+#   eBayMotorsProAutoAcceptEnabled - SOAP::SOAPBoolean
+#   eBayMotorsProAutoDeclineEnabled - SOAP::SOAPBoolean
+#   eBayMotorsProPaymentMethodCheckOutEnabled - ClassifiedAdPaymentMethodEnabledCodeType
+#   eBayMotorsProShippingMethodEnabled - SOAP::SOAPBoolean
+#   eBayMotorsProCounterOfferEnabled - SOAP::SOAPBoolean
+#   eBayMotorsProSellerContactDetailsEnabled - SOAP::SOAPBoolean
+#   localMarketAdFormatEnabled - AdFormatEnabledCodeType
+#   localMarketContactByPhoneEnabled - SOAP::SOAPBoolean
+#   localMarketPhoneCount - SOAP::SOAPInt
+#   localMarketContactByAddressEnabled - SOAP::SOAPBoolean
+#   localMarketStreetCount - SOAP::SOAPInt
+#   localMarketCompanyNameEnabled - SOAP::SOAPBoolean
+#   localMarketContactByEmailEnabled - SOAP::SOAPBoolean
+#   localMarketBestOfferEnabled - ClassifiedAdBestOfferEnabledCodeType
+#   localMarketAutoAcceptEnabled - SOAP::SOAPBoolean
+#   localMarketAutoDeclineEnabled - SOAP::SOAPBoolean
+#   localMarketPaymentMethodCheckOutEnabled - ClassifiedAdPaymentMethodEnabledCodeType
+#   localMarketShippingMethodEnabled - SOAP::SOAPBoolean
+#   localMarketCounterOfferEnabled - SOAP::SOAPBoolean
+#   localMarketSellerContactDetailsEnabled - SOAP::SOAPBoolean
+#   classifiedAdPhoneCount - SOAP::SOAPInt
+#   classifiedAdContactByAddressEnabled - SOAP::SOAPBoolean
+#   classifiedAdStreetCount - SOAP::SOAPInt
+#   classifiedAdCompanyNameEnabled - SOAP::SOAPBoolean
+#   specialitySubscription - GeographicExposureCodeType
+#   regularSubscription - GeographicExposureCodeType
+#   premiumSubscription - GeographicExposureCodeType
+#   nonSubscription - GeographicExposureCodeType
+#   payPalRequiredForStoreOwner - SOAP::SOAPBoolean
+#   reviseQuantityAllowed - SOAP::SOAPBoolean
+#   revisePriceAllowed - SOAP::SOAPBoolean
+#   storeOwnerExtendedListingDurationsEnabled - SOAP::SOAPBoolean
+#   storeOwnerExtendedListingDurations - StoreOwnerExtendedListingDurationsType
+#   returnPolicyEnabled - SOAP::SOAPBoolean
+#   handlingTimeEnabled - SOAP::SOAPBoolean
+#   maxFlatShippingCost - SOAP::SOAPBoolean
+#   maxFlatShippingCostCBTExempt - SOAP::SOAPBoolean
 class SiteDefaultsType
   attr_accessor :listingDuration
   attr_accessor :shippingTermsRequired
@@ -24292,7 +26127,6 @@ class SiteDefaultsType
   attr_accessor :valuePackEnabled
   attr_accessor :proPackPlusEnabled
   attr_accessor :adFormatEnabled
-  attr_accessor :digitalDeliveryEnabled
   attr_accessor :bestOfferCounterEnabled
   attr_accessor :bestOfferAutoDeclineEnabled
   attr_accessor :localMarketSpecialitySubscription
@@ -24324,13 +26158,67 @@ class SiteDefaultsType
   attr_accessor :paisaPayFullEscrowEnabled
   attr_accessor :classifiedAdAutoAcceptEnabled
   attr_accessor :bestOfferAutoAcceptEnabled
+  attr_accessor :crossBorderTradeNorthAmericaEnabled
+  attr_accessor :crossBorderTradeGBEnabled
+  attr_accessor :crossBorderTradeAustraliaEnabled
+  attr_accessor :payPalBuyerProtectionEnabled
+  attr_accessor :buyerGuaranteeEnabled
+  attr_accessor :iNEscrowWorkflowTimeline
+  attr_accessor :combinedFixedPriceTreatmentEnabled
+  attr_accessor :galleryFeaturedDurations
+  attr_accessor :payPalRequired
+  attr_accessor :eBayMotorsProAdFormatEnabled
+  attr_accessor :eBayMotorsProContactByPhoneEnabled
+  attr_accessor :eBayMotorsProPhoneCount
+  attr_accessor :eBayMotorsProContactByAddressEnabled
+  attr_accessor :eBayMotorsProStreetCount
+  attr_accessor :eBayMotorsProCompanyNameEnabled
+  attr_accessor :eBayMotorsProContactByEmailEnabled
+  attr_accessor :eBayMotorsProBestOfferEnabled
+  attr_accessor :eBayMotorsProAutoAcceptEnabled
+  attr_accessor :eBayMotorsProAutoDeclineEnabled
+  attr_accessor :eBayMotorsProPaymentMethodCheckOutEnabled
+  attr_accessor :eBayMotorsProShippingMethodEnabled
+  attr_accessor :eBayMotorsProCounterOfferEnabled
+  attr_accessor :eBayMotorsProSellerContactDetailsEnabled
+  attr_accessor :localMarketAdFormatEnabled
+  attr_accessor :localMarketContactByPhoneEnabled
+  attr_accessor :localMarketPhoneCount
+  attr_accessor :localMarketContactByAddressEnabled
+  attr_accessor :localMarketStreetCount
+  attr_accessor :localMarketCompanyNameEnabled
+  attr_accessor :localMarketContactByEmailEnabled
+  attr_accessor :localMarketBestOfferEnabled
+  attr_accessor :localMarketAutoAcceptEnabled
+  attr_accessor :localMarketAutoDeclineEnabled
+  attr_accessor :localMarketPaymentMethodCheckOutEnabled
+  attr_accessor :localMarketShippingMethodEnabled
+  attr_accessor :localMarketCounterOfferEnabled
+  attr_accessor :localMarketSellerContactDetailsEnabled
+  attr_accessor :classifiedAdPhoneCount
+  attr_accessor :classifiedAdContactByAddressEnabled
+  attr_accessor :classifiedAdStreetCount
+  attr_accessor :classifiedAdCompanyNameEnabled
+  attr_accessor :specialitySubscription
+  attr_accessor :regularSubscription
+  attr_accessor :premiumSubscription
+  attr_accessor :nonSubscription
+  attr_accessor :payPalRequiredForStoreOwner
+  attr_accessor :reviseQuantityAllowed
+  attr_accessor :revisePriceAllowed
+  attr_accessor :storeOwnerExtendedListingDurationsEnabled
+  attr_accessor :storeOwnerExtendedListingDurations
+  attr_accessor :returnPolicyEnabled
+  attr_accessor :handlingTimeEnabled
+  attr_accessor :maxFlatShippingCost
+  attr_accessor :maxFlatShippingCostCBTExempt
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(listingDuration = [], shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, digitalDeliveryEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil, localMarketSpecialitySubscription = nil, localMarketRegularSubscription = nil, localMarketPremiumSubscription = nil, localMarketNonSubscription = nil, expressEnabled = nil, expressPicturesRequired = nil, expressConditionRequired = nil, minimumReservePrice = nil, sellerContactDetailsEnabled = nil, transactionConfirmationRequestEnabled = nil, storeInventoryEnabled = nil, skypeMeTransactionalEnabled = nil, skypeMeNonTransactionalEnabled = nil, localListingDistancesRegular = nil, localListingDistancesSpecialty = nil, localListingDistancesNonSubscription = nil, classifiedAdPaymentMethodEnabled = nil, classifiedAdShippingMethodEnabled = nil, classifiedAdBestOfferEnabled = nil, classifiedAdCounterOfferEnabled = nil, classifiedAdAutoDeclineEnabled = nil, classifiedAdContactByPhoneEnabled = nil, classifiedAdContactByEmailEnabled = nil, safePaymentRequired = nil, classifiedAdPayPerLeadEnabled = nil, itemSpecificsEnabled = nil, paisaPayFullEscrowEnabled = nil, classifiedAdAutoAcceptEnabled = nil, bestOfferAutoAcceptEnabled = nil)
+  def initialize(listingDuration = [], shippingTermsRequired = nil, bestOfferEnabled = nil, dutchBINEnabled = nil, userConsentRequired = nil, homePageFeaturedEnabled = nil, proPackEnabled = nil, basicUpgradePackEnabled = nil, valuePackEnabled = nil, proPackPlusEnabled = nil, adFormatEnabled = nil, bestOfferCounterEnabled = nil, bestOfferAutoDeclineEnabled = nil, localMarketSpecialitySubscription = nil, localMarketRegularSubscription = nil, localMarketPremiumSubscription = nil, localMarketNonSubscription = nil, expressEnabled = nil, expressPicturesRequired = nil, expressConditionRequired = nil, minimumReservePrice = nil, sellerContactDetailsEnabled = nil, transactionConfirmationRequestEnabled = nil, storeInventoryEnabled = nil, skypeMeTransactionalEnabled = nil, skypeMeNonTransactionalEnabled = nil, localListingDistancesRegular = nil, localListingDistancesSpecialty = nil, localListingDistancesNonSubscription = nil, classifiedAdPaymentMethodEnabled = nil, classifiedAdShippingMethodEnabled = nil, classifiedAdBestOfferEnabled = nil, classifiedAdCounterOfferEnabled = nil, classifiedAdAutoDeclineEnabled = nil, classifiedAdContactByPhoneEnabled = nil, classifiedAdContactByEmailEnabled = nil, safePaymentRequired = nil, classifiedAdPayPerLeadEnabled = nil, itemSpecificsEnabled = nil, paisaPayFullEscrowEnabled = nil, classifiedAdAutoAcceptEnabled = nil, bestOfferAutoAcceptEnabled = nil, crossBorderTradeNorthAmericaEnabled = nil, crossBorderTradeGBEnabled = nil, crossBorderTradeAustraliaEnabled = nil, payPalBuyerProtectionEnabled = nil, buyerGuaranteeEnabled = nil, iNEscrowWorkflowTimeline = nil, combinedFixedPriceTreatmentEnabled = nil, galleryFeaturedDurations = nil, payPalRequired = nil, eBayMotorsProAdFormatEnabled = nil, eBayMotorsProContactByPhoneEnabled = nil, eBayMotorsProPhoneCount = nil, eBayMotorsProContactByAddressEnabled = nil, eBayMotorsProStreetCount = nil, eBayMotorsProCompanyNameEnabled = nil, eBayMotorsProContactByEmailEnabled = nil, eBayMotorsProBestOfferEnabled = nil, eBayMotorsProAutoAcceptEnabled = nil, eBayMotorsProAutoDeclineEnabled = nil, eBayMotorsProPaymentMethodCheckOutEnabled = nil, eBayMotorsProShippingMethodEnabled = nil, eBayMotorsProCounterOfferEnabled = nil, eBayMotorsProSellerContactDetailsEnabled = nil, localMarketAdFormatEnabled = nil, localMarketContactByPhoneEnabled = nil, localMarketPhoneCount = nil, localMarketContactByAddressEnabled = nil, localMarketStreetCount = nil, localMarketCompanyNameEnabled = nil, localMarketContactByEmailEnabled = nil, localMarketBestOfferEnabled = nil, localMarketAutoAcceptEnabled = nil, localMarketAutoDeclineEnabled = nil, localMarketPaymentMethodCheckOutEnabled = nil, localMarketShippingMethodEnabled = nil, localMarketCounterOfferEnabled = nil, localMarketSellerContactDetailsEnabled = nil, classifiedAdPhoneCount = nil, classifiedAdContactByAddressEnabled = nil, classifiedAdStreetCount = nil, classifiedAdCompanyNameEnabled = nil, specialitySubscription = nil, regularSubscription = nil, premiumSubscription = nil, nonSubscription = nil, payPalRequiredForStoreOwner = nil, reviseQuantityAllowed = nil, revisePriceAllowed = nil, storeOwnerExtendedListingDurationsEnabled = nil, storeOwnerExtendedListingDurations = nil, returnPolicyEnabled = nil, handlingTimeEnabled = nil, maxFlatShippingCost = nil, maxFlatShippingCostCBTExempt = nil)
     @listingDuration = listingDuration
     @shippingTermsRequired = shippingTermsRequired
     @bestOfferEnabled = bestOfferEnabled
@@ -24342,7 +26230,6 @@ class SiteDefaultsType
     @valuePackEnabled = valuePackEnabled
     @proPackPlusEnabled = proPackPlusEnabled
     @adFormatEnabled = adFormatEnabled
-    @digitalDeliveryEnabled = digitalDeliveryEnabled
     @bestOfferCounterEnabled = bestOfferCounterEnabled
     @bestOfferAutoDeclineEnabled = bestOfferAutoDeclineEnabled
     @localMarketSpecialitySubscription = localMarketSpecialitySubscription
@@ -24374,6 +26261,60 @@ class SiteDefaultsType
     @paisaPayFullEscrowEnabled = paisaPayFullEscrowEnabled
     @classifiedAdAutoAcceptEnabled = classifiedAdAutoAcceptEnabled
     @bestOfferAutoAcceptEnabled = bestOfferAutoAcceptEnabled
+    @crossBorderTradeNorthAmericaEnabled = crossBorderTradeNorthAmericaEnabled
+    @crossBorderTradeGBEnabled = crossBorderTradeGBEnabled
+    @crossBorderTradeAustraliaEnabled = crossBorderTradeAustraliaEnabled
+    @payPalBuyerProtectionEnabled = payPalBuyerProtectionEnabled
+    @buyerGuaranteeEnabled = buyerGuaranteeEnabled
+    @iNEscrowWorkflowTimeline = iNEscrowWorkflowTimeline
+    @combinedFixedPriceTreatmentEnabled = combinedFixedPriceTreatmentEnabled
+    @galleryFeaturedDurations = galleryFeaturedDurations
+    @payPalRequired = payPalRequired
+    @eBayMotorsProAdFormatEnabled = eBayMotorsProAdFormatEnabled
+    @eBayMotorsProContactByPhoneEnabled = eBayMotorsProContactByPhoneEnabled
+    @eBayMotorsProPhoneCount = eBayMotorsProPhoneCount
+    @eBayMotorsProContactByAddressEnabled = eBayMotorsProContactByAddressEnabled
+    @eBayMotorsProStreetCount = eBayMotorsProStreetCount
+    @eBayMotorsProCompanyNameEnabled = eBayMotorsProCompanyNameEnabled
+    @eBayMotorsProContactByEmailEnabled = eBayMotorsProContactByEmailEnabled
+    @eBayMotorsProBestOfferEnabled = eBayMotorsProBestOfferEnabled
+    @eBayMotorsProAutoAcceptEnabled = eBayMotorsProAutoAcceptEnabled
+    @eBayMotorsProAutoDeclineEnabled = eBayMotorsProAutoDeclineEnabled
+    @eBayMotorsProPaymentMethodCheckOutEnabled = eBayMotorsProPaymentMethodCheckOutEnabled
+    @eBayMotorsProShippingMethodEnabled = eBayMotorsProShippingMethodEnabled
+    @eBayMotorsProCounterOfferEnabled = eBayMotorsProCounterOfferEnabled
+    @eBayMotorsProSellerContactDetailsEnabled = eBayMotorsProSellerContactDetailsEnabled
+    @localMarketAdFormatEnabled = localMarketAdFormatEnabled
+    @localMarketContactByPhoneEnabled = localMarketContactByPhoneEnabled
+    @localMarketPhoneCount = localMarketPhoneCount
+    @localMarketContactByAddressEnabled = localMarketContactByAddressEnabled
+    @localMarketStreetCount = localMarketStreetCount
+    @localMarketCompanyNameEnabled = localMarketCompanyNameEnabled
+    @localMarketContactByEmailEnabled = localMarketContactByEmailEnabled
+    @localMarketBestOfferEnabled = localMarketBestOfferEnabled
+    @localMarketAutoAcceptEnabled = localMarketAutoAcceptEnabled
+    @localMarketAutoDeclineEnabled = localMarketAutoDeclineEnabled
+    @localMarketPaymentMethodCheckOutEnabled = localMarketPaymentMethodCheckOutEnabled
+    @localMarketShippingMethodEnabled = localMarketShippingMethodEnabled
+    @localMarketCounterOfferEnabled = localMarketCounterOfferEnabled
+    @localMarketSellerContactDetailsEnabled = localMarketSellerContactDetailsEnabled
+    @classifiedAdPhoneCount = classifiedAdPhoneCount
+    @classifiedAdContactByAddressEnabled = classifiedAdContactByAddressEnabled
+    @classifiedAdStreetCount = classifiedAdStreetCount
+    @classifiedAdCompanyNameEnabled = classifiedAdCompanyNameEnabled
+    @specialitySubscription = specialitySubscription
+    @regularSubscription = regularSubscription
+    @premiumSubscription = premiumSubscription
+    @nonSubscription = nonSubscription
+    @payPalRequiredForStoreOwner = payPalRequiredForStoreOwner
+    @reviseQuantityAllowed = reviseQuantityAllowed
+    @revisePriceAllowed = revisePriceAllowed
+    @storeOwnerExtendedListingDurationsEnabled = storeOwnerExtendedListingDurationsEnabled
+    @storeOwnerExtendedListingDurations = storeOwnerExtendedListingDurations
+    @returnPolicyEnabled = returnPolicyEnabled
+    @handlingTimeEnabled = handlingTimeEnabled
+    @maxFlatShippingCost = maxFlatShippingCost
+    @maxFlatShippingCostCBTExempt = maxFlatShippingCostCBTExempt
     @__xmlele_any = nil
   end
 end
@@ -24478,6 +26419,19 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}SkypeMeTransactionalEnabledDefinitionType
 class SkypeMeTransactionalEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}SpecialitySubscriptionDefinitionType
+class SpecialitySubscriptionDefinitionType
   attr_reader :__xmlele_any
 
   def set_any(elements)
@@ -24760,6 +26714,48 @@ class StoreLogoType
     @logoID = logoID
     @name = name
     @uRL = uRL
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}StoreOwnerExtendedListingDurationsDefinitionType
+class StoreOwnerExtendedListingDurationsDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}StoreOwnerExtendedListingDurationsEnabledDefinitionType
+class StoreOwnerExtendedListingDurationsEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}StoreOwnerExtendedListingDurationsType
+#   duration - SOAP::SOAPToken
+class StoreOwnerExtendedListingDurationsType
+  attr_accessor :duration
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(duration = [])
+    @duration = duration
     @__xmlele_any = nil
   end
 end
@@ -25167,6 +27163,31 @@ class TimeZoneDetailsType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}TokenStatusType
+#   status - TokenStatusCodeType
+#   eIASToken - SOAP::SOAPString
+#   expirationTime - SOAP::SOAPDateTime
+#   revocationTime - SOAP::SOAPDateTime
+class TokenStatusType
+  attr_accessor :status
+  attr_accessor :eIASToken
+  attr_accessor :expirationTime
+  attr_accessor :revocationTime
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(status = nil, eIASToken = nil, expirationTime = nil, revocationTime = nil)
+    @status = status
+    @eIASToken = eIASToken
+    @expirationTime = expirationTime
+    @revocationTime = revocationTime
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}TransactionArrayType
 class TransactionArrayType < ::Array
 end
@@ -25236,7 +27257,7 @@ end
 #   feedbackReceived - FeedbackInfoType
 #   containingOrder - OrderType
 #   finalValueFee - AmountType
-#   transactionPlatform - TransactionPlatformType
+#   transactionPlatform - TransactionPlatformCodeType
 #   listingCheckoutRedirectPreference - ListingCheckoutRedirectPreferenceType
 #   refundArray - RefundArrayType
 #   transactionSiteID - SiteCodeType
@@ -25245,6 +27266,7 @@ end
 #   sellerContactBuyerByEmail - SOAP::SOAPBoolean
 #   payPalEmailAddress - SOAP::SOAPString
 #   paisaPayID - SOAP::SOAPString
+#   buyerGuaranteePrice - AmountType
 class TransactionType
   attr_accessor :amountPaid
   attr_accessor :adjustmentAmount
@@ -25285,13 +27307,14 @@ class TransactionType
   attr_accessor :sellerContactBuyerByEmail
   attr_accessor :payPalEmailAddress
   attr_accessor :paisaPayID
+  attr_accessor :buyerGuaranteePrice
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(amountPaid = nil, adjustmentAmount = nil, convertedAdjustmentAmount = nil, buyer = nil, shippingDetails = nil, convertedAmountPaid = nil, convertedTransactionPrice = nil, createdDate = nil, depositType = nil, item = nil, quantityPurchased = nil, status = nil, transactionID = nil, transactionPrice = nil, bestOfferSale = nil, vATPercent = nil, externalTransaction = [], sellingManagerProductDetails = nil, shippingServiceSelected = nil, buyerMessage = nil, dutchAuctionBid = nil, buyerPaidStatus = nil, sellerPaidStatus = nil, paidTime = nil, shippedTime = nil, totalPrice = nil, feedbackLeft = nil, feedbackReceived = nil, containingOrder = nil, finalValueFee = nil, transactionPlatform = nil, listingCheckoutRedirectPreference = nil, refundArray = nil, transactionSiteID = nil, platform = nil, cartID = nil, sellerContactBuyerByEmail = nil, payPalEmailAddress = nil, paisaPayID = nil)
+  def initialize(amountPaid = nil, adjustmentAmount = nil, convertedAdjustmentAmount = nil, buyer = nil, shippingDetails = nil, convertedAmountPaid = nil, convertedTransactionPrice = nil, createdDate = nil, depositType = nil, item = nil, quantityPurchased = nil, status = nil, transactionID = nil, transactionPrice = nil, bestOfferSale = nil, vATPercent = nil, externalTransaction = [], sellingManagerProductDetails = nil, shippingServiceSelected = nil, buyerMessage = nil, dutchAuctionBid = nil, buyerPaidStatus = nil, sellerPaidStatus = nil, paidTime = nil, shippedTime = nil, totalPrice = nil, feedbackLeft = nil, feedbackReceived = nil, containingOrder = nil, finalValueFee = nil, transactionPlatform = nil, listingCheckoutRedirectPreference = nil, refundArray = nil, transactionSiteID = nil, platform = nil, cartID = nil, sellerContactBuyerByEmail = nil, payPalEmailAddress = nil, paisaPayID = nil, buyerGuaranteePrice = nil)
     @amountPaid = amountPaid
     @adjustmentAmount = adjustmentAmount
     @convertedAdjustmentAmount = convertedAdjustmentAmount
@@ -25331,6 +27354,7 @@ class TransactionType
     @sellerContactBuyerByEmail = sellerContactBuyerByEmail
     @payPalEmailAddress = payPalEmailAddress
     @paisaPayID = paisaPayID
+    @buyerGuaranteePrice = buyerGuaranteePrice
     @__xmlele_any = nil
   end
 end
@@ -25462,7 +27486,6 @@ end
 #   buyerInfo - BuyerType
 #   sellerInfo - SellerType
 #   charityAffiliations - CharityAffiliationsType
-#   charitySeller - CharitySellerType
 #   payPalAccountLevel - PayPalAccountLevelCodeType
 #   payPalAccountType - PayPalAccountTypeCodeType
 #   payPalAccountStatus - PayPalAccountStatusCodeType
@@ -25477,6 +27500,7 @@ end
 #   biddingSummary - BiddingSummaryType
 #   userAnonymized - SOAP::SOAPBoolean
 #   uniqueNeutralFeedbackCount - SOAP::SOAPInt
+#   enterpriseSeller - SOAP::SOAPBoolean
 class UserType
   attr_accessor :aboutMePage
   attr_accessor :eIASToken
@@ -25502,7 +27526,6 @@ class UserType
   attr_accessor :buyerInfo
   attr_accessor :sellerInfo
   attr_accessor :charityAffiliations
-  attr_accessor :charitySeller
   attr_accessor :payPalAccountLevel
   attr_accessor :payPalAccountType
   attr_accessor :payPalAccountStatus
@@ -25517,13 +27540,14 @@ class UserType
   attr_accessor :biddingSummary
   attr_accessor :userAnonymized
   attr_accessor :uniqueNeutralFeedbackCount
+  attr_accessor :enterpriseSeller
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(aboutMePage = nil, eIASToken = nil, rESTToken = nil, email = nil, feedbackScore = nil, uniqueNegativeFeedbackCount = nil, uniquePositiveFeedbackCount = nil, positiveFeedbackPercent = nil, feedbackPrivate = nil, feedbackRatingStar = nil, iDVerified = nil, eBayGoodStanding = nil, newUser = nil, registrationAddress = nil, registrationDate = nil, site = nil, status = nil, userID = nil, userIDChanged = nil, userIDLastChanged = nil, vATStatus = nil, buyerInfo = nil, sellerInfo = nil, charityAffiliations = nil, charitySeller = nil, payPalAccountLevel = nil, payPalAccountType = nil, payPalAccountStatus = nil, userSubscription = [], siteVerified = nil, skypeID = [], eBayWikiReadOnly = nil, tUVLevel = nil, vATID = nil, motorsDealer = nil, sellerPaymentMethod = nil, biddingSummary = nil, userAnonymized = nil, uniqueNeutralFeedbackCount = nil)
+  def initialize(aboutMePage = nil, eIASToken = nil, rESTToken = nil, email = nil, feedbackScore = nil, uniqueNegativeFeedbackCount = nil, uniquePositiveFeedbackCount = nil, positiveFeedbackPercent = nil, feedbackPrivate = nil, feedbackRatingStar = nil, iDVerified = nil, eBayGoodStanding = nil, newUser = nil, registrationAddress = nil, registrationDate = nil, site = nil, status = nil, userID = nil, userIDChanged = nil, userIDLastChanged = nil, vATStatus = nil, buyerInfo = nil, sellerInfo = nil, charityAffiliations = nil, payPalAccountLevel = nil, payPalAccountType = nil, payPalAccountStatus = nil, userSubscription = [], siteVerified = nil, skypeID = [], eBayWikiReadOnly = nil, tUVLevel = nil, vATID = nil, motorsDealer = nil, sellerPaymentMethod = nil, biddingSummary = nil, userAnonymized = nil, uniqueNeutralFeedbackCount = nil, enterpriseSeller = nil)
     @aboutMePage = aboutMePage
     @eIASToken = eIASToken
     @rESTToken = rESTToken
@@ -25548,7 +27572,6 @@ class UserType
     @buyerInfo = buyerInfo
     @sellerInfo = sellerInfo
     @charityAffiliations = charityAffiliations
-    @charitySeller = charitySeller
     @payPalAccountLevel = payPalAccountLevel
     @payPalAccountType = payPalAccountType
     @payPalAccountStatus = payPalAccountStatus
@@ -25563,6 +27586,7 @@ class UserType
     @biddingSummary = biddingSummary
     @userAnonymized = userAnonymized
     @uniqueNeutralFeedbackCount = uniqueNeutralFeedbackCount
+    @enterpriseSeller = enterpriseSeller
     @__xmlele_any = nil
   end
 end
@@ -25571,20 +27595,26 @@ end
 #   businessSeller - SOAP::SOAPBoolean
 #   restrictedToBusiness - SOAP::SOAPBoolean
 #   vATPercent - SOAP::SOAPFloat
+#   vATSite - SOAP::SOAPString
+#   vATID - SOAP::SOAPString
 class VATDetailsType
   attr_accessor :businessSeller
   attr_accessor :restrictedToBusiness
   attr_accessor :vATPercent
+  attr_accessor :vATSite
+  attr_accessor :vATID
   attr_reader :__xmlele_any
 
   def set_any(elements)
     @__xmlele_any = elements
   end
 
-  def initialize(businessSeller = nil, restrictedToBusiness = nil, vATPercent = nil)
+  def initialize(businessSeller = nil, restrictedToBusiness = nil, vATPercent = nil, vATSite = nil, vATID = nil)
     @businessSeller = businessSeller
     @restrictedToBusiness = restrictedToBusiness
     @vATPercent = vATPercent
+    @vATSite = vATSite
+    @vATID = vATID
     @__xmlele_any = nil
   end
 end
@@ -25747,6 +27777,63 @@ class WantItNowPostType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}WarrantyDurationDetailsType
+#   warrantyDurationOption - SOAP::SOAPToken
+#   description - SOAP::SOAPString
+class WarrantyDurationDetailsType
+  attr_accessor :warrantyDurationOption
+  attr_accessor :description
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(warrantyDurationOption = nil, description = nil)
+    @warrantyDurationOption = warrantyDurationOption
+    @description = description
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}WarrantyOfferedDetailsType
+#   warrantyOfferedOption - SOAP::SOAPToken
+#   description - SOAP::SOAPString
+class WarrantyOfferedDetailsType
+  attr_accessor :warrantyOfferedOption
+  attr_accessor :description
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(warrantyOfferedOption = nil, description = nil)
+    @warrantyOfferedOption = warrantyOfferedOption
+    @description = description
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}WarrantyTypeDetailsType
+#   warrantyTypeOption - SOAP::SOAPToken
+#   description - SOAP::SOAPString
+class WarrantyTypeDetailsType
+  attr_accessor :warrantyTypeOption
+  attr_accessor :description
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(warrantyTypeOption = nil, description = nil)
+    @warrantyTypeOption = warrantyTypeOption
+    @description = description
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}WishListEntryType
 #   item - ItemType
 #   product - ExpressProductType
@@ -25778,43 +27865,6 @@ class WishListEntryType
   end
 end
 
-# {urn:ebay:apis:eBLBaseComponents}WishListType
-#   wishListID - SOAP::SOAPString
-#   wishListURL - SOAP::SOAPAnyURI
-#   name - SOAP::SOAPString
-#   description - SOAP::SOAPString
-#   firstName - SOAP::SOAPString
-#   lastName - SOAP::SOAPString
-#   userLocation - SOAP::SOAPString
-#   wishListEntry - WishListEntryType
-class WishListType
-  attr_accessor :wishListID
-  attr_accessor :wishListURL
-  attr_accessor :name
-  attr_accessor :description
-  attr_accessor :firstName
-  attr_accessor :lastName
-  attr_accessor :userLocation
-  attr_accessor :wishListEntry
-  attr_reader :__xmlele_any
-
-  def set_any(elements)
-    @__xmlele_any = elements
-  end
-
-  def initialize(wishListID = nil, wishListURL = nil, name = nil, description = nil, firstName = nil, lastName = nil, userLocation = nil, wishListEntry = [])
-    @wishListID = wishListID
-    @wishListURL = wishListURL
-    @name = name
-    @description = description
-    @firstName = firstName
-    @lastName = lastName
-    @userLocation = userLocation
-    @wishListEntry = wishListEntry
-    @__xmlele_any = nil
-  end
-end
-
 # {urn:ebay:apis:eBLBaseComponents}XSLFileType
 #   fileName - SOAP::SOAPString
 #   fileVersion - SOAP::SOAPString
@@ -25837,6 +27887,188 @@ class XSLFileType
   end
 end
 
+# {urn:ebay:apis:eBLBaseComponents}eBayMotorsProAdFormatEnabledDefinitionType
+class EBayMotorsProAdFormatEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}eBayMotorsProAutoAcceptEnabledDefinitionType
+class EBayMotorsProAutoAcceptEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}eBayMotorsProAutoDeclineEnabledDefinitionType
+class EBayMotorsProAutoDeclineEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}eBayMotorsProBestOfferEnabledDefinitionType
+class EBayMotorsProBestOfferEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}eBayMotorsProCompanyNameEnabledDefinitionType
+class EBayMotorsProCompanyNameEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}eBayMotorsProContactByAddressEnabledDefinitionType
+class EBayMotorsProContactByAddressEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}eBayMotorsProContactByEmailEnabledDefinitionType
+class EBayMotorsProContactByEmailEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}eBayMotorsProContactByPhoneEnabledDefinitionType
+class EBayMotorsProContactByPhoneEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}eBayMotorsProCounterOfferEnabledDefinitionType
+class EBayMotorsProCounterOfferEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}eBayMotorsProPaymentMethodCheckOutEnabledDefinitionType
+class EBayMotorsProPaymentMethodCheckOutEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}eBayMotorsProPhoneCountDefinitionType
+class EBayMotorsProPhoneCountDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}eBayMotorsProSellerContactDetailsEnabledDefinitionType
+class EBayMotorsProSellerContactDetailsEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}eBayMotorsProShippingMethodEnabledDefinitionType
+class EBayMotorsProShippingMethodEnabledDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
+# {urn:ebay:apis:eBLBaseComponents}eBayMotorsProStreetCountDefinitionType
+class EBayMotorsProStreetCountDefinitionType
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize
+    @__xmlele_any = nil
+  end
+end
+
 # {urn:ebay:apis:eBLBaseComponents}AckCodeType
 class AckCodeType < ::String
   CustomCode = AckCodeType.new("CustomCode")
@@ -25848,6 +28080,7 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}BuyerPaymentMethodCodeType
 class BuyerPaymentMethodCodeType < ::String
+  Allpay = BuyerPaymentMethodCodeType.new("allpay")
   AmEx = BuyerPaymentMethodCodeType.new("AmEx")
   CCAccepted = BuyerPaymentMethodCodeType.new("CCAccepted")
   COD = BuyerPaymentMethodCodeType.new("COD")
@@ -25862,17 +28095,20 @@ class BuyerPaymentMethodCodeType < ::String
   MOCC = BuyerPaymentMethodCodeType.new("MOCC")
   MoneyXferAccepted = BuyerPaymentMethodCodeType.new("MoneyXferAccepted")
   MoneyXferAcceptedInCheckout = BuyerPaymentMethodCodeType.new("MoneyXferAcceptedInCheckout")
+  Moneybookers = BuyerPaymentMethodCodeType.new("Moneybookers")
   None = BuyerPaymentMethodCodeType.new("None")
   Other = BuyerPaymentMethodCodeType.new("Other")
   OtherOnlinePayments = BuyerPaymentMethodCodeType.new("OtherOnlinePayments")
   PaisaPayAccepted = BuyerPaymentMethodCodeType.new("PaisaPayAccepted")
   PaisaPayEscrow = BuyerPaymentMethodCodeType.new("PaisaPayEscrow")
   PaisaPayEscrowEMI = BuyerPaymentMethodCodeType.new("PaisaPayEscrowEMI")
+  PayOnPickup = BuyerPaymentMethodCodeType.new("PayOnPickup")
   PayPal = BuyerPaymentMethodCodeType.new("PayPal")
   PaymentSeeDescription = BuyerPaymentMethodCodeType.new("PaymentSeeDescription")
   PersonalCheck = BuyerPaymentMethodCodeType.new("PersonalCheck")
   PostalTransfer = BuyerPaymentMethodCodeType.new("PostalTransfer")
   PrePayDelivery = BuyerPaymentMethodCodeType.new("PrePayDelivery")
+  ProPay = BuyerPaymentMethodCodeType.new("ProPay")
   VisaMC = BuyerPaymentMethodCodeType.new("VisaMC")
 end
 
@@ -26456,6 +28692,15 @@ class AddressStatusCodeType < ::String
   Unconfirmed = AddressStatusCodeType.new("Unconfirmed")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}AnnouncementMessageCodeType
+class AnnouncementMessageCodeType < ::String
+  CustomCode = AnnouncementMessageCodeType.new("CustomCode")
+  Deprecation = AnnouncementMessageCodeType.new("Deprecation")
+  DeprecationAndMapping = AnnouncementMessageCodeType.new("DeprecationAndMapping")
+  Mapping = AnnouncementMessageCodeType.new("Mapping")
+  None = AnnouncementMessageCodeType.new("None")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}ApplicationDeviceTypeCodeType
 class ApplicationDeviceTypeCodeType < ::String
   Browser = ApplicationDeviceTypeCodeType.new("Browser")
@@ -26470,6 +28715,14 @@ class AuthTokenTypeCodeType < ::String
   ClientAlertsToken = AuthTokenTypeCodeType.new("ClientAlertsToken")
   CustomCode = AuthTokenTypeCodeType.new("CustomCode")
   RESTToken = AuthTokenTypeCodeType.new("RESTToken")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}AutomatedLeaveFeedbackEventCodeType
+class AutomatedLeaveFeedbackEventCodeType < ::String
+  CustomCode = AutomatedLeaveFeedbackEventCodeType.new("CustomCode")
+  None = AutomatedLeaveFeedbackEventCodeType.new("None")
+  PaymentReceived = AutomatedLeaveFeedbackEventCodeType.new("PaymentReceived")
+  PositiveFeedbackReceived = AutomatedLeaveFeedbackEventCodeType.new("PositiveFeedbackReceived")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}BalanceCodeType
@@ -26579,6 +28832,7 @@ class BuyerProtectionCodeType < ::String
   ItemIneligible = BuyerProtectionCodeType.new("ItemIneligible")
   ItemMarkedEligible = BuyerProtectionCodeType.new("ItemMarkedEligible")
   ItemMarkedIneligible = BuyerProtectionCodeType.new("ItemMarkedIneligible")
+  NoCoverage = BuyerProtectionCodeType.new("NoCoverage")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}BuyerProtectionSourceCodeType
@@ -26586,6 +28840,15 @@ class BuyerProtectionSourceCodeType < ::String
   CustomCode = BuyerProtectionSourceCodeType.new("CustomCode")
   EBay = BuyerProtectionSourceCodeType.new("eBay")
   PayPal = BuyerProtectionSourceCodeType.new("PayPal")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}BuyerSatisfactionStatusCodeType
+class BuyerSatisfactionStatusCodeType < ::String
+  CustomCode = BuyerSatisfactionStatusCodeType.new("CustomCode")
+  Good = BuyerSatisfactionStatusCodeType.new("Good")
+  NeedsWork = BuyerSatisfactionStatusCodeType.new("NeedsWork")
+  Poor = BuyerSatisfactionStatusCodeType.new("Poor")
+  Unacceptable = BuyerSatisfactionStatusCodeType.new("Unacceptable")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CalculatedShippingChargeOptionCodeType
@@ -26656,7 +28919,9 @@ class CharitySellerStatusCodeType < ::String
   DirectDebitRejected = CharitySellerStatusCodeType.new("DirectDebitRejected")
   NotRegisteredLostDirectSellerStatus = CharitySellerStatusCodeType.new("NotRegisteredLostDirectSellerStatus")
   Registered = CharitySellerStatusCodeType.new("Registered")
+  RegisteredDirectSeller = CharitySellerStatusCodeType.new("RegisteredDirectSeller")
   RegisteredNoCreditCard = CharitySellerStatusCodeType.new("RegisteredNoCreditCard")
+  RegisteredNoPaymentMethod = CharitySellerStatusCodeType.new("RegisteredNoPaymentMethod")
   Suspended = CharitySellerStatusCodeType.new("Suspended")
   TokenExpired = CharitySellerStatusCodeType.new("TokenExpired")
 end
@@ -26735,13 +29000,6 @@ class CompleteStatusCodeType < ::String
   CustomCode = CompleteStatusCodeType.new("CustomCode")
   Incomplete = CompleteStatusCodeType.new("Incomplete")
   Pending = CompleteStatusCodeType.new("Pending")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}ConditionSelectionCodeType
-class ConditionSelectionCodeType < ::String
-  All = ConditionSelectionCodeType.new("All")
-  CustomCode = ConditionSelectionCodeType.new("CustomCode")
-  New = ConditionSelectionCodeType.new("New")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}CountryCodeType
@@ -27228,6 +29486,7 @@ class DetailNameCodeType < ::String
   PaymentOptionDetails = DetailNameCodeType.new("PaymentOptionDetails")
   RegionDetails = DetailNameCodeType.new("RegionDetails")
   RegionOfOriginDetails = DetailNameCodeType.new("RegionOfOriginDetails")
+  ReturnPolicyDetails = DetailNameCodeType.new("ReturnPolicyDetails")
   ShippingCarrierDetails = DetailNameCodeType.new("ShippingCarrierDetails")
   ShippingLocationDetails = DetailNameCodeType.new("ShippingLocationDetails")
   ShippingPackageDetails = DetailNameCodeType.new("ShippingPackageDetails")
@@ -27241,25 +29500,10 @@ end
 
 # {urn:ebay:apis:eBLBaseComponents}DeviceTypeCodeType
 class DeviceTypeCodeType < ::String
+  ClientAlerts = DeviceTypeCodeType.new("ClientAlerts")
   CustomCode = DeviceTypeCodeType.new("CustomCode")
   Platform = DeviceTypeCodeType.new("Platform")
   SMS = DeviceTypeCodeType.new("SMS")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DigitalDeliveryEnabledCodeType
-class DigitalDeliveryEnabledCodeType < ::String
-  CustomCode = DigitalDeliveryEnabledCodeType.new("CustomCode")
-  Disabled = DigitalDeliveryEnabledCodeType.new("Disabled")
-  Enabled = DigitalDeliveryEnabledCodeType.new("Enabled")
-  Promoted = DigitalDeliveryEnabledCodeType.new("Promoted")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}DigitalDeliveryMethodCodeType
-class DigitalDeliveryMethodCodeType < ::String
-  AlternateDeliveryInstructions = DigitalDeliveryMethodCodeType.new("AlternateDeliveryInstructions")
-  CustomCode = DigitalDeliveryMethodCodeType.new("CustomCode")
-  DownloadURL = DigitalDeliveryMethodCodeType.new("DownloadURL")
-  None = DigitalDeliveryMethodCodeType.new("None")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}DiscountCodeType
@@ -27349,38 +29593,6 @@ class EscrowCodeType < ::String
   None = EscrowCodeType.new("None")
 end
 
-# {urn:ebay:apis:eBLBaseComponents}ExpressDetailLevelCodeType
-class ExpressDetailLevelCodeType < ::String
-  Coarse = ExpressDetailLevelCodeType.new("Coarse")
-  CustomCode = ExpressDetailLevelCodeType.new("CustomCode")
-  Fine = ExpressDetailLevelCodeType.new("Fine")
-  None = ExpressDetailLevelCodeType.new("None")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}ExpressHistogramSortCodeType
-class ExpressHistogramSortCodeType < ::String
-  Alphabetical = ExpressHistogramSortCodeType.new("Alphabetical")
-  CustomCode = ExpressHistogramSortCodeType.new("CustomCode")
-  ItemCount = ExpressHistogramSortCodeType.new("ItemCount")
-  ProductCount = ExpressHistogramSortCodeType.new("ProductCount")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}ExpressItemSortCodeType
-class ExpressItemSortCodeType < ::String
-  CustomCode = ExpressItemSortCodeType.new("CustomCode")
-  HighestTotalCost = ExpressItemSortCodeType.new("HighestTotalCost")
-  LowestTotalCost = ExpressItemSortCodeType.new("LowestTotalCost")
-  Relevance = ExpressItemSortCodeType.new("Relevance")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}ExpressProductSortCodeType
-class ExpressProductSortCodeType < ::String
-  CustomCode = ExpressProductSortCodeType.new("CustomCode")
-  HighestPrice = ExpressProductSortCodeType.new("HighestPrice")
-  LowestPrice = ExpressProductSortCodeType.new("LowestPrice")
-  SalesRank = ExpressProductSortCodeType.new("SalesRank")
-end
-
 # {urn:ebay:apis:eBLBaseComponents}ExpressSellingPreferenceCodeType
 class ExpressSellingPreferenceCodeType < ::String
   All = ExpressSellingPreferenceCodeType.new("All")
@@ -27408,9 +29620,12 @@ class FeatureIDCodeType < ::String
   BestOfferAutoDeclineEnabled = FeatureIDCodeType.new("BestOfferAutoDeclineEnabled")
   BestOfferCounterEnabled = FeatureIDCodeType.new("BestOfferCounterEnabled")
   BestOfferEnabled = FeatureIDCodeType.new("BestOfferEnabled")
+  BuyerGuaranteeEnabled = FeatureIDCodeType.new("BuyerGuaranteeEnabled")
   ClassifiedAdAutoAcceptEnabled = FeatureIDCodeType.new("ClassifiedAdAutoAcceptEnabled")
   ClassifiedAdAutoDeclineEnabled = FeatureIDCodeType.new("ClassifiedAdAutoDeclineEnabled")
   ClassifiedAdBestOfferEnabled = FeatureIDCodeType.new("ClassifiedAdBestOfferEnabled")
+  ClassifiedAdCompanyNameEnabled = FeatureIDCodeType.new("ClassifiedAdCompanyNameEnabled")
+  ClassifiedAdContactByAddressEnabled = FeatureIDCodeType.new("ClassifiedAdContactByAddressEnabled")
   ClassifiedAdContactByEmailAvailable = FeatureIDCodeType.new("ClassifiedAdContactByEmailAvailable")
   ClassifiedAdContactByEmailEnabled = FeatureIDCodeType.new("ClassifiedAdContactByEmailEnabled")
   ClassifiedAdContactByPhoneEnabled = FeatureIDCodeType.new("ClassifiedAdContactByPhoneEnabled")
@@ -27419,31 +29634,72 @@ class FeatureIDCodeType < ::String
   ClassifiedAdPayPerLeadEnabled = FeatureIDCodeType.new("ClassifiedAdPayPerLeadEnabled")
   ClassifiedAdPaymentMethodEnabled = FeatureIDCodeType.new("ClassifiedAdPaymentMethodEnabled")
   ClassifiedAdShippingMethodEnabled = FeatureIDCodeType.new("ClassifiedAdShippingMethodEnabled")
+  CombinedFixedPriceTreatment = FeatureIDCodeType.new("CombinedFixedPriceTreatment")
+  CrossBorderTradeEnabled = FeatureIDCodeType.new("CrossBorderTradeEnabled")
   CustomCode = FeatureIDCodeType.new("CustomCode")
   DigitalDeliveryEnabled = FeatureIDCodeType.new("DigitalDeliveryEnabled")
   DutchBINEnabled = FeatureIDCodeType.new("DutchBINEnabled")
+  EBayMotorsProAdFormatEnabled = FeatureIDCodeType.new("eBayMotorsProAdFormatEnabled")
+  EBayMotorsProAutoAcceptEnabled = FeatureIDCodeType.new("eBayMotorsProAutoAcceptEnabled")
+  EBayMotorsProAutoDeclineEnabled = FeatureIDCodeType.new("eBayMotorsProAutoDeclineEnabled")
+  EBayMotorsProBestOfferEnabled = FeatureIDCodeType.new("eBayMotorsProBestOfferEnabled")
+  EBayMotorsProCompanyNameEnabled = FeatureIDCodeType.new("eBayMotorsProCompanyNameEnabled")
+  EBayMotorsProContactByAddressEnabled = FeatureIDCodeType.new("eBayMotorsProContactByAddressEnabled")
+  EBayMotorsProContactByEmailEnabled = FeatureIDCodeType.new("eBayMotorsProContactByEmailEnabled")
+  EBayMotorsProContactByPhoneEnabled = FeatureIDCodeType.new("eBayMotorsProContactByPhoneEnabled")
+  EBayMotorsProCounterOfferEnabled = FeatureIDCodeType.new("eBayMotorsProCounterOfferEnabled")
+  EBayMotorsProPaymentMethodCheckOutEnabled = FeatureIDCodeType.new("eBayMotorsProPaymentMethodCheckOutEnabled")
+  EBayMotorsProSellerContactDetailsEnabled = FeatureIDCodeType.new("eBayMotorsProSellerContactDetailsEnabled")
+  EBayMotorsProShippingMethodEnabled = FeatureIDCodeType.new("eBayMotorsProShippingMethodEnabled")
   ExpressConditionRequired = FeatureIDCodeType.new("ExpressConditionRequired")
   ExpressEnabled = FeatureIDCodeType.new("ExpressEnabled")
   ExpressPicturesRequired = FeatureIDCodeType.new("ExpressPicturesRequired")
+  GalleryFeaturedDurations = FeatureIDCodeType.new("GalleryFeaturedDurations")
+  HandlingTimeEnabled = FeatureIDCodeType.new("HandlingTimeEnabled")
   HomePageFeaturedEnabled = FeatureIDCodeType.new("HomePageFeaturedEnabled")
+  INEscrowWorkflowTimeline = FeatureIDCodeType.new("INEscrowWorkflowTimeline")
   ItemSpecificsEnabled = FeatureIDCodeType.new("ItemSpecificsEnabled")
   ListingDurations = FeatureIDCodeType.new("ListingDurations")
   LocalListingDistances = FeatureIDCodeType.new("LocalListingDistances")
+  LocalMarketAdFormatEnabled = FeatureIDCodeType.new("LocalMarketAdFormatEnabled")
+  LocalMarketAutoAcceptEnabled = FeatureIDCodeType.new("LocalMarketAutoAcceptEnabled")
+  LocalMarketAutoDeclineEnabled = FeatureIDCodeType.new("LocalMarketAutoDeclineEnabled")
+  LocalMarketBestOfferEnabled = FeatureIDCodeType.new("LocalMarketBestOfferEnabled")
+  LocalMarketCompanyNameEnabled = FeatureIDCodeType.new("LocalMarketCompanyNameEnabled")
+  LocalMarketContactByAddressEnabled = FeatureIDCodeType.new("LocalMarketContactByAddressEnabled")
+  LocalMarketContactByEmailEnabled = FeatureIDCodeType.new("LocalMarketContactByEmailEnabled")
+  LocalMarketContactByPhoneEnabled = FeatureIDCodeType.new("LocalMarketContactByPhoneEnabled")
+  LocalMarketCounterOfferEnabled = FeatureIDCodeType.new("LocalMarketCounterOfferEnabled")
   LocalMarketNonSubscription = FeatureIDCodeType.new("LocalMarketNonSubscription")
+  LocalMarketPaymentMethodCheckOutEnabled = FeatureIDCodeType.new("LocalMarketPaymentMethodCheckOutEnabled")
   LocalMarketPremiumSubscription = FeatureIDCodeType.new("LocalMarketPremiumSubscription")
   LocalMarketRegularSubscription = FeatureIDCodeType.new("LocalMarketRegularSubscription")
+  LocalMarketSellerContactDetailsEnabled = FeatureIDCodeType.new("LocalMarketSellerContactDetailsEnabled")
+  LocalMarketShippingMethodEnabled = FeatureIDCodeType.new("LocalMarketShippingMethodEnabled")
   LocalMarketSpecialitySubscription = FeatureIDCodeType.new("LocalMarketSpecialitySubscription")
   MaximumBestOffersAllowed = FeatureIDCodeType.new("MaximumBestOffersAllowed")
   MinimumReservePrice = FeatureIDCodeType.new("MinimumReservePrice")
+  NonSubscription = FeatureIDCodeType.new("NonSubscription")
   PaisaPayFullEscrowEnabled = FeatureIDCodeType.new("PaisaPayFullEscrowEnabled")
+  PayPalBuyerProtectionEnabled = FeatureIDCodeType.new("PayPalBuyerProtectionEnabled")
+  PayPalRequired = FeatureIDCodeType.new("PayPalRequired")
+  PayPalRequiredForStoreOwner = FeatureIDCodeType.new("PayPalRequiredForStoreOwner")
+  PremiumSubscription = FeatureIDCodeType.new("PremiumSubscription")
   ProPack = FeatureIDCodeType.new("ProPack")
   ProPackPlus = FeatureIDCodeType.new("ProPackPlus")
+  RegularSubscription = FeatureIDCodeType.new("RegularSubscription")
+  ReturnPolicyEnabled = FeatureIDCodeType.new("ReturnPolicyEnabled")
+  RevisePriceAllowed = FeatureIDCodeType.new("RevisePriceAllowed")
+  ReviseQuantityAllowed = FeatureIDCodeType.new("ReviseQuantityAllowed")
   SafePaymentRequired = FeatureIDCodeType.new("SafePaymentRequired")
   SellerContactDetailsEnabled = FeatureIDCodeType.new("SellerContactDetailsEnabled")
   ShippingTermsRequired = FeatureIDCodeType.new("ShippingTermsRequired")
   SkypeMeNonTransactionalEnabled = FeatureIDCodeType.new("SkypeMeNonTransactionalEnabled")
   SkypeMeTransactionalEnabled = FeatureIDCodeType.new("SkypeMeTransactionalEnabled")
+  SpecialitySubscription = FeatureIDCodeType.new("SpecialitySubscription")
   StoreInventoryEnabled = FeatureIDCodeType.new("StoreInventoryEnabled")
+  StoreOwnerExtendedListingDurations = FeatureIDCodeType.new("StoreOwnerExtendedListingDurations")
+  StoreOwnerExtendedListingDurationsEnabled = FeatureIDCodeType.new("StoreOwnerExtendedListingDurationsEnabled")
   TransactionConfirmationRequestEnabled = FeatureIDCodeType.new("TransactionConfirmationRequestEnabled")
   UserConsentRequired = FeatureIDCodeType.new("UserConsentRequired")
   ValuePack = FeatureIDCodeType.new("ValuePack")
@@ -27479,6 +29735,13 @@ class FeedbackResponseCodeType < ::String
   CustomCode = FeedbackResponseCodeType.new("CustomCode")
   FollowUp = FeedbackResponseCodeType.new("FollowUp")
   Reply = FeedbackResponseCodeType.new("Reply")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}FeedbackSummaryPeriodCodeType
+class FeedbackSummaryPeriodCodeType < ::String
+  CustomCode = FeedbackSummaryPeriodCodeType.new("CustomCode")
+  FiftyTwoWeeks = FeedbackSummaryPeriodCodeType.new("FiftyTwoWeeks")
+  ThirtyDays = FeedbackSummaryPeriodCodeType.new("ThirtyDays")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}FlatRateInsuranceRangeCodeType
@@ -27527,6 +29790,14 @@ class GeneralPaymentMethodCodeType < ::String
   PayPalBalance = GeneralPaymentMethodCodeType.new("PayPalBalance")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}GeographicExposureCodeType
+class GeographicExposureCodeType < ::String
+  CustomCode = GeographicExposureCodeType.new("CustomCode")
+  LocalOnly = GeographicExposureCodeType.new("LocalOnly")
+  LocalOptional = GeographicExposureCodeType.new("LocalOptional")
+  National = GeographicExposureCodeType.new("National")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}GetAllBiddersModeCodeType
 class GetAllBiddersModeCodeType < ::String
   CustomCode = GetAllBiddersModeCodeType.new("CustomCode")
@@ -27573,6 +29844,14 @@ class HitCounterCodeType < ::String
   RetroStyle = HitCounterCodeType.new("RetroStyle")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}INEscrowWorkflowTimelineCodeType
+class INEscrowWorkflowTimelineCodeType < ::String
+  CustomCode = INEscrowWorkflowTimelineCodeType.new("CustomCode")
+  Default = INEscrowWorkflowTimelineCodeType.new("Default")
+  WorkflowA = INEscrowWorkflowTimelineCodeType.new("WorkflowA")
+  WorkflowB = INEscrowWorkflowTimelineCodeType.new("WorkflowB")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}InsuranceOptionCodeType
 class InsuranceOptionCodeType < ::String
   CustomCode = InsuranceOptionCodeType.new("CustomCode")
@@ -27591,6 +29870,13 @@ class InsuranceSelectedCodeType < ::String
   OfferedNotSelected = InsuranceSelectedCodeType.new("OfferedNotSelected")
   OfferedSelected = InsuranceSelectedCodeType.new("OfferedSelected")
   Required = InsuranceSelectedCodeType.new("Required")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}InventoryTrackingMethodCodeType
+class InventoryTrackingMethodCodeType < ::String
+  CustomCode = InventoryTrackingMethodCodeType.new("CustomCode")
+  ItemID = InventoryTrackingMethodCodeType.new("ItemID")
+  SKU = InventoryTrackingMethodCodeType.new("SKU")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ItemConditionCodeType
@@ -27723,6 +30009,21 @@ class ItemSpecificsEnabledCodeType < ::String
   Enabled = ItemSpecificsEnabledCodeType.new("Enabled")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}ItemTypeCodeType
+class ItemTypeCodeType < ::String
+  AdFormat = ItemTypeCodeType.new("AdFormat")
+  AllFixedPriceItemTypes = ItemTypeCodeType.new("AllFixedPriceItemTypes")
+  AllItemTypes = ItemTypeCodeType.new("AllItemTypes")
+  AllItems = ItemTypeCodeType.new("AllItems")
+  AuctionItemsOnly = ItemTypeCodeType.new("AuctionItemsOnly")
+  ClassifiedItemsOnly = ItemTypeCodeType.new("ClassifiedItemsOnly")
+  CustomCode = ItemTypeCodeType.new("CustomCode")
+  ExcludeStoreInventory = ItemTypeCodeType.new("ExcludeStoreInventory")
+  FixedPriceExcludeStoreInventory = ItemTypeCodeType.new("FixedPriceExcludeStoreInventory")
+  FixedPricedItem = ItemTypeCodeType.new("FixedPricedItem")
+  StoreInventoryOnly = ItemTypeCodeType.new("StoreInventoryOnly")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}ItemTypeFilterCodeType
 class ItemTypeFilterCodeType < ::String
   AllFixedPriceItemTypes = ItemTypeFilterCodeType.new("AllFixedPriceItemTypes")
@@ -27752,6 +30053,62 @@ class ListingDurationCodeType < ::String
   Days_7 = ListingDurationCodeType.new("Days_7")
   Days_90 = ListingDurationCodeType.new("Days_90")
   GTC = ListingDurationCodeType.new("GTC")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ListingEnhancementDurationCodeType
+class ListingEnhancementDurationCodeType < ::String
+  CustomCode = ListingEnhancementDurationCodeType.new("CustomCode")
+  Days_1 = ListingEnhancementDurationCodeType.new("Days_1")
+  Days_10 = ListingEnhancementDurationCodeType.new("Days_10")
+  Days_11 = ListingEnhancementDurationCodeType.new("Days_11")
+  Days_12 = ListingEnhancementDurationCodeType.new("Days_12")
+  Days_13 = ListingEnhancementDurationCodeType.new("Days_13")
+  Days_14 = ListingEnhancementDurationCodeType.new("Days_14")
+  Days_15 = ListingEnhancementDurationCodeType.new("Days_15")
+  Days_16 = ListingEnhancementDurationCodeType.new("Days_16")
+  Days_17 = ListingEnhancementDurationCodeType.new("Days_17")
+  Days_18 = ListingEnhancementDurationCodeType.new("Days_18")
+  Days_19 = ListingEnhancementDurationCodeType.new("Days_19")
+  Days_2 = ListingEnhancementDurationCodeType.new("Days_2")
+  Days_20 = ListingEnhancementDurationCodeType.new("Days_20")
+  Days_21 = ListingEnhancementDurationCodeType.new("Days_21")
+  Days_22 = ListingEnhancementDurationCodeType.new("Days_22")
+  Days_23 = ListingEnhancementDurationCodeType.new("Days_23")
+  Days_24 = ListingEnhancementDurationCodeType.new("Days_24")
+  Days_25 = ListingEnhancementDurationCodeType.new("Days_25")
+  Days_26 = ListingEnhancementDurationCodeType.new("Days_26")
+  Days_27 = ListingEnhancementDurationCodeType.new("Days_27")
+  Days_28 = ListingEnhancementDurationCodeType.new("Days_28")
+  Days_29 = ListingEnhancementDurationCodeType.new("Days_29")
+  Days_3 = ListingEnhancementDurationCodeType.new("Days_3")
+  Days_30 = ListingEnhancementDurationCodeType.new("Days_30")
+  Days_31 = ListingEnhancementDurationCodeType.new("Days_31")
+  Days_32 = ListingEnhancementDurationCodeType.new("Days_32")
+  Days_33 = ListingEnhancementDurationCodeType.new("Days_33")
+  Days_34 = ListingEnhancementDurationCodeType.new("Days_34")
+  Days_35 = ListingEnhancementDurationCodeType.new("Days_35")
+  Days_36 = ListingEnhancementDurationCodeType.new("Days_36")
+  Days_37 = ListingEnhancementDurationCodeType.new("Days_37")
+  Days_38 = ListingEnhancementDurationCodeType.new("Days_38")
+  Days_39 = ListingEnhancementDurationCodeType.new("Days_39")
+  Days_4 = ListingEnhancementDurationCodeType.new("Days_4")
+  Days_40 = ListingEnhancementDurationCodeType.new("Days_40")
+  Days_41 = ListingEnhancementDurationCodeType.new("Days_41")
+  Days_42 = ListingEnhancementDurationCodeType.new("Days_42")
+  Days_43 = ListingEnhancementDurationCodeType.new("Days_43")
+  Days_44 = ListingEnhancementDurationCodeType.new("Days_44")
+  Days_45 = ListingEnhancementDurationCodeType.new("Days_45")
+  Days_46 = ListingEnhancementDurationCodeType.new("Days_46")
+  Days_47 = ListingEnhancementDurationCodeType.new("Days_47")
+  Days_48 = ListingEnhancementDurationCodeType.new("Days_48")
+  Days_49 = ListingEnhancementDurationCodeType.new("Days_49")
+  Days_5 = ListingEnhancementDurationCodeType.new("Days_5")
+  Days_50 = ListingEnhancementDurationCodeType.new("Days_50")
+  Days_6 = ListingEnhancementDurationCodeType.new("Days_6")
+  Days_7 = ListingEnhancementDurationCodeType.new("Days_7")
+  Days_8 = ListingEnhancementDurationCodeType.new("Days_8")
+  Days_9 = ListingEnhancementDurationCodeType.new("Days_9")
+  Lifetime = ListingEnhancementDurationCodeType.new("Lifetime")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ListingEnhancementsCodeType
@@ -27805,6 +30162,7 @@ class ListingTypeCodeType < ::String
   LeadGeneration = ListingTypeCodeType.new("LeadGeneration")
   Live = ListingTypeCodeType.new("Live")
   PersonalOffer = ListingTypeCodeType.new("PersonalOffer")
+  Shopping = ListingTypeCodeType.new("Shopping")
   StoresFixedPrice = ListingTypeCodeType.new("StoresFixedPrice")
   Unknown = ListingTypeCodeType.new("Unknown")
 end
@@ -27963,6 +30321,7 @@ class NotificationEventTypeCodeType < ::String
   ItemSuspended = NotificationEventTypeCodeType.new("ItemSuspended")
   ItemUnsold = NotificationEventTypeCodeType.new("ItemUnsold")
   ItemWon = NotificationEventTypeCodeType.new("ItemWon")
+  ItemsCanceled = NotificationEventTypeCodeType.new("ItemsCanceled")
   MyMessagesAlert = NotificationEventTypeCodeType.new("MyMessagesAlert")
   MyMessagesAlertHeader = NotificationEventTypeCodeType.new("MyMessagesAlertHeader")
   MyMessagesM2MMessage = NotificationEventTypeCodeType.new("MyMessagesM2MMessage")
@@ -27979,6 +30338,7 @@ class NotificationEventTypeCodeType < ::String
   SellerOpenedDispute = NotificationEventTypeCodeType.new("SellerOpenedDispute")
   SellerRespondedToDispute = NotificationEventTypeCodeType.new("SellerRespondedToDispute")
   ThirdPartyCartCheckout = NotificationEventTypeCodeType.new("ThirdPartyCartCheckout")
+  TokenRevocation = NotificationEventTypeCodeType.new("TokenRevocation")
   UserIDChanged = NotificationEventTypeCodeType.new("UserIDChanged")
   WatchedItemEndingSoon = NotificationEventTypeCodeType.new("WatchedItemEndingSoon")
 end
@@ -28109,6 +30469,16 @@ class PaymentTypeCodeType < ::String
   SellerDeniedPayment = PaymentTypeCodeType.new("SellerDeniedPayment")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}PeriodCodeType
+class PeriodCodeType < ::String
+  CustomCode = PeriodCodeType.new("CustomCode")
+  Days_1 = PeriodCodeType.new("Days_1")
+  Days_180 = PeriodCodeType.new("Days_180")
+  Days_30 = PeriodCodeType.new("Days_30")
+  Days_360 = PeriodCodeType.new("Days_360")
+  Days_540 = PeriodCodeType.new("Days_540")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}PhotoDisplayCodeType
 class PhotoDisplayCodeType < ::String
   CustomCode = PhotoDisplayCodeType.new("CustomCode")
@@ -28190,6 +30560,25 @@ class PictureUploadPolicyCodeType < ::String
   CustomCode = PictureUploadPolicyCodeType.new("CustomCode")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}PolicyComplianceStatusCodeType
+class PolicyComplianceStatusCodeType < ::String
+  CustomCode = PolicyComplianceStatusCodeType.new("CustomCode")
+  Failing = PolicyComplianceStatusCodeType.new("Failing")
+  Fair = PolicyComplianceStatusCodeType.new("Fair")
+  Good = PolicyComplianceStatusCodeType.new("Good")
+  Poor = PolicyComplianceStatusCodeType.new("Poor")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}PreferredLocationCodeType
+class PreferredLocationCodeType < ::String
+  AvailableInCountryImplied = PreferredLocationCodeType.new("AvailableInCountryImplied")
+  BelgiumListing = PreferredLocationCodeType.new("BelgiumListing")
+  CustomCode = PreferredLocationCodeType.new("CustomCode")
+  ListedInCurrencyImplied = PreferredLocationCodeType.new("ListedInCurrencyImplied")
+  LocatedInCountryImplied = PreferredLocationCodeType.new("LocatedInCountryImplied")
+  SiteImplied = PreferredLocationCodeType.new("SiteImplied")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}ProductSortCodeType
 class ProductSortCodeType < ::String
   CustomCode = ProductSortCodeType.new("CustomCode")
@@ -28203,6 +30592,16 @@ class ProductSortCodeType < ::String
   ReviewCountDesc = ProductSortCodeType.new("ReviewCountDesc")
   TitleAsc = ProductSortCodeType.new("TitleAsc")
   TitleDesc = ProductSortCodeType.new("TitleDesc")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ProductStateCodeType
+class ProductStateCodeType < ::String
+  CustomCode = ProductStateCodeType.new("CustomCode")
+  Delete = ProductStateCodeType.new("Delete")
+  Merge = ProductStateCodeType.new("Merge")
+  Update = ProductStateCodeType.new("Update")
+  UpdateMajor = ProductStateCodeType.new("UpdateMajor")
+  UpdateNoDetails = ProductStateCodeType.new("UpdateNoDetails")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ProductUseCaseCodeType
@@ -28297,6 +30696,7 @@ class QuestionTypeCodeType < ::String
   CustomizedSubject = QuestionTypeCodeType.new("CustomizedSubject")
   General = QuestionTypeCodeType.new("General")
   MultipleItemShipping = QuestionTypeCodeType.new("MultipleItemShipping")
+  None = QuestionTypeCodeType.new("None")
   Payment = QuestionTypeCodeType.new("Payment")
   Shipping = QuestionTypeCodeType.new("Shipping")
 end
@@ -28335,6 +30735,14 @@ class RecommendationEngineCodeType < ::String
   SuggestedAttributes = RecommendationEngineCodeType.new("SuggestedAttributes")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}RefundOptionsCodeType
+class RefundOptionsCodeType < ::String
+  CustomCode = RefundOptionsCodeType.new("CustomCode")
+  Exchange = RefundOptionsCodeType.new("Exchange")
+  MerchandiseCredit = RefundOptionsCodeType.new("MerchandiseCredit")
+  MoneyBack = RefundOptionsCodeType.new("MoneyBack")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}RefundReasonCodeType
 class RefundReasonCodeType < ::String
   BuyerRemorse = RefundReasonCodeType.new("BuyerRemorse")
@@ -28354,6 +30762,24 @@ class RefundTypeCodeType < ::String
   FullPlusShipping = RefundTypeCodeType.new("FullPlusShipping")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}ReturnsAcceptedOptionsCodeType
+class ReturnsAcceptedOptionsCodeType < ::String
+  CustomCode = ReturnsAcceptedOptionsCodeType.new("CustomCode")
+  ReturnsAccepted = ReturnsAcceptedOptionsCodeType.new("ReturnsAccepted")
+  ReturnsNotAccepted = ReturnsAcceptedOptionsCodeType.new("ReturnsNotAccepted")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ReturnsWithinOptionsCodeType
+class ReturnsWithinOptionsCodeType < ::String
+  CustomCode = ReturnsWithinOptionsCodeType.new("CustomCode")
+  Days_10 = ReturnsWithinOptionsCodeType.new("Days_10")
+  Days_14 = ReturnsWithinOptionsCodeType.new("Days_14")
+  Days_3 = ReturnsWithinOptionsCodeType.new("Days_3")
+  Days_30 = ReturnsWithinOptionsCodeType.new("Days_30")
+  Days_60 = ReturnsWithinOptionsCodeType.new("Days_60")
+  Days_7 = ReturnsWithinOptionsCodeType.new("Days_7")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}SMSSubscriptionErrorCodeCodeType
 class SMSSubscriptionErrorCodeCodeType < ::String
   CustomCode = SMSSubscriptionErrorCodeCodeType.new("CustomCode")
@@ -28371,6 +30797,22 @@ class SMSSubscriptionUserStatusCodeType < ::String
   Pending = SMSSubscriptionUserStatusCodeType.new("Pending")
   Registered = SMSSubscriptionUserStatusCodeType.new("Registered")
   Unregistered = SMSSubscriptionUserStatusCodeType.new("Unregistered")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}SearchFlagCodeType
+class SearchFlagCodeType < ::String
+  Charity = SearchFlagCodeType.new("Charity")
+  CustomCode = SearchFlagCodeType.new("CustomCode")
+  DigitalDelivery = SearchFlagCodeType.new("DigitalDelivery")
+  FreeShipping = SearchFlagCodeType.new("FreeShipping")
+  Gallery = SearchFlagCodeType.new("Gallery")
+  GermanMotorsSearchable = SearchFlagCodeType.new("GermanMotorsSearchable")
+  GetItFast = SearchFlagCodeType.new("GetItFast")
+  Gift = SearchFlagCodeType.new("Gift")
+  LocalSearch = SearchFlagCodeType.new("LocalSearch")
+  Lot = SearchFlagCodeType.new("Lot")
+  NowAndNew = SearchFlagCodeType.new("NowAndNew")
+  Picture = SearchFlagCodeType.new("Picture")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SearchFlagsCodeType
@@ -28416,6 +30858,14 @@ class SearchSortOrderCodeType < ::String
   SortByStartDate = SearchSortOrderCodeType.new("SortByStartDate")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}SearchStandingStatusCodeType
+class SearchStandingStatusCodeType < ::String
+  CustomCode = SearchStandingStatusCodeType.new("CustomCode")
+  Lowered = SearchStandingStatusCodeType.new("Lowered")
+  Raised = SearchStandingStatusCodeType.new("Raised")
+  Standard = SearchStandingStatusCodeType.new("Standard")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}SearchTypeCodeType
 class SearchTypeCodeType < ::String
   All = SearchTypeCodeType.new("All")
@@ -28439,12 +30889,28 @@ class SelectionModeCodeType < ::String
   Manual = SelectionModeCodeType.new("Manual")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}SellerAccountStatusCodeType
+class SellerAccountStatusCodeType < ::String
+  Current = SellerAccountStatusCodeType.new("Current")
+  CustomCode = SellerAccountStatusCodeType.new("CustomCode")
+  OnHold = SellerAccountStatusCodeType.new("OnHold")
+  PastDue = SellerAccountStatusCodeType.new("PastDue")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}SellerBusinessCodeType
 class SellerBusinessCodeType < ::String
   Commercial = SellerBusinessCodeType.new("Commercial")
   CustomCode = SellerBusinessCodeType.new("CustomCode")
   Private = SellerBusinessCodeType.new("Private")
   Undefined = SellerBusinessCodeType.new("Undefined")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}SellerDashboardAlertSeverityCodeType
+class SellerDashboardAlertSeverityCodeType < ::String
+  CustomCode = SellerDashboardAlertSeverityCodeType.new("CustomCode")
+  Informational = SellerDashboardAlertSeverityCodeType.new("Informational")
+  StrongWarning = SellerDashboardAlertSeverityCodeType.new("StrongWarning")
+  Warning = SellerDashboardAlertSeverityCodeType.new("Warning")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SellerGuaranteeLevelCodeType
@@ -28515,10 +30981,18 @@ class ShippingCarrierCodeType < ::String
   DeutschePost = ShippingCarrierCodeType.new("DeutschePost")
   Hermes = ShippingCarrierCodeType.new("Hermes")
   ILoxx = ShippingCarrierCodeType.new("iLoxx")
+  Nacex = ShippingCarrierCodeType.new("Nacex")
   Other = ShippingCarrierCodeType.new("Other")
   Seur = ShippingCarrierCodeType.new("Seur")
   UPS = ShippingCarrierCodeType.new("UPS")
   USPS = ShippingCarrierCodeType.new("USPS")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}ShippingCostPaidByOptionsCodeType
+class ShippingCostPaidByOptionsCodeType < ::String
+  Buyer = ShippingCostPaidByOptionsCodeType.new("Buyer")
+  CustomCode = ShippingCostPaidByOptionsCodeType.new("CustomCode")
+  Seller = ShippingCostPaidByOptionsCodeType.new("Seller")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}ShippingFeatureCodeType
@@ -28648,6 +31122,10 @@ class ShippingServiceCodeType < ::String
   AU_PrePaidParcelPostSatchels3kg = ShippingServiceCodeType.new("AU_PrePaidParcelPostSatchels3kg")
   AU_PrePaidParcelPostSatchels500g = ShippingServiceCodeType.new("AU_PrePaidParcelPostSatchels500g")
   AU_Registered = ShippingServiceCodeType.new("AU_Registered")
+  AU_RegisteredParcelPost = ShippingServiceCodeType.new("AU_RegisteredParcelPost")
+  AU_RegisteredParcelPostPrepaidSatchel3kg = ShippingServiceCodeType.new("AU_RegisteredParcelPostPrepaidSatchel3kg")
+  AU_RegisteredParcelPostPrepaidSatchel500g = ShippingServiceCodeType.new("AU_RegisteredParcelPostPrepaidSatchel500g")
+  AU_RegisteredSmallParcel = ShippingServiceCodeType.new("AU_RegisteredSmallParcel")
   AU_Regular = ShippingServiceCodeType.new("AU_Regular")
   AU_RegularWithInsurance = ShippingServiceCodeType.new("AU_RegularWithInsurance")
   AU_SeaMailInternational = ShippingServiceCodeType.new("AU_SeaMailInternational")
@@ -28658,10 +31136,15 @@ class ShippingServiceCodeType < ::String
   BEFR_ExpeditedInternational = ShippingServiceCodeType.new("BEFR_ExpeditedInternational")
   BEFR_ExpressTaxipost = ShippingServiceCodeType.new("BEFR_ExpressTaxipost")
   BEFR_FedExInternational = ShippingServiceCodeType.new("BEFR_FedExInternational")
+  BEFR_LaPosteCertifiedShipping = ShippingServiceCodeType.new("BEFR_LaPosteCertifiedShipping")
   BEFR_LaPosteEnvoiNONPRIOR = ShippingServiceCodeType.new("BEFR_LaPosteEnvoiNONPRIOR")
   BEFR_LaPosteEnvoiPRIOR = ShippingServiceCodeType.new("BEFR_LaPosteEnvoiPRIOR")
   BEFR_LaPosteEnvoiRecommande = ShippingServiceCodeType.new("BEFR_LaPosteEnvoiRecommande")
   BEFR_LaPosteInternational = ShippingServiceCodeType.new("BEFR_LaPosteInternational")
+  BEFR_LaPosteStandardShipping = ShippingServiceCodeType.new("BEFR_LaPosteStandardShipping")
+  BEFR_LaPosteTaxipost24h = ShippingServiceCodeType.new("BEFR_LaPosteTaxipost24h")
+  BEFR_LaPosteTaxipostLLS = ShippingServiceCodeType.new("BEFR_LaPosteTaxipostLLS")
+  BEFR_LaPosteTaxipostSecur = ShippingServiceCodeType.new("BEFR_LaPosteTaxipostSecur")
   BEFR_LaPosteenvoieNONPRIOR = ShippingServiceCodeType.new("BEFR_LaPosteenvoieNONPRIOR")
   BEFR_LaPosteenvoiePRIOR = ShippingServiceCodeType.new("BEFR_LaPosteenvoiePRIOR")
   BEFR_LaPosteenvoieRecommande = ShippingServiceCodeType.new("BEFR_LaPosteenvoieRecommande")
@@ -28678,15 +31161,23 @@ class ShippingServiceCodeType < ::String
   BEFR_ParcelPost = ShippingServiceCodeType.new("BEFR_ParcelPost")
   BEFR_Pickup = ShippingServiceCodeType.new("BEFR_Pickup")
   BEFR_PointRetraitKiala = ShippingServiceCodeType.new("BEFR_PointRetraitKiala")
+  BEFR_PostInternationalRegistered = ShippingServiceCodeType.new("BEFR_PostInternationalRegistered")
+  BEFR_PostInternationalStandard = ShippingServiceCodeType.new("BEFR_PostInternationalStandard")
   BEFR_PriorityDelivery = ShippingServiceCodeType.new("BEFR_PriorityDelivery")
   BEFR_RegisteredMail = ShippingServiceCodeType.new("BEFR_RegisteredMail")
   BEFR_StandardDelivery = ShippingServiceCodeType.new("BEFR_StandardDelivery")
   BEFR_StandardInternational = ShippingServiceCodeType.new("BEFR_StandardInternational")
+  BEFR_TNTInternational = ShippingServiceCodeType.new("BEFR_TNTInternational")
   BEFR_TPGPostTNTInternational = ShippingServiceCodeType.new("BEFR_TPGPostTNTInternational")
   BEFR_Taxipost = ShippingServiceCodeType.new("BEFR_Taxipost")
   BEFR_UPSInternational = ShippingServiceCodeType.new("BEFR_UPSInternational")
   BENL_DHLInternational = ShippingServiceCodeType.new("BENL_DHLInternational")
+  BENL_DePostCertifiedShipping = ShippingServiceCodeType.new("BENL_DePostCertifiedShipping")
   BENL_DePostInternational = ShippingServiceCodeType.new("BENL_DePostInternational")
+  BENL_DePostStandardShipping = ShippingServiceCodeType.new("BENL_DePostStandardShipping")
+  BENL_DePostTaxipost24h = ShippingServiceCodeType.new("BENL_DePostTaxipost24h")
+  BENL_DePostTaxipostLLS = ShippingServiceCodeType.new("BENL_DePostTaxipostLLS")
+  BENL_DePostTaxipostSecur = ShippingServiceCodeType.new("BENL_DePostTaxipostSecur")
   BENL_DePostZendingAangetekend = ShippingServiceCodeType.new("BENL_DePostZendingAangetekend")
   BENL_DePostZendingAangetekendInternational = ShippingServiceCodeType.new("BENL_DePostZendingAangetekendInternational")
   BENL_DePostZendingNONPRIOR = ShippingServiceCodeType.new("BENL_DePostZendingNONPRIOR")
@@ -28701,12 +31192,16 @@ class ShippingServiceCodeType < ::String
   BENL_LaPosteInternational = ShippingServiceCodeType.new("BENL_LaPosteInternational")
   BENL_Other = ShippingServiceCodeType.new("BENL_Other")
   BENL_OtherInternational = ShippingServiceCodeType.new("BENL_OtherInternational")
+  BENL_OtherShippingMethods = ShippingServiceCodeType.new("BENL_OtherShippingMethods")
   BENL_ParcelPost = ShippingServiceCodeType.new("BENL_ParcelPost")
   BENL_Pickup = ShippingServiceCodeType.new("BENL_Pickup")
+  BENL_PostInternationalRegistered = ShippingServiceCodeType.new("BENL_PostInternationalRegistered")
+  BENL_PostInternationalStandard = ShippingServiceCodeType.new("BENL_PostInternationalStandard")
   BENL_PriorityDelivery = ShippingServiceCodeType.new("BENL_PriorityDelivery")
   BENL_RegisteredMail = ShippingServiceCodeType.new("BENL_RegisteredMail")
   BENL_StandardDelivery = ShippingServiceCodeType.new("BENL_StandardDelivery")
   BENL_StandardInternational = ShippingServiceCodeType.new("BENL_StandardInternational")
+  BENL_TNTInternational = ShippingServiceCodeType.new("BENL_TNTInternational")
   BENL_TPGPostTNTInternational = ShippingServiceCodeType.new("BENL_TPGPostTNTInternational")
   BENL_Taxipost = ShippingServiceCodeType.new("BENL_Taxipost")
   BENL_TaxipostExpressverzending = ShippingServiceCodeType.new("BENL_TaxipostExpressverzending")
@@ -28831,13 +31326,22 @@ class ShippingServiceCodeType < ::String
   CN_RegularPackage = ShippingServiceCodeType.new("CN_RegularPackage")
   CN_StandardInternational = ShippingServiceCodeType.new("CN_StandardInternational")
   CN_StandardMailingInternational = ShippingServiceCodeType.new("CN_StandardMailingInternational")
+  CanadaPostExpeditedFlatRateBox = ShippingServiceCodeType.new("CanadaPostExpeditedFlatRateBox")
+  CanadaPostExpeditedFlatRateBoxUSA = ShippingServiceCodeType.new("CanadaPostExpeditedFlatRateBoxUSA")
+  Courier = ShippingServiceCodeType.new("Courier")
   CustomCode = ShippingServiceCodeType.new("CustomCode")
   DE_BitteTreffenSieEineAuswahl = ShippingServiceCodeType.new("DE_BitteTreffenSieEineAuswahl")
   DE_COD = ShippingServiceCodeType.new("DE_COD")
   DE_DHLPackchen = ShippingServiceCodeType.new("DE_DHLPackchen")
   DE_DHLPackchenInternational = ShippingServiceCodeType.new("DE_DHLPackchenInternational")
+  DE_DHLPaket = ShippingServiceCodeType.new("DE_DHLPaket")
+  DE_DHLPaketInternational = ShippingServiceCodeType.new("DE_DHLPaketInternational")
   DE_DHLPostpaket = ShippingServiceCodeType.new("DE_DHLPostpaket")
   DE_DHLPostpaketInternational = ShippingServiceCodeType.new("DE_DHLPostpaketInternational")
+  DE_DPBriefInternational = ShippingServiceCodeType.new("DE_DPBriefInternational")
+  DE_DPBuecherWarensendung = ShippingServiceCodeType.new("DE_DPBuecherWarensendung")
+  DE_DPD = ShippingServiceCodeType.new("DE_DPD")
+  DE_DPDInternational = ShippingServiceCodeType.new("DE_DPDInternational")
   DE_DeutschePostBrief = ShippingServiceCodeType.new("DE_DeutschePostBrief")
   DE_DeutschePostBriefInternational = ShippingServiceCodeType.new("DE_DeutschePostBriefInternational")
   DE_DeutschePostBriefLandInternational = ShippingServiceCodeType.new("DE_DeutschePostBriefLandInternational")
@@ -28846,16 +31350,25 @@ class ShippingServiceCodeType < ::String
   DE_DeutschePostByendung = ShippingServiceCodeType.new("DE_DeutschePostByendung")
   DE_DeutschePostWarensendung = ShippingServiceCodeType.new("DE_DeutschePostWarensendung")
   DE_DeutschePostWarensendungInternational = ShippingServiceCodeType.new("DE_DeutschePostWarensendungInternational")
+  DE_Einschreiben = ShippingServiceCodeType.new("DE_Einschreiben")
   DE_EinschreibenVersandInklEinschreibengebuhr = ShippingServiceCodeType.new("DE_EinschreibenVersandInklEinschreibengebuhr")
   DE_ExpeditedInternational = ShippingServiceCodeType.new("DE_ExpeditedInternational")
+  DE_Express = ShippingServiceCodeType.new("DE_Express")
+  DE_ExpressInternational = ShippingServiceCodeType.new("DE_ExpressInternational")
   DE_ExpressOrCourier = ShippingServiceCodeType.new("DE_ExpressOrCourier")
   DE_ExpressOrCourierInternational = ShippingServiceCodeType.new("DE_ExpressOrCourierInternational")
+  DE_GLS = ShippingServiceCodeType.new("DE_GLS")
+  DE_GLSInternational = ShippingServiceCodeType.new("DE_GLSInternational")
+  DE_HermesPaket = ShippingServiceCodeType.new("DE_HermesPaket")
+  DE_HermesPaketInternational = ShippingServiceCodeType.new("DE_HermesPaketInternational")
   DE_HermesPaketUnversichert = ShippingServiceCodeType.new("DE_HermesPaketUnversichert")
   DE_HermesPaketUnversichertInternational = ShippingServiceCodeType.new("DE_HermesPaketUnversichertInternational")
   DE_HermesPaketVersichert = ShippingServiceCodeType.new("DE_HermesPaketVersichert")
   DE_HermesPaketVersichertInternational = ShippingServiceCodeType.new("DE_HermesPaketVersichertInternational")
   DE_IloxxEuropaInternational = ShippingServiceCodeType.new("DE_IloxxEuropaInternational")
   DE_IloxxStandard = ShippingServiceCodeType.new("DE_IloxxStandard")
+  DE_IloxxTransport = ShippingServiceCodeType.new("DE_IloxxTransport")
+  DE_IloxxTransportInternational = ShippingServiceCodeType.new("DE_IloxxTransportInternational")
   DE_IloxxTransportXXL = ShippingServiceCodeType.new("DE_IloxxTransportXXL")
   DE_IloxxUbernachtExpress = ShippingServiceCodeType.new("DE_IloxxUbernachtExpress")
   DE_IloxxWorldWideInternational = ShippingServiceCodeType.new("DE_IloxxWorldWideInternational")
@@ -28864,13 +31377,21 @@ class ShippingServiceCodeType < ::String
   DE_InsuredExpressOrCourierInternational = ShippingServiceCodeType.new("DE_InsuredExpressOrCourierInternational")
   DE_InsuredSpecialDispatch = ShippingServiceCodeType.new("DE_InsuredSpecialDispatch")
   DE_NachnahmeVersandInklNachnahmegebuhr = ShippingServiceCodeType.new("DE_NachnahmeVersandInklNachnahmegebuhr")
+  DE_Nachname = ShippingServiceCodeType.new("DE_Nachname")
+  DE_Paket = ShippingServiceCodeType.new("DE_Paket")
+  DE_PaketInternational = ShippingServiceCodeType.new("DE_PaketInternational")
   DE_Pickup = ShippingServiceCodeType.new("DE_Pickup")
   DE_SonderversandZBMobelKFZ = ShippingServiceCodeType.new("DE_SonderversandZBMobelKFZ")
   DE_Sonstige = ShippingServiceCodeType.new("DE_Sonstige")
+  DE_SonstigeDomestic = ShippingServiceCodeType.new("DE_SonstigeDomestic")
+  DE_SonstigeInternational = ShippingServiceCodeType.new("DE_SonstigeInternational")
   DE_SonstigerVersandInternational = ShippingServiceCodeType.new("DE_SonstigerVersandInternational")
+  DE_SpecialDelivery = ShippingServiceCodeType.new("DE_SpecialDelivery")
   DE_SpecialDispatch = ShippingServiceCodeType.new("DE_SpecialDispatch")
   DE_StandardDispatch = ShippingServiceCodeType.new("DE_StandardDispatch")
   DE_StandardInternational = ShippingServiceCodeType.new("DE_StandardInternational")
+  DE_UPS = ShippingServiceCodeType.new("DE_UPS")
+  DE_UPSInternational = ShippingServiceCodeType.new("DE_UPSInternational")
   DE_UnversicherterExpressVersandInternational = ShippingServiceCodeType.new("DE_UnversicherterExpressVersandInternational")
   DE_UnversicherterVersand = ShippingServiceCodeType.new("DE_UnversicherterVersand")
   DE_UnversicherterVersandInternational = ShippingServiceCodeType.new("DE_UnversicherterVersandInternational")
@@ -28935,6 +31456,8 @@ class ShippingServiceCodeType < ::String
   FR_UPSStandard = ShippingServiceCodeType.new("FR_UPSStandard")
   FR_UPSStandardAgainstRefund = ShippingServiceCodeType.new("FR_UPSStandardAgainstRefund")
   FR_UPSStandardInternational = ShippingServiceCodeType.new("FR_UPSStandardInternational")
+  Freight = ShippingServiceCodeType.new("Freight")
+  FreightOtherShipping = ShippingServiceCodeType.new("FreightOtherShipping")
   FreightShipping = ShippingServiceCodeType.new("FreightShipping")
   FreightShippingInternational = ShippingServiceCodeType.new("FreightShippingInternational")
   HK_DomesticRegularShipping = ShippingServiceCodeType.new("HK_DomesticRegularShipping")
@@ -29135,7 +31658,22 @@ class ShippingTypeCodeType < ::String
   FlatDomesticCalculatedInternational = ShippingTypeCodeType.new("FlatDomesticCalculatedInternational")
   Free = ShippingTypeCodeType.new("Free")
   Freight = ShippingTypeCodeType.new("Freight")
+  FreightFlat = ShippingTypeCodeType.new("FreightFlat")
   NotSpecified = ShippingTypeCodeType.new("NotSpecified")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}SimpleItemSortCodeType
+class SimpleItemSortCodeType < ::String
+  BestMatch = SimpleItemSortCodeType.new("BestMatch")
+  BestMatchCategoryGroup = SimpleItemSortCodeType.new("BestMatchCategoryGroup")
+  BidCount = SimpleItemSortCodeType.new("BidCount")
+  Country = SimpleItemSortCodeType.new("Country")
+  CurrentBid = SimpleItemSortCodeType.new("CurrentBid")
+  CustomCode = SimpleItemSortCodeType.new("CustomCode")
+  Distance = SimpleItemSortCodeType.new("Distance")
+  EndTime = SimpleItemSortCodeType.new("EndTime")
+  PricePlusShipping = SimpleItemSortCodeType.new("PricePlusShipping")
+  StartDate = SimpleItemSortCodeType.new("StartDate")
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SiteCodeType
@@ -29410,6 +31948,17 @@ class TokenReturnMethodCodeType < ::String
   Redirect = TokenReturnMethodCodeType.new("Redirect")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}TokenStatusCodeType
+class TokenStatusCodeType < ::String
+  Active = TokenStatusCodeType.new("Active")
+  CustomCode = TokenStatusCodeType.new("CustomCode")
+  Expired = TokenStatusCodeType.new("Expired")
+  Invalid = TokenStatusCodeType.new("Invalid")
+  RevokedByApp = TokenStatusCodeType.new("RevokedByApp")
+  RevokedByUser = TokenStatusCodeType.new("RevokedByUser")
+  RevokedByeBay = TokenStatusCodeType.new("RevokedByeBay")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}TradingRoleCodeType
 class TradingRoleCodeType < ::String
   Buyer = TradingRoleCodeType.new("Buyer")
@@ -29517,6 +32066,32 @@ class VeROReportPacketStatusCodeType < ::String
   Received = VeROReportPacketStatusCodeType.new("Received")
 end
 
+# {urn:ebay:apis:eBLBaseComponents}WarrantyDurationOptionsCodeType
+class WarrantyDurationOptionsCodeType < ::String
+  CustomCode = WarrantyDurationOptionsCodeType.new("CustomCode")
+  Months_1 = WarrantyDurationOptionsCodeType.new("Months_1")
+  Months_3 = WarrantyDurationOptionsCodeType.new("Months_3")
+  Months_6 = WarrantyDurationOptionsCodeType.new("Months_6")
+  Years_1 = WarrantyDurationOptionsCodeType.new("Years_1")
+  Years_2 = WarrantyDurationOptionsCodeType.new("Years_2")
+  Years_3 = WarrantyDurationOptionsCodeType.new("Years_3")
+  Years_MoreThan3 = WarrantyDurationOptionsCodeType.new("Years_MoreThan3")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}WarrantyOfferedCodeType
+class WarrantyOfferedCodeType < ::String
+  CustomCode = WarrantyOfferedCodeType.new("CustomCode")
+  WarrantyOffered = WarrantyOfferedCodeType.new("WarrantyOffered")
+end
+
+# {urn:ebay:apis:eBLBaseComponents}WarrantyTypeOptionsCodeType
+class WarrantyTypeOptionsCodeType < ::String
+  CustomCode = WarrantyTypeOptionsCodeType.new("CustomCode")
+  DealerWarranty = WarrantyTypeOptionsCodeType.new("DealerWarranty")
+  ManufacturerWarranty = WarrantyTypeOptionsCodeType.new("ManufacturerWarranty")
+  ReplacementWarranty = WarrantyTypeOptionsCodeType.new("ReplacementWarranty")
+end
+
 # {urn:ebay:apis:eBLBaseComponents}WirelessCarrierIDCodeType
 class WirelessCarrierIDCodeType < ::String
   ATT = WirelessCarrierIDCodeType.new("ATT")
@@ -29534,13 +32109,4 @@ class WirelessCarrierIDCodeType < ::String
   USCellular = WirelessCarrierIDCodeType.new("USCellular")
   Verizon = WirelessCarrierIDCodeType.new("Verizon")
   Vodafone = WirelessCarrierIDCodeType.new("Vodafone")
-end
-
-# {urn:ebay:apis:eBLBaseComponents}WishListSortCodeType
-class WishListSortCodeType < ::String
-  CreationDateAscending = WishListSortCodeType.new("CreationDateAscending")
-  CreationDateDescending = WishListSortCodeType.new("CreationDateDescending")
-  CustomCode = WishListSortCodeType.new("CustomCode")
-  PriceAscending = WishListSortCodeType.new("PriceAscending")
-  PriceDescending = WishListSortCodeType.new("PriceDescending")
 end

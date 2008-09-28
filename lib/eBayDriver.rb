@@ -119,6 +119,14 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
         :faults => {} }
     ],
     [ "",
+      "confirmIdentity",
+      [ ["in", "ConfirmIdentityRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "ConfirmIdentityRequest"]],
+        ["out", "ConfirmIdentityResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "ConfirmIdentityResponse"]] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal,
+        :faults => {} }
+    ],
+    [ "",
       "deleteMyMessages",
       [ ["in", "DeleteMyMessagesRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "DeleteMyMessagesRequest"]],
         ["out", "DeleteMyMessagesResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "DeleteMyMessagesResponse"]] ],
@@ -207,14 +215,6 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
         :faults => {} }
     ],
     [ "",
-      "getCart",
-      [ ["in", "GetCartRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetCartRequest"]],
-        ["out", "GetCartResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetCartResponse"]] ],
-      { :request_style =>  :document, :request_use =>  :literal,
-        :response_style => :document, :response_use => :literal,
-        :faults => {} }
-    ],
-    [ "",
       "getCategories",
       [ ["in", "GetCategoriesRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetCategoriesRequest"]],
         ["out", "GetCategoriesResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetCategoriesResponse"]] ],
@@ -279,6 +279,14 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
         :faults => {} }
     ],
     [ "",
+      "getClientAlertsAuthToken",
+      [ ["in", "GetClientAlertsAuthTokenRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetClientAlertsAuthTokenRequest"]],
+        ["out", "GetClientAlertsAuthTokenResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetClientAlertsAuthTokenResponse"]] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal,
+        :faults => {} }
+    ],
+    [ "",
       "getContextualKeywords",
       [ ["in", "GetContextualKeywordsRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetContextualKeywordsRequest"]],
         ["out", "GetContextualKeywordsResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetContextualKeywordsResponse"]] ],
@@ -306,14 +314,6 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
       "getDispute",
       [ ["in", "GetDisputeRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetDisputeRequest"]],
         ["out", "GetDisputeResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetDisputeResponse"]] ],
-      { :request_style =>  :document, :request_use =>  :literal,
-        :response_style => :document, :response_use => :literal,
-        :faults => {} }
-    ],
-    [ "",
-      "getExpressWishList",
-      [ ["in", "GetExpressWishListRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetExpressWishListRequest"]],
-        ["out", "GetExpressWishListResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetExpressWishListResponse"]] ],
       { :request_style =>  :document, :request_use =>  :literal,
         :response_style => :document, :response_use => :literal,
         :faults => {} }
@@ -567,22 +567,6 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
         :faults => {} }
     ],
     [ "",
-      "getReturnURL",
-      [ ["in", "GetReturnURLRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetReturnURLRequest"]],
-        ["out", "GetReturnURLResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetReturnURLResponse"]] ],
-      { :request_style =>  :document, :request_use =>  :literal,
-        :response_style => :document, :response_use => :literal,
-        :faults => {} }
-    ],
-    [ "",
-      "getRuName",
-      [ ["in", "GetRuNameRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetRuNameRequest"]],
-        ["out", "GetRuNameResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetRuNameResponse"]] ],
-      { :request_style =>  :document, :request_use =>  :literal,
-        :response_style => :document, :response_use => :literal,
-        :faults => {} }
-    ],
-    [ "",
       "getSearchResults",
       [ ["in", "GetSearchResultsRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetSearchResultsRequest"]],
         ["out", "GetSearchResultsResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetSearchResultsResponse"]] ],
@@ -591,9 +575,9 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
         :faults => {} }
     ],
     [ "",
-      "getSearchResultsExpress",
-      [ ["in", "GetSearchResultsExpressRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetSearchResultsExpressRequest"]],
-        ["out", "GetSearchResultsExpressResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetSearchResultsExpressResponse"]] ],
+      "getSellerDashboard",
+      [ ["in", "GetSellerDashboardRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetSellerDashboardRequest"]],
+        ["out", "GetSellerDashboardResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetSellerDashboardResponse"]] ],
       { :request_style =>  :document, :request_use =>  :literal,
         :response_style => :document, :response_use => :literal,
         :faults => {} }
@@ -626,6 +610,14 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
       "getSellerTransactions",
       [ ["in", "GetSellerTransactionsRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetSellerTransactionsRequest"]],
         ["out", "GetSellerTransactionsResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetSellerTransactionsResponse"]] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal,
+        :faults => {} }
+    ],
+    [ "",
+      "getSessionID",
+      [ ["in", "GetSessionIDRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetSessionIDRequest"]],
+        ["out", "GetSessionIDResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetSessionIDResponse"]] ],
       { :request_style =>  :document, :request_use =>  :literal,
         :response_style => :document, :response_use => :literal,
         :faults => {} }
@@ -690,6 +682,14 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
       "getTaxTable",
       [ ["in", "GetTaxTableRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetTaxTableRequest"]],
         ["out", "GetTaxTableResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetTaxTableResponse"]] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal,
+        :faults => {} }
+    ],
+    [ "",
+      "getTokenStatus",
+      [ ["in", "GetTokenStatusRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetTokenStatusRequest"]],
+        ["out", "GetTokenStatusResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "GetTokenStatusResponse"]] ],
       { :request_style =>  :document, :request_use =>  :literal,
         :response_style => :document, :response_use => :literal,
         :faults => {} }
@@ -879,6 +879,14 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
         :faults => {} }
     ],
     [ "",
+      "revokeToken",
+      [ ["in", "RevokeTokenRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "RevokeTokenRequest"]],
+        ["out", "RevokeTokenResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "RevokeTokenResponse"]] ],
+      { :request_style =>  :document, :request_use =>  :literal,
+        :response_style => :document, :response_use => :literal,
+        :faults => {} }
+    ],
+    [ "",
       "sellerReverseDispute",
       [ ["in", "SellerReverseDisputeRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "SellerReverseDisputeRequest"]],
         ["out", "SellerReverseDisputeResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "SellerReverseDisputeResponse"]] ],
@@ -890,14 +898,6 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
       "sendInvoice",
       [ ["in", "SendInvoiceRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "SendInvoiceRequest"]],
         ["out", "SendInvoiceResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "SendInvoiceResponse"]] ],
-      { :request_style =>  :document, :request_use =>  :literal,
-        :response_style => :document, :response_use => :literal,
-        :faults => {} }
-    ],
-    [ "",
-      "setCart",
-      [ ["in", "SetCartRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "SetCartRequest"]],
-        ["out", "SetCartResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "SetCartResponse"]] ],
       { :request_style =>  :document, :request_use =>  :literal,
         :response_style => :document, :response_use => :literal,
         :faults => {} }
@@ -943,9 +943,9 @@ class EBayAPIInterface < ::SOAP::RPC::Driver
         :faults => {} }
     ],
     [ "",
-      "setReturnURL",
-      [ ["in", "SetReturnURLRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "SetReturnURLRequest"]],
-        ["out", "SetReturnURLResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "SetReturnURLResponse"]] ],
+      "setSellingManagerFeedbackOptions",
+      [ ["in", "SetSellingManagerFeedbackOptionsRequest", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "SetSellingManagerFeedbackOptionsRequest"]],
+        ["out", "SetSellingManagerFeedbackOptionsResponse", ["::SOAP::SOAPElement", "urn:ebay:apis:eBLBaseComponents", "SetSellingManagerFeedbackOptionsResponse"]] ],
       { :request_style =>  :document, :request_use =>  :literal,
         :response_style => :document, :response_use => :literal,
         :faults => {} }

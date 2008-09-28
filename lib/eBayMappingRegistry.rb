@@ -1,4 +1,4 @@
-require 'eBay.rb'
+require 'default.rb'
 require 'soap/mapping'
 
 module DefaultMappingRegistry
@@ -49,6 +49,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["disputeID", [nil, XSD::QName.new(NsEBLBaseComponents, "DisputeID")], [0, 1]]
     ]
@@ -98,6 +99,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -141,6 +143,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
@@ -190,6 +193,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["fees", ["FeesType", XSD::QName.new(NsEBLBaseComponents, "Fees")], [0, 1]],
@@ -238,6 +242,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -282,6 +287,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -325,6 +331,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["addMemberMessagesAAQToBidderResponseContainer", ["AddMemberMessagesAAQToBidderResponseContainerType[]", XSD::QName.new(NsEBLBaseComponents, "AddMemberMessagesAAQToBidderResponseContainer")], [0, nil]]
     ]
@@ -369,6 +376,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["orderID", [nil, XSD::QName.new(NsEBLBaseComponents, "OrderID")], [0, 1]],
       ["createdTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "CreatedTime")], [0, 1]]
@@ -418,6 +426,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
@@ -465,6 +474,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -508,6 +518,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["watchListCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "WatchListCount")], [0, 1]],
       ["watchListMaximum", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "WatchListMaximum")], [0, 1]]
@@ -560,6 +571,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
@@ -609,6 +621,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidderUpdateStatus", ["LiveAuctionApprovalStatusArrayType", XSD::QName.new(NsEBLBaseComponents, "BidderUpdateStatus")], [0, 1]]
     ]
@@ -636,7 +649,8 @@ module DefaultMappingRegistry
       ["shipped", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Shipped")], [0, 1]],
       ["paid", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Paid")], [0, 1]],
       ["listingType", ["ListingTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingType")], [0, 1]],
-      ["shipment", ["ShipmentType", XSD::QName.new(NsEBLBaseComponents, "Shipment")], [0, 1]]
+      ["shipment", ["ShipmentType", XSD::QName.new(NsEBLBaseComponents, "Shipment")], [0, 1]],
+      ["orderID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "OrderID")], [0, 1]]
     ]
   )
 
@@ -659,7 +673,53 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => ConfirmIdentityRequestType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ConfirmIdentityRequestType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["sessionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SessionID")], [0, 1]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => ConfirmIdentityResponseType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ConfirmIdentityResponseType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["userID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]]
     ]
   )
 
@@ -703,6 +763,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -748,6 +809,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTime")], [0, 1]]
     ]
@@ -770,6 +832,7 @@ module DefaultMappingRegistry
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["secretID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SecretID")], [0, 1]],
+      ["sessionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SessionID")], [0, 1]],
       ["includeRESTToken", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeRESTToken")], [0, 1]]
     ]
   )
@@ -793,6 +856,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["eBayAuthToken", "SOAP::SOAPString", [0, 1]],
       ["hardExpirationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "HardExpirationTime")], [0, 1]],
@@ -848,6 +912,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["accountID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AccountID")], [0, 1]],
       ["accountSummary", ["AccountSummaryType", XSD::QName.new(NsEBLBaseComponents, "AccountSummary")], [0, 1]],
@@ -878,7 +943,9 @@ module DefaultMappingRegistry
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["status", ["MessageStatusTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
-      ["includeMemberMessages", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeMemberMessages")], [0, 1]]
+      ["includeMemberMessages", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeMemberMessages")], [0, 1]],
+      ["startCreationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartCreationTime")], [0, 1]],
+      ["endCreationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndCreationTime")], [0, 1]]
     ]
   )
 
@@ -901,6 +968,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["adFormatLead", ["AdFormatLeadType[]", XSD::QName.new(NsEBLBaseComponents, "AdFormatLead")], [0, nil]],
       ["adFormatLeadCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "AdFormatLeadCount")], [0, 1]]
@@ -948,6 +1016,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidArray", ["OfferArrayType", XSD::QName.new(NsEBLBaseComponents, "BidArray")], [0, 1]],
       ["highBidder", [nil, XSD::QName.new(NsEBLBaseComponents, "HighBidder")], [0, 1]],
@@ -994,6 +1063,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["apiAccessRule", ["ApiAccessRuleType[]", XSD::QName.new(NsEBLBaseComponents, "ApiAccessRule")], [0, nil]]
     ]
@@ -1017,8 +1087,7 @@ module DefaultMappingRegistry
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AttributeSystemVersion")], [0, 1]],
       ["attributeSetID", ["SOAP::SOAPInt[]", XSD::QName.new(NsEBLBaseComponents, "AttributeSetID")], [0, nil]],
-      ["includeCategoryMappingDetails", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeCategoryMappingDetails")], [0, 1]],
-      ["digitalDelivery", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DigitalDelivery")], [0, 1]]
+      ["includeCategoryMappingDetails", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeCategoryMappingDetails")], [0, 1]]
     ]
   )
 
@@ -1041,6 +1110,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AttributeSystemVersion")], [0, 1]],
       ["attributeData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AttributeData")], [0, 1]]
@@ -1087,6 +1157,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["xSLFile", ["XSLFileType[]", XSD::QName.new(NsEBLBaseComponents, "XSLFile")], [0, nil]]
     ]
@@ -1133,6 +1204,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bestOfferArray", ["BestOfferArrayType", XSD::QName.new(NsEBLBaseComponents, "BestOfferArray")], [0, 1]],
       ["item", ["ItemType", XSD::QName.new(NsEBLBaseComponents, "Item")], [0, 1]]
@@ -1182,55 +1254,10 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidder", ["UserType", XSD::QName.new(NsEBLBaseComponents, "Bidder")], [0, 1]],
       ["bidItemArray", ["ItemArrayType", XSD::QName.new(NsEBLBaseComponents, "BidItemArray")], [0, 1]]
-    ]
-  )
-
-  EncodedRegistry.register(
-    :class => GetCartRequestType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetCartRequestType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
-    :schema_element => [
-      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
-      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
-      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
-      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
-      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
-      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
-      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
-      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["affiliateTrackingDetails", ["AffiliateTrackingDetailsType", XSD::QName.new(NsEBLBaseComponents, "AffiliateTrackingDetails")], [0, 1]],
-      ["cartID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "CartID")], [0, 1]],
-      ["shippingAddress", ["AddressType", XSD::QName.new(NsEBLBaseComponents, "ShippingAddress")], [0, 1]]
-    ]
-  )
-
-  EncodedRegistry.register(
-    :class => GetCartResponseType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetCartResponseType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
-    :schema_element => [
-      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
-      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
-      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
-      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
-      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
-      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
-      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
-      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
-      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
-      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
-      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
-      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["cart", ["CartType", XSD::QName.new(NsEBLBaseComponents, "Cart")], [0, 1]]
     ]
   )
 
@@ -1276,6 +1303,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["categoryArray", ["CategoryArrayType", XSD::QName.new(NsEBLBaseComponents, "CategoryArray")], [0, 1]],
       ["categoryCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CategoryCount")], [0, 1]],
@@ -1327,6 +1355,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["mappedCategoryArray", ["CategoryArrayType", XSD::QName.new(NsEBLBaseComponents, "MappedCategoryArray")], [0, 1]],
       ["unmappedCategoryArray", ["CategoryArrayType", XSD::QName.new(NsEBLBaseComponents, "UnmappedCategoryArray")], [0, 1]],
@@ -1377,6 +1406,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["categoryVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CategoryVersion")], [0, 1]],
       ["updateTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "UpdateTime")], [0, 1]],
@@ -1419,7 +1449,8 @@ module DefaultMappingRegistry
       ["includeFeedback", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeFeedback")], [0, 1]],
       ["localSearchPostalCode", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LocalSearchPostalCode")], [0, 1]],
       ["maxRelatedSearchKeywords", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "MaxRelatedSearchKeywords")], [0, 1]],
-      ["group", ["GroupType", XSD::QName.new(NsEBLBaseComponents, "Group")], [0, 1]]
+      ["group", ["GroupType", XSD::QName.new(NsEBLBaseComponents, "Group")], [0, 1]],
+      ["hideDuplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HideDuplicateItems")], [0, 1]]
     ]
   )
 
@@ -1442,6 +1473,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemArray", ["ItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemArray")], [0, 1]],
       ["category", ["CategoryType", XSD::QName.new(NsEBLBaseComponents, "Category")], [0, 1]],
@@ -1451,7 +1483,8 @@ module DefaultMappingRegistry
       ["hasMoreItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreItems")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["buyingGuideDetails", ["BuyingGuideDetailsType", XSD::QName.new(NsEBLBaseComponents, "BuyingGuideDetails")], [0, 1]],
-      ["relatedSearchKeywordArray", ["RelatedSearchKeywordArrayType", XSD::QName.new(NsEBLBaseComponents, "RelatedSearchKeywordArray")], [0, 1]]
+      ["relatedSearchKeywordArray", ["RelatedSearchKeywordArrayType", XSD::QName.new(NsEBLBaseComponents, "RelatedSearchKeywordArray")], [0, 1]],
+      ["duplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DuplicateItems")], [0, 1]]
     ]
   )
 
@@ -1494,6 +1527,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["categoryMapping", ["CategoryMappingType[]", XSD::QName.new(NsEBLBaseComponents, "CategoryMapping")], [0, nil]],
       ["categoryVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CategoryVersion")], [0, 1]]
@@ -1543,6 +1577,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["categoryItemSpecifics", ["CategoryItemSpecificsType[]", XSD::QName.new(NsEBLBaseComponents, "CategoryItemSpecifics")], [0, nil]]
     ]
@@ -1586,6 +1621,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["challengeToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ChallengeToken")], [0, 1]],
       ["imageChallengeURL", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ImageChallengeURL")], [0, 1]],
@@ -1615,7 +1651,8 @@ module DefaultMappingRegistry
       ["charityRegion", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CharityRegion")], [0, 1]],
       ["charityDomain", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CharityDomain")], [0, 1]],
       ["includeDescription", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeDescription")], [0, 1]],
-      ["matchType", ["StringMatchCodeType", XSD::QName.new(NsEBLBaseComponents, "MatchType")], [0, 1]]
+      ["matchType", ["StringMatchCodeType", XSD::QName.new(NsEBLBaseComponents, "MatchType")], [0, 1]],
+      ["featured", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Featured")], [0, 1]]
     ]
   )
 
@@ -1638,8 +1675,54 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["charity", ["CharityInfoType[]", XSD::QName.new(NsEBLBaseComponents, "Charity")], [0, nil]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => GetClientAlertsAuthTokenRequestType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetClientAlertsAuthTokenRequestType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => GetClientAlertsAuthTokenResponseType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetClientAlertsAuthTokenResponseType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["clientAlertsAuthToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ClientAlertsAuthToken")], [0, 1]],
+      ["hardExpirationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "HardExpirationTime")], [0, 1]]
     ]
   )
 
@@ -1684,6 +1767,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["contextSearchAsset", ["ContextSearchAssetType[]", XSD::QName.new(NsEBLBaseComponents, "ContextSearchAsset")], [0, nil]]
     ]
@@ -1730,6 +1814,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["crossPromotion", ["CrossPromotionsType", XSD::QName.new(NsEBLBaseComponents, "CrossPromotion")], [0, 1]]
     ]
@@ -1776,6 +1861,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["descriptionTemplate", ["DescriptionTemplateType[]", XSD::QName.new(NsEBLBaseComponents, "DescriptionTemplate")], [0, nil]],
       ["layoutTotal", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "LayoutTotal")], [0, 1]],
@@ -1825,58 +1911,9 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["dispute", ["DisputeType", XSD::QName.new(NsEBLBaseComponents, "Dispute")], [0, 1]]
-    ]
-  )
-
-  EncodedRegistry.register(
-    :class => GetExpressWishListRequestType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetExpressWishListRequestType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
-    :schema_element => [
-      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
-      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
-      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
-      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
-      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
-      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
-      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
-      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["userID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]],
-      ["firstName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FirstName")], [0, 1]],
-      ["lastName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LastName")], [0, 1]],
-      ["wishListID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "WishListID")], [0, 1]],
-      ["sortOrder", ["WishListSortCodeType", XSD::QName.new(NsEBLBaseComponents, "SortOrder")], [0, 1]],
-      ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]]
-    ]
-  )
-
-  EncodedRegistry.register(
-    :class => GetExpressWishListResponseType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetExpressWishListResponseType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
-    :schema_element => [
-      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
-      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
-      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
-      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
-      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
-      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
-      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
-      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
-      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
-      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
-      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
-      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["wishList", ["WishListType[]", XSD::QName.new(NsEBLBaseComponents, "WishList")], [0, nil]],
-      ["pagination", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]]
     ]
   )
 
@@ -1896,9 +1933,12 @@ module DefaultMappingRegistry
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]],
       ["userID", [nil, XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]],
-      ["feedbackID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FeedbackID")], [0, 1]]
+      ["feedbackID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FeedbackID")], [0, 1]],
+      ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
+      ["transactionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TransactionID")], [0, 1]],
+      ["commentType", ["CommentTypeCodeType[]", XSD::QName.new(NsEBLBaseComponents, "CommentType")], [0, nil]],
+      ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]]
     ]
   )
 
@@ -1921,11 +1961,15 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["feedbackDetailArray", ["FeedbackDetailArrayType", XSD::QName.new(NsEBLBaseComponents, "FeedbackDetailArray")], [0, 1]],
       ["feedbackDetailItemTotal", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "FeedbackDetailItemTotal")], [0, 1]],
       ["feedbackSummary", ["FeedbackSummaryType", XSD::QName.new(NsEBLBaseComponents, "FeedbackSummary")], [0, 1]],
-      ["feedbackScore", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "FeedbackScore")], [0, 1]]
+      ["feedbackScore", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "FeedbackScore")], [0, 1]],
+      ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
+      ["entriesPerPage", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "EntriesPerPage")], [0, 1]],
+      ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PageNumber")], [0, 1]]
     ]
   )
 
@@ -1968,6 +2012,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidArray", ["OfferArrayType", XSD::QName.new(NsEBLBaseComponents, "BidArray")], [0, 1]],
       ["listingStatus", ["ListingStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingStatus")], [0, 1]]
@@ -1991,7 +2036,6 @@ module DefaultMappingRegistry
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
-      ["includeExpressRequirements", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeExpressRequirements")], [0, 1]],
       ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeWatchCount")], [0, 1]],
       ["includeCrossPromotion", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeCrossPromotion")], [0, 1]],
       ["includeItemSpecifics", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeItemSpecifics")], [0, 1]],
@@ -2018,6 +2062,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["item", ["ItemType", XSD::QName.new(NsEBLBaseComponents, "Item")], [0, 1]]
     ]
@@ -2062,6 +2107,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["getRecommendationsResponseContainer", ["GetRecommendationsResponseContainerType[]", XSD::QName.new(NsEBLBaseComponents, "GetRecommendationsResponseContainer")], [0, nil]]
     ]
@@ -2109,6 +2155,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["shippingDetails", ["ShippingDetailsType", XSD::QName.new(NsEBLBaseComponents, "ShippingDetails")], [0, 1]]
     ]
@@ -2161,6 +2208,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMoreTransactions", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreTransactions")], [0, 1]],
@@ -2213,6 +2261,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemsAwaitingFeedback", ["PaginatedTransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemsAwaitingFeedback")], [0, 1]]
     ]
@@ -2259,6 +2308,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidderDetails", ["BidderDetailArrayType", XSD::QName.new(NsEBLBaseComponents, "BidderDetails")], [0, 1]],
       ["totalPending", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "TotalPending")], [0, 1]],
@@ -2307,6 +2357,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["liveAuctionCatalog", ["LiveAuctionCatalogType[]", XSD::QName.new(NsEBLBaseComponents, "LiveAuctionCatalog")], [0, nil]]
     ]
@@ -2359,6 +2410,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["memberMessage", ["MemberMessageExchangeArrayType", XSD::QName.new(NsEBLBaseComponents, "MemberMessage")], [0, 1]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
@@ -2406,6 +2458,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["aSQPreferences", ["ASQPreferencesType", XSD::QName.new(NsEBLBaseComponents, "ASQPreferences")], [0, 1]]
     ]
@@ -2431,7 +2484,8 @@ module DefaultMappingRegistry
       ["messageIDs", ["MyMessagesMessageIDArrayType", XSD::QName.new(NsEBLBaseComponents, "MessageIDs")], [0, 1]],
       ["folderID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "FolderID")], [0, 1]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
-      ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTime")], [0, 1]]
+      ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTime")], [0, 1]],
+      ["externalMessageIDs", ["MyMessagesExternalMessageIDArrayType", XSD::QName.new(NsEBLBaseComponents, "ExternalMessageIDs")], [0, 1]]
     ]
   )
 
@@ -2454,6 +2508,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["summary", ["MyMessagesSummaryType", XSD::QName.new(NsEBLBaseComponents, "Summary")], [0, 1]],
       ["alerts", ["MyMessagesAlertArrayType", XSD::QName.new(NsEBLBaseComponents, "Alerts")], [0, 1]],
@@ -2485,7 +2540,9 @@ module DefaultMappingRegistry
       ["favoriteSearches", ["MyeBaySelectionType", XSD::QName.new(NsEBLBaseComponents, "FavoriteSearches")], [0, 1]],
       ["favoriteSellers", ["MyeBaySelectionType", XSD::QName.new(NsEBLBaseComponents, "FavoriteSellers")], [0, 1]],
       ["secondChanceOffer", ["MyeBaySelectionType", XSD::QName.new(NsEBLBaseComponents, "SecondChanceOffer")], [0, 1]],
-      ["bidAssistantList", ["BidAssistantListType", XSD::QName.new(NsEBLBaseComponents, "BidAssistantList")], [0, 1]]
+      ["bidAssistantList", ["BidAssistantListType", XSD::QName.new(NsEBLBaseComponents, "BidAssistantList")], [0, 1]],
+      ["deletedFromWonList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromWonList")], [0, 1]],
+      ["deletedFromLostList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromLostList")], [0, 1]]
     ]
   )
 
@@ -2508,6 +2565,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["buyingSummary", ["BuyingSummaryType", XSD::QName.new(NsEBLBaseComponents, "BuyingSummary")], [0, 1]],
       ["watchList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "WatchList")], [0, 1]],
@@ -2518,7 +2576,9 @@ module DefaultMappingRegistry
       ["favoriteSearches", ["MyeBayFavoriteSearchListType", XSD::QName.new(NsEBLBaseComponents, "FavoriteSearches")], [0, 1]],
       ["favoriteSellers", ["MyeBayFavoriteSellerListType", XSD::QName.new(NsEBLBaseComponents, "FavoriteSellers")], [0, 1]],
       ["secondChanceOffer", ["ItemType[]", XSD::QName.new(NsEBLBaseComponents, "SecondChanceOffer")], [0, nil]],
-      ["bidAssistantList", ["BidGroupArrayType", XSD::QName.new(NsEBLBaseComponents, "BidAssistantList")], [0, 1]]
+      ["bidAssistantList", ["BidGroupArrayType", XSD::QName.new(NsEBLBaseComponents, "BidAssistantList")], [0, 1]],
+      ["deletedFromWonList", ["PaginatedOrderTransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromWonList")], [0, 1]],
+      ["deletedFromLostList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromLostList")], [0, 1]]
     ]
   )
 
@@ -2562,6 +2622,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["buyingReminders", ["RemindersType", XSD::QName.new(NsEBLBaseComponents, "BuyingReminders")], [0, 1]],
       ["sellingReminders", ["RemindersType", XSD::QName.new(NsEBLBaseComponents, "SellingReminders")], [0, 1]]
@@ -2587,7 +2648,10 @@ module DefaultMappingRegistry
       ["scheduledList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "ScheduledList")], [0, 1]],
       ["activeList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "ActiveList")], [0, 1]],
       ["soldList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "SoldList")], [0, 1]],
-      ["unsoldList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "UnsoldList")], [0, 1]]
+      ["unsoldList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "UnsoldList")], [0, 1]],
+      ["bidList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "BidList")], [0, 1]],
+      ["deletedFromSoldList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromSoldList")], [0, 1]],
+      ["deletedFromUnsoldList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromUnsoldList")], [0, 1]]
     ]
   )
 
@@ -2610,13 +2674,17 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["sellingSummary", ["SellingSummaryType", XSD::QName.new(NsEBLBaseComponents, "SellingSummary")], [0, 1]],
       ["scheduledList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ScheduledList")], [0, 1]],
       ["activeList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ActiveList")], [0, 1]],
       ["soldList", ["PaginatedOrderTransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "SoldList")], [0, 1]],
       ["unsoldList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "UnsoldList")], [0, 1]],
-      ["summary", ["MyeBaySellingSummaryType", XSD::QName.new(NsEBLBaseComponents, "Summary")], [0, 1]]
+      ["summary", ["MyeBaySellingSummaryType", XSD::QName.new(NsEBLBaseComponents, "Summary")], [0, 1]],
+      ["bidList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "BidList")], [0, 1]],
+      ["deletedFromSoldList", ["PaginatedOrderTransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromSoldList")], [0, 1]],
+      ["deletedFromUnsoldList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromUnsoldList")], [0, 1]]
     ]
   )
 
@@ -2659,8 +2727,10 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["applicationDeliveryPreferences", ["ApplicationDeliveryPreferencesType", XSD::QName.new(NsEBLBaseComponents, "ApplicationDeliveryPreferences")], [0, 1]],
+      ["deliveryURLName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "DeliveryURLName")], [0, 1]],
       ["userDeliveryPreferenceArray", ["NotificationEnableArrayType", XSD::QName.new(NsEBLBaseComponents, "UserDeliveryPreferenceArray")], [0, 1]],
       ["userData", ["NotificationUserDataType", XSD::QName.new(NsEBLBaseComponents, "UserData")], [0, 1]],
       ["eventProperty", ["NotificationEventPropertyType[]", XSD::QName.new(NsEBLBaseComponents, "EventProperty")], [0, nil]]
@@ -2708,6 +2778,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
       ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTime")], [0, 1]],
@@ -2735,7 +2806,8 @@ module DefaultMappingRegistry
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemTransactionIDArray", ["ItemTransactionIDArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemTransactionIDArray")], [0, 1]],
       ["orderIDArray", ["OrderIDArrayType", XSD::QName.new(NsEBLBaseComponents, "OrderIDArray")], [0, 1]],
-      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]]
+      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]],
+      ["includeFinalValueFees", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeFinalValueFees")], [0, 1]]
     ]
   )
 
@@ -2758,6 +2830,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["orderArray", ["OrderArrayType", XSD::QName.new(NsEBLBaseComponents, "OrderArray")], [0, 1]]
     ]
@@ -2808,6 +2881,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMoreOrders", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreOrders")], [0, 1]],
@@ -2859,6 +2933,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["pictureManagerDetails", ["PictureManagerDetailsType", XSD::QName.new(NsEBLBaseComponents, "PictureManagerDetails")], [0, 1]]
     ]
@@ -2902,6 +2977,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["subscription", ["PictureManagerSubscriptionType[]", XSD::QName.new(NsEBLBaseComponents, "Subscription")], [0, nil]],
       ["pictureType", ["PictureManagerPictureDisplayType[]", XSD::QName.new(NsEBLBaseComponents, "PictureType")], [0, nil]]
@@ -2950,6 +3026,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["categoryArray", ["CategoryArrayType", XSD::QName.new(NsEBLBaseComponents, "CategoryArray")], [0, 1]],
@@ -2996,6 +3073,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["dataElementSets", ["DataElementSetType[]", XSD::QName.new(NsEBLBaseComponents, "DataElementSets")], [0, nil]],
       ["productSearchResult", ["ProductSearchResultType[]", XSD::QName.new(NsEBLBaseComponents, "ProductSearchResult")], [0, nil]]
@@ -3042,6 +3120,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AttributeSystemVersion")], [0, 1]],
       ["productFinderData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ProductFinderData")], [0, 1]]
@@ -3088,6 +3167,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["xSLFile", ["XSLFileType[]", XSD::QName.new(NsEBLBaseComponents, "XSLFile")], [0, nil]]
     ]
@@ -3133,6 +3213,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AttributeSystemVersion")], [0, 1]],
       ["productSearchPage", ["ProductSearchPageType[]", XSD::QName.new(NsEBLBaseComponents, "ProductSearchPage")], [0, nil]]
@@ -3178,6 +3259,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["dataElementSets", ["DataElementSetType[]", XSD::QName.new(NsEBLBaseComponents, "DataElementSets")], [0, nil]],
       ["productSearchResult", ["ProductSearchResultType[]", XSD::QName.new(NsEBLBaseComponents, "ProductSearchResult")], [0, nil]]
@@ -3224,6 +3306,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["productSellingPagesData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ProductSellingPagesData")], [0, 1]]
     ]
@@ -3251,7 +3334,8 @@ module DefaultMappingRegistry
       ["includeReviewDetails", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeReviewDetails")], [0, 1]],
       ["includeBuyingGuideDetails", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeBuyingGuideDetails")], [0, 1]],
       ["includeHistogram", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeHistogram")], [0, 1]],
-      ["affiliateTrackingDetails", ["AffiliateTrackingDetailsType", XSD::QName.new(NsEBLBaseComponents, "AffiliateTrackingDetails")], [0, 1]]
+      ["affiliateTrackingDetails", ["AffiliateTrackingDetailsType", XSD::QName.new(NsEBLBaseComponents, "AffiliateTrackingDetails")], [0, 1]],
+      ["hideDuplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HideDuplicateItems")], [0, 1]]
     ]
   )
 
@@ -3274,6 +3358,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["characteristicsSetProductHistogram", ["CharacteristicsSetProductHistogramType", XSD::QName.new(NsEBLBaseComponents, "CharacteristicsSetProductHistogram")], [0, 1]],
       ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PageNumber")], [0, 1]],
@@ -3282,7 +3367,8 @@ module DefaultMappingRegistry
       ["totalProducts", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "TotalProducts")], [0, 1]],
       ["product", ["CatalogProductType[]", XSD::QName.new(NsEBLBaseComponents, "Product")], [0, nil]],
       ["itemArray", ["ItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemArray")], [0, 1]],
-      ["buyingGuideDetails", ["BuyingGuideDetailsType", XSD::QName.new(NsEBLBaseComponents, "BuyingGuideDetails")], [0, 1]]
+      ["buyingGuideDetails", ["BuyingGuideDetailsType", XSD::QName.new(NsEBLBaseComponents, "BuyingGuideDetails")], [0, 1]],
+      ["duplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DuplicateItems")], [0, 1]]
     ]
   )
 
@@ -3327,6 +3413,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["promotionRuleArray", ["PromotionRuleArrayType", XSD::QName.new(NsEBLBaseComponents, "PromotionRuleArray")], [0, 1]]
     ]
@@ -3371,96 +3458,9 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["promotionalSaleDetails", ["PromotionalSaleArrayType", XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleDetails")], [0, 1]]
-    ]
-  )
-
-  EncodedRegistry.register(
-    :class => GetReturnURLRequestType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetReturnURLRequestType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
-    :schema_element => [
-      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
-      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
-      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
-      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
-      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
-      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
-      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
-      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  EncodedRegistry.register(
-    :class => GetReturnURLResponseType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetReturnURLResponseType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
-    :schema_element => [
-      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
-      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
-      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
-      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
-      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
-      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
-      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
-      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
-      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
-      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
-      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
-      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["applicationDisplayName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ApplicationDisplayName")], [0, 1]],
-      ["authenticationEntryArray", ["AuthenticationEntryArrayType", XSD::QName.new(NsEBLBaseComponents, "AuthenticationEntryArray")], [0, 1]]
-    ]
-  )
-
-  EncodedRegistry.register(
-    :class => GetRuNameRequestType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetRuNameRequestType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
-    :schema_element => [
-      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
-      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
-      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
-      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
-      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
-      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
-      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
-      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["clientUseCase", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ClientUseCase")], [0, 1]]
-    ]
-  )
-
-  EncodedRegistry.register(
-    :class => GetRuNameResponseType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetRuNameResponseType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
-    :schema_element => [
-      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
-      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
-      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
-      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
-      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
-      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
-      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
-      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
-      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
-      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
-      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
-      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["ruName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RuName")], [0, 1]]
     ]
   )
 
@@ -3511,7 +3511,6 @@ module DefaultMappingRegistry
       ["quantity", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "Quantity")], [0, 1]],
       ["quantityOperator", ["QuantityOperatorCodeType", XSD::QName.new(NsEBLBaseComponents, "QuantityOperator")], [0, 1]],
       ["sellerBusinessType", ["SellerBusinessCodeType", XSD::QName.new(NsEBLBaseComponents, "SellerBusinessType")], [0, 1]],
-      ["digitalDelivery", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DigitalDelivery")], [0, 1]],
       ["includeCondition", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeCondition")], [0, 1]],
       ["includeFeedback", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeFeedback")], [0, 1]],
       ["charityID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CharityID")], [0, 1]],
@@ -3521,7 +3520,8 @@ module DefaultMappingRegistry
       ["bidRange", ["BidRangeType", XSD::QName.new(NsEBLBaseComponents, "BidRange")], [0, 1]],
       ["itemCondition", ["ItemConditionCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemCondition")], [0, 1]],
       ["ticketFinder", ["TicketDetailsType", XSD::QName.new(NsEBLBaseComponents, "TicketFinder")], [0, 1]],
-      ["group", ["GroupType", XSD::QName.new(NsEBLBaseComponents, "Group")], [0, 1]]
+      ["group", ["GroupType", XSD::QName.new(NsEBLBaseComponents, "Group")], [0, 1]],
+      ["hideDuplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HideDuplicateItems")], [0, 1]]
     ]
   )
 
@@ -3544,6 +3544,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["searchResultItemArray", ["SearchResultItemArrayType", XSD::QName.new(NsEBLBaseComponents, "SearchResultItemArray")], [0, 1]],
       ["itemsPerPage", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ItemsPerPage")], [0, 1]],
@@ -3557,13 +3558,14 @@ module DefaultMappingRegistry
       ["filterRemovedExpansionArray", ["ExpansionArrayType", XSD::QName.new(NsEBLBaseComponents, "FilterRemovedExpansionArray")], [0, 1]],
       ["allCategoriesExpansionArray", ["ExpansionArrayType", XSD::QName.new(NsEBLBaseComponents, "AllCategoriesExpansionArray")], [0, 1]],
       ["spellingSuggestion", ["SpellingSuggestionType", XSD::QName.new(NsEBLBaseComponents, "SpellingSuggestion")], [0, 1]],
-      ["relatedSearchKeywordArray", ["RelatedSearchKeywordArrayType", XSD::QName.new(NsEBLBaseComponents, "RelatedSearchKeywordArray")], [0, 1]]
+      ["relatedSearchKeywordArray", ["RelatedSearchKeywordArrayType", XSD::QName.new(NsEBLBaseComponents, "RelatedSearchKeywordArray")], [0, 1]],
+      ["duplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DuplicateItems")], [0, 1]]
     ]
   )
 
   EncodedRegistry.register(
-    :class => GetSearchResultsExpressRequestType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetSearchResultsExpressRequestType"),
+    :class => GetSellerDashboardRequestType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetSellerDashboardRequestType"),
     :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
     :schema_element => [
       ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
@@ -3576,34 +3578,13 @@ module DefaultMappingRegistry
       ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["query", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Query")], [0, 1]],
-      ["externalProductIDType", ["ExternalProductCodeType", XSD::QName.new(NsEBLBaseComponents, "ExternalProductIDType")], [0, 1]],
-      ["externalProductIDValue", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalProductIDValue")], [0, 1]],
-      ["productReferenceID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "ProductReferenceID")], [0, 1]],
-      ["departmentName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "DepartmentName")], [0, 1]],
-      ["aisleName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AisleName")], [0, 1]],
-      ["productTypeName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ProductTypeName")], [0, 1]],
-      ["histogramSort", ["ExpressHistogramSortCodeType", XSD::QName.new(NsEBLBaseComponents, "HistogramSort")], [0, 1]],
-      ["itemSort", ["ExpressItemSortCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemSort")], [0, 1]],
-      ["productSort", ["ExpressProductSortCodeType", XSD::QName.new(NsEBLBaseComponents, "ProductSort")], [0, 1]],
-      ["highestPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "HighestPrice")], [0, 1]],
-      ["lowestPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "LowestPrice")], [0, 1]],
-      ["condition", ["ConditionSelectionCodeType", XSD::QName.new(NsEBLBaseComponents, "Condition")], [0, 1]],
-      ["sellerID", [nil, XSD::QName.new(NsEBLBaseComponents, "SellerID")], [0, 1]],
-      ["postalCode", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PostalCode")], [0, 1]],
-      ["histogramDetails", ["ExpressDetailLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "HistogramDetails")], [0, 1]],
-      ["productDetails", ["ExpressDetailLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "ProductDetails")], [0, 1]],
-      ["itemDetails", ["ExpressDetailLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemDetails")], [0, 1]],
-      ["entriesPerPage", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "EntriesPerPage")], [0, 1]],
-      ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PageNumber")], [0, 1]],
-      ["affiliateTrackingDetails", ["AffiliateTrackingDetailsType", XSD::QName.new(NsEBLBaseComponents, "AffiliateTrackingDetails")], [0, 1]]
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
 
   EncodedRegistry.register(
-    :class => GetSearchResultsExpressResponseType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetSearchResultsExpressResponseType"),
+    :class => GetSellerDashboardResponseType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetSellerDashboardResponseType"),
     :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
     :schema_element => [
       ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
@@ -3620,13 +3601,14 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["histogram", ["DomainHistogramType", XSD::QName.new(NsEBLBaseComponents, "Histogram")], [0, 1]],
-      ["itemArray", ["ItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemArray")], [0, 1]],
-      ["productArray", ["ProductArrayType", XSD::QName.new(NsEBLBaseComponents, "ProductArray")], [0, 1]],
-      ["entriesPerPage", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "EntriesPerPage")], [0, 1]],
-      ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PageNumber")], [0, 1]],
-      ["hasMoreEntries", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreEntries")]]
+      ["searchStanding", ["SearchStandingDashboardType", XSD::QName.new(NsEBLBaseComponents, "SearchStanding")], [0, 1]],
+      ["sellerFeeDiscount", ["SellerFeeDiscountDashboardType", XSD::QName.new(NsEBLBaseComponents, "SellerFeeDiscount")], [0, 1]],
+      ["powerSellerStatus", ["PowerSellerDashboardType", XSD::QName.new(NsEBLBaseComponents, "PowerSellerStatus")], [0, 1]],
+      ["policyCompliance", ["PolicyComplianceDashboardType", XSD::QName.new(NsEBLBaseComponents, "PolicyCompliance")], [0, 1]],
+      ["buyerSatisfaction", ["BuyerSatisfactionDashboardType", XSD::QName.new(NsEBLBaseComponents, "BuyerSatisfaction")], [0, 1]],
+      ["sellerAccount", ["SellerAccountDashboardType", XSD::QName.new(NsEBLBaseComponents, "SellerAccount")], [0, 1]]
     ]
   )
 
@@ -3677,6 +3659,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["timeTo", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "TimeTo")], [0, 1]],
       ["itemArray", ["ItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemArray")], [0, 1]]
@@ -3709,7 +3692,9 @@ module DefaultMappingRegistry
       ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]],
       ["granularityLevel", ["GranularityLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "GranularityLevel")], [0, 1]],
       ["sKUArray", ["SKUArrayType", XSD::QName.new(NsEBLBaseComponents, "SKUArray")], [0, 1]],
-      ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeWatchCount")], [0, 1]]
+      ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeWatchCount")], [0, 1]],
+      ["adminEndedItemsOnly", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "AdminEndedItemsOnly")], [0, 1]],
+      ["categoryID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CategoryID")], [0, 1]]
     ]
   )
 
@@ -3732,6 +3717,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMoreItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreItems")], [0, 1]],
@@ -3785,6 +3771,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMorePayments", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMorePayments")], [0, 1]],
@@ -3841,6 +3828,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMoreTransactions", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreTransactions")], [0, 1]],
@@ -3850,6 +3838,51 @@ module DefaultMappingRegistry
       ["seller", ["UserType", XSD::QName.new(NsEBLBaseComponents, "Seller")], [0, 1]],
       ["transactionArray", ["TransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "TransactionArray")], [0, 1]],
       ["payPalPreferred", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPalPreferred")], [0, 1]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => GetSessionIDRequestType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetSessionIDRequestType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["ruName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RuName")], [0, 1]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => GetSessionIDResponseType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetSessionIDResponseType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["sessionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SessionID")], [0, 1]]
     ]
   )
 
@@ -3891,6 +3924,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["currencyID", ["CurrencyCodeType", XSD::QName.new(NsEBLBaseComponents, "CurrencyID")], [0, 1]],
       ["flatShippingDiscount", ["FlatShippingDiscountType", XSD::QName.new(NsEBLBaseComponents, "FlatShippingDiscount")], [0, 1]],
@@ -3946,6 +3980,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["store", ["StoreType", XSD::QName.new(NsEBLBaseComponents, "Store")], [0, 1]]
     ]
@@ -3990,6 +4025,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["status", ["TaskStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]]
     ]
@@ -4034,6 +4070,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["customPageArray", ["StoreCustomPageArrayType", XSD::QName.new(NsEBLBaseComponents, "CustomPageArray")], [0, 1]]
     ]
@@ -4077,6 +4114,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["basicThemeArray", ["StoreThemeArrayType", XSD::QName.new(NsEBLBaseComponents, "BasicThemeArray")], [0, 1]],
       ["advancedThemeArray", ["StoreThemeArrayType", XSD::QName.new(NsEBLBaseComponents, "AdvancedThemeArray")], [0, 1]],
@@ -4125,6 +4163,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["storePreferences", ["StorePreferencesType", XSD::QName.new(NsEBLBaseComponents, "StorePreferences")], [0, 1]]
     ]
@@ -4169,6 +4208,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["suggestedCategoryArray", ["SuggestedCategoryArrayType", XSD::QName.new(NsEBLBaseComponents, "SuggestedCategoryArray")], [0, 1]],
       ["categoryCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CategoryCount")], [0, 1]]
@@ -4213,9 +4253,54 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["lastUpdateTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "LastUpdateTime")], [0, 1]],
       ["taxTable", ["TaxTableType", XSD::QName.new(NsEBLBaseComponents, "TaxTable")], [0, 1]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => GetTokenStatusRequestType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetTokenStatusRequestType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => GetTokenStatusResponseType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetTokenStatusResponseType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["tokenStatus", ["TokenStatusType", XSD::QName.new(NsEBLBaseComponents, "TokenStatus")], [0, 1]]
     ]
   )
 
@@ -4260,6 +4345,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["user", ["UserType", XSD::QName.new(NsEBLBaseComponents, "User")], [0, 1]]
     ]
@@ -4306,6 +4392,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["userID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]],
       ["contactAddress", ["AddressType", XSD::QName.new(NsEBLBaseComponents, "ContactAddress")], [0, 1]],
@@ -4356,6 +4443,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["startingDisputeID", [nil, XSD::QName.new(NsEBLBaseComponents, "StartingDisputeID")], [0, 1]],
       ["endingDisputeID", [nil, XSD::QName.new(NsEBLBaseComponents, "EndingDisputeID")], [0, 1]],
@@ -4389,7 +4477,8 @@ module DefaultMappingRegistry
       ["showSellerPaymentPreferences", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowSellerPaymentPreferences")]],
       ["showEndOfAuctionEmailPreferences", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowEndOfAuctionEmailPreferences")], [0, 1]],
       ["showSellerFavoriteItemPreferences", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowSellerFavoriteItemPreferences")], [0, 1]],
-      ["showProStoresPreferences", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowProStoresPreferences")], [0, 1]]
+      ["showProStoresPreferences", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowProStoresPreferences")], [0, 1]],
+      ["showEmailShipmentTrackingNumberPreference", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowEmailShipmentTrackingNumberPreference")], [0, 1]]
     ]
   )
 
@@ -4412,6 +4501,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidderNoticePreferences", ["BidderNoticePreferencesType", XSD::QName.new(NsEBLBaseComponents, "BidderNoticePreferences")], [0, 1]],
       ["combinedPaymentPreferences", ["CombinedPaymentPreferencesType", XSD::QName.new(NsEBLBaseComponents, "CombinedPaymentPreferences")], [0, 1]],
@@ -4419,7 +4509,7 @@ module DefaultMappingRegistry
       ["sellerPaymentPreferences", ["SellerPaymentPreferencesType", XSD::QName.new(NsEBLBaseComponents, "SellerPaymentPreferences")], [0, 1]],
       ["sellerFavoriteItemPreferences", ["SellerFavoriteItemPreferencesType", XSD::QName.new(NsEBLBaseComponents, "SellerFavoriteItemPreferences")], [0, 1]],
       ["endOfAuctionEmailPreferences", ["EndOfAuctionEmailPreferencesType", XSD::QName.new(NsEBLBaseComponents, "EndOfAuctionEmailPreferences")], [0, 1]],
-      ["expressPreferences", ["ExpressPreferencesType", XSD::QName.new(NsEBLBaseComponents, "ExpressPreferences")], [0, 1]],
+      ["emailShipmentTrackingNumberPreference", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EmailShipmentTrackingNumberPreference")], [0, 1]],
       ["proStoresPreference", ["ProStoresCheckoutPreferenceType", XSD::QName.new(NsEBLBaseComponents, "ProStoresPreference")], [0, 1]]
     ]
   )
@@ -4464,6 +4554,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["veROReasonCodeDetails", ["VeROReasonCodeDetailsType", XSD::QName.new(NsEBLBaseComponents, "VeROReasonCodeDetails")], [0, 1]]
     ]
@@ -4513,6 +4604,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMoreItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreItems")], [0, 1]],
@@ -4563,6 +4655,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["wantItNowPost", ["WantItNowPostType", XSD::QName.new(NsEBLBaseComponents, "WantItNowPost")], [0, 1]]
     ]
@@ -4611,6 +4704,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["wantItNowPostArray", ["WantItNowPostArrayType", XSD::QName.new(NsEBLBaseComponents, "WantItNowPostArray")], [0, 1]],
       ["hasMoreItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreItems")], [0, 1]],
@@ -4659,6 +4753,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["countryDetails", ["CountryDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "CountryDetails")], [0, nil]],
       ["currencyDetails", ["CurrencyDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "CurrencyDetails")], [0, nil]],
@@ -4675,7 +4770,8 @@ module DefaultMappingRegistry
       ["unitOfMeasurementDetails", ["UnitOfMeasurementDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "UnitOfMeasurementDetails")], [0, nil]],
       ["regionOfOriginDetails", ["RegionOfOriginDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "RegionOfOriginDetails")], [0, nil]],
       ["shippingPackageDetails", ["ShippingPackageDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingPackageDetails")], [0, nil]],
-      ["shippingCarrierDetails", ["ShippingCarrierDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrierDetails")], [0, nil]]
+      ["shippingCarrierDetails", ["ShippingCarrierDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrierDetails")], [0, nil]],
+      ["returnPolicyDetails", ["ReturnPolicyDetailsType", XSD::QName.new(NsEBLBaseComponents, "ReturnPolicyDetails")], [0, 1]]
     ]
   )
 
@@ -4717,6 +4813,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -4765,6 +4862,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["refundFromSeller", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "RefundFromSeller")], [0, 1]],
       ["totalRefundToBuyer", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "TotalRefundToBuyer")], [0, 1]]
@@ -4815,6 +4913,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["feedbackID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FeedbackID")], [0, 1]]
     ]
@@ -4862,6 +4961,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["sellingStatus", ["SellingStatusType", XSD::QName.new(NsEBLBaseComponents, "SellingStatus")], [0, 1]],
       ["transactionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TransactionID")], [0, 1]],
@@ -4909,6 +5009,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["fees", ["FeesType", XSD::QName.new(NsEBLBaseComponents, "Fees")], [0, 1]],
@@ -4959,6 +5060,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["watchListCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "WatchListCount")], [0, 1]],
       ["watchListMaximum", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "WatchListMaximum")], [0, 1]]
@@ -5009,6 +5111,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["respondToBestOffer", ["BestOfferArrayType", XSD::QName.new(NsEBLBaseComponents, "RespondToBestOffer")], [0, 1]]
     ]
@@ -5058,6 +5161,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -5102,6 +5206,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -5165,6 +5270,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -5209,6 +5315,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
@@ -5259,6 +5366,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["fees", ["FeesType", XSD::QName.new(NsEBLBaseComponents, "Fees")], [0, 1]],
@@ -5310,6 +5418,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -5355,6 +5464,51 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => RevokeTokenRequestType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "RevokeTokenRequestType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["unsubscribeNotification", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "UnsubscribeNotification")], [0, 1]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => RevokeTokenResponseType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "RevokeTokenResponseType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -5399,6 +5553,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -5454,55 +5609,8 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  EncodedRegistry.register(
-    :class => SetCartRequestType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SetCartRequestType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
-    :schema_element => [
-      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
-      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
-      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
-      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
-      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
-      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
-      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
-      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["affiliateTrackingDetails", ["AffiliateTrackingDetailsType", XSD::QName.new(NsEBLBaseComponents, "AffiliateTrackingDetails")], [0, 1]],
-      ["cartID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "CartID")], [0, 1]],
-      ["shippingAddress", ["AddressType", XSD::QName.new(NsEBLBaseComponents, "ShippingAddress")], [0, 1]],
-      ["checkoutCompleteRedirect", ["CheckoutCompleteRedirectType", XSD::QName.new(NsEBLBaseComponents, "CheckoutCompleteRedirect")], [0, 1]],
-      ["cartItemArray", ["CartItemArrayType", XSD::QName.new(NsEBLBaseComponents, "CartItemArray")], [0, 1]]
-    ]
-  )
-
-  EncodedRegistry.register(
-    :class => SetCartResponseType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SetCartResponseType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
-    :schema_element => [
-      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
-      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
-      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
-      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
-      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
-      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
-      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
-      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
-      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
-      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
-      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
-      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["cart", ["CartType", XSD::QName.new(NsEBLBaseComponents, "Cart")], [0, 1]]
     ]
   )
 
@@ -5545,6 +5653,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -5568,7 +5677,8 @@ module DefaultMappingRegistry
       ["applicationDeliveryPreferences", ["ApplicationDeliveryPreferencesType", XSD::QName.new(NsEBLBaseComponents, "ApplicationDeliveryPreferences")], [0, 1]],
       ["userDeliveryPreferenceArray", ["NotificationEnableArrayType", XSD::QName.new(NsEBLBaseComponents, "UserDeliveryPreferenceArray")], [0, 1]],
       ["userData", ["NotificationUserDataType", XSD::QName.new(NsEBLBaseComponents, "UserData")], [0, 1]],
-      ["eventProperty", ["NotificationEventPropertyType[]", XSD::QName.new(NsEBLBaseComponents, "EventProperty")], [0, nil]]
+      ["eventProperty", ["NotificationEventPropertyType[]", XSD::QName.new(NsEBLBaseComponents, "EventProperty")], [0, nil]],
+      ["deliveryURLName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "DeliveryURLName")], [0, 1]]
     ]
   )
 
@@ -5591,6 +5701,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -5635,6 +5746,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -5679,6 +5791,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["status", ["PromotionalSaleStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
       ["promotionalSaleID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleID")], [0, 1]]
@@ -5731,14 +5844,15 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["status", ["PromotionalSaleStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]]
     ]
   )
 
   EncodedRegistry.register(
-    :class => SetReturnURLRequestType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SetReturnURLRequestType"),
+    :class => SetSellingManagerFeedbackOptionsRequestType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SetSellingManagerFeedbackOptionsRequestType"),
     :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
     :schema_element => [
       ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
@@ -5752,15 +5866,14 @@ module DefaultMappingRegistry
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["authenticationEntry", ["AuthenticationEntryType", XSD::QName.new(NsEBLBaseComponents, "AuthenticationEntry")], [0, 1]],
-      ["applicationDisplayName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ApplicationDisplayName")], [0, 1]],
-      ["action", ["ModifyActionCodeType", XSD::QName.new(NsEBLBaseComponents, "Action")], [0, 1]]
+      ["automatedLeaveFeedbackEvent", ["AutomatedLeaveFeedbackEventCodeType", XSD::QName.new(NsEBLBaseComponents, "AutomatedLeaveFeedbackEvent")], [0, 1]],
+      ["storedComments", ["FeedbackCommentArrayType", XSD::QName.new(NsEBLBaseComponents, "StoredComments")], [0, 1]]
     ]
   )
 
   EncodedRegistry.register(
-    :class => SetReturnURLResponseType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SetReturnURLResponseType"),
+    :class => SetSellingManagerFeedbackOptionsResponseType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SetSellingManagerFeedbackOptionsResponseType"),
     :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
     :schema_element => [
       ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
@@ -5777,6 +5890,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -5828,6 +5942,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -5871,6 +5986,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -5917,6 +6033,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["taskID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "TaskID")], [0, 1]],
       ["status", ["TaskStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]]
@@ -5962,6 +6079,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["customPage", ["StoreCustomPageType", XSD::QName.new(NsEBLBaseComponents, "CustomPage")], [0, 1]]
     ]
@@ -6006,6 +6124,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -6049,6 +6168,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -6095,6 +6215,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -6121,7 +6242,7 @@ module DefaultMappingRegistry
       ["sellerPaymentPreferences", ["SellerPaymentPreferencesType", XSD::QName.new(NsEBLBaseComponents, "SellerPaymentPreferences")], [0, 1]],
       ["sellerFavoriteItemPreferences", ["SellerFavoriteItemPreferencesType", XSD::QName.new(NsEBLBaseComponents, "SellerFavoriteItemPreferences")], [0, 1]],
       ["endOfAuctionEmailPreferences", ["EndOfAuctionEmailPreferencesType", XSD::QName.new(NsEBLBaseComponents, "EndOfAuctionEmailPreferences")], [0, 1]],
-      ["expressPreferences", ["ExpressPreferencesType", XSD::QName.new(NsEBLBaseComponents, "ExpressPreferences")], [0, 1]]
+      ["emailShipmentTrackingNumberPreference", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EmailShipmentTrackingNumberPreference")], [0, 1]]
     ]
   )
 
@@ -6144,6 +6265,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -6191,6 +6313,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["pictureSystemVersion", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PictureSystemVersion")], [0, 1]],
       ["siteHostedPictureDetails", ["SiteHostedPictureDetailsType", XSD::QName.new(NsEBLBaseComponents, "SiteHostedPictureDetails")], [0, 1]]
@@ -6238,6 +6361,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["validToken", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ValidToken")], [0, 1]]
     ]
@@ -6287,6 +6411,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -6331,6 +6456,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["veROReportPacketID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "VeROReportPacketID")], [0, 1]],
       ["veROReportPacketStatus", ["VeROReportPacketStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "VeROReportPacketStatus")], [0, 1]]
@@ -6378,6 +6504,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["fees", ["FeesType", XSD::QName.new(NsEBLBaseComponents, "Fees")], [0, 1]],
@@ -6431,6 +6558,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
       ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTime")], [0, 1]]
@@ -6685,17 +6813,21 @@ module DefaultMappingRegistry
       ["address", ["AddressType", XSD::QName.new(NsEBLBaseComponents, "Address")], [0, 1]],
       ["bestTimeToCall", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "BestTimeToCall")], [0, 1]],
       ["email", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Email")], [0, 1]],
-      ["firstName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FirstName")], [0, 1]],
-      ["lastName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LastName")], [0, 1]],
-      ["phone", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Phone")], [0, 1]],
       ["submittedTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "SubmittedTime")], [0, 1]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["itemTitle", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ItemTitle")], [0, 1]],
       ["userID", [nil, XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]],
       ["memberMessage", ["MemberMessageExchangeArrayType", XSD::QName.new(NsEBLBaseComponents, "MemberMessage")], [0, 1]],
       ["status", ["AdFormatLeadStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
-      ["phone2", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Phone2")], [0, 1]],
       ["leadFee", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "LeadFee")], [0, 1]],
+      ["externalEmail", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalEmail")], [0, 1]],
+      ["purchaseTimeFrame", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PurchaseTimeFrame")], [0, 1]],
+      ["tradeInYear", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TradeInYear")], [0, 1]],
+      ["tradeInMake", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TradeInMake")], [0, 1]],
+      ["tradeInModel", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TradeInModel")], [0, 1]],
+      ["financingAnswer", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "FinancingAnswer")], [0, 1]],
+      ["answer1", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Answer1")], [0, 1]],
+      ["answer2", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Answer2")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -6762,6 +6894,9 @@ module DefaultMappingRegistry
       ["internationalStreet", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "InternationalStreet")], [0, 1]],
       ["companyName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CompanyName")], [0, 1]],
       ["addressRecordType", ["AddressRecordTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "AddressRecordType")], [0, 1]],
+      ["firstName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FirstName")], [0, 1]],
+      ["lastName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LastName")], [0, 1]],
+      ["phone2", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Phone2")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -6784,6 +6919,17 @@ module DefaultMappingRegistry
     :schema_attribute => {
       XSD::QName.new(nil, "currencyID") => "SOAP::SOAPToken"
     }
+  )
+
+  EncodedRegistry.register(
+    :class => AnnouncementMessageType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "AnnouncementMessageType"),
+    :schema_element => [
+      ["announcementStartTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "AnnouncementStartTime")], [0, 1]],
+      ["eventTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EventTime")], [0, 1]],
+      ["messageType", ["AnnouncementMessageCodeType", XSD::QName.new(NsEBLBaseComponents, "MessageType")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
   )
 
   EncodedRegistry.register(
@@ -6821,6 +6967,7 @@ module DefaultMappingRegistry
       ["notificationPayloadType", ["NotificationPayloadTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "NotificationPayloadType")], [0, 1]],
       ["deviceType", ["DeviceTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "DeviceType")], [0, 1]],
       ["payloadVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PayloadVersion")], [0, 1]],
+      ["deliveryURLDetails", ["DeliveryURLDetailType[]", XSD::QName.new(NsEBLBaseComponents, "DeliveryURLDetails")], [0, nil]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -6877,27 +7024,6 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
-    :class => AuthenticationEntryArrayType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "AuthenticationEntryArrayType"),
-    :schema_element => [
-      ["authenticationEntry", ["AuthenticationEntryType[]", XSD::QName.new(NsEBLBaseComponents, "AuthenticationEntry")], [0, nil]]
-    ]
-  )
-
-  EncodedRegistry.register(
-    :class => AuthenticationEntryType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "AuthenticationEntryType"),
-    :schema_element => [
-      ["acceptURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "AcceptURL")], [0, 1]],
-      ["privacyPolicyURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "PrivacyPolicyURL")], [0, 1]],
-      ["rejectURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "RejectURL")], [0, 1]],
-      ["ruName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RuName")], [0, 1]],
-      ["tokenReturnMethod", ["TokenReturnMethodCodeType", XSD::QName.new(NsEBLBaseComponents, "TokenReturnMethod")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  EncodedRegistry.register(
     :class => AverageRatingDetailArrayType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "AverageRatingDetailArrayType"),
     :schema_element => [
@@ -6912,6 +7038,16 @@ module DefaultMappingRegistry
       ["ratingDetail", ["FeedbackRatingDetailCodeType", XSD::QName.new(NsEBLBaseComponents, "RatingDetail")], [0, 1]],
       ["rating", ["SOAP::SOAPDouble", XSD::QName.new(NsEBLBaseComponents, "Rating")], [0, 1]],
       ["ratingCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "RatingCount")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => AverageRatingSummaryType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "AverageRatingSummaryType"),
+    :schema_element => [
+      ["feedbackSummaryPeriod", ["FeedbackSummaryPeriodCodeType", XSD::QName.new(NsEBLBaseComponents, "FeedbackSummaryPeriod")], [0, 1]],
+      ["averageRatingDetails", ["AverageRatingDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "AverageRatingDetails")], [0, nil]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -7145,6 +7281,30 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => BusinessSellerDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "BusinessSellerDetailsType"),
+    :schema_element => [
+      ["address", ["AddressType", XSD::QName.new(NsEBLBaseComponents, "Address")], [0, 1]],
+      ["fax", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Fax")], [0, 1]],
+      ["email", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Email")], [0, 1]],
+      ["additionalContactInformation", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AdditionalContactInformation")], [0, 1]],
+      ["tradeRegistrationNumber", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TradeRegistrationNumber")], [0, 1]],
+      ["legalInvoice", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LegalInvoice")], [0, 1]],
+      ["termsAndConditions", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TermsAndConditions")], [0, 1]],
+      ["vATDetails", ["VATDetailsType", XSD::QName.new(NsEBLBaseComponents, "VATDetails")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => BuyerGuaranteeEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "BuyerGuaranteeEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => BuyerProtectionDetailsType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "BuyerProtectionDetailsType"),
     :schema_element => [
@@ -7155,16 +7315,40 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
-    :class => BuyerRequirementsType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "BuyerRequirementsType"),
+    :class => BuyerRequirementDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "BuyerRequirementDetailsType"),
     :schema_element => [
       ["shipToRegistrationCountry", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShipToRegistrationCountry")], [0, 1]],
       ["zeroFeedbackScore", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ZeroFeedbackScore")], [0, 1]],
       ["minimumFeedbackScore", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "MinimumFeedbackScore")], [0, 1]],
-      ["maximumUnpaidItemStrikes", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "MaximumUnpaidItemStrikes")], [0, 1]],
       ["maximumItemRequirements", ["MaximumItemRequirementsType", XSD::QName.new(NsEBLBaseComponents, "MaximumItemRequirements")], [0, 1]],
       ["linkedPayPalAccount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LinkedPayPalAccount")], [0, 1]],
-      ["verifiedUserRequirements", ["VerifiedUserRequirementsType", XSD::QName.new(NsEBLBaseComponents, "VerifiedUserRequirements")], [0, 1]]
+      ["verifiedUserRequirements", ["VerifiedUserRequirementsType", XSD::QName.new(NsEBLBaseComponents, "VerifiedUserRequirements")], [0, 1]],
+      ["maximumUnpaidItemStrikesInfo", ["MaximumUnpaidItemStrikesInfoType", XSD::QName.new(NsEBLBaseComponents, "MaximumUnpaidItemStrikesInfo")], [0, 1]],
+      ["maximumBuyerPolicyViolations", ["MaximumBuyerPolicyViolationsType", XSD::QName.new(NsEBLBaseComponents, "MaximumBuyerPolicyViolations")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => BuyerRoleMetricsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "BuyerRoleMetricsType"),
+    :schema_element => [
+      ["positiveFeedbackLeftCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PositiveFeedbackLeftCount")], [0, 1]],
+      ["negativeFeedbackLeftCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "NegativeFeedbackLeftCount")], [0, 1]],
+      ["neutralFeedbackLeftCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "NeutralFeedbackLeftCount")], [0, 1]],
+      ["feedbackLeftPercent", ["SOAP::SOAPFloat", XSD::QName.new(NsEBLBaseComponents, "FeedbackLeftPercent")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => BuyerSatisfactionDashboardType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "BuyerSatisfactionDashboardType"),
+    :schema_element => [
+      ["status", ["BuyerSatisfactionStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["alert", ["SellerDashboardAlertType[]", XSD::QName.new(NsEBLBaseComponents, "Alert")], [0, nil]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
 
@@ -7291,37 +7475,12 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
-    :class => CartItemArrayType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CartItemArrayType"),
-    :schema_element => [
-      ["cartItem", ["CartItemType[]", XSD::QName.new(NsEBLBaseComponents, "CartItem")], [0, nil]]
-    ]
-  )
-
-  EncodedRegistry.register(
     :class => CartItemType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "CartItemType"),
     :schema_element => [
       ["item", ["ItemType", XSD::QName.new(NsEBLBaseComponents, "Item")], [0, 1]],
       ["referenceID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "ReferenceID")], [0, 1]],
       ["action", ["ModifyActionCodeType", XSD::QName.new(NsEBLBaseComponents, "Action")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  EncodedRegistry.register(
-    :class => CartType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CartType"),
-    :schema_element => [
-      ["cartID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "CartID")], [0, 1]],
-      ["shippingAddress", ["AddressType", XSD::QName.new(NsEBLBaseComponents, "ShippingAddress")], [0, 1]],
-      ["cartStatus", ["OrderStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "CartStatus")], [0, 1]],
-      ["creationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "CreationTime")], [0, 1]],
-      ["expirationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "ExpirationTime")], [0, 1]],
-      ["checkoutURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "CheckoutURL")], [0, 1]],
-      ["checkoutCompleteRedirect", ["CheckoutCompleteRedirectType", XSD::QName.new(NsEBLBaseComponents, "CheckoutCompleteRedirect")], [0, 1]],
-      ["cartItemArray", ["CartItemArrayType", XSD::QName.new(NsEBLBaseComponents, "CartItemArray")], [0, 1]],
-      ["orderDetail", ["CheckoutOrderDetailType", XSD::QName.new(NsEBLBaseComponents, "OrderDetail")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -7341,6 +7500,7 @@ module DefaultMappingRegistry
       ["itemSpecifics", ["NameValueListArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemSpecifics")], [0, 1]],
       ["reviewCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ReviewCount")], [0, 1]],
       ["reviewDetails", ["ReviewDetailsType", XSD::QName.new(NsEBLBaseComponents, "ReviewDetails")], [0, 1]],
+      ["productState", ["ProductStateCodeType", XSD::QName.new(NsEBLBaseComponents, "ProductState")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -7369,7 +7529,6 @@ module DefaultMappingRegistry
       ["valuePackEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ValuePackEnabled")], [0, 1]],
       ["proPackPlusEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ProPackPlusEnabled")], [0, 1]],
       ["adFormatEnabled", ["AdFormatEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "AdFormatEnabled")], [0, 1]],
-      ["digitalDeliveryEnabled", ["DigitalDeliveryEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "DigitalDeliveryEnabled")], [0, 1]],
       ["bestOfferCounterEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferCounterEnabled")], [0, 1]],
       ["bestOfferAutoDeclineEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoDeclineEnabled")], [0, 1]],
       ["localMarketSpecialitySubscription", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketSpecialitySubscription")], [0, 1]],
@@ -7398,6 +7557,59 @@ module DefaultMappingRegistry
       ["paisaPayFullEscrowEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PaisaPayFullEscrowEnabled")], [0, 1]],
       ["classifiedAdAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdAutoAcceptEnabled")], [0, 1]],
       ["bestOfferAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoAcceptEnabled")], [0, 1]],
+      ["crossBorderTradeNorthAmericaEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeNorthAmericaEnabled")], [0, 1]],
+      ["crossBorderTradeGBEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeGBEnabled")], [0, 1]],
+      ["crossBorderTradeAustraliaEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeAustraliaEnabled")], [0, 1]],
+      ["payPalBuyerProtectionEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPalBuyerProtectionEnabled")], [0, 1]],
+      ["buyerGuaranteeEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BuyerGuaranteeEnabled")], [0, 1]],
+      ["combinedFixedPriceTreatmentEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CombinedFixedPriceTreatmentEnabled")], [0, 1]],
+      ["galleryFeaturedDurations", ["ListingEnhancementDurationReferenceType", XSD::QName.new(NsEBLBaseComponents, "GalleryFeaturedDurations")], [0, 1]],
+      ["payPalRequired", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPalRequired")], [0, 1]],
+      ["eBayMotorsProAdFormatEnabled", "AdFormatEnabledCodeType", [0, 1]],
+      ["eBayMotorsProContactByPhoneEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProPhoneCount", "SOAP::SOAPInt", [0, 1]],
+      ["eBayMotorsProContactByAddressEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProStreetCount", "SOAP::SOAPInt", [0, 1]],
+      ["eBayMotorsProCompanyNameEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProContactByEmailEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProBestOfferEnabled", "ClassifiedAdBestOfferEnabledCodeType", [0, 1]],
+      ["eBayMotorsProAutoAcceptEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProAutoDeclineEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProPaymentMethodCheckOutEnabled", "ClassifiedAdPaymentMethodEnabledCodeType", [0, 1]],
+      ["eBayMotorsProShippingMethodEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProCounterOfferEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProSellerContactDetailsEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["localMarketAdFormatEnabled", ["AdFormatEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAdFormatEnabled")], [0, 1]],
+      ["localMarketContactByPhoneEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByPhoneEnabled")], [0, 1]],
+      ["localMarketPhoneCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "LocalMarketPhoneCount")], [0, 1]],
+      ["localMarketContactByAddressEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByAddressEnabled")], [0, 1]],
+      ["localMarketStreetCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "LocalMarketStreetCount")], [0, 1]],
+      ["localMarketCompanyNameEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketCompanyNameEnabled")], [0, 1]],
+      ["localMarketContactByEmailEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByEmailEnabled")], [0, 1]],
+      ["localMarketBestOfferEnabled", ["ClassifiedAdBestOfferEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketBestOfferEnabled")], [0, 1]],
+      ["localMarketAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAutoAcceptEnabled")], [0, 1]],
+      ["localMarketAutoDeclineEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAutoDeclineEnabled")], [0, 1]],
+      ["localMarketPaymentMethodCheckOutEnabled", ["ClassifiedAdPaymentMethodEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketPaymentMethodCheckOutEnabled")], [0, 1]],
+      ["localMarketShippingMethodEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketShippingMethodEnabled")], [0, 1]],
+      ["localMarketCounterOfferEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketCounterOfferEnabled")], [0, 1]],
+      ["localMarketSellerContactDetailsEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketSellerContactDetailsEnabled")], [0, 1]],
+      ["classifiedAdPhoneCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdPhoneCount")], [0, 1]],
+      ["classifiedAdContactByAddressEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdContactByAddressEnabled")], [0, 1]],
+      ["classifiedAdStreetCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdStreetCount")], [0, 1]],
+      ["classifiedAdCompanyNameEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdCompanyNameEnabled")], [0, 1]],
+      ["specialitySubscription", ["GeographicExposureCodeType", XSD::QName.new(NsEBLBaseComponents, "SpecialitySubscription")], [0, 1]],
+      ["regularSubscription", ["GeographicExposureCodeType", XSD::QName.new(NsEBLBaseComponents, "RegularSubscription")], [0, 1]],
+      ["premiumSubscription", ["GeographicExposureCodeType", XSD::QName.new(NsEBLBaseComponents, "PremiumSubscription")], [0, 1]],
+      ["nonSubscription", ["GeographicExposureCodeType", XSD::QName.new(NsEBLBaseComponents, "NonSubscription")], [0, 1]],
+      ["iNEscrowWorkflowTimeline", ["INEscrowWorkflowTimelineCodeType", XSD::QName.new(NsEBLBaseComponents, "INEscrowWorkflowTimeline")], [0, 1]],
+      ["payPalRequiredForStoreOwner", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPalRequiredForStoreOwner")], [0, 1]],
+      ["reviseQuantityAllowed", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ReviseQuantityAllowed")], [0, 1]],
+      ["revisePriceAllowed", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "RevisePriceAllowed")], [0, 1]],
+      ["storeOwnerExtendedListingDurationsEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurationsEnabled")], [0, 1]],
+      ["storeOwnerExtendedListingDurations", ["StoreOwnerExtendedListingDurationsType", XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurations")], [0, 1]],
+      ["returnPolicyEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ReturnPolicyEnabled")], [0, 1]],
+      ["handlingTimeEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HandlingTimeEnabled")], [0, 1]],
+      ["maxFlatShippingCost", ["SOAP::SOAPDouble", XSD::QName.new(NsEBLBaseComponents, "MaxFlatShippingCost")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -7500,6 +7712,25 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => CharityAffiliationDetailType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CharityAffiliationDetailType"),
+    :schema_element => [
+      ["charityID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CharityID")], [0, 1]],
+      ["affiliationType", ["CharityAffiliationTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "AffiliationType")], [0, 1]],
+      ["lastUsedTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "LastUsedTime")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => CharityAffiliationDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CharityAffiliationDetailsType"),
+    :schema_element => [
+      ["charityAffiliationDetail", ["CharityAffiliationDetailType[]", XSD::QName.new(NsEBLBaseComponents, "CharityAffiliationDetail")], [0, nil]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => CharityAffiliationType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "CharityAffiliationType"),
     :schema_element => [
@@ -7542,6 +7773,7 @@ module DefaultMappingRegistry
       ["charityID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CharityID")], [0, 1]],
       ["logoURLSelling", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "LogoURLSelling")], [0, 1]],
       ["displayLogoSelling", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DisplayLogoSelling")], [0, 1]],
+      ["displayNameInCheckout", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DisplayNameInCheckout")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ],
     :schema_attribute => {
@@ -7555,6 +7787,7 @@ module DefaultMappingRegistry
     :schema_element => [
       ["charitySellerStatus", ["CharitySellerStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "CharitySellerStatus")], [0, 1]],
       ["charityAffiliation", ["CharityAffiliationType[]", XSD::QName.new(NsEBLBaseComponents, "CharityAffiliation")], [0, nil]],
+      ["termsAndConditionsAccepted", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "TermsAndConditionsAccepted")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -7571,16 +7804,6 @@ module DefaultMappingRegistry
       ["logoURL", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LogoURL")], [0, 1]],
       ["status", ["CharityStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
       ["charityListing", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CharityListing")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  EncodedRegistry.register(
-    :class => CheckoutCompleteRedirectType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CheckoutCompleteRedirectType"),
-    :schema_element => [
-      ["uRL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "URL")], [0, 1]],
-      ["name", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Name")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -7634,6 +7857,22 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => ClassifiedAdCompanyNameEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdCompanyNameEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => ClassifiedAdContactByAddressEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdContactByAddressEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => ClassifiedAdContactByEmailEnabledDefintionType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdContactByEmailEnabledDefintionType"),
     :schema_element => [
@@ -7674,8 +7913,32 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => ClassifiedAdPhoneCountDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdPhoneCountDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => ClassifiedAdShippingMethodEnabledDefinitionType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdShippingMethodEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => ClassifiedAdStreetCountDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdStreetCountDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => CombinedFixedPriceTreatmentEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CombinedFixedPriceTreatmentEnabledDefinitionType"),
     :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
@@ -7726,6 +7989,30 @@ module DefaultMappingRegistry
     :schema_element => [
       ["country", ["CountryCodeType", XSD::QName.new(NsEBLBaseComponents, "Country")], [0, 1]],
       ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => CrossBorderTradeAustraliaEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeAustraliaEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => CrossBorderTradeGBEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeGBEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => CrossBorderTradeNorthAmericaEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeNorthAmericaEnabledDefinitionType"),
+    :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -7795,6 +8082,17 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => DeliveryURLDetailType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "DeliveryURLDetailType"),
+    :schema_element => [
+      ["deliveryURLName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "DeliveryURLName")], [0, 1]],
+      ["deliveryURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "DeliveryURL")], [0, 1]],
+      ["status", ["EnableCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => DescriptionTemplateType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "DescriptionTemplateType"),
     :schema_element => [
@@ -7804,26 +8102,6 @@ module DefaultMappingRegistry
       ["name", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Name")], [0, 1]],
       ["templateXML", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TemplateXML")], [0, 1]],
       ["type", ["DescriptionTemplateCodeType", XSD::QName.new(NsEBLBaseComponents, "Type")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  EncodedRegistry.register(
-    :class => DigitalDeliveryDetailsType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "DigitalDeliveryDetailsType"),
-    :schema_element => [
-      ["requirements", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Requirements")], [0, 1]],
-      ["method", ["DigitalDeliveryMethodCodeType", XSD::QName.new(NsEBLBaseComponents, "Method")], [0, 1]],
-      ["uRL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "URL")], [0, 1]],
-      ["instructions", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Instructions")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  EncodedRegistry.register(
-    :class => DigitalDeliveryEnabledDefinitionType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "DigitalDeliveryEnabledDefinitionType"),
-    :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -7895,15 +8173,6 @@ module DefaultMappingRegistry
     :schema_element => [
       ["distanceMeasurement", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "DistanceMeasurement")]],
       ["distanceUnit", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "DistanceUnit")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  EncodedRegistry.register(
-    :class => DomainHistogramType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "DomainHistogramType"),
-    :schema_element => [
-      ["department", ["ExpressHistogramDepartmentType[]", XSD::QName.new(NsEBLBaseComponents, "Department")], [0, nil]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -8028,7 +8297,6 @@ module DefaultMappingRegistry
       ["eligibleCheckout", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EligibleCheckout")], [0, 1]],
       ["noPreapprovedBidderList", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "NoPreapprovedBidderList")], [0, 1]],
       ["noCharity", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "NoCharity")], [0, 1]],
-      ["noDigitalDelivery", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "NoDigitalDelivery")], [0, 1]],
       ["combinedShippingDiscount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CombinedShippingDiscount")], [0, 1]],
       ["shipFromEligibleCountry", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShipFromEligibleCountry")], [0, 1]],
       ["payPalAccountAcceptsUnconfirmedAddress", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPalAccountAcceptsUnconfirmedAddress")], [0, 1]],
@@ -8067,6 +8335,7 @@ module DefaultMappingRegistry
       ["productReferenceID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "ProductReferenceID")], [0, 1]],
       ["itemSpecifics", ["NameValueListArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemSpecifics")], [0, 1]],
       ["detailsURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "DetailsURL")], [0, 1]],
+      ["productState", ["ProductStateCodeType", XSD::QName.new(NsEBLBaseComponents, "ProductState")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -8158,7 +8427,6 @@ module DefaultMappingRegistry
       ["valuePackEnabled", ["ValuePackEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ValuePackEnabled")], [0, 1]],
       ["proPackPlusEnabled", ["ProPackPlusEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ProPackPlusEnabled")], [0, 1]],
       ["adFormatEnabled", ["AdFormatEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "AdFormatEnabled")], [0, 1]],
-      ["digitalDeliveryEnabled", ["DigitalDeliveryEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "DigitalDeliveryEnabled")], [0, 1]],
       ["bestOfferCounterEnabled", ["BestOfferCounterEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "BestOfferCounterEnabled")], [0, 1]],
       ["bestOfferAutoDeclineEnabled", ["BestOfferAutoDeclineEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoDeclineEnabled")], [0, 1]],
       ["localMarketSpecialitySubscription", ["LocalMarketSpecialitySubscriptionDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketSpecialitySubscription")], [0, 1]],
@@ -8190,6 +8458,58 @@ module DefaultMappingRegistry
       ["paisaPayFullEscrowEnabled", ["PaisaPayFullEscrowEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "PaisaPayFullEscrowEnabled")], [0, 1]],
       ["bestOfferAutoAcceptEnabled", ["BestOfferAutoAcceptEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoAcceptEnabled")], [0, 1]],
       ["classifiedAdAutoAcceptEnabled", ["ClassifiedAdAutoAcceptEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdAutoAcceptEnabled")], [0, 1]],
+      ["crossBorderTradeNorthAmericaEnabled", ["CrossBorderTradeNorthAmericaEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeNorthAmericaEnabled")], [0, 1]],
+      ["crossBorderTradeGBEnabled", ["CrossBorderTradeGBEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeGBEnabled")], [0, 1]],
+      ["crossBorderTradeAustraliaEnabled", ["CrossBorderTradeAustraliaEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeAustraliaEnabled")], [0, 1]],
+      ["payPalBuyerProtectionEnabled", ["PayPalBuyerProtectionEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "PayPalBuyerProtectionEnabled")], [0, 1]],
+      ["buyerGuaranteeEnabled", ["BuyerGuaranteeEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "BuyerGuaranteeEnabled")], [0, 1]],
+      ["combinedFixedPriceTreatmentEnabled", ["CombinedFixedPriceTreatmentEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "CombinedFixedPriceTreatmentEnabled")], [0, 1]],
+      ["galleryFeaturedDurations", ["ListingEnhancementDurationDefinitionType", XSD::QName.new(NsEBLBaseComponents, "GalleryFeaturedDurations")], [0, 1]],
+      ["iNEscrowWorkflowTimeline", ["INEscrowWorkflowTimelineDefinitionType", XSD::QName.new(NsEBLBaseComponents, "INEscrowWorkflowTimeline")], [0, 1]],
+      ["payPalRequired", ["PayPalRequiredDefinitionType", XSD::QName.new(NsEBLBaseComponents, "PayPalRequired")], [0, 1]],
+      ["eBayMotorsProAdFormatEnabled", "EBayMotorsProAdFormatEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProContactByPhoneEnabled", "EBayMotorsProContactByPhoneEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProPhoneCount", "EBayMotorsProPhoneCountDefinitionType", [0, 1]],
+      ["eBayMotorsProContactByAddressEnabled", "EBayMotorsProContactByAddressEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProStreetCount", "EBayMotorsProStreetCountDefinitionType", [0, 1]],
+      ["eBayMotorsProCompanyNameEnabled", "EBayMotorsProCompanyNameEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProContactByEmailEnabled", "EBayMotorsProContactByEmailEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProBestOfferEnabled", "EBayMotorsProBestOfferEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProAutoAcceptEnabled", "EBayMotorsProAutoAcceptEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProAutoDeclineEnabled", "EBayMotorsProAutoDeclineEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProPaymentMethodCheckOutEnabled", "EBayMotorsProPaymentMethodCheckOutEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProShippingMethodEnabled", "EBayMotorsProShippingMethodEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProCounterOfferEnabled", "EBayMotorsProCounterOfferEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProSellerContactDetailsEnabled", "EBayMotorsProSellerContactDetailsEnabledDefinitionType", [0, 1]],
+      ["localMarketAdFormatEnabled", ["LocalMarketAdFormatEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAdFormatEnabled")], [0, 1]],
+      ["localMarketContactByPhoneEnabled", ["LocalMarketContactByPhoneEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByPhoneEnabled")], [0, 1]],
+      ["localMarketPhoneCount", ["LocalMarketPhoneCountDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketPhoneCount")], [0, 1]],
+      ["localMarketContactByAddressEnabled", ["LocalMarketContactByAddressEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByAddressEnabled")], [0, 1]],
+      ["localMarketStreetCount", ["LocalMarketStreetCountDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketStreetCount")], [0, 1]],
+      ["localMarketCompanyNameEnabled", ["LocalMarketCompanyNameEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketCompanyNameEnabled")], [0, 1]],
+      ["localMarketContactByEmailEnabled", ["LocalMarketContactByEmailEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByEmailEnabled")], [0, 1]],
+      ["localMarketBestOfferEnabled", ["LocalMarketBestOfferEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketBestOfferEnabled")], [0, 1]],
+      ["localMarketAutoAcceptEnabled", ["LocalMarketAutoAcceptEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAutoAcceptEnabled")], [0, 1]],
+      ["localMarketAutoDeclineEnabled", ["LocalMarketAutoDeclineEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAutoDeclineEnabled")], [0, 1]],
+      ["localMarketPaymentMethodCheckOutEnabled", ["LocalMarketPaymentMethodCheckOutEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketPaymentMethodCheckOutEnabled")], [0, 1]],
+      ["localMarketShippingMethodEnabled", ["LocalMarketShippingMethodEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketShippingMethodEnabled")], [0, 1]],
+      ["localMarketCounterOfferEnabled", ["LocalMarketCounterOfferEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketCounterOfferEnabled")], [0, 1]],
+      ["localMarketSellerContactDetailsEnabled", ["LocalMarketSellerContactDetailsEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketSellerContactDetailsEnabled")], [0, 1]],
+      ["classifiedAdPhoneCount", ["ClassifiedAdPhoneCountDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdPhoneCount")], [0, 1]],
+      ["classifiedAdContactByAddressEnabled", ["ClassifiedAdContactByAddressEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdContactByAddressEnabled")], [0, 1]],
+      ["classifiedAdStreetCount", ["ClassifiedAdStreetCountDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdStreetCount")], [0, 1]],
+      ["classifiedAdCompanyNameEnabled", ["ClassifiedAdCompanyNameEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdCompanyNameEnabled")], [0, 1]],
+      ["specialitySubscription", ["SpecialitySubscriptionDefinitionType", XSD::QName.new(NsEBLBaseComponents, "SpecialitySubscription")], [0, 1]],
+      ["regularSubscription", ["RegularSubscriptionDefinitionType", XSD::QName.new(NsEBLBaseComponents, "RegularSubscription")], [0, 1]],
+      ["premiumSubscription", ["PremiumSubscriptionDefinitionType", XSD::QName.new(NsEBLBaseComponents, "PremiumSubscription")], [0, 1]],
+      ["nonSubscription", ["NonSubscriptionDefinitionType", XSD::QName.new(NsEBLBaseComponents, "NonSubscription")], [0, 1]],
+      ["returnPolicyEnabled", ["ReturnPolicyEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ReturnPolicyEnabled")], [0, 1]],
+      ["handlingTimeEnabled", ["HandlingTimeEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "HandlingTimeEnabled")], [0, 1]],
+      ["payPalRequiredForStoreOwner", ["PayPalRequiredForStoreOwnerDefinitionType", XSD::QName.new(NsEBLBaseComponents, "PayPalRequiredForStoreOwner")], [0, 1]],
+      ["reviseQuantityAllowed", ["ReviseQuantityAllowedDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ReviseQuantityAllowed")], [0, 1]],
+      ["revisePriceAllowed", ["RevisePriceAllowedDefinitionType", XSD::QName.new(NsEBLBaseComponents, "RevisePriceAllowed")], [0, 1]],
+      ["storeOwnerExtendedListingDurationsEnabled", ["StoreOwnerExtendedListingDurationsEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurationsEnabled")], [0, 1]],
+      ["storeOwnerExtendedListingDurations", ["StoreOwnerExtendedListingDurationsDefinitionType", XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurations")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -8201,6 +8521,14 @@ module DefaultMappingRegistry
       ["name", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Name")], [0, 1]],
       ["fee", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "Fee")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => FeedbackCommentArrayType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "FeedbackCommentArrayType"),
+    :schema_element => [
+      ["storedCommentText", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "StoredCommentText")], [0, nil]]
     ]
   )
 
@@ -8286,8 +8614,10 @@ module DefaultMappingRegistry
       ["neutralCommentCountFromSuspendedUsers", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "NeutralCommentCountFromSuspendedUsers")], [0, 1]],
       ["uniqueNegativeFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueNegativeFeedbackCount")], [0, 1]],
       ["uniquePositiveFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniquePositiveFeedbackCount")], [0, 1]],
-      ["sellerAverageRatingDetailArray", ["AverageRatingDetailArrayType", XSD::QName.new(NsEBLBaseComponents, "SellerAverageRatingDetailArray")], [0, 1]],
       ["uniqueNeutralFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueNeutralFeedbackCount")], [0, 1]],
+      ["sellerRatingSummaryArray", ["SellerRatingSummaryArrayType", XSD::QName.new(NsEBLBaseComponents, "SellerRatingSummaryArray")], [0, 1]],
+      ["sellerRoleMetrics", ["SellerRoleMetricsType", XSD::QName.new(NsEBLBaseComponents, "SellerRoleMetrics")], [0, 1]],
+      ["buyerRoleMetrics", ["BuyerRoleMetricsType", XSD::QName.new(NsEBLBaseComponents, "BuyerRoleMetrics")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -8373,6 +8703,14 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => HandlingTimeEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "HandlingTimeEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => HistogramEntryType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "HistogramEntryType"),
     :schema_element => [
@@ -8388,6 +8726,14 @@ module DefaultMappingRegistry
   EncodedRegistry.register(
     :class => HomePageFeaturedEnabledDefinitionType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "HomePageFeaturedEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => INEscrowWorkflowTimelineDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "INEscrowWorkflowTimelineDefinitionType"),
     :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
@@ -8612,7 +8958,6 @@ module DefaultMappingRegistry
       ["watchCount", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "WatchCount")], [0, 1]],
       ["hitCount", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "HitCount")], [0, 1]],
       ["disableBuyerRequirements", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DisableBuyerRequirements")], [0, 1]],
-      ["buyerRequirements", ["BuyerRequirementsType", XSD::QName.new(NsEBLBaseComponents, "BuyerRequirements")], [0, 1]],
       ["bestOfferDetails", ["BestOfferDetailsType", XSD::QName.new(NsEBLBaseComponents, "BestOfferDetails")], [0, 1]],
       ["liveAuctionDetails", ["LiveAuctionDetailsType", XSD::QName.new(NsEBLBaseComponents, "LiveAuctionDetails")], [0, 1]],
       ["locationDefaulted", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocationDefaulted")], [0, 1]],
@@ -8633,7 +8978,6 @@ module DefaultMappingRegistry
       ["externalProductID", ["ExternalProductIDType", XSD::QName.new(NsEBLBaseComponents, "ExternalProductID")], [0, 1]],
       ["sellerInventoryID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SellerInventoryID")], [0, 1]],
       ["pictureDetails", ["PictureDetailsType", XSD::QName.new(NsEBLBaseComponents, "PictureDetails")], [0, 1]],
-      ["digitalDeliveryDetails", ["DigitalDeliveryDetailsType", XSD::QName.new(NsEBLBaseComponents, "DigitalDeliveryDetails")], [0, 1]],
       ["dispatchTimeMax", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "DispatchTimeMax")], [0, 1]],
       ["skypeEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SkypeEnabled")], [0, 1]],
       ["skypeID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SkypeID")], [0, 1]],
@@ -8641,9 +8985,7 @@ module DefaultMappingRegistry
       ["bestOfferEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferEnabled")], [0, 1]],
       ["localListing", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalListing")], [0, 1]],
       ["thirdPartyCheckoutIntegration", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ThirdPartyCheckoutIntegration")], [0, 1]],
-      ["expressOptOut", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ExpressOptOut")], [0, 1]],
       ["listingCheckoutRedirectPreference", ["ListingCheckoutRedirectPreferenceType", XSD::QName.new(NsEBLBaseComponents, "ListingCheckoutRedirectPreference")], [0, 1]],
-      ["expressDetails", ["ExpressDetailsType", XSD::QName.new(NsEBLBaseComponents, "ExpressDetails")], [0, 1]],
       ["sellerContactDetails", ["AddressType", XSD::QName.new(NsEBLBaseComponents, "SellerContactDetails")], [0, 1]],
       ["totalQuestionCount", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "TotalQuestionCount")], [0, 1]],
       ["proxyItem", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ProxyItem")], [0, 1]],
@@ -8660,7 +9002,39 @@ module DefaultMappingRegistry
       ["updateSellerInfo", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "UpdateSellerInfo")], [0, 1]],
       ["updateReturnPolicy", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "UpdateReturnPolicy")], [0, 1]],
       ["itemPolicyViolation", ["ItemPolicyViolationType", XSD::QName.new(NsEBLBaseComponents, "ItemPolicyViolation")], [0, 1]],
+      ["crossBorderTrade", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTrade")], [0, nil]],
+      ["businessSellerDetails", ["BusinessSellerDetailsType", XSD::QName.new(NsEBLBaseComponents, "BusinessSellerDetails")], [0, 1]],
+      ["buyerGuaranteePrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "BuyerGuaranteePrice")], [0, 1]],
+      ["buyerRequirementDetails", ["BuyerRequirementDetailsType", XSD::QName.new(NsEBLBaseComponents, "BuyerRequirementDetails")], [0, 1]],
+      ["returnPolicy", ["ReturnPolicyType", XSD::QName.new(NsEBLBaseComponents, "ReturnPolicy")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => ItemsCanceledEventType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ItemsCanceledEventType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["canceledItemIDArray", ["ItemIDArrayType", XSD::QName.new(NsEBLBaseComponents, "CanceledItemIDArray")], [0, 1]],
+      ["eligibleForRelist", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EligibleForRelist")], [0, 1]],
+      ["sellerID", [nil, XSD::QName.new(NsEBLBaseComponents, "SellerID")], [0, 1]]
     ]
   )
 
@@ -8729,8 +9103,6 @@ module DefaultMappingRegistry
       ["minimumBestOfferPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "MinimumBestOfferPrice")], [0, 1]],
       ["minimumBestOfferMessage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MinimumBestOfferMessage")], [0, 1]],
       ["localListingDistance", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LocalListingDistance")], [0, 1]],
-      ["expressListing", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ExpressListing")], [0, 1]],
-      ["expressItemRequirements", ["ExpressItemRequirementsType", XSD::QName.new(NsEBLBaseComponents, "ExpressItemRequirements")], [0, 1]],
       ["tCROriginalItemID", [nil, XSD::QName.new(NsEBLBaseComponents, "TCROriginalItemID")], [0, 1]],
       ["viewItemURLForNaturalSearch", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "ViewItemURLForNaturalSearch")], [0, 1]],
       ["payPerLeadEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPerLeadEnabled")], [0, 1]],
@@ -8768,6 +9140,23 @@ module DefaultMappingRegistry
     :schema_attribute => {
       XSD::QName.new(nil, "type") => "SOAP::SOAPToken"
     }
+  )
+
+  EncodedRegistry.register(
+    :class => ListingEnhancementDurationDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ListingEnhancementDurationDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => ListingEnhancementDurationReferenceType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ListingEnhancementDurationReferenceType"),
+    :schema_element => [
+      ["duration", ["SOAP::SOAPToken[]", XSD::QName.new(NsEBLBaseComponents, "Duration")], [0, nil]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
   )
 
   EncodedRegistry.register(
@@ -8900,8 +9289,96 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => LocalMarketAdFormatEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketAdFormatEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => LocalMarketAutoAcceptEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketAutoAcceptEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => LocalMarketAutoDeclineEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketAutoDeclineEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => LocalMarketBestOfferEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketBestOfferEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => LocalMarketCompanyNameEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketCompanyNameEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => LocalMarketContactByAddressEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByAddressEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => LocalMarketContactByEmailEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByEmailEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => LocalMarketContactByPhoneEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByPhoneEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => LocalMarketCounterOfferEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketCounterOfferEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => LocalMarketNonSubscriptionDefinitionType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketNonSubscriptionDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => LocalMarketPaymentMethodCheckOutEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketPaymentMethodCheckOutEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => LocalMarketPhoneCountDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketPhoneCountDefinitionType"),
     :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
@@ -8924,8 +9401,32 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => LocalMarketSellerContactDetailsEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketSellerContactDetailsEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => LocalMarketShippingMethodEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketShippingMethodEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => LocalMarketSpecialitySubscriptionDefinitionType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketSpecialitySubscriptionDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => LocalMarketStreetCountDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketStreetCountDefinitionType"),
     :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
@@ -8979,11 +9480,31 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => MaximumBuyerPolicyViolationsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "MaximumBuyerPolicyViolationsType"),
+    :schema_element => [
+      ["count", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "Count")], [0, 1]],
+      ["period", ["PeriodCodeType", XSD::QName.new(NsEBLBaseComponents, "Period")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => MaximumItemRequirementsType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "MaximumItemRequirementsType"),
     :schema_element => [
       ["maximumItemCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "MaximumItemCount")], [0, 1]],
       ["minimumFeedbackScore", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "MinimumFeedbackScore")], [0, 1]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => MaximumUnpaidItemStrikesInfoType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "MaximumUnpaidItemStrikesInfoType"),
+    :schema_element => [
+      ["count", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "Count")], [0, 1]],
+      ["period", ["PeriodCodeType", XSD::QName.new(NsEBLBaseComponents, "Period")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
 
@@ -9091,6 +9612,14 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => MyMessagesExternalMessageIDArrayType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "MyMessagesExternalMessageIDArrayType"),
+    :schema_element => [
+      ["externalMessageID", ["[]", XSD::QName.new(NsEBLBaseComponents, "ExternalMessageID")], [0, nil]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => MyMessagesFolderSummaryType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "MyMessagesFolderSummaryType"),
     :schema_element => [
@@ -9161,6 +9690,10 @@ module DefaultMappingRegistry
       ["responseDetails", ["MyMessagesResponseDetailsType", XSD::QName.new(NsEBLBaseComponents, "ResponseDetails")], [0, 1]],
       ["forwardDetails", ["MyMessagesForwardDetailsType", XSD::QName.new(NsEBLBaseComponents, "ForwardDetails")], [0, 1]],
       ["folder", ["MyMessagesFolderType", XSD::QName.new(NsEBLBaseComponents, "Folder")], [0, 1]],
+      ["content", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Content")], [0, 1]],
+      ["messageType", ["MessageTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "MessageType")], [0, 1]],
+      ["listingStatus", ["ListingStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingStatus")], [0, 1]],
+      ["questionType", ["QuestionTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "QuestionType")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -9206,6 +9739,31 @@ module DefaultMappingRegistry
     :schema_element => [
       ["searchName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SearchName")], [0, 1]],
       ["searchQuery", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SearchQuery")], [0, 1]],
+      ["queryKeywords", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "QueryKeywords")], [0, 1]],
+      ["categoryID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CategoryID")], [0, 1]],
+      ["itemSort", ["SimpleItemSortCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemSort")], [0, 1]],
+      ["sortOrder", ["SortOrderCodeType", XSD::QName.new(NsEBLBaseComponents, "SortOrder")], [0, 1]],
+      ["endTimeFrom", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTimeFrom")], [0, 1]],
+      ["endTimeTo", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTimeTo")], [0, 1]],
+      ["maxDistance", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "MaxDistance")], [0, 1]],
+      ["postalCode", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PostalCode")], [0, 1]],
+      ["itemType", ["ItemTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemType")], [0, 1]],
+      ["priceMax", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "PriceMax")], [0, 1]],
+      ["priceMin", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "PriceMin")], [0, 1]],
+      ["currency", ["CurrencyCodeType", XSD::QName.new(NsEBLBaseComponents, "Currency")], [0, 1]],
+      ["bidCountMax", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "BidCountMax")], [0, 1]],
+      ["bidCountMin", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "BidCountMin")], [0, 1]],
+      ["searchFlag", ["SearchFlagCodeType[]", XSD::QName.new(NsEBLBaseComponents, "SearchFlag")], [0, nil]],
+      ["paymentMethod", ["PaymentMethodSearchCodeType", XSD::QName.new(NsEBLBaseComponents, "PaymentMethod")], [0, 1]],
+      ["preferredLocation", ["PreferredLocationCodeType", XSD::QName.new(NsEBLBaseComponents, "PreferredLocation")], [0, 1]],
+      ["sellerID", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "SellerID")], [0, nil]],
+      ["sellerIDExclude", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "SellerIDExclude")], [0, nil]],
+      ["itemsAvailableTo", ["CountryCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemsAvailableTo")], [0, 1]],
+      ["itemsLocatedIn", ["CountryCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemsLocatedIn")], [0, 1]],
+      ["sellerBusinessType", ["SellerBusinessCodeType", XSD::QName.new(NsEBLBaseComponents, "SellerBusinessType")], [0, 1]],
+      ["condition", ["ItemConditionCodeType", XSD::QName.new(NsEBLBaseComponents, "Condition")], [0, 1]],
+      ["quantity", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "Quantity")], [0, 1]],
+      ["quantityOperator", ["QuantityOperatorCodeType", XSD::QName.new(NsEBLBaseComponents, "QuantityOperator")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -9290,6 +9848,14 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => NonSubscriptionDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "NonSubscriptionDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => NotificationDetailsArrayType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "NotificationDetailsArrayType"),
     :schema_element => [
@@ -9310,6 +9876,7 @@ module DefaultMappingRegistry
       ["nextRetryTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "NextRetryTime")], [0, 1]],
       ["deliveryTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "DeliveryTime")], [0, 1]],
       ["errorMessage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorMessage")], [0, 1]],
+      ["deliveryURLName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "DeliveryURLName")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -9362,6 +9929,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["messageBody", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageBody")], [0, 1]],
       ["eIAS", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIAS")], [0, 1]]
@@ -9387,6 +9955,7 @@ module DefaultMappingRegistry
     :schema_element => [
       ["sMSSubscription", ["SMSSubscriptionType", XSD::QName.new(NsEBLBaseComponents, "SMSSubscription")], [0, 1]],
       ["summarySchedule", ["SummaryEventScheduleType[]", XSD::QName.new(NsEBLBaseComponents, "SummarySchedule")], [0, nil]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -9477,7 +10046,6 @@ module DefaultMappingRegistry
       ["subtotal", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "Subtotal")], [0, 1]],
       ["total", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "Total")], [0, 1]],
       ["externalTransaction", ["ExternalTransactionType[]", XSD::QName.new(NsEBLBaseComponents, "ExternalTransaction")], [0, nil]],
-      ["digitalDelivery", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DigitalDelivery")], [0, 1]],
       ["transactionArray", ["TransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "TransactionArray")], [0, 1]],
       ["buyerUserID", [nil, XSD::QName.new(NsEBLBaseComponents, "BuyerUserID")], [0, 1]],
       ["paidTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "PaidTime")], [0, 1]],
@@ -9534,6 +10102,30 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => PayPalBuyerProtectionEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PayPalBuyerProtectionEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => PayPalRequiredDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PayPalRequiredDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => PayPalRequiredForStoreOwnerDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PayPalRequiredForStoreOwnerDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => PaymentDetailsType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "PaymentDetailsType"),
     :schema_element => [
@@ -9562,6 +10154,7 @@ module DefaultMappingRegistry
       ["photoDisplay", ["PhotoDisplayCodeType", XSD::QName.new(NsEBLBaseComponents, "PhotoDisplay")], [0, 1]],
       ["pictureURL", ["SOAP::SOAPAnyURI[]", XSD::QName.new(NsEBLBaseComponents, "PictureURL")], [0, nil]],
       ["pictureSource", ["PictureSourceCodeType", XSD::QName.new(NsEBLBaseComponents, "PictureSource")], [0, 1]],
+      ["galleryDuration", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "GalleryDuration")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -9640,6 +10233,34 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => PolicyComplianceDashboardType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PolicyComplianceDashboardType"),
+    :schema_element => [
+      ["status", ["PolicyComplianceStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["alert", ["SellerDashboardAlertType[]", XSD::QName.new(NsEBLBaseComponents, "Alert")], [0, nil]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => PowerSellerDashboardType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PowerSellerDashboardType"),
+    :schema_element => [
+      ["level", ["SellerLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "Level")], [0, 1]],
+      ["alert", ["SellerDashboardAlertType[]", XSD::QName.new(NsEBLBaseComponents, "Alert")], [0, nil]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => PremiumSubscriptionDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PremiumSubscriptionDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => PriceRangeFilterType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "PriceRangeFilterType"),
     :schema_element => [
@@ -9695,14 +10316,6 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
-    :class => ProductArrayType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ProductArrayType"),
-    :schema_element => [
-      ["product", ["ExpressProductType[]", XSD::QName.new(NsEBLBaseComponents, "Product")], [0, nil]]
-    ]
-  )
-
-  EncodedRegistry.register(
     :class => ProductFamilyType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ProductFamilyType"),
     :schema_element => [
@@ -9731,7 +10344,8 @@ module DefaultMappingRegistry
     :schema_element => [
       ["averageStartPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "AverageStartPrice")], [0, 1]],
       ["averageSoldPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "AverageSoldPrice")], [0, 1]],
-      ["title", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Title")], [0, 1]]
+      ["title", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Title")], [0, 1]],
+      ["productState", ["ProductStateCodeType", XSD::QName.new(NsEBLBaseComponents, "ProductState")], [0, 1]]
     ],
     :schema_attribute => {
       XSD::QName.new(nil, "productInfoID") => "SOAP::SOAPString"
@@ -9956,6 +10570,16 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => RefundDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "RefundDetailsType"),
+    :schema_element => [
+      ["refundOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "RefundOption")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => RefundType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "RefundType"),
     :schema_element => [
@@ -9983,6 +10607,14 @@ module DefaultMappingRegistry
       ["regionOfOrigin", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RegionOfOrigin")], [0, 1]],
       ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
       ["status", ["StatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => RegularSubscriptionDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "RegularSubscriptionDefinitionType"),
+    :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -10060,6 +10692,75 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => ReturnPolicyDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReturnPolicyDetailsType"),
+    :schema_element => [
+      ["refund", ["RefundDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "Refund")], [0, nil]],
+      ["returnsWithin", ["ReturnsWithinDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ReturnsWithin")], [0, nil]],
+      ["returnsAccepted", ["ReturnsAcceptedDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ReturnsAccepted")], [0, nil]],
+      ["description", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["warrantyOffered", ["WarrantyOfferedDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "WarrantyOffered")], [0, nil]],
+      ["warrantyType", ["WarrantyTypeDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "WarrantyType")], [0, nil]],
+      ["warrantyDuration", ["WarrantyDurationDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "WarrantyDuration")], [0, nil]],
+      ["eAN", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EAN")], [0, 1]],
+      ["shippingCostPaidBy", ["ShippingCostPaidByDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingCostPaidBy")], [0, nil]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => ReturnPolicyEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReturnPolicyEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => ReturnPolicyType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReturnPolicyType"),
+    :schema_element => [
+      ["refundOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "RefundOption")], [0, 1]],
+      ["refund", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Refund")], [0, 1]],
+      ["returnsWithinOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "ReturnsWithinOption")], [0, 1]],
+      ["returnsWithin", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ReturnsWithin")], [0, 1]],
+      ["returnsAcceptedOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "ReturnsAcceptedOption")], [0, 1]],
+      ["returnsAccepted", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ReturnsAccepted")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["warrantyOfferedOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "WarrantyOfferedOption")], [0, 1]],
+      ["warrantyOffered", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "WarrantyOffered")], [0, 1]],
+      ["warrantyTypeOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "WarrantyTypeOption")], [0, 1]],
+      ["warrantyType", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "WarrantyType")], [0, 1]],
+      ["warrantyDurationOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "WarrantyDurationOption")], [0, 1]],
+      ["warrantyDuration", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "WarrantyDuration")], [0, 1]],
+      ["eAN", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EAN")], [0, 1]],
+      ["shippingCostPaidByOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "ShippingCostPaidByOption")], [0, 1]],
+      ["shippingCostPaidBy", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ShippingCostPaidBy")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => ReturnsAcceptedDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReturnsAcceptedDetailsType"),
+    :schema_element => [
+      ["returnsAcceptedOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "ReturnsAcceptedOption")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => ReturnsWithinDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReturnsWithinDetailsType"),
+    :schema_element => [
+      ["returnsWithinOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "ReturnsWithinOption")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => ReviewDetailsType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReviewDetailsType"),
     :schema_element => [
@@ -10079,6 +10780,22 @@ module DefaultMappingRegistry
       ["text", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Text")], [0, 1]],
       ["userID", [nil, XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]],
       ["creationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "CreationTime")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => RevisePriceAllowedDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "RevisePriceAllowedDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => ReviseQuantityAllowedDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReviseQuantityAllowedDefinitionType"),
+    :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -10242,6 +10959,15 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => SearchStandingDashboardType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SearchStandingDashboardType"),
+    :schema_element => [
+      ["status", ["SearchStandingStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => SearchStoreFilterType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "SearchStoreFilterType"),
     :schema_element => [
@@ -10252,9 +10978,29 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => SellerAccountDashboardType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerAccountDashboardType"),
+    :schema_element => [
+      ["status", ["SellerAccountStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["alert", ["SellerDashboardAlertType[]", XSD::QName.new(NsEBLBaseComponents, "Alert")], [0, nil]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => SellerContactDetailsEnabledDefinitionType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerContactDetailsEnabledDefinitionType"),
     :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => SellerDashboardAlertType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerDashboardAlertType"),
+    :schema_element => [
+      ["severity", ["SellerDashboardAlertSeverityCodeType", XSD::QName.new(NsEBLBaseComponents, "Severity")], [0, 1]],
+      ["text", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Text")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -10270,6 +11016,15 @@ module DefaultMappingRegistry
       ["minPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "MinPrice")], [0, 1]],
       ["maxPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "MaxPrice")], [0, 1]],
       ["favoriteItemID", ["[]", XSD::QName.new(NsEBLBaseComponents, "FavoriteItemID")], [0, nil]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => SellerFeeDiscountDashboardType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerFeeDiscountDashboardType"),
+    :schema_element => [
+      ["percent", ["SOAP::SOAPFloat", XSD::QName.new(NsEBLBaseComponents, "Percent")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -10311,6 +11066,32 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => SellerRatingSummaryArrayType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerRatingSummaryArrayType"),
+    :schema_element => [
+      ["averageRatingSummary", ["AverageRatingSummaryType[]", XSD::QName.new(NsEBLBaseComponents, "AverageRatingSummary")], [0, nil]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => SellerRoleMetricsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerRoleMetricsType"),
+    :schema_element => [
+      ["positiveFeedbackLeftCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PositiveFeedbackLeftCount")], [0, 1]],
+      ["negativeFeedbackLeftCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "NegativeFeedbackLeftCount")], [0, 1]],
+      ["neutralFeedbackLeftCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "NeutralFeedbackLeftCount")], [0, 1]],
+      ["feedbackLeftPercent", ["SOAP::SOAPFloat", XSD::QName.new(NsEBLBaseComponents, "FeedbackLeftPercent")], [0, 1]],
+      ["repeatBuyerCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "RepeatBuyerCount")], [0, 1]],
+      ["repeatBuyerPercent", ["SOAP::SOAPFloat", XSD::QName.new(NsEBLBaseComponents, "RepeatBuyerPercent")], [0, 1]],
+      ["uniqueBuyerCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueBuyerCount")], [0, 1]],
+      ["transactionPercent", ["SOAP::SOAPFloat", XSD::QName.new(NsEBLBaseComponents, "TransactionPercent")], [0, 1]],
+      ["crossBorderTransactionCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTransactionCount")], [0, 1]],
+      ["crossBorderTransactionPercent", ["SOAP::SOAPFloat", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTransactionPercent")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => SellerType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerType"),
     :schema_element => [
@@ -10331,14 +11112,14 @@ module DefaultMappingRegistry
       ["storeURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "StoreURL")], [0, 1]],
       ["sellerBusinessType", ["SellerBusinessCodeType", XSD::QName.new(NsEBLBaseComponents, "SellerBusinessType")], [0, 1]],
       ["registeredBusinessSeller", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "RegisteredBusinessSeller")], [0, 1]],
-      ["expressEligible", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ExpressEligible")], [0, 1]],
+      ["storeSite", ["SiteCodeType", XSD::QName.new(NsEBLBaseComponents, "StoreSite")], [0, 1]],
       ["paymentMethod", ["SellerPaymentMethodCodeType", XSD::QName.new(NsEBLBaseComponents, "PaymentMethod")], [0, 1]],
       ["proStoresPreference", ["ProStoresCheckoutPreferenceType", XSD::QName.new(NsEBLBaseComponents, "ProStoresPreference")], [0, 1]],
-      ["expressWallet", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ExpressWallet")], [0, 1]],
-      ["expressSellerRequirements", ["ExpressSellerRequirementsType", XSD::QName.new(NsEBLBaseComponents, "ExpressSellerRequirements")], [0, 1]],
       ["charityRegistered", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CharityRegistered")], [0, 1]],
       ["safePaymentExempt", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SafePaymentExempt")], [0, 1]],
       ["paisaPayEscrowEMIStatus", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PaisaPayEscrowEMIStatus")], [0, 1]],
+      ["charityAffiliationDetails", ["CharityAffiliationDetailsType", XSD::QName.new(NsEBLBaseComponents, "CharityAffiliationDetails")], [0, 1]],
+      ["transactionPercent", ["SOAP::SOAPFloat", XSD::QName.new(NsEBLBaseComponents, "TransactionPercent")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -10423,6 +11204,7 @@ module DefaultMappingRegistry
       ["refundGrantedTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "RefundGrantedTime")], [0, 1]],
       ["refundRequestedTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "RefundRequestedTime")], [0, 1]],
       ["status", ["ShipmentStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["shippedTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "ShippedTime")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -10434,6 +11216,16 @@ module DefaultMappingRegistry
       ["shippingCarrierID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrierID")], [0, 1]],
       ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
       ["shippingCarrier", ["ShippingCarrierCodeType", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrier")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => ShippingCostPaidByDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ShippingCostPaidByDetailsType"),
+    :schema_element => [
+      ["shippingCostPaidByOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "ShippingCostPaidByOption")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -10531,6 +11323,8 @@ module DefaultMappingRegistry
       ["surchargeApplicable", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SurchargeApplicable")], [0, 1]],
       ["shippingCarrier", ["ShippingCarrierCodeType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrier")], [0, nil]],
       ["cODService", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CODService")], [0, 1]],
+      ["deprecationDetails", ["AnnouncementMessageType[]", XSD::QName.new(NsEBLBaseComponents, "DeprecationDetails")], [0, nil]],
+      ["mappedToShippingServiceID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "MappedToShippingServiceID")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -10576,7 +11370,6 @@ module DefaultMappingRegistry
       ["valuePackEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ValuePackEnabled")], [0, 1]],
       ["proPackPlusEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ProPackPlusEnabled")], [0, 1]],
       ["adFormatEnabled", ["AdFormatEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "AdFormatEnabled")], [0, 1]],
-      ["digitalDeliveryEnabled", ["DigitalDeliveryEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "DigitalDeliveryEnabled")], [0, 1]],
       ["bestOfferCounterEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferCounterEnabled")], [0, 1]],
       ["bestOfferAutoDeclineEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoDeclineEnabled")], [0, 1]],
       ["localMarketSpecialitySubscription", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketSpecialitySubscription")], [0, 1]],
@@ -10608,6 +11401,60 @@ module DefaultMappingRegistry
       ["paisaPayFullEscrowEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PaisaPayFullEscrowEnabled")], [0, 1]],
       ["classifiedAdAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdAutoAcceptEnabled")], [0, 1]],
       ["bestOfferAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoAcceptEnabled")], [0, 1]],
+      ["crossBorderTradeNorthAmericaEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeNorthAmericaEnabled")], [0, 1]],
+      ["crossBorderTradeGBEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeGBEnabled")], [0, 1]],
+      ["crossBorderTradeAustraliaEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeAustraliaEnabled")], [0, 1]],
+      ["payPalBuyerProtectionEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPalBuyerProtectionEnabled")], [0, 1]],
+      ["buyerGuaranteeEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BuyerGuaranteeEnabled")], [0, 1]],
+      ["iNEscrowWorkflowTimeline", ["INEscrowWorkflowTimelineCodeType", XSD::QName.new(NsEBLBaseComponents, "INEscrowWorkflowTimeline")], [0, 1]],
+      ["combinedFixedPriceTreatmentEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CombinedFixedPriceTreatmentEnabled")], [0, 1]],
+      ["galleryFeaturedDurations", ["ListingEnhancementDurationReferenceType", XSD::QName.new(NsEBLBaseComponents, "GalleryFeaturedDurations")], [0, 1]],
+      ["payPalRequired", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPalRequired")], [0, 1]],
+      ["eBayMotorsProAdFormatEnabled", "AdFormatEnabledCodeType", [0, 1]],
+      ["eBayMotorsProContactByPhoneEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProPhoneCount", "SOAP::SOAPInt", [0, 1]],
+      ["eBayMotorsProContactByAddressEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProStreetCount", "SOAP::SOAPInt", [0, 1]],
+      ["eBayMotorsProCompanyNameEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProContactByEmailEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProBestOfferEnabled", "ClassifiedAdBestOfferEnabledCodeType", [0, 1]],
+      ["eBayMotorsProAutoAcceptEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProAutoDeclineEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProPaymentMethodCheckOutEnabled", "ClassifiedAdPaymentMethodEnabledCodeType", [0, 1]],
+      ["eBayMotorsProShippingMethodEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProCounterOfferEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProSellerContactDetailsEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["localMarketAdFormatEnabled", ["AdFormatEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAdFormatEnabled")], [0, 1]],
+      ["localMarketContactByPhoneEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByPhoneEnabled")], [0, 1]],
+      ["localMarketPhoneCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "LocalMarketPhoneCount")], [0, 1]],
+      ["localMarketContactByAddressEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByAddressEnabled")], [0, 1]],
+      ["localMarketStreetCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "LocalMarketStreetCount")], [0, 1]],
+      ["localMarketCompanyNameEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketCompanyNameEnabled")], [0, 1]],
+      ["localMarketContactByEmailEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByEmailEnabled")], [0, 1]],
+      ["localMarketBestOfferEnabled", ["ClassifiedAdBestOfferEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketBestOfferEnabled")], [0, 1]],
+      ["localMarketAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAutoAcceptEnabled")], [0, 1]],
+      ["localMarketAutoDeclineEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAutoDeclineEnabled")], [0, 1]],
+      ["localMarketPaymentMethodCheckOutEnabled", ["ClassifiedAdPaymentMethodEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketPaymentMethodCheckOutEnabled")], [0, 1]],
+      ["localMarketShippingMethodEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketShippingMethodEnabled")], [0, 1]],
+      ["localMarketCounterOfferEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketCounterOfferEnabled")], [0, 1]],
+      ["localMarketSellerContactDetailsEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketSellerContactDetailsEnabled")], [0, 1]],
+      ["classifiedAdPhoneCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdPhoneCount")], [0, 1]],
+      ["classifiedAdContactByAddressEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdContactByAddressEnabled")], [0, 1]],
+      ["classifiedAdStreetCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdStreetCount")], [0, 1]],
+      ["classifiedAdCompanyNameEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdCompanyNameEnabled")], [0, 1]],
+      ["specialitySubscription", ["GeographicExposureCodeType", XSD::QName.new(NsEBLBaseComponents, "SpecialitySubscription")], [0, 1]],
+      ["regularSubscription", ["GeographicExposureCodeType", XSD::QName.new(NsEBLBaseComponents, "RegularSubscription")], [0, 1]],
+      ["premiumSubscription", ["GeographicExposureCodeType", XSD::QName.new(NsEBLBaseComponents, "PremiumSubscription")], [0, 1]],
+      ["nonSubscription", ["GeographicExposureCodeType", XSD::QName.new(NsEBLBaseComponents, "NonSubscription")], [0, 1]],
+      ["payPalRequiredForStoreOwner", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPalRequiredForStoreOwner")], [0, 1]],
+      ["reviseQuantityAllowed", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ReviseQuantityAllowed")], [0, 1]],
+      ["revisePriceAllowed", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "RevisePriceAllowed")], [0, 1]],
+      ["storeOwnerExtendedListingDurationsEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurationsEnabled")], [0, 1]],
+      ["storeOwnerExtendedListingDurations", ["StoreOwnerExtendedListingDurationsType", XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurations")], [0, 1]],
+      ["returnPolicyEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ReturnPolicyEnabled")], [0, 1]],
+      ["handlingTimeEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HandlingTimeEnabled")], [0, 1]],
+      ["maxFlatShippingCost", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "MaxFlatShippingCost")], [0, 1]],
+      ["maxFlatShippingCostCBTExempt", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "MaxFlatShippingCostCBTExempt")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -10666,6 +11513,14 @@ module DefaultMappingRegistry
   EncodedRegistry.register(
     :class => SkypeMeTransactionalEnabledDefinitionType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "SkypeMeTransactionalEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => SpecialitySubscriptionDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SpecialitySubscriptionDefinitionType"),
     :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
@@ -10822,6 +11677,31 @@ module DefaultMappingRegistry
       ["logoID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "LogoID")], [0, 1]],
       ["name", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Name")], [0, 1]],
       ["uRL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "URL")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => StoreOwnerExtendedListingDurationsDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurationsDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => StoreOwnerExtendedListingDurationsEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurationsEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => StoreOwnerExtendedListingDurationsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurationsType"),
+    :schema_element => [
+      ["duration", ["SOAP::SOAPToken[]", XSD::QName.new(NsEBLBaseComponents, "Duration")], [0, nil]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -11042,6 +11922,18 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => TokenStatusType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "TokenStatusType"),
+    :schema_element => [
+      ["status", ["TokenStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["expirationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "ExpirationTime")], [0, 1]],
+      ["revocationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "RevocationTime")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => TransactionArrayType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "TransactionArrayType"),
     :schema_element => [
@@ -11098,7 +11990,7 @@ module DefaultMappingRegistry
       ["feedbackReceived", ["FeedbackInfoType", XSD::QName.new(NsEBLBaseComponents, "FeedbackReceived")], [0, 1]],
       ["containingOrder", ["OrderType", XSD::QName.new(NsEBLBaseComponents, "ContainingOrder")], [0, 1]],
       ["finalValueFee", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "FinalValueFee")], [0, 1]],
-      ["transactionPlatform", ["TransactionPlatformType", XSD::QName.new(NsEBLBaseComponents, "TransactionPlatform")], [0, 1]],
+      ["transactionPlatform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "TransactionPlatform")], [0, 1]],
       ["listingCheckoutRedirectPreference", ["ListingCheckoutRedirectPreferenceType", XSD::QName.new(NsEBLBaseComponents, "ListingCheckoutRedirectPreference")], [0, 1]],
       ["refundArray", ["RefundArrayType", XSD::QName.new(NsEBLBaseComponents, "RefundArray")], [0, 1]],
       ["transactionSiteID", ["SiteCodeType", XSD::QName.new(NsEBLBaseComponents, "TransactionSiteID")], [0, 1]],
@@ -11107,6 +11999,7 @@ module DefaultMappingRegistry
       ["sellerContactBuyerByEmail", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SellerContactBuyerByEmail")], [0, 1]],
       ["payPalEmailAddress", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PayPalEmailAddress")], [0, 1]],
       ["paisaPayID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PaisaPayID")], [0, 1]],
+      ["buyerGuaranteePrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "BuyerGuaranteePrice")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -11195,7 +12088,6 @@ module DefaultMappingRegistry
       ["buyerInfo", ["BuyerType", XSD::QName.new(NsEBLBaseComponents, "BuyerInfo")], [0, 1]],
       ["sellerInfo", ["SellerType", XSD::QName.new(NsEBLBaseComponents, "SellerInfo")], [0, 1]],
       ["charityAffiliations", ["CharityAffiliationsType", XSD::QName.new(NsEBLBaseComponents, "CharityAffiliations")], [0, 1]],
-      ["charitySeller", ["CharitySellerType", XSD::QName.new(NsEBLBaseComponents, "CharitySeller")], [0, 1]],
       ["payPalAccountLevel", ["PayPalAccountLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "PayPalAccountLevel")], [0, 1]],
       ["payPalAccountType", ["PayPalAccountTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "PayPalAccountType")], [0, 1]],
       ["payPalAccountStatus", ["PayPalAccountStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "PayPalAccountStatus")], [0, 1]],
@@ -11210,6 +12102,7 @@ module DefaultMappingRegistry
       ["biddingSummary", ["BiddingSummaryType", XSD::QName.new(NsEBLBaseComponents, "BiddingSummary")], [0, 1]],
       ["userAnonymized", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "UserAnonymized")], [0, 1]],
       ["uniqueNeutralFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueNeutralFeedbackCount")], [0, 1]],
+      ["enterpriseSeller", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EnterpriseSeller")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -11221,6 +12114,8 @@ module DefaultMappingRegistry
       ["businessSeller", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BusinessSeller")], [0, 1]],
       ["restrictedToBusiness", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "RestrictedToBusiness")], [0, 1]],
       ["vATPercent", ["SOAP::SOAPFloat", XSD::QName.new(NsEBLBaseComponents, "VATPercent")], [0, 1]],
+      ["vATSite", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "VATSite")], [0, 1]],
+      ["vATID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "VATID")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -11333,6 +12228,36 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => WarrantyDurationDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WarrantyDurationDetailsType"),
+    :schema_element => [
+      ["warrantyDurationOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "WarrantyDurationOption")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => WarrantyOfferedDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WarrantyOfferedDetailsType"),
+    :schema_element => [
+      ["warrantyOfferedOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "WarrantyOfferedOption")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => WarrantyTypeDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WarrantyTypeDetailsType"),
+    :schema_element => [
+      ["warrantyTypeOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "WarrantyTypeOption")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => WishListEntryType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "WishListEntryType"),
     :schema_element => [
@@ -11347,28 +12272,124 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
-    :class => WishListType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WishListType"),
-    :schema_element => [
-      ["wishListID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "WishListID")], [0, 1]],
-      ["wishListURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "WishListURL")], [0, 1]],
-      ["name", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Name")], [0, 1]],
-      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
-      ["firstName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FirstName")], [0, 1]],
-      ["lastName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LastName")], [0, 1]],
-      ["userLocation", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "UserLocation")], [0, 1]],
-      ["wishListEntry", ["WishListEntryType[]", XSD::QName.new(NsEBLBaseComponents, "WishListEntry")], [0, nil]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  EncodedRegistry.register(
     :class => XSLFileType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "XSLFileType"),
     :schema_element => [
       ["fileName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FileName")], [0, 1]],
       ["fileVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FileVersion")], [0, 1]],
       ["fileContent", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FileContent")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => EBayMotorsProAdFormatEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProAdFormatEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => EBayMotorsProAutoAcceptEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProAutoAcceptEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => EBayMotorsProAutoDeclineEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProAutoDeclineEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => EBayMotorsProBestOfferEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProBestOfferEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => EBayMotorsProCompanyNameEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProCompanyNameEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => EBayMotorsProContactByAddressEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProContactByAddressEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => EBayMotorsProContactByEmailEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProContactByEmailEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => EBayMotorsProContactByPhoneEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProContactByPhoneEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => EBayMotorsProCounterOfferEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProCounterOfferEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => EBayMotorsProPaymentMethodCheckOutEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProPaymentMethodCheckOutEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => EBayMotorsProPhoneCountDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProPhoneCountDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => EBayMotorsProSellerContactDetailsEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProSellerContactDetailsEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => EBayMotorsProShippingMethodEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProShippingMethodEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => EBayMotorsProStreetCountDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProStreetCountDefinitionType"),
+    :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -11534,6 +12555,11 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => AnnouncementMessageCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "AnnouncementMessageCodeType")
+  )
+
+  EncodedRegistry.register(
     :class => ApplicationDeviceTypeCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ApplicationDeviceTypeCodeType")
   )
@@ -11541,6 +12567,11 @@ module DefaultMappingRegistry
   EncodedRegistry.register(
     :class => AuthTokenTypeCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "AuthTokenTypeCodeType")
+  )
+
+  EncodedRegistry.register(
+    :class => AutomatedLeaveFeedbackEventCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "AutomatedLeaveFeedbackEventCodeType")
   )
 
   EncodedRegistry.register(
@@ -11601,6 +12632,11 @@ module DefaultMappingRegistry
   EncodedRegistry.register(
     :class => BuyerProtectionSourceCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "BuyerProtectionSourceCodeType")
+  )
+
+  EncodedRegistry.register(
+    :class => BuyerSatisfactionStatusCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "BuyerSatisfactionStatusCodeType")
   )
 
   EncodedRegistry.register(
@@ -11689,11 +12725,6 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
-    :class => ConditionSelectionCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ConditionSelectionCodeType")
-  )
-
-  EncodedRegistry.register(
     :class => CountryCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "CountryCodeType")
   )
@@ -11739,16 +12770,6 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
-    :class => DigitalDeliveryEnabledCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "DigitalDeliveryEnabledCodeType")
-  )
-
-  EncodedRegistry.register(
-    :class => DigitalDeliveryMethodCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "DigitalDeliveryMethodCodeType")
-  )
-
-  EncodedRegistry.register(
     :class => DiscountCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "DiscountCodeType")
   )
@@ -11789,26 +12810,6 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
-    :class => ExpressDetailLevelCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ExpressDetailLevelCodeType")
-  )
-
-  EncodedRegistry.register(
-    :class => ExpressHistogramSortCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ExpressHistogramSortCodeType")
-  )
-
-  EncodedRegistry.register(
-    :class => ExpressItemSortCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ExpressItemSortCodeType")
-  )
-
-  EncodedRegistry.register(
-    :class => ExpressProductSortCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ExpressProductSortCodeType")
-  )
-
-  EncodedRegistry.register(
     :class => ExpressSellingPreferenceCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ExpressSellingPreferenceCodeType")
   )
@@ -11839,6 +12840,11 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => FeedbackSummaryPeriodCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "FeedbackSummaryPeriodCodeType")
+  )
+
+  EncodedRegistry.register(
     :class => FlatRateInsuranceRangeCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "FlatRateInsuranceRangeCodeType")
   )
@@ -11861,6 +12867,11 @@ module DefaultMappingRegistry
   EncodedRegistry.register(
     :class => GeneralPaymentMethodCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "GeneralPaymentMethodCodeType")
+  )
+
+  EncodedRegistry.register(
+    :class => GeographicExposureCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GeographicExposureCodeType")
   )
 
   EncodedRegistry.register(
@@ -11889,6 +12900,11 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => INEscrowWorkflowTimelineCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "INEscrowWorkflowTimelineCodeType")
+  )
+
+  EncodedRegistry.register(
     :class => InsuranceOptionCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "InsuranceOptionCodeType")
   )
@@ -11896,6 +12912,11 @@ module DefaultMappingRegistry
   EncodedRegistry.register(
     :class => InsuranceSelectedCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "InsuranceSelectedCodeType")
+  )
+
+  EncodedRegistry.register(
+    :class => InventoryTrackingMethodCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "InventoryTrackingMethodCodeType")
   )
 
   EncodedRegistry.register(
@@ -11934,6 +12955,11 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => ItemTypeCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ItemTypeCodeType")
+  )
+
+  EncodedRegistry.register(
     :class => ItemTypeFilterCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ItemTypeFilterCodeType")
   )
@@ -11941,6 +12967,11 @@ module DefaultMappingRegistry
   EncodedRegistry.register(
     :class => ListingDurationCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ListingDurationCodeType")
+  )
+
+  EncodedRegistry.register(
+    :class => ListingEnhancementDurationCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ListingEnhancementDurationCodeType")
   )
 
   EncodedRegistry.register(
@@ -12099,6 +13130,11 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => PeriodCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PeriodCodeType")
+  )
+
+  EncodedRegistry.register(
     :class => PhotoDisplayCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "PhotoDisplayCodeType")
   )
@@ -12144,8 +13180,23 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => PolicyComplianceStatusCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PolicyComplianceStatusCodeType")
+  )
+
+  EncodedRegistry.register(
+    :class => PreferredLocationCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PreferredLocationCodeType")
+  )
+
+  EncodedRegistry.register(
     :class => ProductSortCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ProductSortCodeType")
+  )
+
+  EncodedRegistry.register(
+    :class => ProductStateCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ProductStateCodeType")
   )
 
   EncodedRegistry.register(
@@ -12219,6 +13270,11 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => RefundOptionsCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "RefundOptionsCodeType")
+  )
+
+  EncodedRegistry.register(
     :class => RefundReasonCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "RefundReasonCodeType")
   )
@@ -12229,6 +13285,16 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => ReturnsAcceptedOptionsCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReturnsAcceptedOptionsCodeType")
+  )
+
+  EncodedRegistry.register(
+    :class => ReturnsWithinOptionsCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReturnsWithinOptionsCodeType")
+  )
+
+  EncodedRegistry.register(
     :class => SMSSubscriptionErrorCodeCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "SMSSubscriptionErrorCodeCodeType")
   )
@@ -12236,6 +13302,11 @@ module DefaultMappingRegistry
   EncodedRegistry.register(
     :class => SMSSubscriptionUserStatusCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "SMSSubscriptionUserStatusCodeType")
+  )
+
+  EncodedRegistry.register(
+    :class => SearchFlagCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SearchFlagCodeType")
   )
 
   EncodedRegistry.register(
@@ -12254,6 +13325,11 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => SearchStandingStatusCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SearchStandingStatusCodeType")
+  )
+
+  EncodedRegistry.register(
     :class => SearchTypeCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "SearchTypeCodeType")
   )
@@ -12269,8 +13345,18 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => SellerAccountStatusCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerAccountStatusCodeType")
+  )
+
+  EncodedRegistry.register(
     :class => SellerBusinessCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerBusinessCodeType")
+  )
+
+  EncodedRegistry.register(
+    :class => SellerDashboardAlertSeverityCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerDashboardAlertSeverityCodeType")
   )
 
   EncodedRegistry.register(
@@ -12309,6 +13395,11 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => ShippingCostPaidByOptionsCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ShippingCostPaidByOptionsCodeType")
+  )
+
+  EncodedRegistry.register(
     :class => ShippingFeatureCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ShippingFeatureCodeType")
   )
@@ -12336,6 +13427,11 @@ module DefaultMappingRegistry
   EncodedRegistry.register(
     :class => ShippingTypeCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ShippingTypeCodeType")
+  )
+
+  EncodedRegistry.register(
+    :class => SimpleItemSortCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SimpleItemSortCodeType")
   )
 
   EncodedRegistry.register(
@@ -12454,6 +13550,11 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => TokenStatusCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "TokenStatusCodeType")
+  )
+
+  EncodedRegistry.register(
     :class => TradingRoleCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "TradingRoleCodeType")
   )
@@ -12504,13 +13605,23 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
-    :class => WirelessCarrierIDCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WirelessCarrierIDCodeType")
+    :class => WarrantyDurationOptionsCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WarrantyDurationOptionsCodeType")
   )
 
   EncodedRegistry.register(
-    :class => WishListSortCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WishListSortCodeType")
+    :class => WarrantyOfferedCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WarrantyOfferedCodeType")
+  )
+
+  EncodedRegistry.register(
+    :class => WarrantyTypeOptionsCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WarrantyTypeOptionsCodeType")
+  )
+
+  EncodedRegistry.register(
+    :class => WirelessCarrierIDCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WirelessCarrierIDCodeType")
   )
 
   LiteralRegistry.register(
@@ -12555,6 +13666,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["disputeID", [nil, XSD::QName.new(NsEBLBaseComponents, "DisputeID")], [0, 1]]
     ]
@@ -12604,6 +13716,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -12647,6 +13760,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
@@ -12696,6 +13810,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["fees", ["FeesType", XSD::QName.new(NsEBLBaseComponents, "Fees")], [0, 1]],
@@ -12744,6 +13859,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -12788,6 +13904,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -12831,6 +13948,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["addMemberMessagesAAQToBidderResponseContainer", ["AddMemberMessagesAAQToBidderResponseContainerType[]", XSD::QName.new(NsEBLBaseComponents, "AddMemberMessagesAAQToBidderResponseContainer")], [0, nil]]
     ]
@@ -12875,6 +13993,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["orderID", [nil, XSD::QName.new(NsEBLBaseComponents, "OrderID")], [0, 1]],
       ["createdTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "CreatedTime")], [0, 1]]
@@ -12924,6 +14043,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
@@ -12971,6 +14091,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -13014,6 +14135,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["watchListCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "WatchListCount")], [0, 1]],
       ["watchListMaximum", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "WatchListMaximum")], [0, 1]]
@@ -13066,6 +14188,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
@@ -13115,6 +14238,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidderUpdateStatus", ["LiveAuctionApprovalStatusArrayType", XSD::QName.new(NsEBLBaseComponents, "BidderUpdateStatus")], [0, 1]]
     ]
@@ -13142,7 +14266,8 @@ module DefaultMappingRegistry
       ["shipped", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Shipped")], [0, 1]],
       ["paid", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Paid")], [0, 1]],
       ["listingType", ["ListingTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingType")], [0, 1]],
-      ["shipment", ["ShipmentType", XSD::QName.new(NsEBLBaseComponents, "Shipment")], [0, 1]]
+      ["shipment", ["ShipmentType", XSD::QName.new(NsEBLBaseComponents, "Shipment")], [0, 1]],
+      ["orderID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "OrderID")], [0, 1]]
     ]
   )
 
@@ -13165,7 +14290,53 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => ConfirmIdentityRequestType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ConfirmIdentityRequestType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["sessionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SessionID")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => ConfirmIdentityResponseType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ConfirmIdentityResponseType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["userID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]]
     ]
   )
 
@@ -13209,6 +14380,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -13254,6 +14426,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTime")], [0, 1]]
     ]
@@ -13276,6 +14449,7 @@ module DefaultMappingRegistry
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["secretID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SecretID")], [0, 1]],
+      ["sessionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SessionID")], [0, 1]],
       ["includeRESTToken", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeRESTToken")], [0, 1]]
     ]
   )
@@ -13299,6 +14473,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["eBayAuthToken", "SOAP::SOAPString", [0, 1]],
       ["hardExpirationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "HardExpirationTime")], [0, 1]],
@@ -13354,6 +14529,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["accountID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AccountID")], [0, 1]],
       ["accountSummary", ["AccountSummaryType", XSD::QName.new(NsEBLBaseComponents, "AccountSummary")], [0, 1]],
@@ -13384,7 +14560,9 @@ module DefaultMappingRegistry
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["status", ["MessageStatusTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
-      ["includeMemberMessages", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeMemberMessages")], [0, 1]]
+      ["includeMemberMessages", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeMemberMessages")], [0, 1]],
+      ["startCreationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartCreationTime")], [0, 1]],
+      ["endCreationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndCreationTime")], [0, 1]]
     ]
   )
 
@@ -13407,6 +14585,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["adFormatLead", ["AdFormatLeadType[]", XSD::QName.new(NsEBLBaseComponents, "AdFormatLead")], [0, nil]],
       ["adFormatLeadCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "AdFormatLeadCount")], [0, 1]]
@@ -13454,6 +14633,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidArray", ["OfferArrayType", XSD::QName.new(NsEBLBaseComponents, "BidArray")], [0, 1]],
       ["highBidder", [nil, XSD::QName.new(NsEBLBaseComponents, "HighBidder")], [0, 1]],
@@ -13500,6 +14680,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["apiAccessRule", ["ApiAccessRuleType[]", XSD::QName.new(NsEBLBaseComponents, "ApiAccessRule")], [0, nil]]
     ]
@@ -13523,8 +14704,7 @@ module DefaultMappingRegistry
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AttributeSystemVersion")], [0, 1]],
       ["attributeSetID", ["SOAP::SOAPInt[]", XSD::QName.new(NsEBLBaseComponents, "AttributeSetID")], [0, nil]],
-      ["includeCategoryMappingDetails", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeCategoryMappingDetails")], [0, 1]],
-      ["digitalDelivery", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DigitalDelivery")], [0, 1]]
+      ["includeCategoryMappingDetails", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeCategoryMappingDetails")], [0, 1]]
     ]
   )
 
@@ -13547,6 +14727,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AttributeSystemVersion")], [0, 1]],
       ["attributeData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AttributeData")], [0, 1]]
@@ -13593,6 +14774,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["xSLFile", ["XSLFileType[]", XSD::QName.new(NsEBLBaseComponents, "XSLFile")], [0, nil]]
     ]
@@ -13639,6 +14821,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bestOfferArray", ["BestOfferArrayType", XSD::QName.new(NsEBLBaseComponents, "BestOfferArray")], [0, 1]],
       ["item", ["ItemType", XSD::QName.new(NsEBLBaseComponents, "Item")], [0, 1]]
@@ -13688,55 +14871,10 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidder", ["UserType", XSD::QName.new(NsEBLBaseComponents, "Bidder")], [0, 1]],
       ["bidItemArray", ["ItemArrayType", XSD::QName.new(NsEBLBaseComponents, "BidItemArray")], [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => GetCartRequestType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetCartRequestType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
-    :schema_element => [
-      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
-      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
-      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
-      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
-      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
-      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
-      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
-      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["affiliateTrackingDetails", ["AffiliateTrackingDetailsType", XSD::QName.new(NsEBLBaseComponents, "AffiliateTrackingDetails")], [0, 1]],
-      ["cartID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "CartID")], [0, 1]],
-      ["shippingAddress", ["AddressType", XSD::QName.new(NsEBLBaseComponents, "ShippingAddress")], [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => GetCartResponseType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetCartResponseType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
-    :schema_element => [
-      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
-      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
-      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
-      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
-      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
-      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
-      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
-      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
-      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
-      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
-      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
-      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["cart", ["CartType", XSD::QName.new(NsEBLBaseComponents, "Cart")], [0, 1]]
     ]
   )
 
@@ -13782,6 +14920,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["categoryArray", ["CategoryArrayType", XSD::QName.new(NsEBLBaseComponents, "CategoryArray")], [0, 1]],
       ["categoryCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CategoryCount")], [0, 1]],
@@ -13833,6 +14972,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["mappedCategoryArray", ["CategoryArrayType", XSD::QName.new(NsEBLBaseComponents, "MappedCategoryArray")], [0, 1]],
       ["unmappedCategoryArray", ["CategoryArrayType", XSD::QName.new(NsEBLBaseComponents, "UnmappedCategoryArray")], [0, 1]],
@@ -13883,6 +15023,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["categoryVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CategoryVersion")], [0, 1]],
       ["updateTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "UpdateTime")], [0, 1]],
@@ -13925,7 +15066,8 @@ module DefaultMappingRegistry
       ["includeFeedback", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeFeedback")], [0, 1]],
       ["localSearchPostalCode", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LocalSearchPostalCode")], [0, 1]],
       ["maxRelatedSearchKeywords", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "MaxRelatedSearchKeywords")], [0, 1]],
-      ["group", ["GroupType", XSD::QName.new(NsEBLBaseComponents, "Group")], [0, 1]]
+      ["group", ["GroupType", XSD::QName.new(NsEBLBaseComponents, "Group")], [0, 1]],
+      ["hideDuplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HideDuplicateItems")], [0, 1]]
     ]
   )
 
@@ -13948,6 +15090,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemArray", ["ItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemArray")], [0, 1]],
       ["category", ["CategoryType", XSD::QName.new(NsEBLBaseComponents, "Category")], [0, 1]],
@@ -13957,7 +15100,8 @@ module DefaultMappingRegistry
       ["hasMoreItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreItems")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["buyingGuideDetails", ["BuyingGuideDetailsType", XSD::QName.new(NsEBLBaseComponents, "BuyingGuideDetails")], [0, 1]],
-      ["relatedSearchKeywordArray", ["RelatedSearchKeywordArrayType", XSD::QName.new(NsEBLBaseComponents, "RelatedSearchKeywordArray")], [0, 1]]
+      ["relatedSearchKeywordArray", ["RelatedSearchKeywordArrayType", XSD::QName.new(NsEBLBaseComponents, "RelatedSearchKeywordArray")], [0, 1]],
+      ["duplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DuplicateItems")], [0, 1]]
     ]
   )
 
@@ -14000,6 +15144,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["categoryMapping", ["CategoryMappingType[]", XSD::QName.new(NsEBLBaseComponents, "CategoryMapping")], [0, nil]],
       ["categoryVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CategoryVersion")], [0, 1]]
@@ -14049,6 +15194,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["categoryItemSpecifics", ["CategoryItemSpecificsType[]", XSD::QName.new(NsEBLBaseComponents, "CategoryItemSpecifics")], [0, nil]]
     ]
@@ -14092,6 +15238,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["challengeToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ChallengeToken")], [0, 1]],
       ["imageChallengeURL", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ImageChallengeURL")], [0, 1]],
@@ -14121,7 +15268,8 @@ module DefaultMappingRegistry
       ["charityRegion", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CharityRegion")], [0, 1]],
       ["charityDomain", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CharityDomain")], [0, 1]],
       ["includeDescription", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeDescription")], [0, 1]],
-      ["matchType", ["StringMatchCodeType", XSD::QName.new(NsEBLBaseComponents, "MatchType")], [0, 1]]
+      ["matchType", ["StringMatchCodeType", XSD::QName.new(NsEBLBaseComponents, "MatchType")], [0, 1]],
+      ["featured", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Featured")], [0, 1]]
     ]
   )
 
@@ -14144,8 +15292,54 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["charity", ["CharityInfoType[]", XSD::QName.new(NsEBLBaseComponents, "Charity")], [0, nil]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => GetClientAlertsAuthTokenRequestType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetClientAlertsAuthTokenRequestType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => GetClientAlertsAuthTokenResponseType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetClientAlertsAuthTokenResponseType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["clientAlertsAuthToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ClientAlertsAuthToken")], [0, 1]],
+      ["hardExpirationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "HardExpirationTime")], [0, 1]]
     ]
   )
 
@@ -14190,6 +15384,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["contextSearchAsset", ["ContextSearchAssetType[]", XSD::QName.new(NsEBLBaseComponents, "ContextSearchAsset")], [0, nil]]
     ]
@@ -14236,6 +15431,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["crossPromotion", ["CrossPromotionsType", XSD::QName.new(NsEBLBaseComponents, "CrossPromotion")], [0, 1]]
     ]
@@ -14282,6 +15478,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["descriptionTemplate", ["DescriptionTemplateType[]", XSD::QName.new(NsEBLBaseComponents, "DescriptionTemplate")], [0, nil]],
       ["layoutTotal", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "LayoutTotal")], [0, 1]],
@@ -14331,58 +15528,9 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["dispute", ["DisputeType", XSD::QName.new(NsEBLBaseComponents, "Dispute")], [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => GetExpressWishListRequestType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetExpressWishListRequestType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
-    :schema_element => [
-      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
-      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
-      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
-      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
-      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
-      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
-      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
-      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["userID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]],
-      ["firstName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FirstName")], [0, 1]],
-      ["lastName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LastName")], [0, 1]],
-      ["wishListID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "WishListID")], [0, 1]],
-      ["sortOrder", ["WishListSortCodeType", XSD::QName.new(NsEBLBaseComponents, "SortOrder")], [0, 1]],
-      ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => GetExpressWishListResponseType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetExpressWishListResponseType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
-    :schema_element => [
-      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
-      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
-      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
-      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
-      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
-      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
-      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
-      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
-      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
-      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
-      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
-      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["wishList", ["WishListType[]", XSD::QName.new(NsEBLBaseComponents, "WishList")], [0, nil]],
-      ["pagination", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]]
     ]
   )
 
@@ -14402,9 +15550,12 @@ module DefaultMappingRegistry
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]],
       ["userID", [nil, XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]],
-      ["feedbackID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FeedbackID")], [0, 1]]
+      ["feedbackID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FeedbackID")], [0, 1]],
+      ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
+      ["transactionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TransactionID")], [0, 1]],
+      ["commentType", ["CommentTypeCodeType[]", XSD::QName.new(NsEBLBaseComponents, "CommentType")], [0, nil]],
+      ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]]
     ]
   )
 
@@ -14427,11 +15578,15 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["feedbackDetailArray", ["FeedbackDetailArrayType", XSD::QName.new(NsEBLBaseComponents, "FeedbackDetailArray")], [0, 1]],
       ["feedbackDetailItemTotal", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "FeedbackDetailItemTotal")], [0, 1]],
       ["feedbackSummary", ["FeedbackSummaryType", XSD::QName.new(NsEBLBaseComponents, "FeedbackSummary")], [0, 1]],
-      ["feedbackScore", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "FeedbackScore")], [0, 1]]
+      ["feedbackScore", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "FeedbackScore")], [0, 1]],
+      ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
+      ["entriesPerPage", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "EntriesPerPage")], [0, 1]],
+      ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PageNumber")], [0, 1]]
     ]
   )
 
@@ -14474,6 +15629,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidArray", ["OfferArrayType", XSD::QName.new(NsEBLBaseComponents, "BidArray")], [0, 1]],
       ["listingStatus", ["ListingStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingStatus")], [0, 1]]
@@ -14497,7 +15653,6 @@ module DefaultMappingRegistry
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
-      ["includeExpressRequirements", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeExpressRequirements")], [0, 1]],
       ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeWatchCount")], [0, 1]],
       ["includeCrossPromotion", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeCrossPromotion")], [0, 1]],
       ["includeItemSpecifics", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeItemSpecifics")], [0, 1]],
@@ -14524,6 +15679,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["item", ["ItemType", XSD::QName.new(NsEBLBaseComponents, "Item")], [0, 1]]
     ]
@@ -14568,6 +15724,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["getRecommendationsResponseContainer", ["GetRecommendationsResponseContainerType[]", XSD::QName.new(NsEBLBaseComponents, "GetRecommendationsResponseContainer")], [0, nil]]
     ]
@@ -14615,6 +15772,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["shippingDetails", ["ShippingDetailsType", XSD::QName.new(NsEBLBaseComponents, "ShippingDetails")], [0, 1]]
     ]
@@ -14667,6 +15825,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMoreTransactions", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreTransactions")], [0, 1]],
@@ -14719,6 +15878,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemsAwaitingFeedback", ["PaginatedTransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemsAwaitingFeedback")], [0, 1]]
     ]
@@ -14765,6 +15925,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidderDetails", ["BidderDetailArrayType", XSD::QName.new(NsEBLBaseComponents, "BidderDetails")], [0, 1]],
       ["totalPending", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "TotalPending")], [0, 1]],
@@ -14813,6 +15974,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["liveAuctionCatalog", ["LiveAuctionCatalogType[]", XSD::QName.new(NsEBLBaseComponents, "LiveAuctionCatalog")], [0, nil]]
     ]
@@ -14865,6 +16027,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["memberMessage", ["MemberMessageExchangeArrayType", XSD::QName.new(NsEBLBaseComponents, "MemberMessage")], [0, 1]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
@@ -14912,6 +16075,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["aSQPreferences", ["ASQPreferencesType", XSD::QName.new(NsEBLBaseComponents, "ASQPreferences")], [0, 1]]
     ]
@@ -14937,7 +16101,8 @@ module DefaultMappingRegistry
       ["messageIDs", ["MyMessagesMessageIDArrayType", XSD::QName.new(NsEBLBaseComponents, "MessageIDs")], [0, 1]],
       ["folderID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "FolderID")], [0, 1]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
-      ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTime")], [0, 1]]
+      ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTime")], [0, 1]],
+      ["externalMessageIDs", ["MyMessagesExternalMessageIDArrayType", XSD::QName.new(NsEBLBaseComponents, "ExternalMessageIDs")], [0, 1]]
     ]
   )
 
@@ -14960,6 +16125,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["summary", ["MyMessagesSummaryType", XSD::QName.new(NsEBLBaseComponents, "Summary")], [0, 1]],
       ["alerts", ["MyMessagesAlertArrayType", XSD::QName.new(NsEBLBaseComponents, "Alerts")], [0, 1]],
@@ -14991,7 +16157,9 @@ module DefaultMappingRegistry
       ["favoriteSearches", ["MyeBaySelectionType", XSD::QName.new(NsEBLBaseComponents, "FavoriteSearches")], [0, 1]],
       ["favoriteSellers", ["MyeBaySelectionType", XSD::QName.new(NsEBLBaseComponents, "FavoriteSellers")], [0, 1]],
       ["secondChanceOffer", ["MyeBaySelectionType", XSD::QName.new(NsEBLBaseComponents, "SecondChanceOffer")], [0, 1]],
-      ["bidAssistantList", ["BidAssistantListType", XSD::QName.new(NsEBLBaseComponents, "BidAssistantList")], [0, 1]]
+      ["bidAssistantList", ["BidAssistantListType", XSD::QName.new(NsEBLBaseComponents, "BidAssistantList")], [0, 1]],
+      ["deletedFromWonList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromWonList")], [0, 1]],
+      ["deletedFromLostList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromLostList")], [0, 1]]
     ]
   )
 
@@ -15014,6 +16182,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["buyingSummary", ["BuyingSummaryType", XSD::QName.new(NsEBLBaseComponents, "BuyingSummary")], [0, 1]],
       ["watchList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "WatchList")], [0, 1]],
@@ -15024,7 +16193,9 @@ module DefaultMappingRegistry
       ["favoriteSearches", ["MyeBayFavoriteSearchListType", XSD::QName.new(NsEBLBaseComponents, "FavoriteSearches")], [0, 1]],
       ["favoriteSellers", ["MyeBayFavoriteSellerListType", XSD::QName.new(NsEBLBaseComponents, "FavoriteSellers")], [0, 1]],
       ["secondChanceOffer", ["ItemType[]", XSD::QName.new(NsEBLBaseComponents, "SecondChanceOffer")], [0, nil]],
-      ["bidAssistantList", ["BidGroupArrayType", XSD::QName.new(NsEBLBaseComponents, "BidAssistantList")], [0, 1]]
+      ["bidAssistantList", ["BidGroupArrayType", XSD::QName.new(NsEBLBaseComponents, "BidAssistantList")], [0, 1]],
+      ["deletedFromWonList", ["PaginatedOrderTransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromWonList")], [0, 1]],
+      ["deletedFromLostList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromLostList")], [0, 1]]
     ]
   )
 
@@ -15068,6 +16239,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["buyingReminders", ["RemindersType", XSD::QName.new(NsEBLBaseComponents, "BuyingReminders")], [0, 1]],
       ["sellingReminders", ["RemindersType", XSD::QName.new(NsEBLBaseComponents, "SellingReminders")], [0, 1]]
@@ -15093,7 +16265,10 @@ module DefaultMappingRegistry
       ["scheduledList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "ScheduledList")], [0, 1]],
       ["activeList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "ActiveList")], [0, 1]],
       ["soldList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "SoldList")], [0, 1]],
-      ["unsoldList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "UnsoldList")], [0, 1]]
+      ["unsoldList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "UnsoldList")], [0, 1]],
+      ["bidList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "BidList")], [0, 1]],
+      ["deletedFromSoldList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromSoldList")], [0, 1]],
+      ["deletedFromUnsoldList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromUnsoldList")], [0, 1]]
     ]
   )
 
@@ -15116,13 +16291,17 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["sellingSummary", ["SellingSummaryType", XSD::QName.new(NsEBLBaseComponents, "SellingSummary")], [0, 1]],
       ["scheduledList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ScheduledList")], [0, 1]],
       ["activeList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ActiveList")], [0, 1]],
       ["soldList", ["PaginatedOrderTransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "SoldList")], [0, 1]],
       ["unsoldList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "UnsoldList")], [0, 1]],
-      ["summary", ["MyeBaySellingSummaryType", XSD::QName.new(NsEBLBaseComponents, "Summary")], [0, 1]]
+      ["summary", ["MyeBaySellingSummaryType", XSD::QName.new(NsEBLBaseComponents, "Summary")], [0, 1]],
+      ["bidList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "BidList")], [0, 1]],
+      ["deletedFromSoldList", ["PaginatedOrderTransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromSoldList")], [0, 1]],
+      ["deletedFromUnsoldList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromUnsoldList")], [0, 1]]
     ]
   )
 
@@ -15165,8 +16344,10 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["applicationDeliveryPreferences", ["ApplicationDeliveryPreferencesType", XSD::QName.new(NsEBLBaseComponents, "ApplicationDeliveryPreferences")], [0, 1]],
+      ["deliveryURLName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "DeliveryURLName")], [0, 1]],
       ["userDeliveryPreferenceArray", ["NotificationEnableArrayType", XSD::QName.new(NsEBLBaseComponents, "UserDeliveryPreferenceArray")], [0, 1]],
       ["userData", ["NotificationUserDataType", XSD::QName.new(NsEBLBaseComponents, "UserData")], [0, 1]],
       ["eventProperty", ["NotificationEventPropertyType[]", XSD::QName.new(NsEBLBaseComponents, "EventProperty")], [0, nil]]
@@ -15214,6 +16395,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
       ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTime")], [0, 1]],
@@ -15241,7 +16423,8 @@ module DefaultMappingRegistry
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemTransactionIDArray", ["ItemTransactionIDArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemTransactionIDArray")], [0, 1]],
       ["orderIDArray", ["OrderIDArrayType", XSD::QName.new(NsEBLBaseComponents, "OrderIDArray")], [0, 1]],
-      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]]
+      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]],
+      ["includeFinalValueFees", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeFinalValueFees")], [0, 1]]
     ]
   )
 
@@ -15264,6 +16447,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["orderArray", ["OrderArrayType", XSD::QName.new(NsEBLBaseComponents, "OrderArray")], [0, 1]]
     ]
@@ -15314,6 +16498,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMoreOrders", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreOrders")], [0, 1]],
@@ -15365,6 +16550,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["pictureManagerDetails", ["PictureManagerDetailsType", XSD::QName.new(NsEBLBaseComponents, "PictureManagerDetails")], [0, 1]]
     ]
@@ -15408,6 +16594,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["subscription", ["PictureManagerSubscriptionType[]", XSD::QName.new(NsEBLBaseComponents, "Subscription")], [0, nil]],
       ["pictureType", ["PictureManagerPictureDisplayType[]", XSD::QName.new(NsEBLBaseComponents, "PictureType")], [0, nil]]
@@ -15456,6 +16643,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["categoryArray", ["CategoryArrayType", XSD::QName.new(NsEBLBaseComponents, "CategoryArray")], [0, 1]],
@@ -15502,6 +16690,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["dataElementSets", ["DataElementSetType[]", XSD::QName.new(NsEBLBaseComponents, "DataElementSets")], [0, nil]],
       ["productSearchResult", ["ProductSearchResultType[]", XSD::QName.new(NsEBLBaseComponents, "ProductSearchResult")], [0, nil]]
@@ -15548,6 +16737,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AttributeSystemVersion")], [0, 1]],
       ["productFinderData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ProductFinderData")], [0, 1]]
@@ -15594,6 +16784,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["xSLFile", ["XSLFileType[]", XSD::QName.new(NsEBLBaseComponents, "XSLFile")], [0, nil]]
     ]
@@ -15639,6 +16830,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AttributeSystemVersion")], [0, 1]],
       ["productSearchPage", ["ProductSearchPageType[]", XSD::QName.new(NsEBLBaseComponents, "ProductSearchPage")], [0, nil]]
@@ -15684,6 +16876,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["dataElementSets", ["DataElementSetType[]", XSD::QName.new(NsEBLBaseComponents, "DataElementSets")], [0, nil]],
       ["productSearchResult", ["ProductSearchResultType[]", XSD::QName.new(NsEBLBaseComponents, "ProductSearchResult")], [0, nil]]
@@ -15730,6 +16923,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["productSellingPagesData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ProductSellingPagesData")], [0, 1]]
     ]
@@ -15757,7 +16951,8 @@ module DefaultMappingRegistry
       ["includeReviewDetails", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeReviewDetails")], [0, 1]],
       ["includeBuyingGuideDetails", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeBuyingGuideDetails")], [0, 1]],
       ["includeHistogram", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeHistogram")], [0, 1]],
-      ["affiliateTrackingDetails", ["AffiliateTrackingDetailsType", XSD::QName.new(NsEBLBaseComponents, "AffiliateTrackingDetails")], [0, 1]]
+      ["affiliateTrackingDetails", ["AffiliateTrackingDetailsType", XSD::QName.new(NsEBLBaseComponents, "AffiliateTrackingDetails")], [0, 1]],
+      ["hideDuplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HideDuplicateItems")], [0, 1]]
     ]
   )
 
@@ -15780,6 +16975,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["characteristicsSetProductHistogram", ["CharacteristicsSetProductHistogramType", XSD::QName.new(NsEBLBaseComponents, "CharacteristicsSetProductHistogram")], [0, 1]],
       ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PageNumber")], [0, 1]],
@@ -15788,7 +16984,8 @@ module DefaultMappingRegistry
       ["totalProducts", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "TotalProducts")], [0, 1]],
       ["product", ["CatalogProductType[]", XSD::QName.new(NsEBLBaseComponents, "Product")], [0, nil]],
       ["itemArray", ["ItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemArray")], [0, 1]],
-      ["buyingGuideDetails", ["BuyingGuideDetailsType", XSD::QName.new(NsEBLBaseComponents, "BuyingGuideDetails")], [0, 1]]
+      ["buyingGuideDetails", ["BuyingGuideDetailsType", XSD::QName.new(NsEBLBaseComponents, "BuyingGuideDetails")], [0, 1]],
+      ["duplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DuplicateItems")], [0, 1]]
     ]
   )
 
@@ -15833,6 +17030,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["promotionRuleArray", ["PromotionRuleArrayType", XSD::QName.new(NsEBLBaseComponents, "PromotionRuleArray")], [0, 1]]
     ]
@@ -15877,96 +17075,9 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["promotionalSaleDetails", ["PromotionalSaleArrayType", XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleDetails")], [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => GetReturnURLRequestType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetReturnURLRequestType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
-    :schema_element => [
-      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
-      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
-      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
-      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
-      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
-      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
-      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
-      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => GetReturnURLResponseType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetReturnURLResponseType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
-    :schema_element => [
-      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
-      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
-      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
-      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
-      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
-      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
-      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
-      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
-      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
-      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
-      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
-      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["applicationDisplayName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ApplicationDisplayName")], [0, 1]],
-      ["authenticationEntryArray", ["AuthenticationEntryArrayType", XSD::QName.new(NsEBLBaseComponents, "AuthenticationEntryArray")], [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => GetRuNameRequestType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetRuNameRequestType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
-    :schema_element => [
-      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
-      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
-      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
-      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
-      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
-      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
-      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
-      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["clientUseCase", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ClientUseCase")], [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => GetRuNameResponseType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetRuNameResponseType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
-    :schema_element => [
-      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
-      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
-      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
-      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
-      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
-      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
-      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
-      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
-      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
-      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
-      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
-      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["ruName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RuName")], [0, 1]]
     ]
   )
 
@@ -16017,7 +17128,6 @@ module DefaultMappingRegistry
       ["quantity", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "Quantity")], [0, 1]],
       ["quantityOperator", ["QuantityOperatorCodeType", XSD::QName.new(NsEBLBaseComponents, "QuantityOperator")], [0, 1]],
       ["sellerBusinessType", ["SellerBusinessCodeType", XSD::QName.new(NsEBLBaseComponents, "SellerBusinessType")], [0, 1]],
-      ["digitalDelivery", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DigitalDelivery")], [0, 1]],
       ["includeCondition", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeCondition")], [0, 1]],
       ["includeFeedback", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeFeedback")], [0, 1]],
       ["charityID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CharityID")], [0, 1]],
@@ -16027,7 +17137,8 @@ module DefaultMappingRegistry
       ["bidRange", ["BidRangeType", XSD::QName.new(NsEBLBaseComponents, "BidRange")], [0, 1]],
       ["itemCondition", ["ItemConditionCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemCondition")], [0, 1]],
       ["ticketFinder", ["TicketDetailsType", XSD::QName.new(NsEBLBaseComponents, "TicketFinder")], [0, 1]],
-      ["group", ["GroupType", XSD::QName.new(NsEBLBaseComponents, "Group")], [0, 1]]
+      ["group", ["GroupType", XSD::QName.new(NsEBLBaseComponents, "Group")], [0, 1]],
+      ["hideDuplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HideDuplicateItems")], [0, 1]]
     ]
   )
 
@@ -16050,6 +17161,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["searchResultItemArray", ["SearchResultItemArrayType", XSD::QName.new(NsEBLBaseComponents, "SearchResultItemArray")], [0, 1]],
       ["itemsPerPage", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ItemsPerPage")], [0, 1]],
@@ -16063,13 +17175,14 @@ module DefaultMappingRegistry
       ["filterRemovedExpansionArray", ["ExpansionArrayType", XSD::QName.new(NsEBLBaseComponents, "FilterRemovedExpansionArray")], [0, 1]],
       ["allCategoriesExpansionArray", ["ExpansionArrayType", XSD::QName.new(NsEBLBaseComponents, "AllCategoriesExpansionArray")], [0, 1]],
       ["spellingSuggestion", ["SpellingSuggestionType", XSD::QName.new(NsEBLBaseComponents, "SpellingSuggestion")], [0, 1]],
-      ["relatedSearchKeywordArray", ["RelatedSearchKeywordArrayType", XSD::QName.new(NsEBLBaseComponents, "RelatedSearchKeywordArray")], [0, 1]]
+      ["relatedSearchKeywordArray", ["RelatedSearchKeywordArrayType", XSD::QName.new(NsEBLBaseComponents, "RelatedSearchKeywordArray")], [0, 1]],
+      ["duplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DuplicateItems")], [0, 1]]
     ]
   )
 
   LiteralRegistry.register(
-    :class => GetSearchResultsExpressRequestType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetSearchResultsExpressRequestType"),
+    :class => GetSellerDashboardRequestType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetSellerDashboardRequestType"),
     :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
     :schema_element => [
       ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
@@ -16082,34 +17195,13 @@ module DefaultMappingRegistry
       ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["query", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Query")], [0, 1]],
-      ["externalProductIDType", ["ExternalProductCodeType", XSD::QName.new(NsEBLBaseComponents, "ExternalProductIDType")], [0, 1]],
-      ["externalProductIDValue", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalProductIDValue")], [0, 1]],
-      ["productReferenceID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "ProductReferenceID")], [0, 1]],
-      ["departmentName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "DepartmentName")], [0, 1]],
-      ["aisleName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AisleName")], [0, 1]],
-      ["productTypeName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ProductTypeName")], [0, 1]],
-      ["histogramSort", ["ExpressHistogramSortCodeType", XSD::QName.new(NsEBLBaseComponents, "HistogramSort")], [0, 1]],
-      ["itemSort", ["ExpressItemSortCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemSort")], [0, 1]],
-      ["productSort", ["ExpressProductSortCodeType", XSD::QName.new(NsEBLBaseComponents, "ProductSort")], [0, 1]],
-      ["highestPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "HighestPrice")], [0, 1]],
-      ["lowestPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "LowestPrice")], [0, 1]],
-      ["condition", ["ConditionSelectionCodeType", XSD::QName.new(NsEBLBaseComponents, "Condition")], [0, 1]],
-      ["sellerID", [nil, XSD::QName.new(NsEBLBaseComponents, "SellerID")], [0, 1]],
-      ["postalCode", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PostalCode")], [0, 1]],
-      ["histogramDetails", ["ExpressDetailLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "HistogramDetails")], [0, 1]],
-      ["productDetails", ["ExpressDetailLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "ProductDetails")], [0, 1]],
-      ["itemDetails", ["ExpressDetailLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemDetails")], [0, 1]],
-      ["entriesPerPage", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "EntriesPerPage")], [0, 1]],
-      ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PageNumber")], [0, 1]],
-      ["affiliateTrackingDetails", ["AffiliateTrackingDetailsType", XSD::QName.new(NsEBLBaseComponents, "AffiliateTrackingDetails")], [0, 1]]
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
 
   LiteralRegistry.register(
-    :class => GetSearchResultsExpressResponseType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetSearchResultsExpressResponseType"),
+    :class => GetSellerDashboardResponseType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetSellerDashboardResponseType"),
     :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
     :schema_element => [
       ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
@@ -16126,13 +17218,14 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["histogram", ["DomainHistogramType", XSD::QName.new(NsEBLBaseComponents, "Histogram")], [0, 1]],
-      ["itemArray", ["ItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemArray")], [0, 1]],
-      ["productArray", ["ProductArrayType", XSD::QName.new(NsEBLBaseComponents, "ProductArray")], [0, 1]],
-      ["entriesPerPage", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "EntriesPerPage")], [0, 1]],
-      ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PageNumber")], [0, 1]],
-      ["hasMoreEntries", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreEntries")]]
+      ["searchStanding", ["SearchStandingDashboardType", XSD::QName.new(NsEBLBaseComponents, "SearchStanding")], [0, 1]],
+      ["sellerFeeDiscount", ["SellerFeeDiscountDashboardType", XSD::QName.new(NsEBLBaseComponents, "SellerFeeDiscount")], [0, 1]],
+      ["powerSellerStatus", ["PowerSellerDashboardType", XSD::QName.new(NsEBLBaseComponents, "PowerSellerStatus")], [0, 1]],
+      ["policyCompliance", ["PolicyComplianceDashboardType", XSD::QName.new(NsEBLBaseComponents, "PolicyCompliance")], [0, 1]],
+      ["buyerSatisfaction", ["BuyerSatisfactionDashboardType", XSD::QName.new(NsEBLBaseComponents, "BuyerSatisfaction")], [0, 1]],
+      ["sellerAccount", ["SellerAccountDashboardType", XSD::QName.new(NsEBLBaseComponents, "SellerAccount")], [0, 1]]
     ]
   )
 
@@ -16183,6 +17276,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["timeTo", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "TimeTo")], [0, 1]],
       ["itemArray", ["ItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemArray")], [0, 1]]
@@ -16215,7 +17309,9 @@ module DefaultMappingRegistry
       ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]],
       ["granularityLevel", ["GranularityLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "GranularityLevel")], [0, 1]],
       ["sKUArray", ["SKUArrayType", XSD::QName.new(NsEBLBaseComponents, "SKUArray")], [0, 1]],
-      ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeWatchCount")], [0, 1]]
+      ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeWatchCount")], [0, 1]],
+      ["adminEndedItemsOnly", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "AdminEndedItemsOnly")], [0, 1]],
+      ["categoryID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CategoryID")], [0, 1]]
     ]
   )
 
@@ -16238,6 +17334,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMoreItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreItems")], [0, 1]],
@@ -16291,6 +17388,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMorePayments", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMorePayments")], [0, 1]],
@@ -16347,6 +17445,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMoreTransactions", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreTransactions")], [0, 1]],
@@ -16356,6 +17455,51 @@ module DefaultMappingRegistry
       ["seller", ["UserType", XSD::QName.new(NsEBLBaseComponents, "Seller")], [0, 1]],
       ["transactionArray", ["TransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "TransactionArray")], [0, 1]],
       ["payPalPreferred", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPalPreferred")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => GetSessionIDRequestType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetSessionIDRequestType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["ruName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RuName")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => GetSessionIDResponseType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetSessionIDResponseType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["sessionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SessionID")], [0, 1]]
     ]
   )
 
@@ -16397,6 +17541,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["currencyID", ["CurrencyCodeType", XSD::QName.new(NsEBLBaseComponents, "CurrencyID")], [0, 1]],
       ["flatShippingDiscount", ["FlatShippingDiscountType", XSD::QName.new(NsEBLBaseComponents, "FlatShippingDiscount")], [0, 1]],
@@ -16452,6 +17597,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["store", ["StoreType", XSD::QName.new(NsEBLBaseComponents, "Store")], [0, 1]]
     ]
@@ -16496,6 +17642,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["status", ["TaskStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]]
     ]
@@ -16540,6 +17687,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["customPageArray", ["StoreCustomPageArrayType", XSD::QName.new(NsEBLBaseComponents, "CustomPageArray")], [0, 1]]
     ]
@@ -16583,6 +17731,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["basicThemeArray", ["StoreThemeArrayType", XSD::QName.new(NsEBLBaseComponents, "BasicThemeArray")], [0, 1]],
       ["advancedThemeArray", ["StoreThemeArrayType", XSD::QName.new(NsEBLBaseComponents, "AdvancedThemeArray")], [0, 1]],
@@ -16631,6 +17780,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["storePreferences", ["StorePreferencesType", XSD::QName.new(NsEBLBaseComponents, "StorePreferences")], [0, 1]]
     ]
@@ -16675,6 +17825,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["suggestedCategoryArray", ["SuggestedCategoryArrayType", XSD::QName.new(NsEBLBaseComponents, "SuggestedCategoryArray")], [0, 1]],
       ["categoryCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CategoryCount")], [0, 1]]
@@ -16719,9 +17870,54 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["lastUpdateTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "LastUpdateTime")], [0, 1]],
       ["taxTable", ["TaxTableType", XSD::QName.new(NsEBLBaseComponents, "TaxTable")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => GetTokenStatusRequestType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetTokenStatusRequestType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => GetTokenStatusResponseType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GetTokenStatusResponseType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["tokenStatus", ["TokenStatusType", XSD::QName.new(NsEBLBaseComponents, "TokenStatus")], [0, 1]]
     ]
   )
 
@@ -16766,6 +17962,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["user", ["UserType", XSD::QName.new(NsEBLBaseComponents, "User")], [0, 1]]
     ]
@@ -16812,6 +18009,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["userID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]],
       ["contactAddress", ["AddressType", XSD::QName.new(NsEBLBaseComponents, "ContactAddress")], [0, 1]],
@@ -16862,6 +18060,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["startingDisputeID", [nil, XSD::QName.new(NsEBLBaseComponents, "StartingDisputeID")], [0, 1]],
       ["endingDisputeID", [nil, XSD::QName.new(NsEBLBaseComponents, "EndingDisputeID")], [0, 1]],
@@ -16895,7 +18094,8 @@ module DefaultMappingRegistry
       ["showSellerPaymentPreferences", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowSellerPaymentPreferences")]],
       ["showEndOfAuctionEmailPreferences", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowEndOfAuctionEmailPreferences")], [0, 1]],
       ["showSellerFavoriteItemPreferences", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowSellerFavoriteItemPreferences")], [0, 1]],
-      ["showProStoresPreferences", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowProStoresPreferences")], [0, 1]]
+      ["showProStoresPreferences", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowProStoresPreferences")], [0, 1]],
+      ["showEmailShipmentTrackingNumberPreference", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowEmailShipmentTrackingNumberPreference")], [0, 1]]
     ]
   )
 
@@ -16918,6 +18118,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidderNoticePreferences", ["BidderNoticePreferencesType", XSD::QName.new(NsEBLBaseComponents, "BidderNoticePreferences")], [0, 1]],
       ["combinedPaymentPreferences", ["CombinedPaymentPreferencesType", XSD::QName.new(NsEBLBaseComponents, "CombinedPaymentPreferences")], [0, 1]],
@@ -16925,7 +18126,7 @@ module DefaultMappingRegistry
       ["sellerPaymentPreferences", ["SellerPaymentPreferencesType", XSD::QName.new(NsEBLBaseComponents, "SellerPaymentPreferences")], [0, 1]],
       ["sellerFavoriteItemPreferences", ["SellerFavoriteItemPreferencesType", XSD::QName.new(NsEBLBaseComponents, "SellerFavoriteItemPreferences")], [0, 1]],
       ["endOfAuctionEmailPreferences", ["EndOfAuctionEmailPreferencesType", XSD::QName.new(NsEBLBaseComponents, "EndOfAuctionEmailPreferences")], [0, 1]],
-      ["expressPreferences", ["ExpressPreferencesType", XSD::QName.new(NsEBLBaseComponents, "ExpressPreferences")], [0, 1]],
+      ["emailShipmentTrackingNumberPreference", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EmailShipmentTrackingNumberPreference")], [0, 1]],
       ["proStoresPreference", ["ProStoresCheckoutPreferenceType", XSD::QName.new(NsEBLBaseComponents, "ProStoresPreference")], [0, 1]]
     ]
   )
@@ -16970,6 +18171,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["veROReasonCodeDetails", ["VeROReasonCodeDetailsType", XSD::QName.new(NsEBLBaseComponents, "VeROReasonCodeDetails")], [0, 1]]
     ]
@@ -17019,6 +18221,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMoreItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreItems")], [0, 1]],
@@ -17069,6 +18272,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["wantItNowPost", ["WantItNowPostType", XSD::QName.new(NsEBLBaseComponents, "WantItNowPost")], [0, 1]]
     ]
@@ -17117,6 +18321,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["wantItNowPostArray", ["WantItNowPostArrayType", XSD::QName.new(NsEBLBaseComponents, "WantItNowPostArray")], [0, 1]],
       ["hasMoreItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreItems")], [0, 1]],
@@ -17165,6 +18370,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["countryDetails", ["CountryDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "CountryDetails")], [0, nil]],
       ["currencyDetails", ["CurrencyDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "CurrencyDetails")], [0, nil]],
@@ -17181,7 +18387,8 @@ module DefaultMappingRegistry
       ["unitOfMeasurementDetails", ["UnitOfMeasurementDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "UnitOfMeasurementDetails")], [0, nil]],
       ["regionOfOriginDetails", ["RegionOfOriginDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "RegionOfOriginDetails")], [0, nil]],
       ["shippingPackageDetails", ["ShippingPackageDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingPackageDetails")], [0, nil]],
-      ["shippingCarrierDetails", ["ShippingCarrierDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrierDetails")], [0, nil]]
+      ["shippingCarrierDetails", ["ShippingCarrierDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrierDetails")], [0, nil]],
+      ["returnPolicyDetails", ["ReturnPolicyDetailsType", XSD::QName.new(NsEBLBaseComponents, "ReturnPolicyDetails")], [0, 1]]
     ]
   )
 
@@ -17223,6 +18430,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -17271,6 +18479,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["refundFromSeller", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "RefundFromSeller")], [0, 1]],
       ["totalRefundToBuyer", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "TotalRefundToBuyer")], [0, 1]]
@@ -17321,6 +18530,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["feedbackID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FeedbackID")], [0, 1]]
     ]
@@ -17368,6 +18578,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["sellingStatus", ["SellingStatusType", XSD::QName.new(NsEBLBaseComponents, "SellingStatus")], [0, 1]],
       ["transactionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TransactionID")], [0, 1]],
@@ -17415,6 +18626,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["fees", ["FeesType", XSD::QName.new(NsEBLBaseComponents, "Fees")], [0, 1]],
@@ -17465,6 +18677,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["watchListCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "WatchListCount")], [0, 1]],
       ["watchListMaximum", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "WatchListMaximum")], [0, 1]]
@@ -17515,6 +18728,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["respondToBestOffer", ["BestOfferArrayType", XSD::QName.new(NsEBLBaseComponents, "RespondToBestOffer")], [0, 1]]
     ]
@@ -17564,6 +18778,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -17608,6 +18823,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -17671,6 +18887,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -17715,6 +18932,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
@@ -17765,6 +18983,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["fees", ["FeesType", XSD::QName.new(NsEBLBaseComponents, "Fees")], [0, 1]],
@@ -17816,6 +19035,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -17861,6 +19081,51 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => RevokeTokenRequestType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "RevokeTokenRequestType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["unsubscribeNotification", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "UnsubscribeNotification")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => RevokeTokenResponseType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "RevokeTokenResponseType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -17905,6 +19170,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -17960,55 +19226,8 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => SetCartRequestType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SetCartRequestType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
-    :schema_element => [
-      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
-      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
-      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
-      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
-      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
-      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
-      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
-      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["affiliateTrackingDetails", ["AffiliateTrackingDetailsType", XSD::QName.new(NsEBLBaseComponents, "AffiliateTrackingDetails")], [0, 1]],
-      ["cartID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "CartID")], [0, 1]],
-      ["shippingAddress", ["AddressType", XSD::QName.new(NsEBLBaseComponents, "ShippingAddress")], [0, 1]],
-      ["checkoutCompleteRedirect", ["CheckoutCompleteRedirectType", XSD::QName.new(NsEBLBaseComponents, "CheckoutCompleteRedirect")], [0, 1]],
-      ["cartItemArray", ["CartItemArrayType", XSD::QName.new(NsEBLBaseComponents, "CartItemArray")], [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => SetCartResponseType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SetCartResponseType"),
-    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
-    :schema_element => [
-      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
-      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
-      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
-      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
-      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
-      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
-      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
-      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
-      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
-      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
-      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
-      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["cart", ["CartType", XSD::QName.new(NsEBLBaseComponents, "Cart")], [0, 1]]
     ]
   )
 
@@ -18051,6 +19270,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -18074,7 +19294,8 @@ module DefaultMappingRegistry
       ["applicationDeliveryPreferences", ["ApplicationDeliveryPreferencesType", XSD::QName.new(NsEBLBaseComponents, "ApplicationDeliveryPreferences")], [0, 1]],
       ["userDeliveryPreferenceArray", ["NotificationEnableArrayType", XSD::QName.new(NsEBLBaseComponents, "UserDeliveryPreferenceArray")], [0, 1]],
       ["userData", ["NotificationUserDataType", XSD::QName.new(NsEBLBaseComponents, "UserData")], [0, 1]],
-      ["eventProperty", ["NotificationEventPropertyType[]", XSD::QName.new(NsEBLBaseComponents, "EventProperty")], [0, nil]]
+      ["eventProperty", ["NotificationEventPropertyType[]", XSD::QName.new(NsEBLBaseComponents, "EventProperty")], [0, nil]],
+      ["deliveryURLName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "DeliveryURLName")], [0, 1]]
     ]
   )
 
@@ -18097,6 +19318,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -18141,6 +19363,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -18185,6 +19408,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["status", ["PromotionalSaleStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
       ["promotionalSaleID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleID")], [0, 1]]
@@ -18237,14 +19461,15 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["status", ["PromotionalSaleStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]]
     ]
   )
 
   LiteralRegistry.register(
-    :class => SetReturnURLRequestType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SetReturnURLRequestType"),
+    :class => SetSellingManagerFeedbackOptionsRequestType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SetSellingManagerFeedbackOptionsRequestType"),
     :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractRequestType"),
     :schema_element => [
       ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
@@ -18258,15 +19483,14 @@ module DefaultMappingRegistry
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["authenticationEntry", ["AuthenticationEntryType", XSD::QName.new(NsEBLBaseComponents, "AuthenticationEntry")], [0, 1]],
-      ["applicationDisplayName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ApplicationDisplayName")], [0, 1]],
-      ["action", ["ModifyActionCodeType", XSD::QName.new(NsEBLBaseComponents, "Action")], [0, 1]]
+      ["automatedLeaveFeedbackEvent", ["AutomatedLeaveFeedbackEventCodeType", XSD::QName.new(NsEBLBaseComponents, "AutomatedLeaveFeedbackEvent")], [0, 1]],
+      ["storedComments", ["FeedbackCommentArrayType", XSD::QName.new(NsEBLBaseComponents, "StoredComments")], [0, 1]]
     ]
   )
 
   LiteralRegistry.register(
-    :class => SetReturnURLResponseType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SetReturnURLResponseType"),
+    :class => SetSellingManagerFeedbackOptionsResponseType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SetSellingManagerFeedbackOptionsResponseType"),
     :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
     :schema_element => [
       ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
@@ -18283,6 +19507,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -18334,6 +19559,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -18377,6 +19603,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -18423,6 +19650,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["taskID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "TaskID")], [0, 1]],
       ["status", ["TaskStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]]
@@ -18468,6 +19696,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["customPage", ["StoreCustomPageType", XSD::QName.new(NsEBLBaseComponents, "CustomPage")], [0, 1]]
     ]
@@ -18512,6 +19741,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -18555,6 +19785,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -18601,6 +19832,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -18627,7 +19859,7 @@ module DefaultMappingRegistry
       ["sellerPaymentPreferences", ["SellerPaymentPreferencesType", XSD::QName.new(NsEBLBaseComponents, "SellerPaymentPreferences")], [0, 1]],
       ["sellerFavoriteItemPreferences", ["SellerFavoriteItemPreferencesType", XSD::QName.new(NsEBLBaseComponents, "SellerFavoriteItemPreferences")], [0, 1]],
       ["endOfAuctionEmailPreferences", ["EndOfAuctionEmailPreferencesType", XSD::QName.new(NsEBLBaseComponents, "EndOfAuctionEmailPreferences")], [0, 1]],
-      ["expressPreferences", ["ExpressPreferencesType", XSD::QName.new(NsEBLBaseComponents, "ExpressPreferences")], [0, 1]]
+      ["emailShipmentTrackingNumberPreference", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EmailShipmentTrackingNumberPreference")], [0, 1]]
     ]
   )
 
@@ -18650,6 +19882,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -18697,6 +19930,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["pictureSystemVersion", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PictureSystemVersion")], [0, 1]],
       ["siteHostedPictureDetails", ["SiteHostedPictureDetailsType", XSD::QName.new(NsEBLBaseComponents, "SiteHostedPictureDetails")], [0, 1]]
@@ -18744,6 +19978,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["validToken", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ValidToken")], [0, 1]]
     ]
@@ -18793,6 +20028,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -18837,6 +20073,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["veROReportPacketID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "VeROReportPacketID")], [0, 1]],
       ["veROReportPacketStatus", ["VeROReportPacketStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "VeROReportPacketStatus")], [0, 1]]
@@ -18884,6 +20121,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["fees", ["FeesType", XSD::QName.new(NsEBLBaseComponents, "Fees")], [0, 1]],
@@ -18937,6 +20175,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
       ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTime")], [0, 1]]
@@ -19191,17 +20430,21 @@ module DefaultMappingRegistry
       ["address", ["AddressType", XSD::QName.new(NsEBLBaseComponents, "Address")], [0, 1]],
       ["bestTimeToCall", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "BestTimeToCall")], [0, 1]],
       ["email", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Email")], [0, 1]],
-      ["firstName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FirstName")], [0, 1]],
-      ["lastName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LastName")], [0, 1]],
-      ["phone", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Phone")], [0, 1]],
       ["submittedTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "SubmittedTime")], [0, 1]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["itemTitle", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ItemTitle")], [0, 1]],
       ["userID", [nil, XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]],
       ["memberMessage", ["MemberMessageExchangeArrayType", XSD::QName.new(NsEBLBaseComponents, "MemberMessage")], [0, 1]],
       ["status", ["AdFormatLeadStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
-      ["phone2", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Phone2")], [0, 1]],
       ["leadFee", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "LeadFee")], [0, 1]],
+      ["externalEmail", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalEmail")], [0, 1]],
+      ["purchaseTimeFrame", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PurchaseTimeFrame")], [0, 1]],
+      ["tradeInYear", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TradeInYear")], [0, 1]],
+      ["tradeInMake", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TradeInMake")], [0, 1]],
+      ["tradeInModel", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TradeInModel")], [0, 1]],
+      ["financingAnswer", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "FinancingAnswer")], [0, 1]],
+      ["answer1", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Answer1")], [0, 1]],
+      ["answer2", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Answer2")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -19268,6 +20511,9 @@ module DefaultMappingRegistry
       ["internationalStreet", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "InternationalStreet")], [0, 1]],
       ["companyName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CompanyName")], [0, 1]],
       ["addressRecordType", ["AddressRecordTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "AddressRecordType")], [0, 1]],
+      ["firstName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FirstName")], [0, 1]],
+      ["lastName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LastName")], [0, 1]],
+      ["phone2", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Phone2")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -19290,6 +20536,17 @@ module DefaultMappingRegistry
     :schema_attribute => {
       XSD::QName.new(nil, "currencyID") => "SOAP::SOAPToken"
     }
+  )
+
+  LiteralRegistry.register(
+    :class => AnnouncementMessageType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "AnnouncementMessageType"),
+    :schema_element => [
+      ["announcementStartTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "AnnouncementStartTime")], [0, 1]],
+      ["eventTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EventTime")], [0, 1]],
+      ["messageType", ["AnnouncementMessageCodeType", XSD::QName.new(NsEBLBaseComponents, "MessageType")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
   )
 
   LiteralRegistry.register(
@@ -19327,6 +20584,7 @@ module DefaultMappingRegistry
       ["notificationPayloadType", ["NotificationPayloadTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "NotificationPayloadType")], [0, 1]],
       ["deviceType", ["DeviceTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "DeviceType")], [0, 1]],
       ["payloadVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PayloadVersion")], [0, 1]],
+      ["deliveryURLDetails", ["DeliveryURLDetailType[]", XSD::QName.new(NsEBLBaseComponents, "DeliveryURLDetails")], [0, nil]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -19383,27 +20641,6 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
-    :class => AuthenticationEntryArrayType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "AuthenticationEntryArrayType"),
-    :schema_element => [
-      ["authenticationEntry", ["AuthenticationEntryType[]", XSD::QName.new(NsEBLBaseComponents, "AuthenticationEntry")], [0, nil]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => AuthenticationEntryType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "AuthenticationEntryType"),
-    :schema_element => [
-      ["acceptURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "AcceptURL")], [0, 1]],
-      ["privacyPolicyURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "PrivacyPolicyURL")], [0, 1]],
-      ["rejectURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "RejectURL")], [0, 1]],
-      ["ruName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RuName")], [0, 1]],
-      ["tokenReturnMethod", ["TokenReturnMethodCodeType", XSD::QName.new(NsEBLBaseComponents, "TokenReturnMethod")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  LiteralRegistry.register(
     :class => AverageRatingDetailArrayType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "AverageRatingDetailArrayType"),
     :schema_element => [
@@ -19418,6 +20655,16 @@ module DefaultMappingRegistry
       ["ratingDetail", ["FeedbackRatingDetailCodeType", XSD::QName.new(NsEBLBaseComponents, "RatingDetail")], [0, 1]],
       ["rating", ["SOAP::SOAPDouble", XSD::QName.new(NsEBLBaseComponents, "Rating")], [0, 1]],
       ["ratingCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "RatingCount")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => AverageRatingSummaryType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "AverageRatingSummaryType"),
+    :schema_element => [
+      ["feedbackSummaryPeriod", ["FeedbackSummaryPeriodCodeType", XSD::QName.new(NsEBLBaseComponents, "FeedbackSummaryPeriod")], [0, 1]],
+      ["averageRatingDetails", ["AverageRatingDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "AverageRatingDetails")], [0, nil]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -19651,6 +20898,30 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => BusinessSellerDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "BusinessSellerDetailsType"),
+    :schema_element => [
+      ["address", ["AddressType", XSD::QName.new(NsEBLBaseComponents, "Address")], [0, 1]],
+      ["fax", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Fax")], [0, 1]],
+      ["email", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Email")], [0, 1]],
+      ["additionalContactInformation", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AdditionalContactInformation")], [0, 1]],
+      ["tradeRegistrationNumber", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TradeRegistrationNumber")], [0, 1]],
+      ["legalInvoice", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LegalInvoice")], [0, 1]],
+      ["termsAndConditions", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TermsAndConditions")], [0, 1]],
+      ["vATDetails", ["VATDetailsType", XSD::QName.new(NsEBLBaseComponents, "VATDetails")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => BuyerGuaranteeEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "BuyerGuaranteeEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => BuyerProtectionDetailsType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "BuyerProtectionDetailsType"),
     :schema_element => [
@@ -19661,16 +20932,40 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
-    :class => BuyerRequirementsType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "BuyerRequirementsType"),
+    :class => BuyerRequirementDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "BuyerRequirementDetailsType"),
     :schema_element => [
       ["shipToRegistrationCountry", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShipToRegistrationCountry")], [0, 1]],
       ["zeroFeedbackScore", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ZeroFeedbackScore")], [0, 1]],
       ["minimumFeedbackScore", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "MinimumFeedbackScore")], [0, 1]],
-      ["maximumUnpaidItemStrikes", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "MaximumUnpaidItemStrikes")], [0, 1]],
       ["maximumItemRequirements", ["MaximumItemRequirementsType", XSD::QName.new(NsEBLBaseComponents, "MaximumItemRequirements")], [0, 1]],
       ["linkedPayPalAccount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LinkedPayPalAccount")], [0, 1]],
-      ["verifiedUserRequirements", ["VerifiedUserRequirementsType", XSD::QName.new(NsEBLBaseComponents, "VerifiedUserRequirements")], [0, 1]]
+      ["verifiedUserRequirements", ["VerifiedUserRequirementsType", XSD::QName.new(NsEBLBaseComponents, "VerifiedUserRequirements")], [0, 1]],
+      ["maximumUnpaidItemStrikesInfo", ["MaximumUnpaidItemStrikesInfoType", XSD::QName.new(NsEBLBaseComponents, "MaximumUnpaidItemStrikesInfo")], [0, 1]],
+      ["maximumBuyerPolicyViolations", ["MaximumBuyerPolicyViolationsType", XSD::QName.new(NsEBLBaseComponents, "MaximumBuyerPolicyViolations")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => BuyerRoleMetricsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "BuyerRoleMetricsType"),
+    :schema_element => [
+      ["positiveFeedbackLeftCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PositiveFeedbackLeftCount")], [0, 1]],
+      ["negativeFeedbackLeftCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "NegativeFeedbackLeftCount")], [0, 1]],
+      ["neutralFeedbackLeftCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "NeutralFeedbackLeftCount")], [0, 1]],
+      ["feedbackLeftPercent", ["SOAP::SOAPFloat", XSD::QName.new(NsEBLBaseComponents, "FeedbackLeftPercent")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => BuyerSatisfactionDashboardType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "BuyerSatisfactionDashboardType"),
+    :schema_element => [
+      ["status", ["BuyerSatisfactionStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["alert", ["SellerDashboardAlertType[]", XSD::QName.new(NsEBLBaseComponents, "Alert")], [0, nil]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
 
@@ -19797,37 +21092,12 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
-    :class => CartItemArrayType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CartItemArrayType"),
-    :schema_element => [
-      ["cartItem", ["CartItemType[]", XSD::QName.new(NsEBLBaseComponents, "CartItem")], [0, nil]]
-    ]
-  )
-
-  LiteralRegistry.register(
     :class => CartItemType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "CartItemType"),
     :schema_element => [
       ["item", ["ItemType", XSD::QName.new(NsEBLBaseComponents, "Item")], [0, 1]],
       ["referenceID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "ReferenceID")], [0, 1]],
       ["action", ["ModifyActionCodeType", XSD::QName.new(NsEBLBaseComponents, "Action")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => CartType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CartType"),
-    :schema_element => [
-      ["cartID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "CartID")], [0, 1]],
-      ["shippingAddress", ["AddressType", XSD::QName.new(NsEBLBaseComponents, "ShippingAddress")], [0, 1]],
-      ["cartStatus", ["OrderStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "CartStatus")], [0, 1]],
-      ["creationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "CreationTime")], [0, 1]],
-      ["expirationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "ExpirationTime")], [0, 1]],
-      ["checkoutURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "CheckoutURL")], [0, 1]],
-      ["checkoutCompleteRedirect", ["CheckoutCompleteRedirectType", XSD::QName.new(NsEBLBaseComponents, "CheckoutCompleteRedirect")], [0, 1]],
-      ["cartItemArray", ["CartItemArrayType", XSD::QName.new(NsEBLBaseComponents, "CartItemArray")], [0, 1]],
-      ["orderDetail", ["CheckoutOrderDetailType", XSD::QName.new(NsEBLBaseComponents, "OrderDetail")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -19847,6 +21117,7 @@ module DefaultMappingRegistry
       ["itemSpecifics", ["NameValueListArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemSpecifics")], [0, 1]],
       ["reviewCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ReviewCount")], [0, 1]],
       ["reviewDetails", ["ReviewDetailsType", XSD::QName.new(NsEBLBaseComponents, "ReviewDetails")], [0, 1]],
+      ["productState", ["ProductStateCodeType", XSD::QName.new(NsEBLBaseComponents, "ProductState")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -19875,7 +21146,6 @@ module DefaultMappingRegistry
       ["valuePackEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ValuePackEnabled")], [0, 1]],
       ["proPackPlusEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ProPackPlusEnabled")], [0, 1]],
       ["adFormatEnabled", ["AdFormatEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "AdFormatEnabled")], [0, 1]],
-      ["digitalDeliveryEnabled", ["DigitalDeliveryEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "DigitalDeliveryEnabled")], [0, 1]],
       ["bestOfferCounterEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferCounterEnabled")], [0, 1]],
       ["bestOfferAutoDeclineEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoDeclineEnabled")], [0, 1]],
       ["localMarketSpecialitySubscription", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketSpecialitySubscription")], [0, 1]],
@@ -19904,6 +21174,59 @@ module DefaultMappingRegistry
       ["paisaPayFullEscrowEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PaisaPayFullEscrowEnabled")], [0, 1]],
       ["classifiedAdAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdAutoAcceptEnabled")], [0, 1]],
       ["bestOfferAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoAcceptEnabled")], [0, 1]],
+      ["crossBorderTradeNorthAmericaEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeNorthAmericaEnabled")], [0, 1]],
+      ["crossBorderTradeGBEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeGBEnabled")], [0, 1]],
+      ["crossBorderTradeAustraliaEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeAustraliaEnabled")], [0, 1]],
+      ["payPalBuyerProtectionEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPalBuyerProtectionEnabled")], [0, 1]],
+      ["buyerGuaranteeEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BuyerGuaranteeEnabled")], [0, 1]],
+      ["combinedFixedPriceTreatmentEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CombinedFixedPriceTreatmentEnabled")], [0, 1]],
+      ["galleryFeaturedDurations", ["ListingEnhancementDurationReferenceType", XSD::QName.new(NsEBLBaseComponents, "GalleryFeaturedDurations")], [0, 1]],
+      ["payPalRequired", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPalRequired")], [0, 1]],
+      ["eBayMotorsProAdFormatEnabled", "AdFormatEnabledCodeType", [0, 1]],
+      ["eBayMotorsProContactByPhoneEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProPhoneCount", "SOAP::SOAPInt", [0, 1]],
+      ["eBayMotorsProContactByAddressEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProStreetCount", "SOAP::SOAPInt", [0, 1]],
+      ["eBayMotorsProCompanyNameEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProContactByEmailEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProBestOfferEnabled", "ClassifiedAdBestOfferEnabledCodeType", [0, 1]],
+      ["eBayMotorsProAutoAcceptEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProAutoDeclineEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProPaymentMethodCheckOutEnabled", "ClassifiedAdPaymentMethodEnabledCodeType", [0, 1]],
+      ["eBayMotorsProShippingMethodEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProCounterOfferEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProSellerContactDetailsEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["localMarketAdFormatEnabled", ["AdFormatEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAdFormatEnabled")], [0, 1]],
+      ["localMarketContactByPhoneEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByPhoneEnabled")], [0, 1]],
+      ["localMarketPhoneCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "LocalMarketPhoneCount")], [0, 1]],
+      ["localMarketContactByAddressEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByAddressEnabled")], [0, 1]],
+      ["localMarketStreetCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "LocalMarketStreetCount")], [0, 1]],
+      ["localMarketCompanyNameEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketCompanyNameEnabled")], [0, 1]],
+      ["localMarketContactByEmailEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByEmailEnabled")], [0, 1]],
+      ["localMarketBestOfferEnabled", ["ClassifiedAdBestOfferEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketBestOfferEnabled")], [0, 1]],
+      ["localMarketAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAutoAcceptEnabled")], [0, 1]],
+      ["localMarketAutoDeclineEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAutoDeclineEnabled")], [0, 1]],
+      ["localMarketPaymentMethodCheckOutEnabled", ["ClassifiedAdPaymentMethodEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketPaymentMethodCheckOutEnabled")], [0, 1]],
+      ["localMarketShippingMethodEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketShippingMethodEnabled")], [0, 1]],
+      ["localMarketCounterOfferEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketCounterOfferEnabled")], [0, 1]],
+      ["localMarketSellerContactDetailsEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketSellerContactDetailsEnabled")], [0, 1]],
+      ["classifiedAdPhoneCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdPhoneCount")], [0, 1]],
+      ["classifiedAdContactByAddressEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdContactByAddressEnabled")], [0, 1]],
+      ["classifiedAdStreetCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdStreetCount")], [0, 1]],
+      ["classifiedAdCompanyNameEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdCompanyNameEnabled")], [0, 1]],
+      ["specialitySubscription", ["GeographicExposureCodeType", XSD::QName.new(NsEBLBaseComponents, "SpecialitySubscription")], [0, 1]],
+      ["regularSubscription", ["GeographicExposureCodeType", XSD::QName.new(NsEBLBaseComponents, "RegularSubscription")], [0, 1]],
+      ["premiumSubscription", ["GeographicExposureCodeType", XSD::QName.new(NsEBLBaseComponents, "PremiumSubscription")], [0, 1]],
+      ["nonSubscription", ["GeographicExposureCodeType", XSD::QName.new(NsEBLBaseComponents, "NonSubscription")], [0, 1]],
+      ["iNEscrowWorkflowTimeline", ["INEscrowWorkflowTimelineCodeType", XSD::QName.new(NsEBLBaseComponents, "INEscrowWorkflowTimeline")], [0, 1]],
+      ["payPalRequiredForStoreOwner", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPalRequiredForStoreOwner")], [0, 1]],
+      ["reviseQuantityAllowed", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ReviseQuantityAllowed")], [0, 1]],
+      ["revisePriceAllowed", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "RevisePriceAllowed")], [0, 1]],
+      ["storeOwnerExtendedListingDurationsEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurationsEnabled")], [0, 1]],
+      ["storeOwnerExtendedListingDurations", ["StoreOwnerExtendedListingDurationsType", XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurations")], [0, 1]],
+      ["returnPolicyEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ReturnPolicyEnabled")], [0, 1]],
+      ["handlingTimeEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HandlingTimeEnabled")], [0, 1]],
+      ["maxFlatShippingCost", ["SOAP::SOAPDouble", XSD::QName.new(NsEBLBaseComponents, "MaxFlatShippingCost")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -20006,6 +21329,25 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => CharityAffiliationDetailType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CharityAffiliationDetailType"),
+    :schema_element => [
+      ["charityID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CharityID")], [0, 1]],
+      ["affiliationType", ["CharityAffiliationTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "AffiliationType")], [0, 1]],
+      ["lastUsedTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "LastUsedTime")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => CharityAffiliationDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CharityAffiliationDetailsType"),
+    :schema_element => [
+      ["charityAffiliationDetail", ["CharityAffiliationDetailType[]", XSD::QName.new(NsEBLBaseComponents, "CharityAffiliationDetail")], [0, nil]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => CharityAffiliationType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "CharityAffiliationType"),
     :schema_element => [
@@ -20048,6 +21390,7 @@ module DefaultMappingRegistry
       ["charityID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CharityID")], [0, 1]],
       ["logoURLSelling", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "LogoURLSelling")], [0, 1]],
       ["displayLogoSelling", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DisplayLogoSelling")], [0, 1]],
+      ["displayNameInCheckout", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DisplayNameInCheckout")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ],
     :schema_attribute => {
@@ -20061,6 +21404,7 @@ module DefaultMappingRegistry
     :schema_element => [
       ["charitySellerStatus", ["CharitySellerStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "CharitySellerStatus")], [0, 1]],
       ["charityAffiliation", ["CharityAffiliationType[]", XSD::QName.new(NsEBLBaseComponents, "CharityAffiliation")], [0, nil]],
+      ["termsAndConditionsAccepted", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "TermsAndConditionsAccepted")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -20077,16 +21421,6 @@ module DefaultMappingRegistry
       ["logoURL", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LogoURL")], [0, 1]],
       ["status", ["CharityStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
       ["charityListing", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CharityListing")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => CheckoutCompleteRedirectType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CheckoutCompleteRedirectType"),
-    :schema_element => [
-      ["uRL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "URL")], [0, 1]],
-      ["name", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Name")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -20140,6 +21474,22 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => ClassifiedAdCompanyNameEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdCompanyNameEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => ClassifiedAdContactByAddressEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdContactByAddressEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => ClassifiedAdContactByEmailEnabledDefintionType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdContactByEmailEnabledDefintionType"),
     :schema_element => [
@@ -20180,8 +21530,32 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => ClassifiedAdPhoneCountDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdPhoneCountDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => ClassifiedAdShippingMethodEnabledDefinitionType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdShippingMethodEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => ClassifiedAdStreetCountDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdStreetCountDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => CombinedFixedPriceTreatmentEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CombinedFixedPriceTreatmentEnabledDefinitionType"),
     :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
@@ -20232,6 +21606,30 @@ module DefaultMappingRegistry
     :schema_element => [
       ["country", ["CountryCodeType", XSD::QName.new(NsEBLBaseComponents, "Country")], [0, 1]],
       ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => CrossBorderTradeAustraliaEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeAustraliaEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => CrossBorderTradeGBEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeGBEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => CrossBorderTradeNorthAmericaEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeNorthAmericaEnabledDefinitionType"),
+    :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -20301,6 +21699,17 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => DeliveryURLDetailType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "DeliveryURLDetailType"),
+    :schema_element => [
+      ["deliveryURLName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "DeliveryURLName")], [0, 1]],
+      ["deliveryURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "DeliveryURL")], [0, 1]],
+      ["status", ["EnableCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => DescriptionTemplateType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "DescriptionTemplateType"),
     :schema_element => [
@@ -20310,26 +21719,6 @@ module DefaultMappingRegistry
       ["name", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Name")], [0, 1]],
       ["templateXML", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TemplateXML")], [0, 1]],
       ["type", ["DescriptionTemplateCodeType", XSD::QName.new(NsEBLBaseComponents, "Type")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => DigitalDeliveryDetailsType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "DigitalDeliveryDetailsType"),
-    :schema_element => [
-      ["requirements", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Requirements")], [0, 1]],
-      ["method", ["DigitalDeliveryMethodCodeType", XSD::QName.new(NsEBLBaseComponents, "Method")], [0, 1]],
-      ["uRL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "URL")], [0, 1]],
-      ["instructions", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Instructions")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => DigitalDeliveryEnabledDefinitionType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "DigitalDeliveryEnabledDefinitionType"),
-    :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -20401,15 +21790,6 @@ module DefaultMappingRegistry
     :schema_element => [
       ["distanceMeasurement", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "DistanceMeasurement")]],
       ["distanceUnit", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "DistanceUnit")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => DomainHistogramType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "DomainHistogramType"),
-    :schema_element => [
-      ["department", ["ExpressHistogramDepartmentType[]", XSD::QName.new(NsEBLBaseComponents, "Department")], [0, nil]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -20534,7 +21914,6 @@ module DefaultMappingRegistry
       ["eligibleCheckout", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EligibleCheckout")], [0, 1]],
       ["noPreapprovedBidderList", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "NoPreapprovedBidderList")], [0, 1]],
       ["noCharity", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "NoCharity")], [0, 1]],
-      ["noDigitalDelivery", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "NoDigitalDelivery")], [0, 1]],
       ["combinedShippingDiscount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CombinedShippingDiscount")], [0, 1]],
       ["shipFromEligibleCountry", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShipFromEligibleCountry")], [0, 1]],
       ["payPalAccountAcceptsUnconfirmedAddress", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPalAccountAcceptsUnconfirmedAddress")], [0, 1]],
@@ -20573,6 +21952,7 @@ module DefaultMappingRegistry
       ["productReferenceID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "ProductReferenceID")], [0, 1]],
       ["itemSpecifics", ["NameValueListArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemSpecifics")], [0, 1]],
       ["detailsURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "DetailsURL")], [0, 1]],
+      ["productState", ["ProductStateCodeType", XSD::QName.new(NsEBLBaseComponents, "ProductState")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -20664,7 +22044,6 @@ module DefaultMappingRegistry
       ["valuePackEnabled", ["ValuePackEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ValuePackEnabled")], [0, 1]],
       ["proPackPlusEnabled", ["ProPackPlusEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ProPackPlusEnabled")], [0, 1]],
       ["adFormatEnabled", ["AdFormatEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "AdFormatEnabled")], [0, 1]],
-      ["digitalDeliveryEnabled", ["DigitalDeliveryEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "DigitalDeliveryEnabled")], [0, 1]],
       ["bestOfferCounterEnabled", ["BestOfferCounterEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "BestOfferCounterEnabled")], [0, 1]],
       ["bestOfferAutoDeclineEnabled", ["BestOfferAutoDeclineEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoDeclineEnabled")], [0, 1]],
       ["localMarketSpecialitySubscription", ["LocalMarketSpecialitySubscriptionDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketSpecialitySubscription")], [0, 1]],
@@ -20696,6 +22075,58 @@ module DefaultMappingRegistry
       ["paisaPayFullEscrowEnabled", ["PaisaPayFullEscrowEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "PaisaPayFullEscrowEnabled")], [0, 1]],
       ["bestOfferAutoAcceptEnabled", ["BestOfferAutoAcceptEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoAcceptEnabled")], [0, 1]],
       ["classifiedAdAutoAcceptEnabled", ["ClassifiedAdAutoAcceptEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdAutoAcceptEnabled")], [0, 1]],
+      ["crossBorderTradeNorthAmericaEnabled", ["CrossBorderTradeNorthAmericaEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeNorthAmericaEnabled")], [0, 1]],
+      ["crossBorderTradeGBEnabled", ["CrossBorderTradeGBEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeGBEnabled")], [0, 1]],
+      ["crossBorderTradeAustraliaEnabled", ["CrossBorderTradeAustraliaEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeAustraliaEnabled")], [0, 1]],
+      ["payPalBuyerProtectionEnabled", ["PayPalBuyerProtectionEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "PayPalBuyerProtectionEnabled")], [0, 1]],
+      ["buyerGuaranteeEnabled", ["BuyerGuaranteeEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "BuyerGuaranteeEnabled")], [0, 1]],
+      ["combinedFixedPriceTreatmentEnabled", ["CombinedFixedPriceTreatmentEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "CombinedFixedPriceTreatmentEnabled")], [0, 1]],
+      ["galleryFeaturedDurations", ["ListingEnhancementDurationDefinitionType", XSD::QName.new(NsEBLBaseComponents, "GalleryFeaturedDurations")], [0, 1]],
+      ["iNEscrowWorkflowTimeline", ["INEscrowWorkflowTimelineDefinitionType", XSD::QName.new(NsEBLBaseComponents, "INEscrowWorkflowTimeline")], [0, 1]],
+      ["payPalRequired", ["PayPalRequiredDefinitionType", XSD::QName.new(NsEBLBaseComponents, "PayPalRequired")], [0, 1]],
+      ["eBayMotorsProAdFormatEnabled", "EBayMotorsProAdFormatEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProContactByPhoneEnabled", "EBayMotorsProContactByPhoneEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProPhoneCount", "EBayMotorsProPhoneCountDefinitionType", [0, 1]],
+      ["eBayMotorsProContactByAddressEnabled", "EBayMotorsProContactByAddressEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProStreetCount", "EBayMotorsProStreetCountDefinitionType", [0, 1]],
+      ["eBayMotorsProCompanyNameEnabled", "EBayMotorsProCompanyNameEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProContactByEmailEnabled", "EBayMotorsProContactByEmailEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProBestOfferEnabled", "EBayMotorsProBestOfferEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProAutoAcceptEnabled", "EBayMotorsProAutoAcceptEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProAutoDeclineEnabled", "EBayMotorsProAutoDeclineEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProPaymentMethodCheckOutEnabled", "EBayMotorsProPaymentMethodCheckOutEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProShippingMethodEnabled", "EBayMotorsProShippingMethodEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProCounterOfferEnabled", "EBayMotorsProCounterOfferEnabledDefinitionType", [0, 1]],
+      ["eBayMotorsProSellerContactDetailsEnabled", "EBayMotorsProSellerContactDetailsEnabledDefinitionType", [0, 1]],
+      ["localMarketAdFormatEnabled", ["LocalMarketAdFormatEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAdFormatEnabled")], [0, 1]],
+      ["localMarketContactByPhoneEnabled", ["LocalMarketContactByPhoneEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByPhoneEnabled")], [0, 1]],
+      ["localMarketPhoneCount", ["LocalMarketPhoneCountDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketPhoneCount")], [0, 1]],
+      ["localMarketContactByAddressEnabled", ["LocalMarketContactByAddressEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByAddressEnabled")], [0, 1]],
+      ["localMarketStreetCount", ["LocalMarketStreetCountDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketStreetCount")], [0, 1]],
+      ["localMarketCompanyNameEnabled", ["LocalMarketCompanyNameEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketCompanyNameEnabled")], [0, 1]],
+      ["localMarketContactByEmailEnabled", ["LocalMarketContactByEmailEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByEmailEnabled")], [0, 1]],
+      ["localMarketBestOfferEnabled", ["LocalMarketBestOfferEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketBestOfferEnabled")], [0, 1]],
+      ["localMarketAutoAcceptEnabled", ["LocalMarketAutoAcceptEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAutoAcceptEnabled")], [0, 1]],
+      ["localMarketAutoDeclineEnabled", ["LocalMarketAutoDeclineEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAutoDeclineEnabled")], [0, 1]],
+      ["localMarketPaymentMethodCheckOutEnabled", ["LocalMarketPaymentMethodCheckOutEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketPaymentMethodCheckOutEnabled")], [0, 1]],
+      ["localMarketShippingMethodEnabled", ["LocalMarketShippingMethodEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketShippingMethodEnabled")], [0, 1]],
+      ["localMarketCounterOfferEnabled", ["LocalMarketCounterOfferEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketCounterOfferEnabled")], [0, 1]],
+      ["localMarketSellerContactDetailsEnabled", ["LocalMarketSellerContactDetailsEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketSellerContactDetailsEnabled")], [0, 1]],
+      ["classifiedAdPhoneCount", ["ClassifiedAdPhoneCountDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdPhoneCount")], [0, 1]],
+      ["classifiedAdContactByAddressEnabled", ["ClassifiedAdContactByAddressEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdContactByAddressEnabled")], [0, 1]],
+      ["classifiedAdStreetCount", ["ClassifiedAdStreetCountDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdStreetCount")], [0, 1]],
+      ["classifiedAdCompanyNameEnabled", ["ClassifiedAdCompanyNameEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdCompanyNameEnabled")], [0, 1]],
+      ["specialitySubscription", ["SpecialitySubscriptionDefinitionType", XSD::QName.new(NsEBLBaseComponents, "SpecialitySubscription")], [0, 1]],
+      ["regularSubscription", ["RegularSubscriptionDefinitionType", XSD::QName.new(NsEBLBaseComponents, "RegularSubscription")], [0, 1]],
+      ["premiumSubscription", ["PremiumSubscriptionDefinitionType", XSD::QName.new(NsEBLBaseComponents, "PremiumSubscription")], [0, 1]],
+      ["nonSubscription", ["NonSubscriptionDefinitionType", XSD::QName.new(NsEBLBaseComponents, "NonSubscription")], [0, 1]],
+      ["returnPolicyEnabled", ["ReturnPolicyEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ReturnPolicyEnabled")], [0, 1]],
+      ["handlingTimeEnabled", ["HandlingTimeEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "HandlingTimeEnabled")], [0, 1]],
+      ["payPalRequiredForStoreOwner", ["PayPalRequiredForStoreOwnerDefinitionType", XSD::QName.new(NsEBLBaseComponents, "PayPalRequiredForStoreOwner")], [0, 1]],
+      ["reviseQuantityAllowed", ["ReviseQuantityAllowedDefinitionType", XSD::QName.new(NsEBLBaseComponents, "ReviseQuantityAllowed")], [0, 1]],
+      ["revisePriceAllowed", ["RevisePriceAllowedDefinitionType", XSD::QName.new(NsEBLBaseComponents, "RevisePriceAllowed")], [0, 1]],
+      ["storeOwnerExtendedListingDurationsEnabled", ["StoreOwnerExtendedListingDurationsEnabledDefinitionType", XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurationsEnabled")], [0, 1]],
+      ["storeOwnerExtendedListingDurations", ["StoreOwnerExtendedListingDurationsDefinitionType", XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurations")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -20707,6 +22138,14 @@ module DefaultMappingRegistry
       ["name", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Name")], [0, 1]],
       ["fee", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "Fee")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => FeedbackCommentArrayType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "FeedbackCommentArrayType"),
+    :schema_element => [
+      ["storedCommentText", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "StoredCommentText")], [0, nil]]
     ]
   )
 
@@ -20792,8 +22231,10 @@ module DefaultMappingRegistry
       ["neutralCommentCountFromSuspendedUsers", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "NeutralCommentCountFromSuspendedUsers")], [0, 1]],
       ["uniqueNegativeFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueNegativeFeedbackCount")], [0, 1]],
       ["uniquePositiveFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniquePositiveFeedbackCount")], [0, 1]],
-      ["sellerAverageRatingDetailArray", ["AverageRatingDetailArrayType", XSD::QName.new(NsEBLBaseComponents, "SellerAverageRatingDetailArray")], [0, 1]],
       ["uniqueNeutralFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueNeutralFeedbackCount")], [0, 1]],
+      ["sellerRatingSummaryArray", ["SellerRatingSummaryArrayType", XSD::QName.new(NsEBLBaseComponents, "SellerRatingSummaryArray")], [0, 1]],
+      ["sellerRoleMetrics", ["SellerRoleMetricsType", XSD::QName.new(NsEBLBaseComponents, "SellerRoleMetrics")], [0, 1]],
+      ["buyerRoleMetrics", ["BuyerRoleMetricsType", XSD::QName.new(NsEBLBaseComponents, "BuyerRoleMetrics")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -20879,6 +22320,14 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => HandlingTimeEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "HandlingTimeEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => HistogramEntryType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "HistogramEntryType"),
     :schema_element => [
@@ -20894,6 +22343,14 @@ module DefaultMappingRegistry
   LiteralRegistry.register(
     :class => HomePageFeaturedEnabledDefinitionType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "HomePageFeaturedEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => INEscrowWorkflowTimelineDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "INEscrowWorkflowTimelineDefinitionType"),
     :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
@@ -21118,7 +22575,6 @@ module DefaultMappingRegistry
       ["watchCount", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "WatchCount")], [0, 1]],
       ["hitCount", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "HitCount")], [0, 1]],
       ["disableBuyerRequirements", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DisableBuyerRequirements")], [0, 1]],
-      ["buyerRequirements", ["BuyerRequirementsType", XSD::QName.new(NsEBLBaseComponents, "BuyerRequirements")], [0, 1]],
       ["bestOfferDetails", ["BestOfferDetailsType", XSD::QName.new(NsEBLBaseComponents, "BestOfferDetails")], [0, 1]],
       ["liveAuctionDetails", ["LiveAuctionDetailsType", XSD::QName.new(NsEBLBaseComponents, "LiveAuctionDetails")], [0, 1]],
       ["locationDefaulted", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocationDefaulted")], [0, 1]],
@@ -21139,7 +22595,6 @@ module DefaultMappingRegistry
       ["externalProductID", ["ExternalProductIDType", XSD::QName.new(NsEBLBaseComponents, "ExternalProductID")], [0, 1]],
       ["sellerInventoryID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SellerInventoryID")], [0, 1]],
       ["pictureDetails", ["PictureDetailsType", XSD::QName.new(NsEBLBaseComponents, "PictureDetails")], [0, 1]],
-      ["digitalDeliveryDetails", ["DigitalDeliveryDetailsType", XSD::QName.new(NsEBLBaseComponents, "DigitalDeliveryDetails")], [0, 1]],
       ["dispatchTimeMax", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "DispatchTimeMax")], [0, 1]],
       ["skypeEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SkypeEnabled")], [0, 1]],
       ["skypeID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SkypeID")], [0, 1]],
@@ -21147,9 +22602,7 @@ module DefaultMappingRegistry
       ["bestOfferEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferEnabled")], [0, 1]],
       ["localListing", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalListing")], [0, 1]],
       ["thirdPartyCheckoutIntegration", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ThirdPartyCheckoutIntegration")], [0, 1]],
-      ["expressOptOut", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ExpressOptOut")], [0, 1]],
       ["listingCheckoutRedirectPreference", ["ListingCheckoutRedirectPreferenceType", XSD::QName.new(NsEBLBaseComponents, "ListingCheckoutRedirectPreference")], [0, 1]],
-      ["expressDetails", ["ExpressDetailsType", XSD::QName.new(NsEBLBaseComponents, "ExpressDetails")], [0, 1]],
       ["sellerContactDetails", ["AddressType", XSD::QName.new(NsEBLBaseComponents, "SellerContactDetails")], [0, 1]],
       ["totalQuestionCount", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "TotalQuestionCount")], [0, 1]],
       ["proxyItem", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ProxyItem")], [0, 1]],
@@ -21166,7 +22619,39 @@ module DefaultMappingRegistry
       ["updateSellerInfo", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "UpdateSellerInfo")], [0, 1]],
       ["updateReturnPolicy", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "UpdateReturnPolicy")], [0, 1]],
       ["itemPolicyViolation", ["ItemPolicyViolationType", XSD::QName.new(NsEBLBaseComponents, "ItemPolicyViolation")], [0, 1]],
+      ["crossBorderTrade", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTrade")], [0, nil]],
+      ["businessSellerDetails", ["BusinessSellerDetailsType", XSD::QName.new(NsEBLBaseComponents, "BusinessSellerDetails")], [0, 1]],
+      ["buyerGuaranteePrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "BuyerGuaranteePrice")], [0, 1]],
+      ["buyerRequirementDetails", ["BuyerRequirementDetailsType", XSD::QName.new(NsEBLBaseComponents, "BuyerRequirementDetails")], [0, 1]],
+      ["returnPolicy", ["ReturnPolicyType", XSD::QName.new(NsEBLBaseComponents, "ReturnPolicy")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => ItemsCanceledEventType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ItemsCanceledEventType"),
+    :schema_basetype => XSD::QName.new(NsEBLBaseComponents, "AbstractResponseType"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["canceledItemIDArray", ["ItemIDArrayType", XSD::QName.new(NsEBLBaseComponents, "CanceledItemIDArray")], [0, 1]],
+      ["eligibleForRelist", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EligibleForRelist")], [0, 1]],
+      ["sellerID", [nil, XSD::QName.new(NsEBLBaseComponents, "SellerID")], [0, 1]]
     ]
   )
 
@@ -21235,8 +22720,6 @@ module DefaultMappingRegistry
       ["minimumBestOfferPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "MinimumBestOfferPrice")], [0, 1]],
       ["minimumBestOfferMessage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MinimumBestOfferMessage")], [0, 1]],
       ["localListingDistance", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LocalListingDistance")], [0, 1]],
-      ["expressListing", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ExpressListing")], [0, 1]],
-      ["expressItemRequirements", ["ExpressItemRequirementsType", XSD::QName.new(NsEBLBaseComponents, "ExpressItemRequirements")], [0, 1]],
       ["tCROriginalItemID", [nil, XSD::QName.new(NsEBLBaseComponents, "TCROriginalItemID")], [0, 1]],
       ["viewItemURLForNaturalSearch", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "ViewItemURLForNaturalSearch")], [0, 1]],
       ["payPerLeadEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPerLeadEnabled")], [0, 1]],
@@ -21274,6 +22757,23 @@ module DefaultMappingRegistry
     :schema_attribute => {
       XSD::QName.new(nil, "type") => "SOAP::SOAPToken"
     }
+  )
+
+  LiteralRegistry.register(
+    :class => ListingEnhancementDurationDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ListingEnhancementDurationDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => ListingEnhancementDurationReferenceType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ListingEnhancementDurationReferenceType"),
+    :schema_element => [
+      ["duration", ["SOAP::SOAPToken[]", XSD::QName.new(NsEBLBaseComponents, "Duration")], [0, nil]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
   )
 
   LiteralRegistry.register(
@@ -21406,8 +22906,96 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => LocalMarketAdFormatEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketAdFormatEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => LocalMarketAutoAcceptEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketAutoAcceptEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => LocalMarketAutoDeclineEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketAutoDeclineEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => LocalMarketBestOfferEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketBestOfferEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => LocalMarketCompanyNameEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketCompanyNameEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => LocalMarketContactByAddressEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByAddressEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => LocalMarketContactByEmailEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByEmailEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => LocalMarketContactByPhoneEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByPhoneEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => LocalMarketCounterOfferEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketCounterOfferEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => LocalMarketNonSubscriptionDefinitionType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketNonSubscriptionDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => LocalMarketPaymentMethodCheckOutEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketPaymentMethodCheckOutEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => LocalMarketPhoneCountDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketPhoneCountDefinitionType"),
     :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
@@ -21430,8 +23018,32 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => LocalMarketSellerContactDetailsEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketSellerContactDetailsEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => LocalMarketShippingMethodEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketShippingMethodEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => LocalMarketSpecialitySubscriptionDefinitionType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketSpecialitySubscriptionDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => LocalMarketStreetCountDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "LocalMarketStreetCountDefinitionType"),
     :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
@@ -21485,11 +23097,31 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => MaximumBuyerPolicyViolationsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "MaximumBuyerPolicyViolationsType"),
+    :schema_element => [
+      ["count", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "Count")], [0, 1]],
+      ["period", ["PeriodCodeType", XSD::QName.new(NsEBLBaseComponents, "Period")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => MaximumItemRequirementsType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "MaximumItemRequirementsType"),
     :schema_element => [
       ["maximumItemCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "MaximumItemCount")], [0, 1]],
       ["minimumFeedbackScore", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "MinimumFeedbackScore")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => MaximumUnpaidItemStrikesInfoType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "MaximumUnpaidItemStrikesInfoType"),
+    :schema_element => [
+      ["count", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "Count")], [0, 1]],
+      ["period", ["PeriodCodeType", XSD::QName.new(NsEBLBaseComponents, "Period")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
 
@@ -21597,6 +23229,14 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => MyMessagesExternalMessageIDArrayType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "MyMessagesExternalMessageIDArrayType"),
+    :schema_element => [
+      ["externalMessageID", ["[]", XSD::QName.new(NsEBLBaseComponents, "ExternalMessageID")], [0, nil]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => MyMessagesFolderSummaryType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "MyMessagesFolderSummaryType"),
     :schema_element => [
@@ -21667,6 +23307,10 @@ module DefaultMappingRegistry
       ["responseDetails", ["MyMessagesResponseDetailsType", XSD::QName.new(NsEBLBaseComponents, "ResponseDetails")], [0, 1]],
       ["forwardDetails", ["MyMessagesForwardDetailsType", XSD::QName.new(NsEBLBaseComponents, "ForwardDetails")], [0, 1]],
       ["folder", ["MyMessagesFolderType", XSD::QName.new(NsEBLBaseComponents, "Folder")], [0, 1]],
+      ["content", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Content")], [0, 1]],
+      ["messageType", ["MessageTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "MessageType")], [0, 1]],
+      ["listingStatus", ["ListingStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingStatus")], [0, 1]],
+      ["questionType", ["QuestionTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "QuestionType")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -21712,6 +23356,31 @@ module DefaultMappingRegistry
     :schema_element => [
       ["searchName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SearchName")], [0, 1]],
       ["searchQuery", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SearchQuery")], [0, 1]],
+      ["queryKeywords", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "QueryKeywords")], [0, 1]],
+      ["categoryID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CategoryID")], [0, 1]],
+      ["itemSort", ["SimpleItemSortCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemSort")], [0, 1]],
+      ["sortOrder", ["SortOrderCodeType", XSD::QName.new(NsEBLBaseComponents, "SortOrder")], [0, 1]],
+      ["endTimeFrom", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTimeFrom")], [0, 1]],
+      ["endTimeTo", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTimeTo")], [0, 1]],
+      ["maxDistance", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "MaxDistance")], [0, 1]],
+      ["postalCode", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PostalCode")], [0, 1]],
+      ["itemType", ["ItemTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemType")], [0, 1]],
+      ["priceMax", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "PriceMax")], [0, 1]],
+      ["priceMin", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "PriceMin")], [0, 1]],
+      ["currency", ["CurrencyCodeType", XSD::QName.new(NsEBLBaseComponents, "Currency")], [0, 1]],
+      ["bidCountMax", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "BidCountMax")], [0, 1]],
+      ["bidCountMin", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "BidCountMin")], [0, 1]],
+      ["searchFlag", ["SearchFlagCodeType[]", XSD::QName.new(NsEBLBaseComponents, "SearchFlag")], [0, nil]],
+      ["paymentMethod", ["PaymentMethodSearchCodeType", XSD::QName.new(NsEBLBaseComponents, "PaymentMethod")], [0, 1]],
+      ["preferredLocation", ["PreferredLocationCodeType", XSD::QName.new(NsEBLBaseComponents, "PreferredLocation")], [0, 1]],
+      ["sellerID", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "SellerID")], [0, nil]],
+      ["sellerIDExclude", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "SellerIDExclude")], [0, nil]],
+      ["itemsAvailableTo", ["CountryCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemsAvailableTo")], [0, 1]],
+      ["itemsLocatedIn", ["CountryCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemsLocatedIn")], [0, 1]],
+      ["sellerBusinessType", ["SellerBusinessCodeType", XSD::QName.new(NsEBLBaseComponents, "SellerBusinessType")], [0, 1]],
+      ["condition", ["ItemConditionCodeType", XSD::QName.new(NsEBLBaseComponents, "Condition")], [0, 1]],
+      ["quantity", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "Quantity")], [0, 1]],
+      ["quantityOperator", ["QuantityOperatorCodeType", XSD::QName.new(NsEBLBaseComponents, "QuantityOperator")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -21796,6 +23465,14 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => NonSubscriptionDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "NonSubscriptionDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => NotificationDetailsArrayType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "NotificationDetailsArrayType"),
     :schema_element => [
@@ -21816,6 +23493,7 @@ module DefaultMappingRegistry
       ["nextRetryTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "NextRetryTime")], [0, 1]],
       ["deliveryTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "DeliveryTime")], [0, 1]],
       ["errorMessage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorMessage")], [0, 1]],
+      ["deliveryURLName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "DeliveryURLName")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -21868,6 +23546,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["messageBody", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageBody")], [0, 1]],
       ["eIAS", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIAS")], [0, 1]]
@@ -21893,6 +23572,7 @@ module DefaultMappingRegistry
     :schema_element => [
       ["sMSSubscription", ["SMSSubscriptionType", XSD::QName.new(NsEBLBaseComponents, "SMSSubscription")], [0, 1]],
       ["summarySchedule", ["SummaryEventScheduleType[]", XSD::QName.new(NsEBLBaseComponents, "SummarySchedule")], [0, nil]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -21983,7 +23663,6 @@ module DefaultMappingRegistry
       ["subtotal", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "Subtotal")], [0, 1]],
       ["total", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "Total")], [0, 1]],
       ["externalTransaction", ["ExternalTransactionType[]", XSD::QName.new(NsEBLBaseComponents, "ExternalTransaction")], [0, nil]],
-      ["digitalDelivery", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DigitalDelivery")], [0, 1]],
       ["transactionArray", ["TransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "TransactionArray")], [0, 1]],
       ["buyerUserID", [nil, XSD::QName.new(NsEBLBaseComponents, "BuyerUserID")], [0, 1]],
       ["paidTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "PaidTime")], [0, 1]],
@@ -22040,6 +23719,30 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => PayPalBuyerProtectionEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PayPalBuyerProtectionEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => PayPalRequiredDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PayPalRequiredDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => PayPalRequiredForStoreOwnerDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PayPalRequiredForStoreOwnerDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => PaymentDetailsType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "PaymentDetailsType"),
     :schema_element => [
@@ -22068,6 +23771,7 @@ module DefaultMappingRegistry
       ["photoDisplay", ["PhotoDisplayCodeType", XSD::QName.new(NsEBLBaseComponents, "PhotoDisplay")], [0, 1]],
       ["pictureURL", ["SOAP::SOAPAnyURI[]", XSD::QName.new(NsEBLBaseComponents, "PictureURL")], [0, nil]],
       ["pictureSource", ["PictureSourceCodeType", XSD::QName.new(NsEBLBaseComponents, "PictureSource")], [0, 1]],
+      ["galleryDuration", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "GalleryDuration")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -22146,6 +23850,34 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => PolicyComplianceDashboardType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PolicyComplianceDashboardType"),
+    :schema_element => [
+      ["status", ["PolicyComplianceStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["alert", ["SellerDashboardAlertType[]", XSD::QName.new(NsEBLBaseComponents, "Alert")], [0, nil]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => PowerSellerDashboardType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PowerSellerDashboardType"),
+    :schema_element => [
+      ["level", ["SellerLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "Level")], [0, 1]],
+      ["alert", ["SellerDashboardAlertType[]", XSD::QName.new(NsEBLBaseComponents, "Alert")], [0, nil]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => PremiumSubscriptionDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PremiumSubscriptionDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => PriceRangeFilterType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "PriceRangeFilterType"),
     :schema_element => [
@@ -22201,14 +23933,6 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
-    :class => ProductArrayType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ProductArrayType"),
-    :schema_element => [
-      ["product", ["ExpressProductType[]", XSD::QName.new(NsEBLBaseComponents, "Product")], [0, nil]]
-    ]
-  )
-
-  LiteralRegistry.register(
     :class => ProductFamilyType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ProductFamilyType"),
     :schema_element => [
@@ -22237,7 +23961,8 @@ module DefaultMappingRegistry
     :schema_element => [
       ["averageStartPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "AverageStartPrice")], [0, 1]],
       ["averageSoldPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "AverageSoldPrice")], [0, 1]],
-      ["title", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Title")], [0, 1]]
+      ["title", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Title")], [0, 1]],
+      ["productState", ["ProductStateCodeType", XSD::QName.new(NsEBLBaseComponents, "ProductState")], [0, 1]]
     ],
     :schema_attribute => {
       XSD::QName.new(nil, "productInfoID") => "SOAP::SOAPString"
@@ -22462,6 +24187,16 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => RefundDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "RefundDetailsType"),
+    :schema_element => [
+      ["refundOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "RefundOption")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => RefundType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "RefundType"),
     :schema_element => [
@@ -22489,6 +24224,14 @@ module DefaultMappingRegistry
       ["regionOfOrigin", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RegionOfOrigin")], [0, 1]],
       ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
       ["status", ["StatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => RegularSubscriptionDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "RegularSubscriptionDefinitionType"),
+    :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -22566,6 +24309,75 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => ReturnPolicyDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReturnPolicyDetailsType"),
+    :schema_element => [
+      ["refund", ["RefundDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "Refund")], [0, nil]],
+      ["returnsWithin", ["ReturnsWithinDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ReturnsWithin")], [0, nil]],
+      ["returnsAccepted", ["ReturnsAcceptedDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ReturnsAccepted")], [0, nil]],
+      ["description", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["warrantyOffered", ["WarrantyOfferedDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "WarrantyOffered")], [0, nil]],
+      ["warrantyType", ["WarrantyTypeDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "WarrantyType")], [0, nil]],
+      ["warrantyDuration", ["WarrantyDurationDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "WarrantyDuration")], [0, nil]],
+      ["eAN", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EAN")], [0, 1]],
+      ["shippingCostPaidBy", ["ShippingCostPaidByDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingCostPaidBy")], [0, nil]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => ReturnPolicyEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReturnPolicyEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => ReturnPolicyType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReturnPolicyType"),
+    :schema_element => [
+      ["refundOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "RefundOption")], [0, 1]],
+      ["refund", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Refund")], [0, 1]],
+      ["returnsWithinOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "ReturnsWithinOption")], [0, 1]],
+      ["returnsWithin", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ReturnsWithin")], [0, 1]],
+      ["returnsAcceptedOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "ReturnsAcceptedOption")], [0, 1]],
+      ["returnsAccepted", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ReturnsAccepted")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["warrantyOfferedOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "WarrantyOfferedOption")], [0, 1]],
+      ["warrantyOffered", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "WarrantyOffered")], [0, 1]],
+      ["warrantyTypeOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "WarrantyTypeOption")], [0, 1]],
+      ["warrantyType", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "WarrantyType")], [0, 1]],
+      ["warrantyDurationOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "WarrantyDurationOption")], [0, 1]],
+      ["warrantyDuration", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "WarrantyDuration")], [0, 1]],
+      ["eAN", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EAN")], [0, 1]],
+      ["shippingCostPaidByOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "ShippingCostPaidByOption")], [0, 1]],
+      ["shippingCostPaidBy", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ShippingCostPaidBy")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => ReturnsAcceptedDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReturnsAcceptedDetailsType"),
+    :schema_element => [
+      ["returnsAcceptedOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "ReturnsAcceptedOption")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => ReturnsWithinDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReturnsWithinDetailsType"),
+    :schema_element => [
+      ["returnsWithinOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "ReturnsWithinOption")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => ReviewDetailsType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReviewDetailsType"),
     :schema_element => [
@@ -22585,6 +24397,22 @@ module DefaultMappingRegistry
       ["text", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Text")], [0, 1]],
       ["userID", [nil, XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]],
       ["creationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "CreationTime")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => RevisePriceAllowedDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "RevisePriceAllowedDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => ReviseQuantityAllowedDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReviseQuantityAllowedDefinitionType"),
+    :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -22748,6 +24576,15 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => SearchStandingDashboardType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SearchStandingDashboardType"),
+    :schema_element => [
+      ["status", ["SearchStandingStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => SearchStoreFilterType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "SearchStoreFilterType"),
     :schema_element => [
@@ -22758,9 +24595,29 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => SellerAccountDashboardType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerAccountDashboardType"),
+    :schema_element => [
+      ["status", ["SellerAccountStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["alert", ["SellerDashboardAlertType[]", XSD::QName.new(NsEBLBaseComponents, "Alert")], [0, nil]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => SellerContactDetailsEnabledDefinitionType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerContactDetailsEnabledDefinitionType"),
     :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => SellerDashboardAlertType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerDashboardAlertType"),
+    :schema_element => [
+      ["severity", ["SellerDashboardAlertSeverityCodeType", XSD::QName.new(NsEBLBaseComponents, "Severity")], [0, 1]],
+      ["text", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Text")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -22776,6 +24633,15 @@ module DefaultMappingRegistry
       ["minPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "MinPrice")], [0, 1]],
       ["maxPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "MaxPrice")], [0, 1]],
       ["favoriteItemID", ["[]", XSD::QName.new(NsEBLBaseComponents, "FavoriteItemID")], [0, nil]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => SellerFeeDiscountDashboardType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerFeeDiscountDashboardType"),
+    :schema_element => [
+      ["percent", ["SOAP::SOAPFloat", XSD::QName.new(NsEBLBaseComponents, "Percent")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -22817,6 +24683,32 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => SellerRatingSummaryArrayType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerRatingSummaryArrayType"),
+    :schema_element => [
+      ["averageRatingSummary", ["AverageRatingSummaryType[]", XSD::QName.new(NsEBLBaseComponents, "AverageRatingSummary")], [0, nil]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => SellerRoleMetricsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerRoleMetricsType"),
+    :schema_element => [
+      ["positiveFeedbackLeftCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PositiveFeedbackLeftCount")], [0, 1]],
+      ["negativeFeedbackLeftCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "NegativeFeedbackLeftCount")], [0, 1]],
+      ["neutralFeedbackLeftCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "NeutralFeedbackLeftCount")], [0, 1]],
+      ["feedbackLeftPercent", ["SOAP::SOAPFloat", XSD::QName.new(NsEBLBaseComponents, "FeedbackLeftPercent")], [0, 1]],
+      ["repeatBuyerCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "RepeatBuyerCount")], [0, 1]],
+      ["repeatBuyerPercent", ["SOAP::SOAPFloat", XSD::QName.new(NsEBLBaseComponents, "RepeatBuyerPercent")], [0, 1]],
+      ["uniqueBuyerCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueBuyerCount")], [0, 1]],
+      ["transactionPercent", ["SOAP::SOAPFloat", XSD::QName.new(NsEBLBaseComponents, "TransactionPercent")], [0, 1]],
+      ["crossBorderTransactionCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTransactionCount")], [0, 1]],
+      ["crossBorderTransactionPercent", ["SOAP::SOAPFloat", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTransactionPercent")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => SellerType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerType"),
     :schema_element => [
@@ -22837,14 +24729,14 @@ module DefaultMappingRegistry
       ["storeURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "StoreURL")], [0, 1]],
       ["sellerBusinessType", ["SellerBusinessCodeType", XSD::QName.new(NsEBLBaseComponents, "SellerBusinessType")], [0, 1]],
       ["registeredBusinessSeller", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "RegisteredBusinessSeller")], [0, 1]],
-      ["expressEligible", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ExpressEligible")], [0, 1]],
+      ["storeSite", ["SiteCodeType", XSD::QName.new(NsEBLBaseComponents, "StoreSite")], [0, 1]],
       ["paymentMethod", ["SellerPaymentMethodCodeType", XSD::QName.new(NsEBLBaseComponents, "PaymentMethod")], [0, 1]],
       ["proStoresPreference", ["ProStoresCheckoutPreferenceType", XSD::QName.new(NsEBLBaseComponents, "ProStoresPreference")], [0, 1]],
-      ["expressWallet", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ExpressWallet")], [0, 1]],
-      ["expressSellerRequirements", ["ExpressSellerRequirementsType", XSD::QName.new(NsEBLBaseComponents, "ExpressSellerRequirements")], [0, 1]],
       ["charityRegistered", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CharityRegistered")], [0, 1]],
       ["safePaymentExempt", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SafePaymentExempt")], [0, 1]],
       ["paisaPayEscrowEMIStatus", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PaisaPayEscrowEMIStatus")], [0, 1]],
+      ["charityAffiliationDetails", ["CharityAffiliationDetailsType", XSD::QName.new(NsEBLBaseComponents, "CharityAffiliationDetails")], [0, 1]],
+      ["transactionPercent", ["SOAP::SOAPFloat", XSD::QName.new(NsEBLBaseComponents, "TransactionPercent")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -22929,6 +24821,7 @@ module DefaultMappingRegistry
       ["refundGrantedTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "RefundGrantedTime")], [0, 1]],
       ["refundRequestedTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "RefundRequestedTime")], [0, 1]],
       ["status", ["ShipmentStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["shippedTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "ShippedTime")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -22940,6 +24833,16 @@ module DefaultMappingRegistry
       ["shippingCarrierID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrierID")], [0, 1]],
       ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
       ["shippingCarrier", ["ShippingCarrierCodeType", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrier")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => ShippingCostPaidByDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ShippingCostPaidByDetailsType"),
+    :schema_element => [
+      ["shippingCostPaidByOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "ShippingCostPaidByOption")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -23037,6 +24940,8 @@ module DefaultMappingRegistry
       ["surchargeApplicable", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SurchargeApplicable")], [0, 1]],
       ["shippingCarrier", ["ShippingCarrierCodeType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrier")], [0, nil]],
       ["cODService", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CODService")], [0, 1]],
+      ["deprecationDetails", ["AnnouncementMessageType[]", XSD::QName.new(NsEBLBaseComponents, "DeprecationDetails")], [0, nil]],
+      ["mappedToShippingServiceID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "MappedToShippingServiceID")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -23082,7 +24987,6 @@ module DefaultMappingRegistry
       ["valuePackEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ValuePackEnabled")], [0, 1]],
       ["proPackPlusEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ProPackPlusEnabled")], [0, 1]],
       ["adFormatEnabled", ["AdFormatEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "AdFormatEnabled")], [0, 1]],
-      ["digitalDeliveryEnabled", ["DigitalDeliveryEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "DigitalDeliveryEnabled")], [0, 1]],
       ["bestOfferCounterEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferCounterEnabled")], [0, 1]],
       ["bestOfferAutoDeclineEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoDeclineEnabled")], [0, 1]],
       ["localMarketSpecialitySubscription", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketSpecialitySubscription")], [0, 1]],
@@ -23114,6 +25018,60 @@ module DefaultMappingRegistry
       ["paisaPayFullEscrowEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PaisaPayFullEscrowEnabled")], [0, 1]],
       ["classifiedAdAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdAutoAcceptEnabled")], [0, 1]],
       ["bestOfferAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BestOfferAutoAcceptEnabled")], [0, 1]],
+      ["crossBorderTradeNorthAmericaEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeNorthAmericaEnabled")], [0, 1]],
+      ["crossBorderTradeGBEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeGBEnabled")], [0, 1]],
+      ["crossBorderTradeAustraliaEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CrossBorderTradeAustraliaEnabled")], [0, 1]],
+      ["payPalBuyerProtectionEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPalBuyerProtectionEnabled")], [0, 1]],
+      ["buyerGuaranteeEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BuyerGuaranteeEnabled")], [0, 1]],
+      ["iNEscrowWorkflowTimeline", ["INEscrowWorkflowTimelineCodeType", XSD::QName.new(NsEBLBaseComponents, "INEscrowWorkflowTimeline")], [0, 1]],
+      ["combinedFixedPriceTreatmentEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "CombinedFixedPriceTreatmentEnabled")], [0, 1]],
+      ["galleryFeaturedDurations", ["ListingEnhancementDurationReferenceType", XSD::QName.new(NsEBLBaseComponents, "GalleryFeaturedDurations")], [0, 1]],
+      ["payPalRequired", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPalRequired")], [0, 1]],
+      ["eBayMotorsProAdFormatEnabled", "AdFormatEnabledCodeType", [0, 1]],
+      ["eBayMotorsProContactByPhoneEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProPhoneCount", "SOAP::SOAPInt", [0, 1]],
+      ["eBayMotorsProContactByAddressEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProStreetCount", "SOAP::SOAPInt", [0, 1]],
+      ["eBayMotorsProCompanyNameEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProContactByEmailEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProBestOfferEnabled", "ClassifiedAdBestOfferEnabledCodeType", [0, 1]],
+      ["eBayMotorsProAutoAcceptEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProAutoDeclineEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProPaymentMethodCheckOutEnabled", "ClassifiedAdPaymentMethodEnabledCodeType", [0, 1]],
+      ["eBayMotorsProShippingMethodEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProCounterOfferEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["eBayMotorsProSellerContactDetailsEnabled", "SOAP::SOAPBoolean", [0, 1]],
+      ["localMarketAdFormatEnabled", ["AdFormatEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAdFormatEnabled")], [0, 1]],
+      ["localMarketContactByPhoneEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByPhoneEnabled")], [0, 1]],
+      ["localMarketPhoneCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "LocalMarketPhoneCount")], [0, 1]],
+      ["localMarketContactByAddressEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByAddressEnabled")], [0, 1]],
+      ["localMarketStreetCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "LocalMarketStreetCount")], [0, 1]],
+      ["localMarketCompanyNameEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketCompanyNameEnabled")], [0, 1]],
+      ["localMarketContactByEmailEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketContactByEmailEnabled")], [0, 1]],
+      ["localMarketBestOfferEnabled", ["ClassifiedAdBestOfferEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketBestOfferEnabled")], [0, 1]],
+      ["localMarketAutoAcceptEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAutoAcceptEnabled")], [0, 1]],
+      ["localMarketAutoDeclineEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketAutoDeclineEnabled")], [0, 1]],
+      ["localMarketPaymentMethodCheckOutEnabled", ["ClassifiedAdPaymentMethodEnabledCodeType", XSD::QName.new(NsEBLBaseComponents, "LocalMarketPaymentMethodCheckOutEnabled")], [0, 1]],
+      ["localMarketShippingMethodEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketShippingMethodEnabled")], [0, 1]],
+      ["localMarketCounterOfferEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketCounterOfferEnabled")], [0, 1]],
+      ["localMarketSellerContactDetailsEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "LocalMarketSellerContactDetailsEnabled")], [0, 1]],
+      ["classifiedAdPhoneCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdPhoneCount")], [0, 1]],
+      ["classifiedAdContactByAddressEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdContactByAddressEnabled")], [0, 1]],
+      ["classifiedAdStreetCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdStreetCount")], [0, 1]],
+      ["classifiedAdCompanyNameEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdCompanyNameEnabled")], [0, 1]],
+      ["specialitySubscription", ["GeographicExposureCodeType", XSD::QName.new(NsEBLBaseComponents, "SpecialitySubscription")], [0, 1]],
+      ["regularSubscription", ["GeographicExposureCodeType", XSD::QName.new(NsEBLBaseComponents, "RegularSubscription")], [0, 1]],
+      ["premiumSubscription", ["GeographicExposureCodeType", XSD::QName.new(NsEBLBaseComponents, "PremiumSubscription")], [0, 1]],
+      ["nonSubscription", ["GeographicExposureCodeType", XSD::QName.new(NsEBLBaseComponents, "NonSubscription")], [0, 1]],
+      ["payPalRequiredForStoreOwner", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPalRequiredForStoreOwner")], [0, 1]],
+      ["reviseQuantityAllowed", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ReviseQuantityAllowed")], [0, 1]],
+      ["revisePriceAllowed", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "RevisePriceAllowed")], [0, 1]],
+      ["storeOwnerExtendedListingDurationsEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurationsEnabled")], [0, 1]],
+      ["storeOwnerExtendedListingDurations", ["StoreOwnerExtendedListingDurationsType", XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurations")], [0, 1]],
+      ["returnPolicyEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ReturnPolicyEnabled")], [0, 1]],
+      ["handlingTimeEnabled", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HandlingTimeEnabled")], [0, 1]],
+      ["maxFlatShippingCost", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "MaxFlatShippingCost")], [0, 1]],
+      ["maxFlatShippingCostCBTExempt", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "MaxFlatShippingCostCBTExempt")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -23172,6 +25130,14 @@ module DefaultMappingRegistry
   LiteralRegistry.register(
     :class => SkypeMeTransactionalEnabledDefinitionType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "SkypeMeTransactionalEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => SpecialitySubscriptionDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SpecialitySubscriptionDefinitionType"),
     :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
@@ -23328,6 +25294,31 @@ module DefaultMappingRegistry
       ["logoID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "LogoID")], [0, 1]],
       ["name", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Name")], [0, 1]],
       ["uRL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "URL")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => StoreOwnerExtendedListingDurationsDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurationsDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => StoreOwnerExtendedListingDurationsEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurationsEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => StoreOwnerExtendedListingDurationsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "StoreOwnerExtendedListingDurationsType"),
+    :schema_element => [
+      ["duration", ["SOAP::SOAPToken[]", XSD::QName.new(NsEBLBaseComponents, "Duration")], [0, nil]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -23548,6 +25539,18 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => TokenStatusType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "TokenStatusType"),
+    :schema_element => [
+      ["status", ["TokenStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["expirationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "ExpirationTime")], [0, 1]],
+      ["revocationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "RevocationTime")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => TransactionArrayType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "TransactionArrayType"),
     :schema_element => [
@@ -23604,7 +25607,7 @@ module DefaultMappingRegistry
       ["feedbackReceived", ["FeedbackInfoType", XSD::QName.new(NsEBLBaseComponents, "FeedbackReceived")], [0, 1]],
       ["containingOrder", ["OrderType", XSD::QName.new(NsEBLBaseComponents, "ContainingOrder")], [0, 1]],
       ["finalValueFee", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "FinalValueFee")], [0, 1]],
-      ["transactionPlatform", ["TransactionPlatformType", XSD::QName.new(NsEBLBaseComponents, "TransactionPlatform")], [0, 1]],
+      ["transactionPlatform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "TransactionPlatform")], [0, 1]],
       ["listingCheckoutRedirectPreference", ["ListingCheckoutRedirectPreferenceType", XSD::QName.new(NsEBLBaseComponents, "ListingCheckoutRedirectPreference")], [0, 1]],
       ["refundArray", ["RefundArrayType", XSD::QName.new(NsEBLBaseComponents, "RefundArray")], [0, 1]],
       ["transactionSiteID", ["SiteCodeType", XSD::QName.new(NsEBLBaseComponents, "TransactionSiteID")], [0, 1]],
@@ -23613,6 +25616,7 @@ module DefaultMappingRegistry
       ["sellerContactBuyerByEmail", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "SellerContactBuyerByEmail")], [0, 1]],
       ["payPalEmailAddress", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PayPalEmailAddress")], [0, 1]],
       ["paisaPayID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PaisaPayID")], [0, 1]],
+      ["buyerGuaranteePrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "BuyerGuaranteePrice")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -23701,7 +25705,6 @@ module DefaultMappingRegistry
       ["buyerInfo", ["BuyerType", XSD::QName.new(NsEBLBaseComponents, "BuyerInfo")], [0, 1]],
       ["sellerInfo", ["SellerType", XSD::QName.new(NsEBLBaseComponents, "SellerInfo")], [0, 1]],
       ["charityAffiliations", ["CharityAffiliationsType", XSD::QName.new(NsEBLBaseComponents, "CharityAffiliations")], [0, 1]],
-      ["charitySeller", ["CharitySellerType", XSD::QName.new(NsEBLBaseComponents, "CharitySeller")], [0, 1]],
       ["payPalAccountLevel", ["PayPalAccountLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "PayPalAccountLevel")], [0, 1]],
       ["payPalAccountType", ["PayPalAccountTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "PayPalAccountType")], [0, 1]],
       ["payPalAccountStatus", ["PayPalAccountStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "PayPalAccountStatus")], [0, 1]],
@@ -23716,6 +25719,7 @@ module DefaultMappingRegistry
       ["biddingSummary", ["BiddingSummaryType", XSD::QName.new(NsEBLBaseComponents, "BiddingSummary")], [0, 1]],
       ["userAnonymized", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "UserAnonymized")], [0, 1]],
       ["uniqueNeutralFeedbackCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "UniqueNeutralFeedbackCount")], [0, 1]],
+      ["enterpriseSeller", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EnterpriseSeller")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -23727,6 +25731,8 @@ module DefaultMappingRegistry
       ["businessSeller", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BusinessSeller")], [0, 1]],
       ["restrictedToBusiness", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "RestrictedToBusiness")], [0, 1]],
       ["vATPercent", ["SOAP::SOAPFloat", XSD::QName.new(NsEBLBaseComponents, "VATPercent")], [0, 1]],
+      ["vATSite", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "VATSite")], [0, 1]],
+      ["vATID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "VATID")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -23839,6 +25845,36 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => WarrantyDurationDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WarrantyDurationDetailsType"),
+    :schema_element => [
+      ["warrantyDurationOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "WarrantyDurationOption")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => WarrantyOfferedDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WarrantyOfferedDetailsType"),
+    :schema_element => [
+      ["warrantyOfferedOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "WarrantyOfferedOption")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => WarrantyTypeDetailsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WarrantyTypeDetailsType"),
+    :schema_element => [
+      ["warrantyTypeOption", ["SOAP::SOAPToken", XSD::QName.new(NsEBLBaseComponents, "WarrantyTypeOption")], [0, 1]],
+      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => WishListEntryType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "WishListEntryType"),
     :schema_element => [
@@ -23853,28 +25889,124 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
-    :class => WishListType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WishListType"),
-    :schema_element => [
-      ["wishListID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "WishListID")], [0, 1]],
-      ["wishListURL", ["SOAP::SOAPAnyURI", XSD::QName.new(NsEBLBaseComponents, "WishListURL")], [0, 1]],
-      ["name", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Name")], [0, 1]],
-      ["description", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Description")], [0, 1]],
-      ["firstName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FirstName")], [0, 1]],
-      ["lastName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LastName")], [0, 1]],
-      ["userLocation", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "UserLocation")], [0, 1]],
-      ["wishListEntry", ["WishListEntryType[]", XSD::QName.new(NsEBLBaseComponents, "WishListEntry")], [0, nil]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  LiteralRegistry.register(
     :class => XSLFileType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "XSLFileType"),
     :schema_element => [
       ["fileName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FileName")], [0, 1]],
       ["fileVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FileVersion")], [0, 1]],
       ["fileContent", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FileContent")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => EBayMotorsProAdFormatEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProAdFormatEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => EBayMotorsProAutoAcceptEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProAutoAcceptEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => EBayMotorsProAutoDeclineEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProAutoDeclineEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => EBayMotorsProBestOfferEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProBestOfferEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => EBayMotorsProCompanyNameEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProCompanyNameEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => EBayMotorsProContactByAddressEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProContactByAddressEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => EBayMotorsProContactByEmailEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProContactByEmailEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => EBayMotorsProContactByPhoneEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProContactByPhoneEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => EBayMotorsProCounterOfferEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProCounterOfferEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => EBayMotorsProPaymentMethodCheckOutEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProPaymentMethodCheckOutEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => EBayMotorsProPhoneCountDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProPhoneCountDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => EBayMotorsProSellerContactDetailsEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProSellerContactDetailsEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => EBayMotorsProShippingMethodEnabledDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProShippingMethodEnabledDefinitionType"),
+    :schema_element => [
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => EBayMotorsProStreetCountDefinitionType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "eBayMotorsProStreetCountDefinitionType"),
+    :schema_element => [
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -24040,6 +26172,11 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => AnnouncementMessageCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "AnnouncementMessageCodeType")
+  )
+
+  LiteralRegistry.register(
     :class => ApplicationDeviceTypeCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ApplicationDeviceTypeCodeType")
   )
@@ -24047,6 +26184,11 @@ module DefaultMappingRegistry
   LiteralRegistry.register(
     :class => AuthTokenTypeCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "AuthTokenTypeCodeType")
+  )
+
+  LiteralRegistry.register(
+    :class => AutomatedLeaveFeedbackEventCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "AutomatedLeaveFeedbackEventCodeType")
   )
 
   LiteralRegistry.register(
@@ -24107,6 +26249,11 @@ module DefaultMappingRegistry
   LiteralRegistry.register(
     :class => BuyerProtectionSourceCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "BuyerProtectionSourceCodeType")
+  )
+
+  LiteralRegistry.register(
+    :class => BuyerSatisfactionStatusCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "BuyerSatisfactionStatusCodeType")
   )
 
   LiteralRegistry.register(
@@ -24195,11 +26342,6 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
-    :class => ConditionSelectionCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ConditionSelectionCodeType")
-  )
-
-  LiteralRegistry.register(
     :class => CountryCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "CountryCodeType")
   )
@@ -24245,16 +26387,6 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
-    :class => DigitalDeliveryEnabledCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "DigitalDeliveryEnabledCodeType")
-  )
-
-  LiteralRegistry.register(
-    :class => DigitalDeliveryMethodCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "DigitalDeliveryMethodCodeType")
-  )
-
-  LiteralRegistry.register(
     :class => DiscountCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "DiscountCodeType")
   )
@@ -24295,26 +26427,6 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
-    :class => ExpressDetailLevelCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ExpressDetailLevelCodeType")
-  )
-
-  LiteralRegistry.register(
-    :class => ExpressHistogramSortCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ExpressHistogramSortCodeType")
-  )
-
-  LiteralRegistry.register(
-    :class => ExpressItemSortCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ExpressItemSortCodeType")
-  )
-
-  LiteralRegistry.register(
-    :class => ExpressProductSortCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ExpressProductSortCodeType")
-  )
-
-  LiteralRegistry.register(
     :class => ExpressSellingPreferenceCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ExpressSellingPreferenceCodeType")
   )
@@ -24345,6 +26457,11 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => FeedbackSummaryPeriodCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "FeedbackSummaryPeriodCodeType")
+  )
+
+  LiteralRegistry.register(
     :class => FlatRateInsuranceRangeCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "FlatRateInsuranceRangeCodeType")
   )
@@ -24367,6 +26484,11 @@ module DefaultMappingRegistry
   LiteralRegistry.register(
     :class => GeneralPaymentMethodCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "GeneralPaymentMethodCodeType")
+  )
+
+  LiteralRegistry.register(
+    :class => GeographicExposureCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "GeographicExposureCodeType")
   )
 
   LiteralRegistry.register(
@@ -24395,6 +26517,11 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => INEscrowWorkflowTimelineCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "INEscrowWorkflowTimelineCodeType")
+  )
+
+  LiteralRegistry.register(
     :class => InsuranceOptionCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "InsuranceOptionCodeType")
   )
@@ -24402,6 +26529,11 @@ module DefaultMappingRegistry
   LiteralRegistry.register(
     :class => InsuranceSelectedCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "InsuranceSelectedCodeType")
+  )
+
+  LiteralRegistry.register(
+    :class => InventoryTrackingMethodCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "InventoryTrackingMethodCodeType")
   )
 
   LiteralRegistry.register(
@@ -24440,6 +26572,11 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => ItemTypeCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ItemTypeCodeType")
+  )
+
+  LiteralRegistry.register(
     :class => ItemTypeFilterCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ItemTypeFilterCodeType")
   )
@@ -24447,6 +26584,11 @@ module DefaultMappingRegistry
   LiteralRegistry.register(
     :class => ListingDurationCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ListingDurationCodeType")
+  )
+
+  LiteralRegistry.register(
+    :class => ListingEnhancementDurationCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ListingEnhancementDurationCodeType")
   )
 
   LiteralRegistry.register(
@@ -24605,6 +26747,11 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => PeriodCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PeriodCodeType")
+  )
+
+  LiteralRegistry.register(
     :class => PhotoDisplayCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "PhotoDisplayCodeType")
   )
@@ -24650,8 +26797,23 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => PolicyComplianceStatusCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PolicyComplianceStatusCodeType")
+  )
+
+  LiteralRegistry.register(
+    :class => PreferredLocationCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "PreferredLocationCodeType")
+  )
+
+  LiteralRegistry.register(
     :class => ProductSortCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ProductSortCodeType")
+  )
+
+  LiteralRegistry.register(
+    :class => ProductStateCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ProductStateCodeType")
   )
 
   LiteralRegistry.register(
@@ -24725,6 +26887,11 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => RefundOptionsCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "RefundOptionsCodeType")
+  )
+
+  LiteralRegistry.register(
     :class => RefundReasonCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "RefundReasonCodeType")
   )
@@ -24735,6 +26902,16 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => ReturnsAcceptedOptionsCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReturnsAcceptedOptionsCodeType")
+  )
+
+  LiteralRegistry.register(
+    :class => ReturnsWithinOptionsCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ReturnsWithinOptionsCodeType")
+  )
+
+  LiteralRegistry.register(
     :class => SMSSubscriptionErrorCodeCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "SMSSubscriptionErrorCodeCodeType")
   )
@@ -24742,6 +26919,11 @@ module DefaultMappingRegistry
   LiteralRegistry.register(
     :class => SMSSubscriptionUserStatusCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "SMSSubscriptionUserStatusCodeType")
+  )
+
+  LiteralRegistry.register(
+    :class => SearchFlagCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SearchFlagCodeType")
   )
 
   LiteralRegistry.register(
@@ -24760,6 +26942,11 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => SearchStandingStatusCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SearchStandingStatusCodeType")
+  )
+
+  LiteralRegistry.register(
     :class => SearchTypeCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "SearchTypeCodeType")
   )
@@ -24775,8 +26962,18 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => SellerAccountStatusCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerAccountStatusCodeType")
+  )
+
+  LiteralRegistry.register(
     :class => SellerBusinessCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerBusinessCodeType")
+  )
+
+  LiteralRegistry.register(
+    :class => SellerDashboardAlertSeverityCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SellerDashboardAlertSeverityCodeType")
   )
 
   LiteralRegistry.register(
@@ -24815,6 +27012,11 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => ShippingCostPaidByOptionsCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ShippingCostPaidByOptionsCodeType")
+  )
+
+  LiteralRegistry.register(
     :class => ShippingFeatureCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ShippingFeatureCodeType")
   )
@@ -24842,6 +27044,11 @@ module DefaultMappingRegistry
   LiteralRegistry.register(
     :class => ShippingTypeCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "ShippingTypeCodeType")
+  )
+
+  LiteralRegistry.register(
+    :class => SimpleItemSortCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "SimpleItemSortCodeType")
   )
 
   LiteralRegistry.register(
@@ -24960,6 +27167,11 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => TokenStatusCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "TokenStatusCodeType")
+  )
+
+  LiteralRegistry.register(
     :class => TradingRoleCodeType,
     :schema_type => XSD::QName.new(NsEBLBaseComponents, "TradingRoleCodeType")
   )
@@ -25010,13 +27222,23 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
-    :class => WirelessCarrierIDCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WirelessCarrierIDCodeType")
+    :class => WarrantyDurationOptionsCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WarrantyDurationOptionsCodeType")
   )
 
   LiteralRegistry.register(
-    :class => WishListSortCodeType,
-    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WishListSortCodeType")
+    :class => WarrantyOfferedCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WarrantyOfferedCodeType")
+  )
+
+  LiteralRegistry.register(
+    :class => WarrantyTypeOptionsCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WarrantyTypeOptionsCodeType")
+  )
+
+  LiteralRegistry.register(
+    :class => WirelessCarrierIDCodeType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "WirelessCarrierIDCodeType")
   )
 
   LiteralRegistry.register(
@@ -25071,6 +27293,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["disputeID", [nil, XSD::QName.new(NsEBLBaseComponents, "DisputeID")], [0, 1]]
     ]
@@ -25118,6 +27341,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -25159,6 +27383,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
@@ -25206,6 +27431,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["fees", ["FeesType", XSD::QName.new(NsEBLBaseComponents, "Fees")], [0, 1]],
@@ -25252,6 +27478,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -25294,6 +27521,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -25335,6 +27563,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["addMemberMessagesAAQToBidderResponseContainer", ["AddMemberMessagesAAQToBidderResponseContainerType[]", XSD::QName.new(NsEBLBaseComponents, "AddMemberMessagesAAQToBidderResponseContainer")], [0, nil]]
     ]
@@ -25377,6 +27606,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["orderID", [nil, XSD::QName.new(NsEBLBaseComponents, "OrderID")], [0, 1]],
       ["createdTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "CreatedTime")], [0, 1]]
@@ -25424,6 +27654,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
@@ -25469,6 +27700,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -25510,6 +27742,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["watchListCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "WatchListCount")], [0, 1]],
       ["watchListMaximum", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "WatchListMaximum")], [0, 1]]
@@ -25560,6 +27793,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
@@ -25607,6 +27841,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidderUpdateStatus", ["LiveAuctionApprovalStatusArrayType", XSD::QName.new(NsEBLBaseComponents, "BidderUpdateStatus")], [0, 1]]
     ]
@@ -25633,7 +27868,8 @@ module DefaultMappingRegistry
       ["shipped", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Shipped")], [0, 1]],
       ["paid", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Paid")], [0, 1]],
       ["listingType", ["ListingTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingType")], [0, 1]],
-      ["shipment", ["ShipmentType", XSD::QName.new(NsEBLBaseComponents, "Shipment")], [0, 1]]
+      ["shipment", ["ShipmentType", XSD::QName.new(NsEBLBaseComponents, "Shipment")], [0, 1]],
+      ["orderID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "OrderID")], [0, 1]]
     ]
   )
 
@@ -25655,7 +27891,51 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => ConfirmIdentityRequestType,
+    :schema_name => XSD::QName.new(NsEBLBaseComponents, "ConfirmIdentityRequest"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["sessionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SessionID")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => ConfirmIdentityResponseType,
+    :schema_name => XSD::QName.new(NsEBLBaseComponents, "ConfirmIdentityResponse"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["userID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]]
     ]
   )
 
@@ -25697,6 +27977,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -25740,6 +28021,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTime")], [0, 1]]
     ]
@@ -25761,6 +28043,7 @@ module DefaultMappingRegistry
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["secretID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SecretID")], [0, 1]],
+      ["sessionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SessionID")], [0, 1]],
       ["includeRESTToken", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeRESTToken")], [0, 1]]
     ]
   )
@@ -25783,6 +28066,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["eBayAuthToken", "SOAP::SOAPString", [0, 1]],
       ["hardExpirationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "HardExpirationTime")], [0, 1]],
@@ -25836,6 +28120,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["accountID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AccountID")], [0, 1]],
       ["accountSummary", ["AccountSummaryType", XSD::QName.new(NsEBLBaseComponents, "AccountSummary")], [0, 1]],
@@ -25865,7 +28150,9 @@ module DefaultMappingRegistry
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["status", ["MessageStatusTypeCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
-      ["includeMemberMessages", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeMemberMessages")], [0, 1]]
+      ["includeMemberMessages", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeMemberMessages")], [0, 1]],
+      ["startCreationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartCreationTime")], [0, 1]],
+      ["endCreationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndCreationTime")], [0, 1]]
     ]
   )
 
@@ -25887,6 +28174,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["adFormatLead", ["AdFormatLeadType[]", XSD::QName.new(NsEBLBaseComponents, "AdFormatLead")], [0, nil]],
       ["adFormatLeadCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "AdFormatLeadCount")], [0, 1]]
@@ -25932,6 +28220,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidArray", ["OfferArrayType", XSD::QName.new(NsEBLBaseComponents, "BidArray")], [0, 1]],
       ["highBidder", [nil, XSD::QName.new(NsEBLBaseComponents, "HighBidder")], [0, 1]],
@@ -25976,6 +28265,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["apiAccessRule", ["ApiAccessRuleType[]", XSD::QName.new(NsEBLBaseComponents, "ApiAccessRule")], [0, nil]]
     ]
@@ -25998,8 +28288,7 @@ module DefaultMappingRegistry
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AttributeSystemVersion")], [0, 1]],
       ["attributeSetID", ["SOAP::SOAPInt[]", XSD::QName.new(NsEBLBaseComponents, "AttributeSetID")], [0, nil]],
-      ["includeCategoryMappingDetails", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeCategoryMappingDetails")], [0, 1]],
-      ["digitalDelivery", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DigitalDelivery")], [0, 1]]
+      ["includeCategoryMappingDetails", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeCategoryMappingDetails")], [0, 1]]
     ]
   )
 
@@ -26021,6 +28310,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AttributeSystemVersion")], [0, 1]],
       ["attributeData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AttributeData")], [0, 1]]
@@ -26065,6 +28355,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["xSLFile", ["XSLFileType[]", XSD::QName.new(NsEBLBaseComponents, "XSLFile")], [0, nil]]
     ]
@@ -26109,6 +28400,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bestOfferArray", ["BestOfferArrayType", XSD::QName.new(NsEBLBaseComponents, "BestOfferArray")], [0, 1]],
       ["item", ["ItemType", XSD::QName.new(NsEBLBaseComponents, "Item")], [0, 1]]
@@ -26156,53 +28448,10 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidder", ["UserType", XSD::QName.new(NsEBLBaseComponents, "Bidder")], [0, 1]],
       ["bidItemArray", ["ItemArrayType", XSD::QName.new(NsEBLBaseComponents, "BidItemArray")], [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => GetCartRequestType,
-    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetCartRequest"),
-    :schema_element => [
-      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
-      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
-      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
-      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
-      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
-      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
-      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
-      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["affiliateTrackingDetails", ["AffiliateTrackingDetailsType", XSD::QName.new(NsEBLBaseComponents, "AffiliateTrackingDetails")], [0, 1]],
-      ["cartID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "CartID")], [0, 1]],
-      ["shippingAddress", ["AddressType", XSD::QName.new(NsEBLBaseComponents, "ShippingAddress")], [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => GetCartResponseType,
-    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetCartResponse"),
-    :schema_element => [
-      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
-      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
-      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
-      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
-      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
-      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
-      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
-      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
-      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
-      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
-      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
-      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["cart", ["CartType", XSD::QName.new(NsEBLBaseComponents, "Cart")], [0, 1]]
     ]
   )
 
@@ -26246,6 +28495,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["categoryArray", ["CategoryArrayType", XSD::QName.new(NsEBLBaseComponents, "CategoryArray")], [0, 1]],
       ["categoryCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CategoryCount")], [0, 1]],
@@ -26295,6 +28545,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["mappedCategoryArray", ["CategoryArrayType", XSD::QName.new(NsEBLBaseComponents, "MappedCategoryArray")], [0, 1]],
       ["unmappedCategoryArray", ["CategoryArrayType", XSD::QName.new(NsEBLBaseComponents, "UnmappedCategoryArray")], [0, 1]],
@@ -26343,6 +28594,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["categoryVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CategoryVersion")], [0, 1]],
       ["updateTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "UpdateTime")], [0, 1]],
@@ -26384,7 +28636,8 @@ module DefaultMappingRegistry
       ["includeFeedback", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeFeedback")], [0, 1]],
       ["localSearchPostalCode", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LocalSearchPostalCode")], [0, 1]],
       ["maxRelatedSearchKeywords", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "MaxRelatedSearchKeywords")], [0, 1]],
-      ["group", ["GroupType", XSD::QName.new(NsEBLBaseComponents, "Group")], [0, 1]]
+      ["group", ["GroupType", XSD::QName.new(NsEBLBaseComponents, "Group")], [0, 1]],
+      ["hideDuplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HideDuplicateItems")], [0, 1]]
     ]
   )
 
@@ -26406,6 +28659,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemArray", ["ItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemArray")], [0, 1]],
       ["category", ["CategoryType", XSD::QName.new(NsEBLBaseComponents, "Category")], [0, 1]],
@@ -26415,7 +28669,8 @@ module DefaultMappingRegistry
       ["hasMoreItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreItems")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["buyingGuideDetails", ["BuyingGuideDetailsType", XSD::QName.new(NsEBLBaseComponents, "BuyingGuideDetails")], [0, 1]],
-      ["relatedSearchKeywordArray", ["RelatedSearchKeywordArrayType", XSD::QName.new(NsEBLBaseComponents, "RelatedSearchKeywordArray")], [0, 1]]
+      ["relatedSearchKeywordArray", ["RelatedSearchKeywordArrayType", XSD::QName.new(NsEBLBaseComponents, "RelatedSearchKeywordArray")], [0, 1]],
+      ["duplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DuplicateItems")], [0, 1]]
     ]
   )
 
@@ -26456,6 +28711,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["categoryMapping", ["CategoryMappingType[]", XSD::QName.new(NsEBLBaseComponents, "CategoryMapping")], [0, nil]],
       ["categoryVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CategoryVersion")], [0, 1]]
@@ -26503,6 +28759,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["categoryItemSpecifics", ["CategoryItemSpecificsType[]", XSD::QName.new(NsEBLBaseComponents, "CategoryItemSpecifics")], [0, nil]]
     ]
@@ -26544,6 +28801,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["challengeToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ChallengeToken")], [0, 1]],
       ["imageChallengeURL", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ImageChallengeURL")], [0, 1]],
@@ -26572,7 +28830,8 @@ module DefaultMappingRegistry
       ["charityRegion", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CharityRegion")], [0, 1]],
       ["charityDomain", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CharityDomain")], [0, 1]],
       ["includeDescription", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeDescription")], [0, 1]],
-      ["matchType", ["StringMatchCodeType", XSD::QName.new(NsEBLBaseComponents, "MatchType")], [0, 1]]
+      ["matchType", ["StringMatchCodeType", XSD::QName.new(NsEBLBaseComponents, "MatchType")], [0, 1]],
+      ["featured", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "Featured")], [0, 1]]
     ]
   )
 
@@ -26594,8 +28853,52 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["charity", ["CharityInfoType[]", XSD::QName.new(NsEBLBaseComponents, "Charity")], [0, nil]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => GetClientAlertsAuthTokenRequestType,
+    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetClientAlertsAuthTokenRequest"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => GetClientAlertsAuthTokenResponseType,
+    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetClientAlertsAuthTokenResponse"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["clientAlertsAuthToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ClientAlertsAuthToken")], [0, 1]],
+      ["hardExpirationTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "HardExpirationTime")], [0, 1]]
     ]
   )
 
@@ -26638,6 +28941,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["contextSearchAsset", ["ContextSearchAssetType[]", XSD::QName.new(NsEBLBaseComponents, "ContextSearchAsset")], [0, nil]]
     ]
@@ -26682,6 +28986,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["crossPromotion", ["CrossPromotionsType", XSD::QName.new(NsEBLBaseComponents, "CrossPromotion")], [0, 1]]
     ]
@@ -26726,6 +29031,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["descriptionTemplate", ["DescriptionTemplateType[]", XSD::QName.new(NsEBLBaseComponents, "DescriptionTemplate")], [0, nil]],
       ["layoutTotal", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "LayoutTotal")], [0, 1]],
@@ -26773,56 +29079,9 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["dispute", ["DisputeType", XSD::QName.new(NsEBLBaseComponents, "Dispute")], [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => GetExpressWishListRequestType,
-    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetExpressWishListRequest"),
-    :schema_element => [
-      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
-      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
-      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
-      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
-      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
-      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
-      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
-      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["userID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]],
-      ["firstName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FirstName")], [0, 1]],
-      ["lastName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "LastName")], [0, 1]],
-      ["wishListID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "WishListID")], [0, 1]],
-      ["sortOrder", ["WishListSortCodeType", XSD::QName.new(NsEBLBaseComponents, "SortOrder")], [0, 1]],
-      ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => GetExpressWishListResponseType,
-    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetExpressWishListResponse"),
-    :schema_element => [
-      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
-      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
-      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
-      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
-      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
-      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
-      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
-      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
-      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
-      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
-      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
-      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["wishList", ["WishListType[]", XSD::QName.new(NsEBLBaseComponents, "WishList")], [0, nil]],
-      ["pagination", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]]
     ]
   )
 
@@ -26841,9 +29100,12 @@ module DefaultMappingRegistry
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]],
       ["userID", [nil, XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]],
-      ["feedbackID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FeedbackID")], [0, 1]]
+      ["feedbackID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FeedbackID")], [0, 1]],
+      ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
+      ["transactionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TransactionID")], [0, 1]],
+      ["commentType", ["CommentTypeCodeType[]", XSD::QName.new(NsEBLBaseComponents, "CommentType")], [0, nil]],
+      ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]]
     ]
   )
 
@@ -26865,11 +29127,15 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["feedbackDetailArray", ["FeedbackDetailArrayType", XSD::QName.new(NsEBLBaseComponents, "FeedbackDetailArray")], [0, 1]],
       ["feedbackDetailItemTotal", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "FeedbackDetailItemTotal")], [0, 1]],
       ["feedbackSummary", ["FeedbackSummaryType", XSD::QName.new(NsEBLBaseComponents, "FeedbackSummary")], [0, 1]],
-      ["feedbackScore", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "FeedbackScore")], [0, 1]]
+      ["feedbackScore", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "FeedbackScore")], [0, 1]],
+      ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
+      ["entriesPerPage", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "EntriesPerPage")], [0, 1]],
+      ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PageNumber")], [0, 1]]
     ]
   )
 
@@ -26910,6 +29176,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidArray", ["OfferArrayType", XSD::QName.new(NsEBLBaseComponents, "BidArray")], [0, 1]],
       ["listingStatus", ["ListingStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "ListingStatus")], [0, 1]]
@@ -26932,7 +29199,6 @@ module DefaultMappingRegistry
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
-      ["includeExpressRequirements", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeExpressRequirements")], [0, 1]],
       ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeWatchCount")], [0, 1]],
       ["includeCrossPromotion", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeCrossPromotion")], [0, 1]],
       ["includeItemSpecifics", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeItemSpecifics")], [0, 1]],
@@ -26958,6 +29224,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["item", ["ItemType", XSD::QName.new(NsEBLBaseComponents, "Item")], [0, 1]]
     ]
@@ -27000,6 +29267,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["getRecommendationsResponseContainer", ["GetRecommendationsResponseContainerType[]", XSD::QName.new(NsEBLBaseComponents, "GetRecommendationsResponseContainer")], [0, nil]]
     ]
@@ -27045,6 +29313,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["shippingDetails", ["ShippingDetailsType", XSD::QName.new(NsEBLBaseComponents, "ShippingDetails")], [0, 1]]
     ]
@@ -27095,6 +29364,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMoreTransactions", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreTransactions")], [0, 1]],
@@ -27145,6 +29415,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemsAwaitingFeedback", ["PaginatedTransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemsAwaitingFeedback")], [0, 1]]
     ]
@@ -27189,6 +29460,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidderDetails", ["BidderDetailArrayType", XSD::QName.new(NsEBLBaseComponents, "BidderDetails")], [0, 1]],
       ["totalPending", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "TotalPending")], [0, 1]],
@@ -27235,6 +29507,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["liveAuctionCatalog", ["LiveAuctionCatalogType[]", XSD::QName.new(NsEBLBaseComponents, "LiveAuctionCatalog")], [0, nil]]
     ]
@@ -27285,6 +29558,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["memberMessage", ["MemberMessageExchangeArrayType", XSD::QName.new(NsEBLBaseComponents, "MemberMessage")], [0, 1]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
@@ -27330,6 +29604,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["aSQPreferences", ["ASQPreferencesType", XSD::QName.new(NsEBLBaseComponents, "ASQPreferences")], [0, 1]]
     ]
@@ -27354,7 +29629,8 @@ module DefaultMappingRegistry
       ["messageIDs", ["MyMessagesMessageIDArrayType", XSD::QName.new(NsEBLBaseComponents, "MessageIDs")], [0, 1]],
       ["folderID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "FolderID")], [0, 1]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
-      ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTime")], [0, 1]]
+      ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTime")], [0, 1]],
+      ["externalMessageIDs", ["MyMessagesExternalMessageIDArrayType", XSD::QName.new(NsEBLBaseComponents, "ExternalMessageIDs")], [0, 1]]
     ]
   )
 
@@ -27376,6 +29652,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["summary", ["MyMessagesSummaryType", XSD::QName.new(NsEBLBaseComponents, "Summary")], [0, 1]],
       ["alerts", ["MyMessagesAlertArrayType", XSD::QName.new(NsEBLBaseComponents, "Alerts")], [0, 1]],
@@ -27406,7 +29683,9 @@ module DefaultMappingRegistry
       ["favoriteSearches", ["MyeBaySelectionType", XSD::QName.new(NsEBLBaseComponents, "FavoriteSearches")], [0, 1]],
       ["favoriteSellers", ["MyeBaySelectionType", XSD::QName.new(NsEBLBaseComponents, "FavoriteSellers")], [0, 1]],
       ["secondChanceOffer", ["MyeBaySelectionType", XSD::QName.new(NsEBLBaseComponents, "SecondChanceOffer")], [0, 1]],
-      ["bidAssistantList", ["BidAssistantListType", XSD::QName.new(NsEBLBaseComponents, "BidAssistantList")], [0, 1]]
+      ["bidAssistantList", ["BidAssistantListType", XSD::QName.new(NsEBLBaseComponents, "BidAssistantList")], [0, 1]],
+      ["deletedFromWonList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromWonList")], [0, 1]],
+      ["deletedFromLostList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromLostList")], [0, 1]]
     ]
   )
 
@@ -27428,6 +29707,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["buyingSummary", ["BuyingSummaryType", XSD::QName.new(NsEBLBaseComponents, "BuyingSummary")], [0, 1]],
       ["watchList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "WatchList")], [0, 1]],
@@ -27438,7 +29718,9 @@ module DefaultMappingRegistry
       ["favoriteSearches", ["MyeBayFavoriteSearchListType", XSD::QName.new(NsEBLBaseComponents, "FavoriteSearches")], [0, 1]],
       ["favoriteSellers", ["MyeBayFavoriteSellerListType", XSD::QName.new(NsEBLBaseComponents, "FavoriteSellers")], [0, 1]],
       ["secondChanceOffer", ["ItemType[]", XSD::QName.new(NsEBLBaseComponents, "SecondChanceOffer")], [0, nil]],
-      ["bidAssistantList", ["BidGroupArrayType", XSD::QName.new(NsEBLBaseComponents, "BidAssistantList")], [0, 1]]
+      ["bidAssistantList", ["BidGroupArrayType", XSD::QName.new(NsEBLBaseComponents, "BidAssistantList")], [0, 1]],
+      ["deletedFromWonList", ["PaginatedOrderTransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromWonList")], [0, 1]],
+      ["deletedFromLostList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromLostList")], [0, 1]]
     ]
   )
 
@@ -27480,6 +29762,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["buyingReminders", ["RemindersType", XSD::QName.new(NsEBLBaseComponents, "BuyingReminders")], [0, 1]],
       ["sellingReminders", ["RemindersType", XSD::QName.new(NsEBLBaseComponents, "SellingReminders")], [0, 1]]
@@ -27504,7 +29787,10 @@ module DefaultMappingRegistry
       ["scheduledList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "ScheduledList")], [0, 1]],
       ["activeList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "ActiveList")], [0, 1]],
       ["soldList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "SoldList")], [0, 1]],
-      ["unsoldList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "UnsoldList")], [0, 1]]
+      ["unsoldList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "UnsoldList")], [0, 1]],
+      ["bidList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "BidList")], [0, 1]],
+      ["deletedFromSoldList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromSoldList")], [0, 1]],
+      ["deletedFromUnsoldList", ["ItemListCustomizationType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromUnsoldList")], [0, 1]]
     ]
   )
 
@@ -27526,13 +29812,17 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["sellingSummary", ["SellingSummaryType", XSD::QName.new(NsEBLBaseComponents, "SellingSummary")], [0, 1]],
       ["scheduledList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ScheduledList")], [0, 1]],
       ["activeList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ActiveList")], [0, 1]],
       ["soldList", ["PaginatedOrderTransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "SoldList")], [0, 1]],
       ["unsoldList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "UnsoldList")], [0, 1]],
-      ["summary", ["MyeBaySellingSummaryType", XSD::QName.new(NsEBLBaseComponents, "Summary")], [0, 1]]
+      ["summary", ["MyeBaySellingSummaryType", XSD::QName.new(NsEBLBaseComponents, "Summary")], [0, 1]],
+      ["bidList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "BidList")], [0, 1]],
+      ["deletedFromSoldList", ["PaginatedOrderTransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromSoldList")], [0, 1]],
+      ["deletedFromUnsoldList", ["PaginatedItemArrayType", XSD::QName.new(NsEBLBaseComponents, "DeletedFromUnsoldList")], [0, 1]]
     ]
   )
 
@@ -27573,8 +29863,10 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["applicationDeliveryPreferences", ["ApplicationDeliveryPreferencesType", XSD::QName.new(NsEBLBaseComponents, "ApplicationDeliveryPreferences")], [0, 1]],
+      ["deliveryURLName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "DeliveryURLName")], [0, 1]],
       ["userDeliveryPreferenceArray", ["NotificationEnableArrayType", XSD::QName.new(NsEBLBaseComponents, "UserDeliveryPreferenceArray")], [0, 1]],
       ["userData", ["NotificationUserDataType", XSD::QName.new(NsEBLBaseComponents, "UserData")], [0, 1]],
       ["eventProperty", ["NotificationEventPropertyType[]", XSD::QName.new(NsEBLBaseComponents, "EventProperty")], [0, nil]]
@@ -27620,6 +29912,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
       ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTime")], [0, 1]],
@@ -27646,7 +29939,8 @@ module DefaultMappingRegistry
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemTransactionIDArray", ["ItemTransactionIDArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemTransactionIDArray")], [0, 1]],
       ["orderIDArray", ["OrderIDArrayType", XSD::QName.new(NsEBLBaseComponents, "OrderIDArray")], [0, 1]],
-      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]]
+      ["platform", ["TransactionPlatformCodeType", XSD::QName.new(NsEBLBaseComponents, "Platform")], [0, 1]],
+      ["includeFinalValueFees", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeFinalValueFees")], [0, 1]]
     ]
   )
 
@@ -27668,6 +29962,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["orderArray", ["OrderArrayType", XSD::QName.new(NsEBLBaseComponents, "OrderArray")], [0, 1]]
     ]
@@ -27716,6 +30011,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMoreOrders", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreOrders")], [0, 1]],
@@ -27765,6 +30061,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["pictureManagerDetails", ["PictureManagerDetailsType", XSD::QName.new(NsEBLBaseComponents, "PictureManagerDetails")], [0, 1]]
     ]
@@ -27806,6 +30103,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["subscription", ["PictureManagerSubscriptionType[]", XSD::QName.new(NsEBLBaseComponents, "Subscription")], [0, nil]],
       ["pictureType", ["PictureManagerPictureDisplayType[]", XSD::QName.new(NsEBLBaseComponents, "PictureType")], [0, nil]]
@@ -27852,6 +30150,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["categoryArray", ["CategoryArrayType", XSD::QName.new(NsEBLBaseComponents, "CategoryArray")], [0, 1]],
@@ -27896,6 +30195,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["dataElementSets", ["DataElementSetType[]", XSD::QName.new(NsEBLBaseComponents, "DataElementSets")], [0, nil]],
       ["productSearchResult", ["ProductSearchResultType[]", XSD::QName.new(NsEBLBaseComponents, "ProductSearchResult")], [0, nil]]
@@ -27940,6 +30240,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AttributeSystemVersion")], [0, 1]],
       ["productFinderData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ProductFinderData")], [0, 1]]
@@ -27984,6 +30285,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["xSLFile", ["XSLFileType[]", XSD::QName.new(NsEBLBaseComponents, "XSLFile")], [0, nil]]
     ]
@@ -28027,6 +30329,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["attributeSystemVersion", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AttributeSystemVersion")], [0, 1]],
       ["productSearchPage", ["ProductSearchPageType[]", XSD::QName.new(NsEBLBaseComponents, "ProductSearchPage")], [0, nil]]
@@ -28070,6 +30373,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["dataElementSets", ["DataElementSetType[]", XSD::QName.new(NsEBLBaseComponents, "DataElementSets")], [0, nil]],
       ["productSearchResult", ["ProductSearchResultType[]", XSD::QName.new(NsEBLBaseComponents, "ProductSearchResult")], [0, nil]]
@@ -28114,6 +30418,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["productSellingPagesData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ProductSellingPagesData")], [0, 1]]
     ]
@@ -28140,7 +30445,8 @@ module DefaultMappingRegistry
       ["includeReviewDetails", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeReviewDetails")], [0, 1]],
       ["includeBuyingGuideDetails", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeBuyingGuideDetails")], [0, 1]],
       ["includeHistogram", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeHistogram")], [0, 1]],
-      ["affiliateTrackingDetails", ["AffiliateTrackingDetailsType", XSD::QName.new(NsEBLBaseComponents, "AffiliateTrackingDetails")], [0, 1]]
+      ["affiliateTrackingDetails", ["AffiliateTrackingDetailsType", XSD::QName.new(NsEBLBaseComponents, "AffiliateTrackingDetails")], [0, 1]],
+      ["hideDuplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HideDuplicateItems")], [0, 1]]
     ]
   )
 
@@ -28162,6 +30468,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["characteristicsSetProductHistogram", ["CharacteristicsSetProductHistogramType", XSD::QName.new(NsEBLBaseComponents, "CharacteristicsSetProductHistogram")], [0, 1]],
       ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PageNumber")], [0, 1]],
@@ -28170,7 +30477,8 @@ module DefaultMappingRegistry
       ["totalProducts", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "TotalProducts")], [0, 1]],
       ["product", ["CatalogProductType[]", XSD::QName.new(NsEBLBaseComponents, "Product")], [0, nil]],
       ["itemArray", ["ItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemArray")], [0, 1]],
-      ["buyingGuideDetails", ["BuyingGuideDetailsType", XSD::QName.new(NsEBLBaseComponents, "BuyingGuideDetails")], [0, 1]]
+      ["buyingGuideDetails", ["BuyingGuideDetailsType", XSD::QName.new(NsEBLBaseComponents, "BuyingGuideDetails")], [0, 1]],
+      ["duplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DuplicateItems")], [0, 1]]
     ]
   )
 
@@ -28213,6 +30521,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["promotionRuleArray", ["PromotionRuleArrayType", XSD::QName.new(NsEBLBaseComponents, "PromotionRuleArray")], [0, 1]]
     ]
@@ -28255,92 +30564,9 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["promotionalSaleDetails", ["PromotionalSaleArrayType", XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleDetails")], [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => GetReturnURLRequestType,
-    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetReturnURLRequest"),
-    :schema_element => [
-      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
-      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
-      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
-      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
-      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
-      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
-      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
-      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => GetReturnURLResponseType,
-    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetReturnURLResponse"),
-    :schema_element => [
-      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
-      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
-      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
-      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
-      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
-      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
-      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
-      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
-      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
-      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
-      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
-      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["applicationDisplayName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ApplicationDisplayName")], [0, 1]],
-      ["authenticationEntryArray", ["AuthenticationEntryArrayType", XSD::QName.new(NsEBLBaseComponents, "AuthenticationEntryArray")], [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => GetRuNameRequestType,
-    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetRuNameRequest"),
-    :schema_element => [
-      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
-      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
-      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
-      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
-      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
-      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
-      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
-      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["clientUseCase", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ClientUseCase")], [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => GetRuNameResponseType,
-    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetRuNameResponse"),
-    :schema_element => [
-      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
-      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
-      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
-      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
-      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
-      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
-      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
-      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
-      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
-      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
-      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
-      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["ruName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RuName")], [0, 1]]
     ]
   )
 
@@ -28390,7 +30616,6 @@ module DefaultMappingRegistry
       ["quantity", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "Quantity")], [0, 1]],
       ["quantityOperator", ["QuantityOperatorCodeType", XSD::QName.new(NsEBLBaseComponents, "QuantityOperator")], [0, 1]],
       ["sellerBusinessType", ["SellerBusinessCodeType", XSD::QName.new(NsEBLBaseComponents, "SellerBusinessType")], [0, 1]],
-      ["digitalDelivery", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DigitalDelivery")], [0, 1]],
       ["includeCondition", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeCondition")], [0, 1]],
       ["includeFeedback", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeFeedback")], [0, 1]],
       ["charityID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CharityID")], [0, 1]],
@@ -28400,7 +30625,8 @@ module DefaultMappingRegistry
       ["bidRange", ["BidRangeType", XSD::QName.new(NsEBLBaseComponents, "BidRange")], [0, 1]],
       ["itemCondition", ["ItemConditionCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemCondition")], [0, 1]],
       ["ticketFinder", ["TicketDetailsType", XSD::QName.new(NsEBLBaseComponents, "TicketFinder")], [0, 1]],
-      ["group", ["GroupType", XSD::QName.new(NsEBLBaseComponents, "Group")], [0, 1]]
+      ["group", ["GroupType", XSD::QName.new(NsEBLBaseComponents, "Group")], [0, 1]],
+      ["hideDuplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HideDuplicateItems")], [0, 1]]
     ]
   )
 
@@ -28422,6 +30648,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["searchResultItemArray", ["SearchResultItemArrayType", XSD::QName.new(NsEBLBaseComponents, "SearchResultItemArray")], [0, 1]],
       ["itemsPerPage", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ItemsPerPage")], [0, 1]],
@@ -28435,13 +30662,14 @@ module DefaultMappingRegistry
       ["filterRemovedExpansionArray", ["ExpansionArrayType", XSD::QName.new(NsEBLBaseComponents, "FilterRemovedExpansionArray")], [0, 1]],
       ["allCategoriesExpansionArray", ["ExpansionArrayType", XSD::QName.new(NsEBLBaseComponents, "AllCategoriesExpansionArray")], [0, 1]],
       ["spellingSuggestion", ["SpellingSuggestionType", XSD::QName.new(NsEBLBaseComponents, "SpellingSuggestion")], [0, 1]],
-      ["relatedSearchKeywordArray", ["RelatedSearchKeywordArrayType", XSD::QName.new(NsEBLBaseComponents, "RelatedSearchKeywordArray")], [0, 1]]
+      ["relatedSearchKeywordArray", ["RelatedSearchKeywordArrayType", XSD::QName.new(NsEBLBaseComponents, "RelatedSearchKeywordArray")], [0, 1]],
+      ["duplicateItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "DuplicateItems")], [0, 1]]
     ]
   )
 
   LiteralRegistry.register(
-    :class => GetSearchResultsExpressRequestType,
-    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetSearchResultsExpressRequest"),
+    :class => GetSellerDashboardRequestType,
+    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetSellerDashboardRequest"),
     :schema_element => [
       ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
       ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
@@ -28453,34 +30681,13 @@ module DefaultMappingRegistry
       ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["query", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Query")], [0, 1]],
-      ["externalProductIDType", ["ExternalProductCodeType", XSD::QName.new(NsEBLBaseComponents, "ExternalProductIDType")], [0, 1]],
-      ["externalProductIDValue", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalProductIDValue")], [0, 1]],
-      ["productReferenceID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "ProductReferenceID")], [0, 1]],
-      ["departmentName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "DepartmentName")], [0, 1]],
-      ["aisleName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AisleName")], [0, 1]],
-      ["productTypeName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ProductTypeName")], [0, 1]],
-      ["histogramSort", ["ExpressHistogramSortCodeType", XSD::QName.new(NsEBLBaseComponents, "HistogramSort")], [0, 1]],
-      ["itemSort", ["ExpressItemSortCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemSort")], [0, 1]],
-      ["productSort", ["ExpressProductSortCodeType", XSD::QName.new(NsEBLBaseComponents, "ProductSort")], [0, 1]],
-      ["highestPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "HighestPrice")], [0, 1]],
-      ["lowestPrice", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "LowestPrice")], [0, 1]],
-      ["condition", ["ConditionSelectionCodeType", XSD::QName.new(NsEBLBaseComponents, "Condition")], [0, 1]],
-      ["sellerID", [nil, XSD::QName.new(NsEBLBaseComponents, "SellerID")], [0, 1]],
-      ["postalCode", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "PostalCode")], [0, 1]],
-      ["histogramDetails", ["ExpressDetailLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "HistogramDetails")], [0, 1]],
-      ["productDetails", ["ExpressDetailLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "ProductDetails")], [0, 1]],
-      ["itemDetails", ["ExpressDetailLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "ItemDetails")], [0, 1]],
-      ["entriesPerPage", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "EntriesPerPage")], [0, 1]],
-      ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PageNumber")], [0, 1]],
-      ["affiliateTrackingDetails", ["AffiliateTrackingDetailsType", XSD::QName.new(NsEBLBaseComponents, "AffiliateTrackingDetails")], [0, 1]]
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
 
   LiteralRegistry.register(
-    :class => GetSearchResultsExpressResponseType,
-    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetSearchResultsExpressResponse"),
+    :class => GetSellerDashboardResponseType,
+    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetSellerDashboardResponse"),
     :schema_element => [
       ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
       ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
@@ -28496,13 +30703,14 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["histogram", ["DomainHistogramType", XSD::QName.new(NsEBLBaseComponents, "Histogram")], [0, 1]],
-      ["itemArray", ["ItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemArray")], [0, 1]],
-      ["productArray", ["ProductArrayType", XSD::QName.new(NsEBLBaseComponents, "ProductArray")], [0, 1]],
-      ["entriesPerPage", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "EntriesPerPage")], [0, 1]],
-      ["pageNumber", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PageNumber")], [0, 1]],
-      ["hasMoreEntries", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreEntries")]]
+      ["searchStanding", ["SearchStandingDashboardType", XSD::QName.new(NsEBLBaseComponents, "SearchStanding")], [0, 1]],
+      ["sellerFeeDiscount", ["SellerFeeDiscountDashboardType", XSD::QName.new(NsEBLBaseComponents, "SellerFeeDiscount")], [0, 1]],
+      ["powerSellerStatus", ["PowerSellerDashboardType", XSD::QName.new(NsEBLBaseComponents, "PowerSellerStatus")], [0, 1]],
+      ["policyCompliance", ["PolicyComplianceDashboardType", XSD::QName.new(NsEBLBaseComponents, "PolicyCompliance")], [0, 1]],
+      ["buyerSatisfaction", ["BuyerSatisfactionDashboardType", XSD::QName.new(NsEBLBaseComponents, "BuyerSatisfaction")], [0, 1]],
+      ["sellerAccount", ["SellerAccountDashboardType", XSD::QName.new(NsEBLBaseComponents, "SellerAccount")], [0, 1]]
     ]
   )
 
@@ -28551,6 +30759,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["timeTo", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "TimeTo")], [0, 1]],
       ["itemArray", ["ItemArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemArray")], [0, 1]]
@@ -28582,7 +30791,9 @@ module DefaultMappingRegistry
       ["pagination", ["PaginationType", XSD::QName.new(NsEBLBaseComponents, "Pagination")], [0, 1]],
       ["granularityLevel", ["GranularityLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "GranularityLevel")], [0, 1]],
       ["sKUArray", ["SKUArrayType", XSD::QName.new(NsEBLBaseComponents, "SKUArray")], [0, 1]],
-      ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeWatchCount")], [0, 1]]
+      ["includeWatchCount", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IncludeWatchCount")], [0, 1]],
+      ["adminEndedItemsOnly", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "AdminEndedItemsOnly")], [0, 1]],
+      ["categoryID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CategoryID")], [0, 1]]
     ]
   )
 
@@ -28604,6 +30815,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMoreItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreItems")], [0, 1]],
@@ -28655,6 +30867,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMorePayments", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMorePayments")], [0, 1]],
@@ -28709,6 +30922,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMoreTransactions", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreTransactions")], [0, 1]],
@@ -28718,6 +30932,49 @@ module DefaultMappingRegistry
       ["seller", ["UserType", XSD::QName.new(NsEBLBaseComponents, "Seller")], [0, 1]],
       ["transactionArray", ["TransactionArrayType", XSD::QName.new(NsEBLBaseComponents, "TransactionArray")], [0, 1]],
       ["payPalPreferred", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "PayPalPreferred")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => GetSessionIDRequestType,
+    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetSessionIDRequest"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["ruName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RuName")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => GetSessionIDResponseType,
+    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetSessionIDResponse"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["sessionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "SessionID")], [0, 1]]
     ]
   )
 
@@ -28757,6 +31014,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["currencyID", ["CurrencyCodeType", XSD::QName.new(NsEBLBaseComponents, "CurrencyID")], [0, 1]],
       ["flatShippingDiscount", ["FlatShippingDiscountType", XSD::QName.new(NsEBLBaseComponents, "FlatShippingDiscount")], [0, 1]],
@@ -28810,6 +31068,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["store", ["StoreType", XSD::QName.new(NsEBLBaseComponents, "Store")], [0, 1]]
     ]
@@ -28852,6 +31111,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["status", ["TaskStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]]
     ]
@@ -28894,6 +31154,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["customPageArray", ["StoreCustomPageArrayType", XSD::QName.new(NsEBLBaseComponents, "CustomPageArray")], [0, 1]]
     ]
@@ -28935,6 +31196,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["basicThemeArray", ["StoreThemeArrayType", XSD::QName.new(NsEBLBaseComponents, "BasicThemeArray")], [0, 1]],
       ["advancedThemeArray", ["StoreThemeArrayType", XSD::QName.new(NsEBLBaseComponents, "AdvancedThemeArray")], [0, 1]],
@@ -28981,6 +31243,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["storePreferences", ["StorePreferencesType", XSD::QName.new(NsEBLBaseComponents, "StorePreferences")], [0, 1]]
     ]
@@ -29023,6 +31286,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["suggestedCategoryArray", ["SuggestedCategoryArrayType", XSD::QName.new(NsEBLBaseComponents, "SuggestedCategoryArray")], [0, 1]],
       ["categoryCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "CategoryCount")], [0, 1]]
@@ -29065,9 +31329,52 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["lastUpdateTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "LastUpdateTime")], [0, 1]],
       ["taxTable", ["TaxTableType", XSD::QName.new(NsEBLBaseComponents, "TaxTable")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => GetTokenStatusRequestType,
+    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetTokenStatusRequest"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => GetTokenStatusResponseType,
+    :schema_name => XSD::QName.new(NsEBLBaseComponents, "GetTokenStatusResponse"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["tokenStatus", ["TokenStatusType", XSD::QName.new(NsEBLBaseComponents, "TokenStatus")], [0, 1]]
     ]
   )
 
@@ -29110,6 +31417,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["user", ["UserType", XSD::QName.new(NsEBLBaseComponents, "User")], [0, 1]]
     ]
@@ -29154,6 +31462,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["userID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "UserID")], [0, 1]],
       ["contactAddress", ["AddressType", XSD::QName.new(NsEBLBaseComponents, "ContactAddress")], [0, 1]],
@@ -29202,6 +31511,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["startingDisputeID", [nil, XSD::QName.new(NsEBLBaseComponents, "StartingDisputeID")], [0, 1]],
       ["endingDisputeID", [nil, XSD::QName.new(NsEBLBaseComponents, "EndingDisputeID")], [0, 1]],
@@ -29234,7 +31544,8 @@ module DefaultMappingRegistry
       ["showSellerPaymentPreferences", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowSellerPaymentPreferences")]],
       ["showEndOfAuctionEmailPreferences", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowEndOfAuctionEmailPreferences")], [0, 1]],
       ["showSellerFavoriteItemPreferences", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowSellerFavoriteItemPreferences")], [0, 1]],
-      ["showProStoresPreferences", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowProStoresPreferences")], [0, 1]]
+      ["showProStoresPreferences", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowProStoresPreferences")], [0, 1]],
+      ["showEmailShipmentTrackingNumberPreference", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ShowEmailShipmentTrackingNumberPreference")], [0, 1]]
     ]
   )
 
@@ -29256,6 +31567,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["bidderNoticePreferences", ["BidderNoticePreferencesType", XSD::QName.new(NsEBLBaseComponents, "BidderNoticePreferences")], [0, 1]],
       ["combinedPaymentPreferences", ["CombinedPaymentPreferencesType", XSD::QName.new(NsEBLBaseComponents, "CombinedPaymentPreferences")], [0, 1]],
@@ -29263,7 +31575,7 @@ module DefaultMappingRegistry
       ["sellerPaymentPreferences", ["SellerPaymentPreferencesType", XSD::QName.new(NsEBLBaseComponents, "SellerPaymentPreferences")], [0, 1]],
       ["sellerFavoriteItemPreferences", ["SellerFavoriteItemPreferencesType", XSD::QName.new(NsEBLBaseComponents, "SellerFavoriteItemPreferences")], [0, 1]],
       ["endOfAuctionEmailPreferences", ["EndOfAuctionEmailPreferencesType", XSD::QName.new(NsEBLBaseComponents, "EndOfAuctionEmailPreferences")], [0, 1]],
-      ["expressPreferences", ["ExpressPreferencesType", XSD::QName.new(NsEBLBaseComponents, "ExpressPreferences")], [0, 1]],
+      ["emailShipmentTrackingNumberPreference", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EmailShipmentTrackingNumberPreference")], [0, 1]],
       ["proStoresPreference", ["ProStoresCheckoutPreferenceType", XSD::QName.new(NsEBLBaseComponents, "ProStoresPreference")], [0, 1]]
     ]
   )
@@ -29306,6 +31618,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["veROReasonCodeDetails", ["VeROReasonCodeDetailsType", XSD::QName.new(NsEBLBaseComponents, "VeROReasonCodeDetails")], [0, 1]]
     ]
@@ -29353,6 +31666,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["paginationResult", ["PaginationResultType", XSD::QName.new(NsEBLBaseComponents, "PaginationResult")], [0, 1]],
       ["hasMoreItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreItems")], [0, 1]],
@@ -29401,6 +31715,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["wantItNowPost", ["WantItNowPostType", XSD::QName.new(NsEBLBaseComponents, "WantItNowPost")], [0, 1]]
     ]
@@ -29447,6 +31762,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["wantItNowPostArray", ["WantItNowPostArrayType", XSD::QName.new(NsEBLBaseComponents, "WantItNowPostArray")], [0, 1]],
       ["hasMoreItems", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HasMoreItems")], [0, 1]],
@@ -29493,6 +31809,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["countryDetails", ["CountryDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "CountryDetails")], [0, nil]],
       ["currencyDetails", ["CurrencyDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "CurrencyDetails")], [0, nil]],
@@ -29509,7 +31826,8 @@ module DefaultMappingRegistry
       ["unitOfMeasurementDetails", ["UnitOfMeasurementDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "UnitOfMeasurementDetails")], [0, nil]],
       ["regionOfOriginDetails", ["RegionOfOriginDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "RegionOfOriginDetails")], [0, nil]],
       ["shippingPackageDetails", ["ShippingPackageDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingPackageDetails")], [0, nil]],
-      ["shippingCarrierDetails", ["ShippingCarrierDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrierDetails")], [0, nil]]
+      ["shippingCarrierDetails", ["ShippingCarrierDetailsType[]", XSD::QName.new(NsEBLBaseComponents, "ShippingCarrierDetails")], [0, nil]],
+      ["returnPolicyDetails", ["ReturnPolicyDetailsType", XSD::QName.new(NsEBLBaseComponents, "ReturnPolicyDetails")], [0, 1]]
     ]
   )
 
@@ -29549,6 +31867,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -29595,6 +31914,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["refundFromSeller", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "RefundFromSeller")], [0, 1]],
       ["totalRefundToBuyer", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "TotalRefundToBuyer")], [0, 1]]
@@ -29643,6 +31963,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["feedbackID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "FeedbackID")], [0, 1]]
     ]
@@ -29688,6 +32009,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["sellingStatus", ["SellingStatusType", XSD::QName.new(NsEBLBaseComponents, "SellingStatus")], [0, 1]],
       ["transactionID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TransactionID")], [0, 1]],
@@ -29733,6 +32055,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["fees", ["FeesType", XSD::QName.new(NsEBLBaseComponents, "Fees")], [0, 1]],
@@ -29781,6 +32104,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["watchListCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "WatchListCount")], [0, 1]],
       ["watchListMaximum", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "WatchListMaximum")], [0, 1]]
@@ -29829,6 +32153,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["respondToBestOffer", ["BestOfferArrayType", XSD::QName.new(NsEBLBaseComponents, "RespondToBestOffer")], [0, 1]]
     ]
@@ -29876,6 +32201,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -29918,6 +32244,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -29979,6 +32306,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -30021,6 +32349,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
@@ -30069,6 +32398,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["fees", ["FeesType", XSD::QName.new(NsEBLBaseComponents, "Fees")], [0, 1]],
@@ -30118,6 +32448,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -30161,6 +32492,49 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => RevokeTokenRequestType,
+    :schema_name => XSD::QName.new(NsEBLBaseComponents, "RevokeTokenRequest"),
+    :schema_element => [
+      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
+      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
+      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
+      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
+      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
+      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
+      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
+      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["unsubscribeNotification", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "UnsubscribeNotification")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => RevokeTokenResponseType,
+    :schema_name => XSD::QName.new(NsEBLBaseComponents, "RevokeTokenResponse"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -30203,6 +32577,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -30256,53 +32631,8 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => SetCartRequestType,
-    :schema_name => XSD::QName.new(NsEBLBaseComponents, "SetCartRequest"),
-    :schema_element => [
-      ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
-      ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
-      ["messageID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageID")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["endUserIP", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EndUserIP")], [0, 1]],
-      ["errorHandling", ["ErrorHandlingCodeType", XSD::QName.new(NsEBLBaseComponents, "ErrorHandling")], [0, 1]],
-      ["invocationID", [nil, XSD::QName.new(NsEBLBaseComponents, "InvocationID")], [0, 1]],
-      ["outputSelector", ["SOAP::SOAPString[]", XSD::QName.new(NsEBLBaseComponents, "OutputSelector")], [0, nil]],
-      ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
-      ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["affiliateTrackingDetails", ["AffiliateTrackingDetailsType", XSD::QName.new(NsEBLBaseComponents, "AffiliateTrackingDetails")], [0, 1]],
-      ["cartID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "CartID")], [0, 1]],
-      ["shippingAddress", ["AddressType", XSD::QName.new(NsEBLBaseComponents, "ShippingAddress")], [0, 1]],
-      ["checkoutCompleteRedirect", ["CheckoutCompleteRedirectType", XSD::QName.new(NsEBLBaseComponents, "CheckoutCompleteRedirect")], [0, 1]],
-      ["cartItemArray", ["CartItemArrayType", XSD::QName.new(NsEBLBaseComponents, "CartItemArray")], [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => SetCartResponseType,
-    :schema_name => XSD::QName.new(NsEBLBaseComponents, "SetCartResponse"),
-    :schema_element => [
-      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
-      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
-      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
-      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
-      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
-      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
-      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
-      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
-      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
-      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
-      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
-      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
-      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
-      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
-      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["cart", ["CartType", XSD::QName.new(NsEBLBaseComponents, "Cart")], [0, 1]]
     ]
   )
 
@@ -30343,6 +32673,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -30365,7 +32696,8 @@ module DefaultMappingRegistry
       ["applicationDeliveryPreferences", ["ApplicationDeliveryPreferencesType", XSD::QName.new(NsEBLBaseComponents, "ApplicationDeliveryPreferences")], [0, 1]],
       ["userDeliveryPreferenceArray", ["NotificationEnableArrayType", XSD::QName.new(NsEBLBaseComponents, "UserDeliveryPreferenceArray")], [0, 1]],
       ["userData", ["NotificationUserDataType", XSD::QName.new(NsEBLBaseComponents, "UserData")], [0, 1]],
-      ["eventProperty", ["NotificationEventPropertyType[]", XSD::QName.new(NsEBLBaseComponents, "EventProperty")], [0, nil]]
+      ["eventProperty", ["NotificationEventPropertyType[]", XSD::QName.new(NsEBLBaseComponents, "EventProperty")], [0, nil]],
+      ["deliveryURLName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "DeliveryURLName")], [0, 1]]
     ]
   )
 
@@ -30387,6 +32719,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -30429,6 +32762,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -30471,6 +32805,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["status", ["PromotionalSaleStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]],
       ["promotionalSaleID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "PromotionalSaleID")], [0, 1]]
@@ -30521,14 +32856,15 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["status", ["PromotionalSaleStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]]
     ]
   )
 
   LiteralRegistry.register(
-    :class => SetReturnURLRequestType,
-    :schema_name => XSD::QName.new(NsEBLBaseComponents, "SetReturnURLRequest"),
+    :class => SetSellingManagerFeedbackOptionsRequestType,
+    :schema_name => XSD::QName.new(NsEBLBaseComponents, "SetSellingManagerFeedbackOptionsRequest"),
     :schema_element => [
       ["detailLevel", ["DetailLevelCodeType[]", XSD::QName.new(NsEBLBaseComponents, "DetailLevel")], [0, nil]],
       ["errorLanguage", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ErrorLanguage")], [0, 1]],
@@ -30541,15 +32877,14 @@ module DefaultMappingRegistry
       ["warningLevel", ["WarningLevelCodeType", XSD::QName.new(NsEBLBaseComponents, "WarningLevel")], [0, 1]],
       ["botBlock", ["BotBlockRequestType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
-      ["authenticationEntry", ["AuthenticationEntryType", XSD::QName.new(NsEBLBaseComponents, "AuthenticationEntry")], [0, 1]],
-      ["applicationDisplayName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ApplicationDisplayName")], [0, 1]],
-      ["action", ["ModifyActionCodeType", XSD::QName.new(NsEBLBaseComponents, "Action")], [0, 1]]
+      ["automatedLeaveFeedbackEvent", ["AutomatedLeaveFeedbackEventCodeType", XSD::QName.new(NsEBLBaseComponents, "AutomatedLeaveFeedbackEvent")], [0, 1]],
+      ["storedComments", ["FeedbackCommentArrayType", XSD::QName.new(NsEBLBaseComponents, "StoredComments")], [0, 1]]
     ]
   )
 
   LiteralRegistry.register(
-    :class => SetReturnURLResponseType,
-    :schema_name => XSD::QName.new(NsEBLBaseComponents, "SetReturnURLResponse"),
+    :class => SetSellingManagerFeedbackOptionsResponseType,
+    :schema_name => XSD::QName.new(NsEBLBaseComponents, "SetSellingManagerFeedbackOptionsResponse"),
     :schema_element => [
       ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
       ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
@@ -30565,6 +32900,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -30614,6 +32950,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -30655,6 +32992,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -30699,6 +33037,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["taskID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "TaskID")], [0, 1]],
       ["status", ["TaskStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "Status")], [0, 1]]
@@ -30742,6 +33081,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["customPage", ["StoreCustomPageType", XSD::QName.new(NsEBLBaseComponents, "CustomPage")], [0, 1]]
     ]
@@ -30784,6 +33124,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -30825,6 +33166,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -30869,6 +33211,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -30894,7 +33237,7 @@ module DefaultMappingRegistry
       ["sellerPaymentPreferences", ["SellerPaymentPreferencesType", XSD::QName.new(NsEBLBaseComponents, "SellerPaymentPreferences")], [0, 1]],
       ["sellerFavoriteItemPreferences", ["SellerFavoriteItemPreferencesType", XSD::QName.new(NsEBLBaseComponents, "SellerFavoriteItemPreferences")], [0, 1]],
       ["endOfAuctionEmailPreferences", ["EndOfAuctionEmailPreferencesType", XSD::QName.new(NsEBLBaseComponents, "EndOfAuctionEmailPreferences")], [0, 1]],
-      ["expressPreferences", ["ExpressPreferencesType", XSD::QName.new(NsEBLBaseComponents, "ExpressPreferences")], [0, 1]]
+      ["emailShipmentTrackingNumberPreference", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EmailShipmentTrackingNumberPreference")], [0, 1]]
     ]
   )
 
@@ -30916,6 +33259,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -30961,6 +33305,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["pictureSystemVersion", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "PictureSystemVersion")], [0, 1]],
       ["siteHostedPictureDetails", ["SiteHostedPictureDetailsType", XSD::QName.new(NsEBLBaseComponents, "SiteHostedPictureDetails")], [0, 1]]
@@ -31006,6 +33351,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["validToken", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "ValidToken")], [0, 1]]
     ]
@@ -31053,6 +33399,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]]
     ]
   )
@@ -31095,6 +33442,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["veROReportPacketID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "VeROReportPacketID")], [0, 1]],
       ["veROReportPacketStatus", ["VeROReportPacketStatusCodeType", XSD::QName.new(NsEBLBaseComponents, "VeROReportPacketStatus")], [0, 1]]
@@ -31140,6 +33488,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["itemID", [nil, XSD::QName.new(NsEBLBaseComponents, "ItemID")], [0, 1]],
       ["fees", ["FeesType", XSD::QName.new(NsEBLBaseComponents, "Fees")], [0, 1]],
@@ -31191,9 +33540,36 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["startTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "StartTime")], [0, 1]],
       ["endTime", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "EndTime")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => ItemsCanceledEventType,
+    :schema_name => XSD::QName.new(NsEBLBaseComponents, "ItemsCanceledEvent"),
+    :schema_element => [
+      ["timestamp", ["SOAP::SOAPDateTime", XSD::QName.new(NsEBLBaseComponents, "Timestamp")], [0, 1]],
+      ["ack", ["AckCodeType", XSD::QName.new(NsEBLBaseComponents, "Ack")], [0, 1]],
+      ["correlationID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "CorrelationID")], [0, 1]],
+      ["errors", ["ErrorType[]", XSD::QName.new(NsEBLBaseComponents, "Errors")], [0, nil]],
+      ["message", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Message")], [0, 1]],
+      ["version", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Version")], [0, 1]],
+      ["build", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Build")], [0, 1]],
+      ["notificationEventName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationEventName")], [0, 1]],
+      ["duplicateInvocationDetails", ["DuplicateInvocationDetailsType", XSD::QName.new(NsEBLBaseComponents, "DuplicateInvocationDetails")], [0, 1]],
+      ["recipientUserID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "RecipientUserID")], [0, 1]],
+      ["eIASToken", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIASToken")], [0, 1]],
+      ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
+      ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
+      ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
+      ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
+      ["canceledItemIDArray", ["ItemIDArrayType", XSD::QName.new(NsEBLBaseComponents, "CanceledItemIDArray")], [0, 1]],
+      ["eligibleForRelist", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "EligibleForRelist")], [0, 1]],
+      ["sellerID", [nil, XSD::QName.new(NsEBLBaseComponents, "SellerID")], [0, 1]]
     ]
   )
 
@@ -31215,6 +33591,7 @@ module DefaultMappingRegistry
       ["notificationSignature", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "NotificationSignature")], [0, 1]],
       ["hardExpirationWarning", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "HardExpirationWarning")], [0, 1]],
       ["botBlock", ["BotBlockResponseType", XSD::QName.new(NsEBLBaseComponents, "BotBlock")], [0, 1]],
+      ["externalUserData", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ExternalUserData")], [0, 1]],
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["messageBody", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageBody")], [0, 1]],
       ["eIAS", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIAS")], [0, 1]]
