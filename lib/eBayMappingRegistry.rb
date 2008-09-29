@@ -1,4 +1,4 @@
-require 'default.rb'
+require 'eBay.rb'
 require 'soap/mapping'
 
 module DefaultMappingRegistry
