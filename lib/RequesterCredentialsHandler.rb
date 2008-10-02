@@ -41,8 +41,15 @@ module EBay
     end 
 
     def on_simple_outbound 
-      { EbayAuthToken => @token, 
-        Credentials => { DevId => @devId, AppId => @appId, AuthCert => @cert } }
+      creds = { Credentials => { DevId => @devId, AppId => @appId, AuthCert => @cert } }
+      
+      # In a handful of calls mostly related to generating tokens in 
+      # multiple-user applications (ex. GetSessionID), you don't want to pass
+      # in a token (or an empty eBayAuthToken node) 'cuz you're still in the 
+      # process of getting one.
+      creds.merge!({ EbayAuthToken => @token }) unless @token.nil? || @token.empty?
+      
+      return creds
     end 
   end
 
