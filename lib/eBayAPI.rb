@@ -80,7 +80,7 @@ class API
   # special (e.g. "eBay Motors") sites.
   #
   def initialize(auth_token, dev_id, app_id, cert_id, opt = {})
-    @ver = 555
+    @ver = 583
     @debug = false
     @app_id = app_id
     @header_handler = RequesterCredentialsHandler.new(auth_token, dev_id, app_id, cert_id)
