@@ -1,6 +1,17 @@
 RELEASE NOTES
 -------------
 
+pending v1.2:
+
+  * Upgraded to eBay API 583
+
+  * Added support for calling the API without a user token, which is necessary
+    to ask for tokens in multiple user applications via the 
+    GetSessionID/FetchToken flow
+
+  * Added a Rakefile.  Tests can now be run by just running 'rake'.  This was
+    late in coming, I know.
+    
 v1.1:
 
   * Upgraded to eBay API 555
