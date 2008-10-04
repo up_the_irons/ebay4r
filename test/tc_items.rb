@@ -47,7 +47,12 @@ class TestItems < Test::Unit::TestCase
                                             :ListingDuration => "Days_7",
                                             :Country => "US",
                                             :Currency => "USD",
-                                            :PaymentMethods => ["VisaMC", "PersonalCheck"]))
+                                            :PaymentMethods => ["VisaMC", "PersonalCheck"],
+                                            :ShippingDetails => EBay.ShippingDetails(
+                                              :ShippingType => 'Flat',
+                                              :ShippingServiceOptions => EBay.ShippingServiceOptions(
+                                                 :ShippingService => "USPSMedia",
+                                                 :ShippingServiceCost => '2.50'))))
 
     assert_respond_to(resp, "timestamp")
     assert_respond_to(resp, "ack")
