@@ -5,9 +5,9 @@ Welcome to eBay4R
 :Author: Garry Dolley
 :Date: 03-28-2008
 :Version: v1.1
-:eBay API: 555
+:eBay API: 583
 
-eBay4R is a Ruby wrapper for eBay's Web Services SOAP API (v555). Emphasis is
+eBay4R is a Ruby wrapper for eBay's Web Services SOAP API (v583). Emphasis is
 on ease of use and small footprint.
 
 Please report bugs and other problems, see "Author" section at the bottom.
