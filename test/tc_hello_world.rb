@@ -31,11 +31,11 @@ require 'eBayAPI'
 # This file must be in the current directory your $RUBYLIB environment var.
 load('myCredentials.rb')
 
-$eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
-
 class TestHelloWorld < Test::Unit::TestCase
+  @@eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
+
   def test_simplest_call
-    resp = $eBay.GeteBayOfficialTime
+    resp = @@eBay.GeteBayOfficialTime
 
     assert_respond_to(resp, "timestamp")
     assert_respond_to(resp, "ack")

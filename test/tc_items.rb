@@ -31,28 +31,28 @@ require 'eBayAPI'
 # This file must be in the current directory your $RUBYLIB environment var.
 load('myCredentials.rb')
 
-$eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
-
 class TestItems < Test::Unit::TestCase
   @@item_title = 'eBay4R Test Case Item';
   @@item_descr = 'eBay API for Ruby @ http://ebay4r.rubyforge.org/';
 
+  @@eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
+
   def test_add_item
-    resp = $eBay.AddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:CategoryID => 57882),
-                                            :Title => @@item_title,
-                                            :Description => @@item_descr,
-                                            :Location => 'RubyForge',
-                                            :StartPrice => '12.0',
-                                            :Quantity => 1,
-                                            :ListingDuration => "Days_7",
-                                            :Country => "US",
-                                            :Currency => "USD",
-                                            :PaymentMethods => ["VisaMC", "PersonalCheck"],
-                                            :ShippingDetails => EBay.ShippingDetails(
-                                              :ShippingType => 'Flat',
-                                              :ShippingServiceOptions => EBay.ShippingServiceOptions(
-                                                 :ShippingService => "USPSMedia",
-                                                 :ShippingServiceCost => '2.50'))))
+    resp = @@eBay.AddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:CategoryID => 57882),
+                                             :Title => @@item_title,
+                                             :Description => @@item_descr,
+                                             :Location => 'RubyForge',
+                                             :StartPrice => '12.0',
+                                             :Quantity => 1,
+                                             :ListingDuration => "Days_7",
+                                             :Country => "US",
+                                             :Currency => "USD",
+                                             :PaymentMethods => ["VisaMC", "PersonalCheck"],
+                                             :ShippingDetails => EBay.ShippingDetails(
+                                               :ShippingType => 'Flat',
+                                               :ShippingServiceOptions => EBay.ShippingServiceOptions(
+                                                  :ShippingService => "USPSMedia",
+                                                  :ShippingServiceCost => '2.50'))))
 
     assert_respond_to(resp, "timestamp")
     assert_respond_to(resp, "ack")
@@ -67,11 +67,11 @@ class TestItems < Test::Unit::TestCase
   end
 
   def test_add_item_no_params
-    assert_raise(EBay::Error::ApplicationError) { $eBay.AddItem() }
+    assert_raise(EBay::Error::ApplicationError) { @@eBay.AddItem() }
   end
 
   def test_get_item
-    resp = $eBay.GetItem(:DetailLevel => 'ReturnAll', :ItemID => @@item_id)
+    resp = @@eBay.GetItem(:DetailLevel => 'ReturnAll', :ItemID => @@item_id)
 
     assert_respond_to(resp, "timestamp")
     assert_respond_to(resp, "ack")
