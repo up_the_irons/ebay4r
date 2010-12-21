@@ -1,4 +1,4 @@
-require 'eBay.rb'
+require File.dirname(__FILE__) + '/eBay.rb'
 require 'soap/mapping'
 
 module DefaultMappingRegistry
