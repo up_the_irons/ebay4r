@@ -81,7 +81,7 @@ class API
   # special (e.g. "eBay Motors") sites.
   #
   def initialize(auth_token, dev_id, app_id, cert_id, opt = {})
-    @ver = 583
+    @ver = 713
     @debug = false
     @debug_io = STDOUT
     @app_id = app_id
