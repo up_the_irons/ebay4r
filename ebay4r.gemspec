@@ -4,7 +4,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require 'rubygems'
 
 Gem::Specification.new do |s|
-  s.name     = "ebay4r"
+  s.name     = "ebay4r-713"
   s.version  = "1.1"
   s.author   = "Garry Dolley"
   s.email    = "gdolley@ucla.edu"
