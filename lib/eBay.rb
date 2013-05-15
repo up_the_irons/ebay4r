@@ -1,4 +1,5 @@
 require 'xsd/qname'
+module EBay
 
 # {urn:ebay:apis:eBLBaseComponents}AbstractRequestType
 # abstract
@@ -39030,4 +39031,5 @@ class WirelessCarrierIDCodeType < ::String
   USCellular = WirelessCarrierIDCodeType.new("USCellular")
   Verizon = WirelessCarrierIDCodeType.new("Verizon")
   Vodafone = WirelessCarrierIDCodeType.new("Vodafone")
+end
 end

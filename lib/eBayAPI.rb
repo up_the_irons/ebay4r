@@ -33,12 +33,12 @@
 # If you have a different version of SOAP4R in a directory included in $RUBYLIB
 # *and* you want to use that version instead of the gem you also have
 # installed, you will most likely have to comment out this block.
-begin
-  require 'rubygems'
-  gem 'soap4r'
-rescue Exception
-  nil
-end
+#begin
+#  require 'rubygems'
+#  gem 'soap4r'
+#rescue Exception
+#  nil
+#end
 
 require 'eBayDriver.rb'
 require 'RequesterCredentialsHandler.rb'
