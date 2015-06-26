@@ -7,14 +7,14 @@
 #
 # eBay4R is free software; you can redistribute it and/or modify it under the
 # terms of the GNU General Public License as published by the Free Software
-# Foundation; either version 2 of the License, or (at your option) any later 
+# Foundation; either version 2 of the License, or (at your option) any later
 # version.
 #
 # eBay4R is distributed in the hope that it will be useful, but WITHOUT ANY
 # WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
 # FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
 # details.
-# 
+#
 # You should have received a copy of the GNU General Public License along with
 # eBay4R; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # Street, Fifth Floor, Boston, MA  02110-1301, USA
@@ -49,7 +49,7 @@ module EBay
 class API
   attr_writer :debug
   attr_writer :debug_io
-  
+
   # Creates an eBay caller object.
   #
   # You will need this object to make any API calls to eBay's servers, so instantiation is required
@@ -69,7 +69,7 @@ class API
   #
   # The optional fifth argument is a hash where you can pass additional info to refine the caller
   # object.
-  # 
+  #
   # The key "sandbox", for example:
   #
   #   eBay = EBay::API.new("my_auth_tok", "dev_id", "cert_id", "app_id", :sandbox => true)
@@ -77,18 +77,18 @@ class API
   # creates a caller that works with the eBay "sandbox" environment.  By default, the "live"
   # environment is used.
   #
-  # You may also pass the key "site_id" to specify calls to be routed to international or 
+  # You may also pass the key "site_id" to specify calls to be routed to international or
   # special (e.g. "eBay Motors") sites.
   #
   def initialize(auth_token, dev_id, app_id, cert_id, opt = {})
-    @ver = 713
+    @ver = 925
     @debug = false
     @debug_io = STDOUT
     @app_id = app_id
     @header_handler = RequesterCredentialsHandler.new(auth_token, dev_id, app_id, cert_id)
 
     # Default to 'US' (SiteID = 0) site
-    @site_id = opt[:site_id] ? opt[:site_id] : '0' 
+    @site_id = opt[:site_id] ? opt[:site_id] : '0'
 
     shost = opt[:sandbox] ? "sandbox." : ""
 
@@ -108,12 +108,12 @@ class API
       request = eval("#{call_name}RequestType.new")
 
       request.version = @ver
- 
+
       EBay::assign_args(request, args_hash)
       EBay::fix_case_down(call_name)
 
       verbose_obj_save = $VERBOSE
-      $VERBOSE = nil # Suppress "warning: peer certificate won't be verified in this SSL session" 
+      $VERBOSE = nil # Suppress "warning: peer certificate won't be verified in this SSL session"
 
       resp = eval("service.#{call_name}(request)")
 
@@ -153,7 +153,7 @@ class API
 
     # I believe the line below will work after we get the kinks worked out w/ http-access2
     # service.options['protocol.http.ssl_config.verify_mode'] = OpenSSL::SSL::VERIFY_NONE
-    
+
     return service
   end
 
@@ -179,7 +179,7 @@ class Error
   class UnknownType < Error; end
 
   # Raised if a call returns with <Ack>Failure</Ack>.  The _resp_ attribute contains the full failed response.
-  class ApplicationError < Error; 
+  class ApplicationError < Error;
     attr_reader :resp
 
     def initialize(response)
@@ -192,7 +192,7 @@ end
 
 # These class module methods are for creating complex types (e.g. ItemType, CategoryType, etc...)
 # and also include some helper functions
-class <<self 
+class <<self
   def method_missing(m, *args)
     type_name = fix_case_up(m.id2name)
 

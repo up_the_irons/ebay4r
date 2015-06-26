@@ -2,7 +2,7 @@
 require 'eBayDriver.rb'
 
 endpoint_url = ARGV.shift
-obj = EBayAPIInterface.new(endpoint_url)
+obj = EBay::EBayAPIInterface.new(endpoint_url)
 
 # run ruby with -d to see SOAP wiredumps.
 obj.wiredump_dev = STDERR if $DEBUG
