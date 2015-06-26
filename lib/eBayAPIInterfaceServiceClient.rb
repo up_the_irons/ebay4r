@@ -8,7 +8,7 @@ obj = EBayAPIInterface.new(endpoint_url)
 obj.wiredump_dev = STDERR if $DEBUG
 
 # SYNOPSIS
-#   AddDispute(addDisputeRequest)
+#   addDispute(addDisputeRequest)
 #
 # ARGS
 #   addDisputeRequest AddDisputeRequestType - {urn:ebay:apis:eBLBaseComponents}AddDisputeRequestType
@@ -20,7 +20,7 @@ addDisputeRequest = nil
 puts obj.addDispute(addDisputeRequest)
 
 # SYNOPSIS
-#   AddDisputeResponse(addDisputeResponseRequest)
+#   addDisputeResponse(addDisputeResponseRequest)
 #
 # ARGS
 #   addDisputeResponseRequest AddDisputeResponseRequestType - {urn:ebay:apis:eBLBaseComponents}AddDisputeResponseRequestType
@@ -32,7 +32,7 @@ addDisputeResponseRequest = nil
 puts obj.addDisputeResponse(addDisputeResponseRequest)
 
 # SYNOPSIS
-#   AddFixedPriceItem(addFixedPriceItemRequest)
+#   addFixedPriceItem(addFixedPriceItemRequest)
 #
 # ARGS
 #   addFixedPriceItemRequest AddFixedPriceItemRequestType - {urn:ebay:apis:eBLBaseComponents}AddFixedPriceItemRequestType
@@ -44,7 +44,7 @@ addFixedPriceItemRequest = nil
 puts obj.addFixedPriceItem(addFixedPriceItemRequest)
 
 # SYNOPSIS
-#   AddItem(addItemRequest)
+#   addItem(addItemRequest)
 #
 # ARGS
 #   addItemRequest  AddItemRequestType - {urn:ebay:apis:eBLBaseComponents}AddItemRequestType
@@ -56,7 +56,7 @@ addItemRequest = nil
 puts obj.addItem(addItemRequest)
 
 # SYNOPSIS
-#   AddItemFromSellingManagerTemplate(addItemFromSellingManagerTemplateRequest)
+#   addItemFromSellingManagerTemplate(addItemFromSellingManagerTemplateRequest)
 #
 # ARGS
 #   addItemFromSellingManagerTemplateRequest AddItemFromSellingManagerTemplateRequestType - {urn:ebay:apis:eBLBaseComponents}AddItemFromSellingManagerTemplateRequestType
@@ -68,7 +68,7 @@ addItemFromSellingManagerTemplateRequest = nil
 puts obj.addItemFromSellingManagerTemplate(addItemFromSellingManagerTemplateRequest)
 
 # SYNOPSIS
-#   AddItems(addItemsRequest)
+#   addItems(addItemsRequest)
 #
 # ARGS
 #   addItemsRequest AddItemsRequestType - {urn:ebay:apis:eBLBaseComponents}AddItemsRequestType
@@ -80,7 +80,7 @@ addItemsRequest = nil
 puts obj.addItems(addItemsRequest)
 
 # SYNOPSIS
-#   AddMemberMessageAAQToPartner(addMemberMessageAAQToPartnerRequest)
+#   addMemberMessageAAQToPartner(addMemberMessageAAQToPartnerRequest)
 #
 # ARGS
 #   addMemberMessageAAQToPartnerRequest AddMemberMessageAAQToPartnerRequestType - {urn:ebay:apis:eBLBaseComponents}AddMemberMessageAAQToPartnerRequestType
@@ -92,7 +92,7 @@ addMemberMessageAAQToPartnerRequest = nil
 puts obj.addMemberMessageAAQToPartner(addMemberMessageAAQToPartnerRequest)
 
 # SYNOPSIS
-#   AddMemberMessageRTQ(addMemberMessageRTQRequest)
+#   addMemberMessageRTQ(addMemberMessageRTQRequest)
 #
 # ARGS
 #   addMemberMessageRTQRequest AddMemberMessageRTQRequestType - {urn:ebay:apis:eBLBaseComponents}AddMemberMessageRTQRequestType
@@ -104,7 +104,7 @@ addMemberMessageRTQRequest = nil
 puts obj.addMemberMessageRTQ(addMemberMessageRTQRequest)
 
 # SYNOPSIS
-#   AddMemberMessagesAAQToBidder(addMemberMessagesAAQToBidderRequest)
+#   addMemberMessagesAAQToBidder(addMemberMessagesAAQToBidderRequest)
 #
 # ARGS
 #   addMemberMessagesAAQToBidderRequest AddMemberMessagesAAQToBidderRequestType - {urn:ebay:apis:eBLBaseComponents}AddMemberMessagesAAQToBidderRequestType
@@ -116,7 +116,7 @@ addMemberMessagesAAQToBidderRequest = nil
 puts obj.addMemberMessagesAAQToBidder(addMemberMessagesAAQToBidderRequest)
 
 # SYNOPSIS
-#   AddOrder(addOrderRequest)
+#   addOrder(addOrderRequest)
 #
 # ARGS
 #   addOrderRequest AddOrderRequestType - {urn:ebay:apis:eBLBaseComponents}AddOrderRequestType
@@ -128,7 +128,7 @@ addOrderRequest = nil
 puts obj.addOrder(addOrderRequest)
 
 # SYNOPSIS
-#   AddSecondChanceItem(addSecondChanceItemRequest)
+#   addSecondChanceItem(addSecondChanceItemRequest)
 #
 # ARGS
 #   addSecondChanceItemRequest AddSecondChanceItemRequestType - {urn:ebay:apis:eBLBaseComponents}AddSecondChanceItemRequestType
@@ -140,7 +140,7 @@ addSecondChanceItemRequest = nil
 puts obj.addSecondChanceItem(addSecondChanceItemRequest)
 
 # SYNOPSIS
-#   AddSellingManagerInventoryFolder(addSellingManagerInventoryFolderRequest)
+#   addSellingManagerInventoryFolder(addSellingManagerInventoryFolderRequest)
 #
 # ARGS
 #   addSellingManagerInventoryFolderRequest AddSellingManagerInventoryFolderRequestType - {urn:ebay:apis:eBLBaseComponents}AddSellingManagerInventoryFolderRequestType
@@ -152,7 +152,7 @@ addSellingManagerInventoryFolderRequest = nil
 puts obj.addSellingManagerInventoryFolder(addSellingManagerInventoryFolderRequest)
 
 # SYNOPSIS
-#   AddSellingManagerProduct(addSellingManagerProductRequest)
+#   addSellingManagerProduct(addSellingManagerProductRequest)
 #
 # ARGS
 #   addSellingManagerProductRequest AddSellingManagerProductRequestType - {urn:ebay:apis:eBLBaseComponents}AddSellingManagerProductRequestType
@@ -164,7 +164,7 @@ addSellingManagerProductRequest = nil
 puts obj.addSellingManagerProduct(addSellingManagerProductRequest)
 
 # SYNOPSIS
-#   AddSellingManagerTemplate(addSellingManagerTemplateRequest)
+#   addSellingManagerTemplate(addSellingManagerTemplateRequest)
 #
 # ARGS
 #   addSellingManagerTemplateRequest AddSellingManagerTemplateRequestType - {urn:ebay:apis:eBLBaseComponents}AddSellingManagerTemplateRequestType
@@ -176,7 +176,7 @@ addSellingManagerTemplateRequest = nil
 puts obj.addSellingManagerTemplate(addSellingManagerTemplateRequest)
 
 # SYNOPSIS
-#   AddToItemDescription(addToItemDescriptionRequest)
+#   addToItemDescription(addToItemDescriptionRequest)
 #
 # ARGS
 #   addToItemDescriptionRequest AddToItemDescriptionRequestType - {urn:ebay:apis:eBLBaseComponents}AddToItemDescriptionRequestType
@@ -188,7 +188,7 @@ addToItemDescriptionRequest = nil
 puts obj.addToItemDescription(addToItemDescriptionRequest)
 
 # SYNOPSIS
-#   AddToWatchList(addToWatchListRequest)
+#   addToWatchList(addToWatchListRequest)
 #
 # ARGS
 #   addToWatchListRequest AddToWatchListRequestType - {urn:ebay:apis:eBLBaseComponents}AddToWatchListRequestType
@@ -200,7 +200,7 @@ addToWatchListRequest = nil
 puts obj.addToWatchList(addToWatchListRequest)
 
 # SYNOPSIS
-#   AddTransactionConfirmationItem(addTransactionConfirmationItemRequest)
+#   addTransactionConfirmationItem(addTransactionConfirmationItemRequest)
 #
 # ARGS
 #   addTransactionConfirmationItemRequest AddTransactionConfirmationItemRequestType - {urn:ebay:apis:eBLBaseComponents}AddTransactionConfirmationItemRequestType
@@ -212,7 +212,7 @@ addTransactionConfirmationItemRequest = nil
 puts obj.addTransactionConfirmationItem(addTransactionConfirmationItemRequest)
 
 # SYNOPSIS
-#   CompleteSale(completeSaleRequest)
+#   completeSale(completeSaleRequest)
 #
 # ARGS
 #   completeSaleRequest CompleteSaleRequestType - {urn:ebay:apis:eBLBaseComponents}CompleteSaleRequestType
@@ -224,7 +224,7 @@ completeSaleRequest = nil
 puts obj.completeSale(completeSaleRequest)
 
 # SYNOPSIS
-#   ConfirmIdentity(confirmIdentityRequest)
+#   confirmIdentity(confirmIdentityRequest)
 #
 # ARGS
 #   confirmIdentityRequest ConfirmIdentityRequestType - {urn:ebay:apis:eBLBaseComponents}ConfirmIdentityRequestType
@@ -236,7 +236,7 @@ confirmIdentityRequest = nil
 puts obj.confirmIdentity(confirmIdentityRequest)
 
 # SYNOPSIS
-#   DeleteMyMessages(deleteMyMessagesRequest)
+#   deleteMyMessages(deleteMyMessagesRequest)
 #
 # ARGS
 #   deleteMyMessagesRequest DeleteMyMessagesRequestType - {urn:ebay:apis:eBLBaseComponents}DeleteMyMessagesRequestType
@@ -248,7 +248,7 @@ deleteMyMessagesRequest = nil
 puts obj.deleteMyMessages(deleteMyMessagesRequest)
 
 # SYNOPSIS
-#   DeleteSellingManagerInventoryFolder(deleteSellingManagerInventoryFolderRequest)
+#   deleteSellingManagerInventoryFolder(deleteSellingManagerInventoryFolderRequest)
 #
 # ARGS
 #   deleteSellingManagerInventoryFolderRequest DeleteSellingManagerInventoryFolderRequestType - {urn:ebay:apis:eBLBaseComponents}DeleteSellingManagerInventoryFolderRequestType
@@ -260,7 +260,7 @@ deleteSellingManagerInventoryFolderRequest = nil
 puts obj.deleteSellingManagerInventoryFolder(deleteSellingManagerInventoryFolderRequest)
 
 # SYNOPSIS
-#   DeleteSellingManagerItemAutomationRule(deleteSellingManagerItemAutomationRuleRequest)
+#   deleteSellingManagerItemAutomationRule(deleteSellingManagerItemAutomationRuleRequest)
 #
 # ARGS
 #   deleteSellingManagerItemAutomationRuleRequest DeleteSellingManagerItemAutomationRuleRequestType - {urn:ebay:apis:eBLBaseComponents}DeleteSellingManagerItemAutomationRuleRequestType
@@ -272,7 +272,7 @@ deleteSellingManagerItemAutomationRuleRequest = nil
 puts obj.deleteSellingManagerItemAutomationRule(deleteSellingManagerItemAutomationRuleRequest)
 
 # SYNOPSIS
-#   DeleteSellingManagerProduct(deleteSellingManagerProductRequest)
+#   deleteSellingManagerProduct(deleteSellingManagerProductRequest)
 #
 # ARGS
 #   deleteSellingManagerProductRequest DeleteSellingManagerProductRequestType - {urn:ebay:apis:eBLBaseComponents}DeleteSellingManagerProductRequestType
@@ -284,7 +284,7 @@ deleteSellingManagerProductRequest = nil
 puts obj.deleteSellingManagerProduct(deleteSellingManagerProductRequest)
 
 # SYNOPSIS
-#   DeleteSellingManagerTemplate(deleteSellingManagerTemplateRequest)
+#   deleteSellingManagerTemplate(deleteSellingManagerTemplateRequest)
 #
 # ARGS
 #   deleteSellingManagerTemplateRequest DeleteSellingManagerTemplateRequestType - {urn:ebay:apis:eBLBaseComponents}DeleteSellingManagerTemplateRequestType
@@ -296,7 +296,7 @@ deleteSellingManagerTemplateRequest = nil
 puts obj.deleteSellingManagerTemplate(deleteSellingManagerTemplateRequest)
 
 # SYNOPSIS
-#   DeleteSellingManagerTemplateAutomationRule(deleteSellingManagerTemplateAutomationRuleRequest)
+#   deleteSellingManagerTemplateAutomationRule(deleteSellingManagerTemplateAutomationRuleRequest)
 #
 # ARGS
 #   deleteSellingManagerTemplateAutomationRuleRequest DeleteSellingManagerTemplateAutomationRuleRequestType - {urn:ebay:apis:eBLBaseComponents}DeleteSellingManagerTemplateAutomationRuleRequestType
@@ -308,7 +308,7 @@ deleteSellingManagerTemplateAutomationRuleRequest = nil
 puts obj.deleteSellingManagerTemplateAutomationRule(deleteSellingManagerTemplateAutomationRuleRequest)
 
 # SYNOPSIS
-#   DisableUnpaidItemAssistance(disableUnpaidItemAssistanceRequest)
+#   disableUnpaidItemAssistance(disableUnpaidItemAssistanceRequest)
 #
 # ARGS
 #   disableUnpaidItemAssistanceRequest DisableUnpaidItemAssistanceRequestType - {urn:ebay:apis:eBLBaseComponents}DisableUnpaidItemAssistanceRequestType
@@ -320,7 +320,7 @@ disableUnpaidItemAssistanceRequest = nil
 puts obj.disableUnpaidItemAssistance(disableUnpaidItemAssistanceRequest)
 
 # SYNOPSIS
-#   EndFixedPriceItem(endFixedPriceItemRequest)
+#   endFixedPriceItem(endFixedPriceItemRequest)
 #
 # ARGS
 #   endFixedPriceItemRequest EndFixedPriceItemRequestType - {urn:ebay:apis:eBLBaseComponents}EndFixedPriceItemRequestType
@@ -332,7 +332,7 @@ endFixedPriceItemRequest = nil
 puts obj.endFixedPriceItem(endFixedPriceItemRequest)
 
 # SYNOPSIS
-#   EndItem(endItemRequest)
+#   endItem(endItemRequest)
 #
 # ARGS
 #   endItemRequest  EndItemRequestType - {urn:ebay:apis:eBLBaseComponents}EndItemRequestType
@@ -344,7 +344,7 @@ endItemRequest = nil
 puts obj.endItem(endItemRequest)
 
 # SYNOPSIS
-#   EndItems(endItemsRequest)
+#   endItems(endItemsRequest)
 #
 # ARGS
 #   endItemsRequest EndItemsRequestType - {urn:ebay:apis:eBLBaseComponents}EndItemsRequestType
@@ -356,7 +356,7 @@ endItemsRequest = nil
 puts obj.endItems(endItemsRequest)
 
 # SYNOPSIS
-#   ExtendSiteHostedPictures(extendSiteHostedPicturesRequest)
+#   extendSiteHostedPictures(extendSiteHostedPicturesRequest)
 #
 # ARGS
 #   extendSiteHostedPicturesRequest ExtendSiteHostedPicturesRequestType - {urn:ebay:apis:eBLBaseComponents}ExtendSiteHostedPicturesRequestType
@@ -368,7 +368,7 @@ extendSiteHostedPicturesRequest = nil
 puts obj.extendSiteHostedPictures(extendSiteHostedPicturesRequest)
 
 # SYNOPSIS
-#   FetchToken(fetchTokenRequest)
+#   fetchToken(fetchTokenRequest)
 #
 # ARGS
 #   fetchTokenRequest FetchTokenRequestType - {urn:ebay:apis:eBLBaseComponents}FetchTokenRequestType
@@ -380,7 +380,7 @@ fetchTokenRequest = nil
 puts obj.fetchToken(fetchTokenRequest)
 
 # SYNOPSIS
-#   GetAccount(getAccountRequest)
+#   getAccount(getAccountRequest)
 #
 # ARGS
 #   getAccountRequest GetAccountRequestType - {urn:ebay:apis:eBLBaseComponents}GetAccountRequestType
@@ -392,7 +392,7 @@ getAccountRequest = nil
 puts obj.getAccount(getAccountRequest)
 
 # SYNOPSIS
-#   GetAdFormatLeads(getAdFormatLeadsRequest)
+#   getAdFormatLeads(getAdFormatLeadsRequest)
 #
 # ARGS
 #   getAdFormatLeadsRequest GetAdFormatLeadsRequestType - {urn:ebay:apis:eBLBaseComponents}GetAdFormatLeadsRequestType
@@ -404,7 +404,7 @@ getAdFormatLeadsRequest = nil
 puts obj.getAdFormatLeads(getAdFormatLeadsRequest)
 
 # SYNOPSIS
-#   GetAllBidders(getAllBiddersRequest)
+#   getAllBidders(getAllBiddersRequest)
 #
 # ARGS
 #   getAllBiddersRequest GetAllBiddersRequestType - {urn:ebay:apis:eBLBaseComponents}GetAllBiddersRequestType
@@ -416,7 +416,7 @@ getAllBiddersRequest = nil
 puts obj.getAllBidders(getAllBiddersRequest)
 
 # SYNOPSIS
-#   GetApiAccessRules(getApiAccessRulesRequest)
+#   getApiAccessRules(getApiAccessRulesRequest)
 #
 # ARGS
 #   getApiAccessRulesRequest GetApiAccessRulesRequestType - {urn:ebay:apis:eBLBaseComponents}GetApiAccessRulesRequestType
@@ -428,7 +428,7 @@ getApiAccessRulesRequest = nil
 puts obj.getApiAccessRules(getApiAccessRulesRequest)
 
 # SYNOPSIS
-#   GetAttributesCS(getAttributesCSRequest)
+#   getAttributesCS(getAttributesCSRequest)
 #
 # ARGS
 #   getAttributesCSRequest GetAttributesCSRequestType - {urn:ebay:apis:eBLBaseComponents}GetAttributesCSRequestType
@@ -440,7 +440,7 @@ getAttributesCSRequest = nil
 puts obj.getAttributesCS(getAttributesCSRequest)
 
 # SYNOPSIS
-#   GetAttributesXSL(getAttributesXSLRequest)
+#   getAttributesXSL(getAttributesXSLRequest)
 #
 # ARGS
 #   getAttributesXSLRequest GetAttributesXSLRequestType - {urn:ebay:apis:eBLBaseComponents}GetAttributesXSLRequestType
@@ -452,7 +452,7 @@ getAttributesXSLRequest = nil
 puts obj.getAttributesXSL(getAttributesXSLRequest)
 
 # SYNOPSIS
-#   GetBestOffers(getBestOffersRequest)
+#   getBestOffers(getBestOffersRequest)
 #
 # ARGS
 #   getBestOffersRequest GetBestOffersRequestType - {urn:ebay:apis:eBLBaseComponents}GetBestOffersRequestType
@@ -464,7 +464,7 @@ getBestOffersRequest = nil
 puts obj.getBestOffers(getBestOffersRequest)
 
 # SYNOPSIS
-#   GetBidderList(getBidderListRequest)
+#   getBidderList(getBidderListRequest)
 #
 # ARGS
 #   getBidderListRequest GetBidderListRequestType - {urn:ebay:apis:eBLBaseComponents}GetBidderListRequestType
@@ -476,7 +476,7 @@ getBidderListRequest = nil
 puts obj.getBidderList(getBidderListRequest)
 
 # SYNOPSIS
-#   GetCategories(getCategoriesRequest)
+#   getCategories(getCategoriesRequest)
 #
 # ARGS
 #   getCategoriesRequest GetCategoriesRequestType - {urn:ebay:apis:eBLBaseComponents}GetCategoriesRequestType
@@ -488,7 +488,7 @@ getCategoriesRequest = nil
 puts obj.getCategories(getCategoriesRequest)
 
 # SYNOPSIS
-#   GetCategory2CS(getCategory2CSRequest)
+#   getCategory2CS(getCategory2CSRequest)
 #
 # ARGS
 #   getCategory2CSRequest GetCategory2CSRequestType - {urn:ebay:apis:eBLBaseComponents}GetCategory2CSRequestType
@@ -500,7 +500,7 @@ getCategory2CSRequest = nil
 puts obj.getCategory2CS(getCategory2CSRequest)
 
 # SYNOPSIS
-#   GetCategoryFeatures(getCategoryFeaturesRequest)
+#   getCategoryFeatures(getCategoryFeaturesRequest)
 #
 # ARGS
 #   getCategoryFeaturesRequest GetCategoryFeaturesRequestType - {urn:ebay:apis:eBLBaseComponents}GetCategoryFeaturesRequestType
@@ -512,19 +512,7 @@ getCategoryFeaturesRequest = nil
 puts obj.getCategoryFeatures(getCategoryFeaturesRequest)
 
 # SYNOPSIS
-#   GetCategoryListings(getCategoryListingsRequest)
-#
-# ARGS
-#   getCategoryListingsRequest GetCategoryListingsRequestType - {urn:ebay:apis:eBLBaseComponents}GetCategoryListingsRequestType
-#
-# RETURNS
-#   getCategoryListingsResponse GetCategoryListingsResponseType - {urn:ebay:apis:eBLBaseComponents}GetCategoryListingsResponseType
-#
-getCategoryListingsRequest = nil
-puts obj.getCategoryListings(getCategoryListingsRequest)
-
-# SYNOPSIS
-#   GetCategoryMappings(getCategoryMappingsRequest)
+#   getCategoryMappings(getCategoryMappingsRequest)
 #
 # ARGS
 #   getCategoryMappingsRequest GetCategoryMappingsRequestType - {urn:ebay:apis:eBLBaseComponents}GetCategoryMappingsRequestType
@@ -536,7 +524,7 @@ getCategoryMappingsRequest = nil
 puts obj.getCategoryMappings(getCategoryMappingsRequest)
 
 # SYNOPSIS
-#   GetCategorySpecifics(getCategorySpecificsRequest)
+#   getCategorySpecifics(getCategorySpecificsRequest)
 #
 # ARGS
 #   getCategorySpecificsRequest GetCategorySpecificsRequestType - {urn:ebay:apis:eBLBaseComponents}GetCategorySpecificsRequestType
@@ -548,7 +536,7 @@ getCategorySpecificsRequest = nil
 puts obj.getCategorySpecifics(getCategorySpecificsRequest)
 
 # SYNOPSIS
-#   GetChallengeToken(getChallengeTokenRequest)
+#   getChallengeToken(getChallengeTokenRequest)
 #
 # ARGS
 #   getChallengeTokenRequest GetChallengeTokenRequestType - {urn:ebay:apis:eBLBaseComponents}GetChallengeTokenRequestType
@@ -560,7 +548,7 @@ getChallengeTokenRequest = nil
 puts obj.getChallengeToken(getChallengeTokenRequest)
 
 # SYNOPSIS
-#   GetCharities(getCharitiesRequest)
+#   getCharities(getCharitiesRequest)
 #
 # ARGS
 #   getCharitiesRequest GetCharitiesRequestType - {urn:ebay:apis:eBLBaseComponents}GetCharitiesRequestType
@@ -572,7 +560,7 @@ getCharitiesRequest = nil
 puts obj.getCharities(getCharitiesRequest)
 
 # SYNOPSIS
-#   GetClientAlertsAuthToken(getClientAlertsAuthTokenRequest)
+#   getClientAlertsAuthToken(getClientAlertsAuthTokenRequest)
 #
 # ARGS
 #   getClientAlertsAuthTokenRequest GetClientAlertsAuthTokenRequestType - {urn:ebay:apis:eBLBaseComponents}GetClientAlertsAuthTokenRequestType
@@ -584,7 +572,7 @@ getClientAlertsAuthTokenRequest = nil
 puts obj.getClientAlertsAuthToken(getClientAlertsAuthTokenRequest)
 
 # SYNOPSIS
-#   GetContextualKeywords(getContextualKeywordsRequest)
+#   getContextualKeywords(getContextualKeywordsRequest)
 #
 # ARGS
 #   getContextualKeywordsRequest GetContextualKeywordsRequestType - {urn:ebay:apis:eBLBaseComponents}GetContextualKeywordsRequestType
@@ -596,7 +584,7 @@ getContextualKeywordsRequest = nil
 puts obj.getContextualKeywords(getContextualKeywordsRequest)
 
 # SYNOPSIS
-#   GetCrossPromotions(getCrossPromotionsRequest)
+#   getCrossPromotions(getCrossPromotionsRequest)
 #
 # ARGS
 #   getCrossPromotionsRequest GetCrossPromotionsRequestType - {urn:ebay:apis:eBLBaseComponents}GetCrossPromotionsRequestType
@@ -608,7 +596,7 @@ getCrossPromotionsRequest = nil
 puts obj.getCrossPromotions(getCrossPromotionsRequest)
 
 # SYNOPSIS
-#   GetDescriptionTemplates(getDescriptionTemplatesRequest)
+#   getDescriptionTemplates(getDescriptionTemplatesRequest)
 #
 # ARGS
 #   getDescriptionTemplatesRequest GetDescriptionTemplatesRequestType - {urn:ebay:apis:eBLBaseComponents}GetDescriptionTemplatesRequestType
@@ -620,7 +608,7 @@ getDescriptionTemplatesRequest = nil
 puts obj.getDescriptionTemplates(getDescriptionTemplatesRequest)
 
 # SYNOPSIS
-#   GetDispute(getDisputeRequest)
+#   getDispute(getDisputeRequest)
 #
 # ARGS
 #   getDisputeRequest GetDisputeRequestType - {urn:ebay:apis:eBLBaseComponents}GetDisputeRequestType
@@ -632,7 +620,7 @@ getDisputeRequest = nil
 puts obj.getDispute(getDisputeRequest)
 
 # SYNOPSIS
-#   GetFeedback(getFeedbackRequest)
+#   getFeedback(getFeedbackRequest)
 #
 # ARGS
 #   getFeedbackRequest GetFeedbackRequestType - {urn:ebay:apis:eBLBaseComponents}GetFeedbackRequestType
@@ -644,7 +632,7 @@ getFeedbackRequest = nil
 puts obj.getFeedback(getFeedbackRequest)
 
 # SYNOPSIS
-#   GetHighBidders(getHighBiddersRequest)
+#   getHighBidders(getHighBiddersRequest)
 #
 # ARGS
 #   getHighBiddersRequest GetHighBiddersRequestType - {urn:ebay:apis:eBLBaseComponents}GetHighBiddersRequestType
@@ -656,7 +644,7 @@ getHighBiddersRequest = nil
 puts obj.getHighBidders(getHighBiddersRequest)
 
 # SYNOPSIS
-#   GetItem(getItemRequest)
+#   getItem(getItemRequest)
 #
 # ARGS
 #   getItemRequest  GetItemRequestType - {urn:ebay:apis:eBLBaseComponents}GetItemRequestType
@@ -668,7 +656,7 @@ getItemRequest = nil
 puts obj.getItem(getItemRequest)
 
 # SYNOPSIS
-#   GetItemRecommendations(getItemRecommendationsRequest)
+#   getItemRecommendations(getItemRecommendationsRequest)
 #
 # ARGS
 #   getItemRecommendationsRequest GetItemRecommendationsRequestType - {urn:ebay:apis:eBLBaseComponents}GetItemRecommendationsRequestType
@@ -680,7 +668,7 @@ getItemRecommendationsRequest = nil
 puts obj.getItemRecommendations(getItemRecommendationsRequest)
 
 # SYNOPSIS
-#   GetItemShipping(getItemShippingRequest)
+#   getItemShipping(getItemShippingRequest)
 #
 # ARGS
 #   getItemShippingRequest GetItemShippingRequestType - {urn:ebay:apis:eBLBaseComponents}GetItemShippingRequestType
@@ -692,7 +680,7 @@ getItemShippingRequest = nil
 puts obj.getItemShipping(getItemShippingRequest)
 
 # SYNOPSIS
-#   GetItemTransactions(getItemTransactionsRequest)
+#   getItemTransactions(getItemTransactionsRequest)
 #
 # ARGS
 #   getItemTransactionsRequest GetItemTransactionsRequestType - {urn:ebay:apis:eBLBaseComponents}GetItemTransactionsRequestType
@@ -704,7 +692,7 @@ getItemTransactionsRequest = nil
 puts obj.getItemTransactions(getItemTransactionsRequest)
 
 # SYNOPSIS
-#   GetItemsAwaitingFeedback(getItemsAwaitingFeedbackRequest)
+#   getItemsAwaitingFeedback(getItemsAwaitingFeedbackRequest)
 #
 # ARGS
 #   getItemsAwaitingFeedbackRequest GetItemsAwaitingFeedbackRequestType - {urn:ebay:apis:eBLBaseComponents}GetItemsAwaitingFeedbackRequestType
@@ -716,7 +704,7 @@ getItemsAwaitingFeedbackRequest = nil
 puts obj.getItemsAwaitingFeedback(getItemsAwaitingFeedbackRequest)
 
 # SYNOPSIS
-#   GetMemberMessages(getMemberMessagesRequest)
+#   getMemberMessages(getMemberMessagesRequest)
 #
 # ARGS
 #   getMemberMessagesRequest GetMemberMessagesRequestType - {urn:ebay:apis:eBLBaseComponents}GetMemberMessagesRequestType
@@ -728,7 +716,7 @@ getMemberMessagesRequest = nil
 puts obj.getMemberMessages(getMemberMessagesRequest)
 
 # SYNOPSIS
-#   GetMessagePreferences(getMessagePreferencesRequest)
+#   getMessagePreferences(getMessagePreferencesRequest)
 #
 # ARGS
 #   getMessagePreferencesRequest GetMessagePreferencesRequestType - {urn:ebay:apis:eBLBaseComponents}GetMessagePreferencesRequestType
@@ -740,7 +728,7 @@ getMessagePreferencesRequest = nil
 puts obj.getMessagePreferences(getMessagePreferencesRequest)
 
 # SYNOPSIS
-#   GetMyMessages(getMyMessagesRequest)
+#   getMyMessages(getMyMessagesRequest)
 #
 # ARGS
 #   getMyMessagesRequest GetMyMessagesRequestType - {urn:ebay:apis:eBLBaseComponents}GetMyMessagesRequestType
@@ -752,7 +740,7 @@ getMyMessagesRequest = nil
 puts obj.getMyMessages(getMyMessagesRequest)
 
 # SYNOPSIS
-#   GetMyeBayBuying(getMyeBayBuyingRequest)
+#   getMyeBayBuying(getMyeBayBuyingRequest)
 #
 # ARGS
 #   getMyeBayBuyingRequest GetMyeBayBuyingRequestType - {urn:ebay:apis:eBLBaseComponents}GetMyeBayBuyingRequestType
@@ -764,7 +752,7 @@ getMyeBayBuyingRequest = nil
 puts obj.getMyeBayBuying(getMyeBayBuyingRequest)
 
 # SYNOPSIS
-#   GetMyeBayReminders(getMyeBayRemindersRequest)
+#   getMyeBayReminders(getMyeBayRemindersRequest)
 #
 # ARGS
 #   getMyeBayRemindersRequest GetMyeBayRemindersRequestType - {urn:ebay:apis:eBLBaseComponents}GetMyeBayRemindersRequestType
@@ -776,7 +764,7 @@ getMyeBayRemindersRequest = nil
 puts obj.getMyeBayReminders(getMyeBayRemindersRequest)
 
 # SYNOPSIS
-#   GetMyeBaySelling(getMyeBaySellingRequest)
+#   getMyeBaySelling(getMyeBaySellingRequest)
 #
 # ARGS
 #   getMyeBaySellingRequest GetMyeBaySellingRequestType - {urn:ebay:apis:eBLBaseComponents}GetMyeBaySellingRequestType
@@ -788,7 +776,7 @@ getMyeBaySellingRequest = nil
 puts obj.getMyeBaySelling(getMyeBaySellingRequest)
 
 # SYNOPSIS
-#   GetNotificationPreferences(getNotificationPreferencesRequest)
+#   getNotificationPreferences(getNotificationPreferencesRequest)
 #
 # ARGS
 #   getNotificationPreferencesRequest GetNotificationPreferencesRequestType - {urn:ebay:apis:eBLBaseComponents}GetNotificationPreferencesRequestType
@@ -800,7 +788,7 @@ getNotificationPreferencesRequest = nil
 puts obj.getNotificationPreferences(getNotificationPreferencesRequest)
 
 # SYNOPSIS
-#   GetNotificationsUsage(getNotificationsUsageRequest)
+#   getNotificationsUsage(getNotificationsUsageRequest)
 #
 # ARGS
 #   getNotificationsUsageRequest GetNotificationsUsageRequestType - {urn:ebay:apis:eBLBaseComponents}GetNotificationsUsageRequestType
@@ -812,7 +800,7 @@ getNotificationsUsageRequest = nil
 puts obj.getNotificationsUsage(getNotificationsUsageRequest)
 
 # SYNOPSIS
-#   GetOrderTransactions(getOrderTransactionsRequest)
+#   getOrderTransactions(getOrderTransactionsRequest)
 #
 # ARGS
 #   getOrderTransactionsRequest GetOrderTransactionsRequestType - {urn:ebay:apis:eBLBaseComponents}GetOrderTransactionsRequestType
@@ -824,7 +812,7 @@ getOrderTransactionsRequest = nil
 puts obj.getOrderTransactions(getOrderTransactionsRequest)
 
 # SYNOPSIS
-#   GetOrders(getOrdersRequest)
+#   getOrders(getOrdersRequest)
 #
 # ARGS
 #   getOrdersRequest GetOrdersRequestType - {urn:ebay:apis:eBLBaseComponents}GetOrdersRequestType
@@ -836,7 +824,7 @@ getOrdersRequest = nil
 puts obj.getOrders(getOrdersRequest)
 
 # SYNOPSIS
-#   GetPictureManagerDetails(getPictureManagerDetailsRequest)
+#   getPictureManagerDetails(getPictureManagerDetailsRequest)
 #
 # ARGS
 #   getPictureManagerDetailsRequest GetPictureManagerDetailsRequestType - {urn:ebay:apis:eBLBaseComponents}GetPictureManagerDetailsRequestType
@@ -848,7 +836,7 @@ getPictureManagerDetailsRequest = nil
 puts obj.getPictureManagerDetails(getPictureManagerDetailsRequest)
 
 # SYNOPSIS
-#   GetPictureManagerOptions(getPictureManagerOptionsRequest)
+#   getPictureManagerOptions(getPictureManagerOptionsRequest)
 #
 # ARGS
 #   getPictureManagerOptionsRequest GetPictureManagerOptionsRequestType - {urn:ebay:apis:eBLBaseComponents}GetPictureManagerOptionsRequestType
@@ -860,19 +848,7 @@ getPictureManagerOptionsRequest = nil
 puts obj.getPictureManagerOptions(getPictureManagerOptionsRequest)
 
 # SYNOPSIS
-#   GetPopularKeywords(getPopularKeywordsRequest)
-#
-# ARGS
-#   getPopularKeywordsRequest GetPopularKeywordsRequestType - {urn:ebay:apis:eBLBaseComponents}GetPopularKeywordsRequestType
-#
-# RETURNS
-#   getPopularKeywordsResponse GetPopularKeywordsResponseType - {urn:ebay:apis:eBLBaseComponents}GetPopularKeywordsResponseType
-#
-getPopularKeywordsRequest = nil
-puts obj.getPopularKeywords(getPopularKeywordsRequest)
-
-# SYNOPSIS
-#   GetProductFamilyMembers(getProductFamilyMembersRequest)
+#   getProductFamilyMembers(getProductFamilyMembersRequest)
 #
 # ARGS
 #   getProductFamilyMembersRequest GetProductFamilyMembersRequestType - {urn:ebay:apis:eBLBaseComponents}GetProductFamilyMembersRequestType
@@ -884,7 +860,7 @@ getProductFamilyMembersRequest = nil
 puts obj.getProductFamilyMembers(getProductFamilyMembersRequest)
 
 # SYNOPSIS
-#   GetProductFinder(getProductFinderRequest)
+#   getProductFinder(getProductFinderRequest)
 #
 # ARGS
 #   getProductFinderRequest GetProductFinderRequestType - {urn:ebay:apis:eBLBaseComponents}GetProductFinderRequestType
@@ -896,7 +872,7 @@ getProductFinderRequest = nil
 puts obj.getProductFinder(getProductFinderRequest)
 
 # SYNOPSIS
-#   GetProductFinderXSL(getProductFinderXSLRequest)
+#   getProductFinderXSL(getProductFinderXSLRequest)
 #
 # ARGS
 #   getProductFinderXSLRequest GetProductFinderXSLRequestType - {urn:ebay:apis:eBLBaseComponents}GetProductFinderXSLRequestType
@@ -908,7 +884,7 @@ getProductFinderXSLRequest = nil
 puts obj.getProductFinderXSL(getProductFinderXSLRequest)
 
 # SYNOPSIS
-#   GetProductSearchPage(getProductSearchPageRequest)
+#   getProductSearchPage(getProductSearchPageRequest)
 #
 # ARGS
 #   getProductSearchPageRequest GetProductSearchPageRequestType - {urn:ebay:apis:eBLBaseComponents}GetProductSearchPageRequestType
@@ -920,7 +896,7 @@ getProductSearchPageRequest = nil
 puts obj.getProductSearchPage(getProductSearchPageRequest)
 
 # SYNOPSIS
-#   GetProductSearchResults(getProductSearchResultsRequest)
+#   getProductSearchResults(getProductSearchResultsRequest)
 #
 # ARGS
 #   getProductSearchResultsRequest GetProductSearchResultsRequestType - {urn:ebay:apis:eBLBaseComponents}GetProductSearchResultsRequestType
@@ -932,7 +908,7 @@ getProductSearchResultsRequest = nil
 puts obj.getProductSearchResults(getProductSearchResultsRequest)
 
 # SYNOPSIS
-#   GetProductSellingPages(getProductSellingPagesRequest)
+#   getProductSellingPages(getProductSellingPagesRequest)
 #
 # ARGS
 #   getProductSellingPagesRequest GetProductSellingPagesRequestType - {urn:ebay:apis:eBLBaseComponents}GetProductSellingPagesRequestType
@@ -944,19 +920,7 @@ getProductSellingPagesRequest = nil
 puts obj.getProductSellingPages(getProductSellingPagesRequest)
 
 # SYNOPSIS
-#   GetProducts(getProductsRequest)
-#
-# ARGS
-#   getProductsRequest GetProductsRequestType - {urn:ebay:apis:eBLBaseComponents}GetProductsRequestType
-#
-# RETURNS
-#   getProductsResponse GetProductsResponseType - {urn:ebay:apis:eBLBaseComponents}GetProductsResponseType
-#
-getProductsRequest = nil
-puts obj.getProducts(getProductsRequest)
-
-# SYNOPSIS
-#   GetPromotionRules(getPromotionRulesRequest)
+#   getPromotionRules(getPromotionRulesRequest)
 #
 # ARGS
 #   getPromotionRulesRequest GetPromotionRulesRequestType - {urn:ebay:apis:eBLBaseComponents}GetPromotionRulesRequestType
@@ -968,7 +932,7 @@ getPromotionRulesRequest = nil
 puts obj.getPromotionRules(getPromotionRulesRequest)
 
 # SYNOPSIS
-#   GetPromotionalSaleDetails(getPromotionalSaleDetailsRequest)
+#   getPromotionalSaleDetails(getPromotionalSaleDetailsRequest)
 #
 # ARGS
 #   getPromotionalSaleDetailsRequest GetPromotionalSaleDetailsRequestType - {urn:ebay:apis:eBLBaseComponents}GetPromotionalSaleDetailsRequestType
@@ -980,19 +944,7 @@ getPromotionalSaleDetailsRequest = nil
 puts obj.getPromotionalSaleDetails(getPromotionalSaleDetailsRequest)
 
 # SYNOPSIS
-#   GetSearchResults(getSearchResultsRequest)
-#
-# ARGS
-#   getSearchResultsRequest GetSearchResultsRequestType - {urn:ebay:apis:eBLBaseComponents}GetSearchResultsRequestType
-#
-# RETURNS
-#   getSearchResultsResponse GetSearchResultsResponseType - {urn:ebay:apis:eBLBaseComponents}GetSearchResultsResponseType
-#
-getSearchResultsRequest = nil
-puts obj.getSearchResults(getSearchResultsRequest)
-
-# SYNOPSIS
-#   GetSellerDashboard(getSellerDashboardRequest)
+#   getSellerDashboard(getSellerDashboardRequest)
 #
 # ARGS
 #   getSellerDashboardRequest GetSellerDashboardRequestType - {urn:ebay:apis:eBLBaseComponents}GetSellerDashboardRequestType
@@ -1004,7 +956,7 @@ getSellerDashboardRequest = nil
 puts obj.getSellerDashboard(getSellerDashboardRequest)
 
 # SYNOPSIS
-#   GetSellerEvents(getSellerEventsRequest)
+#   getSellerEvents(getSellerEventsRequest)
 #
 # ARGS
 #   getSellerEventsRequest GetSellerEventsRequestType - {urn:ebay:apis:eBLBaseComponents}GetSellerEventsRequestType
@@ -1016,7 +968,7 @@ getSellerEventsRequest = nil
 puts obj.getSellerEvents(getSellerEventsRequest)
 
 # SYNOPSIS
-#   GetSellerList(getSellerListRequest)
+#   getSellerList(getSellerListRequest)
 #
 # ARGS
 #   getSellerListRequest GetSellerListRequestType - {urn:ebay:apis:eBLBaseComponents}GetSellerListRequestType
@@ -1028,7 +980,7 @@ getSellerListRequest = nil
 puts obj.getSellerList(getSellerListRequest)
 
 # SYNOPSIS
-#   GetSellerPayments(getSellerPaymentsRequest)
+#   getSellerPayments(getSellerPaymentsRequest)
 #
 # ARGS
 #   getSellerPaymentsRequest GetSellerPaymentsRequestType - {urn:ebay:apis:eBLBaseComponents}GetSellerPaymentsRequestType
@@ -1040,7 +992,7 @@ getSellerPaymentsRequest = nil
 puts obj.getSellerPayments(getSellerPaymentsRequest)
 
 # SYNOPSIS
-#   GetSellerTransactions(getSellerTransactionsRequest)
+#   getSellerTransactions(getSellerTransactionsRequest)
 #
 # ARGS
 #   getSellerTransactionsRequest GetSellerTransactionsRequestType - {urn:ebay:apis:eBLBaseComponents}GetSellerTransactionsRequestType
@@ -1052,7 +1004,7 @@ getSellerTransactionsRequest = nil
 puts obj.getSellerTransactions(getSellerTransactionsRequest)
 
 # SYNOPSIS
-#   GetSellingManagerAlerts(getSellingManagerAlertsRequest)
+#   getSellingManagerAlerts(getSellingManagerAlertsRequest)
 #
 # ARGS
 #   getSellingManagerAlertsRequest GetSellingManagerAlertsRequestType - {urn:ebay:apis:eBLBaseComponents}GetSellingManagerAlertsRequestType
@@ -1064,7 +1016,7 @@ getSellingManagerAlertsRequest = nil
 puts obj.getSellingManagerAlerts(getSellingManagerAlertsRequest)
 
 # SYNOPSIS
-#   GetSellingManagerEmailLog(getSellingManagerEmailLogRequest)
+#   getSellingManagerEmailLog(getSellingManagerEmailLogRequest)
 #
 # ARGS
 #   getSellingManagerEmailLogRequest GetSellingManagerEmailLogRequestType - {urn:ebay:apis:eBLBaseComponents}GetSellingManagerEmailLogRequestType
@@ -1076,7 +1028,7 @@ getSellingManagerEmailLogRequest = nil
 puts obj.getSellingManagerEmailLog(getSellingManagerEmailLogRequest)
 
 # SYNOPSIS
-#   GetSellingManagerInventory(getSellingManagerInventoryRequest)
+#   getSellingManagerInventory(getSellingManagerInventoryRequest)
 #
 # ARGS
 #   getSellingManagerInventoryRequest GetSellingManagerInventoryRequestType - {urn:ebay:apis:eBLBaseComponents}GetSellingManagerInventoryRequestType
@@ -1088,7 +1040,7 @@ getSellingManagerInventoryRequest = nil
 puts obj.getSellingManagerInventory(getSellingManagerInventoryRequest)
 
 # SYNOPSIS
-#   GetSellingManagerInventoryFolder(getSellingManagerInventoryFolderRequest)
+#   getSellingManagerInventoryFolder(getSellingManagerInventoryFolderRequest)
 #
 # ARGS
 #   getSellingManagerInventoryFolderRequest GetSellingManagerInventoryFolderRequestType - {urn:ebay:apis:eBLBaseComponents}GetSellingManagerInventoryFolderRequestType
@@ -1100,7 +1052,7 @@ getSellingManagerInventoryFolderRequest = nil
 puts obj.getSellingManagerInventoryFolder(getSellingManagerInventoryFolderRequest)
 
 # SYNOPSIS
-#   GetSellingManagerItemAutomationRule(getSellingManagerItemAutomationRuleRequest)
+#   getSellingManagerItemAutomationRule(getSellingManagerItemAutomationRuleRequest)
 #
 # ARGS
 #   getSellingManagerItemAutomationRuleRequest GetSellingManagerItemAutomationRuleRequestType - {urn:ebay:apis:eBLBaseComponents}GetSellingManagerItemAutomationRuleRequestType
@@ -1112,7 +1064,7 @@ getSellingManagerItemAutomationRuleRequest = nil
 puts obj.getSellingManagerItemAutomationRule(getSellingManagerItemAutomationRuleRequest)
 
 # SYNOPSIS
-#   GetSellingManagerSaleRecord(getSellingManagerSaleRecordRequest)
+#   getSellingManagerSaleRecord(getSellingManagerSaleRecordRequest)
 #
 # ARGS
 #   getSellingManagerSaleRecordRequest GetSellingManagerSaleRecordRequestType - {urn:ebay:apis:eBLBaseComponents}GetSellingManagerSaleRecordRequestType
@@ -1124,7 +1076,7 @@ getSellingManagerSaleRecordRequest = nil
 puts obj.getSellingManagerSaleRecord(getSellingManagerSaleRecordRequest)
 
 # SYNOPSIS
-#   GetSellingManagerSoldListings(getSellingManagerSoldListingsRequest)
+#   getSellingManagerSoldListings(getSellingManagerSoldListingsRequest)
 #
 # ARGS
 #   getSellingManagerSoldListingsRequest GetSellingManagerSoldListingsRequestType - {urn:ebay:apis:eBLBaseComponents}GetSellingManagerSoldListingsRequestType
@@ -1136,7 +1088,7 @@ getSellingManagerSoldListingsRequest = nil
 puts obj.getSellingManagerSoldListings(getSellingManagerSoldListingsRequest)
 
 # SYNOPSIS
-#   GetSellingManagerTemplateAutomationRule(getSellingManagerTemplateAutomationRuleRequest)
+#   getSellingManagerTemplateAutomationRule(getSellingManagerTemplateAutomationRuleRequest)
 #
 # ARGS
 #   getSellingManagerTemplateAutomationRuleRequest GetSellingManagerTemplateAutomationRuleRequestType - {urn:ebay:apis:eBLBaseComponents}GetSellingManagerTemplateAutomationRuleRequestType
@@ -1148,7 +1100,7 @@ getSellingManagerTemplateAutomationRuleRequest = nil
 puts obj.getSellingManagerTemplateAutomationRule(getSellingManagerTemplateAutomationRuleRequest)
 
 # SYNOPSIS
-#   GetSellingManagerTemplates(getSellingManagerTemplatesRequest)
+#   getSellingManagerTemplates(getSellingManagerTemplatesRequest)
 #
 # ARGS
 #   getSellingManagerTemplatesRequest GetSellingManagerTemplatesRequestType - {urn:ebay:apis:eBLBaseComponents}GetSellingManagerTemplatesRequestType
@@ -1160,7 +1112,7 @@ getSellingManagerTemplatesRequest = nil
 puts obj.getSellingManagerTemplates(getSellingManagerTemplatesRequest)
 
 # SYNOPSIS
-#   GetSessionID(getSessionIDRequest)
+#   getSessionID(getSessionIDRequest)
 #
 # ARGS
 #   getSessionIDRequest GetSessionIDRequestType - {urn:ebay:apis:eBLBaseComponents}GetSessionIDRequestType
@@ -1172,7 +1124,7 @@ getSessionIDRequest = nil
 puts obj.getSessionID(getSessionIDRequest)
 
 # SYNOPSIS
-#   GetShippingDiscountProfiles(getShippingDiscountProfilesRequest)
+#   getShippingDiscountProfiles(getShippingDiscountProfilesRequest)
 #
 # ARGS
 #   getShippingDiscountProfilesRequest GetShippingDiscountProfilesRequestType - {urn:ebay:apis:eBLBaseComponents}GetShippingDiscountProfilesRequestType
@@ -1184,7 +1136,7 @@ getShippingDiscountProfilesRequest = nil
 puts obj.getShippingDiscountProfiles(getShippingDiscountProfilesRequest)
 
 # SYNOPSIS
-#   GetStore(getStoreRequest)
+#   getStore(getStoreRequest)
 #
 # ARGS
 #   getStoreRequest GetStoreRequestType - {urn:ebay:apis:eBLBaseComponents}GetStoreRequestType
@@ -1196,7 +1148,7 @@ getStoreRequest = nil
 puts obj.getStore(getStoreRequest)
 
 # SYNOPSIS
-#   GetStoreCategoryUpdateStatus(getStoreCategoryUpdateStatusRequest)
+#   getStoreCategoryUpdateStatus(getStoreCategoryUpdateStatusRequest)
 #
 # ARGS
 #   getStoreCategoryUpdateStatusRequest GetStoreCategoryUpdateStatusRequestType - {urn:ebay:apis:eBLBaseComponents}GetStoreCategoryUpdateStatusRequestType
@@ -1208,7 +1160,7 @@ getStoreCategoryUpdateStatusRequest = nil
 puts obj.getStoreCategoryUpdateStatus(getStoreCategoryUpdateStatusRequest)
 
 # SYNOPSIS
-#   GetStoreCustomPage(getStoreCustomPageRequest)
+#   getStoreCustomPage(getStoreCustomPageRequest)
 #
 # ARGS
 #   getStoreCustomPageRequest GetStoreCustomPageRequestType - {urn:ebay:apis:eBLBaseComponents}GetStoreCustomPageRequestType
@@ -1220,7 +1172,7 @@ getStoreCustomPageRequest = nil
 puts obj.getStoreCustomPage(getStoreCustomPageRequest)
 
 # SYNOPSIS
-#   GetStoreOptions(getStoreOptionsRequest)
+#   getStoreOptions(getStoreOptionsRequest)
 #
 # ARGS
 #   getStoreOptionsRequest GetStoreOptionsRequestType - {urn:ebay:apis:eBLBaseComponents}GetStoreOptionsRequestType
@@ -1232,7 +1184,7 @@ getStoreOptionsRequest = nil
 puts obj.getStoreOptions(getStoreOptionsRequest)
 
 # SYNOPSIS
-#   GetStorePreferences(getStorePreferencesRequest)
+#   getStorePreferences(getStorePreferencesRequest)
 #
 # ARGS
 #   getStorePreferencesRequest GetStorePreferencesRequestType - {urn:ebay:apis:eBLBaseComponents}GetStorePreferencesRequestType
@@ -1244,7 +1196,7 @@ getStorePreferencesRequest = nil
 puts obj.getStorePreferences(getStorePreferencesRequest)
 
 # SYNOPSIS
-#   GetSuggestedCategories(getSuggestedCategoriesRequest)
+#   getSuggestedCategories(getSuggestedCategoriesRequest)
 #
 # ARGS
 #   getSuggestedCategoriesRequest GetSuggestedCategoriesRequestType - {urn:ebay:apis:eBLBaseComponents}GetSuggestedCategoriesRequestType
@@ -1256,7 +1208,7 @@ getSuggestedCategoriesRequest = nil
 puts obj.getSuggestedCategories(getSuggestedCategoriesRequest)
 
 # SYNOPSIS
-#   GetTaxTable(getTaxTableRequest)
+#   getTaxTable(getTaxTableRequest)
 #
 # ARGS
 #   getTaxTableRequest GetTaxTableRequestType - {urn:ebay:apis:eBLBaseComponents}GetTaxTableRequestType
@@ -1268,7 +1220,7 @@ getTaxTableRequest = nil
 puts obj.getTaxTable(getTaxTableRequest)
 
 # SYNOPSIS
-#   GetTokenStatus(getTokenStatusRequest)
+#   getTokenStatus(getTokenStatusRequest)
 #
 # ARGS
 #   getTokenStatusRequest GetTokenStatusRequestType - {urn:ebay:apis:eBLBaseComponents}GetTokenStatusRequestType
@@ -1280,7 +1232,7 @@ getTokenStatusRequest = nil
 puts obj.getTokenStatus(getTokenStatusRequest)
 
 # SYNOPSIS
-#   GetUser(getUserRequest)
+#   getUser(getUserRequest)
 #
 # ARGS
 #   getUserRequest  GetUserRequestType - {urn:ebay:apis:eBLBaseComponents}GetUserRequestType
@@ -1292,7 +1244,7 @@ getUserRequest = nil
 puts obj.getUser(getUserRequest)
 
 # SYNOPSIS
-#   GetUserContactDetails(getUserContactDetailsRequest)
+#   getUserContactDetails(getUserContactDetailsRequest)
 #
 # ARGS
 #   getUserContactDetailsRequest GetUserContactDetailsRequestType - {urn:ebay:apis:eBLBaseComponents}GetUserContactDetailsRequestType
@@ -1304,7 +1256,7 @@ getUserContactDetailsRequest = nil
 puts obj.getUserContactDetails(getUserContactDetailsRequest)
 
 # SYNOPSIS
-#   GetUserDisputes(getUserDisputesRequest)
+#   getUserDisputes(getUserDisputesRequest)
 #
 # ARGS
 #   getUserDisputesRequest GetUserDisputesRequestType - {urn:ebay:apis:eBLBaseComponents}GetUserDisputesRequestType
@@ -1316,7 +1268,7 @@ getUserDisputesRequest = nil
 puts obj.getUserDisputes(getUserDisputesRequest)
 
 # SYNOPSIS
-#   GetUserPreferences(getUserPreferencesRequest)
+#   getUserPreferences(getUserPreferencesRequest)
 #
 # ARGS
 #   getUserPreferencesRequest GetUserPreferencesRequestType - {urn:ebay:apis:eBLBaseComponents}GetUserPreferencesRequestType
@@ -1328,7 +1280,7 @@ getUserPreferencesRequest = nil
 puts obj.getUserPreferences(getUserPreferencesRequest)
 
 # SYNOPSIS
-#   GetVeROReasonCodeDetails(getVeROReasonCodeDetailsRequest)
+#   getVeROReasonCodeDetails(getVeROReasonCodeDetailsRequest)
 #
 # ARGS
 #   getVeROReasonCodeDetailsRequest GetVeROReasonCodeDetailsRequestType - {urn:ebay:apis:eBLBaseComponents}GetVeROReasonCodeDetailsRequestType
@@ -1340,7 +1292,7 @@ getVeROReasonCodeDetailsRequest = nil
 puts obj.getVeROReasonCodeDetails(getVeROReasonCodeDetailsRequest)
 
 # SYNOPSIS
-#   GetVeROReportStatus(getVeROReportStatusRequest)
+#   getVeROReportStatus(getVeROReportStatusRequest)
 #
 # ARGS
 #   getVeROReportStatusRequest GetVeROReportStatusRequestType - {urn:ebay:apis:eBLBaseComponents}GetVeROReportStatusRequestType
@@ -1352,7 +1304,7 @@ getVeROReportStatusRequest = nil
 puts obj.getVeROReportStatus(getVeROReportStatusRequest)
 
 # SYNOPSIS
-#   GetWantItNowPost(getWantItNowPostRequest)
+#   getWantItNowPost(getWantItNowPostRequest)
 #
 # ARGS
 #   getWantItNowPostRequest GetWantItNowPostRequestType - {urn:ebay:apis:eBLBaseComponents}GetWantItNowPostRequestType
@@ -1364,7 +1316,7 @@ getWantItNowPostRequest = nil
 puts obj.getWantItNowPost(getWantItNowPostRequest)
 
 # SYNOPSIS
-#   GetWantItNowSearchResults(getWantItNowSearchResultsRequest)
+#   getWantItNowSearchResults(getWantItNowSearchResultsRequest)
 #
 # ARGS
 #   getWantItNowSearchResultsRequest GetWantItNowSearchResultsRequestType - {urn:ebay:apis:eBLBaseComponents}GetWantItNowSearchResultsRequestType
@@ -1376,7 +1328,7 @@ getWantItNowSearchResultsRequest = nil
 puts obj.getWantItNowSearchResults(getWantItNowSearchResultsRequest)
 
 # SYNOPSIS
-#   GeteBayDetails(geteBayDetailsRequest)
+#   geteBayDetails(geteBayDetailsRequest)
 #
 # ARGS
 #   geteBayDetailsRequest GeteBayDetailsRequestType - {urn:ebay:apis:eBLBaseComponents}GeteBayDetailsRequestType
@@ -1388,7 +1340,7 @@ geteBayDetailsRequest = nil
 puts obj.geteBayDetails(geteBayDetailsRequest)
 
 # SYNOPSIS
-#   GeteBayOfficialTime(geteBayOfficialTimeRequest)
+#   geteBayOfficialTime(geteBayOfficialTimeRequest)
 #
 # ARGS
 #   geteBayOfficialTimeRequest GeteBayOfficialTimeRequestType - {urn:ebay:apis:eBLBaseComponents}GeteBayOfficialTimeRequestType
@@ -1400,7 +1352,7 @@ geteBayOfficialTimeRequest = nil
 puts obj.geteBayOfficialTime(geteBayOfficialTimeRequest)
 
 # SYNOPSIS
-#   IssueRefund(issueRefundRequest)
+#   issueRefund(issueRefundRequest)
 #
 # ARGS
 #   issueRefundRequest IssueRefundRequestType - {urn:ebay:apis:eBLBaseComponents}IssueRefundRequestType
@@ -1412,7 +1364,7 @@ issueRefundRequest = nil
 puts obj.issueRefund(issueRefundRequest)
 
 # SYNOPSIS
-#   LeaveFeedback(leaveFeedbackRequest)
+#   leaveFeedback(leaveFeedbackRequest)
 #
 # ARGS
 #   leaveFeedbackRequest LeaveFeedbackRequestType - {urn:ebay:apis:eBLBaseComponents}LeaveFeedbackRequestType
@@ -1424,7 +1376,7 @@ leaveFeedbackRequest = nil
 puts obj.leaveFeedback(leaveFeedbackRequest)
 
 # SYNOPSIS
-#   MoveSellingManagerInventoryFolder(moveSellingManagerInventoryFolderRequest)
+#   moveSellingManagerInventoryFolder(moveSellingManagerInventoryFolderRequest)
 #
 # ARGS
 #   moveSellingManagerInventoryFolderRequest MoveSellingManagerInventoryFolderRequestType - {urn:ebay:apis:eBLBaseComponents}MoveSellingManagerInventoryFolderRequestType
@@ -1436,7 +1388,7 @@ moveSellingManagerInventoryFolderRequest = nil
 puts obj.moveSellingManagerInventoryFolder(moveSellingManagerInventoryFolderRequest)
 
 # SYNOPSIS
-#   PlaceOffer(placeOfferRequest)
+#   placeOffer(placeOfferRequest)
 #
 # ARGS
 #   placeOfferRequest PlaceOfferRequestType - {urn:ebay:apis:eBLBaseComponents}PlaceOfferRequestType
@@ -1448,7 +1400,7 @@ placeOfferRequest = nil
 puts obj.placeOffer(placeOfferRequest)
 
 # SYNOPSIS
-#   RelistFixedPriceItem(relistFixedPriceItemRequest)
+#   relistFixedPriceItem(relistFixedPriceItemRequest)
 #
 # ARGS
 #   relistFixedPriceItemRequest RelistFixedPriceItemRequestType - {urn:ebay:apis:eBLBaseComponents}RelistFixedPriceItemRequestType
@@ -1460,7 +1412,7 @@ relistFixedPriceItemRequest = nil
 puts obj.relistFixedPriceItem(relistFixedPriceItemRequest)
 
 # SYNOPSIS
-#   RelistItem(relistItemRequest)
+#   relistItem(relistItemRequest)
 #
 # ARGS
 #   relistItemRequest RelistItemRequestType - {urn:ebay:apis:eBLBaseComponents}RelistItemRequestType
@@ -1472,7 +1424,7 @@ relistItemRequest = nil
 puts obj.relistItem(relistItemRequest)
 
 # SYNOPSIS
-#   RemoveFromWatchList(removeFromWatchListRequest)
+#   removeFromWatchList(removeFromWatchListRequest)
 #
 # ARGS
 #   removeFromWatchListRequest RemoveFromWatchListRequestType - {urn:ebay:apis:eBLBaseComponents}RemoveFromWatchListRequestType
@@ -1484,7 +1436,7 @@ removeFromWatchListRequest = nil
 puts obj.removeFromWatchList(removeFromWatchListRequest)
 
 # SYNOPSIS
-#   RespondToBestOffer(respondToBestOfferRequest)
+#   respondToBestOffer(respondToBestOfferRequest)
 #
 # ARGS
 #   respondToBestOfferRequest RespondToBestOfferRequestType - {urn:ebay:apis:eBLBaseComponents}RespondToBestOfferRequestType
@@ -1496,7 +1448,7 @@ respondToBestOfferRequest = nil
 puts obj.respondToBestOffer(respondToBestOfferRequest)
 
 # SYNOPSIS
-#   RespondToFeedback(respondToFeedbackRequest)
+#   respondToFeedback(respondToFeedbackRequest)
 #
 # ARGS
 #   respondToFeedbackRequest RespondToFeedbackRequestType - {urn:ebay:apis:eBLBaseComponents}RespondToFeedbackRequestType
@@ -1508,7 +1460,7 @@ respondToFeedbackRequest = nil
 puts obj.respondToFeedback(respondToFeedbackRequest)
 
 # SYNOPSIS
-#   RespondToWantItNowPost(respondToWantItNowPostRequest)
+#   respondToWantItNowPost(respondToWantItNowPostRequest)
 #
 # ARGS
 #   respondToWantItNowPostRequest RespondToWantItNowPostRequestType - {urn:ebay:apis:eBLBaseComponents}RespondToWantItNowPostRequestType
@@ -1520,7 +1472,7 @@ respondToWantItNowPostRequest = nil
 puts obj.respondToWantItNowPost(respondToWantItNowPostRequest)
 
 # SYNOPSIS
-#   ReviseCheckoutStatus(reviseCheckoutStatusRequest)
+#   reviseCheckoutStatus(reviseCheckoutStatusRequest)
 #
 # ARGS
 #   reviseCheckoutStatusRequest ReviseCheckoutStatusRequestType - {urn:ebay:apis:eBLBaseComponents}ReviseCheckoutStatusRequestType
@@ -1532,7 +1484,7 @@ reviseCheckoutStatusRequest = nil
 puts obj.reviseCheckoutStatus(reviseCheckoutStatusRequest)
 
 # SYNOPSIS
-#   ReviseFixedPriceItem(reviseFixedPriceItemRequest)
+#   reviseFixedPriceItem(reviseFixedPriceItemRequest)
 #
 # ARGS
 #   reviseFixedPriceItemRequest ReviseFixedPriceItemRequestType - {urn:ebay:apis:eBLBaseComponents}ReviseFixedPriceItemRequestType
@@ -1544,7 +1496,7 @@ reviseFixedPriceItemRequest = nil
 puts obj.reviseFixedPriceItem(reviseFixedPriceItemRequest)
 
 # SYNOPSIS
-#   ReviseInventoryStatus(reviseInventoryStatusRequest)
+#   reviseInventoryStatus(reviseInventoryStatusRequest)
 #
 # ARGS
 #   reviseInventoryStatusRequest ReviseInventoryStatusRequestType - {urn:ebay:apis:eBLBaseComponents}ReviseInventoryStatusRequestType
@@ -1556,7 +1508,7 @@ reviseInventoryStatusRequest = nil
 puts obj.reviseInventoryStatus(reviseInventoryStatusRequest)
 
 # SYNOPSIS
-#   ReviseItem(reviseItemRequest)
+#   reviseItem(reviseItemRequest)
 #
 # ARGS
 #   reviseItemRequest ReviseItemRequestType - {urn:ebay:apis:eBLBaseComponents}ReviseItemRequestType
@@ -1568,7 +1520,7 @@ reviseItemRequest = nil
 puts obj.reviseItem(reviseItemRequest)
 
 # SYNOPSIS
-#   ReviseMyMessages(reviseMyMessagesRequest)
+#   reviseMyMessages(reviseMyMessagesRequest)
 #
 # ARGS
 #   reviseMyMessagesRequest ReviseMyMessagesRequestType - {urn:ebay:apis:eBLBaseComponents}ReviseMyMessagesRequestType
@@ -1580,7 +1532,7 @@ reviseMyMessagesRequest = nil
 puts obj.reviseMyMessages(reviseMyMessagesRequest)
 
 # SYNOPSIS
-#   ReviseMyMessagesFolders(reviseMyMessagesFoldersRequest)
+#   reviseMyMessagesFolders(reviseMyMessagesFoldersRequest)
 #
 # ARGS
 #   reviseMyMessagesFoldersRequest ReviseMyMessagesFoldersRequestType - {urn:ebay:apis:eBLBaseComponents}ReviseMyMessagesFoldersRequestType
@@ -1592,7 +1544,7 @@ reviseMyMessagesFoldersRequest = nil
 puts obj.reviseMyMessagesFolders(reviseMyMessagesFoldersRequest)
 
 # SYNOPSIS
-#   ReviseSellingManagerInventoryFolder(reviseSellingManagerInventoryFolderRequest)
+#   reviseSellingManagerInventoryFolder(reviseSellingManagerInventoryFolderRequest)
 #
 # ARGS
 #   reviseSellingManagerInventoryFolderRequest ReviseSellingManagerInventoryFolderRequestType - {urn:ebay:apis:eBLBaseComponents}ReviseSellingManagerInventoryFolderRequestType
@@ -1604,7 +1556,7 @@ reviseSellingManagerInventoryFolderRequest = nil
 puts obj.reviseSellingManagerInventoryFolder(reviseSellingManagerInventoryFolderRequest)
 
 # SYNOPSIS
-#   ReviseSellingManagerProduct(reviseSellingManagerProductRequest)
+#   reviseSellingManagerProduct(reviseSellingManagerProductRequest)
 #
 # ARGS
 #   reviseSellingManagerProductRequest ReviseSellingManagerProductRequestType - {urn:ebay:apis:eBLBaseComponents}ReviseSellingManagerProductRequestType
@@ -1616,7 +1568,7 @@ reviseSellingManagerProductRequest = nil
 puts obj.reviseSellingManagerProduct(reviseSellingManagerProductRequest)
 
 # SYNOPSIS
-#   ReviseSellingManagerSaleRecord(reviseSellingManagerSaleRecordRequest)
+#   reviseSellingManagerSaleRecord(reviseSellingManagerSaleRecordRequest)
 #
 # ARGS
 #   reviseSellingManagerSaleRecordRequest ReviseSellingManagerSaleRecordRequestType - {urn:ebay:apis:eBLBaseComponents}ReviseSellingManagerSaleRecordRequestType
@@ -1628,7 +1580,7 @@ reviseSellingManagerSaleRecordRequest = nil
 puts obj.reviseSellingManagerSaleRecord(reviseSellingManagerSaleRecordRequest)
 
 # SYNOPSIS
-#   ReviseSellingManagerTemplate(reviseSellingManagerTemplateRequest)
+#   reviseSellingManagerTemplate(reviseSellingManagerTemplateRequest)
 #
 # ARGS
 #   reviseSellingManagerTemplateRequest ReviseSellingManagerTemplateRequestType - {urn:ebay:apis:eBLBaseComponents}ReviseSellingManagerTemplateRequestType
@@ -1640,7 +1592,7 @@ reviseSellingManagerTemplateRequest = nil
 puts obj.reviseSellingManagerTemplate(reviseSellingManagerTemplateRequest)
 
 # SYNOPSIS
-#   RevokeToken(revokeTokenRequest)
+#   revokeToken(revokeTokenRequest)
 #
 # ARGS
 #   revokeTokenRequest RevokeTokenRequestType - {urn:ebay:apis:eBLBaseComponents}RevokeTokenRequestType
@@ -1652,7 +1604,7 @@ revokeTokenRequest = nil
 puts obj.revokeToken(revokeTokenRequest)
 
 # SYNOPSIS
-#   SaveItemToSellingManagerTemplate(saveItemToSellingManagerTemplateRequest)
+#   saveItemToSellingManagerTemplate(saveItemToSellingManagerTemplateRequest)
 #
 # ARGS
 #   saveItemToSellingManagerTemplateRequest SaveItemToSellingManagerTemplateRequestType - {urn:ebay:apis:eBLBaseComponents}SaveItemToSellingManagerTemplateRequestType
@@ -1664,7 +1616,7 @@ saveItemToSellingManagerTemplateRequest = nil
 puts obj.saveItemToSellingManagerTemplate(saveItemToSellingManagerTemplateRequest)
 
 # SYNOPSIS
-#   SellerReverseDispute(sellerReverseDisputeRequest)
+#   sellerReverseDispute(sellerReverseDisputeRequest)
 #
 # ARGS
 #   sellerReverseDisputeRequest SellerReverseDisputeRequestType - {urn:ebay:apis:eBLBaseComponents}SellerReverseDisputeRequestType
@@ -1676,7 +1628,7 @@ sellerReverseDisputeRequest = nil
 puts obj.sellerReverseDispute(sellerReverseDisputeRequest)
 
 # SYNOPSIS
-#   SendInvoice(sendInvoiceRequest)
+#   sendInvoice(sendInvoiceRequest)
 #
 # ARGS
 #   sendInvoiceRequest SendInvoiceRequestType - {urn:ebay:apis:eBLBaseComponents}SendInvoiceRequestType
@@ -1688,7 +1640,7 @@ sendInvoiceRequest = nil
 puts obj.sendInvoice(sendInvoiceRequest)
 
 # SYNOPSIS
-#   SetMessagePreferences(setMessagePreferencesRequest)
+#   setMessagePreferences(setMessagePreferencesRequest)
 #
 # ARGS
 #   setMessagePreferencesRequest SetMessagePreferencesRequestType - {urn:ebay:apis:eBLBaseComponents}SetMessagePreferencesRequestType
@@ -1700,7 +1652,7 @@ setMessagePreferencesRequest = nil
 puts obj.setMessagePreferences(setMessagePreferencesRequest)
 
 # SYNOPSIS
-#   SetNotificationPreferences(setNotificationPreferencesRequest)
+#   setNotificationPreferences(setNotificationPreferencesRequest)
 #
 # ARGS
 #   setNotificationPreferencesRequest SetNotificationPreferencesRequestType - {urn:ebay:apis:eBLBaseComponents}SetNotificationPreferencesRequestType
@@ -1712,7 +1664,7 @@ setNotificationPreferencesRequest = nil
 puts obj.setNotificationPreferences(setNotificationPreferencesRequest)
 
 # SYNOPSIS
-#   SetPictureManagerDetails(setPictureManagerDetailsRequest)
+#   setPictureManagerDetails(setPictureManagerDetailsRequest)
 #
 # ARGS
 #   setPictureManagerDetailsRequest SetPictureManagerDetailsRequestType - {urn:ebay:apis:eBLBaseComponents}SetPictureManagerDetailsRequestType
@@ -1724,7 +1676,7 @@ setPictureManagerDetailsRequest = nil
 puts obj.setPictureManagerDetails(setPictureManagerDetailsRequest)
 
 # SYNOPSIS
-#   SetPromotionalSale(setPromotionalSaleRequest)
+#   setPromotionalSale(setPromotionalSaleRequest)
 #
 # ARGS
 #   setPromotionalSaleRequest SetPromotionalSaleRequestType - {urn:ebay:apis:eBLBaseComponents}SetPromotionalSaleRequestType
@@ -1736,7 +1688,7 @@ setPromotionalSaleRequest = nil
 puts obj.setPromotionalSale(setPromotionalSaleRequest)
 
 # SYNOPSIS
-#   SetPromotionalSaleListings(setPromotionalSaleListingsRequest)
+#   setPromotionalSaleListings(setPromotionalSaleListingsRequest)
 #
 # ARGS
 #   setPromotionalSaleListingsRequest SetPromotionalSaleListingsRequestType - {urn:ebay:apis:eBLBaseComponents}SetPromotionalSaleListingsRequestType
@@ -1748,7 +1700,7 @@ setPromotionalSaleListingsRequest = nil
 puts obj.setPromotionalSaleListings(setPromotionalSaleListingsRequest)
 
 # SYNOPSIS
-#   SetSellingManagerFeedbackOptions(setSellingManagerFeedbackOptionsRequest)
+#   setSellingManagerFeedbackOptions(setSellingManagerFeedbackOptionsRequest)
 #
 # ARGS
 #   setSellingManagerFeedbackOptionsRequest SetSellingManagerFeedbackOptionsRequestType - {urn:ebay:apis:eBLBaseComponents}SetSellingManagerFeedbackOptionsRequestType
@@ -1760,7 +1712,7 @@ setSellingManagerFeedbackOptionsRequest = nil
 puts obj.setSellingManagerFeedbackOptions(setSellingManagerFeedbackOptionsRequest)
 
 # SYNOPSIS
-#   SetSellingManagerItemAutomationRule(setSellingManagerItemAutomationRuleRequest)
+#   setSellingManagerItemAutomationRule(setSellingManagerItemAutomationRuleRequest)
 #
 # ARGS
 #   setSellingManagerItemAutomationRuleRequest SetSellingManagerItemAutomationRuleRequestType - {urn:ebay:apis:eBLBaseComponents}SetSellingManagerItemAutomationRuleRequestType
@@ -1772,7 +1724,7 @@ setSellingManagerItemAutomationRuleRequest = nil
 puts obj.setSellingManagerItemAutomationRule(setSellingManagerItemAutomationRuleRequest)
 
 # SYNOPSIS
-#   SetSellingManagerTemplateAutomationRule(setSellingManagerTemplateAutomationRuleRequest)
+#   setSellingManagerTemplateAutomationRule(setSellingManagerTemplateAutomationRuleRequest)
 #
 # ARGS
 #   setSellingManagerTemplateAutomationRuleRequest SetSellingManagerTemplateAutomationRuleRequestType - {urn:ebay:apis:eBLBaseComponents}SetSellingManagerTemplateAutomationRuleRequestType
@@ -1784,7 +1736,7 @@ setSellingManagerTemplateAutomationRuleRequest = nil
 puts obj.setSellingManagerTemplateAutomationRule(setSellingManagerTemplateAutomationRuleRequest)
 
 # SYNOPSIS
-#   SetShippingDiscountProfiles(setShippingDiscountProfilesRequest)
+#   setShippingDiscountProfiles(setShippingDiscountProfilesRequest)
 #
 # ARGS
 #   setShippingDiscountProfilesRequest SetShippingDiscountProfilesRequestType - {urn:ebay:apis:eBLBaseComponents}SetShippingDiscountProfilesRequestType
@@ -1796,7 +1748,7 @@ setShippingDiscountProfilesRequest = nil
 puts obj.setShippingDiscountProfiles(setShippingDiscountProfilesRequest)
 
 # SYNOPSIS
-#   SetStore(setStoreRequest)
+#   setStore(setStoreRequest)
 #
 # ARGS
 #   setStoreRequest SetStoreRequestType - {urn:ebay:apis:eBLBaseComponents}SetStoreRequestType
@@ -1808,7 +1760,7 @@ setStoreRequest = nil
 puts obj.setStore(setStoreRequest)
 
 # SYNOPSIS
-#   SetStoreCategories(setStoreCategoriesRequest)
+#   setStoreCategories(setStoreCategoriesRequest)
 #
 # ARGS
 #   setStoreCategoriesRequest SetStoreCategoriesRequestType - {urn:ebay:apis:eBLBaseComponents}SetStoreCategoriesRequestType
@@ -1820,7 +1772,7 @@ setStoreCategoriesRequest = nil
 puts obj.setStoreCategories(setStoreCategoriesRequest)
 
 # SYNOPSIS
-#   SetStoreCustomPage(setStoreCustomPageRequest)
+#   setStoreCustomPage(setStoreCustomPageRequest)
 #
 # ARGS
 #   setStoreCustomPageRequest SetStoreCustomPageRequestType - {urn:ebay:apis:eBLBaseComponents}SetStoreCustomPageRequestType
@@ -1832,7 +1784,7 @@ setStoreCustomPageRequest = nil
 puts obj.setStoreCustomPage(setStoreCustomPageRequest)
 
 # SYNOPSIS
-#   SetStorePreferences(setStorePreferencesRequest)
+#   setStorePreferences(setStorePreferencesRequest)
 #
 # ARGS
 #   setStorePreferencesRequest SetStorePreferencesRequestType - {urn:ebay:apis:eBLBaseComponents}SetStorePreferencesRequestType
@@ -1844,7 +1796,7 @@ setStorePreferencesRequest = nil
 puts obj.setStorePreferences(setStorePreferencesRequest)
 
 # SYNOPSIS
-#   SetTaxTable(setTaxTableRequest)
+#   setTaxTable(setTaxTableRequest)
 #
 # ARGS
 #   setTaxTableRequest SetTaxTableRequestType - {urn:ebay:apis:eBLBaseComponents}SetTaxTableRequestType
@@ -1856,7 +1808,7 @@ setTaxTableRequest = nil
 puts obj.setTaxTable(setTaxTableRequest)
 
 # SYNOPSIS
-#   SetUserNotes(setUserNotesRequest)
+#   setUserNotes(setUserNotesRequest)
 #
 # ARGS
 #   setUserNotesRequest SetUserNotesRequestType - {urn:ebay:apis:eBLBaseComponents}SetUserNotesRequestType
@@ -1868,7 +1820,7 @@ setUserNotesRequest = nil
 puts obj.setUserNotes(setUserNotesRequest)
 
 # SYNOPSIS
-#   SetUserPreferences(setUserPreferencesRequest)
+#   setUserPreferences(setUserPreferencesRequest)
 #
 # ARGS
 #   setUserPreferencesRequest SetUserPreferencesRequestType - {urn:ebay:apis:eBLBaseComponents}SetUserPreferencesRequestType
@@ -1880,7 +1832,7 @@ setUserPreferencesRequest = nil
 puts obj.setUserPreferences(setUserPreferencesRequest)
 
 # SYNOPSIS
-#   UploadSiteHostedPictures(uploadSiteHostedPicturesRequest)
+#   uploadSiteHostedPictures(uploadSiteHostedPicturesRequest)
 #
 # ARGS
 #   uploadSiteHostedPicturesRequest UploadSiteHostedPicturesRequestType - {urn:ebay:apis:eBLBaseComponents}UploadSiteHostedPicturesRequestType
@@ -1892,7 +1844,7 @@ uploadSiteHostedPicturesRequest = nil
 puts obj.uploadSiteHostedPictures(uploadSiteHostedPicturesRequest)
 
 # SYNOPSIS
-#   ValidateChallengeInput(validateChallengeInputRequest)
+#   validateChallengeInput(validateChallengeInputRequest)
 #
 # ARGS
 #   validateChallengeInputRequest ValidateChallengeInputRequestType - {urn:ebay:apis:eBLBaseComponents}ValidateChallengeInputRequestType
@@ -1904,7 +1856,7 @@ validateChallengeInputRequest = nil
 puts obj.validateChallengeInput(validateChallengeInputRequest)
 
 # SYNOPSIS
-#   ValidateTestUserRegistration(validateTestUserRegistrationRequest)
+#   validateTestUserRegistration(validateTestUserRegistrationRequest)
 #
 # ARGS
 #   validateTestUserRegistrationRequest ValidateTestUserRegistrationRequestType - {urn:ebay:apis:eBLBaseComponents}ValidateTestUserRegistrationRequestType
@@ -1916,7 +1868,7 @@ validateTestUserRegistrationRequest = nil
 puts obj.validateTestUserRegistration(validateTestUserRegistrationRequest)
 
 # SYNOPSIS
-#   VeROReportItems(veROReportItemsRequest)
+#   veROReportItems(veROReportItemsRequest)
 #
 # ARGS
 #   veROReportItemsRequest VeROReportItemsRequestType - {urn:ebay:apis:eBLBaseComponents}VeROReportItemsRequestType
@@ -1928,7 +1880,7 @@ veROReportItemsRequest = nil
 puts obj.veROReportItems(veROReportItemsRequest)
 
 # SYNOPSIS
-#   VerifyAddFixedPriceItem(verifyAddFixedPriceItemRequest)
+#   verifyAddFixedPriceItem(verifyAddFixedPriceItemRequest)
 #
 # ARGS
 #   verifyAddFixedPriceItemRequest VerifyAddFixedPriceItemRequestType - {urn:ebay:apis:eBLBaseComponents}VerifyAddFixedPriceItemRequestType
@@ -1940,7 +1892,7 @@ verifyAddFixedPriceItemRequest = nil
 puts obj.verifyAddFixedPriceItem(verifyAddFixedPriceItemRequest)
 
 # SYNOPSIS
-#   VerifyAddItem(verifyAddItemRequest)
+#   verifyAddItem(verifyAddItemRequest)
 #
 # ARGS
 #   verifyAddItemRequest VerifyAddItemRequestType - {urn:ebay:apis:eBLBaseComponents}VerifyAddItemRequestType
@@ -1952,7 +1904,7 @@ verifyAddItemRequest = nil
 puts obj.verifyAddItem(verifyAddItemRequest)
 
 # SYNOPSIS
-#   VerifyAddSecondChanceItem(verifyAddSecondChanceItemRequest)
+#   verifyAddSecondChanceItem(verifyAddSecondChanceItemRequest)
 #
 # ARGS
 #   verifyAddSecondChanceItemRequest VerifyAddSecondChanceItemRequestType - {urn:ebay:apis:eBLBaseComponents}VerifyAddSecondChanceItemRequestType
@@ -1964,7 +1916,7 @@ verifyAddSecondChanceItemRequest = nil
 puts obj.verifyAddSecondChanceItem(verifyAddSecondChanceItemRequest)
 
 # SYNOPSIS
-#   VerifyRelistItem(verifyRelistItemRequest)
+#   verifyRelistItem(verifyRelistItemRequest)
 #
 # ARGS
 #   verifyRelistItemRequest VerifyRelistItemRequestType - {urn:ebay:apis:eBLBaseComponents}VerifyRelistItemRequestType
@@ -1974,5 +1926,6 @@ puts obj.verifyAddSecondChanceItem(verifyAddSecondChanceItemRequest)
 #
 verifyRelistItemRequest = nil
 puts obj.verifyRelistItem(verifyRelistItemRequest)
+
 
 
