@@ -32,7 +32,7 @@ require 'eBayAPI'
 load('myCredentials.rb')
 
 $eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
-
+$eBay.debug = true
 
 class TestItems < Test::Unit::TestCase
   @@item_title = "eBay4R Test Case Item #{Time.new.to_i}" ;
@@ -51,7 +51,17 @@ class TestItems < Test::Unit::TestCase
       :Description => "no returns",
       :ReturnsAcceptedOption => "ReturnsNotAccepted"
     }
-    resp = $eBay.AddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:CategoryID => 268),
+
+    brand = EBay::BrandMPN({:brand => "Does not apply", :mPN => "Does not apply"})
+
+    product_listing_details = EBay::ProductListingDetails({
+      :EAN => "Does not apply",
+      :ISBN => "Does not apply",
+      :UPC => "Does not apply",
+      :BrandMPN => brand
+    })
+
+    resp = $eBay.AddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:CategoryID => 150192),
                                             :Title => @@item_title,
                                             :Description => @@item_descr,
                                             :Location => 'RubyForge',
@@ -64,7 +74,8 @@ class TestItems < Test::Unit::TestCase
                                             :DispatchTimeMax => 1,
                                             :ShippingDetails => EBay.ShippingDetails(shipping_options),
                                             :ReturnPolicy => EBay::ReturnPolicy(return_policy_options),
-                                            :PaymentMethods => ["VisaMC"]))
+                                            :PaymentMethods => ["VisaMC"],
+                                            :ProductListingDetails => product_listing_details))
 
     assert_respond_to(resp, "timestamp")
     assert_respond_to(resp, "ack")
