@@ -61,7 +61,10 @@ class TestItems < Test::Unit::TestCase
       :BrandMPN => brand
     })
 
-    resp = $eBay.AddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:CategoryID => 150192),
+    specifics = [EBay::NameValueList({:Name =>"Brand", :Value =>"Efren"}),
+                 EBay::NameValueList({:Name =>"UPC", :Value =>"Does not Apply"})]
+
+    resp = $eBay.AddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:CategoryID => 19115),
                                             :Title => @@item_title,
                                             :Description => @@item_descr,
                                             :Location => 'RubyForge',
@@ -75,7 +78,9 @@ class TestItems < Test::Unit::TestCase
                                             :ShippingDetails => EBay.ShippingDetails(shipping_options),
                                             :ReturnPolicy => EBay::ReturnPolicy(return_policy_options),
                                             :PaymentMethods => ["VisaMC"],
-                                            :ProductListingDetails => product_listing_details))
+                                            :ItemSpecifics => specifics
+                                            )
+                        )
 
     assert_respond_to(resp, "timestamp")
     assert_respond_to(resp, "ack")
