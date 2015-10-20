@@ -1,6 +1,6 @@
 # Fill these in before running the examples:
 
-$appId     = 'my_app_id'
-$devId     = 'my_dev_id'
-$certId    = 'my_cert_id'
-$authToken = 'my_auth_token'
+$appId     = 'CrystalC-4f75-4a31-a866-f776cfcb3005'
+$devId     = 'C4R717157S1331817A1Z3F3164C16F'
+$certId    = 'fa3a209c-590a-4f70-9b89-4641f1331e16'
+$authToken = "AgAAAA**AQAAAA**aAAAAA**VWVSVA**nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6AEmISiAZmEqA6dj6x9nY+seQ**szIAAA**AAMAAA**diarcjs51oQvvJPY3O3UNHqDDnBtesuTpEQSSAzANJFWwQRrM2f0bq85TwPGZ4+O+TkXPPfpmo9S+Y2HWg6kEklYQQLXP7wVvk66rr7qw8gai7tt5DnK8XWCe3w8xIX4mhXBM8wo+7iuWz1u4QusuWW2pdqw3CiLX/leLRvtr7ly8V2CaQgGJbAurrbEiUINVHdKDL3ge1Z+sdar5FW2qn9NCATXudsEt7uIkgSvX4iW5MC4Yrih7NwCq19uHNBlUG4vmJPUNHMwj/QLiq0gN83Rfz1v7vzGhxwEEYNy4wRq4OjkaMKzikmbU5RfCCaWk+mC/HlTJxI9fh40XfVIZQGmhy78dk9cL3HBq5EVINA58JKtkX+Umn4Yw3c92ctK1Evz2i50IGjyN3dmm8lTGsyBniib1QWySowaHfDC0Etim8adYvBli40KlbsNsAYcsMbMGa5Z/3mRhdIs6EStul2JKMNFCsNvh6Cs+w1D1nnhyYT6CMrM+XoIuJJ04coIOdUzDpqQXnuSyUoTobZTyBvh8IPuVFggXeo4OlxWX8Xeljtxe8FYoIemeQdWRhmjDbu2euZ8Fm7UK7sOZ2dXgTxnNAF2kbMKoxN30qMwD7MBUXg6EDvwuUjMuwjVjmsHNXa7kkQZwzbKwxE+I0dOnT1YgSoGhuwZ/rHv0/BL5qFULB6qvFArmcdwNdw38jSaWK+CDN7RNJBH1Ny7kzy5RJbFL0rc1vrkmunPSlocGsnmfA+MRfn6ztjXxjrxj3uq"

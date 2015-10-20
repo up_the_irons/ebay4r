@@ -61,10 +61,10 @@ class TestItems < Test::Unit::TestCase
       :BrandMPN => brand
     })
 
-    specifics = [EBay::NameValueList({:Name =>"Brand", :Value =>"Efren"}),
+    specifics = [EBay::NameValueList({:Name =>"Brand", :Value =>"Does not Apply"}),
                  EBay::NameValueList({:Name =>"UPC", :Value =>"Does not Apply"})]
 
-    resp = $eBay.AddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:CategoryID => 19115),
+    resp = $eBay.AddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:CategoryID => 171228),
                                             :Title => @@item_title,
                                             :Description => @@item_descr,
                                             :Location => 'RubyForge',
