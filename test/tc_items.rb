@@ -31,12 +31,12 @@ require 'eBayAPI'
 # This file must be in the current directory your $RUBYLIB environment var.
 load('myCredentials.rb')
 
-$eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
-$eBay.debug = true
-
 class TestItems < Test::Unit::TestCase
   @@item_title = "eBay4R Test Case Item #{Time.new.to_i}" ;
   @@item_descr = 'eBay API for Ruby @ http://ebay4r.rubyforge.org/ ';
+
+  @@eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
+  @@eBay.debug = true
 
   def test_add_item
     shipping_options = {
@@ -64,7 +64,7 @@ class TestItems < Test::Unit::TestCase
     specifics = [EBay::NameValueList({:Name =>"Brand", :Value =>"Does not Apply"}),
                  EBay::NameValueList({:Name =>"UPC", :Value =>"Does not Apply"})]
 
-    resp = $eBay.AddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:CategoryID => 171228),
+    resp = @@eBay.AddItem(:Item => EBay.Item(:PrimaryCategory => EBay.Category(:CategoryID => 171228),
                                             :Title => @@item_title,
                                             :Description => @@item_descr,
                                             :Location => 'RubyForge',
@@ -95,11 +95,11 @@ class TestItems < Test::Unit::TestCase
   end
 
   def test_add_item_no_params
-    assert_raise(EBay::Error::ApplicationError) { $eBay.AddItem() }
+    assert_raise(EBay::Error::ApplicationError) { @@eBay.AddItem() }
   end
 
   def test_get_item
-    resp = $eBay.GetItem(:DetailLevel => 'ReturnAll', :ItemID => @@item_id)
+    resp = @@eBay.GetItem(:DetailLevel => 'ReturnAll', :ItemID => @@item_id)
 
     assert_respond_to(resp, "timestamp")
     assert_respond_to(resp, "ack")
