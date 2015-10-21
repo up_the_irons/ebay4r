@@ -1,0 +1,19 @@
+PATH
+  remote: .
+  specs:
+    ebay4r (2.1)
+      soap4r-ruby1.9 (= 2.0.5)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    soap4r-ruby1.9 (2.0.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ebay4r!
+
+BUNDLED WITH
+   1.10.6
