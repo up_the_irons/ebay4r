@@ -1,0 +1,4 @@
+$appId     = ''
+$devId     = ''
+$certId    = ''
+$authToken = ''

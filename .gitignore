@@ -1,0 +1,5 @@
+.DS_Store
+.*.sw*
+.sw*
+.idea/
+test-credentials.rb

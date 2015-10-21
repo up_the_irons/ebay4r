@@ -28,18 +28,16 @@ $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 require 'test/unit'
 require 'eBayAPI'
 
-# This file must be in the current directory your $RUBYLIB environment var.
-load('myCredentials.rb')
-
-$eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true, :site_id => 100)
+load(File.join(File.dirname(__FILE__), "..", "config", "test-credentials.rb"))
 
 class TestRouting < Test::Unit::TestCase
+  @@eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true, :site_id => 100)
 
   # If our routing works correctly, the GetCategories call should go to eBay Motors instead of default US site
   def test_ebay_motors_categories
 
     # Call "GetCategories"
-    resp = $eBay.GetCategories(:DetailLevel => 'ReturnAll', :CategorySideID => 100, :LevelLimit => 1)
+    resp = @@eBay.GetCategories(:DetailLevel => 'ReturnAll', :CategorySideID => 100, :LevelLimit => 1)
  
     assert_respond_to(resp, "timestamp")
     assert_respond_to(resp, "ack")

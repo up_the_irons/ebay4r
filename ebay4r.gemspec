@@ -5,7 +5,7 @@ require 'rubygems'
 
 Gem::Specification.new do |s|
   s.name     = "ebay4r"
-  s.version  = "2.0"
+  s.version  = "2.1"
   s.author   = "Garry Dolley"
   s.email    = "gdolley@ucla.edu"
   s.homepage = "http://ebay4r.rubyforge.org"

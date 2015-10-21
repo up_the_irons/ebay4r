@@ -28,14 +28,13 @@ $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 require 'test/unit'
 require 'eBayAPI'
 
-# This file must be in the current directory your $RUBYLIB environment var.
-load('myCredentials.rb')
-
-$eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
+load(File.join(File.dirname(__FILE__), "..", "config", "test-credentials.rb"))
 
 class TestHelloWorld < Test::Unit::TestCase
+  @@eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true)
+
   def test_simplest_call
-    resp = $eBay.GeteBayOfficialTime
+    resp = @@eBay.GeteBayOfficialTime
 
     assert_respond_to(resp, "timestamp")
     assert_respond_to(resp, "ack")

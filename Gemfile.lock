@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ebay4r (2.0)
+    ebay4r (2.1)
       soap4r-ruby1.9 (= 2.0.5)
 
 GEM
