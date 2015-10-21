@@ -28,8 +28,7 @@ $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 require 'test/unit'
 require 'eBayAPI'
 
-# This file must be in the current directory your $RUBYLIB environment var.
-load('myCredentials.rb')
+load(File.join(File.dirname(__FILE__), "..", "config", "test-credentials.rb"))
 
 class TestItems < Test::Unit::TestCase
   @@item_title = "eBay4R Test Case Item #{Time.new.to_i}" ;

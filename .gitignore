@@ -2,3 +2,4 @@
 .*.sw*
 .sw*
 .idea/
+test-credentials.rb
