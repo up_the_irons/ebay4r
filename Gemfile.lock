@@ -1,0 +1,17 @@
+PATH
+  remote: .
+  specs:
+    ebay4r (2.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ebay4r!
+
+BUNDLED WITH
+   1.10.5

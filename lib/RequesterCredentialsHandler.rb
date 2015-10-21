@@ -40,7 +40,7 @@ module EBay
       @token, @devId, @appId, @cert = eBayAuthToken, devId, appId, authCert
     end 
 
-    def on_simple_outbound 
+    def on_simple_outbound
       creds = { Credentials => { DevId => @devId, AppId => @appId, AuthCert => @cert } }
       
       # In a handful of calls mostly related to generating tokens in 

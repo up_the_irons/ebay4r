@@ -1,10 +1,11 @@
-# $Id: ebay4r.gemspec,v 1.8 2006/10/10 08:04:49 garrydolley Exp $
+# -*- encoding: utf-8 -*-
+$:.push File.expand_path("../lib", __FILE__)
 
 require 'rubygems'
 
-spec = Gem::Specification.new do |s|
-  s.name     = "ebay"
-  s.version  = "1.1"
+Gem::Specification.new do |s|
+  s.name     = "ebay4r"
+  s.version  = "2.1"
   s.author   = "Garry Dolley"
   s.email    = "gdolley@ucla.edu"
   s.homepage = "http://ebay4r.rubyforge.org"
@@ -20,9 +21,4 @@ spec = Gem::Specification.new do |s|
   s.autorequire      = "eBayAPI"
   s.has_rdoc         = true
   s.extra_rdoc_files = ["README"]
-end
-
-if $0 == __FILE__
-  Gem::manage_gems
-  Gem::Builder.new(spec).build
 end

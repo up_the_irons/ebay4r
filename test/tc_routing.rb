@@ -32,6 +32,7 @@ require 'eBayAPI'
 load('myCredentials.rb')
 
 class TestRouting < Test::Unit::TestCase
+
   @@eBay = EBay::API.new($authToken, $devId, $appId, $certId, :sandbox => true, :site_id => 100)
 
   # If our routing works correctly, the GetCategories call should go to eBay Motors instead of default US site
