@@ -8994,6 +8994,7 @@ module DefaultMappingRegistry
       ["newLeadCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "NewLeadCount")], [0, 1]],
       ["itemSpecifics", ["NameValueListArrayType", XSD::QName.new(NsEBLBaseComponents, "ItemSpecifics")], [0, 1]],
       ["groupCategoryID", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "GroupCategoryID")], [0, 1]],
+      ["conditionID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ConditionID")], [0, 1]],
       ["classifiedAdPayPerLeadFee", ["AmountType", XSD::QName.new(NsEBLBaseComponents, "ClassifiedAdPayPerLeadFee")], [0, 1]],
       ["bidGroupItem", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "BidGroupItem")], [0, 1]],
       ["applyBuyerProtection", ["BuyerProtectionDetailsType", XSD::QName.new(NsEBLBaseComponents, "ApplyBuyerProtection")], [0, 1]],
