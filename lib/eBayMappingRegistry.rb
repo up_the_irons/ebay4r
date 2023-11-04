@@ -10809,6 +10809,7 @@ module DefaultMappingRegistry
       ["itemCompatibilityCount", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ItemCompatibilityCount")], [0, 1]],
       ["conditionID", ["SOAP::SOAPInt", XSD::QName.new(NsEBLBaseComponents, "ConditionID")], [0, 1]],
       ["conditionDescription", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ConditionDescription")], [0, 1]],
+      ["conditionDescriptors", ["EBay::ConditionDescriptorsType", XSD::QName.new(NsEBLBaseComponents, "ConditionDescriptors")], [0, nil]],
       ["conditionDisplayName", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ConditionDisplayName")], [0, 1]],
       ["taxCategory", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "TaxCategory")], [0, 1]],
       ["quantityAvailableHint", ["EBay::QuantityAvailableHintCodeType", XSD::QName.new(NsEBLBaseComponents, "QuantityAvailableHint")], [0, 1]],
@@ -28287,6 +28288,7 @@ module DefaultMappingRegistry
       ["isIntermediatedShippingEligible", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "IsIntermediatedShippingEligible")], [0, 1]],
       ["unitInfo", ["EBay::UnitInfoType", XSD::QName.new(NsEBLBaseComponents, "UnitInfo")], [0, 1]],
       ["relistParentID", ["SOAP::SOAPLong", XSD::QName.new(NsEBLBaseComponents, "RelistParentID")], [0, 1]],
+      ["conditionDescriptors", ["EBay::ConditionDescriptorsType", XSD::QName.new(NsEBLBaseComponents, "ConditionDescriptors")], [0, nil]],
       ["conditionDefinition", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "ConditionDefinition")], [0, 1]],
       ["hideFromSearch", ["SOAP::SOAPBoolean", XSD::QName.new(NsEBLBaseComponents, "HideFromSearch")], [0, 1]],
       ["reasonHideFromSearch", ["EBay::ReasonHideFromSearchCodeType", XSD::QName.new(NsEBLBaseComponents, "ReasonHideFromSearch")], [0, 1]],
@@ -42624,6 +42626,24 @@ module DefaultMappingRegistry
       ["any", [nil, XSD::QName.new(NsXMLSchema, "anyType")]],
       ["messageBody", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "MessageBody")], [0, 1]],
       ["eIAS", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "EIAS")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => EBay::ConditionDescriptorType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ConditionDescriptor"),
+    :schema_element => [
+      ["additionalInfo", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "AdditionalInfo")], [0, 1]],
+      ["name", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Name")], [0, 1]],
+      ["value", ["SOAP::SOAPString", XSD::QName.new(NsEBLBaseComponents, "Value")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => EBay::ConditionDescriptorsType,
+    :schema_type => XSD::QName.new(NsEBLBaseComponents, "ConditionDescriptorsType"),
+    :schema_element => [
+      ["conditionDescriptor", ["EBay::ConditionDescriptorType[]", XSD::QName.new(NsEBLBaseComponents, "ConditionDescriptor")], [0, nil]]
     ]
   )
 end

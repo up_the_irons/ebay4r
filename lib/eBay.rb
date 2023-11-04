@@ -25682,6 +25682,7 @@ class ItemType
   attr_accessor :itemCompatibilityCount
   attr_accessor :conditionID
   attr_accessor :conditionDescription
+  attr_accessor :conditionDescriptors
   attr_accessor :conditionDisplayName
   attr_accessor :taxCategory
   attr_accessor :quantityAvailableHint
@@ -25722,7 +25723,7 @@ class ItemType
     @__xmlele_any = elements
   end
 
-  def initialize(applicationData = nil, attributeSetArray = nil, attributeArray = nil, lookupAttributeArray = nil, autoPay = nil, paymentDetails = nil, biddingDetails = nil, motorsGermanySearchable = nil, buyerProtection = nil, buyItNowPrice = nil, categoryMappingAllowed = nil, charity = nil, country = nil, crossPromotion = nil, currency = nil, description = nil, descriptionReviseMode = nil, distance = nil, giftIcon = nil, giftServices = [], hitCounter = nil, itemID = nil, listingDetails = nil, listingDesigner = nil, listingDuration = nil, listingEnhancement = [], listingType = nil, location = nil, lotSize = nil, partnerCode = nil, partnerName = nil, paymentMethods = [], payPalEmailAddress = nil, primaryCategory = nil, privateListing = nil, productListingDetails = nil, quantity = nil, privateNotes = nil, regionID = nil, relistLink = nil, reservePrice = nil, reviseStatus = nil, scheduleTime = nil, secondaryCategory = nil, freeAddedCategory = nil, seller = nil, sellingStatus = nil, shippingDetails = nil, shipToLocations = [], site = nil, startPrice = nil, storefront = nil, subTitle = nil, timeLeft = nil, title = nil, uUID = nil, vATDetails = nil, sellerVacationNote = nil, watchCount = nil, hitCount = nil, disableBuyerRequirements = nil, bestOfferDetails = nil, locationDefaulted = nil, thirdPartyCheckout = nil, useTaxTable = nil, getItFast = nil, buyerResponsibleForShipping = nil, limitedWarrantyEligible = nil, eBayNotes = nil, questionCount = nil, relisted = nil, quantityAvailable = nil, sKU = nil, categoryBasedAttributesPrefill = nil, searchDetails = nil, postalCode = nil, shippingTermsInDescription = nil, externalProductID = nil, sellerInventoryID = nil, pictureDetails = nil, dispatchTimeMax = nil, skypeEnabled = nil, skypeID = nil, skypeContactOption = [], bestOfferEnabled = nil, localListing = nil, thirdPartyCheckoutIntegration = nil, listingCheckoutRedirectPreference = nil, sellerContactDetails = nil, totalQuestionCount = nil, proxyItem = nil, extendedSellerContactDetails = nil, leadCount = nil, newLeadCount = nil, itemSpecifics = nil, groupCategoryID = nil, classifiedAdPayPerLeadFee = nil, bidGroupItem = nil, applyBuyerProtection = nil, listingSubtype2 = nil, mechanicalCheckAccepted = nil, updateSellerInfo = nil, updateReturnPolicy = nil, itemPolicyViolation = nil, crossBorderTrade = [], businessSellerDetails = nil, buyerGuaranteePrice = nil, buyerRequirementDetails = nil, returnPolicy = nil, paymentAllowedSite = [], inventoryTrackingMethod = nil, integratedMerchantCreditCardEnabled = nil, variations = nil, itemCompatibilityList = nil, itemCompatibilityCount = nil, conditionID = nil, conditionDescription = nil, conditionDisplayName = nil, taxCategory = nil, quantityAvailableHint = nil, quantityThreshold = nil, postCheckoutExperienceEnabled = nil, discountPriceInfo = nil, useRecommendedProduct = nil, sellerProvidedTitle = nil, vIN = nil, vINLink = nil, vRM = nil, vRMLink = nil, quantityInfo = nil, sellerProfiles = nil, shippingServiceCostOverrideList = nil, shippingPackageDetails = nil, topRatedListing = nil, quantityRestrictionPerBuyer = nil, floorPrice = nil, ceilingPrice = nil, isIntermediatedShippingEligible = nil, unitInfo = nil, relistParentID = nil, conditionDefinition = nil, hideFromSearch = nil, reasonHideFromSearch = nil, includeRecommendations = nil, pickupInStoreDetails = nil, eBayNowEligible = nil, eBayNowAvailable = nil, ignoreQuantity = nil, availableForPickupDropOff = nil, eligibleForPickupDropOff = nil, liveAuction = nil)
+  def initialize(applicationData = nil, attributeSetArray = nil, attributeArray = nil, lookupAttributeArray = nil, autoPay = nil, paymentDetails = nil, biddingDetails = nil, motorsGermanySearchable = nil, buyerProtection = nil, buyItNowPrice = nil, categoryMappingAllowed = nil, charity = nil, country = nil, crossPromotion = nil, currency = nil, description = nil, descriptionReviseMode = nil, distance = nil, giftIcon = nil, giftServices = [], hitCounter = nil, itemID = nil, listingDetails = nil, listingDesigner = nil, listingDuration = nil, listingEnhancement = [], listingType = nil, location = nil, lotSize = nil, partnerCode = nil, partnerName = nil, paymentMethods = [], payPalEmailAddress = nil, primaryCategory = nil, privateListing = nil, productListingDetails = nil, quantity = nil, privateNotes = nil, regionID = nil, relistLink = nil, reservePrice = nil, reviseStatus = nil, scheduleTime = nil, secondaryCategory = nil, freeAddedCategory = nil, seller = nil, sellingStatus = nil, shippingDetails = nil, shipToLocations = [], site = nil, startPrice = nil, storefront = nil, subTitle = nil, timeLeft = nil, title = nil, uUID = nil, vATDetails = nil, sellerVacationNote = nil, watchCount = nil, hitCount = nil, disableBuyerRequirements = nil, bestOfferDetails = nil, locationDefaulted = nil, thirdPartyCheckout = nil, useTaxTable = nil, getItFast = nil, buyerResponsibleForShipping = nil, limitedWarrantyEligible = nil, eBayNotes = nil, questionCount = nil, relisted = nil, quantityAvailable = nil, sKU = nil, categoryBasedAttributesPrefill = nil, searchDetails = nil, postalCode = nil, shippingTermsInDescription = nil, externalProductID = nil, sellerInventoryID = nil, pictureDetails = nil, dispatchTimeMax = nil, skypeEnabled = nil, skypeID = nil, skypeContactOption = [], bestOfferEnabled = nil, localListing = nil, thirdPartyCheckoutIntegration = nil, listingCheckoutRedirectPreference = nil, sellerContactDetails = nil, totalQuestionCount = nil, proxyItem = nil, extendedSellerContactDetails = nil, leadCount = nil, newLeadCount = nil, itemSpecifics = nil, groupCategoryID = nil, classifiedAdPayPerLeadFee = nil, bidGroupItem = nil, applyBuyerProtection = nil, listingSubtype2 = nil, mechanicalCheckAccepted = nil, updateSellerInfo = nil, updateReturnPolicy = nil, itemPolicyViolation = nil, crossBorderTrade = [], businessSellerDetails = nil, buyerGuaranteePrice = nil, buyerRequirementDetails = nil, returnPolicy = nil, paymentAllowedSite = [], inventoryTrackingMethod = nil, integratedMerchantCreditCardEnabled = nil, variations = nil, itemCompatibilityList = nil, itemCompatibilityCount = nil, conditionID = nil, conditionDescriptors = nil, conditionDescription = nil, conditionDisplayName = nil, taxCategory = nil, quantityAvailableHint = nil, quantityThreshold = nil, postCheckoutExperienceEnabled = nil, discountPriceInfo = nil, useRecommendedProduct = nil, sellerProvidedTitle = nil, vIN = nil, vINLink = nil, vRM = nil, vRMLink = nil, quantityInfo = nil, sellerProfiles = nil, shippingServiceCostOverrideList = nil, shippingPackageDetails = nil, topRatedListing = nil, quantityRestrictionPerBuyer = nil, floorPrice = nil, ceilingPrice = nil, isIntermediatedShippingEligible = nil, unitInfo = nil, relistParentID = nil, conditionDefinition = nil, hideFromSearch = nil, reasonHideFromSearch = nil, includeRecommendations = nil, pickupInStoreDetails = nil, eBayNowEligible = nil, eBayNowAvailable = nil, ignoreQuantity = nil, availableForPickupDropOff = nil, eligibleForPickupDropOff = nil, liveAuction = nil)
     @applicationData = applicationData
     @attributeSetArray = attributeSetArray
     @attributeArray = attributeArray
@@ -25839,6 +25840,7 @@ class ItemType
     @itemCompatibilityList = itemCompatibilityList
     @itemCompatibilityCount = itemCompatibilityCount
     @conditionID = conditionID
+    @conditionDescriptors = conditionDescriptors
     @conditionDescription = conditionDescription
     @conditionDisplayName = conditionDisplayName
     @taxCategory = taxCategory
@@ -31944,6 +31946,27 @@ class SellingManagerSearchType
     @searchValue = searchValue
     @__xmlele_any = nil
   end
+end
+
+class ConditionDescriptorType
+  attr_accessor :additionalInfo
+  attr_accessor :name
+  attr_accessor :value
+  attr_reader :__xmlele_any
+
+  def set_any(elements)
+    @__xmlele_any = elements
+  end
+
+  def initialize(additionalInfo = nil, name = nil, value = nil)
+    @additionalInfo = additionalInfo
+    @name = name
+    @value = value
+    @__xmlele_any = nil
+  end
+end
+
+class ConditionDescriptorsType < ::Array
 end
 
 # {urn:ebay:apis:eBLBaseComponents}SellingManagerSoldOrderType
